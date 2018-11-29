@@ -26,6 +26,13 @@
             }
         </style>
         <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
             $(".pull-right .fa-edit").on("click",function () {
                var t=location.pathname.split("/");
                var file=t[t.length-1].split('.')[0];

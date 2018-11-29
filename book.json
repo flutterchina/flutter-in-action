@@ -23,7 +23,6 @@
     "splitter",
     "tbfed-pagefooter",
     "toggle-chapters",
-    "baidu",
     "prism",
     "donate",
     "-highlight",
@@ -41,9 +40,6 @@
       "copyright":"Copyright &copy flutterchina.club 2018",
       "modify_label": "该文件修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
-    },
-    "baidu": {
-      "token": "170231fea4f81697eb046edc1a91fe5b"
     },
     "donate": {
       "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg",
