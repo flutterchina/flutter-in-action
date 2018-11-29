@@ -1,0 +1,1492 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>变换Transform · 《Flutter实战》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="wendux 824783146@qq.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="false"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="container.html" />
+    
+    
+    <link rel="prev" href="decoratedbox.html" />
+    
+
+        <style>
+            .pull-right>i{
+                font-size: 25px;
+                color: #666 !important;
+            }
+        </style>
+        <script>
+            $(".pull-right .fa-edit").on("click",function () {
+               var t=location.pathname.split("/");
+               var file=t[t.length-1].split('.')[0];
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        </script>
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flutterchina.club" target="_blank" class="custom-link"><div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div></a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    缘起
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/mobile_development_intro.html">
+            
+                <a href="../chapter1/mobile_development_intro.html">
+            
+                    
+                    移动开发技术简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/flutter_intro.html">
+            
+                <a href="../chapter1/flutter_intro.html">
+            
+                    
+                    Flutter简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/install_flutter.html">
+            
+                <a href="../chapter1/install_flutter.html">
+            
+                    
+                    搭建Flutter开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/dart.html">
+            
+                <a href="../chapter1/dart.html">
+            
+                    
+                    Dart语言简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第一个Flutter应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/first_flutter_app.html">
+            
+                <a href="../chapter2/first_flutter_app.html">
+            
+                    
+                    计数器示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/flutter_router.html">
+            
+                <a href="../chapter2/flutter_router.html">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/flutter_package_mgr.html">
+            
+                <a href="../chapter2/flutter_package_mgr.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/flutter_assets_mgr.html">
+            
+                <a href="../chapter2/flutter_assets_mgr.html">
+            
+                    
+                    资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/flutter_app_debug.html">
+            
+                <a href="../chapter2/flutter_app_debug.html">
+            
+                    
+                    调试Flutter APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    基础Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/flutter_widget_intro.html">
+            
+                <a href="../chapter3/flutter_widget_intro.html">
+            
+                    
+                    Widget简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/text.html">
+            
+                <a href="../chapter3/text.html">
+            
+                    
+                    文本、字体样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    图片和Icon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/radio_and_checkbox.html">
+            
+                <a href="../chapter3/radio_and_checkbox.html">
+            
+                    
+                    单选框和复选框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/input_and_form.html">
+            
+                <a href="../chapter3/input_and_form.html">
+            
+                    
+                    输入框和表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    布局类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/row_and_column.html">
+            
+                <a href="../chapter4/row_and_column.html">
+            
+                    
+                    先行布局Row、Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/flex.html">
+            
+                <a href="../chapter4/flex.html">
+            
+                    
+                    弹性布局Flex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/wrap_and_flow.html">
+            
+                <a href="../chapter4/wrap_and_flow.html">
+            
+                    
+                    流式布局Wrap、Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/stack.html">
+            
+                <a href="../chapter4/stack.html">
+            
+                    
+                    层叠布局Stack、Positioned
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    容器类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="padding.html">
+            
+                <a href="padding.html">
+            
+                    
+                    Padding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="constrainedbox_and_sizebox.html">
+            
+                <a href="constrainedbox_and_sizebox.html">
+            
+                    
+                    布局限制类容器ConstrainedBox、SizeBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="decoratedbox.html">
+            
+                <a href="decoratedbox.html">
+            
+                    
+                    装饰容器DecoratedBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="transform.html">
+            
+                <a href="transform.html">
+            
+                    
+                    变换Transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    Container容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    可滚动Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/single_child_scrollview.html">
+            
+                <a href="../chapter6/single_child_scrollview.html">
+            
+                    
+                    SingleChildScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/listview.html">
+            
+                <a href="../chapter6/listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/gridview.html">
+            
+                <a href="../chapter6/gridview.html">
+            
+                    
+                    GridView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/custom_scrollview.html">
+            
+                <a href="../chapter6/custom_scrollview.html">
+            
+                    
+                    CustomScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/scroll_controller.html">
+            
+                <a href="../chapter6/scroll_controller.html">
+            
+                    
+                    滚动监听及控制ScrollController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    功能型Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/willpopscope.html">
+            
+                <a href="../chapter7/willpopscope.html">
+            
+                    
+                    导航返回拦截-WillPopScope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/inherited_widget.html">
+            
+                <a href="../chapter7/inherited_widget.html">
+            
+                    
+                    数据共享-InheritedWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/theme.html">
+            
+                <a href="../chapter7/theme.html">
+            
+                    
+                    主题-Theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    事件处理与通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/listener.html">
+            
+                <a href="../chapter8/listener.html">
+            
+                    
+                    原始指针事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/gesture.html">
+            
+                <a href="../chapter8/gesture.html">
+            
+                    
+                    手势识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/eventbus.html">
+            
+                <a href="../chapter8/eventbus.html">
+            
+                    
+                    全局事件总线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/notification.html">
+            
+                <a href="../chapter8/notification.html">
+            
+                    
+                    通知Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/intro.html">
+            
+                <a href="../chapter9/intro.html">
+            
+                    
+                    Flutter动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/animation_structure.html">
+            
+                <a href="../chapter9/animation_structure.html">
+            
+                    
+                    动画结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/route_transition.html">
+            
+                <a href="../chapter9/route_transition.html">
+            
+                    
+                    自定义路由过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/hero.html">
+            
+                <a href="../chapter9/hero.html">
+            
+                    
+                    Hero动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../chapter9/stagger_animation.html">
+            
+                <a href="../chapter9/stagger_animation.html">
+            
+                    
+                    交错动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    文件操作与网络请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter10/file_operation.html">
+            
+                <a href="../chapter10/file_operation.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter10/http.html">
+            
+                <a href="../chapter10/http.html">
+            
+                    
+                    Http请求-HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter10/dio.html">
+            
+                <a href="../chapter10/dio.html">
+            
+                    
+                    Http请求-Dio package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter10/websocket.html">
+            
+                <a href="../chapter10/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter10/socket.html">
+            
+                <a href="../chapter10/socket.html">
+            
+                    
+                    使用Socket API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../chapter10/json_model.html">
+            
+                <a href="../chapter10/json_model.html">
+            
+                    
+                    Json转Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    包与插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    开发一个package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    编写自动化测试用例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    平台通道简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现Andorid端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现IOS端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    系统能力调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    让App支持多语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    监听系统语言切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现Localizations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Intel包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter 核心原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter UI系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Widget、Element与BuildContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    RenderObject与RenderBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Notification与事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Scrollable原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    InheritedWidget与数据传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    ParentDataWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    布局与绘制过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter资源汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="#">
+        <i class="fa fa-edit" title="编辑本文"></i>
+    </a>
+
+    <a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://github.com/flutterchina/flutter-in-action">
+        <i class="fa fa-github" title="查看本书开源项目"></i>
+    </a>
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >变换Transform</a>
+        <a href="xx">xxxxxxxx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="transform&#x53D8;&#x6362;">Transform&#x53D8;&#x6362;</h2>
+<p>Transform&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x5B50;Widget&#x7ED8;&#x5236;&#x65F6;&#x5BF9;&#x5176;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x53D8;&#x6362;&#xFF08;transformation&#xFF09;&#xFF0C;Matrix4&#x662F;&#x4E00;&#x4E2A;4D&#x77E9;&#x9635;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x77E9;&#x9635;&#x64CD;&#x4F5C;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">Container</span><span class="token punctuation">(</span>
+  color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>black<span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Transform</span><span class="token punctuation">(</span>
+    alignment<span class="token punctuation">:</span> Alignment<span class="token punctuation">.</span>topRight<span class="token punctuation">,</span> <span class="token comment">//&#x76F8;&#x5BF9;&#x4E8E;&#x5750;&#x6807;&#x7CFB;&#x539F;&#x70B9;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</span>
+    transform<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Matrix4<span class="token punctuation">.</span>skewY</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">//&#x6CBF;Y&#x8F74;&#x503E;&#x659C;0.3&#x5F27;&#x5EA6;</span>
+    child<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Container</span><span class="token punctuation">(</span>
+      padding<span class="token punctuation">:</span> <span class="token keyword">const</span> EdgeInsets<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token number">8.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>deepOrange<span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&apos;Apartment for rent!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="../imgs/image-20180910160248494.png" alt="image-20180910160248494"></p>
+<p>&#x5173;&#x4E8E;&#x77E9;&#x9635;&#x53D8;&#x6362;&#x7684;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x5C5E;&#x4E8E;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x8303;&#x7574;&#xFF0C;&#x672C;&#x4E66;&#x4E0D;&#x505A;&#x8BA8;&#x8BBA;&#xFF0C;&#x8BFB;&#x8005;&#x6709;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x4E86;&#x89E3;&#x3002;&#x672C;&#x4E66;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x7126;&#x70B9;&#x653E;&#x5728;Flutter&#x4E2D;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x6362;&#x6548;&#x679C;&#x4E0A;&#x3002;</p>
+<h3 id="&#x5E73;&#x79FB;">&#x5E73;&#x79FB;</h3>
+<p>Transform.translate&#x63A5;&#x6536;&#x4E00;&#x4E2A;offset&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7ED8;&#x5236;&#x65F6;&#x6CBF;x&#x3001;y&#x8F74;&#x5BF9;&#x5B50;widget&#x5E73;&#x79FB;&#x6307;&#x5B9A;&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">DecoratedBox</span><span class="token punctuation">(</span>
+  decoration<span class="token punctuation">:</span><span class="token function">BoxDecoration</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">//&#x9ED8;&#x8BA4;&#x539F;&#x70B9;&#x4E3A;&#x5DE6;&#x4E0A;&#x89D2;&#xFF0C;&#x5DE6;&#x79FB;20&#x50CF;&#x7D20;&#xFF0C;&#x5411;&#x4E0A;&#x5E73;&#x79FB;5&#x50CF;&#x7D20;  </span>
+  child<span class="token punctuation">:</span> Transform<span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span>offset<span class="token punctuation">:</span> <span class="token function">Offset</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">20.0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/image-20180910161953078.png" alt="image-20180910161953078"></p>
+<h3 id="&#x65CB;&#x8F6C;">&#x65CB;&#x8F6C;</h3>
+<p>Transform.rotate&#x53EF;&#x4EE5;&#x5BF9;&#x5B50;widget&#x8FDB;&#x884C;&#x65CB;&#x8F6C;&#x53D8;&#x6362;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">DecoratedBox</span><span class="token punctuation">(</span>
+  decoration<span class="token punctuation">:</span><span class="token function">BoxDecoration</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> Transform<span class="token punctuation">.</span><span class="token function">rotate</span><span class="token punctuation">(</span>
+    <span class="token comment">//&#x65CB;&#x8F6C;90&#x5EA6;</span>
+    angle<span class="token punctuation">:</span>math<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span> <span class="token punctuation">,</span>
+    child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>&#xFF1B;
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/image-20180910162408030.png" alt="image-20180910162408030"></p>
+<h3 id="&#x7F29;&#x653E;">&#x7F29;&#x653E;</h3>
+<p>Transform.scale&#x53EF;&#x4EE5;&#x5BF9;&#x5B50;Widget&#x8FDB;&#x884C;&#x7F29;&#x5C0F;&#x6216;&#x653E;&#x5927;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">DecoratedBox</span><span class="token punctuation">(</span>
+  decoration<span class="token punctuation">:</span><span class="token function">BoxDecoration</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> Transform<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>
+      scale<span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">,</span> <span class="token comment">//&#x653E;&#x5927;&#x5230;1.5&#x500D;</span>
+      child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/image-20180910162817059.png" alt="image-20180910162817059"></p>
+<h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h3>
+<ul>
+<li><p>Transform&#x7684;&#x53D8;&#x6362;&#x662F;&#x5E94;&#x7528;&#x5728;&#x7ED8;&#x5236;&#x9636;&#x6BB5;&#xFF0C;&#x800C;&#x5E76;&#x4E0D;&#x662F;&#x5E94;&#x7528;&#x5728;&#x5E03;&#x5C40;(layout)&#x9636;&#x6BB5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x8BBA;&#x5BF9;&#x5B50;widget&#x5E94;&#x7528;&#x4F55;&#x79CD;&#x53D8;&#x5316;&#xFF0C;&#x5176;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;&#x90FD;&#x662F;&#x56FA;&#x5B9A;&#x4E0D;&#x53D8;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x662F;&#x5728;&#x5E03;&#x5C40;&#x9636;&#x6BB5;&#x5C31;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8DDD;&#x79BB;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"> <span class="token function">Row</span><span class="token punctuation">(</span>
+  mainAxisAlignment<span class="token punctuation">:</span> MainAxisAlignment<span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+  children<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+    <span class="token function">DecoratedBox</span><span class="token punctuation">(</span>
+      decoration<span class="token punctuation">:</span><span class="token function">BoxDecoration</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> Transform<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>scale<span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">,</span>
+          child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;&#x4F60;&#x597D;&quot;</span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>green<span class="token punctuation">,</span> fontSize<span class="token punctuation">:</span> <span class="token number">18.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/image-20180910164454967.png" alt="image-20180910164454967"></p>
+<p>&#x7531;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;Text&#x5E94;&#x7528;&#x53D8;&#x6362;(&#x653E;&#x5927;)&#x540E;&#xFF0C;&#x5176;&#x5728;&#x7ED8;&#x5236;&#x65F6;&#x4F1A;&#x653E;&#x5927;&#xFF0C;&#x4F46;&#x5176;&#x5360;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x4F9D;&#x7136;&#x4E3A;&#x7EA2;&#x8272;&#x90E8;&#x5206;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E8C;&#x4E2A;text&#x4F1A;&#x7D27;&#x6328;&#x7740;&#x7EA2;&#x8272;&#x90E8;&#x5206;&#xFF0C;&#x6700;&#x7EC8;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x6587;&#x5B57;&#x6709;&#x91CD;&#x5408;&#x90E8;&#x5206;&#x3002;</p>
+</li>
+<li><p>&#x7531;&#x4E8E;&#x77E9;&#x9635;&#x53D8;&#x5316;&#x53EA;&#x4F1A;&#x4F5C;&#x7528;&#x5728;&#x7ED8;&#x5236;&#x9636;&#x6BB5;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x5728;UI&#x9700;&#x8981;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x77E9;&#x9635;&#x53D8;&#x5316;&#x6765;&#x8FBE;&#x5230;&#x89C6;&#x89C9;&#x4E0A;&#x7684;UI&#x6539;&#x53D8;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x91CD;&#x65B0;&#x89E6;&#x53D1;build&#x6D41;&#x7A0B;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x8282;&#x7701;layout&#x7684;&#x5F00;&#x9500;&#xFF0C;&#x6240;&#x4EE5;&#x6027;&#x80FD;&#x4F1A;&#x6BD4;&#x8F83;&#x597D;&#x3002;&#x5982;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x7684;Flow widget&#xFF0C;&#x5B83;&#x5185;&#x90E8;&#x5C31;&#x662F;&#x7528;&#x77E9;&#x9635;&#x53D8;&#x6362;&#x6765;&#x66F4;&#x65B0;UI&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;Flutter&#x7684;&#x52A8;&#x753B;widget&#x4E2D;&#x4E5F;&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x4E86;Transform&#x4EE5;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</p>
+</li>
+</ul>
+<h3 id="rotatedbox">RotatedBox</h3>
+<p>RotatedBox&#x548C;Transform.rotate&#x529F;&#x80FD;&#x76F8;&#x4F3C;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x53EF;&#x4EE5;&#x5BF9;&#x5B50;widget&#x8FDB;&#x884C;&#x65CB;&#x8F6C;&#x53D8;&#x6362;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x70B9;&#x4E0D;&#x540C;&#xFF1A;RotatedBox&#x7684;&#x53D8;&#x6362;&#x662F;&#x5728;layout&#x9636;&#x6BB5;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x5728;&#x5B50;widget&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5927;&#x5C0F;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;Transform.rotate&#x65F6;&#x7684;&#x793A;&#x4F8B;&#x6539;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">Row</span><span class="token punctuation">(</span>
+  mainAxisAlignment<span class="token punctuation">:</span> MainAxisAlignment<span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+  children<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+    <span class="token function">DecoratedBox</span><span class="token punctuation">(</span>
+      decoration<span class="token punctuation">:</span> <span class="token function">BoxDecoration</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">//&#x5C06;Transform.rotate&#x6362;&#x6210;RotatedBox  </span>
+      child<span class="token punctuation">:</span> <span class="token function">RotatedBox</span><span class="token punctuation">(</span>
+        quarterTurns<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//&#x65CB;&#x8F6C;90&#x5EA6;(1/4&#x5708;)</span>
+        child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;&#x4F60;&#x597D;&quot;</span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> Colors<span class="token punctuation">.</span>green<span class="token punctuation">,</span> fontSize<span class="token punctuation">:</span> <span class="token number">18.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/image-20180910170603964.png" alt="image-20180910170603964"></p>
+<p>&#x7531;&#x4E8E;RotatedBox&#x662F;&#x4F5C;&#x7528;&#x4E8E;layout&#x9636;&#x6BB5;&#xFF0C;&#x6240;&#x4EE5;widget&#x4F1A;&#x65CB;&#x8F6C;90&#x5EA6;&#xFF08;&#x800C;&#x4E0D;&#x53EA;&#x662F;&#x7ED8;&#x5236;&#x7684;&#x5185;&#x5BB9;&#xFF09;&#xFF0C;decoration&#x4F1A;&#x4F5C;&#x7528;&#x5230;widget&#x6240;&#x5360;&#x7528;&#x7684;&#x5B9E;&#x9645;&#x7A7A;&#x95F4;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x662F;&#x4E0A;&#x56FE;&#x7684;&#x6548;&#x679C;&#x3002;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x548C;&#x524D;&#x9762;Transform.rotate&#x793A;&#x4F8B;&#x5BF9;&#x6BD4;&#x7406;&#x89E3;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-11-28 15:58:26
+</span></footer>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="decoratedbox.html" class="navigation navigation-prev " aria-label="Previous page: 装饰容器DecoratedBox">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="container.html" class="navigation navigation-next " aria-label="Next page: Container容器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"变换Transform","level":"1.6.4","depth":2,"next":{"title":"Container容器","level":"1.6.5","depth":2,"path":"chapter5/container.md","ref":"chapter5/container.md","articles":[]},"previous":{"title":"装饰容器DecoratedBox","level":"1.6.3","depth":2,"path":"chapter5/decoratedbox.md","ref":"chapter5/decoratedbox.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","baidu","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"baidu":{"token":"635fd3dde151b2be9ef7adb85fe42720"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter5/transform.md","mtime":"2018-11-28T07:58:26.023Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T11:07:20.336Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

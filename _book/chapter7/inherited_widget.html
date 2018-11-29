@@ -1,0 +1,1494 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据共享-InheritedWidget · 《Flutter实战》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="wendux 824783146@qq.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="false"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="theme.html" />
+    
+    
+    <link rel="prev" href="willpopscope.html" />
+    
+
+        <style>
+            .pull-right>i{
+                font-size: 25px;
+                color: #666 !important;
+            }
+        </style>
+        <script>
+            $(".pull-right .fa-edit").on("click",function () {
+               var t=location.pathname.split("/");
+               var file=t[t.length-1].split('.')[0];
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        </script>
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flutterchina.club" target="_blank" class="custom-link"><div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div></a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    缘起
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/mobile_development_intro.html">
+            
+                <a href="../chapter1/mobile_development_intro.html">
+            
+                    
+                    移动开发技术简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/flutter_intro.html">
+            
+                <a href="../chapter1/flutter_intro.html">
+            
+                    
+                    Flutter简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/install_flutter.html">
+            
+                <a href="../chapter1/install_flutter.html">
+            
+                    
+                    搭建Flutter开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/dart.html">
+            
+                <a href="../chapter1/dart.html">
+            
+                    
+                    Dart语言简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第一个Flutter应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/first_flutter_app.html">
+            
+                <a href="../chapter2/first_flutter_app.html">
+            
+                    
+                    计数器示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/flutter_router.html">
+            
+                <a href="../chapter2/flutter_router.html">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/flutter_package_mgr.html">
+            
+                <a href="../chapter2/flutter_package_mgr.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/flutter_assets_mgr.html">
+            
+                <a href="../chapter2/flutter_assets_mgr.html">
+            
+                    
+                    资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/flutter_app_debug.html">
+            
+                <a href="../chapter2/flutter_app_debug.html">
+            
+                    
+                    调试Flutter APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    基础Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/flutter_widget_intro.html">
+            
+                <a href="../chapter3/flutter_widget_intro.html">
+            
+                    
+                    Widget简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/text.html">
+            
+                <a href="../chapter3/text.html">
+            
+                    
+                    文本、字体样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    图片和Icon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/radio_and_checkbox.html">
+            
+                <a href="../chapter3/radio_and_checkbox.html">
+            
+                    
+                    单选框和复选框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/input_and_form.html">
+            
+                <a href="../chapter3/input_and_form.html">
+            
+                    
+                    输入框和表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    布局类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/row_and_column.html">
+            
+                <a href="../chapter4/row_and_column.html">
+            
+                    
+                    先行布局Row、Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/flex.html">
+            
+                <a href="../chapter4/flex.html">
+            
+                    
+                    弹性布局Flex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/wrap_and_flow.html">
+            
+                <a href="../chapter4/wrap_and_flow.html">
+            
+                    
+                    流式布局Wrap、Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/stack.html">
+            
+                <a href="../chapter4/stack.html">
+            
+                    
+                    层叠布局Stack、Positioned
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    容器类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/padding.html">
+            
+                <a href="../chapter5/padding.html">
+            
+                    
+                    Padding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/constrainedbox_and_sizebox.html">
+            
+                <a href="../chapter5/constrainedbox_and_sizebox.html">
+            
+                    
+                    布局限制类容器ConstrainedBox、SizeBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/decoratedbox.html">
+            
+                <a href="../chapter5/decoratedbox.html">
+            
+                    
+                    装饰容器DecoratedBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/transform.html">
+            
+                <a href="../chapter5/transform.html">
+            
+                    
+                    变换Transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/container.html">
+            
+                <a href="../chapter5/container.html">
+            
+                    
+                    Container容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    可滚动Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/single_child_scrollview.html">
+            
+                <a href="../chapter6/single_child_scrollview.html">
+            
+                    
+                    SingleChildScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/listview.html">
+            
+                <a href="../chapter6/listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/gridview.html">
+            
+                <a href="../chapter6/gridview.html">
+            
+                    
+                    GridView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/custom_scrollview.html">
+            
+                <a href="../chapter6/custom_scrollview.html">
+            
+                    
+                    CustomScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/scroll_controller.html">
+            
+                <a href="../chapter6/scroll_controller.html">
+            
+                    
+                    滚动监听及控制ScrollController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    功能型Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="willpopscope.html">
+            
+                <a href="willpopscope.html">
+            
+                    
+                    导航返回拦截-WillPopScope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="inherited_widget.html">
+            
+                <a href="inherited_widget.html">
+            
+                    
+                    数据共享-InheritedWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="theme.html">
+            
+                <a href="theme.html">
+            
+                    
+                    主题-Theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    事件处理与通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/listener.html">
+            
+                <a href="../chapter8/listener.html">
+            
+                    
+                    原始指针事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/gesture.html">
+            
+                <a href="../chapter8/gesture.html">
+            
+                    
+                    手势识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/eventbus.html">
+            
+                <a href="../chapter8/eventbus.html">
+            
+                    
+                    全局事件总线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/notification.html">
+            
+                <a href="../chapter8/notification.html">
+            
+                    
+                    通知Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/intro.html">
+            
+                <a href="../chapter9/intro.html">
+            
+                    
+                    Flutter动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/animation_structure.html">
+            
+                <a href="../chapter9/animation_structure.html">
+            
+                    
+                    动画结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/route_transition.html">
+            
+                <a href="../chapter9/route_transition.html">
+            
+                    
+                    自定义路由过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/hero.html">
+            
+                <a href="../chapter9/hero.html">
+            
+                    
+                    Hero动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../chapter9/stagger_animation.html">
+            
+                <a href="../chapter9/stagger_animation.html">
+            
+                    
+                    交错动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    文件操作与网络请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter10/file_operation.html">
+            
+                <a href="../chapter10/file_operation.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter10/http.html">
+            
+                <a href="../chapter10/http.html">
+            
+                    
+                    Http请求-HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter10/dio.html">
+            
+                <a href="../chapter10/dio.html">
+            
+                    
+                    Http请求-Dio package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter10/websocket.html">
+            
+                <a href="../chapter10/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter10/socket.html">
+            
+                <a href="../chapter10/socket.html">
+            
+                    
+                    使用Socket API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../chapter10/json_model.html">
+            
+                <a href="../chapter10/json_model.html">
+            
+                    
+                    Json转Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    包与插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    开发一个package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    编写自动化测试用例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    平台通道简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现Andorid端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现IOS端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    系统能力调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    让App支持多语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    监听系统语言切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现Localizations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Intel包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter 核心原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter UI系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Widget、Element与BuildContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    RenderObject与RenderBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Notification与事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Scrollable原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    InheritedWidget与数据传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    ParentDataWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    布局与绘制过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter资源汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="#">
+        <i class="fa fa-edit" title="编辑本文"></i>
+    </a>
+
+    <a class="btn pull-right js-toolbar-action" aria-label="GitHub" href="https://github.com/flutterchina/flutter-in-action">
+        <i class="fa fa-github" title="查看本书开源项目"></i>
+    </a>
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据共享-InheritedWidget</a>
+        <a href="xx">xxxxxxxx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="inheritedwidget">InheritedWidget</h2>
+<p>InheritedWidget&#x662F;Flutter&#x4E2D;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x578B;Widget&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x7684;&#x5C06;&#x6570;&#x636E;&#x5728;Widget&#x6811;&#x4E2D;&#x5411;&#x4E0B;&#x4F20;&#x9012;&#x3001;&#x5171;&#x4EAB;&#xFF0C;&#x8FD9;&#x5728;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x5728;Widget&#x6811;&#x4E2D;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x7684;&#x573A;&#x666F;&#x4E2D;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x5982;Flutter&#x4E2D;&#xFF0C;&#x6B63;&#x662F;&#x901A;&#x8FC7;InheritedWidget&#x6765;&#x5171;&#x4EAB;&#x5E94;&#x7528;&#x4E3B;&#x9898;(Theme)&#x548C;Locale(&#x5F53;&#x524D;&#x8BED;&#x8A00;&#x73AF;&#x5883;)&#x4FE1;&#x606F;&#x7684;&#x3002;</p>
+<blockquote>
+<p>InheritedWidget&#x548C;React&#x4E2D;&#x7684;context&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#xFF0C;&#x548C;&#x9010;&#x7EA7;&#x4F20;&#x9012;&#x6570;&#x636E;&#x76F8;&#x6BD4;&#xFF0C;&#x5B83;&#x4EEC;&#x80FD;&#x5B9E;&#x73B0;&#x7EC4;&#x4EF6;&#x8DE8;&#x7EA7;&#x4F20;&#x9012;&#x6570;&#x636E;&#x3002;InheritedWidget&#x7684;&#x5728;Widget&#x6811;&#x4E2D;&#x6570;&#x636E;&#x4F20;&#x9012;&#x65B9;&#x5411;&#x662F;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x7684;&#xFF0C;&#x8FD9;&#x548C;Notification&#x7684;&#x4F20;&#x9012;&#x65B9;&#x5411;&#x6B63;&#x597D;&#x76F8;&#x53CD;&#x3002;</p>
+</blockquote>
+<h3 id="didchangedependencies">didChangeDependencies</h3>
+<p>&#x5728;&#x4ECB;&#x7ECD;StatefulWidget&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x63D0;&#x5230;State&#x5BF9;&#x8C61;&#x6709;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;<code>didChangeDependencies</code>&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x201C;&#x4F9D;&#x8D56;&#x201D;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x88AB;Flutter Framework&#x8C03;&#x7528;&#x3002;&#x800C;&#x8FD9;&#x4E2A;&#x201C;&#x4F9D;&#x8D56;&#x201D;&#x6307;&#x7684;&#x5C31;&#x662F;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x4E86;&#x7236;widget&#x4E2D;InheritedWidget&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5219;&#x4EE3;&#x8868;&#x6709;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5219;&#x4EE3;&#x8868;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;&#x3002;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x4F7F;&#x5B50;&#x7EC4;&#x4EF6;&#x5728;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x4E3B;&#x9898;&#x3001;locale&#x7B49;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x6709;&#x673A;&#x4F1A;&#x6765;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x4E4B;&#x524D;&#x201C;&#x8BA1;&#x6570;&#x5668;&#x201D;&#x793A;&#x4F8B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;InheritedWidget&#x7248;&#x672C;&#xFF0C;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;&#xFF0C;&#x672C;&#x4F8B;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x6F14;&#x793A;InheritedWidget&#x7684;&#x529F;&#x80FD;&#x7279;&#x6027;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x63A8;&#x8350;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x7EE7;&#x627F;InheritedWidget&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x8BA1;&#x6570;&#x5668;&#x70B9;&#x51FB;&#x6B21;&#x6570;&#x4FDD;&#x5B58;&#x5728;ShareDataWidget&#x7684;<code>data</code>&#x5C5E;&#x6027;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">ShareDataWidget</span> <span class="token keyword">extends</span> <span class="token class-name">InheritedWidget</span> <span class="token punctuation">{</span>
+  <span class="token function">ShareDataWidget</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token metadata symbol">@required</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+    Widget child
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span><span class="token keyword">super</span><span class="token punctuation">(</span>child<span class="token punctuation">:</span> child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  int data<span class="token punctuation">;</span> <span class="token comment">//&#x9700;&#x8981;&#x5728;&#x5B50;&#x6811;&#x4E2D;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4FDD;&#x5B58;&#x70B9;&#x51FB;&#x6B21;&#x6570;</span>
+
+  <span class="token comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4FBF;&#x6377;&#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x4FBF;&#x5B50;&#x6811;&#x4E2D;&#x7684;widget&#x83B7;&#x53D6;&#x5171;&#x4EAB;&#x6570;&#x636E;  </span>
+  <span class="token keyword">static</span> ShareDataWidget <span class="token function">of</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> context<span class="token punctuation">.</span><span class="token function">inheritFromWidgetOfExactType</span><span class="token punctuation">(</span>ShareDataWidget<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//&#x8BE5;&#x56DE;&#x8C03;&#x51B3;&#x5B9A;&#x5F53;data&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x901A;&#x77E5;&#x5B50;&#x6811;&#x4E2D;&#x4F9D;&#x8D56;data&#x7684;Widget  </span>
+  <span class="token metadata symbol">@override</span>
+  bool <span class="token function">updateShouldNotify</span><span class="token punctuation">(</span>ShareDataWidget old<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x5982;&#x679C;&#x8FD4;&#x56DE;false&#xFF0C;&#x5219;&#x5B50;&#x6811;&#x4E2D;&#x4F9D;&#x8D56;(build&#x51FD;&#x6570;&#x4E2D;&#x6709;&#x8C03;&#x7528;)&#x672C;widget</span>
+    <span class="token comment">//&#x7684;&#x5B50;widget&#x7684;`state.didChangeDependencies`&#x4F1A;&#x88AB;&#x8C03;&#x7528;</span>
+    <span class="token keyword">return</span> old<span class="token punctuation">.</span>data <span class="token operator">!=</span> data<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5B50;widget _TestWidget&#xFF0C;&#x5728;&#x5176;build&#x65B9;&#x6CD5;&#x4E2D;&#x5F15;&#x7528;ShareDataWidget&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x5728;&#x5176;<code>didChangeDependencies()</code> &#x56DE;&#x8C03;&#x4E2D;&#x6253;&#x5370;&#x65E5;&#x5FD7;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">_TestWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata symbol">@override</span>
+  __TestWidgetState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">new</span> <span class="token class-name">__TestWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">__TestWidgetState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>_TestWidget<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x4F7F;&#x7528;InheritedWidget&#x4E2D;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E;</span>
+    <span class="token keyword">return</span> <span class="token function">Text</span><span class="token punctuation">(</span>ShareDataWidget
+        <span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span>data
+        <span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata symbol">@override</span>
+  <span class="token keyword">void</span> <span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">didChangeDependencies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x7236;&#x6216;&#x7956;&#x5148;widget&#x4E2D;&#x7684;InheritedWidget&#x6539;&#x53D8;(updateShouldNotify&#x8FD4;&#x56DE;true)&#x65F6;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</span>
+    <span class="token comment">//&#x5982;&#x679C;build&#x4E2D;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;InheritedWidget&#xFF0C;&#x5219;&#x6B64;&#x56DE;&#x8C03;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;Dependencies change&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x6CA1;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#xFF0C;&#x5C31;&#x5C06;ShareDataWidget&#x7684;&#x503C;&#x81EA;&#x589E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">InheritedWidgetTestRoute</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata symbol">@override</span>
+  _InheritedWidgetTestRouteState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">new</span> <span class="token class-name">_InheritedWidgetTestRouteState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_InheritedWidgetTestRouteState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>InheritedWidgetTestRoute<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  int count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>  <span class="token function">Center</span><span class="token punctuation">(</span>
+      child<span class="token punctuation">:</span> <span class="token function">ShareDataWidget</span><span class="token punctuation">(</span> <span class="token comment">//&#x4F7F;&#x7528;ShareDataWidget</span>
+        data<span class="token punctuation">:</span> count<span class="token punctuation">,</span>
+        child<span class="token punctuation">:</span> <span class="token function">Column</span><span class="token punctuation">(</span>
+          mainAxisAlignment<span class="token punctuation">:</span> MainAxisAlignment<span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+            <span class="token function">Padding</span><span class="token punctuation">(</span>
+              padding<span class="token punctuation">:</span> <span class="token keyword">const</span> EdgeInsets<span class="token punctuation">.</span><span class="token function">only</span><span class="token punctuation">(</span>bottom<span class="token punctuation">:</span> <span class="token number">20.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              child<span class="token punctuation">:</span> <span class="token function">_TestWidget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//&#x5B50;widget&#x4E2D;&#x4F9D;&#x8D56;ShareDataWidget</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+              child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Increment&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token comment">//&#x6BCF;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#xFF0C;&#x5C06;count&#x81EA;&#x589E;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;build,ShareDataWidget&#x7684;data&#x5C06;&#x88AB;&#x66F4;&#x65B0;  </span>
+              onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token operator">++</span>count<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x540E;&#x754C;&#x9762;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../imgs/image-20180913183022733.png" alt="image-20180913183022733"></p>
+<p>&#x6CA1;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#x6309;&#x94AE;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x5C31;&#x4F1A;&#x81EA;&#x589E;&#xFF0C;&#x63A7;&#x5236;&#x5C31;&#x4F1A;&#x6253;&#x5370;&#x4E00;&#x53E5;&#x65E5;&#x5FD7;&#xFF1A;</p>
+<pre class="language-"><code>I/flutter ( 8513): Dependencies change
+</code></pre><p>&#x53EF;&#x89C1;&#x4F9D;&#x8D56;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x540E;&#xFF0C;&#x5176;<code>didChangeDependencies()</code>&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x4F46;&#x662F;&#x8BFB;&#x8005;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;_TestWidget&#x7684;build&#x65B9;&#x6CD5;&#x4E2D;&#x6CA1;&#x6709;&#x4F7F;&#x7528;ShareDataWidget&#x7684;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x7684;<code>didChangeDependencies()</code>&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;ShareDataWidget&#x3002;</p>
+<blockquote>
+<p>&#x601D;&#x8003;&#x9898;&#xFF1A;Flutter framework&#x662F;&#x600E;&#x4E48;&#x77E5;&#x9053;&#x5B50;widget&#x6709;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;InheritedWidget&#x7684;&#xFF1F;</p>
+</blockquote>
+<h4 id="&#x5E94;&#x8BE5;&#x5728;didchangedependencies&#x4E2D;&#x505A;&#x4EC0;&#x4E48;&#xFF1F;">&#x5E94;&#x8BE5;&#x5728;didChangeDependencies()&#x4E2D;&#x505A;&#x4EC0;&#x4E48;&#xFF1F;</h4>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5B50;widget&#x5F88;&#x5C11;&#x4F1A;&#x91CD;&#x5199;&#x6B64;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x4F9D;&#x8D56;&#x6539;&#x53D8;&#x540E;framework&#x4E5F;&#x90FD;&#x4F1A;&#x8C03;&#x7528;<code>build()</code>&#x65B9;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F9D;&#x8D56;&#x6539;&#x53D8;&#x540E;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x6602;&#x8D35;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x65F6;&#x6700;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5728;&#x6B64;&#x65B9;&#x6CD5;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x6BCF;&#x6B21;<code>build()</code>&#x90FD;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-11-28 16:28:27
+</span></footer>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="willpopscope.html" class="navigation navigation-prev " aria-label="Previous page: 导航返回拦截-WillPopScope">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="theme.html" class="navigation navigation-next " aria-label="Next page: 主题-Theme">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据共享-InheritedWidget","level":"1.8.2","depth":2,"next":{"title":"主题-Theme","level":"1.8.3","depth":2,"path":"chapter7/theme.md","ref":"chapter7/theme.md","articles":[]},"previous":{"title":"导航返回拦截-WillPopScope","level":"1.8.1","depth":2,"path":"chapter7/willpopscope.md","ref":"chapter7/willpopscope.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","baidu","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"baidu":{"token":"635fd3dde151b2be9ef7adb85fe42720"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter7/inherited_widget.md","mtime":"2018-11-28T08:28:27.515Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T11:07:20.336Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
