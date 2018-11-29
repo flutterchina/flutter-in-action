@@ -1,0 +1,3 @@
+# 基础Widget
+
+本节介绍一下Flutter中常用的一些基础widget，由于大多数widget的属性都比较多，我们在介绍widget时会着重介绍常用的属性，而不会像API文档一样所有属性都介绍，关于属性详细的信息请参考Flutter SDK文档。

@@ -1,0 +1,58 @@
+{
+  "root":"docs",
+  "title": "《Flutter实战》",
+  "author": "wendux 824783146@qq.com",
+  "description": "记录Gitbook的配置和一些插件的使用",
+  "language" : "zh-hans",
+  "links":{
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
+    },
+    "sidebar": {
+      "<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>": "https://flutterchina.club"
+    }
+  },
+  "plugins": [
+    "-search",
+    "search-pro",
+    "ace",
+    "splitter",
+    "tbfed-pagefooter",
+    "toggle-chapters",
+    "baidu",
+    "prism",
+    "donate",
+    "-highlight",
+    "favicon"
+  ],
+  "pluginsConfig": {
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord" : ["Gitbook Use"]
+    },
+    "github": {
+      "url": "https://github.com/flutterchina"
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy flutterchina.club 2018",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "baidu": {
+      "token": "635fd3dde151b2be9ef7adb85fe42720"
+    },
+    "donate": {
+      "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg",
+      "button": "赏",
+      "wechatText": "微信打赏"
+    },
+    "favicon": {
+      "shortcut": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png",
+      "bookmark": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"
+    }
+  }
+}
