@@ -62,7 +62,7 @@ class ClipTestRoute extends StatelessWidget {
 
 效果如下：
 
-![image-20180910175901686](../imgs/image-20180910175901686.png)
+![image-20180910175901686](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910175901686.png)
 
 
 
@@ -103,7 +103,7 @@ DecoratedBox(
 
 运行效果：
 
-![image-20180910200744733](../imgs/image-20180910200744733.png)
+![image-20180910200744733](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910200744733.png)
 
 可以看到我们的剪裁成功了，但是图片所占用的空间大小仍然是60×60（红色区域），这是因为剪裁是在layout完成后的绘制阶段进行的，这和Transform是相似的。
 

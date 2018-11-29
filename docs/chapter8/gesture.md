@@ -48,7 +48,7 @@ class _GestureDetectorTestRouteState extends State<GestureDetectorTestRoute> {
 
 运行效果：
 
-![image-20180914123650324](../imgs/image-20180914123650324.png)
+![image-20180914123650324](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180914123650324.png)
 
 
 
@@ -106,7 +106,7 @@ class _DragState extends State<_Drag> with SingleTickerProviderStateMixin {
 
 运行后，就可以在任意方向拖动了：
 
-![image-20180914135811570](../imgs/image-20180914135811570.png)
+![image-20180914135811570](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180914135811570.png)
 
 
 
@@ -190,7 +190,7 @@ class _ScaleTestRouteState extends State<_ScaleTestRoute> {
 
 运行效果：
 
-![image-20180914184749975](../imgs/image-20180914184749975.png)
+![image-20180914184749975](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180914184749975.png)
 
 现在在图片上双指张开、收缩就可以放大、缩小图片。本示例比较简单，实际中我们通常还需要一些其它功能，如双击放大或缩小一定倍数、双支张开离开屏幕时执行一个减速放大动画等，我们将在后面“动画”一章中实现一个完整的缩放Widget。
 
@@ -246,7 +246,7 @@ class _GestureRecognizerTestRouteState
 
 运行效果：
 
-![image-20180914175603383](../imgs/image-20180914175603383.png)
+![image-20180914175603383](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180914175603383.png)
 
 
 

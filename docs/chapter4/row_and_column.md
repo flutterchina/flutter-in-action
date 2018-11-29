@@ -78,7 +78,7 @@ Column(
 
 运行结果：
 
-![image-20180905150123552](../imgs/image-20180905150123552.png)
+![image-20180905150123552](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905150123552.png)
 
 解释：第一个Row很简单，默认为居中对齐；第二个Row，由于mainAxisSize值为`MainAxisSize.min`，Row的宽度等于两个Text的宽度和，所以对齐是无意义的，所以会从左往右显示；第三个Row设置textDirection值为`TextDirection.rtl`，所以子widget会从右向左的顺序排列，而此时`MainAxisAlignment.end`表示左对齐，所以最终显示结果就是图中第三行的样子；第四个Row测试的是纵轴的对齐方式，由于两个子Text字体不一样，所以其高度也不同，我们指定了verticalDirection值为`VerticalDirection.up`，及从低向顶排列，而此时crossAxisAlignment值为CrossAxisAlignment.start表示底对齐。
 
@@ -117,7 +117,7 @@ Container(
 
 运行结果：
 
-![image-20180905153801229](../imgs/image-20180905153801229.png)
+![image-20180905153801229](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905153801229.png)
 
 如果要让里面的Colum占满外部Colum，可以使用Expanded widget：
 
@@ -138,7 +138,7 @@ Expanded(
 
 运行效果：
 
-![image-20180905154303166](../imgs/image-20180905154303166.png)
+![image-20180905154303166](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905154303166.png)
 
 我们将在介绍弹性布局时详细介绍Expanded。
 

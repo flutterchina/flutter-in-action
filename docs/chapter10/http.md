@@ -64,7 +64,7 @@ Dart IO库中提供了Http请求的一些类，我们可以直接使用HttpClien
 
 我们实现一个获取百度首页html的例子，示例效果如下：
 
-​    ![Screenshot_1540893386](../imgs/Screenshot_1540893386.png)
+​    ![Screenshot_1540893386](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1540893386.png)
 
 点击“获取百度首页”按钮后，会请求百度首页，请求成功后，我们将返回内容显示出来并在控制台打印响应header，代码如下：
 
@@ -169,7 +169,7 @@ HttpClient有很多属性可以配置，常用的属性列表如下：
 
 Http协议的认证（Authentication）机制可以用于保护非公开资源。如果Http服务器开启了认证，那么用户在发起请求时就需要携带用户凭据，如果你在浏览器中访问了启用Basic认证的资源时，浏览就会弹出一个登录框，如：
 
-![image-20181031114207514](../imgs/image-20181031114207514.png)
+![image-20181031114207514](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20181031114207514.png)
 
 
 

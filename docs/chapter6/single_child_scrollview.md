@@ -51,5 +51,5 @@ class SingleChildScrollViewTestRoute extends StatelessWidget {
 
 效果：
 
-![image-20180911144506350](../imgs/image-20180911144506350.png)
+![image-20180911144506350](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180911144506350.png)
 

@@ -145,7 +145,7 @@ final int registrationDateMillis;
 
 `json_serializable`第一次创建类时，您会看到与下图类似的错误。
 
-![ide_warning](../imgs/ide_warning.png)
+![ide_warning](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/ide_warning.png)
 
 这些错误是完全正常的，这是因为Model类的生成代码还不存在。为了解决这个问题，我们必须运行代码生成器来为我们生成序列化模板。有两种运行代码生成器的方法：
 

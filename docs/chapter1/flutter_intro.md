@@ -60,7 +60,7 @@ Flutter高性能主要靠两点来保证，首先，Flutter APP采用Dart语言�
 
 本节我们先对Flutter的框架做一个整体介绍，旨在让读者心中有一个整体的映像，这对初学者来说非常重要，如果一下子便深入到Flutter中，就像一个在沙漠中没有地图的人，即使可以找到一个绿洲，但是他也不会知道下一个绿洲在哪，所以，无论学什么技术，都要现有一张清晰的“地图”，而我们的学习过程就是“按图索骥”，这样我们才不会陷于细节而“目无全牛”。言归正传，我们看一下Flutter官方提供的一张框架图：
 
-![image-20180816160424567](../imgs/framework.png)
+![image-20180816160424567](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/framework.png)
 
 
 

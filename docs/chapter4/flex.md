@@ -94,7 +94,7 @@ class FlexLayoutTestRoute extends StatelessWidget {
 
 运行效果如下：
 
-![image-20180905164001874](../imgs/image-20180905164001874.png)
+![image-20180905164001874](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905164001874.png)
 
 示例中的Spacer的功能是占用指定比例的空间，实际上它只是Expanded的一个包装：
 

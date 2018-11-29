@@ -42,7 +42,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
 接下来，我们实现一个显示随机字符串的widget。有一个名为“english_words”的开源软件包，其中包含数千个常用的英文单词以及一些实用功能。我们首先在pub上找到english_words这个包，确定其最新的版本号和是否支持Flutter。
 
-![english words](../imgs/english_words.png)
+![english words](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/english_words.png)
 
 我们看到“english_words”包最新的版本是3.1.3，并且支持flutter，接下来：
 
@@ -62,7 +62,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
    在Android Studio的编辑器视图中查看pubspec.yml时，单击右上角的 **Packages get** 。
 
-   ![package get](../imgs/package_get.png)
+   ![package get](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/package_get.png)
 
 
 
@@ -104,7 +104,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
 5. 如果应用程序正在运行，请使用热重载按钮 (![lightning bolt icon](https://flutterchina.club/get-started/codelab/images/hot-reload-button.png)) 更新正在运行的应用程序。每次单击热重载或保存项目时，都会在正在运行的应用程序中随机选择不同的单词对。 这是因为单词对是在 `build` 方法内部生成的。每次热更新时，`build`方法都户被执行。
 
-   ![image-20180822163100650](../imgs/image-20180822163100650.png)
+   ![image-20180822163100650](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180822163100650.png)
 
 
 ## 其它依赖方式

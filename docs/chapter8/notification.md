@@ -101,4 +101,4 @@ class MyNotification extends Notification {
 
 运行效果如下：
 
-![Screenshot_1539328127](../imgs/Screenshot_1539328127.png)
+![Screenshot_1539328127](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1539328127.png)

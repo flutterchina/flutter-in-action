@@ -62,7 +62,7 @@ Image.network(
 
 运行上面两个示例，图片加载成功后显示如下：
 
-![image-20180829163427556](../imgs/image-20180829163427556.png)
+![image-20180829163427556](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png)
 
 
 
@@ -97,7 +97,7 @@ const Image({
 
   一图胜万言：
 
-  ![image-20180829162853209](../imgs/Screenshot_1535531379.png)
+  ![image-20180829162853209](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1535531379.png)
   
 
 
@@ -114,7 +114,7 @@ const Image({
 
 运行效果如下（彩色）:
 
-![image-20180829164208961](../imgs/image-20180829164208961.png)
+![image-20180829164208961](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829164208961.png)
 
 - `repeat`：当图片本身大小小于显示空间时，指定图片的重复规则。简单示例如下：
 
@@ -128,7 +128,7 @@ const Image({
   ```
   运行后效果如下：
 
-  ![image-20180829165404877](../imgs/image-20180829165404877.png)
+  ![image-20180829165404877](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829165404877.png)
 
 ### ICON
 
@@ -176,7 +176,7 @@ Text(icons,
 
 运行效果如下：
 
-![image-20180829174100598](../imgs/image-20180829174100598.png)
+![image-20180829174100598](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829174100598.png)
 
 通过这个示例可以看到，使用图标就像使用文本一样，但是这种方式需要我们提供每个图标的码点，这并对开发者不友好，所以，Flutter封装了一个`IconData`和`Icon`来专门显示字体图标，上面的例子也可以用如下方式实现：
 
@@ -243,5 +243,5 @@ Row(
 
    运行后效果如下：
 
-   ![image-20180829180722793](../imgs/image-20180829180722793.png)
+   ![image-20180829180722793](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829180722793.png)
 

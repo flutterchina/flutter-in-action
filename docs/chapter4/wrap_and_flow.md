@@ -18,7 +18,7 @@ Row(
 
 运行：
 
-![image-20180905171113290](../imgs/image-20180905171113290.png)
+![image-20180905171113290](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905171113290.png)
 
 可以看到，右边溢出部分报错。这是因为Row默认只有一行，如果超出屏幕不会折行。我们把超出屏幕显示范围会自动折行的布局称为流式布局。Flutter中通过Wrap和Flow来支持流式布局，将上例中的Row换成Wrap后溢出部分则会自动折行。下面是Wrap的定义:
 
@@ -73,7 +73,7 @@ Wrap(
 
 运行效果：
 
-![image-20180905173658950](../imgs/image-20180905173658950.png)
+![image-20180905173658950](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905173658950.png)
 
 ### Flow
 
@@ -149,7 +149,7 @@ class TestFlowDelegate extends FlowDelegate {
 
 效果：
 
-![image-20180905184427501](../imgs/image-20180905184427501.png)
+![image-20180905184427501](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905184427501.png)
 
 可以看到我们主要的任务就是实现`paintChildren`，它的主要任务是确定每个子widget位置。由于Flow不能自适应子widget的大小，我们通过在`getSize`返回一个固定大小来指定Flow的大小。
 

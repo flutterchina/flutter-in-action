@@ -103,7 +103,7 @@ class _ThemeTestRouteState extends State<ThemeTestRoute> {
 
 运行后点击右下角悬浮按钮则可以切换主题：
 
-![Screenshot_1536838018](../imgs/Screenshot_1536838018.png)![Screenshot_1536838021](../imgs/Screenshot_1536838021.png)
+![Screenshot_1536838018](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536838018.png)![Screenshot_1536838021](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536838021.png)
 
 
 

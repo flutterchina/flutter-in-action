@@ -9,7 +9,7 @@ Material widget库中提供了多种按钮Widget如RaisedButton、FlatButton、O
 
 RaisedButton 即"漂浮"按钮，它默认带有阴影和灰色背景。按下后，阴影会变大，如：
 
-![image-20180830192149766](../imgs/image-20180830192149766.png)
+![image-20180830192149766](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830192149766.png)
 
 使用RaisedButton非常简单，如：
 
@@ -24,7 +24,7 @@ RaisedButton(
 
 FlatButton即扁平按钮，默认背景透明并不带阴影。按下后，会有背景色：
 
-![image-20180830191743776](../imgs/image-20180830191743776.png)
+![image-20180830191743776](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830191743776.png)
 
 使用FlatButton也很简单，代码如下：
 
@@ -39,7 +39,7 @@ FlatButton(
 
 OutlineButton默认有一个边框，不带阴影且背景透明。按下后，边框颜色会变亮、同时出现背景和阴影(较弱)：
 
-![image-20180830193419555](../imgs/image-20180830193419555.png)
+![image-20180830193419555](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830193419555.png)
 
 使用OutlineButton也很简单，代码如下：
 
@@ -54,7 +54,7 @@ OutlineButton(
 
 IconButton是一个可点击的Icon，不包括文字，默认没有背景，点击后会出现背景：
 
-![image-20180830194324827](../imgs/image-20180830194324827.png)
+![image-20180830194324827](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830194324827.png)
 
 使用代码如下：
 
@@ -92,7 +92,7 @@ const FlatButton({
 
 定义一个背景蓝色，两边圆角的按钮。效果如下：
 
-![image-20180830200142290](../imgs/image-20180830200142290.png)
+![image-20180830200142290](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830200142290.png)
 
 代码如下：
 
@@ -112,7 +112,7 @@ FlatButton(
 
 细心的读者可能会发现这个按钮没有阴影(点击之后也没有)，这样会显得没有质感。其实这也很容易，将上面的`FlatButton`换成`RaiseButton`就行，其它代码不用改，换了之后我们看看效果：
 
-![image-20180830201140908](../imgs/image-20180830201140908.png)
+![image-20180830201140908](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830201140908.png)
 
 是不是有质感了！之所以会这样，是因为`RaisedButton`默认有配置阴影：
 

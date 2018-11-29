@@ -27,7 +27,7 @@ LinearProgressIndicator是水平方向线性的进度条，下面分别给出循
 
 运行效果如下：
 
-![image-20180830205934166](../imgs/image-20180830205934166.png)
+![image-20180830205934166](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830205934166.png)
 
 
 
@@ -52,11 +52,11 @@ Column(
 
 
 
-![image-20180903142548051](../imgs/image-20180903142548051.png)
+![image-20180903142548051](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903142548051.png)
 
 CircularProgressIndicator支持一个strokeWidth属性，表示圆形进度条画笔的宽度，默认为4像素（逻辑像素），我们看看strokeWidth值为2.0时的效果：
 
-![image-20180903144940343](../imgs/image-20180903144940343.png)
+![image-20180903144940343](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903144940343.png)
 
 代码：
 
@@ -115,7 +115,7 @@ SizedBox(
 ...
 ```
 
-![image-20180903161057739](../imgs/image-20180903161057739.png)
+![image-20180903161057739](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903161057739.png)
 
 
 
@@ -138,7 +138,7 @@ SizedBox(
 
   运行效果如下：
 
-  ![image-20180903162117829](../imgs/image-20180903162117829.png)
+  ![image-20180903162117829](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903162117829.png)
 
   通过主题定义widget样式的方法在flutter中非常常见，我们将在后面专门“主题”章节详细介绍。
 
@@ -155,5 +155,5 @@ SizedBox(
 
   运行效果如下：
 
-  ![image-20180903162208760](../imgs/image-20180903162208760.png)
+  ![image-20180903162208760](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903162208760.png)
 

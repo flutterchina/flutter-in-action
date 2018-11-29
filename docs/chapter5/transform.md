@@ -19,7 +19,7 @@ Container(
 
 
 
-![image-20180910160248494](../imgs/image-20180910160248494.png)
+![image-20180910160248494](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910160248494.png)
 
 关于矩阵变换的相关内容属于线性代数范畴，本书不做讨论，读者有兴趣可以自行了解。本书中，我们把焦点放在Flutter中一些常见的变换效果上。
 
@@ -39,7 +39,7 @@ DecoratedBox(
 
 效果：
 
-![image-20180910161953078](../imgs/image-20180910161953078.png)
+![image-20180910161953078](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910161953078.png)
 
 ### 旋转
 
@@ -58,7 +58,7 @@ DecoratedBox(
 
 效果：
 
-![image-20180910162408030](../imgs/image-20180910162408030.png)
+![image-20180910162408030](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910162408030.png)
 
 ### 缩放
 
@@ -76,7 +76,7 @@ DecoratedBox(
 
 效果：
 
-![image-20180910162817059](../imgs/image-20180910162817059.png)
+![image-20180910162817059](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910162817059.png)
 
 ### 注意
 
@@ -99,7 +99,7 @@ DecoratedBox(
 
   显示效果：
 
-  ![image-20180910164454967](../imgs/image-20180910164454967.png)
+  ![image-20180910164454967](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910164454967.png)
 
   由于第一个Text应用变换(放大)后，其在绘制时会放大，但其占用的空间依然为红色部分，所以第二个text会紧挨着红色部分，最终就会出现文字有重合部分。
 
@@ -128,7 +128,7 @@ Row(
 
 效果：
 
-![image-20180910170603964](../imgs/image-20180910170603964.png)
+![image-20180910170603964](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910170603964.png)
 
 
 

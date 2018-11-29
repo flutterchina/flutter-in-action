@@ -63,7 +63,7 @@ ConstrainedBox(
 
 运行效果如下：
 
-![image-20180907113833327](../imgs/image-20180907113833327.png)
+![image-20180907113833327](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907113833327.png)
 
 
 
@@ -93,7 +93,7 @@ Stack(
 
 显示效果如下：
 
-![image-20180907114859603](../imgs/image-20180907114859603.png)
+![image-20180907114859603](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907114859603.png)
 
 可以看到，由于第二个子widget没有定位，所以`fit`属性会对它起作用，就会占满Stack。有Stack子元素是堆叠的，所以第一个子Widget被第二个遮住了，而第三个在最上层，所以可以正常显示。
 

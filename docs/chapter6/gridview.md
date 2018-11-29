@@ -60,7 +60,7 @@ GridView(
 );
 ```
 
-![image-20180912110415233](../imgs/image-20180912110415233.png)
+![image-20180912110415233](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180912110415233.png)
 
 
 
@@ -120,7 +120,7 @@ GridView(
 );
 ```
 
-![image-20180912114320838](../imgs/image-20180912114320838.png)
+![image-20180912114320838](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180912114320838.png)
 
 #### GridView.extent
 
@@ -221,6 +221,6 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
 
 Flutter的GridView默认子元素显示空间是相等的，但在实际开发中，你可能会遇到子元素大小不等的情况，如下面这样的布局：
 
-![flutter_staggered_grid_view](../imgs/flutter_staggered_grid_view.png)
+![flutter_staggered_grid_view](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_staggered_grid_view.png)
 
 Pub上有一个包“flutter_staggered_grid_view” ，它实现了一个交错GridView的布局模型，可以很轻松的实现这种布局，详情读者可以自行了解。

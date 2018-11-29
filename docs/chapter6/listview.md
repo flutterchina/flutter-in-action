@@ -86,7 +86,7 @@ ListView.builder(
 
 
 
-![image-20180911171508400](../imgs/image-20180911171508400.png)
+![image-20180911171508400](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180911171508400.png)
 
 
 
@@ -116,7 +116,7 @@ class ListView3 extends StatelessWidget {
 }
 ```
 
-![image-20180911172832687](../imgs/image-20180911172832687.png)
+![image-20180911172832687](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180911172832687.png)
 
 ### 实例：无限加载列表
 
@@ -189,7 +189,7 @@ class _InfiniteListViewState extends State<InfiniteListView> {
 }
 ```
 
-![image-20180912152627343](../imgs/image-20180912152627343.png)![image-20180912153208597](../imgs/image-20180912153208597.png)
+![image-20180912152627343](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180912152627343.png)![image-20180912153208597](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180912153208597.png)
 
 代码比较简单，读者可以参照代码中的注释理解，故不再赘述。需要说明的是，`_retrieveData()`的功能是模拟从数据源异步获取数据，我们使用english_words包的`generateWordPairs()`方法每次生成20个单词。
 

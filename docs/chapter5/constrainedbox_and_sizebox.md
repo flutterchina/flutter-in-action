@@ -33,7 +33,7 @@ ConstrainedBox(
 
 显示效果：
 
-![image-20180907150653572](../imgs/image-20180907150653572.png)
+![image-20180907150653572](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907150653572.png)
 
 可以看到，我们虽然将Container的高度设置为5像素，但是最终却是50像素，这正是ConstrainedBox的最小高度限制生效了。如果将Container的高度设置为80像素，那么最终红色区域的高度也会是80像素，因为在此示例中，ConstrainedBox只限制了最小高度，并未限制最大高度。
 
@@ -65,7 +65,7 @@ SizedBox(
 ```
 运行效果如下：
 
-![image-20180907162546222](../imgs/image-20180907162546222.png)
+![image-20180907162546222](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907162546222.png)
 
 实际上SizedBox和只是ConstrainedBox一个定制，上面代码等价于：
 
@@ -111,7 +111,7 @@ ConstrainedBox(
 
 上面我们有父子两个ConstrainedBox，他们的限制条件不同，运行后效果如下：
 
-![image-20180910102020609](../imgs/image-20180910102020609.png)
+![image-20180910102020609](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910102020609.png)
 
 最终显示效果是宽90，高60，也就是说是子ConstrainedBox的minWidth生效，而minHeight是父ConstrainedBox生效。单凭这个例子，我们还总结不出什么规律，我们将上例中父子限制条件换一下：
 
@@ -125,7 +125,7 @@ ConstrainedBox(
 )
 ```
 
-![image-20180910102020609](../imgs/image-20180910102020609.png)
+![image-20180910102020609](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910102020609.png)
 
 最终的显示效果仍然是90，高60，效果相同，但意义不同，因为此时minWidth生效的事父ConstrainedBox，而minHeight是子ConstrainedBox生效。
 
@@ -153,7 +153,7 @@ ConstrainedBox(
 
 上面代码中，如果没有中间的UnconstrainedBox，那么根据上面所述的多重限制规则，那么最终将显示一个90×100的红色框。但是由于 UnconstrainedBox “去除”了父ConstrainedBox的限制，则最终会按照子ConstrainedBox的限制来绘制redBox，即90×20：
 
-![image-20180910105830808](../imgs/image-20180910105830808.png)
+![image-20180910105830808](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910105830808.png)
 
 但是，读者请注意，UnconstrainedBox对父限制的“去除”并非是真正的去除，上面例子中虽然红色区域大小是90×20，但上方仍然有80的空白空间。也就是说父限制的minHeight(100.0)仍然是生效的，只不过它不影响最终子元素的大小，但仍然还是占有相应的空间，读者可以此时的父ConstrainedBox作用的是子ConstrainedBox，而redBox只受子ConstrainedBox限制，这一点请读者务必注意。
 

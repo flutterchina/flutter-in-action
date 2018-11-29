@@ -20,7 +20,7 @@ Text("Hello world",
 ```
 运行效果如下：
 
-![image-20180829103242552](../imgs/image-20180829103242552.png)
+![image-20180829103242552](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829103242552.png)
 
 - `textAlign`：文本的对齐方式；可以选择左对齐、右对齐还是居中。注意，对齐的参考系是Text widget本身。本例中虽然是指定了居中对齐，但因为Text文本内容宽度不足一行，Text的宽度和文本内容长度相等，那么这时指定对齐方式是没有意义的，只有Text宽度大于文本内容长度时指定此属性才有意义。下面我们指定一个较长的字符串：
 
@@ -32,7 +32,7 @@ Text("Hello world",
 
   运行效果如下：
 
-  ![image-20180829104807535](../imgs/image-20180829104807535.png)
+  ![image-20180829104807535](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829104807535.png)
 
 ​      字符串内容超过一行，Text宽度等于屏幕宽度，第二行文本便会居中显示。
 
@@ -59,7 +59,7 @@ Text("Hello world",
 
 效果如下：
 
-![image-20180829111601391](../imgs/image-20180829111601391.png)
+![image-20180829111601391](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829111601391.png)
 
 此示例只展示了TextStyle的部分属性，它还有一些其它属性，属性名基本都是自解释的，在此不再赘述，读者可以查阅SDK文档。值得注意的是：
 
@@ -87,7 +87,7 @@ const TextSpan({
 
 其中`style` 和 `text`属性代表该文本片段的样式和内容。  `children`是一个`TextSpan`的数组，也就是说`TextSpan`可以包括其他`TextSpan`。而`recognizer`用于对该文本片段上用于手势进行识别处理。下面我们看一个效果，然后用`TextSpan`实现它。
 
-![image-20180829114929736](../imgs/image-20180829114929736.png)
+![image-20180829114929736](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829114929736.png)
 
 源码：
 
@@ -141,7 +141,7 @@ DefaultTextStyle(
 
 上面代码中，我们首先设置了一个默认的文本样式，即字体为20像素(逻辑像素)、颜色为红色。然后通过`DefaultTextStyle` 设置给了子树Column节点处，这样一来Column的所有子孙Text默认都会继承该样式，除非Text显示指定不继承样式，如代码中注释2。示例运行效果如下：
 
-![image-20180829135406156](../imgs/image-20180829135406156.png)
+![image-20180829135406156](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829135406156.png)
 
 ### 使用字体
 

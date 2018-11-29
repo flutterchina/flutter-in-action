@@ -20,6 +20,6 @@ _request() async{
 
 可以看到，使用Socket需要我们自己实现Http协议细节，本例只是一个简单示例，没有处理重定向、cookie等。本示例完整代码参考示例demo，运行后如下：
 
-![image-20181102175600643](../imgs/image-20181102175600643.png)
+![image-20181102175600643](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20181102175600643.png)
 
 可以看到响应内容分两个部分，第一部分是响应头，第二部分是响应体，由于服务端可以根据请求信息动态来输出响应体。由于本示例请求头比较简单，所以响应体和浏览器中访问的会有差别，读者可以补充一些请求头(如user-agent)来看看输出的变化。

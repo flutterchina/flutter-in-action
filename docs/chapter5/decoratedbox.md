@@ -55,6 +55,6 @@ BoxDecoration({
 
 效果如下：
 
-![image-20180910115903588](../imgs/image-20180910115903588.png)
+![image-20180910115903588](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910115903588.png)
 
 怎么样，通过BoxDecoration，我们实现了一个渐变按钮的外观，但此示例还不是一个标准的按钮，因为它还不能响应点击事件，我们将在本章末尾来实现一个完整的GradientButton。

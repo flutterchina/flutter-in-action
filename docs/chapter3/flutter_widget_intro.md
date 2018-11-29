@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
 
 
 
-![Screenshot_1535019164](../imgs/Screenshot_1535019164.png)
+![Screenshot_1535019164](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1535019164.png)
 
 
 
@@ -640,7 +640,7 @@ class CupertinoTestRoute extends StatelessWidget {
 
 下面是在iPhoneX上页面效果截图：
 
-![image-20180824181958838](../imgs/image-20180824181958838.png)
+![image-20180824181958838](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180824181958838.png)
 
 
 

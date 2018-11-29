@@ -86,5 +86,5 @@ class CustomScrollViewTestRoute extends StatelessWidget {
 
 运行效果：
 
-![image-20180912173057903](../imgs/Screenshot_1536744758.png)![image-20180912173134246](../imgs/Screenshot_1536744765.png)
+![image-20180912173057903](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536744758.png)![image-20180912173134246](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536744765.png)
 

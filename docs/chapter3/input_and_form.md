@@ -62,7 +62,7 @@ const TextField({
 
 - textInputAction：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看API文档，下面是当值为`TextInputAction.search`时，原生Android系统下键盘样式：
 
-  ![image-20180903181235471](../imgs/image-20180903181235471.png)
+  ![image-20180903181235471](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903181235471.png)
 
 #### 
 
@@ -107,7 +107,7 @@ Column(
 
 
 
-![image-20180904111331835](../imgs/image-20180904111331835.png)
+![image-20180904111331835](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904111331835.png)
 
 ##### 获取输入内容
 
@@ -196,7 +196,7 @@ TextField(
 
 运行效果如下：
 
-![image-20180904155039251](../imgs/image-20180904155039251.png)
+![image-20180904155039251](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904155039251.png)
 
 ##### 控制焦点
 
@@ -207,7 +207,7 @@ TextField(
 
 界面如下：
 
-![image-20180904184812329](../imgs/image-20180904184812329.png)
+![image-20180904184812329](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904184812329.png)
 
 代码如下：
 
@@ -349,7 +349,7 @@ Theme(
 
 运行效果如下：
 
-![image-20180904121222620](../imgs/image-20180904121222620.png)
+![image-20180904121222620](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904121222620.png)
 
 我们成功的自定义了下划线颜色和提问文字样式，细心的读者可能已经发现，通过这种方式自定义后，输入框在获取焦点时，labelText不会高亮显示了，正如上图中的"用户名"本应该显示蓝色，但现在却显示为灰色，并且我们还是无法定义下划线宽度。另一种灵活的方式是直接隐藏掉TextField本身的下划线，然后通过Container去嵌套定义样式，如:
 
@@ -373,7 +373,7 @@ Container(
 
 运行效果：
 
-![image-20180904150511545](../imgs/image-20180904150511545.png)
+![image-20180904150511545](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904150511545.png)
 
 通过这种widget组合的方式，也可以定义背景圆角等。一般来说，优先通过decoration来自定义样式，如果decoration实现不了，再用widget组合的方式。
 
@@ -530,7 +530,7 @@ class _FormTestRouteState extends State<FormTestRoute> {
 
 运行后：
 
-![image-20180904174217682](../imgs/image-20180904174217682.png)
+![image-20180904174217682](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904174217682.png)
 
 
 

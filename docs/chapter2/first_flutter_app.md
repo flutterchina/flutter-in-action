@@ -9,7 +9,7 @@
 
 我们先运行此示例，效果图如下：
 
-![flutter_starter_app](../imgs/flutter_starter_app.png)
+![flutter_starter_app](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_starter_app.png)
 
 
 

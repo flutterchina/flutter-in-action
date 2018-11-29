@@ -27,7 +27,7 @@ Container({
 
 我们通过Container来实现如下的卡片：
 
-![image-20180910205356331](../imgs/image-20180910205356331.png)
+![image-20180910205356331](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910205356331.png)
 
 
 
@@ -82,7 +82,7 @@ Container(
 ...
 ```
 
-![image-20180911094807143](../imgs/image-20180911094807143.png)
+![image-20180911094807143](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180911094807143.png)
 
 可以发现，直观的感觉就是margin的补白是在容器外部，而padding的补白是在容器内部，读者需要记住这个差异。事实上，Container内`margin`和`padding`都是通过Padding  widget来实现的，上面的示例代码实际上等价于：
 

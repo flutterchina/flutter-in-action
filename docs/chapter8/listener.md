@@ -41,7 +41,7 @@ Listener(
 ),
 ```
 
-![image-20180917184022675](../imgs/image-20180917184022675.png)
+![image-20180917184022675](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180917184022675.png)
 
 手指在蓝色矩形区域内移动即可看到当前指针偏移，当触发指针事件时，参数PointerDownEvent、PointerMoveEvent、PointerUpEvent都是PointerEvent的一个子类，PointerEvent类中包括当前指针的一些信息，如：
 

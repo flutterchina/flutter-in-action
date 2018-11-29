@@ -41,7 +41,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 1. 去flutter官网下载其最新可用的安装包，官网地址：https://flutter.io/sdk-archive/#windows
 
-   ![image-20180820142229086](../imgs/flutter_archive.png)
+   ![image-20180820142229086](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_archive.png)
 
    
 
@@ -256,7 +256,7 @@ flutter upgrade
 
 1. 定位到Android Studio工具栏：
 
-   ![main-toolbar](../imgs/main-toolbar.png)
+   ![main-toolbar](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/main-toolbar.png)
 
 2. 在 **target selector** 中, 选择一个运行该应用的Android设备。如果没有列出可用，请选择 **Tools>Android>AVD Manager** 并在那里创建一个。
 
@@ -264,7 +264,7 @@ flutter upgrade
 
 4. 如果一切正常, 您应该在您的设备或模拟器上会看到启动的应用程序：
 
-   ![](../imgs/flutter_starter_app.png)
+   ![](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_starter_app.png)
 
 
 #### 体验热重载
@@ -400,19 +400,19 @@ Window下只支持为Android设备构建并运行Flutter应用，而macOS同时�
 
    * 要开始您的第一个iOS开发项目，您可能需要使用您的Apple ID登录Xcode。
 
-     ![xcode账号](../imgs/xcode-account.png)
+     ![xcode账号](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/xcode-account.png)
 
      任何Apple ID都支持开发和测试，但若想将应用分发到App Store，就必须注册Apple开发者计划，有关详情读者可以自行了解。
 
    4. 当您第一次attach真机设备进行iOS开发时，需要同时信任你的Mac和该设备上的开发证书。首次将iOS设备连接到Mac时，请在对话框中选择 `Trust`。 
 
-      ![添加信任](../imgs/trust-computer.png)
+      ![添加信任](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/trust-computer.png)
 
       然后，转到iOS设备上的**设置**菜单，选择 **常规>设备管理** 并信任您的证书。
 
    5. 如果Xcode中的自动签名失败，请验证项目的 **General > Identity > Bundle Identifier** 值是否唯一.
 
-      ![验证bundle id是否唯一](../imgs/xcode-unique-bundle-id.png)
+      ![验证bundle id是否唯一](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/xcode-unique-bundle-id.png)
 
    6. 运行 `flutter run`启动flutter应用程序。
    

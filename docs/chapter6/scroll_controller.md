@@ -102,7 +102,7 @@ class ScrollControllerTestRouteState extends State<ScrollControllerTestRoute> {
 
 代码说明已经包含在注释里，下面我们看看运行效果：
 
-![Screenshot_1536817558](../imgs/Screenshot_1536817558.png)![Screenshot_1536817570](../imgs/Screenshot_1536817570.png)
+![Screenshot_1536817558](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536817558.png)![Screenshot_1536817570](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536817570.png)
 
 由于列表项高度为50像素，当滑动到第20个列表项后，右下角“返回顶部”按钮会显示，点击该按钮，ListView会在返回顶部的过程中执行一个滚动动画，动画时间是200毫秒，动画曲线是Curves.ease，关于动画的详细内容我们将在后面“动画”一章中详细介绍。
 
@@ -236,7 +236,7 @@ class _ScrollNotificationTestRouteState
 
 我们看一看运行结果：
 
-![image-20180913165011407](../imgs/image-20180913165011407.png)
+![image-20180913165011407](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180913165011407.png)
 
 在接收到滚动事件时，参数类型为ScrollNotification，它包括一个`metrics`属性，它的类型是ScrollMetrics，该属性包含当前ViewPort及滚动位置等信息：
 

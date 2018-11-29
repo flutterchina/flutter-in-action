@@ -50,7 +50,7 @@
 
    我们添加了一个打开新路由的按钮，并将按钮文字颜色设置为蓝色，点击该按钮后就会打开新的路由页面。
 
-   ![flutter_starter_app](../imgs/flutter_starter_app_open_new_route.png) ![flutter_starter_app](../imgs/flutter_starter_app_new_route.png)
+   ![flutter_starter_app](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_starter_app_open_new_route.png) ![flutter_starter_app](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_starter_app_new_route.png)
 
 
 

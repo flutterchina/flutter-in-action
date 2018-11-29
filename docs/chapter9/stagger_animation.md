@@ -153,5 +153,5 @@ class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin
 }
 ```
 执行效果如下，点击灰色矩形，就可以看到整个动画效果：
-![Screenshot_1540881623](../imgs/Screenshot_1540881623.png)
+![Screenshot_1540881623](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1540881623.png)
 

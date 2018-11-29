@@ -1,4 +1,4 @@
-<div style="text-align:center; padding-bottom:30px"><img style="height:250px;box-shadow: #aaa 5px 5px 10px;" src="../imgs/book.jpg"/></div>
+<div style="text-align:center; padding-bottom:30px"><img style="height:250px;box-shadow: #aaa 5px 5px 10px;" src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/book.jpg"/></div>
 
 # 缘起
 
