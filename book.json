@@ -21,7 +21,6 @@
     "search-pro",
     "ace",
     "splitter",
-    "tbfed-pagefooter",
     "toggle-chapters",
     "prism",
     "donate",
@@ -35,11 +34,6 @@
     },
     "github": {
       "url": "https://github.com/flutterchina"
-    },
-    "tbfed-pagefooter": {
-      "copyright":"Copyright &copy flutterchina.club 2018",
-      "modify_label": "该文件修订时间：",
-      "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
     "donate": {
       "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg",

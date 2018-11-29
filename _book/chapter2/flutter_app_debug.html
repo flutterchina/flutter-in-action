@@ -29,10 +29,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
                 
             
@@ -88,6 +84,9 @@
                 font-size: 25px;
                 color: #666 !important;
             }
+            body{
+                font-size: 15px !important;
+            }
         </style>
         <script>
             var _hmt = _hmt || [];
@@ -97,11 +96,6 @@
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
             })();
-            $(".pull-right .fa-edit").on("click",function () {
-               var t=location.pathname.split("/");
-               var file=t[t.length-1].split('.')[0];
-            })
-            $("a[href='todo.html']").css("color","#aaa")
         </script>
     </head>
     <body>
@@ -1836,9 +1830,7 @@ Timeline.finishSync();
 <h2 id="material-grid">Material grid</h2>
 <p>&#x5728;&#x5F00;&#x53D1;&#x5B9E;&#x73B0;<a href="https://www.google.com/design/spec/material-design/introduction.html" target="_blank">Material Design</a>&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C; &#x5C06;<a href="https://www.google.com/design/spec/layout/metrics-keylines.html" target="_blank">Material Design&#x57FA;&#x7EBF;&#x7F51;&#x683C;</a>&#x8986;&#x76D6;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A;&#x53EF;&#x80FD;&#x6709;&#x52A9;&#x4E8E;&#x9A8C;&#x8BC1;&#x5BF9;&#x9F50;&#x3002; &#x4E3A;&#x6B64;&#xFF0C;<a href="https://docs.flutter.io/flutter/material/MaterialApp/MaterialApp.html" target="_blank"><code>MaterialApp</code> &#x6784;&#x9020;&#x51FD;&#x6570;</a> &#x6709;&#x4E00;&#x4E2A;<code>debugShowMaterialGrid</code>&#x53C2;&#x6570;&#xFF0C; &#x5F53;&#x5728;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x8986;&#x76D6;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7F51;&#x683C;&#x3002;</p>
 <p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<a href="https://docs.flutter.io/flutter/widgets/GridPaper-class.html" target="_blank"><code>GridPaper</code></a>widget&#x5C06;&#x8FD9;&#x79CD;&#x7F51;&#x683C;&#x8986;&#x76D6;&#x5728;&#x975E;Material&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A; &#x3002;</p>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-11-28 14:51:01
-</span></footer>
+
                                 
                                 </section>
                             
@@ -1865,7 +1857,7 @@ Timeline.finishSync();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"调试Flutter APP","level":"1.3.5","depth":2,"next":{"title":"基础Widgets","level":"1.4","depth":1,"path":"chapter3/index.md","ref":"chapter3/index.md","articles":[{"title":"Widget简介","level":"1.4.1","depth":2,"path":"chapter3/flutter_widget_intro.md","ref":"chapter3/flutter_widget_intro.md","articles":[]},{"title":"文本、字体样式","level":"1.4.2","depth":2,"path":"chapter3/text.md","ref":"chapter3/text.md","articles":[]},{"title":"按钮","level":"1.4.3","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},{"title":"图片和Icon","level":"1.4.4","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},{"title":"单选框和复选框","level":"1.4.5","depth":2,"path":"chapter3/radio_and_checkbox.md","ref":"chapter3/radio_and_checkbox.md","articles":[]},{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]}]},"previous":{"title":"资源管理","level":"1.3.4","depth":2,"path":"chapter2/flutter_assets_mgr.md","ref":"chapter2/flutter_assets_mgr.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter2/flutter_app_debug.md","mtime":"2018-11-28T06:51:01.351Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:20:40.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"调试Flutter APP","level":"1.3.5","depth":2,"next":{"title":"基础Widgets","level":"1.4","depth":1,"path":"chapter3/index.md","ref":"chapter3/index.md","articles":[{"title":"Widget简介","level":"1.4.1","depth":2,"path":"chapter3/flutter_widget_intro.md","ref":"chapter3/flutter_widget_intro.md","articles":[]},{"title":"文本、字体样式","level":"1.4.2","depth":2,"path":"chapter3/text.md","ref":"chapter3/text.md","articles":[]},{"title":"按钮","level":"1.4.3","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},{"title":"图片和Icon","level":"1.4.4","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},{"title":"单选框和复选框","level":"1.4.5","depth":2,"path":"chapter3/radio_and_checkbox.md","ref":"chapter3/radio_and_checkbox.md","articles":[]},{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]}]},"previous":{"title":"资源管理","level":"1.3.4","depth":2,"path":"chapter2/flutter_assets_mgr.md","ref":"chapter2/flutter_assets_mgr.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter2/flutter_app_debug.md","mtime":"2018-11-28T06:51:01.351Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:37:04.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1920,5 +1912,14 @@ Timeline.finishSync();
     
 
     </body>
+    <script>
+        $(function () {
+            $(".pull-right .fa-edit").on("click",function () {
+                var t=location.pathname.split(".")[0]+".md";
+                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        })
+    </script>
 </html>
 

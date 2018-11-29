@@ -29,10 +29,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
                 
             
@@ -88,6 +84,9 @@
                 font-size: 25px;
                 color: #666 !important;
             }
+            body{
+                font-size: 15px !important;
+            }
         </style>
         <script>
             var _hmt = _hmt || [];
@@ -97,11 +96,6 @@
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
             })();
-            $(".pull-right .fa-edit").on("click",function () {
-               var t=location.pathname.split("/");
-               var file=t[t.length-1].split('.')[0];
-            })
-            $("a[href='todo.html']").css("color","#aaa")
         </script>
     </head>
     <body>
@@ -1312,9 +1306,7 @@
                                 
                                 <h1 id="&#x529F;&#x80FD;&#x578B;widget">&#x529F;&#x80FD;&#x578B;Widget</h1>
 <p>&#x529F;&#x80FD;&#x578B;Widget&#x6307;&#x7684;&#x662F;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;UI&#x5E03;&#x5C40;&#x53CA;&#x5916;&#x89C2;&#x7684;Widget&#xFF0C;&#x5B83;&#x4EEC;&#x901A;&#x5E38;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x3001;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7B49;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x8FC7;&#x7684;FocusScope&#xFF08;&#x7126;&#x70B9;&#x63A7;&#x5236;&#xFF09;&#x3001;PageStorage&#xFF08;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF09;&#x3001;NotificationListener&#xFF08;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#xFF09;&#x90FD;&#x5C5E;&#x4E8E;&#x529F;&#x80FD;&#x578B;Widget&#x3002;&#x7531;&#x4E8E;Widget&#x662F;Flutter&#x7684;&#x4E00;&#x7B49;&#x516C;&#x6C11;&#xFF0C;&#x529F;&#x80FD;&#x578B;Widget&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x53BB;&#x4E00;&#x4E00;&#x4ECB;&#x7ECD;&#xFF0C;&#x672C;&#x7AE0;&#x4E2D;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x51E0;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x529F;&#x80FD;&#x578B;Widget&#x3002;</p>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-11-28 16:21:39
-</span></footer>
+
                                 
                                 </section>
                             
@@ -1341,7 +1333,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"功能型Widgets","level":"1.8","depth":1,"next":{"title":"导航返回拦截-WillPopScope","level":"1.8.1","depth":2,"path":"chapter7/willpopscope.md","ref":"chapter7/willpopscope.md","articles":[]},"previous":{"title":"滚动监听及控制ScrollController","level":"1.7.5","depth":2,"path":"chapter6/scroll_controller.md","ref":"chapter6/scroll_controller.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter7/index.md","mtime":"2018-11-28T08:21:39.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:20:40.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"功能型Widgets","level":"1.8","depth":1,"next":{"title":"导航返回拦截-WillPopScope","level":"1.8.1","depth":2,"path":"chapter7/willpopscope.md","ref":"chapter7/willpopscope.md","articles":[]},"previous":{"title":"滚动监听及控制ScrollController","level":"1.7.5","depth":2,"path":"chapter6/scroll_controller.md","ref":"chapter6/scroll_controller.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter7/index.md","mtime":"2018-11-28T08:21:39.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:37:04.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1396,5 +1388,14 @@
     
 
     </body>
+    <script>
+        $(function () {
+            $(".pull-right .fa-edit").on("click",function () {
+                var t=location.pathname.split(".")[0]+".md";
+                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        })
+    </script>
 </html>
 

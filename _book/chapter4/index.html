@@ -29,10 +29,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
                 
             
@@ -88,6 +84,9 @@
                 font-size: 25px;
                 color: #666 !important;
             }
+            body{
+                font-size: 15px !important;
+            }
         </style>
         <script>
             var _hmt = _hmt || [];
@@ -97,11 +96,6 @@
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
             })();
-            $(".pull-right .fa-edit").on("click",function () {
-               var t=location.pathname.split("/");
-               var file=t[t.length-1].split('.')[0];
-            })
-            $("a[href='todo.html']").css("color","#aaa")
         </script>
     </head>
     <body>
@@ -1343,9 +1337,7 @@
 <p>&#x6CE8;&#x610F;&#xFF0C;Flutter&#x4E2D;&#x7684;&#x5F88;&#x591A;Widget&#x662F;&#x76F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;StatelessWidget&#x6216;StatefulWidget&#xFF0C;&#x7136;&#x540E;&#x5728;<code>build()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x6784;&#x5EFA;&#x771F;&#x6B63;&#x7684;RenderObjectWidget&#xFF0C;&#x5982;Text&#xFF0C;&#x5B83;&#x5176;&#x5B9E;&#x662F;&#x7EE7;&#x627F;&#x81EA;StatelessWidget&#xFF0C;&#x7136;&#x540E;&#x5728;<code>build()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x901A;&#x8FC7;RichText&#x6765;&#x6784;&#x5EFA;&#x5176;&#x5B50;&#x6811;&#xFF0C;&#x800C;RichText&#x624D;&#x662F;&#x7EE7;&#x627F;&#x81EA;LeafRenderObjectWidget&#x3002;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x53D9;&#x8FF0;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BF4;Text&#x5C5E;&#x4E8E;LeafRenderObjectWidget&#xFF08;&#x5176;&#x5B83;widget&#x4E5F;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#xFF09;&#xFF0C;&#x8FD9;&#x624D;&#x662F;&#x672C;&#x8D28;&#x3002;&#x8BFB;&#x5230;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E5F;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5176;&#x5B9E;<strong>StatelessWidget&#x548C;StatefulWidget&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x7528;&#x4E8E;&#x7EC4;&#x5408;Widget&#x7684;&#x57FA;&#x7C7B;&#xFF0C;&#x5B83;&#x4EEC;&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x5173;&#x8054;&#x6700;&#x7EC8;&#x7684;&#x6E32;&#x67D3;&#x5BF9;&#x8C61;&#xFF08;RenderObjectWidget&#xFF09;</strong>&#x3002;</p>
 </blockquote>
 <p>&#x5E03;&#x5C40;&#x7C7B;Widget&#x5C31;&#x662F;&#x6307;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x7EE7;&#x627F;(&#x5305;&#x542B;)MultiChildRenderObjectWidget&#x7684;Widget&#x7684;Widget&#xFF0C;&#x5B83;&#x4EEC;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;children&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5B50;Widget&#x3002;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x7EE7;&#x627F;&#x5173;&#x7CFB; Widget &gt; RenderObjectWidget &gt; (Leaf/SingleChild/MultiChild)RenderObjectWidget &#x3002;RenderObjectWidget&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x521B;&#x5EFA;&#x3001;&#x66F4;&#x65B0;RenderObject&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x4ED6;&#x4EEC;&#xFF0C;&#x5173;&#x4E8E;RenderObject&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x8981;&#x77E5;&#x9053;&#x5B83;&#x662F;&#x6700;&#x7EC8;&#x5E03;&#x5C40;&#x3001;&#x6E32;&#x67D3;UI&#x754C;&#x9762;&#x7684;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5BF9;&#x4E8E;&#x5E03;&#x5C40;&#x7C7B;Widget&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x5BF9;&#x5E94;&#x7684;RenderObject&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8BFB;&#x8005;&#x5982;&#x679C;&#x5BF9;&#x63A5;&#x4E0B;&#x6765;&#x4ECB;&#x7ECD;&#x7684;&#x67D0;&#x4E2A;&#x5E03;&#x5C40;&#x7C7B;Widget&#x539F;&#x7406;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5176;RenderObject&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x8BFB;&#x8005;&#x5BF9;&#x5E03;&#x5C40;&#x7C7B;Widget&#x6709;&#x4E2A;&#x5FEB;&#x901F;&#x7684;&#x8BA4;&#x8BC6;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x6DF1;&#x5165;&#x5230;RenderObject&#x7684;&#x7EC6;&#x8282;&#x4E2D;&#x533A;&#x3002;&#x5728;&#x5B66;&#x4E60;&#x672C;&#x7AE0;&#x65F6;&#xFF0C;&#x8BFB;&#x8005;&#x7684;&#x91CD;&#x70B9;&#x662F;&#x638C;&#x63E1;&#x4E0D;&#x540C;&#x5E03;&#x5C40;&#x7C7B;Widget&#x7684;&#x5E03;&#x5C40;&#x7279;&#x70B9;&#xFF0C;&#x5177;&#x4F53;&#x539F;&#x7406;&#x548C;&#x7EC6;&#x8282;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x9AD8;&#x7EA7;&#x90E8;&#x5206;&#x4ECB;&#x7ECD;&#x3002;</p>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-11-29 15:54:44
-</span></footer>
+
                                 
                                 </section>
                             
@@ -1372,7 +1364,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"布局类Widgets","level":"1.5","depth":1,"next":{"title":"先行布局Row、Column","level":"1.5.1","depth":2,"path":"chapter4/row_and_column.md","ref":"chapter4/row_and_column.md","articles":[]},"previous":{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter4/index.md","mtime":"2018-11-29T07:54:44.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:20:40.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"布局类Widgets","level":"1.5","depth":1,"next":{"title":"先行布局Row、Column","level":"1.5.1","depth":2,"path":"chapter4/row_and_column.md","ref":"chapter4/row_and_column.md","articles":[]},"previous":{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter4/index.md","mtime":"2018-11-29T07:54:44.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:37:04.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1427,5 +1419,14 @@
     
 
     </body>
+    <script>
+        $(function () {
+            $(".pull-right .fa-edit").on("click",function () {
+                var t=location.pathname.split(".")[0]+".md";
+                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        })
+    </script>
 </html>
 

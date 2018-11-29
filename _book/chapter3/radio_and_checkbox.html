@@ -29,10 +29,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
                 
             
@@ -88,6 +84,9 @@
                 font-size: 25px;
                 color: #666 !important;
             }
+            body{
+                font-size: 15px !important;
+            }
         </style>
         <script>
             var _hmt = _hmt || [];
@@ -97,11 +96,6 @@
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
             })();
-            $(".pull-right .fa-edit").on("click",function () {
-               var t=location.pathname.split("/");
-               var file=t[t.length-1].split('.')[0];
-            })
-            $("a[href='todo.html']").css("color","#aaa")
         </script>
     </head>
     <body>
@@ -1352,9 +1346,7 @@
 <p>Switch&#x548C;Checkbox&#x5C5E;&#x6027;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x67E5;&#x770B;API&#x6587;&#x6863;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x6709;&#x4E00;&#x4E2A;activeColor&#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6FC0;&#x6D3B;&#x6001;&#x7684;&#x989C;&#x8272;&#x3002;&#x81F3;&#x4E8E;&#x5927;&#x5C0F;&#xFF0C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;Checkbox&#x7684;&#x5927;&#x5C0F;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x65E0;&#x6CD5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x800C;Switch&#x53EA;&#x80FD;&#x5B9A;&#x4E49;&#x5BBD;&#x5EA6;&#xFF0C;&#x9AD8;&#x5EA6;&#x4E5F;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x3002;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;Checkbox&#x6709;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;<code>tristate</code> &#xFF0C;&#x8868;&#x793A;&#x662F;&#x5426;&#x4E3A;&#x4E09;&#x6001;&#xFF0C;&#x5176;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>false</code> &#xFF0C;&#x8FD9;&#x65F6;Checkbox&#x6709;&#x4E24;&#x79CD;&#x72B6;&#x6001;&#x5373;&#x201C;&#x9009;&#x4E2D;&#x201D;&#x548C;&#x201C;&#x4E0D;&#x9009;&#x4E2D;&#x201D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;value&#x503C;&#x4E3A;<code>true</code>&#x548C;<code>false</code> &#xFF1B;&#x5982;&#x679C;&#x5176;&#x503C;&#x4E3A;<code>true</code>&#x65F6;&#xFF0C;value&#x7684;&#x503C;&#x4F1A;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x72B6;&#x6001;<code>null</code>&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x4E86;&#x89E3;&#x3002;</p>
 <h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
 <p>&#x901A;&#x8FC7;Switch&#x548C;Checkbox&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x867D;&#x7136;&#x5B83;&#x4EEC;&#x672C;&#x8EAB;&#x662F;&#x4E0E;&#x72B6;&#x6001;&#xFF08;&#x662F;&#x5426;&#x9009;&#x4E2D;&#xFF09;&#x5173;&#x8054;&#x7684;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5374;&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x6765;&#x7EF4;&#x62A4;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x662F;&#x9700;&#x8981;&#x7236;widget&#x6765;&#x7BA1;&#x7406;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x65F6;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#x7ED9;&#x7236;widget&#xFF0C;&#x8FD9;&#x6837;&#x662F;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;Switch&#x548C;Checkbox&#x662F;&#x5426;&#x9009;&#x4E2D;&#x672C;&#x5C31;&#x548C;&#x7528;&#x6237;&#x6570;&#x636E;&#x5173;&#x8054;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x7528;&#x6237;&#x6570;&#x636E;&#x4E5F;&#x4E0D;&#x53EF;&#x80FD;&#x662F;&#x5B83;&#x4EEC;&#x7684;&#x79C1;&#x6709;&#x72B6;&#x6001;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x81EA;&#x5B9A;&#x4E49;widget&#x65F6;&#x4E5F;&#x5E94;&#x8BE5;&#x601D;&#x8003;&#x4E00;&#x4E0B;&#x54EA;&#x79CD;&#x72B6;&#x6001;&#x7684;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x6700;&#x4E3A;&#x5408;&#x7406;&#x3002;</p>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; flutterchina.club 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-11-28 15:09:51
-</span></footer>
+
                                 
                                 </section>
                             
@@ -1381,7 +1373,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"单选框和复选框","level":"1.4.5","depth":2,"next":{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]},"previous":{"title":"图片和Icon","level":"1.4.4","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","tbfed-pagefooter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy flutterchina.club 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter3/radio_and_checkbox.md","mtime":"2018-11-28T07:09:51.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:20:40.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"单选框和复选框","level":"1.4.5","depth":2,"next":{"title":"输入框和表单","level":"1.4.6","depth":2,"path":"chapter3/input_and_form.md","ref":"chapter3/input_and_form.md","articles":[]},"previous":{"title":"图片和Icon","level":"1.4.4","depth":2,"path":"chapter3/img_and_icon.md","ref":"chapter3/img_and_icon.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter3/radio_and_checkbox.md","mtime":"2018-11-28T07:09:51.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T14:37:04.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1436,5 +1428,14 @@
     
 
     </body>
+    <script>
+        $(function () {
+            $(".pull-right .fa-edit").on("click",function () {
+                var t=location.pathname.split(".")[0]+".md";
+                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"
+            })
+            $("a[href='todo.html']").css("color","#aaa")
+        })
+    </script>
 </html>
 

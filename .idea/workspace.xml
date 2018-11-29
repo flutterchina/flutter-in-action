@@ -59,10 +59,9 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-baidu/plugin.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book.json" beforeDir="false" afterPath="$PROJECT_DIR$/book.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_layouts/layout.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -87,7 +86,7 @@
         <counts>
           <entry key="MD" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="14" />
+          <entry key="html" value="16" />
           <entry key="js" value="1" />
           <entry key="json" value="5" />
           <entry key="less" value="2" />
@@ -99,7 +98,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="14" />
+          <entry key="HTML" value="16" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="2" />
@@ -112,23 +111,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="22" />
-          <entry key="html" value="393" />
+          <entry key="html" value="464" />
           <entry key="json" value="471" />
           <entry key="less" value="8" />
           <entry key="md" value="2400" />
           <entry key="mkdirp" value="1" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="39" />
           <entry key="yml" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="393" />
+          <entry key="HTML" value="464" />
           <entry key="JSON" value="471" />
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
           <entry key="Markdown" value="2400" />
-          <entry key="PLAIN_TEXT" value="55" />
+          <entry key="PLAIN_TEXT" value="61" />
           <entry key="YAML" value="124" />
         </counts>
       </usages-collector>
@@ -136,27 +135,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="125" selection-start-line="12" selection-start-column="125" selection-end-line="12" selection-end-column="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/todo.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -186,13 +164,27 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="462">
+              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_book/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10695">
+              <caret line="713" selection-start-line="713" selection-end-line="713" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_book/todo.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -225,11 +217,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+            <state relative-caret-position="360">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -315,11 +307,11 @@
         <option value="$PROJECT_DIR$/docs/_layouts/website/header.html" />
         <option value="$PROJECT_DIR$/docs/todo.md" />
         <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
-        <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/node_modules/.bin/mkdirp" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/book.json" />
+        <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
       </list>
     </option>
   </component>
@@ -387,8 +379,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="134" />
-    <option name="y" value="50" />
+    <option name="x" value="156" />
+    <option name="y" value="35" />
     <option name="width" value="1440" />
     <option name="height" value="772" />
   </component>
@@ -415,6 +407,12 @@
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
@@ -472,7 +470,7 @@
       <option name="presentableId" value="Default" />
       <updated>1543382506414</updated>
       <workItem from="1543382507713" duration="32336000" />
-      <workItem from="1543500795013" duration="115000" />
+      <workItem from="1543500795013" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="添加_book目录">
       <created>1543498533114</created>
@@ -509,11 +507,25 @@
       <option name="project" value="LOCAL" />
       <updated>1543500390619</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1543500942839</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543500942839</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <created>1543501258295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1543501258295</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32451000" />
+    <option name="totallyTimeSpent" value="33702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,7 +537,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="50" width="1440" height="772" extended-state="0" />
+    <frame x="156" y="35" width="1440" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20084566" />
@@ -540,8 +552,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.5296804" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.5296804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.17960426" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.17960426" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -558,29 +570,10 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="添加_book目录" />
     <MESSAGE value="删除node_modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除node_modules" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/chapter8/notification.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="332">
-            <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter8/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="161" selection-start-line="2" selection-start-column="161" selection-end-line="2" selection-end-column="161" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter9/animation_structure.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -899,13 +892,6 @@
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/.bin/mkdirp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -932,8 +918,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+        <state relative-caret-position="360">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/todo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10695">
+          <caret line="713" selection-start-line="713" selection-end-line="713" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
         </state>
       </provider>
     </entry>
