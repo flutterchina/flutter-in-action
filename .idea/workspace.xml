@@ -21,12 +21,10 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/buttons.md" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/buttons.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/input_and_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/input_and_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/progress_indicator.md" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/progress_indicator.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/radio_and_checkbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/radio_and_checkbox.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/text.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter4/flex.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/flex.html" afterDir="false" />
@@ -34,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter4/row_and_column.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/row_and_column.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter4/stack.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/stack.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter4/wrap_and_flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/wrap_and_flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/clip.md" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/clip.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter5/constrainedbox_and_sizebox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/constrainedbox_and_sizebox.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter5/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/container.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter5/decoratedbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/decoratedbox.html" afterDir="false" />
@@ -63,42 +60,10 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter1/flutter_intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter1/flutter_intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter1/install_flutter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter1/install_flutter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter10/http.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter10/http.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter10/json_model.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter10/json_model.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter10/socket.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter10/socket.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter2/flutter_package_mgr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/flutter_package_mgr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter2/flutter_router.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/flutter_router.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/buttons.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/buttons.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/flutter_widget_intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/flutter_widget_intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/input_and_form.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/input_and_form.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/progress_indicator.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/progress_indicator.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/text.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/text.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter4/flex.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter4/flex.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter4/row_and_column.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter4/row_and_column.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter4/stack.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter4/stack.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter5/clip.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter5/clip.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter5/constrainedbox_and_sizebox.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter5/constrainedbox_and_sizebox.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter5/container.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter5/container.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter5/decoratedbox.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter5/decoratedbox.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter5/transform.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter5/transform.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter6/custom_scrollview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter6/custom_scrollview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter6/gridview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter6/gridview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter6/listview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter6/listview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter6/scroll_controller.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter6/scroll_controller.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter6/single_child_scrollview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter6/single_child_scrollview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter7/inherited_widget.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter7/inherited_widget.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter7/theme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter7/theme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter8/gesture.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter8/gesture.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter8/listener.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter8/listener.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter8/notification.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter8/notification.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter9/stagger_animation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter9/stagger_animation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_layouts/website/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_layouts/website/header.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -123,7 +88,7 @@
         <counts>
           <entry key="MD" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="16" />
+          <entry key="html" value="19" />
           <entry key="js" value="1" />
           <entry key="json" value="5" />
           <entry key="less" value="2" />
@@ -135,7 +100,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="16" />
+          <entry key="HTML" value="19" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="2" />
@@ -148,10 +113,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="22" />
-          <entry key="html" value="467" />
+          <entry key="html" value="479" />
           <entry key="json" value="471" />
           <entry key="less" value="8" />
-          <entry key="md" value="2400" />
+          <entry key="md" value="2404" />
           <entry key="mkdirp" value="1" />
           <entry key="txt" value="39" />
           <entry key="yml" value="124" />
@@ -159,11 +124,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="467" />
+          <entry key="HTML" value="479" />
           <entry key="JSON" value="471" />
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
-          <entry key="Markdown" value="2400" />
+          <entry key="Markdown" value="2404" />
           <entry key="PLAIN_TEXT" value="61" />
           <entry key="YAML" value="124" />
         </counts>
@@ -172,39 +137,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="186" selection-start-column="186" selection-end-column="186" />
+              <first_editor relative-caret-position="210">
+                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/SUMMARY.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1095">
-                <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="607">
               <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
             </state>
           </provider>
@@ -229,15 +204,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/.bin/mkdirp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -347,7 +313,6 @@
         <option value="$PROJECT_DIR$/docs/src/less/website/body.less" />
         <option value="$PROJECT_DIR$/docs/chapter4/index.md" />
         <option value="$PROJECT_DIR$/docs/chapter10/dio.md" />
-        <option value="$PROJECT_DIR$/docs/_layouts/website/header.html" />
         <option value="$PROJECT_DIR$/docs/todo.md" />
         <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
@@ -355,6 +320,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/book.json" />
         <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
+        <option value="$PROJECT_DIR$/docs/_layouts/website/header.html" />
         <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
@@ -423,10 +389,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="84" />
-    <option name="y" value="34" />
+    <option name="x" value="311" />
+    <option name="y" value="45" />
     <option name="width" value="1440" />
-    <option name="height" value="772" />
+    <option name="height" value="827" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -445,11 +411,6 @@
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="_book" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -461,7 +422,9 @@
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,7 +477,7 @@
       <option name="presentableId" value="Default" />
       <updated>1543382506414</updated>
       <workItem from="1543382507713" duration="32336000" />
-      <workItem from="1543500795013" duration="2506000" />
+      <workItem from="1543500795013" duration="3366000" />
     </task>
     <task id="LOCAL-00001" summary="添加_book目录">
       <created>1543498533114</created>
@@ -579,11 +542,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543502557567</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1543503312810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543503312810</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34842000" />
+    <option name="totallyTimeSpent" value="35702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,7 +565,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="34" width="1440" height="772" extended-state="0" />
+    <frame x="311" y="45" width="1440" height="827" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20084566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -609,8 +580,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.17960426" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.17960426" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.16573034" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.16573034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -881,16 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
@@ -909,13 +870,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml" />
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="125" selection-start-line="12" selection-start-column="125" selection-end-line="12" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/todo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -946,16 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -980,18 +924,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="607">
           <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="186" selection-start-column="186" selection-end-column="186" />
+          <first_editor relative-caret-position="210">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor />
         </state>
