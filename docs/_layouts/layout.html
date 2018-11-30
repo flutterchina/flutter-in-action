@@ -66,11 +66,11 @@
     function init() {
         var p=location.pathname;
         if(p[p.length]==='/'){
-            p+="index.md"
+            p+="/index.md"
         }else {
-            p = p.split(".")[0] + "index.md";
+            p = p.split(".")[0] + ".md";
         }
-        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
+        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
         $(".pull-right .fa-edit").parent("a").attr("href",p);
         $("table").wrap("<div style='overflow: auto'></div>");
         //百度统计
@@ -87,7 +87,7 @@
     function hookAPI(api, ob, fn) {
         return function () {
             var result = api.apply(ob, [].slice.call(arguments));
-            fn();
+            setTimeout(fn,1000);
             return result;
         }
     }
