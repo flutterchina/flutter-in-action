@@ -65,8 +65,8 @@
 
     function init() {
         var p=location.pathname;
-        if(p[p.length]==='/'){
-            p+="/index.md"
+        if(p[p.length-1]==='/'){
+            p+="index.md"
         }else {
             p = p.split(".")[0] + ".md";
         }
