@@ -68,7 +68,7 @@
         if(p[p.length]==='/'){
             p+="index.md"
         }else {
-            p = p.split(".")[0] + ".md";
+            p = p.split(".")[0] + "index.md";
         }
         p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
         $(".pull-right .fa-edit").parent("a").attr("href",p);
