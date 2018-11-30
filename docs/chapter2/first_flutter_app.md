@@ -223,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 #### 为什么要将build方法放在State中，而不是放在StatefulWidget中？
 
-现在，我们回答之前提出的问题，为什么`build()`方法在State（而不是StatefulWidget）中 ？这主要是为了开发的灵活性。如果将`build()`方法在State中则会有两个问题：
+现在，我们回答之前提出的问题，为什么`build()`方法在State（而不是StatefulWidget）中 ？这主要是为了开发的灵活性。如果将`build()`方法在StatefulWidget中则会有两个问题：
 
 - 状态访问不便
 
