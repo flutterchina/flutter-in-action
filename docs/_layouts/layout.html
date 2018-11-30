@@ -1,54 +1,102 @@
 <!DOCTYPE HTML>
-<html lang="{{ config.language }}" {% if page.dir == "rtl" %}dir="rtl"{% endif %}>
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="{% block description %}{% endblock %}">
-        <meta name="generator" content="GitBook {{ gitbook.version }}">
-        {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
-        {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
-        {% block style %}
-            {% for resource in plugins.resources.css %}
-                {% if resource.url %}
-                <link rel="stylesheet" href="{{ resource.url }}">
-                {% else %}
-                <link rel="stylesheet" href="{{ resource.path|resolveAsset }}">
-                {% endif %}
-            {% endfor %}
-        {% endblock %}
-        {% block head %}{% endblock %}
-        <style>
-            .pull-right>i{
-                font-size: 25px;
-                color: #666 !important;
-            }
-            body{
-                font-size: 15px !important;
-            }
-        </style>
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascript %}{% endblock %}
-    </body>
+<html lang="{{ config.language }}" {% if page.dir== "rtl" %}dir="rtl"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="description" content="{% block description %}{% endblock %}">-->
+    <meta name="description" content="《Flutter实战》是Flutter中文网（https://flutterchian.club）开源的电子书，旨在帮助开发者系统化的了解并学习Flutter。">
+    <meta name="keywords" content="flutter实战,flutter书籍,flutter电子书,flutter中文网 ">
+    <meta name="generator" content="GitBook {{ gitbook.version }}">
+    {% if config.author %}
+    <meta name="author" content="{{ config.author }}">
+    {% endif %}
+    {% if config.isbn %}
+    <meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">
+    {% endif %}
+    {% block style %}
+    {% for resource in plugins.resources.css %}
+    {% if resource.url %}
+    <link rel="stylesheet" href="{{ resource.url }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ resource.path|resolveAsset }}">
+    {% endif %}
+    {% endfor %}
+    {% endblock %}
+    {% block head %}{% endblock %}
+    <style>
+        .pull-right > i {
+            font-size: 25px;
+            color: #777 !important;
+            cursor: pointer;
+
+        }
+
+        .pull-right > i:hover {
+            color: #777 !important;
+        }
+
+        body {
+            font-size: 15px !important;
+        }
+
+        a[href='../todo.html'], a[href='todo.html'] {
+            color: #888 !important;
+        }
+    </style>
     <script>
-        $(function () {
-            $(".pull-right .fa-edit").on("click",function () {
-                var t=location.pathname.split(".")[0]+".md";
-                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"+t;
-            })
-            $("a[href='todo.html']").css("color","#aaa")
-        })
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascript %}{% endblock %}
+</body>
+<script>
+
+    function init() {
+        var p=location.pathname;
+        if(p[p.length]==='/'){
+            p+="index.md"
+        }else {
+            p = p.split(".")[0] + ".md";
+        }
+        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
+        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        $("table").wrap("<div style='overflow: auto'></div>");
+        //百度统计
+        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
+            t = document.referrer;
+        if (!e.test(r)) {
+            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
+            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
+            var i = new Image;
+            i.src = o
+        }
+    }
+
+    function hookAPI(api, ob, fn) {
+        return function () {
+            var result = api.apply(ob, [].slice.call(arguments));
+            fn();
+            return result;
+        }
+    }
+
+    init();
+
+    if(history.pushState){
+        history.pushState = hookAPI(history.pushState, history, init);
+    }
+
+</script>
 </html>

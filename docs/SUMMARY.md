@@ -23,6 +23,7 @@
     * [输入框和表单](chapter3/input_and_form.md)    
     
 * [布局类Widgets](chapter4/index.md)
+    * [布局类Widgets简介](chapter4/intro.md)
     * [先行布局Row、Column](chapter4/row_and_column.md)
     * [弹性布局Flex](chapter4/flex.md)
     * [流式布局Wrap、Flow](chapter4/wrap_and_flow.md)      
@@ -36,6 +37,7 @@
     * [Container容器](chapter5/container.md) 
     
 * [可滚动Widgets](chapter6/index.md)
+    * [可滚动Widgets简介](chapter6/intro.md)
     * [SingleChildScrollView](chapter6/single_child_scrollview.md)
     * [ListView](chapter6/listview.md)
     * [GridView](chapter6/gridview.md)      
@@ -93,10 +95,5 @@
     * [布局与绘制过程](todo.md)
      
 * [Flutter资源汇总](todo.md)
-
-
-####     
-    
-
 
 
