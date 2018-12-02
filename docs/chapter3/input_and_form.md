@@ -220,7 +220,7 @@ class FocusTestRoute extends StatefulWidget {
 class _FocusTestRouteState extends State<FocusTestRoute> {
   FocusNode focusNode1 = new FocusNode();
   FocusNode focusNode2 = new FocusNode();
-  FocusScopeNode focusScopeNode = new FocusScopeNode();
+  FocusScopeNode focusScopeNode;
 
   @override
   Widget build(BuildContext context) {
@@ -248,7 +248,12 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
                   child: Text("移动焦点"),
                   onPressed: () {
                     //将焦点从第一个TextField移到第二个TextField
-                    FocusScope.of(context).requestFocus(focusNode2);
+                    //这是一种写法 FocusScope.of(context).requestFocus(focusNode2);
+                    // 这是第二种写法
+                    if(null == _focusScopeNode){
+                      focusScopeNode = FocusScope.of(context);
+                    }
+                    focusScopeNode.requestFocus(focusNode2);
                   },
                 ),
                 RaisedButton(
