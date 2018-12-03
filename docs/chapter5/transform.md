@@ -55,6 +55,10 @@ DecoratedBox(
   ),
 )；
 ```
+> 注意：要使用math.pi需先进行如下导包。  
+```dart  
+import 'dart:math' as math;  
+```  
 
 效果：
 
