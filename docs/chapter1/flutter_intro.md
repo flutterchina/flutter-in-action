@@ -42,7 +42,7 @@ Flutter高性能主要靠两点来保证，首先，Flutter APP采用Dart语言�
 
 4. **类型安全**
 
-   由于Dart是类型安全的怨言，支持静态类型检测，可以在编译前发现一些类型错误，排除潜在问题。这一点对于前端开发者来说可能会更有说服力，由于JavaScript是一个弱类型语言，前端社区出现了很多给JavaScript代码添加静态类型检测的扩展语言和工具，如：Coffeescript、微软的TypeScript以及Facebook的Flow。相比之下，Dart本身支持静态类型，这是它的一个重要优势。
+   由于Dart是类型安全的语言，支持静态类型检测，可以在编译前发现一些类型错误，排除潜在问题。这一点对于前端开发者来说可能会更有说服力，由于JavaScript是一个弱类型语言，前端社区出现了很多给JavaScript代码添加静态类型检测的扩展语言和工具，如：Coffeescript、微软的TypeScript以及Facebook的Flow。相比之下，Dart本身支持静态类型，这是它的一个重要优势。
 
 5. **Dart团队就在隔壁**
 
