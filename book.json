@@ -37,7 +37,7 @@
     },
     "donate": {
       "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg",
-      "button": "赏",
+      "button": "有用，赏",
       "wechatText": "微信打赏"
     },
     "favicon": {

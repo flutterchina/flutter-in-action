@@ -17,7 +17,7 @@
 * [基础Widgets](chapter3/index.md)
     * [Widget简介](chapter3/flutter_widget_intro.md)
     * [文本、字体样式](chapter3/text.md)
-    * [按钮](chapter3/img_and_icon.md)      
+    * [按钮](chapter3/buttons.md)      
     * [图片和Icon](chapter3/img_and_icon.md)   
     * [单选框和复选框](chapter3/radio_and_checkbox.md)   
     * [输入框和表单](chapter3/input_and_form.md)    
