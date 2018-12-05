@@ -22,7 +22,7 @@ Flutter Packages分为两类：
 
 您可以通过Android Studio：File>New>New Flutter Project 来创建：
 
-![image-20181204195346470](/Users/duwen/Library/Application Support/typora-user-images/image-20181204195346470.png)
+![image-20181204195346470](../imgs/image-20181204195346470.png)
 
 您也可以通过使用`--template=package` 来执行 `flutter create` 命令来创建：
 
