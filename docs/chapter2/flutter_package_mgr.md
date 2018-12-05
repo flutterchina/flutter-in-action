@@ -2,7 +2,7 @@
 
 一个完成的应用程序往往会依赖很多第三方包，正如在原生开发中，Android使用Gradle来管理依赖，iOS用Cocoapods或Carthage来管理依赖，而Flutter也有自己的依赖管理工具，本节我们主要介绍一下flutter下如何是使用配置文件`pubspec.yaml`（位于项目根目录）来管理第三方依赖包。
 
-YAML是一种直观、可读性高并且容易被人类阅读的文件格式，它和xml或Json相比，它语法简单并非常容易解析，所以YAML常用语配置文件，Flutter也是用yaml文件作为其配置文件，Flutter项目默认的配置文件是`pubspec.yaml`，我们看一个简单的示例：
+YAML是一种直观、可读性高并且容易被人类阅读的文件格式，它和xml或Json相比，它语法简单并非常容易解析，所以YAML常用于配置文件，Flutter也是用yaml文件作为其配置文件，Flutter项目默认的配置文件是`pubspec.yaml`，我们看一个简单的示例：
 
 ```yaml
 name: flutter_in_action
@@ -102,7 +102,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
    我们将`RandomWordsWidget` 添加到"计数器"示例的首页`MyHomePage` 的`Colum`的子widget中。
 
-5. 如果应用程序正在运行，请使用热重载按钮 (![lightning bolt icon](https://flutterchina.club/get-started/codelab/images/hot-reload-button.png)) 更新正在运行的应用程序。每次单击热重载或保存项目时，都会在正在运行的应用程序中随机选择不同的单词对。 这是因为单词对是在 `build` 方法内部生成的。每次热更新时，`build`方法都户被执行。
+5. 如果应用程序正在运行，请使用热重载按钮 (![lightning bolt icon](https://flutterchina.club/get-started/codelab/images/hot-reload-button.png)) 更新正在运行的应用程序。每次单击热重载或保存项目时，都会在正在运行的应用程序中随机选择不同的单词对。 这是因为单词对是在 `build` 方法内部生成的。每次热更新时，`build`方法都会被执行。
 
    ![image-20180822163100650](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180822163100650.png)
 
@@ -144,6 +144,6 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
 ## 总结
 
-本节介绍了引用、下载、使用一个包的整体流程，并在后面介绍了多种不同的引入方式，这些是flutter开发中常用的，但Dart的dependencies还有一些其它依赖方式，完整的内容读者可以自行查看：https://www.dartlang.org/tools/pub/dependencies 。
+本节介绍了引用、下载、使用一个包的整体流程，并在后面介绍了多种不同的引入方式，这些是Flutter开发中常用的，但Dart的dependencies还有一些其它依赖方式，完整的内容读者可以自行查看：https://www.dartlang.org/tools/pub/dependencies 。
 
 
