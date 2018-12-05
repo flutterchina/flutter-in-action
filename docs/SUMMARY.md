@@ -70,12 +70,11 @@
     * [使用Socket API](chapter10/socket.md) 
     * [Json转Model](chapter10/json_model.md) 
     
-* [包与插件](todo.md)
-    * [开发一个package](todo.md)
-    * [编写自动化测试用例](todo.md)
-    * [平台通道简介](todo.md)
-    * [实现Andorid端API](todo.md)
-    * [实现IOS端API](todo.md)
+* [包与插件](chapter11/index.md)
+    * [开发package](chapter11/develop_package.md)
+    * [插件开发：平台通道简介](chapter11/platform-channel.md)
+    * [插件开发：实现Android端API](chapter11/android_implement.md)
+    * [插件开发：实现IOS端API](chapter11/ios_implement.md)
     * [系统能力调用](todo.md) 
     
 * [国际化](todo.md)

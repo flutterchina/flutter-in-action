@@ -148,7 +148,7 @@ State中有两个常用属性：
 
 #### State生命周期
 
-理解State的生命周期对flutter开发非常重要，为了加深读者映像，本节我们通过一个实例来演示一下State的生命周期。在接下来的示例中，我们实现一个计数器widget，点击它可以使计数器容加1，由于要保存计数器的数值状态，所以我们应继承StatefulWidget，代码如下：
+理解State的生命周期对flutter开发非常重要，为了加深读者印象，本节我们通过一个实例来演示一下State的生命周期。在接下来的示例中，我们实现一个计数器widget，点击它可以使计数器容加1，由于要保存计数器的数值状态，所以我们应继承StatefulWidget，代码如下：
 
 ```dart
 class CounterWidget extends StatefulWidget {

@@ -1,0 +1,1709 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Dart语言简介 · GitBook</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="description" content="">-->
+    <meta name="description" content="《Flutter实战》是Flutter中文网（https://flutterchian.club）开源的电子书，旨在帮助开发者系统化的了解并学习Flutter。">
+    <meta name="keywords" content="flutter实战,flutter书籍,flutter电子书,flutter中文网 ">
+    <meta name="generator" content="GitBook 3.2.3">
+    
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+    
+    
+    
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter2/" />
+    
+    
+    <link rel="prev" href="install_flutter.html" />
+    
+
+    <style>
+        .pull-right > i {
+            font-size: 25px;
+            color: #777 !important;
+            cursor: pointer;
+
+        }
+
+        .pull-right > i:hover {
+            color: #777 !important;
+        }
+
+        body {
+            font-size: 15px !important;
+        }
+
+        a[href='../todo.html'], a[href='todo.html'] {
+            color: #888 !important;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    缘起
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mobile_development_intro.html">
+            
+                <a href="mobile_development_intro.html">
+            
+                    
+                    移动开发技术简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="flutter_intro.html">
+            
+                <a href="flutter_intro.html">
+            
+                    
+                    Flutter简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="install_flutter.html">
+            
+                <a href="install_flutter.html">
+            
+                    
+                    搭建Flutter开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="dart.html">
+            
+                <a href="dart.html">
+            
+                    
+                    Dart语言简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第一个Flutter应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/first_flutter_app.html">
+            
+                <a href="../chapter2/first_flutter_app.html">
+            
+                    
+                    计数器示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/flutter_router.html">
+            
+                <a href="../chapter2/flutter_router.html">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/flutter_package_mgr.html">
+            
+                <a href="../chapter2/flutter_package_mgr.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/flutter_assets_mgr.html">
+            
+                <a href="../chapter2/flutter_assets_mgr.html">
+            
+                    
+                    资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/flutter_app_debug.html">
+            
+                <a href="../chapter2/flutter_app_debug.html">
+            
+                    
+                    调试Flutter APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    基础Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/flutter_widget_intro.html">
+            
+                <a href="../chapter3/flutter_widget_intro.html">
+            
+                    
+                    Widget简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/text.html">
+            
+                <a href="../chapter3/text.html">
+            
+                    
+                    文本、字体样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/buttons.html">
+            
+                <a href="../chapter3/buttons.html">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    图片和Icon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/radio_and_checkbox.html">
+            
+                <a href="../chapter3/radio_and_checkbox.html">
+            
+                    
+                    单选框和复选框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/input_and_form.html">
+            
+                <a href="../chapter3/input_and_form.html">
+            
+                    
+                    输入框和表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    布局类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/intro.html">
+            
+                <a href="../chapter4/intro.html">
+            
+                    
+                    布局类Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/row_and_column.html">
+            
+                <a href="../chapter4/row_and_column.html">
+            
+                    
+                    先行布局Row、Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/flex.html">
+            
+                <a href="../chapter4/flex.html">
+            
+                    
+                    弹性布局Flex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/wrap_and_flow.html">
+            
+                <a href="../chapter4/wrap_and_flow.html">
+            
+                    
+                    流式布局Wrap、Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/stack.html">
+            
+                <a href="../chapter4/stack.html">
+            
+                    
+                    层叠布局Stack、Positioned
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    容器类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/padding.html">
+            
+                <a href="../chapter5/padding.html">
+            
+                    
+                    Padding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/constrainedbox_and_sizebox.html">
+            
+                <a href="../chapter5/constrainedbox_and_sizebox.html">
+            
+                    
+                    布局限制类容器ConstrainedBox、SizeBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/decoratedbox.html">
+            
+                <a href="../chapter5/decoratedbox.html">
+            
+                    
+                    装饰容器DecoratedBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/transform.html">
+            
+                <a href="../chapter5/transform.html">
+            
+                    
+                    变换Transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/container.html">
+            
+                <a href="../chapter5/container.html">
+            
+                    
+                    Container容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    可滚动Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/intro.html">
+            
+                <a href="../chapter6/intro.html">
+            
+                    
+                    可滚动Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/single_child_scrollview.html">
+            
+                <a href="../chapter6/single_child_scrollview.html">
+            
+                    
+                    SingleChildScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/listview.html">
+            
+                <a href="../chapter6/listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/gridview.html">
+            
+                <a href="../chapter6/gridview.html">
+            
+                    
+                    GridView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/custom_scrollview.html">
+            
+                <a href="../chapter6/custom_scrollview.html">
+            
+                    
+                    CustomScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/scroll_controller.html">
+            
+                <a href="../chapter6/scroll_controller.html">
+            
+                    
+                    滚动监听及控制ScrollController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    功能型Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/willpopscope.html">
+            
+                <a href="../chapter7/willpopscope.html">
+            
+                    
+                    导航返回拦截-WillPopScope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/inherited_widget.html">
+            
+                <a href="../chapter7/inherited_widget.html">
+            
+                    
+                    数据共享-InheritedWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/theme.html">
+            
+                <a href="../chapter7/theme.html">
+            
+                    
+                    主题-Theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    事件处理与通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/listener.html">
+            
+                <a href="../chapter8/listener.html">
+            
+                    
+                    原始指针事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/gesture.html">
+            
+                <a href="../chapter8/gesture.html">
+            
+                    
+                    手势识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/eventbus.html">
+            
+                <a href="../chapter8/eventbus.html">
+            
+                    
+                    全局事件总线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/notification.html">
+            
+                <a href="../chapter8/notification.html">
+            
+                    
+                    通知Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/intro.html">
+            
+                <a href="../chapter9/intro.html">
+            
+                    
+                    Flutter动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/animation_structure.html">
+            
+                <a href="../chapter9/animation_structure.html">
+            
+                    
+                    动画结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/route_transition.html">
+            
+                <a href="../chapter9/route_transition.html">
+            
+                    
+                    自定义路由过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/hero.html">
+            
+                <a href="../chapter9/hero.html">
+            
+                    
+                    Hero动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../chapter9/stagger_animation.html">
+            
+                <a href="../chapter9/stagger_animation.html">
+            
+                    
+                    交错动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    文件操作与网络请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter10/file_operation.html">
+            
+                <a href="../chapter10/file_operation.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter10/http.html">
+            
+                <a href="../chapter10/http.html">
+            
+                    
+                    Http请求-HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter10/dio.html">
+            
+                <a href="../chapter10/dio.html">
+            
+                    
+                    Http请求-Dio package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter10/websocket.html">
+            
+                <a href="../chapter10/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter10/socket.html">
+            
+                <a href="../chapter10/socket.html">
+            
+                    
+                    使用Socket API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../chapter10/json_model.html">
+            
+                <a href="../chapter10/json_model.html">
+            
+                    
+                    Json转Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    包与插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter11/develop_package.html">
+            
+                <a href="../chapter11/develop_package.html">
+            
+                    
+                    开发package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter11/platform-channel.html">
+            
+                <a href="../chapter11/platform-channel.html">
+            
+                    
+                    插件开发：平台通道简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter11/android_implement.html">
+            
+                <a href="../chapter11/android_implement.html">
+            
+                    
+                    插件开发：实现Android端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter11/ios_implement.html">
+            
+                <a href="../chapter11/ios_implement.html">
+            
+                    
+                    插件开发：实现IOS端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    系统能力调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    让App支持多语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    监听系统语言切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    实现Localizations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Intel包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter 核心原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter UI系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Widget、Element与BuildContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    RenderObject与RenderBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Notification与事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Scrollable原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    InheritedWidget与数据传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    ParentDataWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    布局与绘制过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter资源汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+    <a class="btn pull-right" aria-label="GitHub">
+        <i class="fa fa-edit" title="编辑本文"></i>
+    </a>
+    <a class="btn pull-right" aria-label="GitHub" href="https://github.com/flutterchina/flutter-in-action">
+        <i class="fa fa-github" title="查看本书开源项目"></i>
+    </a>
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Dart语言简介</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dart&#x8BED;&#x8A00;&#x7B80;&#x4ECB;">Dart&#x8BED;&#x8A00;&#x7B80;&#x4ECB;</h1>
+<p>&#x5728;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x8FC7;Dart&#x8BED;&#x8A00;&#x7684;&#x76F8;&#x5173;&#x7279;&#x6027;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x7FFB;&#x770B;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x719F;&#x6089;Dart&#x8BED;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x672C;&#x8282;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x4E0D;&#x4E86;&#x89E3;Dart&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#xFF0C;&#x6309;&#x7167;&#x7B14;&#x8005;&#x7ECF;&#x9A8C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6709;&#x8FC7;&#x5176;&#x4ED6;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7ECF;&#x9A8C;&#xFF0C;&#x5C24;&#x5176;&#x662F;Java&#x548C;JavaScript&#x7684;&#x8BDD;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x524D;&#x7AEF;&#x6216;Android&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x4E0A;&#x624B;Dart&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;iOS&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4E5F;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#xFF0C;dart&#x4E2D;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x4E0E;swift&#x6BD4;&#x8F83;&#x76F8;&#x4F3C;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x547D;&#x540D;&#x53C2;&#x6570;&#x7B49;&#xFF0C;&#x7B14;&#x8005;&#x5F53;&#x65F6;&#x5B66;&#x4E60;Dart&#x65F6;&#xFF0C;&#x53EA;&#x662F;&#x82B1;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#xFF0C;&#x770B;&#x5B8C;Dart&#x5B98;&#x7F51;&#x7684;Language Tour&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x52A8;&#x624B;&#x5199;Fluttter&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x7B14;&#x8005;&#x770B;&#x6765;&#xFF0C;Dart&#x7684;&#x8BBE;&#x8BA1;&#x76EE;&#x6807;&#x5E94;&#x8BE5;&#x662F;&#x65E2;&#x5BF9;&#x6807;Java&#xFF0C;&#x4E5F;&#x5BF9;&#x6807;JavaScript&#xFF0C;Dart&#x5728;&#x9759;&#x6001;&#x8BED;&#x6CD5;&#x65B9;&#x9762;&#x548C;Java&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x5982;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x3001;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x3001;&#x6CDB;&#x578B;&#x7B49;&#xFF0C;&#x800C;&#x5728;&#x52A8;&#x6001;&#x7279;&#x6027;&#x65B9;&#x9762;&#x53C8;&#x548C;JavaScript&#x5F88;&#x50CF;&#xFF0C;&#x5982;&#x51FD;&#x6570;&#x5F0F;&#x7279;&#x6027;&#x3001;&#x5F02;&#x6B65;&#x652F;&#x6301;&#x7B49;&#x3002;&#x9664;&#x4E86;&#x878D;&#x5408;Java&#x548C;JavaScript&#x8BED;&#x8A00;&#x4E4B;&#x6240;&#x957F;&#x4E4B;&#x5916;&#xFF0C;Dart&#x4E5F;&#x5177;&#x6709;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x5177;&#x6709;&#x8868;&#x73B0;&#x529B;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x5982;&#x53EF;&#x9009;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3001;<code>..</code>&#xFF08;&#x7EA7;&#x8054;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;&#x548C;<code>?.</code>&#xFF08;&#x6761;&#x4EF6;&#x6210;&#x5458;&#x8BBF;&#x95EE;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;&#x4EE5;&#x53CA;<code>??</code>&#xFF08;&#x5224;&#x7A7A;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;&#x3002;&#x5176;&#x5B9E;&#xFF0C;&#x5BF9;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E86;&#x89E3;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x8BFB;&#x8005;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5728;Dart&#x4E2D;&#x5176;&#x5B9E;&#x770B;&#x5230;&#x7684;&#x4E0D;&#x4EC5;&#x6709;Java&#x548C;JavaScript&#x7684;&#x5F71;&#x5B50;&#xFF0C;&#x5B83;&#x8FD8;&#x5177;&#x6709;&#x5176;&#x5B83;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x8EAB;&#x5F71;&#xFF0C;&#x5982;&#x547D;&#x540D;&#x53C2;&#x6570;&#x5728;Objective-C&#x548C;Swift&#x4E2D;&#x65E9;&#x5C31;&#x5F88;&#x666E;&#x904D;&#xFF0C;&#x800C;<code>??</code>&#x64CD;&#x4F5C;&#x7B26;&#x5728;Php 7.0&#x8BED;&#x6CD5;&#x4E2D;&#x5C31;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;Google&#x5BF9;Dart&#x8BED;&#x8A00;&#x7ED9;&#x4E88;&#x539A;&#x671B;&#xFF0C;&#x662F;&#x60F3;&#x628A;Dart&#x6253;&#x9020;&#x6210;&#x4E00;&#x95E8;&#x96C6;&#x767E;&#x5BB6;&#x4E4B;&#x6240;&#x957F;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x5BF9;Dart&#x8BED;&#x6CD5;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;Dart&#x4E0E;JavaScript&#x548C;Java&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x8981;&#x7684;&#x5BF9;&#x6BD4;&#xFF0C;&#x65B9;&#x9762;&#x8BFB;&#x8005;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x7531;&#x4E8E;&#x672C;&#x4E66;&#x5E76;&#x975E;&#x4E13;&#x95E8;&#x4ECB;&#x7ECD;Dart&#x8BED;&#x8A00;&#x7684;&#x4E66;&#x7C4D;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x4F1A;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x5728;Flutter&#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x8BED;&#x6CD5;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x66F4;&#x591A;&#x4E86;&#x89E3;Dart&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x53BB;Dart&#x5B98;&#x7F51;&#x5B66;&#x4E60;&#xFF0C;&#x73B0;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x4E0A;Dart&#x76F8;&#x5173;&#x8D44;&#x6599;&#x5DF2;&#x7ECF;&#x5F88;&#x591A;&#x4E86;&#x3002;&#x53E6;&#x5916;Dart 2.0&#x5DF2;&#x7ECF;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x4E66;&#x6240;&#x6709;&#x793A;&#x4F8B;&#x5747;&#x91C7;&#x7528;Dart 2.0&#x8BED;&#x6CD5;&#x3002;</p>
+</blockquote>
+<h2 id="&#x53D8;&#x91CF;&#x58F0;&#x660E;">&#x53D8;&#x91CF;&#x58F0;&#x660E;</h2>
+<ol>
+<li><p><strong>var</strong></p>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;JavaScript&#x4E2D;&#x7684;<code>var</code>&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x662F;Dart&#x4E2D;var&#x53D8;&#x91CF;&#x4E00;&#x65E6;&#x8D4B;&#x503C;&#xFF0C;&#x7C7B;&#x578B;&#x4FBF;&#x4F1A;&#x786E;&#x5B9A;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x518D;&#x6539;&#x53D8;&#x5176;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> t;
+t=<span class="hljs-string">&quot;hi world&quot;</span>;
+<span class="hljs-comment">// &#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x5728;dart&#x4E2D;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5E94;&#x4E3A;&#x53D8;&#x91CF;t&#x7684;&#x7C7B;&#x578B;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#x4E3A;String&#xFF0C;</span>
+<span class="hljs-comment">// &#x7C7B;&#x578B;&#x4E00;&#x65E6;&#x786E;&#x5B9A;&#x540E;&#x5219;&#x4E0D;&#x80FD;&#x518D;&#x66F4;&#x6539;&#x5176;&#x7C7B;&#x578B;&#x3002;</span>
+t=<span class="hljs-number">1000</span>;
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5728;JavaScript&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x6709;&#x6B64;&#x5DEE;&#x5F02;&#x662F;&#x56E0;&#x4E3A;Dart&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#xFF0C;&#x4EFB;&#x4F55;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x6709;&#x786E;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x5728;Dart&#x4E2D;&#xFF0C;&#x5F53;&#x7528;<code>var</code>&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x540E;&#xFF0C;Dart&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4F1A;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x6B21;&#x8D4B;&#x503C;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x6765;&#x63A8;&#x65AD;&#x5176;&#x7C7B;&#x578B;&#xFF0C;&#x7F16;&#x8BD1;&#x7ED3;&#x675F;&#x540E;&#x5176;&#x7C7B;&#x578B;&#x5C31;&#x5DF2;&#x7ECF;&#x88AB;&#x786E;&#x5B9A;&#xFF0C;&#x800C;JavaScript&#x662F;&#x7EAF;&#x7CB9;&#x7684;&#x5F31;&#x7C7B;&#x578B;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;var&#x53EA;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#x800C;&#x5DF2;&#x3002;</p>
+</li>
+<li><p><strong>dynamic</strong>&#x548C;<strong>Object</strong></p>
+<p><code>Dynamic</code>&#x548C;<code>Object</code> &#x4E0E; <code>var</code>&#x529F;&#x80FD;&#x76F8;&#x4F3C;&#xFF0C;&#x90FD;&#x4F1A;&#x5728;&#x8D4B;&#x503C;&#x65F6;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#xFF0C;&#x4E0D;&#x540C;&#x5728;&#x4E8E;&#xFF0C;&#x8D4B;&#x503C;&#x540E;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x5176;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">dynamic</span> t;
+t=<span class="hljs-string">&quot;hi world&quot;</span>;
+<span class="hljs-comment">//&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x95EE;&#x9898;</span>
+t=<span class="hljs-number">1000</span>;
+</code></pre>
+<p><code>Object</code> &#x662F;dart&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x6839;&#x57FA;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x90FD;&#x662F;<code>Object</code>&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;<code>Object</code>&#x58F0;&#x660E;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x8868;&#x73B0;&#x6548;&#x679C;&#x548C;<code>dynamic</code>&#x76F8;&#x4F3C;&#x3002;</p>
+</li>
+<li><p><strong>final</strong>&#x548C;<strong>const</strong></p>
+<p>&#x5982;&#x679C;&#x60A8;&#x4ECE;&#x672A;&#x6253;&#x7B97;&#x66F4;&#x6539;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528; <code>final</code> &#x6216; <code>const</code>&#xFF0C;&#x4E0D;&#x662F;<code>var</code>&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002; &#x4E00;&#x4E2A; <code>final</code> &#x53D8;&#x91CF;&#x53EA;&#x80FD;&#x88AB;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#xFF0C;&#x4E24;&#x8005;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;<code>const</code> &#x53D8;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x7F16;&#x8BD1;&#x65F6;&#x5E38;&#x91CF;&#xFF0C;<code>final</code>&#x53D8;&#x91CF;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x65F6;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x3002;&#x88AB;<code>final</code>&#x6216;&#x8005;<code>const</code>&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">//&#x53EF;&#x4EE5;&#x7701;&#x7565;String&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x58F0;&#x660E;</span>
+<span class="hljs-keyword">final</span> str = <span class="hljs-string">&quot;hi world&quot;</span>;
+<span class="hljs-comment">//final str = &quot;hi world&quot;; </span>
+<span class="hljs-keyword">const</span> str1 = <span class="hljs-string">&quot;hi world&quot;</span>;
+<span class="hljs-comment">//const String str1 = &quot;hi world&quot;;</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h2>
+<p>Dart&#x662F;&#x4E00;&#x79CD;&#x771F;&#x6B63;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x662F;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;<strong>Function</strong>&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#x6216;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x5178;&#x578B;&#x7279;&#x5F81;&#x3002;</p>
+<ol>
+<li><p>&#x51FD;&#x6570;&#x58F0;&#x660E;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">bool</span> isNoble(<span class="hljs-built_in">int</span> atomicNumber) {
+  <span class="hljs-keyword">return</span> _nobleGases[atomicNumber] != <span class="hljs-keyword">null</span>;
+}
+</code></pre>
+<p>dart&#x51FD;&#x6570;&#x58F0;&#x660E;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x7533;&#x660E;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x65F6;&#x4F1A;&#x9ED8;&#x8BA4;&#x5F53;&#x505A;<code>dynamic</code>&#x5904;&#x7406;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x6CA1;&#x6709;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">typedef</span> <span class="hljs-built_in">bool</span> CALLBACK();
+
+<span class="hljs-comment">//&#x4E0D;&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x65F6;&#x9ED8;&#x8BA4;&#x4E3A;dynamic&#xFF0C;&#x4E0D;&#x662F;bool</span>
+isNoble(<span class="hljs-built_in">int</span> atomicNumber) {
+  <span class="hljs-keyword">return</span> _nobleGases[atomicNumber] != <span class="hljs-keyword">null</span>;
+}
+
+<span class="hljs-keyword">void</span> test(CALLBACK cb){
+   <span class="hljs-built_in">print</span>(cb()); 
+}
+<span class="hljs-comment">//&#x62A5;&#x9519;&#xFF0C;isNoble&#x4E0D;&#x662F;bool&#x7C7B;&#x578B;</span>
+test(isNoble);
+</code></pre>
+</li>
+<li><p>&#x5BF9;&#x4E8E;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B80;&#x5199;&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">bool</span> isNoble &#xFF08;<span class="hljs-built_in">int</span> atomicNumber &#xFF09;=&gt; _nobleGases [ atomicNumber ] &#xFF01;= <span class="hljs-keyword">null</span> ;
+</code></pre>
+</li>
+<li><p>&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">var</span> say= (str){
+  <span class="hljs-built_in">print</span>(str);
+};
+say(<span class="hljs-string">&quot;hi world&quot;</span>);
+</code></pre>
+</li>
+<li><p>&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;</p>
+<pre><code class="lang-dart"><span class="hljs-keyword">void</span> execute(<span class="hljs-keyword">var</span> callback){
+    callback();
+}
+execute(()=&gt;<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;xxx&quot;</span>))
+</code></pre>
+</li>
+<li><p>&#x53EF;&#x9009;&#x7684;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;</p>
+<p>&#x5305;&#x88C5;&#x4E00;&#x7EC4;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF0C;&#x7528;[]&#x6807;&#x8BB0;&#x4E3A;&#x53EF;&#x9009;&#x7684;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-built_in">String</span> say(<span class="hljs-built_in">String</span> from, <span class="hljs-built_in">String</span> msg, [<span class="hljs-built_in">String</span> device]) {
+  <span class="hljs-keyword">var</span> result = <span class="hljs-string">&apos;$from says $msg&apos;</span>;
+  <span class="hljs-keyword">if</span> (device != <span class="hljs-keyword">null</span>) {
+    result = <span class="hljs-string">&apos;$result with a $device&apos;</span>;
+  }
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x5E26;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-dart">say(<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Howdy&apos;</span>); <span class="hljs-comment">//&#x7ED3;&#x679C;&#x662F;&#xFF1A; Bob says Howdy</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x7528;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-dart">say(<span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;Howdy&apos;</span>, <span class="hljs-string">&apos;smoke signal&apos;</span>); <span class="hljs-comment">//&#x7ED3;&#x679C;&#x662F;&#xFF1A;Bob says Howdy with a smoke signal</span>
+</code></pre>
+</li>
+<li><p>&#x53EF;&#x9009;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;</p>
+<p>&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;{param1, param2, &#x2026;}&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">//&#x8BBE;&#x7F6E;[bold]&#x548C;[hidden]&#x6807;&#x5FD7;</span>
+<span class="hljs-keyword">void</span> enableFlags({<span class="hljs-built_in">bool</span> bold, <span class="hljs-built_in">bool</span> hidden}) {
+    <span class="hljs-comment">// ... </span>
+}
+</code></pre>
+<p>&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;<code>paramName: value</code></p>
+<pre><code class="lang-dart">enableFlags(bold: <span class="hljs-keyword">true</span>, hidden: <span class="hljs-keyword">false</span>);
+</code></pre>
+<p>&#x53EF;&#x9009;&#x547D;&#x540D;&#x53C2;&#x6570;&#x5728;Flutter&#x4E2D;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x591A;&#x3002;</p>
+</li>
+</ol>
+<h2 id="&#x5F02;&#x6B65;&#x652F;&#x6301;">&#x5F02;&#x6B65;&#x652F;&#x6301;</h2>
+<p>Dart&#x7C7B;&#x5E93;&#x6709;&#x975E;&#x5E38;&#x591A;&#x7684;&#x8FD4;&#x56DE;<code>Future</code>&#x6216;&#x8005;<code>Stream</code>&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#x3002; &#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x88AB;&#x79F0;&#x4E3A;<strong>&#x5F02;&#x6B65;&#x51FD;&#x6570;</strong>&#xFF1A;&#x5B83;&#x4EEC;&#x53EA;&#x4F1A;&#x5728;&#x8BBE;&#x7F6E;&#x597D;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x6D88;&#x8017;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x7684;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#xFF0C;&#x6BD4;&#x5982;&#x50CF; IO&#x64CD;&#x4F5C;&#x3002;&#x800C;&#x4E0D;&#x662F;&#x7B49;&#x5230;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x3002;</p>
+<p><code>async</code>&#x548C;<code>await</code>&#x5173;&#x952E;&#x8BCD;&#x652F;&#x6301;&#x4E86;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#xFF0C;&#x8FD0;&#x884C;&#x60A8;&#x5199;&#x51FA;&#x548C;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5F88;&#x50CF;&#x7684;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x3002;</p>
+<h3 id="future">Future</h3>
+<p><code>Future</code>&#x4E0E;JavaScript&#x4E2D;&#x7684;<code>Promise</code>&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x6700;&#x7EC8;&#x5B8C;&#x6210;&#xFF08;&#x6216;&#x5931;&#x8D25;&#xFF09;&#x53CA;&#x5176;&#x7ED3;&#x679C;&#x503C;&#x7684;&#x8868;&#x793A;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x6210;&#x529F;&#x4E86;&#x5C31;&#x6267;&#x884C;&#x6210;&#x529F;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x5931;&#x8D25;&#x4E86;&#x5C31;&#x6355;&#x83B7;&#x9519;&#x8BEF;&#x6216;&#x8005;&#x505C;&#x6B62;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x3002;&#x4E00;&#x4E2A;Future&#x53EA;&#x4F1A;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x8981;&#x4E48;&#x6210;&#x529F;&#xFF0C;&#x8981;&#x4E48;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x672C;&#x8EAB;&#x529F;&#x80FD;&#x8F83;&#x591A;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x4ECB;&#x7ECD;&#x5176;&#x5E38;&#x7528;&#x7684;API&#x53CA;&#x7279;&#x6027;&#x3002;&#x8FD8;&#x6709;&#xFF0C;&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;<code>Future</code> &#x7684;&#x6240;&#x6709;API&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4ECD;&#x7136;&#x662F;&#x4E00;&#x4E2A;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x3002;</p>
+<h4 id="futurethen">Future.then</h4>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x793A;&#x4F8B;&#xFF0C;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>Future.delayed</code> &#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5EF6;&#x65F6;&#x4EFB;&#x52A1;&#xFF08;&#x5B9E;&#x9645;&#x573A;&#x666F;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x7684;&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x6B21;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF09;&#xFF0C;&#x5373;2&#x79D2;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5B57;&#x7B26;&#x4E32;&quot;hi world!&quot;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;<code>then</code>&#x4E2D;&#x63A5;&#x6536;&#x5F02;&#x6B65;&#x7ED3;&#x679C;&#x5E76;&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart">Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>),(){
+   <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hi world!&quot;</span>;
+}).then((data){
+   <span class="hljs-built_in">print</span>(data);
+});
+</code></pre>
+<h4 id="futurecatcherror">Future.catchError</h4>
+<p>&#x5982;&#x679C;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5728;<code>catchError</code>&#x4E2D;&#x6355;&#x83B7;&#x9519;&#x8BEF;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-dart">Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>),(){
+   <span class="hljs-comment">//return &quot;hi world!&quot;;</span>
+   <span class="hljs-keyword">throw</span> AssertionError(<span class="hljs-string">&quot;Error&quot;</span>);  
+}).then((data){
+   <span class="hljs-comment">//&#x6267;&#x884C;&#x6210;&#x529F;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC;  </span>
+   <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;success&quot;</span>);
+}).catchError((e){
+   <span class="hljs-comment">//&#x6267;&#x884C;&#x5931;&#x8D25;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC;  </span>
+   <span class="hljs-built_in">print</span>(e);
+});
+</code></pre>
+<p>&#x5728;&#x672C;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x4E2D;&#x629B;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;<code>then</code>&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x4E8B; <code>catchError</code>&#x56DE;&#x8C03;&#x97E9;&#x5F0F;&#x5C06;&#x88AB;&#x8C03;&#x7528;&#xFF1B;&#x4F46;&#x662F;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x53EA;&#x6709; <code>catchError</code>&#x56DE;&#x8C03;&#x624D;&#x80FD;&#x6355;&#x83B7;&#x9519;&#x8BEF;&#xFF0C;<code>then</code>&#x65B9;&#x6CD5;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;<code>onError</code>&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5B83;&#x6765;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre><code class="lang-dart">Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>), () {
+    <span class="hljs-comment">//return &quot;hi world!&quot;;</span>
+    <span class="hljs-keyword">throw</span> AssertionError(<span class="hljs-string">&quot;Error&quot;</span>);
+}).then((data) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;success&quot;</span>);
+}, onError: (e) {
+    <span class="hljs-built_in">print</span>(e);
+});
+</code></pre>
+<h4 id="futurewhencomplete">Future.whenComplete</h4>
+<p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x9047;&#x5230;&#x65E0;&#x8BBA;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#x90FD;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x524D;&#x5F39;&#x51FA;&#x52A0;&#x8F7D;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x5728;&#x8BF7;&#x6C42;&#x7ED3;&#x675F;&#x540E;&#x5173;&#x95ED;&#x5BF9;&#x8BDD;&#x6846;&#x3002;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x5206;&#x522B;&#x5728;<code>then</code>&#x6216;<code>catch</code>&#x4E2D;&#x5173;&#x95ED;&#x4E00;&#x4E0B;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x5C31;&#x662F;&#x4F7F;&#x7528;<code>Future</code>&#x7684;<code>whenComplete</code>&#x56DE;&#x8C03;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#x6539;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart">Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>),(){
+   <span class="hljs-comment">//return &quot;hi world!&quot;;</span>
+   <span class="hljs-keyword">throw</span> AssertionError(<span class="hljs-string">&quot;Error&quot;</span>);
+}).then((data){
+   <span class="hljs-comment">//&#x6267;&#x884C;&#x6210;&#x529F;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC; </span>
+   <span class="hljs-built_in">print</span>(data);
+}).catchError((e){
+   <span class="hljs-comment">//&#x6267;&#x884C;&#x5931;&#x8D25;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC;   </span>
+   <span class="hljs-built_in">print</span>(e);
+}).whenComplete((){
+   <span class="hljs-comment">//&#x65E0;&#x8BBA;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC;</span>
+});
+</code></pre>
+<h4 id="futurewait">Future.wait</h4>
+<p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x591A;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x90FD;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x624D;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x754C;&#x9762;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x83B7;&#x53D6;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5B9A;&#x7684;&#x5904;&#x7406;&#x540E;&#x518D;&#x663E;&#x793A;&#x5230;UI&#x754C;&#x9762;&#x4E0A;&#xFF0C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#xFF1F;&#x7B54;&#x6848;&#x662F;<code>Future.wait</code>&#xFF0C;&#x5B83;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;<code>Future</code>&#x6570;&#x7EC4;&#x53C2;&#x6570;&#xFF0C;&#x53EA;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;<code>Future</code>&#x90FD;&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x89E6;&#x53D1;<code>then</code>&#x7684;&#x6210;&#x529F;&#x56DE;&#x8C03;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;<code>Future</code>&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x9519;&#x8BEF;&#x56DE;&#x8C03;&#x3002;&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x6A21;&#x62DF;<code>Future.delayed</code> &#x6765;&#x6A21;&#x62DF;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF0C;&#x7B49;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x90FD;&#x6267;&#x884C;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x5C06;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x7684;&#x7ED3;&#x679C;&#x62FC;&#x63A5;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart">Future.wait([
+  <span class="hljs-comment">// 2&#x79D2;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;  </span>
+  Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>), () {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello&quot;</span>;
+  }),
+  <span class="hljs-comment">// 4&#x79D2;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;  </span>
+  Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">4</span>), () {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot; world&quot;</span>;
+  })
+]).then((results){
+  <span class="hljs-built_in">print</span>(results[<span class="hljs-number">0</span>]+results[<span class="hljs-number">1</span>]);
+}).catchError((e){
+  <span class="hljs-built_in">print</span>(e);
+});
+</code></pre>
+<p>&#x6267;&#x884C;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#xFF0C;4&#x79D2;&#x540E;&#x4F60;&#x4F1A;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x770B;&#x5230;&#x201C;hello world&#x201D;&#x3002;</p>
+<h3 id="asyncawait">Async/await</h3>
+<p>Dart&#x4E2D;&#x7684;<code>async/await</code> &#x548C;JavaScript&#x4E2D;&#x7684;<code>async/await</code>&#x529F;&#x80FD;&#x548C;&#x7528;&#x6CD5;&#x662F;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;JavaScript&#x4E2D;&#x7684;<code>async/await</code>&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#x672C;&#x8282;&#x3002;</p>
+<h4 id="&#x56DE;&#x8C03;&#x5730;&#x72F1;callback-hell">&#x56DE;&#x8C03;&#x5730;&#x72F1;(Callback hell)</h4>
+<p>&#x5982;&#x679C;&#x4EE3;&#x7801;&#x4E2D;&#x6709;&#x5927;&#x91CF;&#x5F02;&#x6B65;&#x903B;&#x8F91;&#xFF0C;&#x5E76;&#x4E14;&#x51FA;&#x73B0;&#x5927;&#x91CF;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x4F9D;&#x8D56;&#x5176;&#x5B83;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x7684;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x5FC5;&#x7136;&#x4F1A;&#x51FA;&#x73B0;<code>Future.then</code>&#x56DE;&#x8C03;&#x4E2D;&#x5957;&#x56DE;&#x8C03;&#x60C5;&#x51B5;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982;&#x73B0;&#x5728;&#x6709;&#x4E2A;&#x9700;&#x6C42;&#x573A;&#x666F;&#x662F;&#x7528;&#x6237;&#x5148;&#x767B;&#x5F55;&#xFF0C;&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x4F1A;&#x83B7;&#x5F97;&#x7528;&#x6237;Id&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x7528;&#x6237;Id&#xFF0C;&#x518D;&#x53BB;&#x8BF7;&#x6C42;&#x7528;&#x6237;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7528;&#x6237;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5176;&#x7F13;&#x5B58;&#x5728;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart"><span class="hljs-comment">//&#x5148;&#x5206;&#x522B;&#x5B9A;&#x4E49;&#x5404;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;</span>
+Future&lt;<span class="hljs-built_in">String</span>&gt; login(<span class="hljs-built_in">String</span> userName, <span class="hljs-built_in">String</span> pwd){
+    ...
+    <span class="hljs-comment">//&#x7528;&#x6237;&#x767B;&#x5F55;</span>
+};
+Future&lt;<span class="hljs-built_in">String</span>&gt; getUserInfo(<span class="hljs-built_in">String</span> id){
+    ...
+    <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F; </span>
+};
+Future saveUserInfo(<span class="hljs-built_in">String</span> userInfo){
+    ...
+    <span class="hljs-comment">// &#x4FDD;&#x5B58;&#x7528;&#x6237;&#x4FE1;&#x606F; </span>
+};
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6267;&#x884C;&#x6574;&#x4E2A;&#x4EFB;&#x52A1;&#x6D41;&#xFF1A;</p>
+<pre><code class="lang-dart">login(<span class="hljs-string">&quot;alice&quot;</span>,<span class="hljs-string">&quot;******&quot;</span>).then((id){
+ <span class="hljs-comment">//&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x901A;&#x8FC7;&#xFF0C;id&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;    </span>
+ getUserInfo(id).then((userInfo){
+    <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x540E;&#x4FDD;&#x5B58; </span>
+    saveUserInfo(userInfo).then((){
+       <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6267;&#x884C;&#x5176;&#x5B83;&#x64CD;&#x4F5C;</span>
+        ...
+    });
+  });
+})
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x611F;&#x53D7;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#x6709;&#x5927;&#x91CF;&#x5F02;&#x6B65;&#x4F9D;&#x8D56;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x4E0A;&#x9762;&#x8FD9;&#x79CD;&#x5728;&#x56DE;&#x8C03;&#x91CC;&#x9762;&#x5957;&#x56DE;&#x8C03;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8FC7;&#x591A;&#x7684;&#x5D4C;&#x5957;&#x4F1A;&#x5BFC;&#x81F4;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x4E0B;&#x964D;&#x4EE5;&#x53CA;&#x51FA;&#x9519;&#x7387;&#x63D0;&#x9AD8;&#xFF0C;&#x5E76;&#x4E14;&#x975E;&#x5E38;&#x96BE;&#x7EF4;&#x62A4;&#xFF0C;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x88AB;&#x5F62;&#x8C61;&#x7684;&#x79F0;&#x4E3A;<strong>&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF08;Callback hell&#xFF09;</strong>&#x3002;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#x95EE;&#x9898;&#x5728;&#x4E4B;&#x524D;JavaScript&#x4E2D;&#x975E;&#x5E38;&#x7A81;&#x51FA;&#xFF0C;&#x4E5F;&#x662F;JavaScript&#x88AB;&#x5410;&#x69FD;&#x6700;&#x591A;&#x7684;&#x70B9;&#xFF0C;&#x4F46;&#x968F;&#x7740;ECMAScript6&#x548C;ECMAScript7&#x6807;&#x51C6;&#x53D1;&#x5E03;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5F97;&#x5230;&#x4E86;&#x975E;&#x5E38;&#x597D;&#x7684;&#x89E3;&#x51B3;&#xFF0C;&#x800C;&#x89E3;&#x51B3;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#x7684;&#x4E24;&#x5927;&#x795E;&#x5668;&#x6B63;&#x662F;ECMAScript6&#x5F15;&#x5165;&#x4E86;<code>Promise</code>&#xFF0C;&#x4EE5;&#x53CA;ECMAScript7&#x4E2D;&#x5F15;&#x5165;&#x7684;<code>async/await</code>&#x3002; &#x800C;&#x5728;Dart&#x4E2D;&#x51E0;&#x4E4E;&#x662F;&#x5B8C;&#x5168;&#x5E73;&#x79FB;&#x4E86;JavaScript&#x4E2D;&#x7684;&#x8FD9;&#x4E24;&#x8005;&#xFF1A;<code>Future</code>&#x76F8;&#x5F53;&#x4E8E;<code>Promise</code>&#xFF0C;&#x800C;<code>async/await</code>&#x8FDE;&#x540D;&#x5B57;&#x90FD;&#x6CA1;&#x6539;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x901A;&#x8FC7;<code>Future</code>&#x548C;<code>async/await</code>&#x5982;&#x4F55;&#x6D88;&#x9664;&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#x4E2D;&#x7684;&#x5D4C;&#x5957;&#x95EE;&#x9898;&#x3002;</p>
+<h5 id="&#x4F7F;&#x7528;future&#x6D88;&#x9664;callback-hell">&#x4F7F;&#x7528;Future&#x6D88;&#x9664;callback hell</h5>
+<pre><code class="lang-dart">login(<span class="hljs-string">&quot;alice&quot;</span>,<span class="hljs-string">&quot;******&quot;</span>).then((id){
+      <span class="hljs-keyword">return</span> getUserInfo(id);
+}).then((userInfo){
+    <span class="hljs-keyword">return</span> saveUserInfo(userInfo);
+}).then((e){
+   <span class="hljs-comment">//&#x6267;&#x884C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x64CD;&#x4F5C; </span>
+}).catchError((e){
+  <span class="hljs-comment">//&#x9519;&#x8BEF;&#x5904;&#x7406;  </span>
+  <span class="hljs-built_in">print</span>(e);
+});
+</code></pre>
+<p>&#x6B63;&#x5982;&#x4E0A;&#x6587;&#x6240;&#x8FF0;&#xFF0C; <em>&#x201C;<code>Future</code> &#x7684;&#x6240;&#x6709;API&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4ECD;&#x7136;&#x662F;&#x4E00;&#x4E2A;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x201D;</em> &#xFF0C;&#x5982;&#x679C;&#x5728;then&#x4E2D;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;<code>Future</code>&#x7684;&#x8BDD;&#xFF0C;&#x8BE5;<code>future</code>&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4F1A;&#x89E6;&#x53D1;&#x540E;&#x9762;&#x7684;<code>then</code>&#x56DE;&#x8C03;&#xFF0C;&#x8FD9;&#x6837;&#x4F9D;&#x6B21;&#x5411;&#x4E0B;&#xFF0C;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x5C42;&#x5C42;&#x5D4C;&#x5957;&#x3002;</p>
+<h5 id="&#x4F7F;&#x7528;asyncawait&#x6D88;&#x9664;callback-hell">&#x4F7F;&#x7528;async/await&#x6D88;&#x9664;callback hell</h5>
+<p>&#x901A;&#x8FC7;<code>Future</code>&#x56DE;&#x8C03;&#x4E2D;&#x518D;&#x8FD4;&#x56DE;<code>Future</code>&#x7684;&#x65B9;&#x5F0F;&#x867D;&#x7136;&#x80FD;&#x907F;&#x514D;&#x5C42;&#x5C42;&#x5D4C;&#x5957;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x6709;&#x4E00;&#x5C42;&#x56DE;&#x8C03;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x80FD;&#x591F;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x50CF;&#x5199;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x90A3;&#x6837;&#x6765;&#x6267;&#x884C;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x800C;&#x4E0D;&#x4F7F;&#x7528;&#x56DE;&#x8C03;&#x7684;&#x65B9;&#x5F0F;&#xFF1F;&#x7B54;&#x6848;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x8981;&#x4F7F;&#x7528;<code>async/await</code>&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5148;&#x76F4;&#x63A5;&#x770B;&#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x89E3;&#x91CA;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart">task() <span class="hljs-keyword">async</span> {
+   <span class="hljs-keyword">try</span>{
+    <span class="hljs-built_in">String</span> id = <span class="hljs-keyword">await</span> login(<span class="hljs-string">&quot;alice&quot;</span>,<span class="hljs-string">&quot;******&quot;</span>);
+    <span class="hljs-built_in">String</span> userInfo = <span class="hljs-keyword">await</span> getUserInfo(id);
+    <span class="hljs-keyword">await</span> saveUserInfo(userInfo);
+    <span class="hljs-comment">//&#x6267;&#x884C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x64CD;&#x4F5C;   </span>
+   } <span class="hljs-keyword">catch</span>(e){
+    <span class="hljs-comment">//&#x9519;&#x8BEF;&#x5904;&#x7406;   </span>
+    <span class="hljs-built_in">print</span>(e);   
+   }  
+}
+</code></pre>
+<ul>
+<li><code>async</code>&#x7528;&#x6765;&#x8868;&#x793A;&#x51FD;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</li>
+<li><code>await</code> &#x540E;&#x9762;&#x662F;&#x4E00;&#x4E2A;<code>Future</code>&#xFF0C;&#x8868;&#x793A;&#x7B49;&#x5F85;&#x8BE5;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#xFF0C;&#x5F02;&#x6B65;&#x5B8C;&#x6210;&#x540E;&#x624D;&#x4F1A;&#x5F80;&#x4E0B;&#x8D70;&#xFF1B;<code>await</code>&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728; <code>async</code> &#x51FD;&#x6570;&#x5185;&#x90E8;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>async/await</code>&#x5C06;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x6D41;&#x7528;&#x540C;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#x8868;&#x793A;&#x51FA;&#x6765;&#x4E86;&#x3002;</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5728;JavaScript&#x8FD8;&#x662F;Dart&#x4E2D;&#xFF0C;<code>async/await</code>&#x90FD;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x6216;&#x89E3;&#x91CA;&#x5668;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;Promise&#xFF08;Future&#xFF09;&#x7684;&#x8C03;&#x7528;&#x94FE;&#x3002;</p>
+</blockquote>
+<h2 id="stream">Stream</h2>
+<p><code>Stream</code> &#x4E5F;&#x662F;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#xFF0C;&#x548C;<code>Future</code> &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x591A;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#xFF08;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#xFF09;&#x3002; &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x591A;&#x6B21;&#x89E6;&#x53D1;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#x4E8B;&#x4EF6;&#x800C;&#x4F20;&#x9012;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x6216;&#x9519;&#x8BEF;&#x5F02;&#x5E38;&#x3002; <code>Stream</code> &#x5E38;&#x7528;&#x4E8E;&#x4F1A;&#x591A;&#x6B21;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x573A;&#x666F;&#xFF0C;&#x5982;&#x7F51;&#x7EDC;&#x5185;&#x5BB9;&#x4E0B;&#x8F7D;&#x3001;&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x7B49;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-dart">Stream.fromFutures([
+  <span class="hljs-comment">// 1&#x79D2;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</span>
+  Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">1</span>), () {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello 1&quot;</span>;
+  }),
+  <span class="hljs-comment">// &#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;</span>
+  Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">2</span>),(){
+    <span class="hljs-keyword">throw</span> AssertionError(<span class="hljs-string">&quot;Error&quot;</span>);
+  }),
+  <span class="hljs-comment">// 3&#x79D2;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</span>
+  Future.delayed(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">3</span>), () {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello 3&quot;</span>;
+  })
+]).listen((data){
+   <span class="hljs-built_in">print</span>(data);
+}, onError: (e){
+   <span class="hljs-built_in">print</span>(e.message);
+},onDone: (){
+
+});
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F9D;&#x6B21;&#x4F1A;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>I/flutter (17666): hello 1
+I/flutter (17666): Error
+I/flutter (17666): hello 3
+</code></pre><p>&#x4EE3;&#x7801;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x4E0D;&#x8D58;&#x8FF0;&#x4E86;&#x3002;</p>
+<blockquote>
+<p>&#x601D;&#x8003;&#x9898;&#xFF1A;&#x65E2;&#x7136;Stream&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x591A;&#x6B21;&#x4E8B;&#x4EF6;&#xFF0C;&#x90A3;&#x80FD;&#x4E0D;&#x80FD;&#x7528;Stream&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x8BA2;&#x9605;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x4E8B;&#x4EF6;&#x603B;&#x7EBF;&#xFF1F;</p>
+</blockquote>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#xFF0C;&#x76F8;&#x4FE1;&#x4F60;&#x5BF9;Dart&#x5E94;&#x8BE5;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x7684;&#x5370;&#x8C61;&#xFF0C;&#x7531;&#x4E8E;&#x7B14;&#x8005;&#x5E73;&#x65F6;&#x4E5F;&#x4F7F;&#x7528;Java&#x548C;JavaScript&#xFF0C;&#x4E0B;&#x9762;&#x7B14;&#x8005;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x7ED3;&#x5408;Java&#x548C;JavaScript&#xFF0C;&#x8C08;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x7684;&#x770B;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x4E4B;&#x6240;&#x4EE5;&#x5C06;Dart&#x4E0E;Java&#x548C;JavaScript&#x5BF9;&#x6BD4;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x8FD9;&#x4E24;&#x8005;&#x5206;&#x522B;&#x662F;&#x5F3A;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x548C;&#x5F31;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#xFF0C;&#x5E76;&#x4E14;Dart &#x8BED;&#x6CD5;&#x4E2D;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x4E5F;&#x90FD;&#x501F;&#x9274;&#x4E86;Java&#x548C;JavaScript&#x3002;</p>
+</blockquote>
+<h3 id="dart-vs-java">Dart vs Java</h3>
+<p>&#x5BA2;&#x89C2;&#x7684;&#x6765;&#x8BB2;&#xFF0C;Dart&#x5728;&#x8BED;&#x6CD5;&#x5C42;&#x9762;&#x786E;&#x5B9E;&#x6BD4;Java&#x66F4;&#x6709;&#x8868;&#x73B0;&#x529B;&#xFF1B;&#x5728;VM&#x5C42;&#x9762;&#xFF0C;Dart VM&#x5728;&#x5185;&#x5B58;&#x56DE;&#x6536;&#x548C;&#x541E;&#x5410;&#x91CF;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x53CD;&#x590D;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4F46;&#x5177;&#x4F53;&#x7684;&#x6027;&#x80FD;&#x5BF9;&#x6BD4;&#xFF0C;&#x7B14;&#x8005;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x76F8;&#x5173;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x5728;&#x7B14;&#x8005;&#x770B;&#x6765;&#xFF0C;&#x53EA;&#x8981;Dart&#x8BED;&#x8A00;&#x80FD;&#x6D41;&#x884C;&#xFF0C;VM&#x7684;&#x6027;&#x80FD;&#x5C31;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#xFF0C;&#x6BD5;&#x7ADF;Google&#x5728;go&#xFF08;&#x6CA1;&#x7528;vm&#x4F46;&#x6709;GC&#xFF09;&#x3001;javascript&#xFF08;v8&#xFF09;&#x3001;dalvik&#xFF08;android&#x4E0A;&#x7684;java vm&#xFF09;&#x4E0A;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x5F88;&#x591A;&#x6280;&#x672F;&#x79EF;&#x6DC0;&#x3002;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;Dart&#x5728;Flutter&#x4E2D;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x5C06;GC&#x505A;&#x5230;10ms&#x4EE5;&#x5185;&#xFF0C;&#x6240;&#x4EE5;Dart&#x548C;Java&#x76F8;&#x6BD4;&#xFF0C;&#x51B3;&#x80DC;&#x56E0;&#x7D20;&#x5E76;&#x4E0D;&#x4F1A;&#x662F;&#x5728;&#x6027;&#x80FD;&#x65B9;&#x9762;&#x3002;&#x800C;&#x5728;&#x8BED;&#x6CD5;&#x5C42;&#x9762;&#xFF0C;Dart&#x8981;&#x6BD4;java&#x66F4;&#x6709;&#x8868;&#x73B0;&#x529B;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;Dart&#x5BF9;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x652F;&#x6301;&#x8981;&#x8FDC;&#x5F3A;&#x4E8E;Java(&#x76EE;&#x524D;&#x53EA;&#x505C;&#x7559;&#x5728;lamda&#x8868;&#x8FBE;&#x5F0F;)&#xFF0C;&#x800C;Dart&#x76EE;&#x524D;&#x771F;&#x6B63;&#x7684;&#x4E0D;&#x8DB3;&#x662F;<strong>&#x751F;&#x6001;</strong>&#xFF0C;&#x4F46;&#x7B14;&#x8005;&#x76F8;&#x4FE1;&#xFF0C;&#x968F;&#x7740;Futter&#x7684;&#x9010;&#x6E10;&#x706B;&#x70ED;&#xFF0C;&#x4F1A;&#x56DE;&#x8FC7;&#x5934;&#x6765;&#x53CD;&#x63A8;Dart&#x751F;&#x6001;&#x52A0;&#x901F;&#x53D1;&#x5C55;&#xFF0C;&#x5BF9;&#x4E8E;Dart&#x6765;&#x8BF4;&#xFF0C;&#x73B0;&#x5728;&#x9700;&#x8981;&#x7684;&#x662F;&#x65F6;&#x95F4;&#x3002;</p>
+<h3 id="dart-vs-javascript">Dart vs JavaScript</h3>
+<p>JavaScript&#x7684;&#x5F31;&#x7C7B;&#x578B;&#x4E00;&#x76F4;&#x88AB;&#x6293;&#x77ED;&#xFF0C;&#x6240;&#x4EE5;TypeScript&#x3001;Coffeescript&#x751A;&#x81F3;&#x662F;Facebook&#x7684;flow&#xFF08;&#x867D;&#x7136;&#x5E76;&#x4E0D;&#x80FD;&#x7B97;JavaScript&#x7684;&#x4E00;&#x4E2A;&#x8D85;&#x96C6;&#xFF0C;&#x4F46;&#x4E5F;&#x901A;&#x8FC7;&#x6807;&#x6CE8;&#x548C;&#x6253;&#x5305;&#x5DE5;&#x5177;&#x63D0;&#x4F9B;&#x4E86;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#xFF09;&#x624D;&#x6709;&#x5E02;&#x573A;&#x3002;&#x5C31;&#x7B14;&#x8005;&#x4F7F;&#x7528;&#x8FC7;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x4E2D;&#xFF08;&#x7B14;&#x8005;&#x66FE;&#x4F7F;&#x7528;&#x8FC7;Python&#x3001;PHP&#xFF09;&#xFF0C;JavaScript&#x65E0;&#x7591;&#x662F;<strong>&#x52A8;&#x6001;&#x5316;</strong>&#x652F;&#x6301;&#x6700;&#x597D;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x6BD4;&#x5982;&#x5728;JavaScript&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x52A8;&#x6001;&#x6269;&#x5C55;&#x5C5E;&#x6027;&#xFF0C;&#x5BF9;&#x4E8E;&#x7CBE;&#x901A;JavaScript&#x7684;&#x9AD8;&#x624B;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x65E0;&#x7591;&#x662F;&#x4E00;&#x628A;&#x5229;&#x5251;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4EFB;&#x4F55;&#x4E8B;&#x7269;&#x90FD;&#x6709;&#x4E24;&#x9762;&#x6027;&#xFF0C;JavaScript&#x7684;&#x5F3A;&#x5927;&#x7684;&#x52A8;&#x6001;&#x5316;&#x7279;&#x6027;&#x4E5F;&#x662F;&#x628A;&#x53CC;&#x5203;&#x5251;&#xFF0C;&#x4F60;&#x53EF;&#x7ECF;&#x5E38;&#x542C;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x58F0;&#x97F3;&#xFF0C;&#x8BA4;&#x4E3A;JavaScript&#x7684;&#x8FD9;&#x79CD;&#x52A8;&#x6001;&#x6027;&#x7CDF;&#x7CD5;&#x900F;&#x4E86;&#xFF0C;&#x592A;&#x8FC7;&#x7075;&#x6D3B;&#x53CD;&#x800C;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x5F88;&#x96BE;&#x9884;&#x671F;&#xFF0C;&#x65E0;&#x6CD5;&#x9650;&#x5236;&#x4E0D;&#x88AB;&#x671F;&#x671B;&#x7684;&#x4FEE;&#x6539;&#x3002;&#x6BD5;&#x7ADF;&#x6709;&#x4E9B;&#x4EBA;&#x603B;&#x662F;&#x5BF9;&#x81EA;&#x5DF1;&#x6216;&#x522B;&#x4EBA;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x653E;&#x5FC3;&#xFF0C;&#x4ED6;&#x4EEC;&#x5E0C;&#x671B;&#x80FD;&#x591F;&#x8BA9;&#x4EE3;&#x7801;&#x53D8;&#x5F97;&#x53EF;&#x63A7;&#xFF0C;&#x5E76;&#x671F;&#x671B;&#x6709;&#x4E00;&#x5957;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x7CFB;&#x7EDF;&#x6765;&#x5E2E;&#x52A9;&#x81EA;&#x5DF1;&#x51CF;&#x5C11;&#x9519;&#x8BEF;&#x3002;&#x6B63;&#x56E0;&#x5982;&#x6B64;&#xFF0C;&#x5728;Flutter&#x4E2D;&#xFF0C;Dart&#x51E0;&#x4E4E;&#x653E;&#x5F03;&#x4E86;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x52A8;&#x6001;&#x5316;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x4E0D;&#x652F;&#x6301;&#x53CD;&#x5C04;&#x3001;&#x4E5F;&#x4E0D;&#x652F;&#x6301;&#x52A8;&#x6001;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x7B49;&#x3002;&#x5E76;&#x4E14;Dart&#x5728;2.0&#x5F3A;&#x5236;&#x5F00;&#x542F;&#x4E86;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#xFF08;Strong Mode&#xFF09;&#xFF0C;&#x539F;&#x5148;&#x7684;&#x68C0;&#x67E5;&#x6A21;&#x5F0F;&#xFF08;checked mode&#xFF09;&#x548C;&#x53EF;&#x9009;&#x7C7B;&#x578B;&#xFF08;optional type&#xFF09;&#x5C06;&#x6DE1;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7C7B;&#x578B;&#x5B89;&#x5168;&#x8FD9;&#x4E2A;&#x5C42;&#x9762;&#x6765;&#x8BF4;&#xFF0C;Dart&#x548C;TypeScript&#x3001;Coffeescript&#x662F;&#x5DEE;&#x4E0D;&#x591A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5355;&#x4ECE;&#x8FD9;&#x4E00;&#x70B9;&#x6765;&#x770B;&#xFF0C;Dart&#x5E76;&#x4E0D;&#x5177;&#x5907;&#x4EC0;&#x4E48;&#x660E;&#x663E;&#x4F18;&#x52BF;&#xFF0C;&#x4F46;&#x7EFC;&#x5408;&#x8D77;&#x6765;&#x770B;&#xFF0C;dart&#x65E2;&#x80FD;&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x7AEF;&#x811A;&#x672C;&#x3001;APP&#x5F00;&#x53D1;&#x3001;web&#x5F00;&#x53D1;&#xFF0C;&#x8FD9;&#x5C31;&#x6709;&#x4F18;&#x52BF;&#x4E86;&#xFF01;</p>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x7B14;&#x8005;&#x8FD8;&#x662F;&#x5F88;&#x770B;&#x597D;Dart&#x8BED;&#x8A00;&#x7684;&#x5C06;&#x6765;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x8868;&#x8FD9;&#x4E2A;&#x6001;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5728;&#x65B0;&#x6280;&#x672F;&#x53D1;&#x5C55;&#x521D;&#x671F;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x53EF;&#x80FD;&#x8FD8;&#x6709;&#x6240;&#x6447;&#x6446;&#xFF0C;&#x6709;&#x6240;&#x72B9;&#x8C6B;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x5FC5;&#x8981;&#x7ED9;&#x5927;&#x5BB6;&#x6253;&#x4E00;&#x5242;&#x5F3A;&#x5FC3;&#x9488;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x89C1;&#x4EC1;&#x89C1;&#x667A;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5404;&#x6292;&#x5DF1;&#x89C1;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install_flutter.html" class="navigation navigation-prev " aria-label="Previous page: 搭建Flutter开发环境">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter2/" class="navigation navigation-next " aria-label="Next page: 第一个Flutter应用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dart语言简介","level":"1.2.4","depth":2,"next":{"title":"第一个Flutter应用","level":"1.3","depth":1,"path":"chapter2/index.md","ref":"chapter2/index.md","articles":[{"title":"计数器示例","level":"1.3.1","depth":2,"path":"chapter2/first_flutter_app.md","ref":"chapter2/first_flutter_app.md","articles":[]},{"title":"路由管理","level":"1.3.2","depth":2,"path":"chapter2/flutter_router.md","ref":"chapter2/flutter_router.md","articles":[]},{"title":"包管理","level":"1.3.3","depth":2,"path":"chapter2/flutter_package_mgr.md","ref":"chapter2/flutter_package_mgr.md","articles":[]},{"title":"资源管理","level":"1.3.4","depth":2,"path":"chapter2/flutter_assets_mgr.md","ref":"chapter2/flutter_assets_mgr.md","articles":[]},{"title":"调试Flutter APP","level":"1.3.5","depth":2,"path":"chapter2/flutter_app_debug.md","ref":"chapter2/flutter_app_debug.md","articles":[]}]},"previous":{"title":"搭建Flutter开发环境","level":"1.2.3","depth":2,"path":"chapter1/install_flutter.md","ref":"chapter1/install_flutter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/dart.md","mtime":"2018-12-04T02:38:54.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-05T05:49:49.357Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+</body>
+<script>
+
+    function init() {
+        var p=location.pathname;
+        if(p[p.length-1]==='/'){
+            p+="index.md"
+        }else {
+            p = p.split(".")[0] + ".md";
+        }
+        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
+        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        $("table").wrap("<div style='overflow: auto'></div>");
+        //百度统计
+        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
+            t = document.referrer;
+        if (!e.test(r)) {
+            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
+            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
+            var i = new Image;
+            i.src = o
+        }
+    }
+
+    function hookAPI(api, ob, fn) {
+        return function () {
+            var result = api.apply(ob, [].slice.call(arguments));
+            setTimeout(fn,1000);
+            return result;
+        }
+    }
+
+    init();
+
+    if(history.pushState){
+        history.pushState = hookAPI(history.pushState, history, init);
+    }
+
+</script>
+</html>
+
