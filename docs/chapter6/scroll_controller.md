@@ -18,7 +18,7 @@ ScrollController({
 我们介绍一下ScrollController常用的属性和方法：
 
 - `offset`：可滚动Widget当前滚动的位置。
-- `jumpTo(double offset)`、`animateTo(double offset,...)`：这两个方法用于跳转到指定的位置，它们不同之处在于，前者在跳转时会执行一个动画，而前者不会。
+- `jumpTo(double offset)`、`animateTo(double offset,...)`：这两个方法用于跳转到指定的位置，它们不同之处在于，后者在跳转时会执行一个动画，而前者不会。
 
 ScrollController还有一些属性和方法，我们将在后面原理部分接收。
 
