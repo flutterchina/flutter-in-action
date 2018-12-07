@@ -56,7 +56,7 @@
 
     if (batteryLevel == -1) {
       result([FlutterError errorWithCode:@"UNAVAILABLE"
-                                 message:@"Battery info unavailable"
+                                 message:@"电池信息不可用"
                                  details:nil]);
     } else {
       result(@(batteryLevel));
@@ -112,7 +112,7 @@ private func receiveBatteryLevel(result: FlutterResult) {
   device.isBatteryMonitoringEnabled = true;
   if (device.batteryState == UIDeviceBatteryState.unknown) {
     result(FlutterError.init(code: "UNAVAILABLE",
-                             message: "Battery info unavailable",
+                             message: "电池信息不可用",
                              details: nil));
   } else {
     result(Int(device.batteryLevel * 100));
