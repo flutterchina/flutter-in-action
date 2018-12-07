@@ -177,7 +177,7 @@ Future.delayed(new Duration(seconds: 2),(){
 
 #### Future.catchError
 
-如果异步任务发生错误，我们可以在在`catchError`中捕获错误，我们将上面示例改为：
+如果异步任务发生错误，我们可以在`catchError`中捕获错误，我们将上面示例改为：
 
 ```dart
 Future.delayed(new Duration(seconds: 2),(){
@@ -192,7 +192,7 @@ Future.delayed(new Duration(seconds: 2),(){
 });
 ```
 
-在本示例中，我们在异步任务中抛出了一个异常，`then `的回调函数将不会被执行，取而代之的事 `catchError`回调韩式将被调用；但是，并不是只有 `catchError`回调才能捕获错误，`then`方法还有一个可选参数`onError`，我们也可以它来捕获异常：
+在本示例中，我们在异步任务中抛出了一个异常，`then `的回调函数将不会被执行，取而代之的是 `catchError`回调函数将被调用；但是，并不是只有 `catchError`回调才能捕获错误，`then`方法还有一个可选参数`onError`，我们也可以它来捕获异常：
 
 ```dart
 Future.delayed(new Duration(seconds: 2), () {
