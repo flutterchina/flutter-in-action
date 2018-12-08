@@ -207,7 +207,7 @@ Qt是一个1991年由Qt Company开发的跨平台C++图形用户界面应用程�
 
 “千呼万唤始出来”，铺垫这么久，现在终于等到本书的主角出场了！
 
-Flutter是Google发布的一个用于创建跨平台、高性能移动应用的框架。Flutter和QT mobile一样，都没有使用原生控件，相反都实现了一个自绘引擎，使用自身的布局、绘制系统。那么，我们会担心，QT mobile面对的问题Flutter是否也一样，Flutter会不会步QT mobile后尘，成为另一个烈士？要回到这个问题，我们先来看看Flutter诞生过程：
+Flutter是Google发布的一个用于创建跨平台、高性能移动应用的框架。Flutter和QT mobile一样，都没有使用原生控件，相反都实现了一个自绘引擎，使用自身的布局、绘制系统。那么，我们会担心，QT mobile面对的问题Flutter是否也一样，Flutter会不会步入QT mobile后尘，成为另一个烈士？要回到这个问题，我们先来看看Flutter诞生过程：
 
 - 2017 年 Google I/O 大会上，Google 首次推出了一款新的用于创建跨平台、高性能的移动应用框架——Flutter。
 - 2018年2月，Flutter发布了第一个Beta版本，同年五月， 在2018年Google I/O 大会上，Flutter 更新到了 beta 3 版本。
@@ -235,7 +235,7 @@ Flutter是Google发布的一个用于创建跨平台、高性能移动应用的�
 | JavaScript+原生渲染 | 原生控件渲染    | 好   | 一般     | ✔️          | RN、Weex       |
 | 自绘UI+原生         | 调用系统API渲染 | 好   | 高       | 默认不支持 | QT、Flutter    |
 
-上表中**开发语言**主要指UI的开发语言，**动态化**主要指是否支持动态下发代码和是否只是热更新。值得注意的是Flutter的Release包默认是使用Dart AOT模式编译的，所以不支持动态化，但Dart还有JIT或snapshot运行方式，这些模式都是支持动态化的，后续会介绍。
+上表中**开发语言**主要指UI的开发语言，**动态化**主要指是否支持动态下发代码和是否支持热更新。值得注意的是Flutter的Release包默认是使用Dart AOT模式编译的，所以不支持动态化，但Dart还有JIT或snapshot运行方式，这些模式都是支持动态化的，后续会介绍。
 
 
 
