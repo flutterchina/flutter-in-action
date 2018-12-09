@@ -77,10 +77,9 @@
     * [插件开发：实现IOS端API](chapter11/ios_implement.md)
     * [系统能力调用](todo.md) 
     
-* [国际化](todo.md)
-    * [让App支持多语言](todo.md)
-    * [监听系统语言切换](todo.md)
-    * [实现Localizations](todo.md) 
+* [国际化](chapter12/index.md)
+    * [让App支持多语言](chapter12/multi_languages_support.md)
+    * [实现Localizations](chapter12/locallization_implement.md) 
     * [Intel包的使用](todo.md) 
     
 * [Flutter 核心原理](todo.md)
