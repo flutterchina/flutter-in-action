@@ -60,7 +60,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
 2. 下载包
 
-   在Android Studio的编辑器视图中查看pubspec.yml时，单击右上角的 **Packages get** 。
+   在Android Studio的编辑器视图中查看pubspec.yaml时，单击右上角的 **Packages get** 。
 
    ![package get](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/package_get.png)
 
@@ -100,7 +100,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
    }
    ```
 
-   我们将`RandomWordsWidget` 添加到"计数器"示例的首页`MyHomePage` 的`Colum`的子widget中。
+   我们将`RandomWordsWidget` 添加到"计数器"示例的首页`MyHomePage` 的`Column`的子widget中。
 
 5. 如果应用程序正在运行，请使用热重载按钮 (![lightning bolt icon](https://flutterchina.club/get-started/codelab/images/hot-reload-button.png)) 更新正在运行的应用程序。每次单击热重载或保存项目时，都会在正在运行的应用程序中随机选择不同的单词对。 这是因为单词对是在 `build` 方法内部生成的。每次热更新时，`build`方法都会被执行。
 
@@ -109,7 +109,7 @@ Pub（https://pub.dartlang.org/ ）是Google官方的Dart Packages仓库，类�
 
 ## 其它依赖方式
 
-上文所述的依赖方式是依赖pub仓库的。但我么还可以依赖本地包和git仓库。
+上文所述的依赖方式是依赖pub仓库的。但我们还可以依赖本地包和git仓库。
 
 - 依赖本地包
 

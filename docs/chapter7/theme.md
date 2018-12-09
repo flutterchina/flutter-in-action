@@ -6,7 +6,7 @@ Theme Widget可以为Material APP定义主题数据（ThemeData），Material组
 
 ### ThemeData
 
-ThemeData是Material Design Widget库的主题数据，Material库的Widget需要遵守相应的设计规范，而这些规范可自定部分都定义在ThemeData，所以我们可以通过ThemeData来自定义应用主题。我们可以通过`Theme.of`方法来获取当前的ThemeData。
+ThemeData是Material Design Widget库的主题数据，Material库的Widget需要遵守相应的设计规范，而这些规范可自定义部分都定义在ThemeData，所以我们可以通过ThemeData来自定义应用主题。我们可以通过`Theme.of`方法来获取当前的ThemeData。
 
 > 注意，Material Design 设计规范中有些是不能自定义的，如导航栏高度，ThemeData只包含了可自定义部分。
 

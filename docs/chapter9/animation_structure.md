@@ -192,7 +192,7 @@ Widget build(BuildContext context) {
    Widget build(BuildContext context) {
        return GrowTransition(
        child: Image.asset("images/avatar.png"), 
-       animation: animation，
+       animation: animation,
        );
    }
    ```
