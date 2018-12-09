@@ -93,7 +93,7 @@
 
 ### bool  pop(BuildContext context, [ result ])
 
-将栈顶路由出栈，`result`为页面关闭时放回给上一个页面的数据。
+将栈顶路由出栈，`result`为页面关闭时返回给上一个页面的数据。
 
 `Navigator` 还有很多其它方法，如`Navigator.replace`、`Navigator.popUntil`等，详情请参考API文档或SDK源码注释，在此不再赘述。下面我们还需要介绍一下路由相关的另一个概念“命名路由”。
 
