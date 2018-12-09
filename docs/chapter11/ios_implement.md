@@ -8,7 +8,7 @@
 2. 选择 File > Open…
 3. 定位到您 Flutter app目录, 然后选择里面的 `iOS`文件夹，点击 OK
 4. 确保Xcode项目的构建没有错误。
-5. 选择 Runner > Runner ，打开`AppDelegate.m
+5. 选择 Runner > Runner ，打开`AppDelegate.m`
 
 接下来，在`application didFinishLaunchingWithOptions:`方法内部创建一个`FlutterMethodChannel`，并添加一个处理方法。 确保与在Flutter客户端使用的通道名称相同。
 
@@ -74,7 +74,7 @@
 以下步骤与上面使用Objective-C相似，首先打开Xcode中Flutter应用程序的iOS部分:
 
 1. 启动 Xcode
-2. 选择 ‘File > Open…’
+2. 选择 File > Open…
 3. 定位到您 Flutter app目录, 然后选择里面的 `ios`文件夹，点击 OK
 4. 确保Xcode项目的构建没有错误。
 5. 选择 Runner > Runner ，然后打开`AppDelegate.swift`

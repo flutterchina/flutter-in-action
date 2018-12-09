@@ -138,13 +138,13 @@ Widget build(BuildContext context) {
 new Image.asset('icons/heart.png', package: 'my_icons')
 ```
 
-**注意：包在使用的本身的资源时也应该加上`package`参数来获取**。
+**注意：包在使用本身的资源时也应该加上`package`参数来获取**。
 
 
 
 ##### 打包包中的 assets
 
-如果在`pubspec.yaml`文件中声明了了期望的资源，它将会打包到响应的package中。特别是，包本身使用的资源必须在`pubspec.yaml`中指定。
+如果在`pubspec.yaml`文件中声明了期望的资源，它将会打包到相应的package中。特别是，包本身使用的资源必须在`pubspec.yaml`中指定。
 
 包也可以选择在其`lib/`文件夹中包含未在其`pubspec.yaml`文件中声明的资源。在这种情况下，对于要打包的图片，应用程序必须在`pubspec.yaml`中指定包含哪些图像。 例如，一个名为“fancy_backgrounds”的包，可能包含以下文件：
 
@@ -200,7 +200,7 @@ flutter:
 
 ##### iOS
 
-要将图片添加到启动屏幕（splash screen）的中心，请导航至`.../ios/Runner`。在`Assets.xcassets/LaunchImage.imageset`， 拖入图片，并命名为`images LaunchImage.png`、`LaunchImage@2x.png`、`LaunchImage@3x.png`。 如果你使用不同的文件名，那您还必须更新同一目录中的`Contents.json`文件，图片的具体尺寸可以查看苹果官方的标准。
+要将图片添加到启动屏幕（splash screen）的中心，请导航至`.../ios/Runner`。在`Assets.xcassets/LaunchImage.imageset`， 拖入图片，并命名为`LaunchImage.png`、`LaunchImage@2x.png`、`LaunchImage@3x.png`。 如果你使用不同的文件名，那您还必须更新同一目录中的`Contents.json`文件，图片的具体尺寸可以查看苹果官方的标准。
 
 您也可以通过打开Xcode完全自定义storyboard。在Project Navigator中导航到`Runner/Runner`然后通过打开`Assets.xcassets`拖入图片，或者通过在LaunchScreen.storyboard中使用Interface Builder进行自定义。
 

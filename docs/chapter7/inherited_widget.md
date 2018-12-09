@@ -66,7 +66,7 @@ class __TestWidgetState extends State<_TestWidget> {
 }
 ```
 
-最后，我们创建一个按钮，没点击一次，就将ShareDataWidget的值自增：
+最后，我们创建一个按钮，每点击一次，就将ShareDataWidget的值自增：
 
 ```dart
 class InheritedWidgetTestRoute extends StatefulWidget {
@@ -106,7 +106,7 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
 
 ![image-20180913183022733](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180913183022733.png)
 
-没点击一次按钮，计数器就会自增，控制就会打印一句日志：
+每点击一次按钮，计数器就会自增，控制台就会打印一句日志：
 
 ```
 I/flutter ( 8513): Dependencies change

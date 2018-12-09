@@ -108,6 +108,6 @@ response = await dio.post("/info", data: formData)
   };
 ```
 
-注意，`onHttpClientCreate `会在当前dio实例内部需要创建HttpClient时调用，所以通过此回调配置HttpClient会对整个dio实例生效，如果你想针对某个请求应用单独的代理或证书校验策略，可以创建一个新的dio实例即可。
+注意，`onHttpClientCreate `会在当前dio实例内部需要创建HttpClient时调用，所以通过此回调配置HttpClient会对整个dio实例生效，如果你想针对某个应用请求单独的代理或证书校验策略，可以创建一个新的dio实例即可。
 
 怎么样，是不是很简单，除了这些基本的用法，dio还支持请求配置、拦截器等，官方资料比较详细，故本书不再赘述，详情可以参考dio主页：https://github.com/flutterchina/dio 。

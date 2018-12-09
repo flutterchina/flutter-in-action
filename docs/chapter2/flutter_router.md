@@ -76,7 +76,7 @@
 
 - `builder` 是一个WidgetBuilder类型的回调函数，它的作用是构建路由页面的具体内容，返回值是一个widget。我们通常要实现此回调，返回新路由的实例。
 - `settings` 包含路由的配置信息，如路由名称、是否初始路由（首页）。
-- `maintainState`：默认情况下，当入栈一个新路由时，原来的路由任然会被保存在内存中，如果想在路由没用的时候释放其所占用的所有资源，可以设置`maintainState`为false。
+- `maintainState`：默认情况下，当入栈一个新路由时，原来的路由仍然会被保存在内存中，如果想在路由没用的时候释放其所占用的所有资源，可以设置`maintainState`为false。
 - `fullscreenDialog`表示新的路由页面是否是一个全屏的模态对话框，在iOS中，如果`fullscreenDialog`为`true`，新页面将会从屏幕底部滑入（而不是水平方向）。
 
 > 如果想自定义路由切换动画，可以自己继承PageRoute来实现，我们将在后面介绍动画时，实现一个自定义的路由Widget。
@@ -93,7 +93,7 @@
 
 ### bool  pop(BuildContext context, [ result ])
 
-将栈顶路由出栈，`result`为页面关闭时放回给上一个页面的数据。
+将栈顶路由出栈，`result`为页面关闭时返回给上一个页面的数据。
 
 `Navigator` 还有很多其它方法，如`Navigator.replace`、`Navigator.popUntil`等，详情请参考API文档或SDK源码注释，在此不再赘述。下面我们还需要介绍一下路由相关的另一个概念“命名路由”。
 
@@ -143,7 +143,7 @@ Future pushNamed(BuildContext context, String routeName)
 
 `Navigator` 除了`pushNamed`方法，还有`pushReplacementNamed`等其他管理命名路由的方法，读者可以自行查看API文档。
 
-接下来我们通过路由名来打开新的路由页，修改`FlatButton`的`onPress`回调代码，改为：
+接下来我们通过路由名来打开新的路由页，修改`FlatButton`的`onPressed`回调代码，改为：
 
 ```dart
 onPressed: () {
