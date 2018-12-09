@@ -53,7 +53,7 @@ Flutter与原生之间的通信依赖灵活的消息传递方式：
 
 首先创建一个新的应用程序:
 
-- 在终端运行中：`flutter create batterylevel`
+- 在终端中运行：`flutter create batterylevel`
 
 默认情况下，模板支持使用Java编写Android代码，或使用Objective-C编写iOS代码。要使用Kotlin或Swift，请使用-i和/或-a标志:
 
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-接下来，我们调用通道上的方法，指定通过字符串标识符调用方法`getBatteryLevel`。 该调用可能失败 - 例如，如果平台不支持平台API（例如在模拟器中运行时），所以我们将invokeMethod调用包装在try-catch语句中。
+接下来，我们调用通道上的方法，指定通过字符串标识符调用方法`getBatteryLevel`。 该调用可能失败(平台不支持平台API，例如在模拟器中运行时)，所以我们将invokeMethod调用包装在try-catch语句中。
 
 我们使用返回的结果，在`setState`中来更新用户界面状态`batteryLevel`。
 
