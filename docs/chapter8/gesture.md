@@ -203,6 +203,8 @@ GestureDetector内部是使用一个或多个GestureRecognizer来识别各种手
 假设我们要给一段富文本（RichText）的不同部分分别添加点击事件处理器，但是TextSpan并不是一个Widget，这时我们不能用GestureDetector，但TextSpan有一个`recognizer`属性，它可以接收一个GestureRecognizer，假设我们在点击时给文本变色:
 
 ```dart
+import 'package:flutter/gestures.dart';
+
 class _GestureRecognizerTestRouteState
     extends State<_GestureRecognizerTestRoute> {
   TapGestureRecognizer _tapGestureRecognizer = new TapGestureRecognizer();

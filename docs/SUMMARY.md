@@ -80,7 +80,7 @@
 * [国际化](chapter12/index.md)
     * [让App支持多语言](chapter12/multi_languages_support.md)
     * [实现Localizations](chapter12/locallization_implement.md) 
-    * [Intel包的使用](todo.md) 
+    * [使用Intl包](chapter12/intl.md) 
     
 * [Flutter 核心原理](todo.md)
     * [Flutter UI系统](todo.md)
