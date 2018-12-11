@@ -24,7 +24,7 @@ class GradientButton extends StatelessWidget {
 
   // 渐变色数组
   final List<Color> colors;
-
+  
   // 按钮宽高
   final double width;
   final double height;
