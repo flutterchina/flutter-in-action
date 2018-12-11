@@ -126,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
    - 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)。
    - Flutter在构建页面时，会调用组件的`build`方法，widget的主要工作是提供一个build()方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
    - `MaterialApp` 是Material库中提供的Flutter APP框架，通过它可以设置应用的名称、主题、语言、首页及路由列表等。`MaterialApp`也是一个widget。
+   - `Scaffold` 是Material库中提供的页面脚手架，它包含导航栏和Body以及FloatingActionButton（如果需要的化）。
    - `home` 为Flutter应用的首页，它也是一个widget。
 
 4. 首页

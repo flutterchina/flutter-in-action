@@ -405,9 +405,13 @@ class User {
 ```
 可以看到，`boss`字段已自动添加，并自动导入了“person.dart”。
 
+## 使用IDE插件生成model
 
+目前Android Studio(或IntelliJ)有一个[插件](https://github.com/neverwoodsS/idea_flutter_json_format)，它可以自动将Json转为model，该插件会对嵌套Json也会生成model。这个特性在有些时候可能会引起重定义，如两个Json都内嵌了一个user的对象时，会导致user model在不同的文件中会被定义两次，需要开发者手动去重。
 
-> 很多人可能会问Flutter中有没有像Java开发中的Gson/Jackson一样的Json序列化类库？答案是没有！因为这样的库需要使用运行时反射，这在Flutter中是禁用的。运行时反射会干扰Dart的_tree shaking_，使用_tree shaking_，可以在release版中“去除”未使用的代码，这可以显著优化应用程序的大小。由于反射会默认应用到所有代码，因此_tree shaking_会很难工作，因为在启用反射时很难知道哪些代码未被使用，因此冗余代码很难剥离，所以Flutter中禁用了Dart的反射功能，而正因如此也就无法实现动态转化Model的功能。
+## FAQ
+
+很多人可能会问Flutter中有没有像Java开发中的Gson/Jackson一样的Json序列化类库？答案是没有！因为这样的库需要使用运行时反射，这在Flutter中是禁用的。运行时反射会干扰Dart的_tree shaking_，使用_tree shaking_，可以在release版中“去除”未使用的代码，这可以显著优化应用程序的大小。由于反射会默认应用到所有代码，因此_tree shaking_会很难工作，因为在启用反射时很难知道哪些代码未被使用，因此冗余代码很难剥离，所以Flutter中禁用了Dart的反射功能，而正因如此也就无法实现动态转化Model的功能。
 
  
 

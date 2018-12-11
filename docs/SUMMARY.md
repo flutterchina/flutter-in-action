@@ -62,6 +62,12 @@
     * [Hero动画](chapter9/hero.md) 
     * [交错动画](chapter9/stagger_animation.md) 
     
+* [自定义Widget](chapter13/index.md)
+    * [组合](chapter13/combine.md)
+    * [实例：TurnBox](chapter13/turn_box.md)
+    * [CustomPaint与Canvas](chapter13/custom_paint.md) 
+    * [实例：圆形渐变进度条](chapter13/gradient_circular_progress_demo.md) 
+    
 * [文件操作与网络请求](chapter10/index.md)
     * [文件操作](chapter10/file_operation.md)
     * [Http请求-HttpClient](chapter10/http.md)
