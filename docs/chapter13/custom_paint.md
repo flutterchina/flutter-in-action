@@ -52,7 +52,7 @@ void paint(Canvas canvas, Size size);
 
 - Canvas：一个画布，包括各种绘制方法，我们列出一下常用的方法：
 
-  | API名称    | 功能   |
+  |API名称     | 功能   |
   | ---------- | ------ |
   | drawLine   | 画线   |
   | drawPoint  | 画点   |
