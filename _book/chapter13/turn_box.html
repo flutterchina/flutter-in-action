@@ -911,7 +911,7 @@
                 <a href="combine.html">
             
                     
-                    组合
+                    组合现有Widget实现
             
                 </a>
             
@@ -950,7 +950,7 @@
                 <a href="gradient_circular_progress_demo.html">
             
                     
-                    实例：圆形渐变进度条
+                    实例：圆形渐变进度条(自绘)
             
                 </a>
             
@@ -1389,7 +1389,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5B9E;&#x4F8B;&#xFF1A;turnbox">&#x5B9E;&#x4F8B;&#xFF1A;TurnBox</h1>
-<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8BB2;&#x8FC7;RotatedBox&#x53EA;&#x80FD;&#x5C06;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x4EE5;90&#x5EA6;&#x7684;&#x500D;&#x6570;&#x65CB;&#x8F6C;&#xFF0C;&#x5E76;&#x4E14;&#x5F53;&#x65CB;&#x8F6C;&#x7684;&#x89D2;&#x5EA6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x66F4;&#x65B0;&#x8FC7;&#x7A0B;&#x6CA1;&#x6709;&#x52A8;&#x753B;&#x3002;&#x672C;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;TurnBox&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x610F;&#x89D2;&#x5EA6;&#x6765;&#x65CB;&#x8F6C;&#x5176;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x89D2;&#x5EA6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x8FC7;&#x6E21;&#x5230;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x52A8;&#x753B;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x8FC7;RotatedBox&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x6709;&#x4E24;&#x4E2A;&#x7F3A;&#x70B9;&#xFF1A;&#x4E00;&#x662F;&#x53EA;&#x80FD;&#x5C06;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x4EE5;90&#x5EA6;&#x7684;&#x500D;&#x6570;&#x65CB;&#x8F6C;&#xFF0C;&#x4E8C;&#x662F;&#x5F53;&#x65CB;&#x8F6C;&#x7684;&#x89D2;&#x5EA6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x66F4;&#x65B0;&#x8FC7;&#x7A0B;&#x6CA1;&#x6709;&#x52A8;&#x753B;&#x3002;</p>
+<p>&#x672C;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;TurnBox&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x610F;&#x89D2;&#x5EA6;&#x6765;&#x65CB;&#x8F6C;&#x5176;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x89D2;&#x5EA6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x8FC7;&#x6E21;&#x5230;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x52A8;&#x753B;&#x901F;&#x5EA6;&#x3002;</p>
+<p>TurnBox&#x7684;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-dart"><span class="token keyword">import</span> <span class="token string">&apos;package:flutter/widgets.dart&apos;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">TurnBox</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
@@ -1451,7 +1453,8 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;TurnBox&#xFF1A;</p>
+<p>&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x5305;&#x88C5;(&#x7EC4;&#x5408;)RotationTransition&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;TurnBox&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-dart"><span class="token keyword">import</span> <span class="token string">&apos;package:flutter/material.dart&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">&apos;../widgets/index.dart&apos;</span><span class="token punctuation">;</span>
 
@@ -1501,7 +1504,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>&#x8FD0;&#x884C;&#x540E;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x540E;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
 <p><img src="../imgs/turnbox_1544517136.png" alt="turnbox_1544517136"></p>
 <p>&#x5F53;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x65CB;&#x8F6C;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x4E24;&#x4E2A;&#x56FE;&#x6807;&#x7684;&#x65CB;&#x8F6C;&#x90FD;&#x4F1A;&#x65CB;&#x8F6C;1/5&#x5708;&#xFF0C;&#x4F46;&#x65CB;&#x8F6C;&#x7684;&#x901F;&#x5EA6;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x793A;&#x4F8B;&#x770B;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 
@@ -1531,7 +1534,7 @@
 
             
                 
-                <a href="combine.html" class="navigation navigation-prev " aria-label="Previous page: 组合">
+                <a href="combine.html" class="navigation navigation-prev " aria-label="Previous page: 组合现有Widget实现">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1547,7 +1550,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实例：TurnBox","level":"1.11.2","depth":2,"next":{"title":"CustomPaint与Canvas","level":"1.11.3","depth":2,"path":"chapter13/custom_paint.md","ref":"chapter13/custom_paint.md","articles":[]},"previous":{"title":"组合","level":"1.11.1","depth":2,"path":"chapter13/combine.md","ref":"chapter13/combine.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter13/turn_box.md","mtime":"2018-12-11T08:36:31.929Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T09:27:39.583Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"实例：TurnBox","level":"1.11.2","depth":2,"next":{"title":"CustomPaint与Canvas","level":"1.11.3","depth":2,"path":"chapter13/custom_paint.md","ref":"chapter13/custom_paint.md","articles":[]},"previous":{"title":"组合现有Widget实现","level":"1.11.1","depth":2,"path":"chapter13/combine.md","ref":"chapter13/combine.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter13/turn_box.md","mtime":"2018-12-11T12:12:19.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T12:16:11.657Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

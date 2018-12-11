@@ -1,6 +1,10 @@
 # 实例：TurnBox
 
-我们之前讲过RotatedBox只能将其子节点以90度的倍数旋转，并且当旋转的角度发生变化时，旋转角度更新过程没有动画。本节我们将实现一个TurnBox，它可以以任意角度来旋转其子节点，并且在角度发生变化时可以执行一个动画过渡到新状态，我们可以手动指定动画速度。
+我们之前已经介绍过RotatedBox，但是它有两个缺点：一是只能将其子节点以90度的倍数旋转，二是当旋转的角度发生变化时，旋转角度更新过程没有动画。
+
+本节我们将实现一个TurnBox，它可以以任意角度来旋转其子节点，并且在角度发生变化时可以执行一个动画过渡到新状态，同时，我们可以手动指定动画速度。
+
+TurnBox的完整代码如下：
 
 ```dart
 import 'package:flutter/widgets.dart';
@@ -67,9 +71,9 @@ class _TurnBoxState extends State<TurnBox>
 
 
 
-代码比较简单，不再赘述，下面我们可以测试一下TurnBox：
+代码比较简单，我们主要是通过包装(组合)RotationTransition来实现的。
 
-
+下面我们测试一下TurnBox的功能，测试代码如下：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -122,9 +126,13 @@ class _TurnBoxRouteState extends State<TurnBoxRoute> {
 }
 ```
 
-运行后效果如下图：
+测试代码运行后效果如下图：
 
 ![turnbox_1544517136](../imgs/turnbox_1544517136.png)
 
+
+
 当我们点击旋转按钮时，两个图标的旋转都会旋转1/5圈，但旋转的速度是不同的，读者可以自己运行一下示例看看效果。
+
+
 

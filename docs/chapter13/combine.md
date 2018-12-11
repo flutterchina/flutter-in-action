@@ -1,10 +1,10 @@
-# 自定义Widget: 组合
+# 通过组合现有Widget实现自定义Widget
 
 在Flutter中页面UI通常都是由一些低阶别的Widget组合而成，当我们需要封装一些通用Widget时，应该首先考虑是否可以通过组合其它Widget来实现，如果可以则应优先使用组合，因为直接通过现有Widget拼装会非常方便、简单、高效。
 
 ### 示例：自定义渐变按钮
 
-Flutter Widgt库中的按钮默认不支持渐变背景，为了实现渐变背景按钮，我们自定义一个GradientButton Widget。我们先来看看效果：
+Flutter Widget库中的按钮默认不支持渐变背景，为了实现渐变背景按钮，我们自定义一个GradientButton Widget。我们先来看看效果：
 
 ![gradient-button](../imgs/gradient-button.png)
 
