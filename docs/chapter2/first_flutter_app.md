@@ -126,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
    - 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)。
    - Flutter在构建页面时，会调用组件的`build`方法，widget的主要工作是提供一个build()方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
    - `MaterialApp` 是Material库中提供的Flutter APP框架，通过它可以设置应用的名称、主题、语言、首页及路由列表等。`MaterialApp`也是一个widget。
+   - `Scaffold` 是Material库中提供的页面脚手架，它包含导航栏和Body以及FloatingActionButton（如果需要的化）。
    - `home` 为Flutter应用的首页，它也是一个widget。
 
 4. 首页
@@ -217,9 +218,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
-```
-  现在，我们将整个流程串起来：当右下角的floatingActionButton按钮被点击之后，会调用`_incrementCounter`，在`_incrementCounter`中，首先会自增`_counter`计数器（状态），然后`setState`会通知Flutter框架状态发生变化，接着，flutter会调用`build`方法以新的状态重新构建UI，最终显示在设备屏幕上。
-```
+
+  现在，我们将整个流程串起来：当右下角的floatingActionButton按钮被点击之后，会调用`_incrementCounter`，在`_incrementCounter`中，首先会自增`_counter`计数器（状态），然后`setState`会通知Flutter框架状态发生变化，接着，Flutter会调用`build`方法以新的状态重新构建UI，最终显示在设备屏幕上。
+
 
 #### 为什么要将build方法放在State中，而不是放在StatefulWidget中？
 
@@ -240,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 - 继承StatefulWidget不便
 
-  例如，Flutter中有一个动画widget的基类`AnimatedWidget`，它继承自`StatefulWidget`类。`AnimatedWidget`中引入了一个抽象方法`build(BuildContext context)`，继承自`AnimatedWidget`的动画widget都要实现这个`build`方法。想在设想一下，如果`StatefulWidget` 类中已经有了一个`build`方法，正如上面所述，此时`build`方法需要接收一个state对象，这就意味着`AnimatedWidget`必须将自己的State对象(记为_animatedWidgetState)提供给其子类，因为子类需要在其`build`方法中调用父类的`build`方法，代码可能如下：
+  例如，Flutter中有一个动画widget的基类`AnimatedWidget`，它继承自`StatefulWidget`类。`AnimatedWidget`中引入了一个抽象方法`build(BuildContext context)`，继承自`AnimatedWidget`的动画widget都要实现这个`build`方法。现在设想一下，如果`StatefulWidget` 类中已经有了一个`build`方法，正如上面所述，此时`build`方法需要接收一个state对象，这就意味着`AnimatedWidget`必须将自己的State对象(记为_animatedWidgetState)提供给其子类，因为子类需要在其`build`方法中调用父类的`build`方法，代码可能如下：
 
   ```dart
   class MyAnimationWidget extends AnimatedWidget{
@@ -257,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
   这样很显然是不合理的，因为
 
   1. `AnimatedWidget`的状态对象是`AnimatedWidget`内部实现细节，不应该暴露给外部。
-  2. 如果要将父类状态暴露给子类，那么必须得有一种传递机制，而做这一套传递机制是无意义的，因为父子类之间状态的传递和子类本省逻辑是无关的。
+  2. 如果要将父类状态暴露给子类，那么必须得有一种传递机制，而做这一套传递机制是无意义的，因为父子类之间状态的传递和子类本身逻辑是无关的。
 
 综上所述，可以发现，对于StatefulWidget，将`build`方法放在State中，可以给开发带来很大的灵活性。
 

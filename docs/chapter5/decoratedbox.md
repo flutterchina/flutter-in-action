@@ -12,8 +12,8 @@ const DecoratedBox({
 
 - decoration：代表将要绘制的装饰，它类型为Decoration，Decoration是一个抽象类，它定义了一个接口 `createBoxPainter()`，子类的主要职责是需要通过实现它来创建一个画笔，该画笔用于绘制装饰。
 - position：此属性决定在哪里绘制Decoration，它接收DecorationPosition的枚举类型，该枚举类两个值：
-  - background：在子widget之后绘制，及背景装饰。
-  - foreground：在子widget之上绘制，及前景。
+  - background：在子widget之后绘制，即背景装饰。
+  - foreground：在子widget之上绘制，即前景。
 
 #### BoxDecoration
 

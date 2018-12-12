@@ -24,7 +24,7 @@
     
 * [布局类Widgets](chapter4/index.md)
     * [布局类Widgets简介](chapter4/intro.md)
-    * [先行布局Row、Column](chapter4/row_and_column.md)
+    * [线性布局Row、Column](chapter4/row_and_column.md)
     * [弹性布局Flex](chapter4/flex.md)
     * [流式布局Wrap、Flow](chapter4/wrap_and_flow.md)      
     * [层叠布局Stack、Positioned](chapter4/stack.md)   
@@ -62,6 +62,13 @@
     * [Hero动画](chapter9/hero.md) 
     * [交错动画](chapter9/stagger_animation.md) 
     
+* [自定义Widget](chapter13/index.md)
+    * [自定义Widget方法简介](chapter13/intro.md)
+    * [通过组合现有Widget实现](chapter13/combine.md)
+    * [实例：TurnBox](chapter13/turn_box.md)
+    * [CustomPaint与Canvas](chapter13/custom_paint.md) 
+    * [实例：圆形渐变进度条(自绘)](chapter13/gradient_circular_progress_demo.md) 
+    
 * [文件操作与网络请求](chapter10/index.md)
     * [文件操作](chapter10/file_operation.md)
     * [Http请求-HttpClient](chapter10/http.md)
@@ -77,11 +84,10 @@
     * [插件开发：实现IOS端API](chapter11/ios_implement.md)
     * [系统能力调用](todo.md) 
     
-* [国际化](todo.md)
-    * [让App支持多语言](todo.md)
-    * [监听系统语言切换](todo.md)
-    * [实现Localizations](todo.md) 
-    * [Intel包的使用](todo.md) 
+* [国际化](chapter12/index.md)
+    * [让App支持多语言](chapter12/multi_languages_support.md)
+    * [实现Localizations](chapter12/locallization_implement.md) 
+    * [使用Intl包](chapter12/intl.md) 
     
 * [Flutter 核心原理](todo.md)
     * [Flutter UI系统](todo.md)

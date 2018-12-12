@@ -13,10 +13,10 @@ Scrollable({
 ```
 
 - axisDirection：滚动方向。
-- physics：此属性接受一个ScrollPhysics对象，它决定可滚动Widge如何响应用户操作，比如用户滑动完抬起手指后，继续执行动画；或者滑动到边界时，如何显示。默认情况下，Flutter会根据具体平台分别使用不同的ScrollPhysics对象，应用不同的显示效果，如当滑动到边界时，继续拖动的话，在iOS上会出现弹性效果，而在Android上会出现微光效果。如果你想在所有平台下使用同一种效果，可以显式指定，Flutter SDK中包含了两个ScrollPhysics的子类可以直接使用：
+- physics：此属性接受一个ScrollPhysics对象，它决定可滚动Widget如何响应用户操作，比如用户滑动完抬起手指后，继续执行动画；或者滑动到边界时，如何显示。默认情况下，Flutter会根据具体平台分别使用不同的ScrollPhysics对象，应用不同的显示效果，如当滑动到边界时，继续拖动的话，在iOS上会出现弹性效果，而在Android上会出现微光效果。如果你想在所有平台下使用同一种效果，可以显式指定，Flutter SDK中包含了两个ScrollPhysics的子类可以直接使用：
   - ClampingScrollPhysics：Android下微光效果。
   - BouncingScrollPhysics：iOS下弹性效果。
-- controller：此属性接受一个ScrollController对象。ScrollController的主要作用是控制滚动位置和监听滚动事件。默认情况下，widget树中会有一个默认的PrimaryScrollController，如果子树中的可滚动widget没有显式的指定`controller`并且`primary`属性值为`true`时（默认就为`true`），可滚动widget会使用这个默认的PrimaryScrollController，这种机制带来的好处是父widget可以控制子树中可滚动widget的滚动，例如，如果Scaffold使用这种机制在iOS中实现了"回到顶部"的手势。我们将在本章后面“滚动控制”一节详细介绍ScrollController。
+- controller：此属性接受一个ScrollController对象。ScrollController的主要作用是控制滚动位置和监听滚动事件。默认情况下，widget树中会有一个默认的PrimaryScrollController，如果子树中的可滚动widget没有显式的指定`controller`并且`primary`属性值为`true`时（默认就为`true`），可滚动widget会使用这个默认的PrimaryScrollController，这种机制带来的好处是父widget可以控制子树中可滚动widget的滚动，例如，Scaffold使用这种机制在iOS中实现了"回到顶部"的手势。我们将在本章后面“滚动控制”一节详细介绍ScrollController。
 
 
 
@@ -32,7 +32,7 @@ Scrollbar(
 );
 ```
 
-Scrollbar和CupertinoScrollbar都是通过ScrollController来监听滚动事件来确定进度条位置，关于ScrollController详细的内容我们将在后面专门一节介绍。
+Scrollbar和CupertinoScrollbar都是通过ScrollController来监听滚动事件来确定滚动条位置，关于ScrollController详细的内容我们将在后面专门一节介绍。
 
 #### CupertinoScrollbar
 

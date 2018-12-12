@@ -4,7 +4,7 @@
 
 在笔者看来，Dart的设计目标应该是既对标Java，也对标JavaScript，Dart在静态语法方面和Java非常相似，如类型定义、函数声明、泛型等，而在动态特性方面又和JavaScript很像，如函数式特性、异步支持等。除了融合Java和JavaScript语言之所长之外，Dart也具有一些其它具有表现力的语法，如可选命名参数、`..`（级联运算符）和`?.`（条件成员访问运算符）以及`??`（判空赋值运算符）。其实，对编程语言了解比较多的读者会发现，在Dart中其实看到的不仅有Java和JavaScript的影子，它还具有其它编程语言中的身影，如命名参数在Objective-C和Swift中早就很普遍，而`??`操作符在Php 7.0语法中就已经存在了，因此我们可以看到Google对Dart语言给予厚望，是想把Dart打造成一门集百家之所长的编程语言。
 
-接下来，我们先对Dart语法做一个简单的介绍，然后再将Dart与JavaScript和Java做一个简要的对比，方面读者更好的理解。
+接下来，我们先对Dart语法做一个简单的介绍，然后再将Dart与JavaScript和Java做一个简要的对比，方便读者更好的理解。
 
 > 注意：由于本书并非专门介绍Dart语言的书籍，所以本章主要会介绍一下在Flutter开发中常用的语法特性，如果想更多了解Dart，读者可以去Dart官网学习，现在互联网上Dart相关资料已经很多了。另外Dart 2.0已经正式发布，所以本书所有示例均采用Dart 2.0语法。
 
@@ -19,7 +19,7 @@
    ```dart
    var t;
    t="hi world";
-   // 下面代码在dart中会报错，应为变量t的类型已经确定为String，
+   // 下面代码在dart中会报错，因为变量t的类型已经确定为String，
    // 类型一旦确定后则不能再更改其类型。
    t=1000;
    ```
@@ -153,7 +153,7 @@ Dart是一种真正的面向对象的语言，所以即使是函数也是对象�
 
 ## 异步支持
 
-Dart类库有非常多的返回`Future`或者`Stream`对象的函数。 这些函数被称为**异步函数**：它们只会在设置好一些需要消耗一定时间的操作之后返回，比如像 IO操作。而不是等到这个操作完成。
+Dart类库有非常多的返回`Future`或者`Stream`对象的函数。 这些函数被称为**异步函数**：它们只会在设置好一些耗时操作之后返回，比如像 IO操作。而不是等到这个操作完成。
 
 `async`和`await`关键词支持了异步编程，运行您写出和同步代码很像的异步代码。
 
@@ -177,7 +177,7 @@ Future.delayed(new Duration(seconds: 2),(){
 
 #### Future.catchError
 
-如果异步任务发生错误，我们可以在在`catchError`中捕获错误，我们将上面示例改为：
+如果异步任务发生错误，我们可以在`catchError`中捕获错误，我们将上面示例改为：
 
 ```dart
 Future.delayed(new Duration(seconds: 2),(){
@@ -192,7 +192,7 @@ Future.delayed(new Duration(seconds: 2),(){
 });
 ```
 
-在本示例中，我们在异步任务中抛出了一个异常，`then `的回调函数将不会被执行，取而代之的事 `catchError`回调韩式将被调用；但是，并不是只有 `catchError`回调才能捕获错误，`then`方法还有一个可选参数`onError`，我们也可以它来捕获异常：
+在本示例中，我们在异步任务中抛出了一个异常，`then `的回调函数将不会被执行，取而代之的是 `catchError`回调函数将被调用；但是，并不是只有 `catchError`回调才能捕获错误，`then`方法还有一个可选参数`onError`，我们也可以它来捕获异常：
 
 ```dart
 Future.delayed(new Duration(seconds: 2), () {
@@ -336,7 +336,7 @@ task() async {
 
 ## Stream
 
-`Stream` 也是用于接收异步事件数据，和`Future` 不同的是，它可以接收多个异步操作的结果（成功或失败）。 也就是说，在执行异步任务时，可以通过多次触发成功或失败事件而传递结果数据或错误异常。 `Stream` 常用于会多次读取数据的异步任务场景，如网络内容下载、文件读写等。举个例子：
+`Stream` 也是用于接收异步事件数据，和`Future` 不同的是，它可以接收多个异步操作的结果（成功或失败）。 也就是说，在执行异步任务时，可以通过多次触发成功或失败事件来传递结果数据或错误异常。 `Stream` 常用于会多次读取数据的异步任务场景，如网络内容下载、文件读写等。举个例子：
 
 ```dart
 Stream.fromFutures([
@@ -383,7 +383,7 @@ I/flutter (17666): hello 3
 
 ### Dart vs Java
 
-客观的来讲，Dart在语法层面确实比Java更有表现力；在VM层面，Dart VM在内存回收和吞吐量都进行了反复的优化，但具体的性能对比，笔者没有找到相关测试数据，但在笔者看来，只要Dart语言能流行，VM的性能就不用担心，毕竟Google在go（没用vm但有GC）、javascript（v8）、dalvik（android上的java vm）上已经有了很多技术积淀。值得注意的是Dart在Flutter中已经可以将GC做到10ms以内，所以Dart和Java相比，决胜因素并不会是在性能方面。而在语法层面，Dart要比java更有表现力，最重要的是Dart对函数式编程支持要远强于Java(目前只停留在lamda表达式)，而Dart目前真正的不足是**生态**，但笔者相信，随着Futter的逐渐火热，会回过头来反推Dart生态加速发展，对于Dart来说，现在需要的是时间。
+客观的来讲，Dart在语法层面确实比Java更有表现力；在VM层面，Dart VM在内存回收和吞吐量都进行了反复的优化，但具体的性能对比，笔者没有找到相关测试数据，但在笔者看来，只要Dart语言能流行，VM的性能就不用担心，毕竟Google在go（没用vm但有GC）、javascript（v8）、dalvik（android上的java vm）上已经有了很多技术积淀。值得注意的是Dart在Flutter中已经可以将GC做到10ms以内，所以Dart和Java相比，决胜因素并不会是在性能方面。而在语法层面，Dart要比java更有表现力，最重要的是Dart对函数式编程支持要远强于Java(目前只停留在lamda表达式)，而Dart目前真正的不足是**生态**，但笔者相信，随着Flutter的逐渐火热，会回过头来反推Dart生态加速发展，对于Dart来说，现在需要的是时间。
 
 ### Dart vs JavaScript
 

@@ -21,10 +21,10 @@ print(items[0]["name"]);
 }
 ```
 
-我们可以通过调用`JSON.decode`方法来解码JSON ，使用JSON字符串作为参数:
+我们可以通过调用`json.decode`方法来解码JSON ，使用JSON字符串作为参数:
 
 ```dart
-Map<String, dynamic> user = JSON.decode(json);
+Map<String, dynamic> user = json.decode(json);
 
 print('Howdy, ${user['name']}!');
 print('We sent the verification link to ${user['email']}.');
@@ -32,14 +32,14 @@ print('We sent the verification link to ${user['email']}.');
 
 
 
-由于`JSON.decode()`仅返回一个`Map<String, dynamic>`，这意味着直到运行时我们才知道值的类型。 通过这种方法，我们失去了大部分静态类型语言特性：类型安全、自动补全和最重要的编译时异常。这样一来，我们的代码可能会变得非常容易出错。例如，当我们访问`name`或`email`字段时，我们输入的很快，导致字段名打错了。但由于这个JSON在map结构中，所以编译器不知道这个错误的字段名，所以编译时不会报错。
+由于`json.decode()`仅返回一个`Map<String, dynamic>`，这意味着直到运行时我们才知道值的类型。 通过这种方法，我们失去了大部分静态类型语言特性：类型安全、自动补全和最重要的编译时异常。这样一来，我们的代码可能会变得非常容易出错。例如，当我们访问`name`或`email`字段时，我们输入的很快，导致字段名打错了。但由于这个JSON在map结构中，所以编译器不知道这个错误的字段名，所以编译时不会报错。
 
 其实，这个问题在很多平台上都会遇到，而也早就有了好的解决方法即“Json Model化”，具体做法就是，通过预定义一些与Json结构对应的Model类，然后在请求到数据后再动态根据数据创建出Model类的实例。这样一来，在开发阶段我们使用的是Model类的实例，而不再是Map/List，这样访问内部属性时就不会发生拼写错误。例如，我们可以通过引入一个简单的模型类(Model class)来解决前面提到的问题，我们称之为`User`。在User类内部，我们有：
 
 - 一个`User.fromJson` 构造函数, 用于从一个map构造出一个 `User`实例 map structure
 - 一个`toJson` 方法, 将 `User` 实例转化为一个map.
 
-这样，调用代码现在可以具有类型安全、自动补全字段（name和email）以及编译时异常。如果我们将拼写错误或字段视为`int`类型而不是`String`， 那么我们的代码就不会通过编译，而不是在运行时崩溃。
+这样，调用代码现在可以具有类型安全、自动补全字段（name和email）以及编译时异常。如果我们将拼写错误字段视为`int`类型而不是`String`， 那么我们的代码就不会通过编译，而不是在运行时崩溃。
 
 **user.dart**
 
@@ -55,7 +55,7 @@ class User {
         email = json['email'];
 
   Map<String, dynamic> toJson() =>
-    {
+    <String, dynamic>{
       'name': name,
       'email': email,
     };
@@ -65,17 +65,17 @@ class User {
 现在，序列化逻辑移到了模型本身内部。采用这种新方法，我们可以非常容易地反序列化user.
 
 ```dart
-Map userMap = JSON.decode(json);
+Map userMap = json.decode(json);
 var user = new User.fromJson(userMap);
 
 print('Howdy, ${user.name}!');
 print('We sent the verification link to ${user.email}.');
 ```
 
-要序列化一个user，我们只是将该`User`对象传递给该`JSON.encode`方法。我们不需要手动调用`toJson`这个方法，因为`JSON.encode内部会自动调用。
+要序列化一个user，我们只是将该`User`对象传递给该`json.encode`方法。我们不需要手动调用`toJson`这个方法，因为`JSON.encode内部会自动调用。
 
 ```dart
-String json = JSON.encode(user);
+String json = json.encode(user);
 ```
 
 这样，调用代码就不用担心JSON序列化了，但是，Model类还是必须的。在实践中，`User.fromJson`和`User.toJson`方法都需要单元测试到位，以验证正确的行为。
@@ -157,7 +157,7 @@ final int registrationDateMillis;
 flutter packages pub run build_runner build
 ```
 
- 这触发了一次性构建，、我们可以在需要时为我们的Model生成json序列化代码，它通过我们的源文件，找出需要生成Model类的源文件（包含@JsonSerializable标注的）来生成对应的.g.dart文件。一个好的建议是将所有Model类放在一个单独的目录下，然后在该目录下执行命令。
+ 这触发了一次性构建，我们可以在需要时为我们的Model生成json序列化代码，它通过我们的源文件，找出需要生成Model类的源文件（包含@JsonSerializable标注的）来生成对应的.g.dart文件。一个好的建议是将所有Model类放在一个单独的目录下，然后在该目录下执行命令。
 
 虽然这非常方便，但如果我们不需要每次在Model类中进行更改时都要手动运行构建命令的话会更好。
 
@@ -299,14 +299,14 @@ flutter packages pub run build_runner build
    }
    ```
 
-3. 写一个shell(mo.sh)，将生成末班和生成model串起来：
+3. 写一个shell(mo.sh)，将生成模板和生成model串起来：
 
    ```sh
    dart mo.dart
    flutter packages pub run build_runner build --delete-conflicting-outputs
    ```
 
-至此，我们的脚本写好了，我们在根目录下新建一个json目录，然后把user.json移进去，然后再lib目录下创建一个models目录，用于保存最终生成的Model类。现在我们只需要一句命令即可生成Model类了:
+至此，我们的脚本写好了，我们在根目录下新建一个json目录，然后把user.json移进去，然后在lib目录下创建一个models目录，用于保存最终生成的Model类。现在我们只需要一句命令即可生成Model类了:
 
 ```
 ./mo.sh  
@@ -405,9 +405,13 @@ class User {
 ```
 可以看到，`boss`字段已自动添加，并自动导入了“person.dart”。
 
+## 使用IDE插件生成model
 
+目前Android Studio(或IntelliJ)有一个[插件](https://github.com/neverwoodsS/idea_flutter_json_format)，它可以自动将Json转为model，该插件会对嵌套Json也会生成model。这个特性在有些时候可能会引起重定义，如两个Json都内嵌了一个user的对象时，会导致user model在不同的文件中会被定义两次，需要开发者手动去重。
 
-> 很多人可能会问Flutter中有没有像Java开发中的Gson/Jackson一样的Json序列化类库？答案是没有！因为这样的库需要使用运行时反射，这在Flutter中是禁用的。运行时反射会干扰Dart的_tree shaking_，使用_tree shaking_，可以在release版中“去除”未使用的代码，这可以显著优化应用程序的大小。由于反射会默认应用到所有代码，因此_tree shaking_会很难工作，因为在启用反射时很难知道哪些代码未被使用，因此冗余代码很难剥离，所以Flutter中禁用了Dart的反射功能，而正因如此也就无法实现动态转化Model的功能。
+## FAQ
+
+很多人可能会问Flutter中有没有像Java开发中的Gson/Jackson一样的Json序列化类库？答案是没有！因为这样的库需要使用运行时反射，这在Flutter中是禁用的。运行时反射会干扰Dart的_tree shaking_，使用_tree shaking_，可以在release版中“去除”未使用的代码，这可以显著优化应用程序的大小。由于反射会默认应用到所有代码，因此_tree shaking_会很难工作，因为在启用反射时很难知道哪些代码未被使用，因此冗余代码很难剥离，所以Flutter中禁用了Dart的反射功能，而正因如此也就无法实现动态转化Model的功能。
 
  
 

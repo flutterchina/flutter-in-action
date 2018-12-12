@@ -11,7 +11,7 @@
 3. 定位到您 Flutter app目录, 然后选择里面的 `android`文件夹，点击 OK
 4. 在`java`目录下打开 `MainActivity.java`
 
-接下来，在`onCreate`里创建MethodChannel并设置一个`MethodCallHandler`。确保使用与在Flutter客户端使用的通道名称相同。
+接下来，在`onCreate`里创建MethodChannel并设置一个`MethodCallHandler`。确保使用和Flutter客户端中使用的通道名称相同的名称。
 
 ```dart
 import io.flutter.app.FlutterActivity;
@@ -170,4 +170,4 @@ MethodChannel(flutterView, CHANNEL).setMethodCallHandler { call, result ->
 }
 ```
 
-您现就可以在Android上运行该应用程序。如果您使用的是Android模拟器，则可以通过工具栏中的"..."按钮访问Extended Controls面板中的电池电量。
+您现在就可以在Android上运行该应用程序。如果您使用的是Android模拟器，则可以通过工具栏中的"..."按钮访问Extended Controls面板中的电池电量。

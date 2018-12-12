@@ -38,7 +38,7 @@ flutter create --template=package hello
 
 ### 实现package
 
-对于纯Dart包，只需在主`lib/<package name>.dart`文件内或`lib`目录中的文件中添加功能即可 。要测试软件包，请在`test`目录中添加[unit tests](https://flutter.io/testing/#unit-testing)。下面我们看看如果组织Package包的代码，我们以shelf package为例，它的目录结构如下：
+对于纯Dart包，只需在主`lib/<package name>.dart`文件内或`lib`目录中的文件中添加功能即可 。要测试软件包，请在`test`目录中添加[unit tests](https://flutter.io/testing/#unit-testing)。下面我们看看如何组织Package包的代码，我们以shelf Package为例，它的目录结构如下：
 
 ![shelf root directory contains example, lib, test, and tool subdirectories](../imgs/shelf-02e5fd43b660fcef7dbe6a883c40159e0379c8ee2088288ca60ed7dc8781bafd.png)
 
@@ -84,7 +84,7 @@ void updateBadge() {
 
 ### 处理包的相互依赖
 
-如果我们正在开发一个`hello`包，它依赖于另一个包，则需要将该依赖包添加到`pubspec.yaml`文件的`dependencies`部分。 下面的代码使`url_launcher`插件的API ，这在`hello`包中是可用的：
+如果我们正在开发一个`hello`包，它依赖于另一个包，则需要将该依赖包添加到`pubspec.yaml`文件的`dependencies`部分。 下面的代码使`url_launcher`插件的API在`hello`包中是可用的：
 
 在 `hello/pubspec.yaml`中:
 

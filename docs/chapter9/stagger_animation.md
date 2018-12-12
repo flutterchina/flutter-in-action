@@ -1,7 +1,7 @@
 
 ## 交错动画
 
-有些时候我们可能会需要一些负杂的动画，这些动画可能需要一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同改变颜色，等到增长到最大高度后，我们需要在X轴上平移一段距离。这时我们就需要使用交错动画（Stagger Animation）。交错动画需要注意以下几点：
+有些时候我们可能会需要一些复杂的动画，这些动画可能由一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同改变颜色，等到增长到最大高度后，我们需要在X轴上平移一段距离。这时我们就需要使用交错动画（Stagger Animation）。交错动画需要注意以下几点：
 
 1. 要创建交错动画，需要使用多个动画对象
 2. 一个AnimationController控制所有动画
@@ -153,5 +153,6 @@ class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin
 }
 ```
 执行效果如下，点击灰色矩形，就可以看到整个动画效果：
+
 ![Screenshot_1540881623](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1540881623.png)
 

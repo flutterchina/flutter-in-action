@@ -163,7 +163,7 @@ HttpClient有很多属性可以配置，常用的属性列表如下：
 | autoUncompress        | 对应请求头中的Content-Encoding，如果设置为true，则请求头中Content-Encoding的值为当前HttpClient支持的压缩算法列表，目前只有"gzip" |
 | userAgent             | 对应请求头中的User-Agent字段。                               |
 
-可以发现，有些属性只是为了更方便的设置请求头，对于这些属性，你完全可以通过HttpClientRequest直接设置header，不同的的是通多HttpClient设置的对整个httpClient都生效，而通过HttpClientRequest设置的只对当前请求生效。
+可以发现，有些属性只是为了更方便的设置请求头，对于这些属性，你完全可以通过HttpClientRequest直接设置header，不同的是通过HttpClient设置的对整个httpClient都生效，而通过HttpClientRequest设置的只对当前请求生效。
 
 #### HTTP请求认证
 

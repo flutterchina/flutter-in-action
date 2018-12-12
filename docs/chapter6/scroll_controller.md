@@ -1,7 +1,7 @@
 
 ## 滚动监听及控制
 
-在前几节中，我们介绍了Flutter中常用的可滚动Widget，也说过可以ScrollController来控制可滚动widget的滚动位置，本节先介绍一下ScrollController，然后以ListView为例，展示一下ScrollController的具体用法。最后，再介绍一下路由切换时如何来保存滚动位置。
+在前几节中，我们介绍了Flutter中常用的可滚动Widget，也说过可以用ScrollController来控制可滚动widget的滚动位置，本节先介绍一下ScrollController，然后以ListView为例，展示一下ScrollController的具体用法。最后，再介绍一下路由切换时如何来保存滚动位置。
 
 ### ScrollController
 
@@ -18,9 +18,9 @@ ScrollController({
 我们介绍一下ScrollController常用的属性和方法：
 
 - `offset`：可滚动Widget当前滚动的位置。
-- `jumpTo(double offset)`、`animateTo(double offset,...)`：这两个方法用于跳转到指定的位置，它们不同之处在于，前者在跳转时会执行一个动画，而前者不会。
+- `jumpTo(double offset)`、`animateTo(double offset,...)`：这两个方法用于跳转到指定的位置，它们不同之处在于，后者在跳转时会执行一个动画，而前者不会。
 
-ScrollController还有一些属性和方法，我们将在后面原理部分接收。
+ScrollController还有一些属性和方法，我们将在后面原理部分解释。
 
 #### 滚动监听
 
@@ -32,7 +32,7 @@ controller.addListener(()=>print(controller.offset))
 
 ### 示例
 
-我们创建一个ListView，当滚动位置位置发生变化时，我们先打印出当前滚动位置，然后判断当前位置是否超过1000像素，如果超过则再屏幕右下角显示一个“返回顶部”的按钮，该按钮点击后可以使ListView恢复到初始位置；如果没有超过1000像素，则隐藏“返回顶部”按钮。代码如下：
+我们创建一个ListView，当滚动位置发生变化时，我们先打印出当前滚动位置，然后判断当前位置是否超过1000像素，如果超过则在屏幕右下角显示一个“返回顶部”的按钮，该按钮点击后可以使ListView恢复到初始位置；如果没有超过1000像素，则隐藏“返回顶部”按钮。代码如下：
 
 ```dart
 
@@ -110,7 +110,7 @@ class ScrollControllerTestRouteState extends State<ScrollControllerTestRoute> {
 
 PageStorage是一个用于保存页面(路由)相关数据的Widget，它并不会影响子树的UI外观，其实，PageStorage是一个功能型Widget，它拥有一个存储桶（bucket），子树中的Widget可以通过指定不同的PageStorageKey来存储各自的数据或状态。
 
-每次滚动结束，Scrollable Widget都会将滚动位置`offset`存储到PageStorage中，当Scrollable Widget 重新创建时再恢复。如果`ScrollController.keepScrollOffset`为`false`时，则滚动位置将不会被存储，Scrollable Widget重新创建时会使用`ScrollController.initialScrollOffset`；`ScrollController.keepScrollOffset`为`true`时，Scrollable Widget会在**第一次**创建时，会滚动到`initialScrollOffset`处，因为这时还没有存储过滚动位置。在接下来的滚动中就会存储、恢复滚动位置，而`initialScrollOffset`会被忽略。
+每次滚动结束，Scrollable Widget都会将滚动位置`offset`存储到PageStorage中，当Scrollable Widget 重新创建时再恢复。如果`ScrollController.keepScrollOffset`为`false`，则滚动位置将不会被存储，Scrollable Widget重新创建时会使用`ScrollController.initialScrollOffset`；`ScrollController.keepScrollOffset`为`true`时，Scrollable Widget在**第一次**创建时，会滚动到`initialScrollOffset`处，因为这时还没有存储过滚动位置。在接下来的滚动中就会存储、恢复滚动位置，而`initialScrollOffset`会被忽略。
 
 当一个路由中包含多个Scrollable Widget时，如果你发现在进行一些跳转或切换操作后，滚动位置不能正确恢复，这时你可以通过显式指定PageStorageKey来分别跟踪不同Scrollable Widget的位置，如：
 
