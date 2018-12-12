@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdn.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/chapter13/intro.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/dart.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/dart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" afterDir="false" />
@@ -80,6 +79,7 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdn.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cdn.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -108,11 +108,11 @@
         <counts>
           <entry key="MD" value="2" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="39" />
+          <entry key="html" value="42" />
           <entry key="js" value="1" />
-          <entry key="json" value="7" />
+          <entry key="json" value="8" />
           <entry key="less" value="2" />
-          <entry key="md" value="120" />
+          <entry key="md" value="121" />
           <entry key="mkdirp" value="1" />
           <entry key="multi_languages_support" value="1" />
           <entry key="png" value="1" />
@@ -123,12 +123,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="39" />
+          <entry key="HTML" value="42" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="7" />
+          <entry key="JSON" value="8" />
           <entry key="JavaScript" value="2" />
           <entry key="Less" value="2" />
-          <entry key="Markdown" value="121" />
+          <entry key="Markdown" value="122" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="TypeScript" value="1" />
           <entry key="YAML" value="1" />
@@ -143,7 +143,7 @@
           <entry key="less" value="8" />
           <entry key="md" value="3130" />
           <entry key="mkdirp" value="1" />
-          <entry key="sh" value="69" />
+          <entry key="sh" value="71" />
           <entry key="txt" value="126" />
           <entry key="yml" value="124" />
         </counts>
@@ -156,7 +156,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
           <entry key="Markdown" value="3133" />
-          <entry key="PLAIN_TEXT" value="217" />
+          <entry key="PLAIN_TEXT" value="219" />
           <entry key="YAML" value="124" />
         </counts>
       </usages-collector>
@@ -164,22 +164,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-475" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -220,16 +204,62 @@
         <entry file="file://$PROJECT_DIR$/cdn.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="140" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_book/chapter13/turn_box.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="1509" column="86" selection-start-line="1509" selection-start-column="86" selection-end-line="1509" selection-end-column="86" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter13/intro.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_book/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -343,8 +373,8 @@
         <option value="$PROJECT_DIR$/docs/_layouts/website/_page.html" />
         <option value="$PROJECT_DIR$/docs/chapter13/combine.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
-        <option value="$PROJECT_DIR$/cdn.sh" />
         <option value="$PROJECT_DIR$/build.sh" />
+        <option value="$PROJECT_DIR$/cdn.sh" />
       </list>
     </option>
   </component>
@@ -412,8 +442,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1531" />
-    <option name="y" value="-24" />
+    <option name="x" value="-1121" />
+    <option name="y" value="-15" />
     <option name="width" value="1703" />
     <option name="height" value="920" />
   </component>
@@ -434,6 +464,12 @@
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="_book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="_book" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter13" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
@@ -516,7 +552,7 @@
       <workItem from="1543923374874" duration="6488000" />
       <workItem from="1544064730411" duration="614000" />
       <workItem from="1544165182701" duration="510000" />
-      <workItem from="1544334834059" duration="15850000" />
+      <workItem from="1544334834059" duration="16546000" />
     </task>
     <task id="LOCAL-00001" summary="添加_book目录">
       <created>1543498533114</created>
@@ -749,11 +785,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544532434361</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="添加&quot;自定义Widget&quot;一章">
+      <created>1544535398961</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1544535398961</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75746000" />
+    <option name="totallyTimeSpent" value="76442000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,10 +808,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1531" y="-24" width="1703" height="920" extended-state="0" />
+    <frame x="-1121" y="-15" width="1703" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16944115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19203329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -780,7 +823,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49821642" weight="0.3279503" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4922711" visible="true" weight="0.39751554" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4922711" visible="true" weight="0.39751554" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5077289" side_tool="true" visible="true" weight="0.39751554" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -806,43 +849,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加&quot;自定义Widget&quot;一章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.core.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="417" column="4" selection-start-line="417" selection-start-column="4" selection-end-line="417" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter1/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" selection-start-line="5" selection-end-line="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter2/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" selection-start-line="5" selection-end-line="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter4/intro.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" selection-start-line="15" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter4/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1258,27 +1264,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_book/chapter13/turn_box.html">
+    <entry file="file://$PROJECT_DIR$/docs/chapter13/intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="1509" column="86" lean-forward="true" selection-start-line="1509" selection-start-column="86" selection-end-line="1509" selection-end-column="86" />
+        <state relative-caret-position="360">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdn.sh">
+    <entry file="file://$PROJECT_DIR$/build.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sh">
+    <entry file="file://$PROJECT_DIR$/_book/search_index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349904" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdn.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/chapter13/turn_box.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="1509" column="86" selection-start-line="1509" selection-start-column="86" selection-end-line="1509" selection-end-column="86" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
