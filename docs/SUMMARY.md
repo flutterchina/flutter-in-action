@@ -63,7 +63,8 @@
     * [交错动画](chapter9/stagger_animation.md) 
     
 * [自定义Widget](chapter13/index.md)
-    * [组合现有Widget实现](chapter13/combine.md)
+    * [自定义Widget方法简介](chapter13/intro.md)
+    * [通过组合现有Widget实现](chapter13/combine.md)
     * [实例：TurnBox](chapter13/turn_box.md)
     * [CustomPaint与Canvas](chapter13/custom_paint.md) 
     * [实例：圆形渐变进度条(自绘)](chapter13/gradient_circular_progress_demo.md) 
