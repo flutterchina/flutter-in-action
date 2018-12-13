@@ -334,7 +334,7 @@ Window下只支持为Android设备构建并运行Flutter应用，而macOS同时�
 
 2. 选择一个设备并选择 **Next**。
 
-3. 为要模拟的Android版本选择一个或多个系统映像，然后选择 **Next**. 建议使用 *x86* 或 *x86_64* image .
+3. 为要模拟的Android版本选择一个或多个系统印象，然后选择 **Next**. 建议使用 *x86* 或 *x86_64* image .
 
 4. 在 “Emulated Performance”下, 选择 **Hardware - GLES 2.0** 以启用 [硬件加速](https://developer.android.com/studio/run/emulator-acceleration.html).
 

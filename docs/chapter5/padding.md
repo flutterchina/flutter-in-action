@@ -58,8 +58,3 @@ class PaddingTestRoute extends StatelessWidget {
 }
 ```
 
-
-
-运行效果：
-
-![image-20180907144252810]()

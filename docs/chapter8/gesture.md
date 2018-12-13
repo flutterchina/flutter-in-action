@@ -123,7 +123,7 @@ I/flutter ( 8513): Velocity(235.5, 125.8)
 
 - `DragDownDetails.globalPosition`：当用户按下时，此属性为用户按下的位置相对于**屏幕**(而非父widget)原点(左上角)的偏移。
 - `DragUpdateDetails.delta`：当用户在屏幕上滑动时，会触发多次Update事件，`delta`指一次Update事件的滑动的偏移量。
-- `DragEndDetails.velocity`：该属性代表用户抬起手指时的滑动速度(包含x、y两个轴的），并例中并没有处理手指抬起时的速度，常见的效果是根据用户抬起手指时的速度做一个减速动画。
+- `DragEndDetails.velocity`：该属性代表用户抬起手指时的滑动速度(包含x、y两个轴的），示例中并没有处理手指抬起时的速度，常见的效果是根据用户抬起手指时的速度做一个减速动画。
 
 ### 单一方向拖动
 
@@ -192,17 +192,19 @@ class _ScaleTestRouteState extends State<_ScaleTestRoute> {
 
 ![image-20180914184749975](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180914184749975.png)
 
-现在在图片上双指张开、收缩就可以放大、缩小图片。本示例比较简单，实际中我们通常还需要一些其它功能，如双击放大或缩小一定倍数、双支张开离开屏幕时执行一个减速放大动画等，我们将在后面“动画”一章中实现一个完整的缩放Widget。
+现在在图片上双指张开、收缩就可以放大、缩小图片。本示例比较简单，实际中我们通常还需要一些其它功能，如双击放大或缩小一定倍数、双指张开离开屏幕时执行一个减速放大动画等，我们将在后面“动画”一章中实现一个完整的缩放Widget。
 
 ### GestureRecognizer
 
-GestureDetector内部是使用一个或多个GestureRecognizer来识别各种手势的，而GestureRecognizer作用就是通过Listener来将原始指针事件转换为语义手势，GestureDetector直接可以接收一个子Widget。GestureRecognizer是一个抽象类，一种手势的识别器对应一个GestureRecognizer的子类，Flutter实现了丰富的手势识别器，我们可以直接使用。
+GestureDetector内部是使用一个或多个GestureRecognizer来识别各种手势的，而GestureRecognizer的作用就是通过Listener来将原始指针事件转换为语义手势，GestureDetector直接可以接收一个子Widget。GestureRecognizer是一个抽象类，一种手势的识别器对应一个GestureRecognizer的子类，Flutter实现了丰富的手势识别器，我们可以直接使用。
 
 #### 示例
 
-假设我们要给一段富文本（RichText）的不同部分分别添加点击事件处理器，但是TextSpan并不是一个Widget，这是我们不能用GestureDetector，但TextSpan有一个`recognizer`属性，它可以接收一个GestureRecognizer，假设我们在点击时给文本变色:
+假设我们要给一段富文本（RichText）的不同部分分别添加点击事件处理器，但是TextSpan并不是一个Widget，这时我们不能用GestureDetector，但TextSpan有一个`recognizer`属性，它可以接收一个GestureRecognizer，假设我们在点击时给文本变色:
 
 ```dart
+import 'package:flutter/gestures.dart';
+
 class _GestureRecognizerTestRouteState
     extends State<_GestureRecognizerTestRoute> {
   TapGestureRecognizer _tapGestureRecognizer = new TapGestureRecognizer();

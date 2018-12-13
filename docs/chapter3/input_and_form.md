@@ -71,7 +71,7 @@ const TextField({
 - autofocus: 是否自动获取焦点。
 - obscureText：是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换。
 - maxLines：输入框的最大行数，默认为1；如果为`null`，则无行数限制。
-- maxLength和maxLengthEnforced ：maxLength代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。maxLengthEnforced决定当输入文本长度超过maxLength时是否阻止输入，为true时会阻止输入，我false时不会阻止输入但输入框会变红。
+- maxLength和maxLengthEnforced ：maxLength代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。maxLengthEnforced决定当输入文本长度超过maxLength时是否阻止输入，为true时会阻止输入，为false时不会阻止输入但输入框会变红。
 - onChange：输入框内容改变时的回调函数；注：内容改变事件也可以通过controller来监听。
 - onEditingComplete和onSubmitted：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍图标）。不同的是两个回调签名不同，onSubmitted回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而onEditingComplete不接收参数。
 - inputFormatters：用于指定输入格式；当用户输入内容改变时，会根据指定的格式来校验。
@@ -220,7 +220,7 @@ class FocusTestRoute extends StatefulWidget {
 class _FocusTestRouteState extends State<FocusTestRoute> {
   FocusNode focusNode1 = new FocusNode();
   FocusNode focusNode2 = new FocusNode();
-  FocusScopeNode focusScopeNode = new FocusScopeNode();
+  FocusScopeNode focusScopeNode;
 
   @override
   Widget build(BuildContext context) {
@@ -248,7 +248,12 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
                   child: Text("移动焦点"),
                   onPressed: () {
                     //将焦点从第一个TextField移到第二个TextField
-                    FocusScope.of(context).requestFocus(focusNode2);
+                    // 这是一种写法 FocusScope.of(context).requestFocus(focusNode2);
+                    // 这是第二种写法
+                    if(null == focusScopeNode){
+                      focusScopeNode = FocusScope.of(context);
+                    }
+                    focusScopeNode.requestFocus(focusNode2);
                   },
                 ),
                 RaisedButton(

@@ -66,7 +66,7 @@ class __TestWidgetState extends State<_TestWidget> {
 }
 ```
 
-最后，我们创建一个按钮，没点击一次，就将ShareDataWidget的值自增：
+最后，我们创建一个按钮，每点击一次，就将ShareDataWidget的值自增：
 
 ```dart
 class InheritedWidgetTestRoute extends StatefulWidget {

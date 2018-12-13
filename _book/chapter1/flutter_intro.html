@@ -1,54 +1,60 @@
 
 <!DOCTYPE HTML>
 <html lang="zh-hans" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Flutter简介 · 《Flutter实战》</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="wendux 824783146@qq.com">
-        
-        
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Flutter简介 · 《Flutter实战》</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="description" content="">-->
+    <meta name="description" content="《Flutter实战》是Flutter中文网（https://flutterchian.club）开源的电子书，旨在帮助开发者系统化的了解并学习Flutter。">
+    <meta name="keywords" content="flutter实战,flutter书籍,flutter电子书,flutter中文网 ">
+    <meta name="generator" content="GitBook 3.2.3">
     
-    <link rel="stylesheet" href="../gitbook/style.css">
+    <meta name="author" content="wendux 824783146@qq.com">
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/style.css">
 
     
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-prism/prism.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.css">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/website.css">
+    
+    
     
 
     
+
+    
         
     
         
@@ -62,15 +68,15 @@
         
     
 
-        
     
     
-    <meta name="HandheldFriendly" content="false"/>
+    
+    <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/favicon.ico" type="image/x-icon">
 
     
     <link rel="next" href="install_flutter.html" />
@@ -79,31 +85,54 @@
     <link rel="prev" href="mobile_development_intro.html" />
     
 
-        <style>
-            .pull-right>i{
-                font-size: 25px;
-                color: #666 !important;
-            }
-            body{
-                font-size: 15px !important;
-            }
-        </style>
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-    </head>
-    <body>
-        
+    <style>
+        .pull-right > i {
+            font-size: 25px;
+            color: #777 !important;
+            cursor: pointer;
+
+        }
+
+        .pull-right > i:hover {
+            color: #777 !important;
+        }
+
+        body {
+            font-size: 15px !important;
+        }
+
+        a[href='../todo.html'], a[href='todo.html'] {
+            color: #888 !important;
+        }
+        .copyright{
+            text-align: center;
+            margin: 80px 16px 30px 16px;
+            padding-top: 16px;
+            border-top: #eee 1px solid;
+            color: grey;
+            font-size: .9em;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
 <div class="book">
     <div class="book-summary">
         
             
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
             
                 <nav role="navigation">
                 
@@ -336,9 +365,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../chapter3/img_and_icon.html">
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/buttons.html">
             
-                <a href="../chapter3/img_and_icon.html">
+                <a href="../chapter3/buttons.html">
             
                     
                     按钮
@@ -407,7 +436,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../chapter4/row_and_column.html">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/intro.html">
+            
+                <a href="../chapter4/intro.html">
+            
+                    
+                    布局类Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/row_and_column.html">
             
                 <a href="../chapter4/row_and_column.html">
             
@@ -420,7 +462,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../chapter4/flex.html">
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/flex.html">
             
                 <a href="../chapter4/flex.html">
             
@@ -433,7 +475,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../chapter4/wrap_and_flow.html">
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/wrap_and_flow.html">
             
                 <a href="../chapter4/wrap_and_flow.html">
             
@@ -446,7 +488,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../chapter4/stack.html">
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/stack.html">
             
                 <a href="../chapter4/stack.html">
             
@@ -562,7 +604,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../chapter6/single_child_scrollview.html">
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/intro.html">
+            
+                <a href="../chapter6/intro.html">
+            
+                    
+                    可滚动Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/single_child_scrollview.html">
             
                 <a href="../chapter6/single_child_scrollview.html">
             
@@ -575,7 +630,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../chapter6/listview.html">
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/listview.html">
             
                 <a href="../chapter6/listview.html">
             
@@ -588,7 +643,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../chapter6/gridview.html">
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/gridview.html">
             
                 <a href="../chapter6/gridview.html">
             
@@ -601,7 +656,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../chapter6/custom_scrollview.html">
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/custom_scrollview.html">
             
                 <a href="../chapter6/custom_scrollview.html">
             
@@ -614,7 +669,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="../chapter6/scroll_controller.html">
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/scroll_controller.html">
             
                 <a href="../chapter6/scroll_controller.html">
             
@@ -845,7 +900,91 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+        <li class="chapter " data-level="1.11" data-path="../chapter13/">
+            
+                <a href="../chapter13/">
+            
+                    
+                    自定义Widget
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter13/intro.html">
+            
+                <a href="../chapter13/intro.html">
+            
+                    
+                    自定义Widget方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter13/combine.html">
+            
+                <a href="../chapter13/combine.html">
+            
+                    
+                    通过组合现有Widget实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter13/turn_box.html">
+            
+                <a href="../chapter13/turn_box.html">
+            
+                    
+                    实例：TurnBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter13/custom_paint.html">
+            
+                <a href="../chapter13/custom_paint.html">
+            
+                    
+                    CustomPaint与Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter13/gradient_circular_progress_demo.html">
+            
+                <a href="../chapter13/gradient_circular_progress_demo.html">
+            
+                    
+                    实例：圆形渐变进度条(自绘)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter10/">
             
                 <a href="../chapter10/">
             
@@ -859,7 +998,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../chapter10/file_operation.html">
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/file_operation.html">
             
                 <a href="../chapter10/file_operation.html">
             
@@ -872,7 +1011,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../chapter10/http.html">
+        <li class="chapter " data-level="1.12.2" data-path="../chapter10/http.html">
             
                 <a href="../chapter10/http.html">
             
@@ -885,7 +1024,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../chapter10/dio.html">
+        <li class="chapter " data-level="1.12.3" data-path="../chapter10/dio.html">
             
                 <a href="../chapter10/dio.html">
             
@@ -898,7 +1037,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.4" data-path="../chapter10/websocket.html">
+        <li class="chapter " data-level="1.12.4" data-path="../chapter10/websocket.html">
             
                 <a href="../chapter10/websocket.html">
             
@@ -911,7 +1050,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.5" data-path="../chapter10/socket.html">
+        <li class="chapter " data-level="1.12.5" data-path="../chapter10/socket.html">
             
                 <a href="../chapter10/socket.html">
             
@@ -924,7 +1063,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.6" data-path="../chapter10/json_model.html">
+        <li class="chapter " data-level="1.12.6" data-path="../chapter10/json_model.html">
             
                 <a href="../chapter10/json_model.html">
             
@@ -942,9 +1081,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12" data-path="../todo.html">
+        <li class="chapter " data-level="1.13" data-path="../chapter11/">
             
-                <a href="../todo.html">
+                <a href="../chapter11/">
             
                     
                     包与插件
@@ -956,12 +1095,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="../todo.html">
+        <li class="chapter " data-level="1.13.1" data-path="../chapter11/develop_package.html">
             
-                <a href="../todo.html">
+                <a href="../chapter11/develop_package.html">
             
                     
-                    开发一个package
+                    开发package
             
                 </a>
             
@@ -969,12 +1108,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="../todo.html">
+        <li class="chapter " data-level="1.13.2" data-path="../chapter11/platform-channel.html">
             
-                <a href="../todo.html">
+                <a href="../chapter11/platform-channel.html">
             
                     
-                    编写自动化测试用例
+                    插件开发：平台通道简介
             
                 </a>
             
@@ -982,12 +1121,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.3" data-path="../todo.html">
+        <li class="chapter " data-level="1.13.3" data-path="../chapter11/android_implement.html">
             
-                <a href="../todo.html">
+                <a href="../chapter11/android_implement.html">
             
                     
-                    平台通道简介
+                    插件开发：实现Android端API
             
                 </a>
             
@@ -995,12 +1134,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.4" data-path="../todo.html">
+        <li class="chapter " data-level="1.13.4" data-path="../chapter11/ios_implement.html">
             
-                <a href="../todo.html">
+                <a href="../chapter11/ios_implement.html">
             
                     
-                    实现Andorid端API
+                    插件开发：实现IOS端API
             
                 </a>
             
@@ -1008,20 +1147,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.5" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    实现IOS端API
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.6" data-path="../todo.html">
+        <li class="chapter " data-level="1.13.5" data-path="../todo.html">
             
                 <a href="../todo.html">
             
@@ -1039,9 +1165,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="../todo.html">
+        <li class="chapter " data-level="1.14" data-path="../chapter12/">
             
-                <a href="../todo.html">
+                <a href="../chapter12/">
             
                     
                     国际化
@@ -1053,9 +1179,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="../todo.html">
+        <li class="chapter " data-level="1.14.1" data-path="../chapter12/multi_languages_support.html">
             
-                <a href="../todo.html">
+                <a href="../chapter12/multi_languages_support.html">
             
                     
                     让App支持多语言
@@ -1066,22 +1192,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.2" data-path="../todo.html">
+        <li class="chapter " data-level="1.14.2" data-path="../chapter12/locallization_implement.html">
             
-                <a href="../todo.html">
-            
-                    
-                    监听系统语言切换
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.3" data-path="../todo.html">
-            
-                <a href="../todo.html">
+                <a href="../chapter12/locallization_implement.html">
             
                     
                     实现Localizations
@@ -1092,135 +1205,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.4" data-path="../todo.html">
+        <li class="chapter " data-level="1.14.3" data-path="../chapter12/intl.html">
             
-                <a href="../todo.html">
-            
-                    
-                    Intel包的使用
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14" data-path="../todo.html">
-            
-                <a href="../todo.html">
+                <a href="../chapter12/intl.html">
             
                     
-                    Flutter 核心原理
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.14.1" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    Flutter UI系统
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.2" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    Widget、Element与BuildContext
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.3" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    RenderObject与RenderBox
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.4" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    Notification与事件冒泡
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.5" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    Scrollable原理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.6" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    InheritedWidget与数据传递
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.7" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    ParentDataWidget
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.14.8" data-path="../todo.html">
-            
-                <a href="../todo.html">
-            
-                    
-                    布局与绘制过程
+                    使用Intl包
             
                 </a>
             
@@ -1238,7 +1228,112 @@
                 <a href="../todo.html">
             
                     
-                    Flutter资源汇总
+                    Flutter 核心原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter UI系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Widget、Element与BuildContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    RenderObject与RenderBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Notification与事件冒泡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Scrollable原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    InheritedWidget与数据传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    ParentDataWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    布局与绘制过程
             
                 </a>
             
@@ -1247,11 +1342,22 @@
         </li>
     
 
+            </ul>
+            
+        </li>
     
-        
-        <li class="divider"></li>
-        
-        
+        <li class="chapter " data-level="1.16" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter资源汇总
+            
+                </a>
+            
+
+            
+        </li>
     
 
     
@@ -1279,7 +1385,7 @@
 
 <div class="book-header" role="navigation">
     
-    <a class="btn pull-right" aria-label="GitHub" href="#">
+    <a class="btn pull-right" aria-label="GitHub">
         <i class="fa fa-edit" title="编辑本文"></i>
     </a>
     <a class="btn pull-right" aria-label="GitHub" href="https://github.com/flutterchina/flutter-in-action">
@@ -1298,6 +1404,9 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div id="book-search-results">
+    <div class="search-noresults">
+    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x521D;&#x8BC6;flutter">&#x521D;&#x8BC6;Flutter</h1>
@@ -1307,10 +1416,10 @@
 <p>Flutter&#x4E0E;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x79FB;&#x52A8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5176;&#x5B83;&#x5927;&#x591A;&#x6570;&#x6846;&#x67B6;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;Flutter&#x65E2;&#x4E0D;&#x4F7F;&#x7528;WebView&#xFF0C;&#x4E5F;&#x4E0D;&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x539F;&#x751F;&#x63A7;&#x4EF6;&#x3002; &#x76F8;&#x53CD;&#xFF0C;Flutter&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x6765;&#x7ED8;&#x5236;widget&#x3002;&#x8FD9;&#x6837;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;Android&#x548C;iOS&#x4E0A;UI&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x800C;&#x4E14;&#x4E5F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5BF9;&#x539F;&#x751F;&#x63A7;&#x4EF6;&#x4F9D;&#x8D56;&#x800C;&#x5E26;&#x6765;&#x7684;&#x9650;&#x5236;&#x53CA;&#x9AD8;&#x6602;&#x7684;&#x7EF4;&#x62A4;&#x6210;&#x672C;&#x3002;</p>
 <p>Flutter&#x4F7F;&#x7528;Skia&#x4F5C;&#x4E3A;&#x5176;2D&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF0C;Skia&#x662F;Google&#x7684;&#x4E00;&#x4E2A;2D&#x56FE;&#x5F62;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5E93;&#xFF0C;&#x5305;&#x542B;&#x5B57;&#x578B;&#x3001;&#x5750;&#x6807;&#x8F6C;&#x6362;&#xFF0C;&#x4EE5;&#x53CA;&#x70B9;&#x9635;&#x56FE;&#x90FD;&#x6709;&#x9AD8;&#x6548;&#x80FD;&#x4E14;&#x7B80;&#x6D01;&#x7684;&#x8868;&#x73B0;&#xFF0C;Skia&#x662F;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x975E;&#x5E38;&#x53CB;&#x597D;&#x7684;API&#xFF0C;&#x76EE;&#x524D;Google Chrome&#x6D4F;&#x89C8;&#x5668;&#x548C;Android&#x5747;&#x91C7;&#x7528;Skia&#x4F5C;&#x4E3A;&#x5176;&#x7ED8;&#x56FE;&#x5F15;&#x64CE;&#xFF0C;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#xFF0C;&#x7531;&#x4E8E;Android&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5185;&#x7F6E;&#x4E86;Skia&#xFF0C;&#x6240;&#x4EE5;Flutter&#x5728;&#x6253;&#x5305;APK(Android&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x5305;)&#x65F6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x5C06;Skia&#x6253;&#x5165;APK&#x4E2D;&#xFF0C;&#x4F46;iOS&#x7CFB;&#x7EDF;&#x5E76;&#x672A;&#x5185;&#x7F6E;Skia&#xFF0C;&#x6240;&#x4EE5;&#x6784;&#x5EFA;iPA&#x65F6;&#xFF0C;&#x4E5F;&#x5FC5;&#x987B;&#x5C06;Skia&#x4E00;&#x8D77;&#x6253;&#x5305;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;Flutter APP&#x7684;Android&#x5B89;&#x88C5;&#x5305;&#x6BD4;iOS&#x5B89;&#x88C5;&#x5305;&#x5C0F;&#x7684;&#x4E3B;&#x8981;&#x539F;&#x56E0;&#x3002;</p>
 <h4 id="&#x9AD8;&#x6027;&#x80FD;">&#x9AD8;&#x6027;&#x80FD;</h4>
-<p>Flutter&#x9AD8;&#x6027;&#x80FD;&#x4E3B;&#x8981;&#x9760;&#x4E24;&#x70B9;&#x6765;&#x4FDD;&#x8BC1;&#xFF0C;&#x9996;&#x5148;&#xFF0C;Flutter APP&#x91C7;&#x7528;Dart&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x3002;Dart&#x5728; JIT&#xFF08;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#xFF09;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x901F;&#x5EA6;&#x4E0E; JavaScript&#x57FA;&#x672C;&#x6301;&#x5E73;&#x3002;&#x4F46;&#x662F; Dart&#x652F;&#x6301; AOT(tijia)&#xFF0C;&#x5F53;&#x4EE5; AOT&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;JavaScript&#x4FBF;&#x8FDC;&#x8FDC;&#x8FFD;&#x4E0D;&#x4E0A;&#x4E86;&#x3002;&#x901F;&#x5EA6;&#x7684;&#x63D0;&#x5347;&#x5BF9;&#x9AD8;&#x5E27;&#x7387;&#x4E0B;&#x7684;&#x89C6;&#x56FE;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#x3002;&#x5176;&#x6B21;&#xFF0C;Flutter&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x6765;&#x7ED8;&#x5236;UI&#xFF0C;&#x5E03;&#x5C40;&#x6570;&#x636E;&#x7B49;&#x7531;Dart&#x8BED;&#x8A00;&#x76F4;&#x63A5;&#x63A7;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5E03;&#x5C40;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x50CF;RN&#x90A3;&#x6837;&#x8981;&#x5728;JavaScript&#x548C;Native&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#xFF0C;&#x8FD9;&#x5728;&#x4E00;&#x4E9B;&#x6ED1;&#x52A8;&#x548C;&#x62D6;&#x52A8;&#x7684;&#x573A;&#x666F;&#x4E0B;&#x5177;&#x6709;&#x660E;&#x663E;&#x4F18;&#x52BF;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x6ED1;&#x52A8;&#x548C;&#x62D6;&#x52A8;&#x8FC7;&#x7A0B;&#x5F80;&#x5F80;&#x90FD;&#x4F1A;&#x5F15;&#x8D77;&#x5E03;&#x5C40;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x6240;&#x4EE5;JavaScript&#x9700;&#x8981;&#x548C;Native&#x4E4B;&#x95F4;&#x4E0D;&#x505C;&#x7684;&#x540C;&#x6B65;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x548C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8981;JavaScript&#x9891;&#x7E41;&#x64CD;&#x4F5C;DOM&#x6240;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x90FD;&#x4F1A;&#x5E26;&#x6765;&#x6BD4;&#x8F83;&#x5BA2;&#x89C2;&#x7684;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x3002;</p>
+<p>Flutter&#x9AD8;&#x6027;&#x80FD;&#x4E3B;&#x8981;&#x9760;&#x4E24;&#x70B9;&#x6765;&#x4FDD;&#x8BC1;&#xFF0C;&#x9996;&#x5148;&#xFF0C;Flutter APP&#x91C7;&#x7528;Dart&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x3002;Dart&#x5728; JIT&#xFF08;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#xFF09;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x901F;&#x5EA6;&#x4E0E; JavaScript&#x57FA;&#x672C;&#x6301;&#x5E73;&#x3002;&#x4F46;&#x662F; Dart&#x652F;&#x6301; AOT&#xFF0C;&#x5F53;&#x4EE5; AOT&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;JavaScript&#x4FBF;&#x8FDC;&#x8FDC;&#x8FFD;&#x4E0D;&#x4E0A;&#x4E86;&#x3002;&#x901F;&#x5EA6;&#x7684;&#x63D0;&#x5347;&#x5BF9;&#x9AD8;&#x5E27;&#x7387;&#x4E0B;&#x7684;&#x89C6;&#x56FE;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#x3002;&#x5176;&#x6B21;&#xFF0C;Flutter&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x6765;&#x7ED8;&#x5236;UI&#xFF0C;&#x5E03;&#x5C40;&#x6570;&#x636E;&#x7B49;&#x7531;Dart&#x8BED;&#x8A00;&#x76F4;&#x63A5;&#x63A7;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5E03;&#x5C40;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x50CF;RN&#x90A3;&#x6837;&#x8981;&#x5728;JavaScript&#x548C;Native&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#xFF0C;&#x8FD9;&#x5728;&#x4E00;&#x4E9B;&#x6ED1;&#x52A8;&#x548C;&#x62D6;&#x52A8;&#x7684;&#x573A;&#x666F;&#x4E0B;&#x5177;&#x6709;&#x660E;&#x663E;&#x4F18;&#x52BF;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x6ED1;&#x52A8;&#x548C;&#x62D6;&#x52A8;&#x8FC7;&#x7A0B;&#x5F80;&#x5F80;&#x90FD;&#x4F1A;&#x5F15;&#x8D77;&#x5E03;&#x5C40;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x6240;&#x4EE5;JavaScript&#x9700;&#x8981;&#x548C;Native&#x4E4B;&#x95F4;&#x4E0D;&#x505C;&#x7684;&#x540C;&#x6B65;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x548C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8981;JavaScript&#x9891;&#x7E41;&#x64CD;&#x4F5C;DOM&#x6240;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x90FD;&#x4F1A;&#x5E26;&#x6765;&#x6BD4;&#x8F83;&#x53EF;&#x89C2;&#x7684;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x3002;</p>
 <h4 id="&#x91C7;&#x7528;dart&#x8BED;&#x8A00;&#x5F00;&#x53D1;">&#x91C7;&#x7528;Dart&#x8BED;&#x8A00;&#x5F00;&#x53D1;</h4>
 <p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x4F46;&#x4E5F;&#x5F88;&#x6709;&#x4E89;&#x8BAE;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x4E86;&#x89E3;Flutter&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;&#x4E86; Dart&#x800C;&#x4E0D;&#x662F; JavaScript&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x4ECB;&#x7ECD;&#x4E24;&#x4E2A;&#x6982;&#x5FF5;&#xFF1A;JIT&#x548C;AOT&#x3002;</p>
-<p>&#x76EE;&#x524D;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x79CD;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#xFF1A;&#x9759;&#x6001;&#x7F16;&#x8BD1;&#x4E0E;&#x52A8;&#x6001;&#x89E3;&#x91CA;&#x3002;&#x9759;&#x6001;&#x7F16;&#x8BD1;&#x7684;&#x7A0B;&#x5E8F;&#x5728;&#x6267;&#x884C;&#x524D;&#x5168;&#x90E8;&#x88AB;&#x7FFB;&#x8BD1;&#x4E3A;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;<strong>AOT</strong> &#xFF08;Ahead of time&#xFF09;&#x5373; &#x201C;&#x63D0;&#x524D;&#x7F16;&#x8BD1;&#x201D;&#xFF1B;&#x800C;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x7684;&#x5219;&#x662F;&#x4E00;&#x53E5;&#x4E00;&#x53E5;&#x8FB9;&#x7FFB;&#x8BD1;&#x8FB9;&#x8FD0;&#x884C;&#xFF0C;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;<strong>JIT</strong>&#xFF08;Just-in-time&#xFF09;&#x5373;&#x201C;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x201D;&#x3002;AOT&#x7A0B;&#x5E8F;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x662F;&#x7528;C/C++&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4ED6;&#x4EEC;&#x5FC5;&#x987B;&#x5728;&#x6267;&#x884C;&#x524D;&#x7F16;&#x8BD1;&#x6210;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x800C;JIT&#x7684;&#x4EE3;&#x8868;&#x5219;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x5982;JavaScript&#x3001;python&#x7B49;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x6240;&#x6709;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x90FD;&#x652F;&#x6301;JIT&#x6A21;&#x5F0F;&#x3002;&#x4F46;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;JIT&#x548C;AOT&#x6307;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;&#x548C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x5E76;&#x975E;&#x5F3A;&#x5173;&#x8054;&#x7684;&#xFF0C;&#x6709;&#x4E9B;&#x8BED;&#x8A00;&#x5373;&#x53EF;&#x4EE5;&#x4EE5;JIT&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE5;AOT&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#xFF0C;&#x5982;Java&#x3001;Python&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x7F16;&#x8BD1;&#x6210;&#x4E2D;&#x95F4;&#x5B57;&#x8282;&#x7801;&#x3001;&#x7136;&#x540E;&#x5728;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x65F6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x5B57;&#x8282;&#x7801;&#xFF0C;&#x4E5F;&#x8BB8;&#x6709;&#x4EBA;&#x4F1A;&#x8BF4;&#xFF0C;&#x4E2D;&#x95F4;&#x5B57;&#x8282;&#x7801;&#x5E76;&#x975E;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x65F6;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x52A8;&#x6001;&#x5C06;&#x5B57;&#x8282;&#x7801;&#x8F6C;&#x4E3A;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x662F;&#x7684;&#xFF0C;&#x8FD9;&#x6CA1;&#x6709;&#x9519;&#xFF0C;&#x4E0D;&#x8FC7;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x533A;&#x5206;&#x662F;&#x5426;&#x4E3A;AOT&#x7684;&#x6807;&#x51C6;&#x5C31;&#x662F;&#x770B;&#x4EE3;&#x7801;&#x5728;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x662F;&#x5426;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#xFF0C;&#x53EA;&#x8981;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x7F16;&#x8BD1;&#x4EA7;&#x7269;&#x662F;&#x5B57;&#x8282;&#x7801;&#x8FD8;&#x662F;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x90FD;&#x5C5E;&#x4E8E;AOT&#x3002;&#x5728;&#x6B64;&#xFF0C;&#x8BFB;&#x8005;&#x4E0D;&#x5FC5;&#x7EA0;&#x7ED3;&#x4E8E;&#x6982;&#x5FF5;&#xFF0C;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x4F20;&#x8FBE;&#x7CBE;&#x795E;&#x800C;&#x53D1;&#x660E;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x8BFB;&#x8005;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x5176;&#x539F;&#x7406;&#x5373;&#x53EF;&#xFF0C;&#x5F97;&#x5176;&#x795E;&#x5FD8;&#x5176;&#x5F62;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x79CD;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#xFF1A;&#x9759;&#x6001;&#x7F16;&#x8BD1;&#x4E0E;&#x52A8;&#x6001;&#x89E3;&#x91CA;&#x3002;&#x9759;&#x6001;&#x7F16;&#x8BD1;&#x7684;&#x7A0B;&#x5E8F;&#x5728;&#x6267;&#x884C;&#x524D;&#x5168;&#x90E8;&#x88AB;&#x7FFB;&#x8BD1;&#x4E3A;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;<strong>AOT</strong> &#xFF08;Ahead of time&#xFF09;&#x5373; &#x201C;&#x63D0;&#x524D;&#x7F16;&#x8BD1;&#x201D;&#xFF1B;&#x800C;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x7684;&#x5219;&#x662F;&#x4E00;&#x53E5;&#x4E00;&#x53E5;&#x8FB9;&#x7FFB;&#x8BD1;&#x8FB9;&#x8FD0;&#x884C;&#xFF0C;&#x901A;&#x5E38;&#x5C06;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;<strong>JIT</strong>&#xFF08;Just-in-time&#xFF09;&#x5373;&#x201C;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x201D;&#x3002;AOT&#x7A0B;&#x5E8F;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x662F;&#x7528;C/C++&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5B83;&#x4EEC;&#x5FC5;&#x987B;&#x5728;&#x6267;&#x884C;&#x524D;&#x7F16;&#x8BD1;&#x6210;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x800C;JIT&#x7684;&#x4EE3;&#x8868;&#x5219;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x5982;JavaScript&#x3001;python&#x7B49;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x6240;&#x6709;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x90FD;&#x652F;&#x6301;JIT&#x6A21;&#x5F0F;&#x3002;&#x4F46;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;JIT&#x548C;AOT&#x6307;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;&#x548C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x5E76;&#x975E;&#x5F3A;&#x5173;&#x8054;&#x7684;&#xFF0C;&#x6709;&#x4E9B;&#x8BED;&#x8A00;&#x65E2;&#x53EF;&#x4EE5;&#x4EE5;JIT&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE5;AOT&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#xFF0C;&#x5982;Java&#x3001;Python&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x7F16;&#x8BD1;&#x6210;&#x4E2D;&#x95F4;&#x5B57;&#x8282;&#x7801;&#x3001;&#x7136;&#x540E;&#x5728;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x65F6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x5B57;&#x8282;&#x7801;&#xFF0C;&#x4E5F;&#x8BB8;&#x6709;&#x4EBA;&#x4F1A;&#x8BF4;&#xFF0C;&#x4E2D;&#x95F4;&#x5B57;&#x8282;&#x7801;&#x5E76;&#x975E;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x65F6;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x52A8;&#x6001;&#x5C06;&#x5B57;&#x8282;&#x7801;&#x8F6C;&#x4E3A;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x662F;&#x7684;&#xFF0C;&#x8FD9;&#x6CA1;&#x6709;&#x9519;&#xFF0C;&#x4E0D;&#x8FC7;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x533A;&#x5206;&#x662F;&#x5426;&#x4E3A;AOT&#x7684;&#x6807;&#x51C6;&#x5C31;&#x662F;&#x770B;&#x4EE3;&#x7801;&#x5728;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x662F;&#x5426;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#xFF0C;&#x53EA;&#x8981;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#xFF0C;&#x65E0;&#x8BBA;&#x5176;&#x7F16;&#x8BD1;&#x4EA7;&#x7269;&#x662F;&#x5B57;&#x8282;&#x7801;&#x8FD8;&#x662F;&#x673A;&#x5668;&#x7801;&#xFF0C;&#x90FD;&#x5C5E;&#x4E8E;AOT&#x3002;&#x5728;&#x6B64;&#xFF0C;&#x8BFB;&#x8005;&#x4E0D;&#x5FC5;&#x7EA0;&#x7ED3;&#x4E8E;&#x6982;&#x5FF5;&#xFF0C;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x4F20;&#x8FBE;&#x7CBE;&#x795E;&#x800C;&#x53D1;&#x660E;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x8BFB;&#x8005;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x5176;&#x539F;&#x7406;&#x5373;&#x53EF;&#xFF0C;&#x5F97;&#x5176;&#x795E;&#x5FD8;&#x5176;&#x5F62;&#x3002;</p>
 <p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x770B;&#x770B;Flutter&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;Dart&#x8BED;&#x8A00;&#xFF1F;&#x7B14;&#x8005;&#x6839;&#x636E;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#x4EE5;&#x53CA;&#x81EA;&#x5DF1;&#x5BF9;Flutter&#x7684;&#x7406;&#x89E3;&#x603B;&#x7ED3;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x6761;&#xFF08;&#x7531;&#x4E8E;&#x5176;&#x5B83;&#x8DE8;&#x5E73;&#x53F0;&#x6846;&#x67B6;&#x90FD;&#x5C06;JavaScript&#x4F5C;&#x4E3A;&#x5176;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x6240;&#x4EE5;&#x4E3B;&#x8981;&#x5C06;Dart&#x548C;JavaScript&#x505A;&#x4E00;&#x4E2A;&#x5BF9;&#x6BD4;&#xFF09;&#xFF1A;</p>
 <ol>
 <li><p><strong>&#x5F00;&#x53D1;&#x6548;&#x7387;&#x9AD8;</strong></p>
@@ -1325,7 +1434,7 @@
 <p>Flutter&#x6846;&#x67B6;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x5F0F;&#x6D41;&#xFF0C;&#x5B83;&#x5F88;&#x5927;&#x7A0B;&#x5EA6;&#x4E0A;&#x4F9D;&#x8D56;&#x4E8E;&#x5E95;&#x5C42;&#x7684;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5668;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x80FD;&#x591F;&#x6709;&#x6548;&#x5730;&#x5904;&#x7406;&#x5C0F;&#x7684;&#x3001;&#x77ED;&#x671F;&#x7684;&#x5185;&#x5B58;&#x5206;&#x914D;&#x4F1A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7F3A;&#x4E4F;&#x6B64;&#x529F;&#x80FD;&#x7684;&#x8BED;&#x8A00;&#x4E2D;Flutter&#x65E0;&#x6CD5;&#x6709;&#x6548;&#x5730;&#x5DE5;&#x4F5C;&#xFF1B;&#x5F53;&#x7136;Chrome V8&#x7684;JavaScript&#x5F15;&#x64CE;&#x5728;&#x5185;&#x5B58;&#x5206;&#x914D;&#x4E0A;&#x4E5F;&#x5DF2;&#x7ECF;&#x505A;&#x7684;&#x5F88;&#x597D;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;Dart&#x5F00;&#x53D1;&#x56E2;&#x961F;&#x5F88;&#x591A;&#x6210;&#x5458;&#x90FD;&#x662F;&#x6765;&#x81EA;Chrome&#x56E2;&#x961F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5185;&#x5B58;&#x5206;&#x914D;&#x4E0A;Dart&#x5E76;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x8D85;&#x8D8A;JavaScript&#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;Flutter&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x800C;Dart&#x4E5F;&#x6B63;&#x597D;&#x6EE1;&#x8DB3;&#x800C;&#x5DF2;&#x3002;</p>
 </li>
 <li><p><strong>&#x7C7B;&#x578B;&#x5B89;&#x5168;</strong></p>
-<p>&#x7531;&#x4E8E;Dart&#x662F;&#x7C7B;&#x578B;&#x5B89;&#x5168;&#x7684;&#x6028;&#x8A00;&#xFF0C;&#x652F;&#x6301;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x6D4B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x524D;&#x53D1;&#x73B0;&#x4E00;&#x4E9B;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#xFF0C;&#x6392;&#x9664;&#x6F5C;&#x5728;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x5BF9;&#x4E8E;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8BF4;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x6709;&#x8BF4;&#x670D;&#x529B;&#xFF0C;&#x7531;&#x4E8E;JavaScript&#x662F;&#x4E00;&#x4E2A;&#x5F31;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#xFF0C;&#x524D;&#x7AEF;&#x793E;&#x533A;&#x51FA;&#x73B0;&#x4E86;&#x5F88;&#x591A;&#x7ED9;JavaScript&#x4EE3;&#x7801;&#x6DFB;&#x52A0;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x6D4B;&#x7684;&#x6269;&#x5C55;&#x8BED;&#x8A00;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5982;&#xFF1A;Coffeescript&#x3001;&#x5FAE;&#x8F6F;&#x7684;TypeScript&#x4EE5;&#x53CA;Facebook&#x7684;Flow&#x3002;&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C;Dart&#x672C;&#x8EAB;&#x652F;&#x6301;&#x9759;&#x6001;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x662F;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x7531;&#x4E8E;Dart&#x662F;&#x7C7B;&#x578B;&#x5B89;&#x5168;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x652F;&#x6301;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x6D4B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x524D;&#x53D1;&#x73B0;&#x4E00;&#x4E9B;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#xFF0C;&#x6392;&#x9664;&#x6F5C;&#x5728;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x5BF9;&#x4E8E;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8BF4;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x6709;&#x8BF4;&#x670D;&#x529B;&#xFF0C;&#x7531;&#x4E8E;JavaScript&#x662F;&#x4E00;&#x4E2A;&#x5F31;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#xFF0C;&#x524D;&#x7AEF;&#x793E;&#x533A;&#x51FA;&#x73B0;&#x4E86;&#x5F88;&#x591A;&#x7ED9;JavaScript&#x4EE3;&#x7801;&#x6DFB;&#x52A0;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x6D4B;&#x7684;&#x6269;&#x5C55;&#x8BED;&#x8A00;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5982;&#xFF1A;Coffeescript&#x3001;&#x5FAE;&#x8F6F;&#x7684;TypeScript&#x4EE5;&#x53CA;Facebook&#x7684;Flow&#x3002;&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C;Dart&#x672C;&#x8EAB;&#x652F;&#x6301;&#x9759;&#x6001;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x662F;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x4F18;&#x52BF;&#x3002;</p>
 </li>
 <li><p><strong>Dart&#x56E2;&#x961F;&#x5C31;&#x5728;&#x9694;&#x58C1;</strong></p>
 <p>&#x6211;&#x7ADF;&#x65E0;&#x8A00;&#x4EE5;&#x5BF9;&#xFF0C;&#x770B;&#x4F3C;&#x4E0D;&#x5E94;&#x8BE5;&#x4F5C;&#x4E3A;&#x7406;&#x7531;&#x7684;&#x7406;&#x7531;&#xFF0C;&#x4ED4;&#x7EC6;&#x60F3;&#x6765;&#x5374;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x7406;&#x7531;&#x3002;&#x5982;&#x6B64;&#x4E00;&#x6765;&#xFF0C;Flutter&#x56E2;&#x961F;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x3001;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x6B63;&#x5982;Flutter&#x5B98;&#x7F51;&#x6240;&#x8FF0;&#x201C;&#x6211;&#x4EEC;&#x6709;&#x673A;&#x4F1A;&#x4E0E;Dart&#x793E;&#x533A;&#x5BC6;&#x5207;&#x5408;&#x4F5C;&#xFF0C;Dart&#x793E;&#x533A;&#x6B63;&#x5728;&#x79EF;&#x6781;&#x6295;&#x5165;&#x8D44;&#x6E90;&#x6539;&#x8FDB;Dart&#x5728;Flutter&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x91C7;&#x7528;Dart&#x65F6;&#xFF0C;&#x8BE5;&#x8BED;&#x8A00;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x751F;&#x6210;&#x539F;&#x751F;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x5DE5;&#x5177;&#x94FE;&#xFF08;&#x8FD9;&#x5BF9;&#x4E8E;&#x5B9E;&#x73B0;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x662F;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#x7684;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;Dart&#x56E2;&#x961F;&#x4E3A;Flutter&#x6784;&#x5EFA;&#x4E86;&#x5B83;&#x3002;&#x540C;&#x6837;&#xFF0C;Dart VM&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x9488;&#x5BF9;&#x541E;&#x5410;&#x91CF;&#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#xFF0C;&#x4F46;&#x56E2;&#x961F;&#x73B0;&#x5728;&#x6B63;&#x5728;&#x4F18;&#x5316;VM&#x7684;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;Flutter&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x66F4;&#x4E3A;&#x91CD;&#x8981;&#x3002;&#x201D; </p>
@@ -1334,7 +1443,7 @@
 <h4 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h4>
 <p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x4E86;&#x4E00;&#x4E0B;Flutter&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x611F;&#x5230;&#x6709;&#x4E9B;&#x70B9;&#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x4E0D;&#x7528;&#x7740;&#x6025;&#xFF0C;&#x968F;&#x7740;&#x65E5;&#x540E;&#x5BF9;Flutter&#x7EC6;&#x8282;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x518D;&#x56DE;&#x8FC7;&#x5934;&#x6765;&#x770B;&#xFF0C;&#x76F8;&#x4FE1;&#x4F60;&#x4F1A;&#x6709;&#x66F4;&#x6DF1;&#x7684;&#x4F53;&#x4F1A;&#x3002;</p>
 <h2 id="flutter&#x6846;&#x67B6;&#x7ED3;&#x6784;">Flutter&#x6846;&#x67B6;&#x7ED3;&#x6784;</h2>
-<p>&#x672C;&#x8282;&#x6211;&#x4EEC;&#x5148;&#x5BF9;Flutter&#x7684;&#x6846;&#x67B6;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x4ECB;&#x7ECD;&#xFF0C;&#x65E8;&#x5728;&#x8BA9;&#x8BFB;&#x8005;&#x5FC3;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x7684;&#x6620;&#x50CF;&#xFF0C;&#x8FD9;&#x5BF9;&#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E0B;&#x5B50;&#x4FBF;&#x6DF1;&#x5165;&#x5230;Flutter&#x4E2D;&#xFF0C;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x5728;&#x6C99;&#x6F20;&#x4E2D;&#x6CA1;&#x6709;&#x5730;&#x56FE;&#x7684;&#x4EBA;&#xFF0C;&#x5373;&#x4F7F;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x7EFF;&#x6D32;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x4E5F;&#x4E0D;&#x4F1A;&#x77E5;&#x9053;&#x4E0B;&#x4E00;&#x4E2A;&#x7EFF;&#x6D32;&#x5728;&#x54EA;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x65E0;&#x8BBA;&#x5B66;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#xFF0C;&#x90FD;&#x8981;&#x73B0;&#x6709;&#x4E00;&#x5F20;&#x6E05;&#x6670;&#x7684;&#x201C;&#x5730;&#x56FE;&#x201D;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x7684;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x201C;&#x6309;&#x56FE;&#x7D22;&#x9AA5;&#x201D;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x624D;&#x4E0D;&#x4F1A;&#x9677;&#x4E8E;&#x7EC6;&#x8282;&#x800C;&#x201C;&#x76EE;&#x65E0;&#x5168;&#x725B;&#x201D;&#x3002;&#x8A00;&#x5F52;&#x6B63;&#x4F20;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;Flutter&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x5F20;&#x6846;&#x67B6;&#x56FE;&#xFF1A;</p>
+<p>&#x672C;&#x8282;&#x6211;&#x4EEC;&#x5148;&#x5BF9;Flutter&#x7684;&#x6846;&#x67B6;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x4ECB;&#x7ECD;&#xFF0C;&#x65E8;&#x5728;&#x8BA9;&#x8BFB;&#x8005;&#x5FC3;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x7684;&#x5370;&#x8C61;&#xFF0C;&#x8FD9;&#x5BF9;&#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E0B;&#x5B50;&#x4FBF;&#x6DF1;&#x5165;&#x5230;Flutter&#x4E2D;&#xFF0C;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x5728;&#x6C99;&#x6F20;&#x4E2D;&#x6CA1;&#x6709;&#x5730;&#x56FE;&#x7684;&#x4EBA;&#xFF0C;&#x5373;&#x4F7F;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x7EFF;&#x6D32;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x4E5F;&#x4E0D;&#x4F1A;&#x77E5;&#x9053;&#x4E0B;&#x4E00;&#x4E2A;&#x7EFF;&#x6D32;&#x5728;&#x54EA;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x65E0;&#x8BBA;&#x5B66;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#xFF0C;&#x90FD;&#x8981;&#x73B0;&#x6709;&#x4E00;&#x5F20;&#x6E05;&#x6670;&#x7684;&#x201C;&#x5730;&#x56FE;&#x201D;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x7684;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x201C;&#x6309;&#x56FE;&#x7D22;&#x9AA5;&#x201D;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x624D;&#x4E0D;&#x4F1A;&#x9677;&#x4E8E;&#x7EC6;&#x8282;&#x800C;&#x201C;&#x76EE;&#x65E0;&#x5168;&#x725B;&#x201D;&#x3002;&#x8A00;&#x5F52;&#x6B63;&#x4F20;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;Flutter&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x5F20;&#x6846;&#x67B6;&#x56FE;&#xFF1A;</p>
 <p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/framework.png" alt="image-20180816160424567"></p>
 <h3 id="flutter-framework">Flutter Framework</h3>
 <p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7EAF; Dart&#x5B9E;&#x73B0;&#x7684; SDK&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x57FA;&#x7840;&#x5E93;&#xFF0C;&#x4ECE;&#x4F4E;&#x5411;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#xFF1A;</p>
@@ -1349,7 +1458,7 @@
 <h3 id="flutter-engine">Flutter Engine</h3>
 <p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7EAF; C++&#x5B9E;&#x73B0;&#x7684; SDK&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x4E86; Skia&#x5F15;&#x64CE;&#x3001;Dart&#x8FD0;&#x884C;&#x65F6;&#x3001;&#x6587;&#x5B57;&#x6392;&#x7248;&#x5F15;&#x64CE;&#x7B49;&#x3002;&#x5728;&#x4EE3;&#x7801;&#x8C03;&#x7528; <code>dart:ui</code>&#x5E93;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x6700;&#x7EC8;&#x4F1A;&#x8D70;&#x5230;Engine&#x5C42;&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x73B0;&#x771F;&#x6B63;&#x7684;&#x7ED8;&#x5236;&#x903B;&#x8F91;&#x3002;</p>
 <h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
-<p>Flutter&#x6846;&#x67B6;&#x672C;&#x8EAB;&#x6709;&#x7740;&#x826F;&#x597D;&#x7684;&#x5206;&#x5C42;&#x8BBE;&#x8BA1;&#xFF0C;&#x672C;&#x8282;&#x65E8;&#x5728;&#x8BA9;&#x8BFB;&#x8005;&#x5BF9;Flutter&#x6574;&#x4F53;&#x6846;&#x67B6;&#x6709;&#x4E2A;&#x5927;&#x6982;&#x7684;&#x6620;&#x50CF;&#xFF0C;&#x76F8;&#x4FE1;&#x5230;&#x73B0;&#x5728;&#x4E3A;&#x6B62;&#xFF0C;&#x8BFB;&#x8005;&#x5DF2;&#x7ECF;&#x5BF9;Flutter&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x5370;&#x8C61;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x6B63;&#x5F0F;&#x52A8;&#x624B;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;Flutter&#x7684;&#x5F00;&#x53D1;&#x8BED;&#x8A00;Dart&#x3002;</p>
+<p>Flutter&#x6846;&#x67B6;&#x672C;&#x8EAB;&#x6709;&#x7740;&#x826F;&#x597D;&#x7684;&#x5206;&#x5C42;&#x8BBE;&#x8BA1;&#xFF0C;&#x672C;&#x8282;&#x65E8;&#x5728;&#x8BA9;&#x8BFB;&#x8005;&#x5BF9;Flutter&#x6574;&#x4F53;&#x6846;&#x67B6;&#x6709;&#x4E2A;&#x5927;&#x6982;&#x7684;&#x5370;&#x8C61;&#xFF0C;&#x76F8;&#x4FE1;&#x5230;&#x73B0;&#x5728;&#x4E3A;&#x6B62;&#xFF0C;&#x8BFB;&#x8005;&#x5DF2;&#x7ECF;&#x5BF9;Flutter&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x5370;&#x8C61;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x6B63;&#x5F0F;&#x52A8;&#x624B;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;Flutter&#x7684;&#x5F00;&#x53D1;&#x8BED;&#x8A00;Dart&#x3002;</p>
 <h2 id="&#x5982;&#x4F55;&#x5B66;&#x4E60;flutter">&#x5982;&#x4F55;&#x5B66;&#x4E60;Flutter</h2>
 <p>&#x672C;&#x8282;&#x7ED9;&#x5927;&#x5BB6;&#x4E00;&#x4E9B;&#x5B66;&#x4E60;&#x5EFA;&#x8BAE;&#xFF0C;&#x5206;&#x4EAB;&#x4E00;&#x4E0B;&#x7B14;&#x8005;&#x5728;&#x5B66;&#x4E60;Flutter&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5FC3;&#x5F97;&#xFF0C;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x63D0;&#x9AD8;&#x5B66;&#x4E60;&#x6548;&#x7387;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5751;&#x3002;</p>
 <h3 id="&#x8D44;&#x6E90;">&#x8D44;&#x6E90;</h3>
@@ -1373,6 +1482,22 @@
                                 
                                 </section>
                             
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -1396,69 +1521,100 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Flutter简介","level":"1.2.2","depth":2,"next":{"title":"搭建Flutter开发环境","level":"1.2.3","depth":2,"path":"chapter1/install_flutter.md","ref":"chapter1/install_flutter.md","articles":[]},"previous":{"title":"移动开发技术简介","level":"1.2.1","depth":2,"path":"chapter1/mobile_development_intro.md","ref":"chapter1/mobile_development_intro.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight","favicon"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"github":{"url":"https://github.com/flutterchina"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png","bookmark":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter1/flutter_intro.md","mtime":"2018-11-29T14:53:37.346Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T15:10:06.774Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Flutter简介","level":"1.2.2","depth":2,"next":{"title":"搭建Flutter开发环境","level":"1.2.3","depth":2,"path":"chapter1/install_flutter.md","ref":"chapter1/install_flutter.md","articles":[]},"previous":{"title":"移动开发技术简介","level":"1.2.1","depth":2,"path":"chapter1/mobile_development_intro.md","ref":"chapter1/mobile_development_intro.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter1/flutter_intro.md","mtime":"2018-12-09T13:12:23.216Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-12T04:19:53.795Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace/ace.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
-    </body>
-    <script>
-        $(function () {
-            $(".pull-right .fa-edit").on("click",function () {
-                var t=location.pathname.split(".")[0]+".md";
-                location.href="https://github.com/flutterchina/flutter-in-action/blob/master/docs/"+t;
-            })
-            $("a[href='todo.html']").css("color","#aaa")
-        })
-    </script>
+</body>
+<script>
+
+    function init() {
+        var p=location.pathname;
+        if(p[p.length-1]==='/'){
+            p+="index.md"
+        }else {
+            p = p.split(".")[0] + ".md";
+        }
+        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
+        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        $("table").wrap("<div style='overflow: auto'></div>");
+        //百度统计
+        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
+            t = document.referrer;
+        if (!e.test(r)) {
+            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
+            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
+            var i = new Image;
+            i.src = o
+        }
+        $("<div class='copyright'> 本书仍在堪误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
+    }
+
+    function hookAPI(api, ob, fn) {
+        return function () {
+            var result = api.apply(ob, [].slice.call(arguments));
+            setTimeout(fn,1000);
+            return result;
+        }
+    }
+
+    init();
+
+    if(history.pushState){
+        history.pushState = hookAPI(history.pushState, history, init);
+    }
+
+</script>
 </html>
 
