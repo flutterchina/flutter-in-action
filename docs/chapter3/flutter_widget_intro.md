@@ -111,7 +111,7 @@ Widget build(BuildContext context) {
 
 ## Stateful Widget
 
-和StatelessWidget一样，StatefulWidget也是继承自widget类，并重写了`createElement() `方法，不同的是返回的`Element` 对象并不相同；另外StatefulWidget类中添加了一个新的接口`createState()`，下面我们看看StatelessWidget的类定义：
+和StatelessWidget一样，StatefulWidget也是继承自widget类，并重写了`createElement() `方法，不同的是返回的`Element` 对象并不相同；另外StatefulWidget类中添加了一个新的接口`createState()`，下面我们看看StatefulWidget的类定义：
 
 ```dart
 abstract class StatefulWidget extends Widget {
