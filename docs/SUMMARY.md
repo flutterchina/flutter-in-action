@@ -24,7 +24,7 @@
     
 * [布局类Widgets](chapter4/index.md)
     * [布局类Widgets简介](chapter4/intro.md)
-    * [先行布局Row、Column](chapter4/row_and_column.md)
+    * [行布局Row、Column](chapter4/row_and_column.md)
     * [弹性布局Flex](chapter4/flex.md)
     * [流式布局Wrap、Flow](chapter4/wrap_and_flow.md)      
     * [层叠布局Stack、Positioned](chapter4/stack.md)   
