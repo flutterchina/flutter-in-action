@@ -17,7 +17,7 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ```
 
-**注意：** 此镜像为临时镜像，并不能保证一直可用，读者可以参考https://github.com/flutter/flutter/wiki/Using-Flutter-in-China 以获得有关镜像服务器的最新动态。
+**注意：** 此镜像为临时镜像，并不能保证一直可用，读者可以参考https://flutter.io/community/china 以获得有关镜像服务器的最新动态。
 
 ### 在Windows上搭建Flutter开发环境
 

@@ -4,8 +4,8 @@
 
 ## 本章目录
 
-* [Flutter动画简介](chapter9/intro.md)
-* [动画结构](chapter9/animation_structure.md)
-* [自定义路由过渡动画](chapter9/route_transition.md) 
-* [Hero动画](chapter9/hero.md) 
-* [交错动画](chapter9/stagger_animation.md) 
+* [Flutter动画简介](intro.md)
+* [动画结构](animation_structure.md)
+* [自定义路由过渡动画](route_transition.md) 
+* [Hero动画](hero.md) 
+* [交错动画](stagger_animation.md) 

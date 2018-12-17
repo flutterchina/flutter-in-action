@@ -8,7 +8,7 @@ SingleChildScrollView({
   this.scrollDirection = Axis.vertical, //滚动方向，默认是垂直方向
   this.reverse = false, 
   this.padding, 
-  bool primary, //是否
+  bool primary, 
   this.physics, 
   this.controller,
   this.child,
