@@ -1,6 +1,6 @@
 # 包管理
 
-一个完成的应用程序往往会依赖很多第三方包，正如在原生开发中，Android使用Gradle来管理依赖，iOS用Cocoapods或Carthage来管理依赖，而Flutter也有自己的依赖管理工具，本节我们主要介绍一下flutter下如何是使用配置文件`pubspec.yaml`（位于项目根目录）来管理第三方依赖包。
+一个完整的应用程序往往会依赖很多第三方包，正如在原生开发中，Android使用Gradle来管理依赖，iOS用Cocoapods或Carthage来管理依赖，而Flutter也有自己的依赖管理工具，本节我们主要介绍一下flutter下如何是使用配置文件`pubspec.yaml`（位于项目根目录）来管理第三方依赖包。
 
 YAML是一种直观、可读性高并且容易被人类阅读的文件格式，它和xml或Json相比，它语法简单并非常容易解析，所以YAML常用于配置文件，Flutter也是用yaml文件作为其配置文件，Flutter项目默认的配置文件是`pubspec.yaml`，我们看一个简单的示例：
 
