@@ -134,7 +134,7 @@ ListView(key: PageStorageKey(2), ... );
 double get offset => position.pixels;
 ```
 
-一个ScrollController虽然可以对应多个Scrollable Widge，但是有一些操作，如读取滚动位置`offset`，则需要一对一，但是我们仍然可以在一对多的情况下，通过其它方法读取滚动位置，举个例子，假设一个ScrollController同时被两个Scrollable Widget使用，那么我们可以通过如下方式分别读取他们的滚动位置：
+一个ScrollController虽然可以对应多个Scrollable Widget，但是有一些操作，如读取滚动位置`offset`，则需要一对一，但是我们仍然可以在一对多的情况下，通过其它方法读取滚动位置，举个例子，假设一个ScrollController同时被两个Scrollable Widget使用，那么我们可以通过如下方式分别读取他们的滚动位置：
 
 ```dart
 ...
