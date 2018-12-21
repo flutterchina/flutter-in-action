@@ -65,8 +65,8 @@ Listener(
       child: ConstrainedBox(
           constraints: BoxConstraints.tight(Size(300.0, 150.0)),
           child: Center(child: Text("Box A")),
-          //behavior: HitTestBehavior.opaque
       ),
+      //behavior: HitTestBehavior.opaque,
       onPointerDown: (event) => print("down A")
   ),
   ```
