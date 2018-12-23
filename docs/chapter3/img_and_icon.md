@@ -215,7 +215,7 @@ Row(
    ```dart
    class MyIcons{
      // fork 图标
-     static const IconData bool = const IconData(
+     static const IconData book = const IconData(
          0xe614, 
          fontFamily: 'myIcon', 
          matchTextDirection: true
