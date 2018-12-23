@@ -2,7 +2,7 @@
 
 ## 线性布局Row和Column
 
-所谓线性布局，即指沿水平或垂直方向排布子Widght。Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件。Row和Column都继承自Flex，我们将在弹性布局一节中详细介绍Flex。
+所谓线性布局，即指沿水平或垂直方向排布子Widget。Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件。Row和Column都继承自Flex，我们将在弹性布局一节中详细介绍Flex。
 
 ### 主轴和纵轴
 
