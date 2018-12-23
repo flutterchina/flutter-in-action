@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
    - 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)。
    - Flutter在构建页面时，会调用组件的`build`方法，widget的主要工作是提供一个build()方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
    - `MaterialApp` 是Material库中提供的Flutter APP框架，通过它可以设置应用的名称、主题、语言、首页及路由列表等。`MaterialApp`也是一个widget。
-   - `Scaffold` 是Material库中提供的页面脚手架，它包含导航栏和Body以及FloatingActionButton（如果需要的化）。
+   - `Scaffold` 是Material库中提供的页面脚手架，它包含导航栏和Body以及FloatingActionButton（如果需要的话）。
    - `home` 为Flutter应用的首页，它也是一个widget。
 
 4. 首页
@@ -213,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
    ```
 
    - Scaffold 是 Material库中提供的一个widget, 它提供了默认的导航栏、标题和包含主屏幕widget树的body属性。widget树可以很复杂。
-   - body的widget树中包含了一个`Center` widget，`Center` 可以将其子widget树对其到屏幕中心， `Center` 子widget是一个`Column` widget，`Column`的作用是将其所有子widget沿屏幕垂直方向依次排列， 此例中`Column`包含两个 `Text `子widget，第一个`Text` widget显示固定文本 “You have pushed the button this many times:”，第二个`Text` widget显示`_counter`状态的数值。
+   - body的widget树中包含了一个`Center` widget，`Center` 可以将其子widget树对齐到屏幕中心， `Center` 子widget是一个`Column` widget，`Column`的作用是将其所有子widget沿屏幕垂直方向依次排列， 此例中`Column`包含两个 `Text `子widget，第一个`Text` widget显示固定文本 “You have pushed the button this many times:”，第二个`Text` widget显示`_counter`状态的数值。
    - floatingActionButton是页面右下角的带“➕”的悬浮按钮，它的`onPressed`属性接受一个回调函数，代表它本点击后的处理器，本例中直接将`_incrementCounter`作为其处理函数。
 
 
