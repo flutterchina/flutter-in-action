@@ -46,7 +46,7 @@
    ```dart
    //可以省略String这个类型声明
    final str = "hi world";
-   //final str = "hi world"; 
+   //final String str = "hi world"; 
    const str1 = "hi world";
    //const String str1 = "hi world";
    ```
