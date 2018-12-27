@@ -1,10 +1,11 @@
-# Summary
+﻿# Summary
 
 * [缘起](README.md)
 * [起步](chapter1/index.md)
     * [移动开发技术简介](chapter1/mobile_development_intro.md)
     * [Flutter简介](chapter1/flutter_intro.md)  
-    * [搭建Flutter开发环境](chapter1/install_flutter.md)        
+    * [搭建Flutter开发环境](chapter1/install_flutter.md)      
+    * [常见配置问题](chapter1/configuration.md)  
     * [Dart语言简介](chapter1/dart.md)    
     
 * [第一个Flutter应用](chapter2/index.md)
