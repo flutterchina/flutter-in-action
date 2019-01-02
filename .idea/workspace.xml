@@ -3,90 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter1/dart.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/dart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/dio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/dio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/file_operation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/file_operation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/http.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/http.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/json_model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/socket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/socket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/websocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/websocket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/android_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/develop_package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/intl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/combine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/turn_box.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/input_and_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/input_and_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/radio_and_checkbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/radio_and_checkbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter3/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/text.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/flex.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/flex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/row_and_column.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/row_and_column.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/stack.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/stack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter4/wrap_and_flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter4/wrap_and_flow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/constrainedbox_and_sizebox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/constrainedbox_and_sizebox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/container.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/decoratedbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/decoratedbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/padding.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/padding.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter5/transform.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter5/transform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/custom_scrollview.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/custom_scrollview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/gridview.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/gridview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/listview.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/listview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/scroll_controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/scroll_controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter6/single_child_scrollview.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter6/single_child_scrollview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter7/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter7/inherited_widget.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter7/inherited_widget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter7/theme.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter7/theme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter7/willpopscope.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter7/willpopscope.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter8/eventbus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/eventbus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter8/gesture.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/gesture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter8/listener.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/listener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter8/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/hero.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_plus_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter1/mobile_development_intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter1/mobile_development_intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdn.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cdn.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/chapter3/input_and_form.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter3/input_and_form.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -120,7 +39,7 @@
           <entry key="js" value="1" />
           <entry key="json" value="9" />
           <entry key="less" value="2" />
-          <entry key="md" value="146" />
+          <entry key="md" value="147" />
           <entry key="mkdirp" value="1" />
           <entry key="multi_languages_support" value="1" />
           <entry key="png" value="2" />
@@ -136,7 +55,7 @@
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="2" />
           <entry key="Less" value="2" />
-          <entry key="Markdown" value="147" />
+          <entry key="Markdown" value="148" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="TypeScript" value="1" />
           <entry key="YAML" value="1" />
@@ -149,7 +68,7 @@
           <entry key="html" value="1675" />
           <entry key="json" value="483" />
           <entry key="less" value="8" />
-          <entry key="md" value="3271" />
+          <entry key="md" value="3286" />
           <entry key="mkdirp" value="1" />
           <entry key="sh" value="85" />
           <entry key="txt" value="132" />
@@ -163,7 +82,7 @@
           <entry key="JSON" value="483" />
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
-          <entry key="Markdown" value="3272" />
+          <entry key="Markdown" value="3287" />
           <entry key="PLAIN_TEXT" value="239" />
           <entry key="YAML" value="124" />
         </counts>
@@ -182,18 +101,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/chapter6/listview.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="259">
-                <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/chapter7/inherited_widget.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -205,11 +112,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/chapter3/input_and_form.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="203">
+                <caret line="342" column="39" selection-start-line="342" selection-start-column="39" selection-end-line="342" selection-end-column="39" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -346,7 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/chapter4/row_and_column.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/website/layout.html" />
         <option value="$PROJECT_DIR$/docs/src/less/ebook/base.less" />
         <option value="$PROJECT_DIR$/docs/src/less/website/body.less" />
@@ -397,6 +315,7 @@
         <option value="$PROJECT_DIR$/docs/chapter6/listview.md" />
         <option value="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" />
         <option value="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" />
+        <option value="$PROJECT_DIR$/docs/chapter3/input_and_form.md" />
       </list>
     </option>
   </component>
@@ -457,7 +376,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1221" />
+    <option name="x" value="-1348" />
     <option name="y" value="-47" />
     <option name="width" value="1553" />
     <option name="height" value="894" />
@@ -474,6 +393,23 @@
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -534,7 +470,7 @@
       <workItem from="1544165182701" duration="510000" />
       <workItem from="1544334834059" duration="18354000" />
       <workItem from="1545039652872" duration="5353000" />
-      <workItem from="1546423553346" duration="3377000" />
+      <workItem from="1546423553346" duration="4132000" />
     </task>
     <task id="LOCAL-00001" summary="添加_book目录">
       <created>1543498533114</created>
@@ -844,11 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545124091667</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action">
+      <created>1546431092637</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1546431092637</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86980000" />
+    <option name="totallyTimeSpent" value="87735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -860,7 +803,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1221" y="-47" width="1553" height="894" extended-state="0" />
+    <frame x="-1403" y="143" width="1553" height="894" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30613577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -901,16 +845,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/chapter12/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1324,7 +1258,17 @@
     <entry file="file://$PROJECT_DIR$/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter3/input_and_form.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="203">
+            <caret line="342" column="39" selection-start-line="342" selection-start-column="39" selection-end-line="342" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
