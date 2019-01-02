@@ -214,7 +214,7 @@ Row(
 
    ```dart
    class MyIcons{
-     // fork 图标
+     // book 图标
      static const IconData book = const IconData(
          0xe614, 
          fontFamily: 'myIcon', 
