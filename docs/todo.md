@@ -2,6 +2,6 @@
 
 本文档尚未完成，您可以：
 
-1. 去[Flutter中文网](https://flutterchina.com/doc)查看相关内容。
+1. 去[Flutter中文网](https://flutterchina.club/docs/)查看相关内容。
 2. 您想补充此文档？可以查看《Flutter实战》开源项目"贡献须知"。
 3. 点击下面的"赏"按钮，请作者喝杯咖啡，鼓励继续创作~~
