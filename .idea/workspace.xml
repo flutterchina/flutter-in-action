@@ -2,51 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_book/chapter1/configuration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/chapter2/thread_model_and_error_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/imgs/both-queues.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/imgs/dl_google_err.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/imgs/fix_maven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/imgs/install_platforms_err.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_book/imgs/install_request_components.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/imgs/both-queues.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter1/configuration.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/configuration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/dart.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/dart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/flutter_intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/dio.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/dio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/file_operation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/file_operation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/http.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/http.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/json_model.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/socket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/socket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/websocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/websocket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/android_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/develop_package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/intl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/combine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/turn_box.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/dio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/file_operation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/http.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/socket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/websocket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_package_mgr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_router.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter2/thread_model_and_error_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/thread_model_and_error_report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/buttons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/flutter_widget_intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter3/img_and_icon.html" afterDir="false" />
@@ -82,20 +75,17 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter8/listener.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/listener.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter8/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/hero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/hero.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_plus_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SUMMARY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter2/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter8/listener.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter8/listener.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -161,7 +151,7 @@
           <entry key="md" value="3527" />
           <entry key="mkdirp" value="1" />
           <entry key="sh" value="87" />
-          <entry key="txt" value="152" />
+          <entry key="txt" value="184" />
           <entry key="yml" value="124" />
         </counts>
       </usages-collector>
@@ -173,7 +163,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
           <entry key="Markdown" value="3528" />
-          <entry key="PLAIN_TEXT" value="261" />
+          <entry key="PLAIN_TEXT" value="293" />
           <entry key="YAML" value="124" />
         </counts>
       </usages-collector>
@@ -466,7 +456,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1489" />
+    <option name="x" value="-1723" />
+    <option name="y" value="-34" />
     <option name="width" value="1553" />
     <option name="height" value="894" />
   </component>
@@ -560,7 +551,7 @@
       <workItem from="1544334834059" duration="18354000" />
       <workItem from="1545039652872" duration="5353000" />
       <workItem from="1546423553346" duration="6208000" />
-      <workItem from="1546847217343" duration="2845000" />
+      <workItem from="1546847217343" duration="3189000" />
     </task>
     <task id="LOCAL-00001" summary="添加_book目录">
       <created>1543498533114</created>
@@ -898,11 +889,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546584984076</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节">
+      <created>1546858252025</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1546858252025</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92656000" />
+    <option name="totallyTimeSpent" value="93000000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -914,7 +912,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1489" y="0" width="1553" height="894" extended-state="0" />
+    <frame x="-1723" y="-34" width="1553" height="894" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30613577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -954,7 +952,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action" />
     <MESSAGE value="fix #69" />
     <MESSAGE value="更新网站日活用户数" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新网站日活用户数" />
+    <MESSAGE value="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/chapter13/turn_box.md">

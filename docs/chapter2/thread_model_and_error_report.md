@@ -80,7 +80,7 @@ static void reportError(FlutterErrorDetails details) {
 ```dart
 void main() {
   FlutterError.onError = (FlutterErrorDetails details) {
-    reportError(details)；
+    reportError(details);
   };
  ...
 }
@@ -117,7 +117,7 @@ runZoned(() {
     runApp(MyApp());
 }, onError: (Object obj, StackTrace stack) {
     var details=makeDetails(obj,stack);
-    reportError(details)；
+    reportError(details);
 });
 ```
 
@@ -132,4 +132,28 @@ runZoned(() {
 	}, onError: (e) { print("unused error handler"); });
 }, onError: (e) { print("catches error of first error-zone."); });
 
+```
+
+我们最终的异常捕获和上报代码如下：
+
+```dart
+void reportError(FlutterErrorDetails details){
+    ... //上报错误逻辑
+}
+
+FlutterErrorDetails makeDetails(Object obj, StackTrace stack){
+    ...// 构建错误信息
+}
+
+void main() {
+  FlutterError.onError = (FlutterErrorDetails details) {
+    reportError(details);
+  };
+  runZoned(() {
+    runApp(MyApp());
+  }, onError: (Object obj, StackTrace stack) {
+    var details=makeDetails(obj,stack);
+    reportError(details);
+  });
+}
 ```
