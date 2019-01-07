@@ -73,7 +73,7 @@ Listener(
 
   上例中，只有点击文本内容区域才会触发点击事件，如果我们想让整个300×150的矩形区域都能点击我们可以将`behavior`设为`HitTestBehavior.opaque`。注意，该属性并不能用于在Widget树中拦截（忽略）事件，它只是决定命中测试时的Widget大小。
 
-- `translucent`：当点击透明区域时，可以对底部widget进行命中测试，这意味着底部widget也可以接收事件。`translucent`可以在Stack中实现"点透"的效果。例如：
+- `translucent`：当点击Widget透明区域时，可以对自身边界内及底部可视区域都进行命中测试，这意味着点击顶部widget透明区域时，顶部widget和底部widget都可以接收到事件，例如：
 
   ```dart
   Stack(
@@ -98,12 +98,13 @@ Listener(
   )
   ```
 
-  上例中，当注释掉最后一行代码后，在左上角200*100范围内非文本区域点击时，控制台只会打印“down1”，当放开注释后，再点击时就会打印：
+  上例中，当注释掉最后一行代码后，在左上角200*100范围内非文本区域点击时（顶部Widget透明区域），控制台只会打印“down0”，也就是说顶部widget没有接收到事件，而只有底部接收到了。当放开注释后，再点击时顶部和底部都会接收到事件，此时会打印：
 
   ```
   I/flutter ( 3039): down1
   I/flutter ( 3039): down0
   ```
+  如果`behavior`值改为`HitTestBehavior.opaque`，则只会打印"down1"。
 
 ### 忽略PointerEvent
 

@@ -14,6 +14,7 @@
     * [包管理](chapter2/flutter_package_mgr.md)        
     * [资源管理](chapter2/flutter_assets_mgr.md)    
     * [调试Flutter APP](chapter2/flutter_app_debug.md)
+    * [Dart线程模型及异常捕获](chapter2/thread_model_and_error_report.md)
     
 * [基础Widgets](chapter3/index.md)
     * [Widget简介](chapter3/flutter_widget_intro.md)
