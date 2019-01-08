@@ -9,30 +9,12 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/install_flutter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter1/mobile_development_intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/dio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/file_operation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/http.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/socket.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/websocket.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/combine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/intro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/turn_box.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" afterDir="false" />
@@ -75,16 +57,14 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter8/listener.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/listener.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter8/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter8/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/hero.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/animation_structure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/hero.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/intro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/chapter13/custom_paint.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter13/custom_paint.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -171,12 +151,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/SUMMARY.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <first_editor relative-caret-position="375">
+                <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -259,11 +239,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="-2555" />
               <second_editor />
             </state>
           </provider>
@@ -456,10 +436,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1723" />
-    <option name="y" value="-34" />
+    <option name="x" value="56" />
+    <option name="y" value="23" />
     <option name="width" value="1553" />
-    <option name="height" value="894" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -551,14 +531,7 @@
       <workItem from="1544334834059" duration="18354000" />
       <workItem from="1545039652872" duration="5353000" />
       <workItem from="1546423553346" duration="6208000" />
-      <workItem from="1546847217343" duration="3189000" />
-    </task>
-    <task id="LOCAL-00001" summary="添加_book目录">
-      <created>1543498533114</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1543498533114</updated>
+      <workItem from="1546847217343" duration="5170000" />
     </task>
     <task id="LOCAL-00002" summary="删除node_modules">
       <created>1543499230382</created>
@@ -896,11 +869,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546858252025</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节">
+      <created>1546858572170</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1546858572170</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93000000" />
+    <option name="totallyTimeSpent" value="94981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,7 +892,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1723" y="-34" width="1553" height="894" extended-state="0" />
+    <frame x="56" y="23" width="1553" height="834" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30613577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -926,8 +906,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4967363" weight="0.32734275" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4889034" visible="true" weight="0.3453145" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110966" side_tool="true" visible="true" weight="0.3453145" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4889034" visible="true" weight="0.37413073" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110966" side_tool="true" visible="true" weight="0.37413073" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1333,14 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter2/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1371,9 +1343,17 @@
     <entry file="file://$PROJECT_DIR$/docs/SUMMARY.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-2555" />
           <second_editor />
         </state>
       </provider>

@@ -30,7 +30,7 @@ const CustomPaint({
 
 #### 注意
 
-如果CustomPaint有子节点，为了避免子节点不必要的重绘，通常情况下都会将子节点包裹在RepaintBoundary Widget中来隔离子节点和CustomPaint本身的绘制边界，如：
+如果CustomPaint有子节点，为了避免子节点不必要的重绘并提高性能，通常情况下都会将子节点包裹在RepaintBoundary Widget中，这样会在绘制时创建一个新的绘制层（Layer），其子Widget将在新的Layer上绘制，而父Widget将在原来Layer上绘制，也就是说RepaintBoundary 子Widget的绘制将独立于父Widget的绘制，RepaintBoundary会隔离其子节点和CustomPaint本身的绘制边界。示例如下：
 
 ```dart
 CustomPaint(
