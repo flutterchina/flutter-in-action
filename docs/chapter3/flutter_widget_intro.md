@@ -593,7 +593,7 @@ Flutter提供了一套丰富、强大的基础widget，在基础widget库之上F
 import 'package:flutter/widgets.dart';
 ```
 
-下面我们介绍换一下常用的widget。
+下面我们介绍一下常用的widget。
 
 ### 基础widget
 
