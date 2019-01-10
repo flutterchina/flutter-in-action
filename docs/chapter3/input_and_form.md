@@ -336,7 +336,6 @@ Theme(
             hintText: "用户名或邮箱",
             prefixIcon: Icon(Icons.person)
         ),
-        obscureText: true,
       ),
       TextField(
         decoration: InputDecoration(
@@ -345,6 +344,7 @@ Theme(
             hintText: "您的登录密码",
             hintStyle: TextStyle(color: Colors.grey, fontSize: 13.0)
         ),
+        obscureText: true,
       )
     ],
   )
