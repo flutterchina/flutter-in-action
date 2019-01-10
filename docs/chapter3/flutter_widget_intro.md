@@ -51,7 +51,7 @@ abstract class Widget extends DiagnosticableTree {
 - `debugFillProperties(...)` 复写父类的方法，主要是设置诊断树的一些特性。
 - `canUpdate(...)`是一个静态方法，它主要用于在Widget树重新`build`时复用旧的widget，其实具体来说，应该是：是否用新的Widget对象去更新旧UI树上所对应的`Element`对象的配置；通过其源码我们可以看到，只要`newWidget`与`oldWidget`的`runtimeType`和`key`同时相等时就会用`newWidget`去更新`Element`对象的配置，否则就会创建新的`Element`。
 
-有关Key和Widget复用的细节将会在本书后面高级部分深入讨论，读者现在只需知道，为Widget显式添加key的话可能（但不一定）会使UI在重新构建时变的高效，读者目前可以先忽略此参数。本书后面的示例中，我们只在构建列表项UI时会显示指定Key。
+有关Key和Widget复用的细节将会在本书后面高级部分深入讨论，读者现在只需知道，为Widget显式添加key的话可能（但不一定）会使UI在重新构建时变的高效，读者目前可以先忽略此参数。本书后面的示例中，我们只在构建列表项UI时会显式指定Key。
 
 另外`Widget`类本身是一个抽象类，其中最核心的就是定义了`createElement()`接口，在Flutter开发中，我们一般都不用直接继承`Widget`类来实现Widget，相反，我们通常会通过继承`StatelessWidget`和`StatefulWidget`来间接继承`Widget`类来实现，而`StatelessWidget`和`StatefulWidget`都是直接继承自`Widget`类，而这两个类也正是Flutter中非常重要的两个抽象类，它们引入了两种Widget模型，接下来我们将重点介绍一下这两个类。
 
