@@ -179,11 +179,12 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
+    return new Scaffold(
+      body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, //每行三列
             childAspectRatio: 1.0 //显示区域宽高相等
-        ),
+            ),
         itemCount: _icons.length,
         itemBuilder: (context, index) {
           //如果显示到最后一个并且Icon总数小于200时继续获取数据
@@ -192,6 +193,7 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
           }
           return Icon(_icons[index]);
         }
+      )
     );
   }
 
