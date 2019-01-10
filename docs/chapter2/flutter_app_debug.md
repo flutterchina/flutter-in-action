@@ -11,7 +11,7 @@ Dart分析器大量使用了代码中的类型注释来帮助追踪问题。我�
 
 ## Dart Observatory (语句级的单步调试和分析器)
 
-如果您使用`flutter run`启动应用程序，那么当它运行时，您可以打开Observatory URL的Web页面（例如Observatory监听http://127.0.0.1:8100/）， 直接使用语句级单步调试器连接到您的应用程序。如果您使用的是IntelliJ，则还可以使用其内置的调试器来调试您的应用程序。
+如果您使用`flutter run`启动应用程序，那么当它运行时，您可以打开Observatory URL的Web页面（例如Observatory监听[http://127.0.0.1:8100/](http://127.0.0.1:8100/)）， 直接使用语句级单步调试器连接到您的应用程序。如果您使用的是IntelliJ，则还可以使用其内置的调试器来调试您的应用程序。
 
 Observatory 同时支持分析、检查堆等。有关Observatory的更多信息请参考[Observatory 文档](https://dart-lang.github.io/observatory/).
 
