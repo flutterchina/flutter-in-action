@@ -91,15 +91,12 @@
     * [实现Localizations](chapter12/locallization_implement.md) 
     * [使用Intl包](chapter12/intl.md) 
     
-* [Flutter 核心原理](chapter14/index.md)
+* [Flutter核心原理](chapter14/index.md)
     * [Flutter UI系统](chapter14/flutter_ui_system.md)
-    * [Widget、Element与BuildContext](todo.md)
-    * [RenderObject与RenderBox](todo.md)
-    * [Notification与事件冒泡](todo.md)
+    * [Element和BuildContext](chapter14/element_buildcontext.md)
+    * [RenderObject与RenderBox](chapter14/render_object.md)
     * [Scrollable原理](todo.md)
     * [InheritedWidget与数据传递](todo.md) 
-    * [ParentDataWidget](todo.md) 
-    * [布局与绘制过程](todo.md)
      
 * [Flutter资源汇总](todo.md)
 
