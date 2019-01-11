@@ -6,7 +6,7 @@
 
 ## 搭建Flutter开发环境
 
-由于Flutter会同时构建Android和IOS两个平台的发布包，所以Flutter同时依赖Android SDK和iOS SDK，在安装Flutter时也需要安装响应平台的构建工具和SDK。下面我们分别介绍一下Windows和macOS下的环境搭建。
+由于Flutter会同时构建Android和IOS两个平台的发布包，所以Flutter同时依赖Android SDK和iOS SDK，在安装Flutter时也需要安装相应平台的构建工具和SDK。下面我们分别介绍一下Windows和macOS下的环境搭建。
 
 ### 使用镜像
 
@@ -82,7 +82,7 @@ flutter doctor
       visit https://flutter.io/setup/#android-setup for detailed instructions.
 ```
 
-第一次运行一flutter命令（如`flutter doctor`）时，它会下载它自己的依赖项并自行编译。以后再运行就会快得多。缺失的依赖需要安装一下，安装完成后再运行`flutter doctor`命令来验证是否安装成功。
+第一次运行flutter命令（如`flutter doctor`）时，它会下载它自己的依赖项并自行编译。以后再运行就会快得多。缺失的依赖需要安装一下，安装完成后再运行`flutter doctor`命令来验证是否安装成功。
 
 #### Android设置
 
@@ -324,7 +324,7 @@ VS Code是一个轻量级编辑器，支持Flutter运行和调试。
 
 ## 连接设备运行Flutter应用
 
-Window下只支持为Android设备构建并运行Flutter应用，而macOS同时支持为iOS和Android设备。下面分别介绍如何连接Android和iOS设备来运行flutter应用。
+Window下只支持为Android设备构建并运行Flutter应用，而macOS同时支持iOS和Android设备。下面分别介绍如何连接Android和iOS设备来运行flutter应用。
 
 ### 连接Android模拟器
 
@@ -355,7 +355,7 @@ Window下只支持为Android设备构建并运行Flutter应用，而macOS同时�
 3. 在命令行运行 `flutter devices` 命令以验证Flutter识别您连接的Android设备。
 4. 运行启动你应用程序 `flutter run`。
 
-默认情况下，Flutter使用的Android SDK版本是基于你的 `adb` 工具版本。 如果想让Flutter使用不同版本的Android SDK，则必须将该 `ANDROID_HOME` 环境变量设置为响应的SDK安装目录。
+默认情况下，Flutter使用的Android SDK版本是基于你的 `adb` 工具版本。 如果想让Flutter使用不同版本的Android SDK，则必须将该 `ANDROID_HOME` 环境变量设置为相应的SDK安装目录。
 
 ### 连接iOS模拟器
 

@@ -6,7 +6,7 @@
 
 为了更好的方便帮助中国开发者了解这门新技术，我们，[Flutter中文网](https://flutterchina.club/)，前后发起了Flutter翻译计划、Flutter开源计划，前者主要的任务是翻译Flutter官方文档，后者则主要是开发一些常用的包来丰富Flutter生态，帮助开发者提高开发效率。而时至今日，这两件事取得的效果还都不错！
 
-目前，Flutter中文官网日PV在2W左右，每日独立访问人数3000多。
+目前，Flutter中文官网日PV在5W左右，每日独立访问人数8000多。
 
 自今年我们在github建立[官方账号](https://github.com/flutterchina)以来，前后开源了cookieJar、dio、flukit等多个项目，而dio在开源两周后，就迅速成为Flutter第三方包中Star排名第一的开源库。
 

@@ -4,7 +4,7 @@
 
 在移动端，各个平台或UI系统的原始指针事件模型基本都是一致，即：一次完整的事件分为三个阶段：手指按下、手指移动、和手指抬起，而更高级别的手势（如点击、双击、拖动等）都是基于这些原始事件的。
 
-当指针按下时，Flutter会对应用程序执行**命中测试(Hit Test)**，以确定指针与屏幕接触的位置存在哪些widget， 指针按下事件（以及该指针的后续事件）然后被分发到由命中测试发现的最内部的widget。 从那里开始，这些事件会冒泡在widget树中向上冒泡，这些事件会从最内部的widget被分发到到widget根的路径上的所有Widget，这和Web开发中浏览器的**事件冒泡**机制相似， 但是Flutter中没有机制取消或停止冒泡过程，而浏览器的冒泡是可以停止的。注意，只有通过命中测试的Widget才能触发事件。
+当指针按下时，Flutter会对应用程序执行**命中测试(Hit Test)**，以确定指针与屏幕接触的位置存在哪些widget， 指针按下事件（以及该指针的后续事件）然后被分发到由命中测试发现的最内部的widget，然后从那里开始，事件会在widget树中向上冒泡，这些事件会从最内部的widget被分发到到widget根的路径上的所有Widget，这和Web开发中浏览器的**事件冒泡**机制相似， 但是Flutter中没有机制取消或停止冒泡过程，而浏览器的冒泡是可以停止的。注意，只有通过命中测试的Widget才能触发事件。
 
 Flutter中可以使用Listener widget来监听原始触摸事件，它也是一个功能性widget。
 
@@ -65,15 +65,15 @@ Listener(
       child: ConstrainedBox(
           constraints: BoxConstraints.tight(Size(300.0, 150.0)),
           child: Center(child: Text("Box A")),
-          //behavior: HitTestBehavior.opaque
       ),
+      //behavior: HitTestBehavior.opaque,
       onPointerDown: (event) => print("down A")
   ),
   ```
 
   上例中，只有点击文本内容区域才会触发点击事件，如果我们想让整个300×150的矩形区域都能点击我们可以将`behavior`设为`HitTestBehavior.opaque`。注意，该属性并不能用于在Widget树中拦截（忽略）事件，它只是决定命中测试时的Widget大小。
 
-- `translucent`：当点击透明区域时，可以对底部widget进行命中测试，这意味着底部widget也可以接收事件。`translucent`可以在Stack中实现"点透"的效果。例如：
+- `translucent`：当点击Widget透明区域时，可以对自身边界内及底部可视区域都进行命中测试，这意味着点击顶部widget透明区域时，顶部widget和底部widget都可以接收到事件，例如：
 
   ```dart
   Stack(
@@ -98,12 +98,13 @@ Listener(
   )
   ```
 
-  上例中，当注释掉最后一行代码后，在左上角200*100范围内非文本区域点击时，控制台只会打印“down1”，当放开注释后，再点击时就会打印：
+  上例中，当注释掉最后一行代码后，在左上角200*100范围内非文本区域点击时（顶部Widget透明区域），控制台只会打印“down0”，也就是说顶部widget没有接收到事件，而只有底部接收到了。当放开注释后，再点击时顶部和底部都会接收到事件，此时会打印：
 
   ```
   I/flutter ( 3039): down1
   I/flutter ( 3039): down0
   ```
+  如果`behavior`值改为`HitTestBehavior.opaque`，则只会打印"down1"。
 
 ### 忽略PointerEvent
 

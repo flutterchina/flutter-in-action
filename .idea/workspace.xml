@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/dio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/file_operation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/http.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/json_model.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/socket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter10/websocket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter11/android_implement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter11/develop_package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter11/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter12/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter12/intl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter14/element_buildcontext.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter14/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/chapter14/render_object.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/imgs/Screenshot_1547041690.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/imgs/Screenshot_1547041693.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/imgs/overflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/search_index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/search_plus_index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,14 +43,15 @@
     <session id="1661963699">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,14 +59,14 @@
           <entry key="MD" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="45" />
-          <entry key="js" value="1" />
+          <entry key="js" value="3" />
           <entry key="json" value="9" />
           <entry key="less" value="2" />
-          <entry key="md" value="132" />
+          <entry key="md" value="154" />
           <entry key="mkdirp" value="1" />
           <entry key="multi_languages_support" value="1" />
           <entry key="png" value="2" />
-          <entry key="sh" value="4" />
+          <entry key="sh" value="7" />
           <entry key="travis" value="1" />
           <entry key="ts" value="1" />
         </counts>
@@ -50,10 +76,10 @@
           <entry key="HTML" value="45" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="4" />
           <entry key="Less" value="2" />
-          <entry key="Markdown" value="133" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Markdown" value="155" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="TypeScript" value="1" />
           <entry key="YAML" value="1" />
         </counts>
@@ -65,22 +91,22 @@
           <entry key="html" value="1675" />
           <entry key="json" value="483" />
           <entry key="less" value="8" />
-          <entry key="md" value="3208" />
+          <entry key="md" value="3646" />
           <entry key="mkdirp" value="1" />
-          <entry key="sh" value="85" />
-          <entry key="txt" value="132" />
+          <entry key="sh" value="87" />
+          <entry key="txt" value="190" />
           <entry key="yml" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="2" />
+          <entry key="Dart" value="4" />
           <entry key="HTML" value="1675" />
           <entry key="JSON" value="483" />
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
-          <entry key="Markdown" value="3211" />
-          <entry key="PLAIN_TEXT" value="239" />
+          <entry key="Markdown" value="3647" />
+          <entry key="PLAIN_TEXT" value="299" />
           <entry key="YAML" value="124" />
         </counts>
       </usages-collector>
@@ -88,39 +114,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/SUMMARY.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="286">
-                <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+              <first_editor relative-caret-position="288">
+                <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdn.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/imgs/gradient-button.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -133,11 +136,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/chapter3/flutter_widget_intro.md">
+        <entry file="file://$USER_HOME$/.gitbook/versions/3.2.3/lib/output/modifiers/highlightCode.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter14/element_buildcontext.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="9120">
-                <caret line="608" selection-start-line="608" selection-end-line="608" />
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter14/render_object.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="2" selection-start-column="2" selection-end-column="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,23 +167,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/docs/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="328">
+                <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/todo.md">
+        <entry file="file://$PROJECT_DIR$/docs/chapter8/listener.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <first_editor relative-caret-position="101">
+                <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -172,20 +194,32 @@
         <entry file="file://$PROJECT_DIR$/docs/chapter14/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <first_editor relative-caret-position="313">
+                <caret line="185" column="1" selection-start-line="185" selection-end-line="185" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter2/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="51" />
               </first_editor>
               <second_editor />
             </state>
@@ -196,11 +230,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>替换为适当大小的图</find>
-      <find>译者语</find>
-      <find>=</find>
-      <find>$PROJECT_DIR$/../../../../../du/Desktop/flutter in action/第四章</find>
-      <find>hero</find>
       <find>$PROJECT_DIR$/../../../../../du/Desktop/flutter in action/第六章</find>
       <find>$PROJECT_DIR$/../../../../../du/Desktop/flutter in action/第三章</find>
       <find>user</find>
@@ -226,6 +255,11 @@
       <find>flutter下如何是使用</find>
       <find>LinearLayout</find>
       <find>本书仍在堪误阶段，请勿以任何形式私自传播，作者保留对本书的版权</find>
+      <find>fork</find>
+      <find>4</find>
+      <find>命中</find>
+      <find>命中测试</find>
+      <find>点击测试</find>
     </findStrings>
     <replaceStrings>
       <replace>注意</replace>
@@ -237,6 +271,8 @@
       <replace>印象</replace>
       <replace>电池信息不可用</replace>
       <replace />
+      <replace>点击测试</replace>
+      <replace>命中测试</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/docs/chapter3</dir>
@@ -246,8 +282,8 @@
       <dir>$PROJECT_DIR$/docs/_layouts/website</dir>
       <dir>$PROJECT_DIR$/docs/chapter4</dir>
       <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/docs</dir>
       <dir>$PROJECT_DIR$/docs/_layouts</dir>
+      <dir>$PROJECT_DIR$/docs</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -256,12 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/chapter8/listener.md" />
-        <option value="$PROJECT_DIR$/docs/chapter1/index.md" />
-        <option value="$PROJECT_DIR$/docs/chapter10/json_model.md" />
-        <option value="$PROJECT_DIR$/theme-default/_layouts/website/layout.html" />
-        <option value="$PROJECT_DIR$/docs/chapter4/row_and_column.md" />
-        <option value="$PROJECT_DIR$/docs/_layouts/website/layout.html" />
         <option value="$PROJECT_DIR$/docs/src/less/ebook/base.less" />
         <option value="$PROJECT_DIR$/docs/src/less/website/body.less" />
         <option value="$PROJECT_DIR$/docs/chapter10/dio.md" />
@@ -270,7 +300,6 @@
         <option value="$PROJECT_DIR$/node_modules/.bin/mkdirp" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/_layouts/website/header.html" />
-        <option value="$PROJECT_DIR$/docs/chapter2/index.md" />
         <option value="$PROJECT_DIR$/docs/chapter3/index.md" />
         <option value="$PROJECT_DIR$/docs/chapter4/intro.md" />
         <option value="$PROJECT_DIR$/docs/chapter4/index.md" />
@@ -289,24 +318,31 @@
         <option value="$PROJECT_DIR$/docs/chapter5/padding.md" />
         <option value="$PROJECT_DIR$/docs/chapter9/stagger_animation.md" />
         <option value="$PROJECT_DIR$/docs/chapter12/index.md" />
-        <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/docs/chapter3/buttons.md" />
         <option value="$PROJECT_DIR$/docs/chapter8/gesture.md" />
         <option value="$PROJECT_DIR$/docs/chapter13/custom_paint.md" />
-        <option value="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" />
         <option value="$PROJECT_DIR$/docs/chapter13/gradient_circular_progress_demo.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/website/_page.html" />
         <option value="$PROJECT_DIR$/docs/chapter13/combine.md" />
-        <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/docs/chapter13/intro.md" />
         <option value="$PROJECT_DIR$/docs/chapter13/index.md" />
         <option value="$PROJECT_DIR$/book.json" />
         <option value="$PROJECT_DIR$/cdn.sh" />
         <option value="$PROJECT_DIR$/docs/chapter3/flutter_widget_intro.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
-        <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
-        <option value="$PROJECT_DIR$/docs/chapter14/index.md" />
         <option value="$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md" />
+        <option value="$PROJECT_DIR$/docs/chapter1/mobile_development_intro.md" />
+        <option value="$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md" />
+        <option value="$PROJECT_DIR$/docs/chapter6/listview.md" />
+        <option value="$PROJECT_DIR$/docs/chapter2/first_flutter_app.md" />
+        <option value="$PROJECT_DIR$/docs/chapter3/img_and_icon.md" />
+        <option value="$PROJECT_DIR$/docs/chapter3/input_and_form.md" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
+        <option value="$PROJECT_DIR$/docs/chapter2/index.md" />
+        <option value="$PROJECT_DIR$/build.sh" />
+        <option value="$PROJECT_DIR$/docs/chapter8/listener.md" />
+        <option value="$PROJECT_DIR$/docs/chapter14/index.md" />
+        <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
       </list>
     </option>
   </component>
@@ -316,11 +352,61 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/node_modules/boolbase/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/cheerio/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/clipboard/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/css-select/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/css-what/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/delegate/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/dom-serializer/node_modules/domelementtype/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/dom-serializer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/domelementtype/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/domhandler/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/domutils/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/entities/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-ace/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-donate/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-prism/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-search-pro/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-splitter/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/gitbook-plugin-toggle-chapters/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/good-listener/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/highlight.js/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/html-entities/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/html-escape/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/htmlparser2/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.assignin/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.bind/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.defaults/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.filter/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.flatten/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.foreach/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.map/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.merge/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.pick/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.reduce/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.reject/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash.some/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/nth-check/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/prismjs/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/select/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tiny-emitter/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/util-deprecate/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1470" />
-    <option name="y" value="53" />
-    <option name="width" value="1855" />
-    <option name="height" value="829" />
+    <option name="x" value="147" />
+    <option name="y" value="68" />
+    <option name="width" value="1553" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -328,6 +414,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,13 +431,24 @@
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="chapter14" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,28 +502,9 @@
       <workItem from="1544064730411" duration="614000" />
       <workItem from="1544165182701" duration="510000" />
       <workItem from="1544334834059" duration="18354000" />
-      <workItem from="1545039652872" duration="4416000" />
-    </task>
-    <task id="LOCAL-00001" summary="添加_book目录">
-      <created>1543498533114</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1543498533114</updated>
-    </task>
-    <task id="LOCAL-00002" summary="删除node_modules">
-      <created>1543499230382</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1543499230382</updated>
-    </task>
-    <task id="LOCAL-00003" summary="删除node_modules">
-      <created>1543499268688</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1543499268688</updated>
+      <workItem from="1545039652872" duration="5353000" />
+      <workItem from="1546423553346" duration="6208000" />
+      <workItem from="1546847217343" duration="10394000" />
     </task>
     <task id="LOCAL-00004" summary="删除node_modules">
       <created>1543499277121</created>
@@ -707,11 +786,74 @@
       <option name="project" value="LOCAL" />
       <updated>1545123903924</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action">
+      <created>1545124091667</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1545124091667</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action">
+      <created>1546431092637</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1546431092637</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix #69">
+      <created>1546432074119</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1546432074119</updated>
+    </task>
+    <task id="LOCAL-00047" summary="更新网站日活用户数">
+      <created>1546584923781</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1546584923781</updated>
+    </task>
+    <task id="LOCAL-00048" summary="更新网站日活用户数">
+      <created>1546584984076</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1546584984076</updated>
+    </task>
+    <task id="LOCAL-00049" summary="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节">
+      <created>1546858252025</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1546858252025</updated>
+    </task>
+    <task id="LOCAL-00050" summary="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节">
+      <created>1546858572170</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1546858572170</updated>
+    </task>
+    <task id="LOCAL-00051" summary="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节">
+      <created>1546939331156</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1546939331156</updated>
+    </task>
+    <task id="LOCAL-00052" summary="添加&quot;chapter14&quot;两章">
+      <created>1547122942024</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1547122942025</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82666000" />
+    <option name="totallyTimeSpent" value="100205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,9 +865,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1470" y="53" width="1855" height="829" extended-state="0" />
+    <frame x="147" y="68" width="1553" height="832" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17611778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30613577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -736,9 +878,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49762186" weight="0.3279503" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49073064" visible="true" weight="0.2184874" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50926936" side_tool="true" visible="true" weight="0.2184874" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4967363" weight="0.32734275" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4889034" visible="true" weight="0.35564855" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110966" side_tool="true" visible="true" weight="0.35564855" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -761,208 +903,13 @@
     <MESSAGE value="添加&quot;自定义Widget&quot;一章" />
     <MESSAGE value="update" />
     <MESSAGE value="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/flutterchina/flutter-in-action" />
+    <MESSAGE value="fix #69" />
+    <MESSAGE value="更新网站日活用户数" />
+    <MESSAGE value="添加&quot;chapter2/Dart线程模型及异常捕获&quot;一节" />
+    <MESSAGE value="添加&quot;chapter14&quot;两章" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加&quot;chapter14&quot;两章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/chapter10/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter11/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter11/develop_package.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_book/chapter11/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter11/android_implement.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter11/ios_implement.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_book/chapter11/develop_package.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter12/multi_languages_support.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter12/locallization_implement.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="279">
-            <caret line="84" selection-start-line="84" selection-end-line="84" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter5/padding.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="249">
-            <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter9/stagger_animation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="279">
-            <caret line="155" selection-start-line="155" selection-end-line="155" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter12/intl.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter12/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="142">
-            <caret line="24" column="145" selection-start-line="24" selection-start-column="145" selection-end-line="24" selection-end-column="145" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter3/buttons.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="123">
-            <caret line="112" column="62" selection-start-line="112" selection-start-column="62" selection-end-line="112" selection-end-column="62" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter8/gesture.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="209" column="32" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter10/json_model.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-            <folding>
-              <element signature="e#0#22#0" expanded="true" />
-              <element signature="e#0#54#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter2/first_flutter_app.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_book/chapter13/custom_paint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="366" column="20" selection-start-line="366" selection-start-column="20" selection-end-line="366" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter13/turn_box.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter13/gradient_circular_progress_demo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" selection-start-line="3" selection-end-line="3" />
-            <folding>
-              <element signature="e#0#19#0" expanded="true" />
-              <element signature="e#0#19#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-475" />
@@ -1090,17 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter4/row_and_column.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1116,27 +1052,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="345">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/imgs/gradient-button.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdn.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter3/flutter_widget_intro.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1150,11 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="1395">
           <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,11 +1087,239 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter1/mobile_development_intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="318">
+            <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter4/row_and_column.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter4/flex.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="331">
+            <caret line="96" column="27" lean-forward="true" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="94" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter4/wrap_and_flow.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="303">
+            <caret line="129" column="29" lean-forward="true" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter7/theme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="246">
+            <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter6/scroll_controller.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter6/listview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="259">
+            <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter7/inherited_widget.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="176">
+            <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter1/dart.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter2/first_flutter_app.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="228">
+            <caret line="235" column="11" selection-start-line="234" selection-start-column="23" selection-end-line="235" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdn.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter3/input_and_form.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="5280">
+            <caret line="352" selection-start-line="352" selection-end-line="352" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gitbook/versions/3.2.3/lib/output/getModifiers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter3/img_and_icon.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3255">
+            <caret line="217" column="24" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter6/custom_scrollview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter6/gridview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1500">
+            <caret line="100" column="122" selection-start-line="100" selection-start-column="121" selection-end-line="100" selection-end-column="122" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter2/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="328">
+            <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter2/thread_model_and_error_report.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="313">
+            <caret line="185" column="1" selection-start-line="185" selection-end-line="185" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gitbook/versions/3.2.3/lib/output/modifiers/highlightCode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter8/listener.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="101">
+            <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter14/element_buildcontext.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter14/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter14/render_object.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="2" selection-start-column="2" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
@@ -1181,18 +1328,8 @@
     <entry file="file://$PROJECT_DIR$/docs/SUMMARY.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="286">
-            <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <first_editor relative-caret-position="288">
+            <caret line="93" column="10" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
           </first_editor>
           <second_editor />
         </state>

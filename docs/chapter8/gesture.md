@@ -67,7 +67,7 @@ class _Drag extends StatefulWidget {
 }
 
 class _DragState extends State<_Drag> with SingleTickerProviderStateMixin {
-  double _top = 0.0; //距顶部的便宜
+  double _top = 0.0; //距顶部的偏移
   double _left = 0.0;//距左边的偏移
 
   @override
@@ -309,7 +309,7 @@ class BothDirectionTestRouteState extends State<BothDirectionTestRoute> {
 
 #### 手势冲突
 
-由于手势竞争最终只有一个胜出者，所以，当有多个手势识别器时，可以会产生冲突。假设有一个widget，它可以左右拖动，现在我们也想检测在它上面手指按下和抬起的事件，代码如下：
+由于手势竞争最终只有一个胜出者，所以，当有多个手势识别器时，可能会产生冲突。假设有一个widget，它可以左右拖动，现在我们也想检测在它上面手指按下和抬起的事件，代码如下：
 
 ```dart
 class GestureConflictTestRouteState extends State<GestureConflictTestRoute> {

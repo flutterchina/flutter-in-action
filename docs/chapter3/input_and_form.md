@@ -331,19 +331,18 @@ Theme(
   child: Column(
     children: <Widget>[
       TextField(
-        controller: _pwdController,
         decoration: InputDecoration(
-            labelText: "密码",
-            hintText: "您的登录密码",
-            prefixIcon: Icon(Icons.lock)
+            labelText: "用户名",
+            hintText: "用户名或邮箱",
+            prefixIcon: Icon(Icons.person)
         ),
         obscureText: true,
       ),
       TextField(
         decoration: InputDecoration(
-            prefixIcon: Icon(Icons.search),
+            prefixIcon: Icon(Icons.lock),
             labelText: "密码",
-            hintText: "输入关键字搜索",
+            hintText: "您的登录密码",
             hintStyle: TextStyle(color: Colors.grey, fontSize: 13.0)
         ),
       )

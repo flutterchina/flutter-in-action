@@ -1,10 +1,11 @@
-# Summary
+﻿# Summary
 
 * [缘起](README.md)
 * [起步](chapter1/index.md)
     * [移动开发技术简介](chapter1/mobile_development_intro.md)
     * [Flutter简介](chapter1/flutter_intro.md)  
-    * [搭建Flutter开发环境](chapter1/install_flutter.md)        
+    * [搭建Flutter开发环境](chapter1/install_flutter.md)      
+    * [常见配置问题](chapter1/configuration.md)  
     * [Dart语言简介](chapter1/dart.md)    
     
 * [第一个Flutter应用](chapter2/index.md)
@@ -13,6 +14,7 @@
     * [包管理](chapter2/flutter_package_mgr.md)        
     * [资源管理](chapter2/flutter_assets_mgr.md)    
     * [调试Flutter APP](chapter2/flutter_app_debug.md)
+    * [Dart线程模型及异常捕获](chapter2/thread_model_and_error_report.md)
     
 * [基础Widgets](chapter3/index.md)
     * [Widget简介](chapter3/flutter_widget_intro.md)
@@ -89,15 +91,12 @@
     * [实现Localizations](chapter12/locallization_implement.md) 
     * [使用Intl包](chapter12/intl.md) 
     
-* [Flutter 核心原理](chapter14/index.md)
+* [Flutter核心原理](chapter14/index.md)
     * [Flutter UI系统](chapter14/flutter_ui_system.md)
-    * [Widget、Element与BuildContext](todo.md)
-    * [RenderObject与RenderBox](todo.md)
-    * [Notification与事件冒泡](todo.md)
+    * [Element和BuildContext](chapter14/element_buildcontext.md)
+    * [RenderObject与RenderBox](chapter14/render_object.md)
     * [Scrollable原理](todo.md)
     * [InheritedWidget与数据传递](todo.md) 
-    * [ParentDataWidget](todo.md) 
-    * [布局与绘制过程](todo.md)
      
 * [Flutter资源汇总](todo.md)
 
