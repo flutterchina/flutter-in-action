@@ -18,7 +18,7 @@ Container({
 })
 ```
 
-大多说属性在介绍其它容器时都已经介绍过了，不再赘述，但有两点需要说明：
+大多数属性在介绍其它容器时都已经介绍过了，不再赘述，但有两点需要说明：
 
 - 容器的大小可以通过`width`、`height`属性来指定，也可以通过`constraints`来指定，如果同时存在时，`width`、`height`优先。实际上Container内部会根据`width`、`height`来生成一个`constraints`。
 - `color`和`decoration`是互斥的，实际上，当指定color时，Container内会自动创建一个decoration。

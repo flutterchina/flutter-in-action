@@ -130,8 +130,8 @@ class TestFlowDelegate extends FlowDelegate {
         context.paintChild(i,
             transform: new Matrix4.translationValues(
                 x, y, 0.0));
+         x += context.getChildSize(i).width + margin.left + margin.right;
       }
-      x += context.getChildSize(i).width + margin.left + margin.right;
     }
   }
 

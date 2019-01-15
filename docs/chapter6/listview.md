@@ -193,6 +193,86 @@ class _InfiniteListViewState extends State<InfiniteListView> {
 
 代码比较简单，读者可以参照代码中的注释理解，故不再赘述。需要说明的是，`_retrieveData()`的功能是模拟从数据源异步获取数据，我们使用english_words包的`generateWordPairs()`方法每次生成20个单词。
 
+### 添加固定表头
+
+很多时候我们需要给列表添加一个固定表头，比如我们想实现一个商品列表，需要在列表顶部添加一个“商品列表”标题，效果如下：
+
+![Screenshot_1547537184](../imgs/Screenshot_1547537184.png)
+
+我们按照之前经验，写出如下代码：
+
+```dart
+@override
+Widget build(BuildContext context) {
+  return Column(children: <Widget>[
+    ListTile(title:Text("商品列表")),
+    ListView.builder(itemBuilder: (BuildContext context, int index) {
+        return ListTile(title: Text("$index"));
+    }),
+  ]);
+}
+```
+
+然后运行，发现并没有出现我们期望的效果，相反触发了一个异常；
+
+```
+Error caught by rendering library, thrown during performResize()。
+Vertical viewport was given unbounded height ...
+```
+
+从异常信息中我们可到是因为ListView高度边界无法确定引起，所以解决的办法也很明显，我们需要给ListView指定边界，我们通过`SizedBox`指定一个列表高度看看是否生效：
+
+```dart
+... //省略无关代码
+SizedBox(
+    height: 400, //指定列表高度为400
+    child: ListView.builder(itemBuilder: (BuildContext context, int index) {
+        return ListTile(title: Text("$index"));
+    }),
+),
+...
+```
+
+运行效果如下：
+
+![20190115153643](/Users/duwen/Documents/resource/flutter in action/book/docs/imgs/20190115153643.png)
+
+可以看到，现在没有触发异常并且列表已经显示出来了，但是我们的手机屏幕高度要大于400，所以底部会有一些空白，那如果我们要实现列表铺满除过表头以外的屏幕空间呢？直观的方法是我们动态计算，用屏幕高度减去状态栏、导航栏、表头的高度即为剩余屏幕高度，代码如下：
+
+```dart
+... //省略无关代码
+SizedBox(
+  //Material设计规范中状态栏、导航栏、ListTile高度分别为24、56、56 
+  height: MediaQuery.of(context).size.height-24-56-56,
+  child: ListView.builder(itemBuilder: (BuildContext context, int index) {
+    return ListTile(title: Text("$index"));
+  }),
+)
+...    
+```
+
+运行效果如下：
+
+![Screenshot_1547537184](../imgs/Screenshot_1547537184.png)
+
+可以看到，我们期望的效果实现了，但是这种方法并不优雅，如果页面布局发生变化，如表头布局调整导致表头高度改变，那么剩余空间的高度就得重新计算，那么有什么方法可以自动拉升ListView以填充屏幕剩余空间的方法吗？当然有！答案就是Flex。前面已经介绍过在Flex布局中，可以使用Expanded自动拉伸组件大小的Widget，我们也说过Column是继承自Flex的，所以我们可以直接使用Column+Expanded来实现，代码如下：
+
+```dart
+@override
+Widget build(BuildContext context) {
+  return Column(children: <Widget>[
+    ListTile(title:Text("商品列表")),
+    Expanded(
+      child: ListView.builder(itemBuilder: (BuildContext context, int index) {
+        return ListTile(title: Text("$index"));
+      }),
+    ),
+  ]);
+}
+```
+
+
+
 ### 总结
 
 本节主要介绍了ListView的一些公共参数以及常用的构造函数。不同的构造函数对应了不同的列表项生成模型，如果需要自定义列表项生成模型，可以通过`ListView.custom`来自定义，它需要实现一个SliverChildDelegate用来给ListView生成列表项widget，更多详情请参考API文档。

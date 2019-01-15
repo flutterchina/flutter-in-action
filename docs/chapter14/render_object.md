@@ -97,7 +97,7 @@ class BoxParentData extends ParentData {
 
 > 一定要注意，RenderObject的parentData 只能通过父元素设置.
 
-当然，ParentData并不仅仅可以用来存储偏移信息，通常所有和子节点特定的数据都可以存储到子节点的ParentData中，如ContainerBoxParentData就保存了指向兄弟节点的`previousSibling`和`nextSibling`，通过它们我们就可以对所有子节点进行遍历。再比如`KeepAlive` Widget，它使用KeepAliveParentDataMixin（继承自ParentData） 来保存子节的`keepAlive`状态。
+当然，ParentData并不仅仅可以用来存储偏移信息，通常所有和子节点特定的数据都可以存储到子节点的ParentData中，如ContainerBoxParentData就保存了指向兄弟节点的`previousSibling`和`nextSibling`，`Element.visitChildren()`方法也正是通过它们来实现对子节点的遍历。再比如`KeepAlive` Widget，它使用KeepAliveParentDataMixin（继承自ParentData） 来保存子节的`keepAlive`状态。
 
 ## 绘制过程
 
