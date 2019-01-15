@@ -41,7 +41,7 @@ void performRebuild() {
 }      
 ```
 
-可以看到，在发生异常时，Flutter默认的处理方式时弹一个ErrorWidget，但如果我们想自己捕获异常并上报到报警平台的话应该怎么做？我们进入`_debugReportException()`方法看看：
+可以看到，在发生异常时，Flutter默认的处理方式是弹一个ErrorWidget，但如果我们想自己捕获异常并上报到报警平台的话应该怎么做？我们进入`_debugReportException()`方法看看：
 
 ```dart
 FlutterErrorDetails _debugReportException(
