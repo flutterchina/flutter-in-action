@@ -1,10 +1,10 @@
 # RenderObject和RenderBox
 
-在上一节我们说过没给Element都对应一个RenderObject，我们可以通过`Element.renderObject` 来获取。并且我们也说过RenderObject的主要职责是Layout和绘制，所有的RenderObject会组成一棵渲染树Render Tree。本节我们将重点介绍一下RenderObject的作用。
+在上一节我们说过每个Element都对应一个RenderObject，我们可以通过`Element.renderObject` 来获取。并且我们也说过RenderObject的主要职责是Layout和绘制，所有的RenderObject会组成一棵渲染树Render Tree。本节我们将重点介绍一下RenderObject的作用。
 
-RenderObject就是渲染树种的一个对象，它拥有一个`parent`和一个`parentData` 插槽（slot），所谓插槽，就是指预留的一个接口或位置，这个接口和位置是由其它对象来接入或占据的，这个接口或位置在软件中通常用预留变量来表示，而`parentData`正是一个预留变量，它正是由`parent` 来赋值的，`parent`通常会通过子RenderObject的`parentData`存储一些和子元素相关的数据，如在Stack布局中，RenderStack就会将子元素的偏移数据存储在子元素的`parentData`中（具体可以查看Positioned实现）。
+RenderObject就是渲染树中的一个对象，它拥有一个`parent`和一个`parentData` 插槽（slot），所谓插槽，就是指预留的一个接口或位置，这个接口和位置是由其它对象来接入或占据的，这个接口或位置在软件中通常用预留变量来表示，而`parentData`正是一个预留变量，它正是由`parent` 来赋值的，`parent`通常会通过子RenderObject的`parentData`存储一些和子元素相关的数据，如在Stack布局中，RenderStack就会将子元素的偏移数据存储在子元素的`parentData`中（具体可以查看Positioned实现）。
 
-RenderObject类本身实现了一套基础的layout和绘制协议，但是并没有定义子节点模型（如一个节点可以有几个子节点，没有子节点？一个？两个？或者更多？）。 它也没有定义坐标系统（如子节点定位是在笛卡尔坐标中还是极坐标？）和具体的布局协议（是通过宽高还是通过constraint和size?，或者是否由父节点在子节点布局之前或之后设置子节点的大小和位置扥等）。为此，Flutter提供了一个RenderBox类，它继承自RenderObject，布局坐标系统采用笛卡尔坐标系，这和Android和iOS原生坐标系是一致的，都是屏幕的top、left是原点，然后分宽高两个轴，大多数情况下，我们直接使用RenderBox就可以了，除非遇到要自定义布局模型或坐标系统的情况，下面我们重点介绍一下RenderBox。
+RenderObject类本身实现了一套基础的layout和绘制协议，但是并没有定义子节点模型（如一个节点可以有几个子节点，没有子节点？一个？两个？或者更多？）。 它也没有定义坐标系统（如子节点定位是在笛卡尔坐标中还是极坐标？）和具体的布局协议（是通过宽高还是通过constraint和size?，或者是否由父节点在子节点布局之前或之后设置子节点的大小和位置等）。为此，Flutter提供了一个RenderBox类，它继承自RenderObject，布局坐标系统采用笛卡尔坐标系，这和Android和iOS原生坐标系是一致的，都是屏幕的top、left是原点，然后分宽高两个轴，大多数情况下，我们直接使用RenderBox就可以了，除非遇到要自定义布局模型或坐标系统的情况，下面我们重点介绍一下RenderBox。
 
 ## 布局过程
 
@@ -34,7 +34,7 @@ void layout(Constraints constraints, { bool parentUsesSize = false }) {
 }
 ```
 
-可以看到`layout`方法需要传入两个参数，第一个为constraints，即 父节点对子节点大小的限制，该值根据父节点的布局逻辑确定。另外一个参数是 parentUsesSize，该值用于确定 `relayoutBoundary`，该参数表示子节点布局变化是否影响父节点，如果为`true`，当子节点布局发生变化时父节点都会标记为需要重新布局，如果为`false`，则子节点布局发生变化后则不会影响父节点。
+可以看到`layout`方法需要传入两个参数，第一个为constraints，即 父节点对子节点大小的限制，该值根据父节点的布局逻辑确定。另外一个参数是 parentUsesSize，该值用于确定 `relayoutBoundary`，该参数表示子节点布局变化是否影响父节点，如果为`true`，当子节点布局发生变化时父节点都会标记为需要重新布局，如果为`false`，则子节点布局发生变化后不会影响父节点。
 
 #### relayoutBoundary
 
@@ -61,7 +61,7 @@ void markNeedsLayout() {
 
 #### performResize 和 performLayout
 
-RenderBox实际的测量和布局逻辑是在`performResize()` 和 `performLayout()`两个方法中，RenderBox子类需要实现他们来定制自身的布局逻辑。根据`layout()` 源码可以看出只有 `sizedByParent` 为 `true` 时，`performResize()` 才会被调用，而 `performLayout()` 是每次布局都会被调用的。`sizedByParent` 意为该节点的大小是否仅通过 parent 传给它的 constraints 就可以确定了，即该节点的大小与它自身的属性和其子节点无关，比如如果一个控件永远充满 parent 的大小，那么 `sizedByParent `就应该返回` true`，此时其大小在 `performResize()` 中就确定了，在后面的 `performLayout()` 方法中将不会再被修改了，这种情况下 `performLayout()` 只负责布局子节点。
+RenderBox实际的测量和布局逻辑是在`performResize()` 和 `performLayout()`两个方法中，RenderBox子类需要实现这两个方法来定制自身的布局逻辑。根据`layout()` 源码可以看出只有 `sizedByParent` 为 `true` 时，`performResize()` 才会被调用，而 `performLayout()` 是每次布局都会被调用的。`sizedByParent` 意为该节点的大小是否仅通过 parent 传给它的 constraints 就可以确定了，即该节点的大小与它自身的属性和其子节点无关，比如如果一个控件永远充满 parent 的大小，那么 `sizedByParent `就应该返回` true`，此时其大小在 `performResize()` 中就确定了，在后面的 `performLayout()` 方法中将不会再被修改了，这种情况下 `performLayout()` 只负责布局子节点。
 
 在 `performLayout()` 方法中除了完成自身布局，也必须完成子节点的布局，这是因为只有父子节点全部完成后布局流程才算真正完成。所以最终的调用栈将会变成：*layout() > performResize()/performLayout() > child.layout() > ...*  ，如此递归完成整个UI的布局。
 
@@ -109,7 +109,7 @@ void paint(PaintingContext context, Offset offset) { }
 
 通过context.canvas可以取到Canvas对象，接下来就可以调用Canvas API来实现具体的绘制逻辑。
 
-如果节点有子节点，它除了自身绘制逻辑之外，还要调用子节点的绘制方法。我们以RenderFlex对象为例说明：
+如果节点有子节点，它除了完成自身绘制逻辑之外，还要调用子节点的绘制方法。我们以RenderFlex对象为例说明：
 
 ```dart
 @override
@@ -161,7 +161,7 @@ void defaultPaint(PaintingContext context, Offset offset) {
 }
 ```
 
-很明显，由于Flex本身没有需要绘制的东西，所以直接遍历其子节点，然后调用`paintChild()`来绘制子节点，同时将子节点ParentData中再layout阶段保存的offset加上自身偏移作为第二个参数传递给`paintChild()`。而如果子节点如果还有子节点时，`paintChild()`方法还会调用子节点的`paint()`方法，如此递归完成整个节点树的绘制，最终调用栈为： *paint() > paintChild() > paint() ...* 。
+很明显，由于Flex本身没有需要绘制的东西，所以直接遍历其子节点，然后调用`paintChild()`来绘制子节点，同时将子节点ParentData中在layout阶段保存的offset加上自身偏移作为第二个参数传递给`paintChild()`。而如果子节点还有子节点时，`paintChild()`方法还会调用子节点的`paint()`方法，如此递归完成整个节点树的绘制，最终调用栈为： *paint() > paintChild() > paint() ...* 。
 
 当需要绘制的内容大小溢出当前空间时，将会执行`paintOverflowIndicator()` 来绘制溢出部分提示，这个就是我们经常看到的溢出提示，如：
 
