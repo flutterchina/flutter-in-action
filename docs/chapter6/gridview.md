@@ -23,7 +23,7 @@ GridView({
 
 ### SliverGridDelegateWithFixedCrossAxisCount
 
-该子类实现了一个纵轴为固定数量子元素的layout算法，其构造函数为：
+该子类实现了一个横轴为固定数量子元素的layout算法，其构造函数为：
 
 ```dart
 SliverGridDelegateWithFixedCrossAxisCount({
@@ -34,10 +34,10 @@ SliverGridDelegateWithFixedCrossAxisCount({
 })
 ```
 
-- crossAxisCount：纵轴子元素的数量。此属性值确定后子元素在纵轴的长度就确定了,即ViewPort纵轴长度/crossAxisCount。
+- crossAxisCount：横轴子元素的数量。此属性值确定后子元素在横轴的长度就确定了,即ViewPort横轴长度/crossAxisCount。
 - mainAxisSpacing：主轴方向的间距。
-- crossAxisSpacing：纵轴方向子元素的间距。
-- childAspectRatio：子元素在纵轴长度和主轴长度的比例。由于crossAxisCount指定后子元素纵轴长度就确定了，然后通过此参数值就可以确定子元素在主轴的长度。
+- crossAxisSpacing：横轴方向子元素的间距。
+- childAspectRatio：子元素在横轴长度和主轴长度的比例。由于crossAxisCount指定后子元素横轴长度就确定了，然后通过此参数值就可以确定子元素在主轴的长度。
 
 可以发现，子元素的大小是通过crossAxisCount和childAspectRatio两个参数共同决定的。注意，这里的子元素指的是子widget的最大显示空间，注意确保子widget的实际大小不要超出子元素的空间。
 
@@ -46,7 +46,7 @@ SliverGridDelegateWithFixedCrossAxisCount({
 ```dart
 GridView(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 3, //纵轴三个子widget
+      crossAxisCount: 3, //横轴三个子widget
       childAspectRatio: 1.0 //宽高比为1时，子widget
   ),
   children:<Widget>[
@@ -66,7 +66,7 @@ GridView(
 
 #### GridView.count
 
-GridView.count构造函数内部使用了SliverGridDelegateWithFixedCrossAxisCount，我们通过它可以快速的创建纵轴固定数量子元素的GridView，上面的示例代码等价于：
+GridView.count构造函数内部使用了SliverGridDelegateWithFixedCrossAxisCount，我们通过它可以快速的创建横轴固定数量子元素的GridView，上面的示例代码等价于：
 
 ```dart
 GridView.count( 
@@ -87,7 +87,7 @@ GridView.count(
 
 ### SliverGridDelegateWithMaxCrossAxisExtent
 
-该子类实现了一个纵轴子元素为固定最大长度的layout算法，其构造函数为：
+该子类实现了一个横轴子元素为固定最大长度的layout算法，其构造函数为：
 
 ```dart
 SliverGridDelegateWithMaxCrossAxisExtent({
@@ -98,7 +98,7 @@ SliverGridDelegateWithMaxCrossAxisExtent({
 })
 ```
 
-maxCrossAxisExtent为子元素在纵轴上的最大长度，之所以是“最大”长度，是**因为纵轴方向每个子元素的长度仍然是等分的**，举个例子，如果ViewPort的纵轴长度是450，那么当maxCrossAxisExtent的值在区间(450/4，450/3]内的话，子元素最终实际长度都为150，而`childAspectRatio`所指的子元素纵轴和主轴的长度比为**最终的长度比**。其它参数和SliverGridDelegateWithFixedCrossAxisCount相同。
+maxCrossAxisExtent为子元素在横轴上的最大长度，之所以是“最大”长度，是**因为横轴方向每个子元素的长度仍然是等分的**，举个例子，如果ViewPort的横轴长度是450，那么当maxCrossAxisExtent的值在区间(450/4，450/3]内的话，子元素最终实际长度都为150，而`childAspectRatio`所指的子元素横轴和主轴的长度比为**最终的长度比**。其它参数和SliverGridDelegateWithFixedCrossAxisCount相同。
 
 下面我们看一个例子：
 
