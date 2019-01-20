@@ -44,7 +44,7 @@ abstract class BuildContext {
 }
 ```
 
-那StatelessWidget和StatefulWidget的build方法传入的context对象是哪个实现了BuildContext的类。我们顺藤摸瓜，发现调用时发生在StatelessWidget和StatefulWidget对应的StatelessElement和StatefulElement的build犯法中，以StatelessElement为例：
+那StatelessWidget和StatefulWidget的build方法传入的context对象是哪个实现了BuildContext的类。我们顺藤摸瓜，发现调用时发生在StatelessWidget和StatefulWidget对应的StatelessElement和StatefulElement的build方法中，以StatelessElement为例：
 
 ```dart
 
