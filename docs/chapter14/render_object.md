@@ -1,6 +1,6 @@
 # RenderObject和RenderBox
 
-在上一节我们说过没给Element都对应一个RenderObject，我们可以通过`Element.renderObject` 来获取。并且我们也说过RenderObject的主要职责是Layout和绘制，所有的RenderObject会组成一棵渲染树Render Tree。本节我们将重点介绍一下RenderObject的作用。
+在上一节我们说过每个Element都对应一个RenderObject，我们可以通过`Element.renderObject` 来获取。并且我们也说过RenderObject的主要职责是Layout和绘制，所有的RenderObject会组成一棵渲染树Render Tree。本节我们将重点介绍一下RenderObject的作用。
 
 RenderObject就是渲染树种的一个对象，它拥有一个`parent`和一个`parentData` 插槽（slot），所谓插槽，就是指预留的一个接口或位置，这个接口和位置是由其它对象来接入或占据的，这个接口或位置在软件中通常用预留变量来表示，而`parentData`正是一个预留变量，它正是由`parent` 来赋值的，`parent`通常会通过子RenderObject的`parentData`存储一些和子元素相关的数据，如在Stack布局中，RenderStack就会将子元素的偏移数据存储在子元素的`parentData`中（具体可以查看Positioned实现）。
 

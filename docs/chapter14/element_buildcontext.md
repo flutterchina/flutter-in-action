@@ -106,7 +106,7 @@ class HomeView extends ComponentElement{
 - 上面build方法不接收参数，这一点和在StatelessWidget和StatefulWidget中build(BuildContext)方法不同。代码中需要用到BuildContext的地方直接用`this`代替即可，如代码注释1处`Theme.of(this)`参数直接传`this`即可，因为当前对象本身就是Element实例。
 - 当`text`发生改变时，我们调用`markNeedsBuild()`方法将当前Element标记为dirty即可，标记为dirty的Element会在下一帧中重建。实际上，`State.setState()`在内部也是调用的`markNeedsBuild()`方法。
 
-- 上面代码中build方法返回的仍然是一个Widget，这是由于Flutter框架中已经有了Widget这一层，并且组件库都已经是以Widget的形式提供了，如果在Flutter框架中所有组件都想示例的HomeView一样以Element形式提供，那么就可以用纯Element来构建UI了，HomeView的build方法返回值类型就可以是Element了。
+- 上面代码中build方法返回的仍然是一个Widget，这是由于Flutter框架中已经有了Widget这一层，并且组件库都已经是以Widget的形式提供了，如果在Flutter框架中所有组件都像示例的HomeView一样以Element形式提供，那么就可以用纯Element来构建UI了，HomeView的build方法返回值类型就可以是Element了。
 
 如果我们需要将上面代码在现有Flutter框架中跑起来，那么还是得提供一个”适配器“Widget将HomeView结合到现有框架中，下面CustomHome就相当于”适配器“：
 
