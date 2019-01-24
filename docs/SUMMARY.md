@@ -95,8 +95,8 @@
     * [Flutter UI系统](chapter14/flutter_ui_system.md)
     * [Element和BuildContext](chapter14/element_buildcontext.md)
     * [RenderObject与RenderBox](chapter14/render_object.md)
-    * [Scrollable原理](todo.md)
-    * [InheritedWidget与数据传递](todo.md) 
+    * [Flutter从启动到显示](chapter14/flutter_app_startup.md)
+
      
 * [Flutter资源汇总](todo.md)
 
