@@ -1,0 +1,1789 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Flutter从启动到显示 · 《Flutter实战》</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="description" content="">-->
+    <meta name="description" content="《Flutter实战》是Flutter中文网（https://flutterchian.club）开源的电子书，旨在帮助开发者系统化的了解并学习Flutter。">
+    <meta name="keywords" content="flutter实战,flutter书籍,flutter电子书,flutter中文网 ">
+    <meta name="generator" content="GitBook 3.2.3">
+    
+    <meta name="author" content="wendux 824783146@qq.com">
+    
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+    
+    
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+    
+    
+    
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../todo.html" />
+    
+    
+    <link rel="prev" href="render_object.html" />
+    
+
+    <style>
+        .pull-right > i {
+            font-size: 25px;
+            color: #777 !important;
+            cursor: pointer;
+
+        }
+
+        .pull-right > i:hover {
+            color: #777 !important;
+        }
+
+        body {
+            font-size: 15px !important;
+        }
+
+        a[href='../todo.html'], a[href='todo.html'] {
+            color: #888 !important;
+        }
+        .copyright{
+            text-align: center;
+            margin: 80px 16px 30px 16px;
+            padding-top: 16px;
+            border-top: #eee 1px solid;
+            color: grey;
+            font-size: .9em;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://flutterchina.club" target="_blank" class="custom-link"><div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div></a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    缘起
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/mobile_development_intro.html">
+            
+                <a href="../chapter1/mobile_development_intro.html">
+            
+                    
+                    移动开发技术简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/flutter_intro.html">
+            
+                <a href="../chapter1/flutter_intro.html">
+            
+                    
+                    Flutter简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/install_flutter.html">
+            
+                <a href="../chapter1/install_flutter.html">
+            
+                    
+                    搭建Flutter开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/configuration.html">
+            
+                <a href="../chapter1/configuration.html">
+            
+                    
+                    常见配置问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/dart.html">
+            
+                <a href="../chapter1/dart.html">
+            
+                    
+                    Dart语言简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第一个Flutter应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/first_flutter_app.html">
+            
+                <a href="../chapter2/first_flutter_app.html">
+            
+                    
+                    计数器示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/flutter_router.html">
+            
+                <a href="../chapter2/flutter_router.html">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/flutter_package_mgr.html">
+            
+                <a href="../chapter2/flutter_package_mgr.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/flutter_assets_mgr.html">
+            
+                <a href="../chapter2/flutter_assets_mgr.html">
+            
+                    
+                    资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/flutter_app_debug.html">
+            
+                <a href="../chapter2/flutter_app_debug.html">
+            
+                    
+                    调试Flutter APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter2/thread_model_and_error_report.html">
+            
+                <a href="../chapter2/thread_model_and_error_report.html">
+            
+                    
+                    Dart线程模型及异常捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    基础Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/flutter_widget_intro.html">
+            
+                <a href="../chapter3/flutter_widget_intro.html">
+            
+                    
+                    Widget简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/text.html">
+            
+                <a href="../chapter3/text.html">
+            
+                    
+                    文本、字体样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/buttons.html">
+            
+                <a href="../chapter3/buttons.html">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/img_and_icon.html">
+            
+                <a href="../chapter3/img_and_icon.html">
+            
+                    
+                    图片和Icon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/radio_and_checkbox.html">
+            
+                <a href="../chapter3/radio_and_checkbox.html">
+            
+                    
+                    单选框和复选框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/input_and_form.html">
+            
+                <a href="../chapter3/input_and_form.html">
+            
+                    
+                    输入框和表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    布局类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/intro.html">
+            
+                <a href="../chapter4/intro.html">
+            
+                    
+                    布局类Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/row_and_column.html">
+            
+                <a href="../chapter4/row_and_column.html">
+            
+                    
+                    线性布局Row、Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/flex.html">
+            
+                <a href="../chapter4/flex.html">
+            
+                    
+                    弹性布局Flex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/wrap_and_flow.html">
+            
+                <a href="../chapter4/wrap_and_flow.html">
+            
+                    
+                    流式布局Wrap、Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/stack.html">
+            
+                <a href="../chapter4/stack.html">
+            
+                    
+                    层叠布局Stack、Positioned
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    容器类Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/padding.html">
+            
+                <a href="../chapter5/padding.html">
+            
+                    
+                    Padding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/constrainedbox_and_sizebox.html">
+            
+                <a href="../chapter5/constrainedbox_and_sizebox.html">
+            
+                    
+                    布局限制类容器ConstrainedBox、SizeBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/decoratedbox.html">
+            
+                <a href="../chapter5/decoratedbox.html">
+            
+                    
+                    装饰容器DecoratedBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/transform.html">
+            
+                <a href="../chapter5/transform.html">
+            
+                    
+                    变换Transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/container.html">
+            
+                <a href="../chapter5/container.html">
+            
+                    
+                    Container容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    可滚动Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/intro.html">
+            
+                <a href="../chapter6/intro.html">
+            
+                    
+                    可滚动Widgets简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/single_child_scrollview.html">
+            
+                <a href="../chapter6/single_child_scrollview.html">
+            
+                    
+                    SingleChildScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/listview.html">
+            
+                <a href="../chapter6/listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/gridview.html">
+            
+                <a href="../chapter6/gridview.html">
+            
+                    
+                    GridView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/custom_scrollview.html">
+            
+                <a href="../chapter6/custom_scrollview.html">
+            
+                    
+                    CustomScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/scroll_controller.html">
+            
+                <a href="../chapter6/scroll_controller.html">
+            
+                    
+                    滚动监听及控制ScrollController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    功能型Widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/willpopscope.html">
+            
+                <a href="../chapter7/willpopscope.html">
+            
+                    
+                    导航返回拦截-WillPopScope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/inherited_widget.html">
+            
+                <a href="../chapter7/inherited_widget.html">
+            
+                    
+                    数据共享-InheritedWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/theme.html">
+            
+                <a href="../chapter7/theme.html">
+            
+                    
+                    主题-Theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    事件处理与通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/listener.html">
+            
+                <a href="../chapter8/listener.html">
+            
+                    
+                    原始指针事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/gesture.html">
+            
+                <a href="../chapter8/gesture.html">
+            
+                    
+                    手势识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/eventbus.html">
+            
+                <a href="../chapter8/eventbus.html">
+            
+                    
+                    全局事件总线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/notification.html">
+            
+                <a href="../chapter8/notification.html">
+            
+                    
+                    通知Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/intro.html">
+            
+                <a href="../chapter9/intro.html">
+            
+                    
+                    Flutter动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/animation_structure.html">
+            
+                <a href="../chapter9/animation_structure.html">
+            
+                    
+                    动画结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/route_transition.html">
+            
+                <a href="../chapter9/route_transition.html">
+            
+                    
+                    自定义路由过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/hero.html">
+            
+                <a href="../chapter9/hero.html">
+            
+                    
+                    Hero动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../chapter9/stagger_animation.html">
+            
+                <a href="../chapter9/stagger_animation.html">
+            
+                    
+                    交错动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter13/">
+            
+                <a href="../chapter13/">
+            
+                    
+                    自定义Widget
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter13/intro.html">
+            
+                <a href="../chapter13/intro.html">
+            
+                    
+                    自定义Widget方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter13/combine.html">
+            
+                <a href="../chapter13/combine.html">
+            
+                    
+                    通过组合现有Widget实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter13/turn_box.html">
+            
+                <a href="../chapter13/turn_box.html">
+            
+                    
+                    实例：TurnBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter13/custom_paint.html">
+            
+                <a href="../chapter13/custom_paint.html">
+            
+                    
+                    CustomPaint与Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter13/gradient_circular_progress_demo.html">
+            
+                <a href="../chapter13/gradient_circular_progress_demo.html">
+            
+                    
+                    实例：圆形渐变进度条(自绘)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    文件操作与网络请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/file_operation.html">
+            
+                <a href="../chapter10/file_operation.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter10/http.html">
+            
+                <a href="../chapter10/http.html">
+            
+                    
+                    Http请求-HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter10/dio.html">
+            
+                <a href="../chapter10/dio.html">
+            
+                    
+                    Http请求-Dio package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter10/websocket.html">
+            
+                <a href="../chapter10/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../chapter10/socket.html">
+            
+                <a href="../chapter10/socket.html">
+            
+                    
+                    使用Socket API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../chapter10/json_model.html">
+            
+                <a href="../chapter10/json_model.html">
+            
+                    
+                    Json转Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    包与插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chapter11/develop_package.html">
+            
+                <a href="../chapter11/develop_package.html">
+            
+                    
+                    开发package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../chapter11/platform-channel.html">
+            
+                <a href="../chapter11/platform-channel.html">
+            
+                    
+                    插件开发：平台通道简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../chapter11/android_implement.html">
+            
+                <a href="../chapter11/android_implement.html">
+            
+                    
+                    插件开发：实现Android端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../chapter11/ios_implement.html">
+            
+                <a href="../chapter11/ios_implement.html">
+            
+                    
+                    插件开发：实现IOS端API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    系统能力调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chapter12/">
+            
+                <a href="../chapter12/">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../chapter12/multi_languages_support.html">
+            
+                <a href="../chapter12/multi_languages_support.html">
+            
+                    
+                    让App支持多语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../chapter12/locallization_implement.html">
+            
+                <a href="../chapter12/locallization_implement.html">
+            
+                    
+                    实现Localizations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../chapter12/intl.html">
+            
+                <a href="../chapter12/intl.html">
+            
+                    
+                    使用Intl包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Flutter核心原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="flutter_ui_system.html">
+            
+                <a href="flutter_ui_system.html">
+            
+                    
+                    Flutter UI系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="element_buildcontext.html">
+            
+                <a href="element_buildcontext.html">
+            
+                    
+                    Element和BuildContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="render_object.html">
+            
+                <a href="render_object.html">
+            
+                    
+                    RenderObject与RenderBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.4" data-path="flutter_app_startup.html">
+            
+                <a href="flutter_app_startup.html">
+            
+                    
+                    Flutter从启动到显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../todo.html">
+            
+                <a href="../todo.html">
+            
+                    
+                    Flutter资源汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+    <a class="btn pull-right" aria-label="GitHub">
+        <i class="fa fa-edit" title="编辑本文"></i>
+    </a>
+    <a class="btn pull-right" aria-label="GitHub" href="https://github.com/flutterchina/flutter-in-action">
+        <i class="fa fa-github" title="查看本书开源项目"></i>
+    </a>
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Flutter从启动到显示</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="flutter&#x8FD0;&#x884C;&#x673A;&#x5236;">Flutter&#x8FD0;&#x884C;&#x673A;&#x5236;</h1>
+<p>Flutter&#x7684;&#x5165;&#x53E3;&#x5728;&quot;lib/main.dart&quot;&#x7684;<code>main()</code>&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x5B83;&#x662F;Dart&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x8D77;&#x70B9;&#x3002;&#x5728;Flutter&#x5E94;&#x7528;&#x4E2D;&#xFF0C;<code>main()</code>&#x51FD;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;<code>main()</code>&#x51FD;&#x6570;&#x53EA;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;<code>runApp()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x770B;<code>runApp()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x90FD;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">runApp</span><span class="token punctuation">(</span>Widget app<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  WidgetsFlutterBinding<span class="token punctuation">.</span><span class="token function">ensureInitialized</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">attachRootWidget</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">scheduleWarmUpFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53C2;&#x6570;app&#x662F;&#x4E00;&#x4E2A;Widget&#xFF0C;&#x5B83;&#x662F;Flutter&#x5E94;&#x7528;&#x542F;&#x52A8;&#x540E;&#x8981;&#x5C55;&#x793A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;Widget&#x3002;&#x800C;WidgetsFlutterBinding&#x6B63;&#x662F;&#x7ED1;&#x5B9A;Widget &#x6846;&#x67B6;&#x548C;Flutter engine&#x7684;&#x6865;&#x6881;&#xFF0C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">WidgetsFlutterBinding</span> <span class="token keyword">extends</span> <span class="token class-name">BindingBase</span> <span class="token keyword">with</span> GestureBinding<span class="token punctuation">,</span> ServicesBinding<span class="token punctuation">,</span> SchedulerBinding<span class="token punctuation">,</span> PaintingBinding<span class="token punctuation">,</span> SemanticsBinding<span class="token punctuation">,</span> RendererBinding<span class="token punctuation">,</span> WidgetsBinding <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> WidgetsBinding <span class="token function">ensureInitialized</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>WidgetsBinding<span class="token punctuation">.</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      <span class="token function">WidgetsFlutterBinding</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> WidgetsBinding<span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;WidgetsFlutterBinding&#x7EE7;&#x627F;&#x81EA; BindingBase &#x5E76;&#x6DF7;&#x5165;&#x4E86;&#x5F88;&#x591A;Binding&#xFF0C;&#x5728;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E9B;Binding&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5148;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;Window&#x5BF9;&#x8C61;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x770B;Window&#x7684;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#xFF1A;</p>
+<blockquote>
+<p>The most basic interface to the host operating system&apos;s user interface.</p>
+</blockquote>
+<p>&#x5F88;&#x660E;&#x663E;&#xFF0C;Window&#x6B63;&#x662F;Flutter Framework&#x8FDE;&#x63A5;&#x5BBF;&#x4E3B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x63A5;&#x53E3;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;Window&#x7C7B;&#x7684;&#x90E8;&#x5206;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">Window</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// &#x5F53;&#x524D;&#x8BBE;&#x5907;&#x7684;DPI&#xFF0C;&#x5373;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x76F8;&#x8BB8;&#x663E;&#x793A;&#x591A;&#x5C11;&#x903B;&#x8F91;&#x50CF;&#x7D20;&#xFF0C;&#x6570;&#x5B57;&#x8D8A;&#x5927;&#xFF0C;&#x663E;&#x793A;&#x6548;&#x679C;&#x5C31;&#x8D8A;&#x7CBE;&#x7EC6;&#x4FDD;&#x771F;&#x3002;</span>
+  <span class="token comment">// DPI&#x662F;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x7684;&#x56FA;&#x4EF6;&#x5C5E;&#x6027;&#xFF0C;&#x5982;Nexus 6&#x7684;&#x5C4F;&#x5E55;DPI&#x4E3A;3.5 </span>
+  double <span class="token keyword">get</span> devicePixelRatio <span class="token operator">=</span><span class="token operator">&gt;</span> _devicePixelRatio<span class="token punctuation">;</span>
+
+  <span class="token comment">// Flutter UI&#x7ED8;&#x5236;&#x533A;&#x57DF;&#x7684;&#x5927;&#x5C0F;</span>
+  Size <span class="token keyword">get</span> physicalSize <span class="token operator">=</span><span class="token operator">&gt;</span> _physicalSize<span class="token punctuation">;</span>
+
+  <span class="token comment">// &#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x8BED;&#x8A00;Locale</span>
+  Locale <span class="token keyword">get</span> locale<span class="token punctuation">;</span>
+
+  <span class="token comment">// &#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x5B57;&#x4F53;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#x3002;  </span>
+  double <span class="token keyword">get</span> textScaleFactor <span class="token operator">=</span><span class="token operator">&gt;</span> _textScaleFactor<span class="token punctuation">;</span>  
+
+  <span class="token comment">// &#x5F53;&#x7ED8;&#x5236;&#x533A;&#x57DF;&#x5927;&#x5C0F;&#x6539;&#x53D8;&#x56DE;&#x8C03;</span>
+  VoidCallback <span class="token keyword">get</span> onMetricsChanged <span class="token operator">=</span><span class="token operator">&gt;</span> _onMetricsChanged<span class="token punctuation">;</span>  
+  <span class="token comment">// Locale&#x53D1;&#x751F;&#x53D8;&#x5316;&#x56DE;&#x8C03;</span>
+  VoidCallback <span class="token keyword">get</span> onLocaleChanged <span class="token operator">=</span><span class="token operator">&gt;</span> _onLocaleChanged<span class="token punctuation">;</span>
+  <span class="token comment">// &#x7CFB;&#x7EDF;&#x5B57;&#x4F53;&#x7F29;&#x653E;&#x53D8;&#x5316;&#x56DE;&#x8C03;</span>
+  VoidCallback <span class="token keyword">get</span> onTextScaleFactorChanged <span class="token operator">=</span><span class="token operator">&gt;</span> _onTextScaleFactorChanged<span class="token punctuation">;</span>
+  <span class="token comment">// &#x7ED8;&#x5236;&#x524D;&#x56DE;&#x8C03;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x53D7;&#x663E;&#x793A;&#x5668;&#x7684;&#x5782;&#x76F4;&#x540C;&#x6B65;&#x4FE1;&#x53F7;VSync&#x9A71;&#x52A8;&#xFF0C;&#x5F53;&#x5C4F;&#x5E55;&#x5237;&#x65B0;&#x65F6;&#x5C31;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</span>
+  FrameCallback <span class="token keyword">get</span> onBeginFrame <span class="token operator">=</span><span class="token operator">&gt;</span> _onBeginFrame<span class="token punctuation">;</span>
+  <span class="token comment">// &#x7ED8;&#x5236;&#x56DE;&#x8C03;  </span>
+  VoidCallback <span class="token keyword">get</span> onDrawFrame <span class="token operator">=</span><span class="token operator">&gt;</span> _onDrawFrame<span class="token punctuation">;</span>
+  <span class="token comment">// &#x70B9;&#x51FB;&#x6216;&#x6307;&#x9488;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;</span>
+  PointerDataPacketCallback <span class="token keyword">get</span> onPointerDataPacket <span class="token operator">=</span><span class="token operator">&gt;</span> _onPointerDataPacket<span class="token punctuation">;</span>
+  <span class="token comment">// &#x8C03;&#x5EA6;Frame&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x540E;&#xFF0C;onBeginFrame&#x548C;onDrawFrame&#x5C06;&#x7D27;&#x63A5;&#x7740;&#x4F1A;&#x5728;&#x5408;&#x9002;&#x65F6;&#x673A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;</span>
+  <span class="token comment">// &#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;Flutter engine&#x7684;Window_scheduleFrame&#x65B9;&#x6CD5;</span>
+  <span class="token keyword">void</span> <span class="token function">scheduleFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> native <span class="token string">&apos;Window_scheduleFrame&apos;</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x66F4;&#x65B0;&#x5E94;&#x7528;&#x5728;GPU&#x4E0A;&#x7684;&#x6E32;&#x67D3;,&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;Flutter engine&#x7684;Window_render&#x65B9;&#x6CD5;</span>
+  <span class="token keyword">void</span> <span class="token function">render</span><span class="token punctuation">(</span>Scene scene<span class="token punctuation">)</span> native <span class="token string">&apos;Window_render&apos;</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// &#x53D1;&#x9001;&#x5E73;&#x53F0;&#x6D88;&#x606F;</span>
+  <span class="token keyword">void</span> <span class="token function">sendPlatformMessage</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span>
+                           ByteData data<span class="token punctuation">,</span>
+                           PlatformMessageResponseCallback callback<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+  <span class="token comment">// &#x5E73;&#x53F0;&#x901A;&#x9053;&#x6D88;&#x606F;&#x5904;&#x7406;&#x56DE;&#x8C03;  </span>
+  PlatformMessageCallback <span class="token keyword">get</span> onPlatformMessage <span class="token operator">=</span><span class="token operator">&gt;</span> _onPlatformMessage<span class="token punctuation">;</span>
+
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token comment">//&#x5176;&#x5B83;&#x5C5E;&#x6027;&#x53CA;&#x56DE;&#x8C03;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;Window&#x7C7B;&#x5305;&#x542B;&#x4E86;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x548C;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;Flutter Engine&#x7684;&#x4E00;&#x4E9B;&#x56DE;&#x8C03;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x518D;&#x56DE;&#x6765;&#x770B;&#x770B;WidgetsFlutterBinding&#x6DF7;&#x5165;&#x7684;&#x5404;&#x79CD;Binding&#x3002;&#x901A;&#x8FC7;&#x67E5;&#x770B;&#x8FD9;&#x4E9B; Binding&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8FD9;&#x4E9B;Binding&#x4E2D;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x76D1;&#x542C;&#x5E76;&#x5904;&#x7406;<code>Window</code>&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E9B;&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E9B;&#x4E8B;&#x4EF6;&#x6309;&#x7167;Framework&#x7684;&#x6A21;&#x578B;&#x5305;&#x88C5;&#x3001;&#x62BD;&#x8C61;&#x7136;&#x540E;&#x5206;&#x53D1;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x5230;WidgetsFlutterBinding&#x6B63;&#x662F;&#x7C98;&#x8FDE;Flutter engine&#x4E0E;&#x4E0A;&#x5C42;Framework&#x7684;&#x201D;&#x80F6;&#x6C34;&#x201C;&#x3002;</p>
+<ul>
+<li>GestureBinding&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;<code>window.onPointerDataPacket</code> &#x56DE;&#x8C03;&#xFF0C;&#x7ED1;&#x5B9A;Framework&#x624B;&#x52BF;&#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x662F;Framework&#x4E8B;&#x4EF6;&#x6A21;&#x578B;&#x4E0E;&#x5E95;&#x5C42;&#x4E8B;&#x4EF6;&#x7684;&#x7ED1;&#x5B9A;&#x5165;&#x53E3;&#x3002;</li>
+<li>ServicesBinding&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;<code>window.onPlatformMessage</code> &#x56DE;&#x8C03;&#xFF0C; &#x7528;&#x4E8E;&#x7ED1;&#x5B9A;&#x5E73;&#x53F0;&#x6D88;&#x606F;&#x901A;&#x9053;&#xFF08;message channel&#xFF09;&#xFF0C;&#x4E3B;&#x8981;&#x5904;&#x7406;&#x539F;&#x751F;&#x548C;Flutter&#x901A;&#x4FE1;&#x3002;</li>
+<li>SchedulerBinding&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;<code>window.onBeginFrame</code>&#x548C;<code>window.onDrawFrame</code>&#x56DE;&#x8C03;&#xFF0C;&#x76D1;&#x542C;&#x5237;&#x65B0;&#x4E8B;&#x4EF6;&#xFF0C;&#x7ED1;&#x5B9A;Framework&#x7ED8;&#x5236;&#x8C03;&#x5EA6;&#x5B50;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>PaintingBinding&#xFF1A;&#x7ED1;&#x5B9A;&#x7ED8;&#x5236;&#x5E93;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x56FE;&#x7247;&#x7F13;&#x5B58;&#x3002;</li>
+<li>SemanticsBinding&#xFF1A;&#x8BED;&#x4E49;&#x5316;&#x5C42;&#x4E0E;Flutter engine&#x7684;&#x6865;&#x6881;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x8F85;&#x52A9;&#x529F;&#x80FD;&#x7684;&#x5E95;&#x5C42;&#x652F;&#x6301;&#x3002;</li>
+<li>RendererBinding: &#x63D0;&#x4F9B;&#x4E86;<code>window.onMetricsChanged</code> &#x3001;<code>window.onTextScaleFactorChanged</code> &#x7B49;&#x56DE;&#x8C03;&#x3002;&#x5B83;&#x662F;&#x6E32;&#x67D3;&#x6811;&#x4E0E;Flutter engine&#x7684;&#x6865;&#x6881;&#x3002;</li>
+<li>WidgetsBinding&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;<code>window.onLocaleChanged</code>&#x3001;<code>onBuildScheduled</code> &#x7B49;&#x56DE;&#x8C03;&#x3002;&#x5B83;Flutter Widget&#x5C42;&#x4E0E;engine&#x7684;&#x6865;&#x6881;&#x3002;</li>
+</ul>
+<p><code>WidgetsFlutterBinding.ensureInitialized()</code>&#x8D1F;&#x8D23;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;WidgetsBinding&#x7684;&#x5168;&#x5C40;&#x5355;&#x4F8B;&#xFF0C;&#x7D27;&#x63A5;&#x7740;&#x4F1A;&#x8C03;&#x7528;WidgetsBinding&#x7684;attachRootWidget&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x8D1F;&#x8D23;&#x5C06;&#x6839;Widget&#x6DFB;&#x52A0;&#x5230;RenderView&#x4E0A;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">attachRootWidget</span><span class="token punctuation">(</span>Widget rootWidget<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  _renderViewElement <span class="token operator">=</span> RenderObjectToWidgetAdapter<span class="token operator">&lt;</span>RenderBox<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+    container<span class="token punctuation">:</span> renderView<span class="token punctuation">,</span> 
+    debugShortDescription<span class="token punctuation">:</span> <span class="token string">&apos;[root]&apos;</span><span class="token punctuation">,</span>
+    child<span class="token punctuation">:</span> rootWidget
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attachToRenderTree</span><span class="token punctuation">(</span>buildOwner<span class="token punctuation">,</span> renderViewElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6709;<code>renderView</code>&#x548C;<code>renderViewElement</code>&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;<code>renderView</code>&#x662F;&#x4E00;&#x4E2A;RenderObject&#xFF0C;&#x5B83;&#x662F;&#x6E32;&#x67D3;&#x6811;&#x7684;&#x6839;&#xFF0C;&#x800C;<code>renderViewElement</code>&#x662F;<code>renderView</code>&#x5BF9;&#x5E94;&#x7684;Element&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x89C1;&#x8BE5;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x4E86; &#x6839;Widget &#x5230;&#x6839; RenderObject&#x518D;&#x5230;&#x66F4;Element&#x7684;&#x6574;&#x4E2A;&#x5173;&#x8054;&#x8FC7;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x770B;<code>attachToRenderTree</code>&#x7684;&#x6E90;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart">RenderObjectToWidgetElement<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token function">attachToRenderTree</span><span class="token punctuation">(</span>BuildOwner owner<span class="token punctuation">,</span> <span class="token punctuation">[</span>RenderObjectToWidgetElement<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> element<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>element <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    owner<span class="token punctuation">.</span><span class="token function">lockState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      element <span class="token operator">=</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">assert</span><span class="token punctuation">(</span>element <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      element<span class="token punctuation">.</span><span class="token function">assignOwner</span><span class="token punctuation">(</span>owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    owner<span class="token punctuation">.</span><span class="token function">buildScope</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      element<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    element<span class="token punctuation">.</span>_newWidget <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    element<span class="token punctuation">.</span><span class="token function">markNeedsBuild</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> element<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x6839; Element&#xFF0C;&#x5373; RenderObjectToWidgetElement&#xFF0C;&#x5E76;&#x4E14;&#x5C06; Element &#x4E0E; Widget &#x8FDB;&#x884C;&#x5173;&#x8054;&#xFF0C;&#x5373;&#x521B;&#x5EFA;&#x51FA; WidgetTree &#x5BF9;&#x5E94;&#x7684; ElementTree&#x3002;&#x5982;&#x679C; Element &#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x8FC7;&#x4E86;&#xFF0C;&#x5219;&#x5C06;&#x6839; Element &#x4E2D;&#x5173;&#x8054;&#x7684; Widget &#x8BBE;&#x4E3A;&#x65B0;&#x7684;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x770B;&#x51FA; Element &#x53EA;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8FDB;&#x884C;&#x590D;&#x7528;&#x3002;&#x90A3;&#x4E48;BuildOwner&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x5176;&#x5B9E;&#x4ED6;&#x5C31;&#x662F;Widget framework&#x7684;&#x7BA1;&#x7406;&#x7C7B;&#xFF0C;&#x5B83;&#x8DDF;&#x8E2A;&#x54EA;&#x4E9B;Widget&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6784;&#x5EFA;&#x3002;</p>
+<h3 id="&#x6E32;&#x67D3;">&#x6E32;&#x67D3;</h3>
+<p>&#x56DE;&#x5230;runApp&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x5F53;&#x8C03;&#x7528;&#x5B8C;<code>attachRootWidget</code>&#x540E;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x884C;&#x4F1A;&#x8C03;&#x7528; <code>WidgetsFlutterBinding</code> &#x5B9E;&#x4F8B;&#x7684; <code>scheduleWarmUpFrame()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x5728; SchedulerBinding &#x4E2D;&#xFF0C;&#x5B83;&#x88AB;&#x8C03;&#x7528;&#x540E;&#x4F1A;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x7ED8;&#x5236;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x7B49;&#x5F85;&quot;Vsync&quot; &#x4FE1;&#x53F7;&#xFF09;&#xFF0C;&#x5728;&#x6B64;&#x6B21;&#x7ED8;&#x5236;&#x7ED3;&#x675F;&#x524D;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x9501;&#x5B9A;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x672C;&#x6B21;&#x7ED8;&#x5236;&#x7ED3;&#x675F;&#x5B8C;&#x6210;&#x4E4B;&#x524D;Flutter&#x5C06;&#x4E0D;&#x4F1A;&#x54CD;&#x5E94;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5728;&#x7ED8;&#x5236;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x4F1A;&#x518D;&#x89E6;&#x53D1;&#x65B0;&#x7684;&#x91CD;&#x7ED8;&#x3002;&#x4E0B;&#x9762;&#x662F;<code>scheduleWarmUpFrame()</code> &#x65B9;&#x6CD5;&#x7684;&#x90E8;&#x5206;&#x5B9E;&#x73B0;(&#x7701;&#x7565;&#x4E86;&#x65E0;&#x5173;&#x4EE3;&#x7801;)&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">scheduleWarmUpFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  Timer<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">handleBeginFrame</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Timer<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">handleDrawFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token function">resetEpoch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x9501;&#x5B9A;&#x4E8B;&#x4EF6;</span>
+  <span class="token function">lockEvents</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> endOfFrame<span class="token punctuation">;</span>
+    Timeline<span class="token punctuation">.</span><span class="token function">finishSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x4E86;<code>handleBeginFrame()</code> &#x548C; <code>handleDrawFrame()</code> &#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x770B;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; Frame &#x548C;c &#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><p>Frame: &#x4E00;&#x6B21;&#x7ED8;&#x5236;&#x8FC7;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x5176;&#x4E3A;&#x4E00;&#x5E27;&#x3002;Flutter engine&#x53D7;&#x663E;&#x793A;&#x5668;&#x5782;&#x76F4;&#x540C;&#x6B65;&#x4FE1;&#x53F7;&quot;VSync&quot;&#x7684;&#x8D8B;&#x52BF;&#x4E0D;&#x65AD;&#x7684;&#x89E6;&#x53D1;&#x7ED8;&#x5236;&#x3002;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8BF4;&#x7684;Flutter&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;60fps&#xFF08;Frame Per-Second&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x6307;&#x4E00;&#x79D2;&#x949F;&#x53EF;&#x4EE5;&#x89E6;&#x53D1;60&#x6B21;&#x91CD;&#x7ED8;&#xFF0C;FPS&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x754C;&#x9762;&#x5C31;&#x8D8A;&#x6D41;&#x7545;&#x3002;</p>
+</li>
+<li><p>FrameCallback&#xFF1A;SchedulerBinding &#x7C7B;&#x4E2D;&#x6709;&#x4E09;&#x4E2A;FrameCallback&#x56DE;&#x8C03;&#x961F;&#x5217;&#xFF0C; &#x5728;&#x4E00;&#x6B21;&#x7ED8;&#x5236;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E09;&#x4E2A;&#x56DE;&#x8C03;&#x961F;&#x5217;&#x4F1A;&#x653E;&#x5728;&#x4E0D;&#x540C;&#x65F6;&#x673A;&#x88AB;&#x6267;&#x884C;&#xFF1A;</p>
+<ol>
+<li>transientCallbacks&#xFF1A;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x4E34;&#x65F6;&#x56DE;&#x8C03;&#xFF0C;&#x4E00;&#x822C;&#x5B58;&#x653E;&#x52A8;&#x753B;&#x56DE;&#x8C03;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>SchedulerBinding.instance.scheduleFrameCallback</code> &#x6DFB;&#x52A0;&#x56DE;&#x8C03;&#x3002;</li>
+<li>persistentCallbacks&#xFF1A;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x6301;&#x4E45;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x6B64;&#x7C7B;&#x56DE;&#x8C03;&#x4E2D;&#x518D;&#x8BF7;&#x6C42;&#x65B0;&#x7684;&#x7ED8;&#x5236;&#x5E27;&#xFF0C;&#x6301;&#x4E45;&#x56DE;&#x8C03;&#x4E00;&#x7ECF;&#x6CE8;&#x518C;&#x5219;&#x4E0D;&#x80FD;&#x79FB;&#x9664;&#x3002;<code>SchedulerBinding.instance.addPersitentFrameCallback()</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x4E2D;&#x5904;&#x7406;&#x4E86;&#x5E03;&#x5C40;&#x4E0E;&#x7ED8;&#x5236;&#x5DE5;&#x4F5C;&#x3002;</li>
+<li>postFrameCallbacks&#xFF1A;&#x5728;Frame&#x7ED3;&#x675F;&#x65F6;&#x53EA;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x8C03;&#x7528;&#x540E;&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x79FB;&#x9664;&#xFF0C;&#x53EF;&#x7531; <code>SchedulerBinding.instance.addPostFrameCallback()</code> &#x6CE8;&#x518C;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x6B64;&#x7C7B;&#x56DE;&#x8C03;&#x4E2D;&#x518D;&#x89E6;&#x53D1;&#x65B0;&#x7684;Frame&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x4F1A;&#x5BFC;&#x81F4;&#x5FAA;&#x73AF;&#x5237;&#x65B0;&#x3002;</li>
+</ol>
+</li>
+</ul>
+<p>&#x73B0;&#x5728;&#x8BF7;&#x8BFB;&#x8005;&#x81EA;&#x884C;&#x67E5;&#x770B;<code>handleBeginFrame()</code> &#x548C; <code>handleDrawFrame()</code> &#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x524D;&#x8005;&#x4E3B;&#x8981;&#x662F;&#x6267;&#x884C;&#x4E86;transientCallbacks&#x961F;&#x5217;&#xFF0C;&#x800C;&#x540E;&#x8005;&#x6267;&#x884C;&#x4E86; persistentCallbacks &#x548C; postFrameCallbacks &#x961F;&#x5217;&#x3002;</p>
+<h3 id="&#x7ED8;&#x5236;">&#x7ED8;&#x5236;</h3>
+<p>&#x6E32;&#x67D3;&#x548C;&#x7ED8;&#x5236;&#x903B;&#x8F91;&#x5728;RenderBinding &#x4E2D;&#x5B9E;&#x73B0;&#xFF0C;&#x67E5;&#x770B;&#x5176;&#x6E90;&#x53D1;&#xFF0C;&#x53D1;&#x73B0;&#x5728;&#x5176;<code>initInstances()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x6709;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">initInstances</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token comment">//&#x7701;&#x7565;&#x65E0;&#x5173;&#x4EE3;&#x7801;</span>
+
+  <span class="token comment">//&#x76D1;&#x542C;Window&#x5BF9;&#x8C61;&#x7684;&#x4E8B;&#x4EF6;  </span>
+  ui<span class="token punctuation">.</span>window
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>onMetricsChanged <span class="token operator">=</span> handleMetricsChanged
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>onTextScaleFactorChanged <span class="token operator">=</span> handleTextScaleFactorChanged
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>onSemanticsEnabledChanged <span class="token operator">=</span> _handleSemanticsEnabledChanged
+    <span class="token punctuation">.</span><span class="token punctuation">.</span>onSemanticsAction <span class="token operator">=</span> _handleSemanticsAction<span class="token punctuation">;</span>
+
+  <span class="token comment">//&#x6DFB;&#x52A0;PersistentFrameCallback    </span>
+  <span class="token function">addPersistentFrameCallback</span><span class="token punctuation">(</span>_handlePersistentFrameCallback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x770B;&#x6700;&#x540E;&#x4E00;&#x884C;&#xFF0C;&#x901A;&#x8FC7;<code>addPersistentFrameCallback</code> &#x5411;persistentCallbacks&#x961F;&#x5217;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x56DE;&#x8C03; <code>_handlePersistentFrameCallback</code>:</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">_handlePersistentFrameCallback</span><span class="token punctuation">(</span>Duration timeStamp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">drawFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x4E86;RenderBinding&#x7684;<code>drawFrame()</code>&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">drawFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">assert</span><span class="token punctuation">(</span>renderView <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  pipelineOwner<span class="token punctuation">.</span><span class="token function">flushLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x5E03;&#x5C40;</span>
+  pipelineOwner<span class="token punctuation">.</span><span class="token function">flushCompositingBits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x91CD;&#x7ED8;&#x4E4B;&#x524D;&#x7684;&#x9884;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#xFF0C;&#x68C0;&#x67E5;RenderObject&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x7ED8;</span>
+  pipelineOwner<span class="token punctuation">.</span><span class="token function">flushPaint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x91CD;&#x7ED8;</span>
+  renderView<span class="token punctuation">.</span><span class="token function">compositeFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x5C06;&#x9700;&#x8981;&#x7ED8;&#x5236;&#x7684;&#x6BD4;&#x7279;&#x6570;&#x636E;&#x53D1;&#x7ED9;GPU</span>
+  pipelineOwner<span class="token punctuation">.</span><span class="token function">flushSemantics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this also sends the semantics to the OS.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x770B;&#x770B;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5206;&#x522B;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<h4 id="flushlayout">flushLayout()</h4>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">flushLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>_nodesNeedingLayout<span class="token punctuation">.</span>isNotEmpty<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> List<span class="token operator">&lt;</span>RenderObject<span class="token operator">&gt;</span> dirtyNodes <span class="token operator">=</span> _nodesNeedingLayout<span class="token punctuation">;</span>
+      _nodesNeedingLayout <span class="token operator">=</span> <span class="token operator">&lt;</span>RenderObject<span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>RenderObject node <span class="token keyword">in</span> 
+           dirtyNodes<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>RenderObject a<span class="token punctuation">,</span> RenderObject b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> a<span class="token punctuation">.</span>depth <span class="token operator">-</span> b<span class="token punctuation">.</span>depth<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>_needsLayout <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>owner <span class="token operator">==</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+          node<span class="token punctuation">.</span><span class="token function">_layoutWithoutResize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6E90;&#x7801;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x4EFB;&#x52A1;&#x662F;&#x66F4;&#x65B0;&#x4E86;&#x6240;&#x6709;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;&#x201C;dirty&#x201D;&#x7684;RenderObject&#x7684;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x3002;&#x4E3B;&#x8981;&#x7684;&#x52A8;&#x4F5C;&#x53D1;&#x751F;&#x5728;<code>node._layoutWithoutResize()</code>&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x4F1A;&#x8C03;&#x7528;<code>performLayout()</code>&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x5E03;&#x5C40;&#x3002;</p>
+<h4 id="flushcompositingbits">flushCompositingBits()</h4>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">flushCompositingBits</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  _nodesNeedingCompositingBitsUpdate<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>
+      <span class="token punctuation">(</span>RenderObject a<span class="token punctuation">,</span> RenderObject b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> a<span class="token punctuation">.</span>depth <span class="token operator">-</span> b<span class="token punctuation">.</span>depth
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>RenderObject node <span class="token keyword">in</span> _nodesNeedingCompositingBitsUpdate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>_needsCompositingBitsUpdate <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>owner <span class="token operator">==</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+      node<span class="token punctuation">.</span><span class="token function">_updateCompositingBits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x66F4;&#x65B0;RenderObject.needsCompositing&#x5C5E;&#x6027;&#x503C;</span>
+  <span class="token punctuation">}</span>
+  _nodesNeedingCompositingBitsUpdate<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x68C0;&#x67E5;RenderObject&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;<code>RenderObject.needsCompositing</code>&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x5C5E;&#x6027;&#x503C;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;<code>true</code>&#x5219;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#x3002;</p>
+<h4 id="flushpaint">flushPaint()</h4>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">flushPaint</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> List<span class="token operator">&lt;</span>RenderObject<span class="token operator">&gt;</span> dirtyNodes <span class="token operator">=</span> _nodesNeedingPaint<span class="token punctuation">;</span> 
+    _nodesNeedingPaint <span class="token operator">=</span> <span class="token operator">&lt;</span>RenderObject<span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x53CD;&#x5411;&#x904D;&#x5386;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#x7684;RenderObject</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>RenderObject node <span class="token keyword">in</span> 
+         dirtyNodes<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>RenderObject a<span class="token punctuation">,</span> RenderObject b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> b<span class="token punctuation">.</span>depth <span class="token operator">-</span> a<span class="token punctuation">.</span>depth<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>_needsPaint <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>owner <span class="token operator">==</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>_layer<span class="token punctuation">.</span>attached<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// &#x771F;&#x6B63;&#x7684;&#x7ED8;&#x5236;&#x903B;&#x8F91;  </span>
+          PaintingContext<span class="token punctuation">.</span><span class="token function">repaintCompositedChild</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          node<span class="token punctuation">.</span><span class="token function">_skippedPaintingOnLayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x4E86;&#x6700;&#x7EC8;&#x7684;&#x7ED8;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x5B83;&#x4E0D;&#x662F;&#x91CD;&#x7ED8;&#x4E86;&#x6240;&#x6709; RenderObject&#xFF0C;&#x800C;&#x662F;&#x53EA;&#x91CD;&#x7ED8;&#x4E86;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#x7684; RenderObject&#x3002;&#x771F;&#x6B63;&#x7684;&#x7ED8;&#x5236;&#x662F;&#x901A;&#x8FC7;<code>PaintingContext.repaintCompositedChild()</code>&#x6765;&#x7ED8;&#x5236;&#x7684;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528;Flutter engine&#x63D0;&#x4F9B;&#x7684;Canvas API&#x6765;&#x5B8C;&#x6210;&#x7ED8;&#x5236;&#x3002;</p>
+<h4 id="compositeframe">compositeFrame()</h4>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">void</span> <span class="token function">compositeFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> ui<span class="token punctuation">.</span>SceneBuilder builder <span class="token operator">=</span> ui<span class="token punctuation">.</span><span class="token function">SceneBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> ui<span class="token punctuation">.</span>Scene scene <span class="token operator">=</span> layer<span class="token punctuation">.</span><span class="token function">buildScene</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>automaticSystemUiAdjustment<span class="token punctuation">)</span>
+      <span class="token function">_updateSystemChrome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ui<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scene<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x8C03;&#x7528;Flutter engine&#x7684;&#x6E32;&#x67D3;API</span>
+    scene<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    Timeline<span class="token punctuation">.</span><span class="token function">finishSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;Scene&#x5BF9;&#x8C61;&#xFF0C;Scene&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4FDD;&#x5B58;&#x6700;&#x7EC8;&#x6E32;&#x67D3;&#x540E;&#x7684;&#x50CF;&#x7D20;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;Canvas&#x753B;&#x597D;&#x7684;Scene&#x4F20;&#x7ED9;<code>window.render()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;scene&#x4FE1;&#x606F;&#x53D1;&#x9001;&#x7ED9;Flutter engine&#xFF0C;&#x6700;&#x7EC8;&#x53C8;engine&#x5C06;&#x56FE;&#x50CF;&#x753B;&#x5728;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<h4 id="&#x6700;&#x540E;">&#x6700;&#x540E;</h4>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x7531;&#x4E8E;RenderBinding&#x53EA;&#x662F;&#x4E00;&#x4E2A;mixin&#xFF0C;&#x800C;with&#x5B83;&#x7684;&#x662F;WidgetBinding&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x770B;&#x770B;WidgetBinding&#x4E2D;&#x662F;&#x5426;&#x91CD;&#x5199;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x67E5;&#x770B;WidgetBinding&#x7684;<code>drawFrame()</code>&#x65B9;&#x6CD5;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token metadata symbol">@override</span>
+<span class="token keyword">void</span> <span class="token function">drawFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token comment">//&#x7701;&#x7565;&#x65E0;&#x5173;&#x4EE3;&#x7801;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>renderViewElement <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      buildOwner<span class="token punctuation">.</span><span class="token function">buildScope</span><span class="token punctuation">(</span>renderViewElement<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">drawFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x8C03;&#x7528;RenderBinding&#x7684;drawFrame()&#x65B9;&#x6CD5;</span>
+    buildOwner<span class="token punctuation">.</span><span class="token function">finalizeTree</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5728;&#x8C03;&#x7528;<code>RenderBinding.drawFrame()</code>&#x65B9;&#x6CD5;&#x524D;&#x4F1A;&#x8C03;&#x7528; <code>buildOwner.buildScope()</code> &#xFF08;&#x975E;&#x9996;&#x6B21;&#x7ED8;&#x5236;&#xFF09;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x5C06;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;&#x201C;dirty&#x201D; &#x7684; Element &#x8FDB;&#x884C; <code>rebuild()</code> &#x3002;</p>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E86;Flutter APP&#x4ECE;&#x542F;&#x52A8;&#x5230;&#x663E;&#x793A;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x4E3B;&#x6D41;&#x7A0B;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x524D;&#x9762;&#x7AE0;&#x8282;&#x5BF9;Widget&#x3001;Element&#x4EE5;&#x53CA;RenderObject&#x7684;&#x4ECB;&#x7ECD;&#x6765;&#x52A0;&#x5F3A;&#x7EC6;&#x8282;&#x7406;&#x89E3;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="render_object.html" class="navigation navigation-prev " aria-label="Previous page: RenderObject与RenderBox">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../todo.html" class="navigation navigation-next " aria-label="Next page: Flutter资源汇总">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Flutter从启动到显示","level":"1.15.4","depth":2,"next":{"title":"Flutter资源汇总","level":"2.1","depth":1,"path":"todo.md","ref":"todo.md","articles":[]},"previous":{"title":"RenderObject与RenderBox","level":"1.15.3","depth":2,"path":"chapter14/render_object.md","ref":"chapter14/render_object.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter14/flutter_app_startup.md","mtime":"2019-01-18T10:48:22.666Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T10:50:40.524Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+</body>
+<script>
+
+    function init() {
+        var p=location.pathname;
+        if(p[p.length-1]==='/'){
+            p+="index.md"
+        }else {
+            p = p.split(".")[0] + ".md";
+        }
+        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
+        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        $("table").wrap("<div style='overflow: auto'></div>");
+        //百度统计
+        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
+            t = document.referrer;
+        if (!e.test(r)) {
+            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
+            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
+            var i = new Image;
+            i.src = o
+        }
+        $(".copyright").remove();
+        $("<div class='copyright'> 本书仍在堪误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
+    }
+
+    function hookAPI(api, ob, fn) {
+        return function () {
+            var result = api.apply(ob, [].slice.call(arguments));
+            setTimeout(fn,1000);
+            return result;
+        }
+    }
+
+    init();
+
+    if(history.pushState){
+        history.pushState = hookAPI(history.pushState, history, init);
+    }
+
+</script>
+</html>
+

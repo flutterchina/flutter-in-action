@@ -127,6 +127,7 @@ class CustomHome extends Widget {
 
 对于问题2，答案当然也是肯定的，Flutter engine提供的dart API是原始且独立的，这个与操作系统提供的API类似，上层UI框架设计成什么样完全取决于设计者，完全可以将UI框架设计成Android风格或iOS风格，但这些事Google不会再去做，我们也没必要再去搞这一套，这是因为响应式的思想本身是很棒的，之所以提出这个问题，是因为笔者认为做与不做是一回事，但知道能不能做是另一回事，这能反映出我们对知识的掌握程度。
 
+
 ### 总结
 
 本节详细的介绍了Element的生命周期，以及它与Widget、BuildContext的关系，也介绍了Element在Flutter UI系统中的角色和作用，我们将在下一节介绍Flutter UI系统中另一个重要的角色RenderObject。
