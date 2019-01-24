@@ -1,2 +1,2 @@
 gitbook build
-# ./cdn.sh
+./cdn.sh

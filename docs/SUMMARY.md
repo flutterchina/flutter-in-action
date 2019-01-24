@@ -37,6 +37,7 @@
     * [装饰容器DecoratedBox](chapter5/decoratedbox.md)      
     * [变换Transform](chapter5/transform.md) 
     * [Container容器](chapter5/container.md) 
+    * [Scaffold、TabBar、底部导航](chapter5/material_scaffold.md) 
     
 * [可滚动Widgets](chapter6/index.md)
     * [可滚动Widgets简介](chapter6/intro.md)
