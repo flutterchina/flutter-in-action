@@ -131,12 +131,12 @@ React中提出一个重要思想：状态改变则UI随之自动改变，而Reac
 
 ### React Native
 
-上文已经提到React Native 是React 在原生移动应用平台的衍生产物，那两者主要的区别是什么呢？其实，主要的区别在于虚拟DOM映射的对象是什么？React中虚拟DOM最终会映射为浏览器DOM树，而RN中虚拟DOM会通过JavaScript Core 映射为原生控件树。
+上文已经提到React Native 是React 在原生移动应用平台的衍生产物，那两者主要的区别是什么呢？其实，主要的区别在于虚拟DOM映射的对象是什么？React中虚拟DOM最终会映射为浏览器DOM树，而RN中虚拟DOM会通过 JavaScriptCore 映射为原生控件树。
 
-JavaScript Core 是一个JavaScript解释器，它在React Native中主要有两个作用：
+JavaScriptCore 是一个JavaScript解释器，它在React Native中主要有两个作用：
 
 1. 为JavaScript提供运行环境。
-2. 是JavaScript与原生应用之间通信的桥梁，作用和JsBridge一样，事实上，在iOS中，很多JsBridge的实现都是基于JavaScript Core 。
+2. 是JavaScript与原生应用之间通信的桥梁，作用和JsBridge一样，事实上，在iOS中，很多JsBridge的实现都是基于 JavaScriptCore 。
 
 而RN中将虚拟DOM映射为原生控件的过程中分两步：
 

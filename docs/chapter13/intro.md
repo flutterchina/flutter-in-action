@@ -26,6 +26,6 @@ PaintingContext代表Widget的绘制上下文，通过`PaintingContext.canvas`�
 
 ### 总结
 
-组合是自定义组件最简单的方法，在任何需要自定义的场景下，都应该优先考虑是否能够通过组合来实现。而自绘和通过实现RenderObject的方法本质上是一样的，都需要开发者调用Canvas API手动去绘制UI，缺点时必须了解Canvas API，并且得自己去实现绘制逻辑，而优点是强大灵活，理论上可以实现任何外观的UI。
+组合是自定义组件最简单的方法，在任何需要自定义的场景下，都应该优先考虑是否能够通过组合来实现。而自绘和通过实现RenderObject的方法本质上是一样的，都需要开发者调用Canvas API手动去绘制UI，缺点是必须了解Canvas API，并且得自己去实现绘制逻辑，而优点是强大灵活，理论上可以实现任何外观的UI。
 
 在本章接下来的小节中，我们将通过一些实例来详细介绍自定义UI的过程，由于后两种方法本质是相同的，后续我们只介绍CustomPaint和Canvas的方式，读者如果对自定义RenderObject的方法好奇，可以查看RenderParagraph或RenderImage源码。
