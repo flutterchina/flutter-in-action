@@ -34,7 +34,7 @@ void layout(Constraints constraints, { bool parentUsesSize = false }) {
 }
 ```
 
-可以看到`layout`方法需要传入两个参数，第一个为constraints，即 父节点对子节点大小的限制，该值根据父节点的布局逻辑确定。另外一个参数是 parentUsesSize，该值用于确定 `relayoutBoundary`，该参数表示子节点布局变化是否影响父节点，如果为`true`，当子节点布局发生变化时父节点都会标记为需要重新布局，如果为`false`，则子节点布局发生变化后则不会影响父节点。
+可以看到`layout`方法需要传入两个参数，第一个为constraints，即 父节点对子节点大小的限制，该值根据父节点的布局逻辑确定。另外一个参数是 parentUsesSize，该值用于确定 `relayoutBoundary`，该参数表示子节点布局变化是否影响父节点，如果为`true`，当子节点布局发生变化时父节点都会标记为需要重新布局，如果为`false`，则子节点布局发生变化后不会影响父节点。
 
 #### relayoutBoundary
 
@@ -61,7 +61,7 @@ void markNeedsLayout() {
 
 #### performResize 和 performLayout
 
-RenderBox实际的测量和布局逻辑是在`performResize()` 和 `performLayout()`两个方法中，RenderBox子类需要实现他们来定制自身的布局逻辑。根据`layout()` 源码可以看出只有 `sizedByParent` 为 `true` 时，`performResize()` 才会被调用，而 `performLayout()` 是每次布局都会被调用的。`sizedByParent` 意为该节点的大小是否仅通过 parent 传给它的 constraints 就可以确定了，即该节点的大小与它自身的属性和其子节点无关，比如如果一个控件永远充满 parent 的大小，那么 `sizedByParent `就应该返回` true`，此时其大小在 `performResize()` 中就确定了，在后面的 `performLayout()` 方法中将不会再被修改了，这种情况下 `performLayout()` 只负责布局子节点。
+RenderBox实际的测量和布局逻辑是在`performResize()` 和 `performLayout()`两个方法中，RenderBox子类需要实现这两个方法来定制自身的布局逻辑。根据`layout()` 源码可以看出只有 `sizedByParent` 为 `true` 时，`performResize()` 才会被调用，而 `performLayout()` 是每次布局都会被调用的。`sizedByParent` 意为该节点的大小是否仅通过 parent 传给它的 constraints 就可以确定了，即该节点的大小与它自身的属性和其子节点无关，比如如果一个控件永远充满 parent 的大小，那么 `sizedByParent `就应该返回` true`，此时其大小在 `performResize()` 中就确定了，在后面的 `performLayout()` 方法中将不会再被修改了，这种情况下 `performLayout()` 只负责布局子节点。
 
 在 `performLayout()` 方法中除了完成自身布局，也必须完成子节点的布局，这是因为只有父子节点全部完成后布局流程才算真正完成。所以最终的调用栈将会变成：*layout() > performResize()/performLayout() > child.layout() > ...*  ，如此递归完成整个UI的布局。
 
@@ -109,7 +109,7 @@ void paint(PaintingContext context, Offset offset) { }
 
 通过context.canvas可以取到Canvas对象，接下来就可以调用Canvas API来实现具体的绘制逻辑。
 
-如果节点有子节点，它除了自身绘制逻辑之外，还要调用子节点的绘制方法。我们以RenderFlex对象为例说明：
+如果节点有子节点，它除了完成自身绘制逻辑之外，还要调用子节点的绘制方法。我们以RenderFlex对象为例说明：
 
 ```dart
 @override
@@ -161,7 +161,7 @@ void defaultPaint(PaintingContext context, Offset offset) {
 }
 ```
 
-很明显，由于Flex本身没有需要绘制的东西，所以直接遍历其子节点，然后调用`paintChild()`来绘制子节点，同时将子节点ParentData中再layout阶段保存的offset加上自身偏移作为第二个参数传递给`paintChild()`。而如果子节点如果还有子节点时，`paintChild()`方法还会调用子节点的`paint()`方法，如此递归完成整个节点树的绘制，最终调用栈为： *paint() > paintChild() > paint() ...* 。
+很明显，由于Flex本身没有需要绘制的东西，所以直接遍历其子节点，然后调用`paintChild()`来绘制子节点，同时将子节点ParentData中在layout阶段保存的offset加上自身偏移作为第二个参数传递给`paintChild()`。而如果子节点还有子节点时，`paintChild()`方法还会调用子节点的`paint()`方法，如此递归完成整个节点树的绘制，最终调用栈为： *paint() > paintChild() > paint() ...* 。
 
 当需要绘制的内容大小溢出当前空间时，将会执行`paintOverflowIndicator()` 来绘制溢出部分提示，这个就是我们经常看到的溢出提示，如：
 
