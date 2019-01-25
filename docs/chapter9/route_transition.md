@@ -20,7 +20,7 @@ Material库中提供了一个MaterialPageRoute，它可以使用和平台风格�
           Animation secondaryAnimation) {
         return new FadeTransition( //使用渐隐渐入过渡, 
           opacity: animation,
-          child: PageB(); //路由B
+          child: PageB() //路由B
         );
       }));
 }),
