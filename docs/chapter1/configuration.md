@@ -48,10 +48,10 @@ Could not Get **
       repositories {
         google()
         jcenter()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //添加这一句
   	}
   }
   ```
-![](../imgs/fix_maven.png)
 
 4. 进入 `File/ Settings/ Build, Execution, Deployment/ Gradle/ Android Studio ` 中，勾选上 `Enable embedded Maven repository` ，重启 Android Studio 即可解决。
 
