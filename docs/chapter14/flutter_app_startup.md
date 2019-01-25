@@ -1,4 +1,4 @@
-# Flutter运行机制
+# Flutter运行机制-从启动到显示
 
 Flutter的入口在"lib/main.dart"的`main()`函数中，它是Dart应用程序的起点。在Flutter应用中，`main()`函数如下：
 
