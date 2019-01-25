@@ -32,7 +32,7 @@
       "defineWord" : ["Gitbook Use"]
     },
     "donate": {
-      "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg",
+      "wechat": "https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/pay.jpeg",
       "button": "赏",
       "wechatText": "微信打赏"
     }
