@@ -38,7 +38,7 @@
 2. 安装gitbook。
 
    ```shell
-   npm i -g gitbook gitbook-cli
+   npm i -g gitbook-cli
    ```
 
 3. 本地进入到本项目根目录，运行：
