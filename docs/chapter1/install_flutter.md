@@ -188,7 +188,7 @@ Flutter依赖于Android Studio的全量安装。Android Studio不仅可以管理
 
 #### Flutter SDK分支
 
-Flutter SDK有多个分支，如beta、dev、master，其中beta分支为稳定分支（日后有新的稳定版本发布后可能也会有新的稳定分支，如1.0.0），dev和master为开发分支，安装flutter后，你可以运行`flutter channel`查看所有分支，如笔者本地运行后，结果如下：
+Flutter SDK有多个分支，如beta、dev、master、stable，其中stable分支为稳定分支（日后有新的稳定版本发布后可能也会有新的稳定分支，如1.0.0），dev和master为开发分支，安装flutter后，你可以运行`flutter channel`查看所有分支，如笔者本地运行后，结果如下：
 
 ```
 Flutter channels:
