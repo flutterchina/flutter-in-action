@@ -63,25 +63,6 @@
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
-    </script>
-</head>
-<body>
-{% block body %}{% endblock %}
-
-{% block javascript %}{% endblock %}
-</body>
-<script>
-
-    function init() {
-        var p=location.pathname;
-        if(p[p.length-1]==='/'){
-            p+="index.md"
-        }else {
-            p = p.split(".")[0] + ".md";
-        }
-        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
-        $(".pull-right .fa-edit").parent("a").attr("href",p);
-        $("table").wrap("<div style='overflow: auto'></div>");
         //百度统计
         var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
             t = document.referrer;
@@ -91,23 +72,19 @@
             var i = new Image;
             i.src = o
         }
-        $(".copyright").remove();
-        $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
-    }
+        $(function () {
+            $(".copyright").remove();
+            $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
+            $(".articles a").click(function () {
+                location.href=$(this).attr("href");
+                return false
+            })
+        })
+    </script>
+</head>
+<body>
+{% block body %}{% endblock %}
 
-    function hookAPI(api, ob, fn) {
-        return function () {
-            var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn,1000);
-            return result;
-        }
-    }
-
-    init();
-
-    if(history.pushState){
-        history.pushState = hookAPI(history.pushState, history, init);
-    }
-
-</script>
+{% block javascript %}{% endblock %}
+</body>
 </html>
