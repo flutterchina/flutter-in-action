@@ -119,7 +119,7 @@
           <entry key="MD" value="3" />
           <entry key="dart" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="56" />
+          <entry key="html" value="59" />
           <entry key="js" value="3" />
           <entry key="json" value="10" />
           <entry key="less" value="2" />
@@ -135,7 +135,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dart" value="1" />
-          <entry key="HTML" value="56" />
+          <entry key="HTML" value="59" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="10" />
           <entry key="JavaScript" value="4" />
@@ -150,7 +150,7 @@
         <counts>
           <entry key="MD" value="5" />
           <entry key="gitignore" value="22" />
-          <entry key="html" value="1793" />
+          <entry key="html" value="1810" />
           <entry key="json" value="491" />
           <entry key="less" value="8" />
           <entry key="md" value="3984" />
@@ -163,7 +163,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dart" value="5" />
-          <entry key="HTML" value="1793" />
+          <entry key="HTML" value="1810" />
           <entry key="JSON" value="491" />
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
@@ -179,24 +179,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+            <state relative-caret-position="225">
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
+        <entry file="file://$PROJECT_DIR$/_book/chapter1/configuration.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
+        <entry file="file://$PROJECT_DIR$/_book/chapter1/dart.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -209,6 +207,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -454,12 +457,6 @@
               <item name="_layouts" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter1" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -522,21 +519,7 @@
       <workItem from="1546423553346" duration="6208000" />
       <workItem from="1546847217343" duration="10504000" />
       <workItem from="1547176617441" duration="15800000" />
-      <workItem from="1549950286477" duration="2687000" />
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <created>1543574384838</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1543574384838</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1543576131046</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1543576131046</updated>
+      <workItem from="1549950286477" duration="4442000" />
     </task>
     <task id="LOCAL-00016" summary="update">
       <created>1543576376374</created>
@@ -867,11 +850,25 @@
       <option name="project" value="LOCAL" />
       <updated>1548421756269</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="修改&quot;常见配置问题&quot;一章">
+      <created>1549954564030</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1549954564030</updated>
+    </task>
+    <task id="LOCAL-00064" summary="修改&quot;常见配置问题&quot;一章">
+      <created>1549954633615</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1549954633615</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118802000" />
+    <option name="totallyTimeSpent" value="120557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,8 +894,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49541932" weight="0.37818697" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4855532" visible="true" weight="0.5339943" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5144468" side_tool="true" visible="true" weight="0.5339943" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4855532" visible="true" weight="0.2719547" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5144468" side_tool="true" visible="true" weight="0.2719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -931,23 +928,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改&quot;常见配置问题&quot;一章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_book/chapter13/intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter4/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" selection-start-line="8" selection-end-line="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/imgs/gradient-button.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1296,9 +1276,6 @@
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/languages.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1306,9 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-749" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/ebook/page.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1324,10 +1298,25 @@
         <state relative-caret-position="-359" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_book/chapter1/configuration.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_book/chapter1/dart.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/website/layout.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        <state relative-caret-position="225">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
