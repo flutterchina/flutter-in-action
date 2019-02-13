@@ -46,7 +46,8 @@
         a[href='../todo.html'], a[href='todo.html'] {
             color: #888 !important;
         }
-        .copyright{
+
+        .copyright {
             text-align: center;
             margin: 80px 16px 30px 16px;
             padding-top: 16px;
@@ -54,9 +55,29 @@
             color: grey;
             font-size: .9em;
         }
+
+       .ad{
+            color: white;
+            text-align: center;
+            background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 30px;
+           padding: 18px
+        }
+        .ad:hover {
+            opacity: .8;
+        }
     </style>
 </head>
 <body>
+<div id="ad" style="display: none">
+    <div class="ad"
+         onclick="location.href='https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts'">
+        <div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 15px">阿里云新春特惠</div>
+        <div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>
+    </div>
+</div>
 {% block body %}{% endblock %}
 
 {% block javascript %}{% endblock %}
@@ -68,20 +89,20 @@
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
         var s = document.getElementsByTagName("script")[0];
-        hm.id="bd"
+        hm.id = "bd"
         s.parentNode.insertBefore(hm, s);
     })();
 
     function init() {
-        var p=location.pathname;
+        var p = location.pathname;
         _hmt.push(['_trackPageview', p]);
-        if(p[p.length-1]==='/'){
-            p+="index.md"
-        }else {
+        if (p[p.length - 1] === '/') {
+            p += "index.md"
+        } else {
             p = p.split(".")[0] + ".md";
         }
-        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
-        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
+        $(".pull-right .fa-edit").parent("a").attr("href", p);
         $("table").wrap("<div style='overflow: auto'></div>");
         //百度统计
         var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
@@ -99,14 +120,25 @@
     function hookAPI(api, ob, fn) {
         return function () {
             var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn,1000);
+
+            setTimeout(fn, 1000);
             return result;
         }
     }
 
+    function addAD(){
+        if($("#book-search-results .ad").length==0) {
+            $("#ad>div").clone().hide().fadeIn().prependTo("#book-search-results")
+            setTimeout(function () {
+                $(".body-inner").animate({scrollTop:0},200)
+            },800);
+        }
+    }
+    setInterval(addAD,300);
+
     init();
 
-    if(history.pushState){
+    if (history.pushState) {
         history.pushState = hookAPI(history.pushState, history, init);
     }
 

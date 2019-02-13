@@ -104,7 +104,8 @@
         a[href='../todo.html'], a[href='todo.html'] {
             color: #888 !important;
         }
-        .copyright{
+
+        .copyright {
             text-align: center;
             margin: 80px 16px 30px 16px;
             padding-top: 16px;
@@ -112,9 +113,29 @@
             color: grey;
             font-size: .9em;
         }
+
+       .ad{
+            color: white;
+            text-align: center;
+            background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 30px;
+           padding: 18px
+        }
+        .ad:hover {
+            opacity: .8;
+        }
     </style>
 </head>
 <body>
+<div id="ad" style="display: none">
+    <div class="ad"
+         onclick="location.href='https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts'">
+        <div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 15px">阿里云新春特惠</div>
+        <div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>
+    </div>
+</div>
 
 <div class="book">
     <div class="book-summary">
@@ -1537,7 +1558,7 @@ context<span class="token punctuation">.</span><span class="token function">find
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Element和BuildContext","level":"1.15.2","depth":2,"next":{"title":"RenderObject与RenderBox","level":"1.15.3","depth":2,"path":"chapter14/render_object.md","ref":"chapter14/render_object.md","articles":[]},"previous":{"title":"Flutter UI系统","level":"1.15.1","depth":2,"path":"chapter14/flutter_ui_system.md","ref":"chapter14/flutter_ui_system.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter14/element_buildcontext.md","mtime":"2019-01-24T08:10:01.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-12T11:03:03.876Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Element和BuildContext","level":"1.15.2","depth":2,"next":{"title":"RenderObject与RenderBox","level":"1.15.3","depth":2,"path":"chapter14/render_object.md","ref":"chapter14/render_object.md","articles":[]},"previous":{"title":"Flutter UI系统","level":"1.15.1","depth":2,"path":"chapter14/flutter_ui_system.md","ref":"chapter14/flutter_ui_system.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter14/element_buildcontext.md","mtime":"2019-01-24T08:10:01.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-13T13:07:49.942Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1600,20 +1621,20 @@ context<span class="token punctuation">.</span><span class="token function">find
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
         var s = document.getElementsByTagName("script")[0];
-        hm.id="bd"
+        hm.id = "bd"
         s.parentNode.insertBefore(hm, s);
     })();
 
     function init() {
-        var p=location.pathname;
+        var p = location.pathname;
         _hmt.push(['_trackPageview', p]);
-        if(p[p.length-1]==='/'){
-            p+="index.md"
-        }else {
+        if (p[p.length - 1] === '/') {
+            p += "index.md"
+        } else {
             p = p.split(".")[0] + ".md";
         }
-        p= "https://github.com/flutterchina/flutter-in-action/blob/master/docs" +p;
-        $(".pull-right .fa-edit").parent("a").attr("href",p);
+        p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
+        $(".pull-right .fa-edit").parent("a").attr("href", p);
         $("table").wrap("<div style='overflow: auto'></div>");
         //百度统计
         var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
@@ -1631,14 +1652,25 @@ context<span class="token punctuation">.</span><span class="token function">find
     function hookAPI(api, ob, fn) {
         return function () {
             var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn,1000);
+
+            setTimeout(fn, 1000);
             return result;
         }
     }
 
+    function addAD(){
+        if($("#book-search-results .ad").length==0) {
+            $("#ad>div").clone().hide().fadeIn().prependTo("#book-search-results")
+            setTimeout(function () {
+                $(".body-inner").animate({scrollTop:0},200)
+            },800);
+        }
+    }
+    setInterval(addAD,300);
+
     init();
 
-    if(history.pushState){
+    if (history.pushState) {
         history.pushState = hookAPI(history.pushState, history, init);
     }
 
