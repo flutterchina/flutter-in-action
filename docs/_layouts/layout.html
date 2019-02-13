@@ -127,7 +127,7 @@
     }
 
     function addAD(){
-        if($("#book-search-results .ad").length==0) {
+        if(location.href==='https://book.flutterchina.club/'&&$("#book-search-results .ad").length==0) {
             $("#ad>div").clone().hide().fadeIn().prependTo("#book-search-results")
             setTimeout(function () {
                 $(".body-inner").animate({scrollTop:0},200)
