@@ -73,7 +73,7 @@
 <body>
 <div id="ad" style="display: none">
     <div class="ad"
-         onclick="location.href='https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts'">
+         onclick="_track('aliyun')">
         <div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>
         <div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>
     </div>
@@ -134,9 +134,18 @@
             },800);
         }
     }
+
+    function _track(p) {
+        _hmt.push(['_trackEvent', 'ad', 'click', p]);
+        setTimeout(function(){
+          location.href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts"
+        },100);
+    }
+
     setInterval(addAD,300);
 
     init();
+
 
     if (history.pushState) {
         history.pushState = hookAPI(history.pushState, history, init);
