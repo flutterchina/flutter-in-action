@@ -56,15 +56,16 @@
             font-size: .9em;
         }
 
-       .ad{
+        .ad {
             color: white;
             text-align: center;
             background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);
             background-size: cover;
             cursor: pointer;
             margin-bottom: 30px;
-           padding: 18px
+            padding: 18px
         }
+
         .ad:hover {
             opacity: .8;
         }
@@ -72,10 +73,15 @@
 </head>
 <body>
 <div id="ad" style="display: none">
-    <div class="ad"
-         onclick="_track('aliyun')">
+    <div class="ad ad0"
+         onclick="_track('aliyun','https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts')">
         <div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>
         <div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>
+    </div>
+    <div class="ad ad1"
+         onclick="_track('aliyun-puhui','https://promotion.aliyun.com/ntms/act/qwbk.html?spm=5176.11533457.1089570.10.74e877e33jtaGy&userCode=8hhi4dts')">
+        <div style="font-size: 1.5em;">阿里云全民云计算-新春特惠</div>
+        <div style="color:orange; font-size: 18px;padding-top: 4px;">普惠上云，云服务器1核1G仅需293元/年</div>
     </div>
 </div>
 {% block body %}{% endblock %}
@@ -126,23 +132,24 @@
         }
     }
 
-    function addAD(){
-        if(location.href!=='https://book.flutterchina.club/'&&$("#book-search-results .ad").length==0) {
-            $("#ad>div").clone().hide().fadeIn().prependTo("#book-search-results")
+    function addAD() {
+        if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
+            var id=Math.ceil(Math.random()*10)%2;
+            $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
             setTimeout(function () {
-                $(".body-inner").animate({scrollTop:0},200)
-            },800);
+                $(".body-inner").animate({scrollTop: 0}, 200)
+            }, 800);
         }
     }
 
-    function _track(p) {
+    function _track(p,url) {
         _hmt.push(['_trackEvent', 'ad', 'click', p]);
-        setTimeout(function(){
-          location.href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts"
-        },100);
+        setTimeout(function () {
+            location.href = url
+        }, 100);
     }
 
-    setInterval(addAD,300);
+    setInterval(addAD, 300);
 
     init();
 
