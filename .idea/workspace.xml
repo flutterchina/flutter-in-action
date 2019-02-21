@@ -13,29 +13,29 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter10/file_operation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/file_operation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter10/http.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/http.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter10/json_model.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/json_model.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter10/socket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/socket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter10/websocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter10/websocket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/android_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/android_implement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/develop_package.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/develop_package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/ios_implement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter11/platform-channel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/intl.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/intl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/locallization_implement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter12/multi_languages_support.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/combine.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/combine.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/custom_paint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/gradient_circular_progress_demo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/intro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter13/turn_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter13/turn_box.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/element_buildcontext.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_app_startup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/chapter14/render_object.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/element_buildcontext.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/element_buildcontext.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_app_startup.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/flutter_app_startup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/flutter_ui_system.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/chapter14/render_object.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter14/render_object.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/first_flutter_app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_app_debug.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter2/flutter_assets_mgr.html" afterDir="false" />
@@ -86,10 +86,11 @@
       <change beforePath="$PROJECT_DIR$/_book/chapter9/route_transition.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/route_transition.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/chapter9/stagger_animation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_layouts/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_plus_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/_book/search_plus_index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/todo.html" beforeDir="false" afterPath="$PROJECT_DIR$/_book/todo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/chapter1/configuration.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter1/configuration.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/chapter10/dio.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter10/dio.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -104,16 +105,16 @@
     <session id="1661963699">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,7 +126,7 @@
           <entry key="js" value="3" />
           <entry key="json" value="10" />
           <entry key="less" value="2" />
-          <entry key="md" value="163" />
+          <entry key="md" value="166" />
           <entry key="mkdirp" value="1" />
           <entry key="multi_languages_support" value="1" />
           <entry key="png" value="3" />
@@ -142,7 +143,7 @@
           <entry key="JSON" value="10" />
           <entry key="JavaScript" value="4" />
           <entry key="Less" value="2" />
-          <entry key="Markdown" value="165" />
+          <entry key="Markdown" value="168" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="TypeScript" value="1" />
           <entry key="YAML" value="1" />
@@ -178,10 +179,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="328">
               <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -221,15 +222,50 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-548" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_layouts/ebook/summary.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-359" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter1/configuration.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="481">
+                <caret line="55" column="149" selection-start-line="55" selection-start-column="149" selection-end-line="55" selection-end-column="149" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter3/text.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="198">
+                <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/chapter10/file_operation.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="270">
+                <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+                <folding>
+                  <element signature="e#0#17#0" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
           </provider>
         </entry>
       </file>
@@ -237,7 +273,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$PROJECT_DIR$/../../../../../du/Desktop/flutter in action/第三章</find>
       <find>user</find>
       <find>（todo.md）</find>
       <find>src=&quot;../imgs/</find>
@@ -267,6 +302,7 @@
       <find>命中测试</find>
       <find>点击测试</find>
       <find>大多说</find>
+      <find>下划线</find>
     </findStrings>
     <replaceStrings>
       <replace>注意</replace>
@@ -348,8 +384,8 @@
         <option value="$PROJECT_DIR$/docs/chapter14/flutter_app_startup.md" />
         <option value="$PROJECT_DIR$/docs/SUMMARY.md" />
         <option value="$PROJECT_DIR$/book.json" />
-        <option value="$PROJECT_DIR$/docs/chapter1/configuration.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/layout.html" />
+        <option value="$PROJECT_DIR$/docs/chapter1/configuration.md" />
       </list>
     </option>
   </component>
@@ -410,10 +446,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="97" />
-    <option name="y" value="26" />
+    <option name="x" value="366" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -421,6 +457,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,11 +465,63 @@
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter10" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,14 +579,8 @@
       <workItem from="1546423553346" duration="6208000" />
       <workItem from="1546847217343" duration="10504000" />
       <workItem from="1547176617441" duration="15800000" />
-      <workItem from="1549950286477" duration="14307000" />
-    </task>
-    <task id="LOCAL-00023" summary="update">
-      <created>1544165405306</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1544165405306</updated>
+      <workItem from="1549950286477" duration="14911000" />
+      <workItem from="1550729516861" duration="1397000" />
     </task>
     <task id="LOCAL-00024" summary="提交国际化相关章节">
       <created>1544360941196</created>
@@ -835,11 +918,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550116409363</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="修改&quot;常见配置问题&quot;一章">
+      <created>1550118324706</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1550118324706</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130422000" />
+    <option name="totallyTimeSpent" value="132423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -851,7 +941,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="26" width="1440" height="821" extended-state="0" />
+    <frame x="366" y="23" width="1440" height="830" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14235377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -865,8 +955,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4947146" weight="0.37818697" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4848485" visible="true" weight="0.36260623" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5151515" side_tool="true" visible="true" weight="0.36260623" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48414376" visible="true" weight="0.25174826" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51585627" side_tool="true" visible="true" weight="0.25174826" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -899,26 +989,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改&quot;常见配置问题&quot;一章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/todo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter14/flutter_ui_system.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/chapter1/mobile_development_intro.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1221,16 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter1/configuration.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="313">
-            <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-749" />
@@ -1244,11 +1304,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/ebook/pdf_header.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/ebook/summary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-359" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_book/chapter1/configuration.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1266,6 +1321,22 @@
     <entry file="file://$PROJECT_DIR$/_book/chapter1/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2905" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/header.html">
@@ -1286,23 +1357,41 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/website/summary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/ebook/summary.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter1/configuration.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="481">
+            <caret line="55" column="149" selection-start-line="55" selection-start-column="149" selection-end-line="55" selection-end-column="149" />
+          </first_editor>
+          <second_editor />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/docs/chapter3/text.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter10/file_operation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <folding>
+              <element signature="e#0#17#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

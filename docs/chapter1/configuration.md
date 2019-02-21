@@ -53,7 +53,7 @@ Could not Get **
   }
   ```
 
-4. 进入 `File/ Settings/ Build, Execution, Deployment/ Gradle/ Android Studio ` 中，勾选上 `Enable embedded Maven repository` ，重启 Android Studio 即可解决。
+4. 进入 File/ Settings/ Build, Execution, Deployment/ BuildTools/ Gradle/ Android Studio 中，勾选上 Enable embedded Maven repository ，重启 Android Studio 即可解决。
 
    > **注意：**存在这样的一种情况，当你根据上述步骤设置了之后，依旧无法解决这个问题，并有类似于 `Could not HEAD maven.aliyun.com` 的报错信息，请检查 `C:\Users\{user_name}\.gradle\gradle.properties` 是否有设置代理。删除后问题即可解决。
 
