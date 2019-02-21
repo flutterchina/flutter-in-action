@@ -76,6 +76,7 @@
     * [文件操作](chapter10/file_operation.md)
     * [Http请求-HttpClient](chapter10/http.md)
     * [Http请求-Dio package](chapter10/dio.md) 
+    * [实例：Http分块下载](chapter10/download_with_chunks.md) 
     * [WebSocket](chapter10/websocket.md) 
     * [使用Socket API](chapter10/socket.md) 
     * [Json转Model](chapter10/json_model.md) 
