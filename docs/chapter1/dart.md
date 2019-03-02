@@ -28,16 +28,45 @@
 
 2. **dynamic**和**Object**
 
-   `Dynamic`和`Object` 与 `var`功能相似，都会在赋值时自动进行类型推断，不同在于，赋值后可以改变其类型，如：
-
+    `Object` 是dart所有对象的根基类，也就是说所有类型都是`Object`的子类(包括Function和Null)，所以任何类型的数据都可以赋值给`Object`声明的对象.
+    `dynamic`与`var`一样都是关键词,声明的变量可以赋值任意对象.
+    `dynamic`与`var`相同之处在于,`dynamic`与`Object`声明的变量一样都可以在后期改变赋值类型.
+    
+    ```dart
+    dynamic t;
+    Object x;
+    t = "hi world";
+    x = 'Hello Object';
+    //下面代码没有问题
+    t = 1000;
+    x = 1000;
+    ```
+   
+   `dynamic`与`Object`不同的是,`dynamic`声明的对象编译器会提供所有可能的组合,
+   `Object`声明的对象只能使用Object的属性与方法, 否则编译器会报错. 如:
+   
    ```dart
-   dynamic t;
-   t="hi world";
-   //下面代码没有问题
-   t=1000;
-   ```
+    dynamic a;
+    Object b;
+    main() {
+        a = "";
+        b = "";
+        printLengths();
+    }   
 
-   `Object` 是dart所有对象的根基类，也就是说所有类型都是`Object`的子类，所以任何类型的数据都可以赋值给`Object`声明的对象，所以表现效果和`dynamic`相似。
+    printLengths() {
+        // no warning
+        print(a.length);
+        // warning:
+        // The getter 'length' is not defined for the class 'Object'
+        print(b.length);
+    }
+   ```
+   
+   变量a不会报错, 变量b编译器会报错
+   `dynamic`的这个特性与`Objective-C`中的`id`作用很像.
+   `dynamic`的这个特点使得我们在使用它是需要格外注意,这很容易引必一个运行时错误.
+   
 
 3. **final**和**const**
 
