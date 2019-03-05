@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_layouts/layout.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -108,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="151" column="4" lean-forward="true" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="31" />
+              <caret line="151" column="4" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -375,8 +374,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1419" />
-    <option name="y" value="53" />
+    <option name="x" value="-1369" />
+    <option name="y" value="28" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
   </component>
@@ -518,14 +517,7 @@
       <workItem from="1550729516861" duration="3177000" />
       <workItem from="1550832070379" duration="582000" />
       <workItem from="1551070871549" duration="1423000" />
-      <workItem from="1551334887803" duration="491000" />
-    </task>
-    <task id="LOCAL-00027" summary="提交国际化相关章节">
-      <created>1544361665746</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1544361665746</updated>
+      <workItem from="1551334887803" duration="1133000" />
     </task>
     <task id="LOCAL-00028" summary="提交国际化最后一章，fix #32">
       <created>1544437201752</created>
@@ -863,11 +855,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551075377825</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="fix #117">
+      <created>1551335411941</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1551335411941</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136699000" />
+    <option name="totallyTimeSpent" value="137341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,9 +878,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1419" y="53" width="1440" height="808" extended-state="0" />
+    <frame x="-1369" y="28" width="1440" height="808" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14235377" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14235377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -893,7 +892,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4947146" weight="0.37818697" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4820296" visible="true" weight="0.13275613" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4820296" visible="true" weight="0.13275613" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5179704" side_tool="true" visible="true" weight="0.13275613" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1322,7 +1321,7 @@
     <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="151" column="4" lean-forward="true" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="31" />
+          <caret line="151" column="4" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
