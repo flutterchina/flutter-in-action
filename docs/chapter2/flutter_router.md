@@ -89,7 +89,7 @@
 
 ### Future  push(BuildContext context, Route route)
 
-将给定的路由入栈（即打开新的页面），返回值是一个`Future`对象，用以接收新路由出栈（及关闭）时的返回数据。
+将给定的路由入栈（即打开新的页面），返回值是一个`Future`对象，用以接收新路由出栈（即关闭）时的返回数据。
 
 ### bool  pop(BuildContext context, [ result ])
 
