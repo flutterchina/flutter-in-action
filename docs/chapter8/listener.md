@@ -71,7 +71,8 @@ Listener(
   ),
   ```
 
-  上例中，只有点击文本内容区域才会触发点击事件，如果我们想让整个300×150的矩形区域都能点击我们可以将`behavior`设为`HitTestBehavior.opaque`。注意，该属性并不能用于在Widget树中拦截（忽略）事件，它只是决定命中测试时的Widget大小。
+  上例中，只有点击文本内容区域才会触发点击事件，因为 `deferToChild` 会去子widget判断是否命中测试，而该例中子widget就是 `Text("Box A")` 。
+  如果我们想让整个300×150的矩形区域都能点击我们可以将`behavior`设为`HitTestBehavior.opaque`。注意，该属性并不能用于在Widget树中拦截（忽略）事件，它只是决定命中测试时的Widget大小。
 
 - `translucent`：当点击Widget透明区域时，可以对自身边界内及底部可视区域都进行命中测试，这意味着点击顶部widget透明区域时，顶部widget和底部widget都可以接收到事件，例如：
 
@@ -127,3 +128,5 @@ Listener(
 ```
 
 点击Container时，由于它在`AbsorbPointer`的子树上，所以不会响应指针事件，所以日志不会输出"in"，但`AbsorbPointer`本身是可以接收指针事件的，所以会输出"up"。如果将`AbsorbPointer`换成`IgnorePointer`，那么两个都不会输出。
+
+
