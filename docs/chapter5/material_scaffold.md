@@ -235,7 +235,7 @@ Scaffold(
 
 ### 抽屉菜单Drawer
 
-Scaffold的`drawer`和`endDrawer`属性可以分别接受一个Widget作为页面的左、右抽屉菜单，如果开发者提供了抽屉菜单，那么当用户手指重屏幕左/右向里滑动时便可打开抽屉菜单。本节开始部分的示例中实现了一个左抽屉菜单MyDrawer，源码如下：
+Scaffold的`drawer`和`endDrawer`属性可以分别接受一个Widget作为页面的左、右抽屉菜单，如果开发者提供了抽屉菜单，那么当用户手指从屏幕左/右向里滑动时便可打开抽屉菜单。本节开始部分的示例中实现了一个左抽屉菜单MyDrawer，源码如下：
 
 ```dart
 class MyDrawer extends StatelessWidget {
