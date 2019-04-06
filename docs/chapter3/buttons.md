@@ -112,7 +112,7 @@ FlatButton(
 
 Flutter 中没有提供去除背景的设置，假若我们需要去除背景，则可以通过将背景颜色设置为全透明来实现。对应上面的代码，便是将 `color: Colors.blue` 替换为 `color: Color(0x000000)`。
 
-细心的读者可能会发现这个按钮没有阴影(点击之后也没有)，这样会显得没有质感。其实这也很容易，将上面的`FlatButton`换成`RaisedButton`就行，其它代码不用改，换了之后我们看看效果：
+细心的读者可能会发现这个按钮没有阴影(点击之后也没有)，这样会显得没有质感。其实这也很容易，将上面的`FlatButton`换成`RaisedButton`就行，其它代码不用改（这里 color 也不做更改），换了之后我们看看效果：
 
 ![image-20180830201140908](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830201140908.png)
 
