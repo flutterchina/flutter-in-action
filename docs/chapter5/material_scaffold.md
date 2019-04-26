@@ -299,11 +299,11 @@ class MyDrawer extends StatelessWidget {
 
 ### FloatingActionButton
 
-FloatingActionButton是Material设计规范中的一种特殊Button，通常悬浮在页面的某一个位置作为某种常用动作的快捷入口，如本节示例中页面右下角的"➕"号按钮。我们可以通过Scaffold的`floatingActionButton`属性来设置一个FloatingActionButton，同时通过`floatingActionButtonLocation`属性来指定其在页面中悬浮的位置，这个比较简单，不在赘述。
+FloatingActionButton是Material设计规范中的一种特殊Button，通常悬浮在页面的某一个位置作为某种常用动作的快捷入口，如本节示例中页面右下角的"➕"号按钮。我们可以通过Scaffold的`floatingActionButton`属性来设置一个FloatingActionButton，同时通过`floatingActionButtonLocation`属性来指定其在页面中悬浮的位置，这个比较简单，不再赘述。
 
 ### 底部Tab导航栏
 
-我们可以通过Scaffold的`bottomNavigationBar`属性来设置底部导航，如本节开始示例所示，我们通过Material组件库提供的BottomNavigationBar和BottomNavigationBarItem两个Widget来实现Material风格的底部导航栏，可以看到代码非常简单，不在赘述。但是如果我们想实现如下效果的底部导航应该怎么做呢？
+我们可以通过Scaffold的`bottomNavigationBar`属性来设置底部导航，如本节开始示例所示，我们通过Material组件库提供的BottomNavigationBar和BottomNavigationBarItem两个Widget来实现Material风格的底部导航栏，可以看到代码非常简单，不再赘述。但是如果我们想实现如下效果的底部导航应该怎么做呢？
 
 ![Screenshot_1548315443](../imgs/Screenshot_1548315443.png)
 
