@@ -1,10 +1,10 @@
 ## ConstrainedBox和SizedBox
 
-ConstrainedBox和SizedBox都是通过RenderConstrainedBox来渲染的。SizedBox只是ConstrainedBox一个定制，本节把他们放在一起讨论。
+ConstrainedBox和SizedBox都是通过RenderConstrainedBox来渲染的。SizedBox只是ConstrainedBox的一个定制，本节把他们放在一起讨论。
 
 ### ConstrainedBox
 
-ConstrainedBox用于对齐子widget添加额外的约束。例如，如果你想让子widget的最小高度是80像素，你可以使用`const BoxConstraints(minHeight: 80.0)`作为子widget的约束。
+ConstrainedBox用于对子widget添加额外的约束。例如，如果你想让子widget的最小高度是80像素，你可以使用`const BoxConstraints(minHeight: 80.0)`作为子widget的约束。
 
 #### 示例
 
@@ -67,7 +67,7 @@ SizedBox(
 
 ![image-20180907162546222](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907162546222.png)
 
-实际上SizedBox和只是ConstrainedBox一个定制，上面代码等价于：
+实际上SizedBox只是ConstrainedBox的一个定制，上面代码等价于：
 
 ```dart
 ConstrainedBox(
