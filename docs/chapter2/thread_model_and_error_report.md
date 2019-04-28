@@ -175,7 +175,7 @@ void main() {
     () => runApp(MyApp()),
     zoneSpecification: ZoneSpecification(
       print: (Zone self, ZoneDelegate parent, Zone zone, String line) {
-        collectLog(line); //手机日志
+        collectLog(line); // 收集日志
       },
     ),
     onError: (Object obj, StackTrace stack) {
