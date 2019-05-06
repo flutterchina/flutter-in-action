@@ -67,7 +67,7 @@ SizedBox(
 
 ![image-20180907162546222](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907162546222.png)
 
-实际上SizedBox和只是ConstrainedBox一个定制，上面代码等价于：
+实际上SizedBox只是ConstrainedBox一个定制，上面代码等价于：
 
 ```dart
 ConstrainedBox(

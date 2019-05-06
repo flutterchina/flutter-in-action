@@ -214,7 +214,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
    - Scaffold 是 Material库中提供的一个widget, 它提供了默认的导航栏、标题和包含主屏幕widget树的body属性。widget树可以很复杂。
    - body的widget树中包含了一个`Center` widget，`Center` 可以将其子widget树对齐到屏幕中心， `Center` 子widget是一个`Column` widget，`Column`的作用是将其所有子widget沿屏幕垂直方向依次排列， 此例中`Column`包含两个 `Text `子widget，第一个`Text` widget显示固定文本 “You have pushed the button this many times:”，第二个`Text` widget显示`_counter`状态的数值。
-   - floatingActionButton是页面右下角的带“➕”的悬浮按钮，它的`onPressed`属性接受一个回调函数，代表它本点击后的处理器，本例中直接将`_incrementCounter`作为其处理函数。
+   - floatingActionButton是页面右下角的带“➕”的悬浮按钮，它的`onPressed`属性接受一个回调函数，代表它被点击后的处理器，本例中直接将`_incrementCounter`作为其处理函数。
 
 
 
