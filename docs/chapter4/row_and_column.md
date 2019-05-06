@@ -6,7 +6,7 @@
 
 ### 主轴和纵轴
 
-对于线性布局，有主轴和纵轴之分，如果布局是沿水平方，那么主轴就指是水平方向，而纵轴即垂直方向；如果布局沿垂直方向，那么主轴就是指垂直方向，而纵轴就是水平方向。在线性布局中，有两个定义对齐方式的枚举类MainAxisAlignment和CrossAxisAlignment，分别代表主轴对齐和纵轴对齐。
+对于线性布局，有主轴和纵轴之分，如果布局是沿水平方向，那么主轴就是指水平方向，而纵轴即垂直方向；如果布局沿垂直方向，那么主轴就是指垂直方向，而纵轴就是水平方向。在线性布局中，有两个定义对齐方式的枚举类MainAxisAlignment和CrossAxisAlignment，分别代表主轴对齐和纵轴对齐。
 
 ### Row
 
@@ -119,7 +119,7 @@ Container(
 
 ![image-20180905153801229](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180905153801229.png)
 
-如果要让里面的Colum占满外部Colum，可以使用Expanded widget：
+如果要让里面的Column占满外部Column，可以使用Expanded widget：
 
 ```dart
 Expanded( 

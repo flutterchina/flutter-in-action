@@ -16,13 +16,14 @@ Flutter中，我们可以通过Image来加载并显示图片，Image的数据源
 
 1. 在工程根目录下创建一个`images目录`，并将图片avatar.png拷贝到该目录。
 
-2. 在`pubspec.yml`中的`flutter`部分添加如下内容：
+2. 在`pubspec.yaml`中的`flutter`部分添加如下内容：
 
    ```yaml
-   assets:
-     - images/avatar.png
+     assets:
+       - images/avatar.png
    ```
-
+  > 注意: 由于 yaml 文件对缩进严格，所以必须严格按照每一层两个空格的方式进行缩进，此处assets前面应有两个空格。
+  
 3. 加载该图片
 
    ```dart

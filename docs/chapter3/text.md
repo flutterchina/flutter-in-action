@@ -151,7 +151,7 @@ DefaultTextStyle(
 
 #### 在asset中声明
 
-要将字体打文件打包到应用中，和使用其它资源一样，要先在`pubspec.yaml`中声明它。然后将字体文件复制到在`pubspec.yaml`中指定的位置。如：
+要将字体文件打包到应用中，和使用其它资源一样，要先在`pubspec.yaml`中声明它。然后将字体文件复制到在`pubspec.yaml`中指定的位置。如：
 
 ```yaml
 flutter:
