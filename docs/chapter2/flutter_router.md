@@ -97,6 +97,10 @@
 
 `Navigator` 还有很多其它方法，如`Navigator.replace`、`Navigator.popUntil`等，详情请参考API文档或SDK源码注释，在此不再赘述。下面我们还需要介绍一下路由相关的另一个概念“命名路由”。
 
+### 实例方法
+
+Navigator类中第一个参数为context的**静态方法**都对应一个Navigator的**实例方法**， 比如`Navigator.push(BuildContext context, Route route) `等价于`Navigator.of(context).push(Route route) route)` ，下面命名路由相关的方法也是一样的。
+
 ## 命名路由
 
 所谓命名路由（Named Route）即给路由起一个名字，然后可以通过路由名字直接打开新的路由。这为路由管理带来了一种直观、简单的方式。
@@ -137,8 +141,8 @@ return new MaterialApp(
 
 要通过路由名称来打开新路由，可以使用：
 
-```
-Future pushNamed(BuildContext context, String routeName)
+```dart
+Future pushNamed(BuildContext context, String routeName,{Object arguments})
 ```
 
 `Navigator` 除了`pushNamed`方法，还有`pushReplacementNamed`等其他管理命名路由的方法，读者可以自行查看API文档。
@@ -159,38 +163,38 @@ onPressed: () {
 
 
 
-### 命名路由的优缺点
+### 命名路由参数
 
-命名路由的最大优点是直观，我们可以通过语义化的字符串来管理路由。但其有一个明显的缺点：不能直接传递路由参数。举个例子，假设有一个新路由EchoRoute，它的功能是接受一个字符串参数`tip`，然后再在屏幕中心将`tip`的内容显示出来，代码如下：
+在Flutter最初的版本中，命名路由是不能传递参数的，后来才支持了参数；下面展示命名路由如何传递并获取路由参数：
+
+我们先注册一个路由：
+
+```dart
+ routes:{
+   "new_page":(context)=>EchoRoute(),
+  } ,
+```
+
+在路由页通过`RouteSetting`对象获取路由参数：
 
 ```dart
 class EchoRoute extends StatelessWidget {
-  EchoRoute(this.tip);
-  final String tip;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Echo route"),
-      ),
-      body: Center(
-        //回显tip内容  
-        child: Text(tip),
-      ),
-    );
+    //获取路由参数  
+    var args=ModalRoute.of(context).settings.arguments
+    //...省略无关代码
   }
 }
 ```
 
-如果我们使用命名参数，就必须将路由提前注册到路由表中，所以就无法动态修改`tip`参数，如：
+在打开路由时传递参数
 
 ```dart
-{
-    "tip_widgets":(context)=>EchoRoute("内容固定")
-}
+Navigator.of(context).pushNamed("new_page", arguments: "hi");
 ```
 
 
 
-综上所述，我们可以看到当路由需要参数时，使用命名路由则不够灵活。
 
