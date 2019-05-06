@@ -69,6 +69,7 @@ SizedBox(
 
 实际上SizedBox只是ConstrainedBox的一个定制，上面代码等价于：
 
+
 ```dart
 ConstrainedBox(
   constraints: BoxConstraints.tightFor(width: 80.0,height: 80.0),

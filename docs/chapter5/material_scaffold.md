@@ -145,8 +145,8 @@ Material组件库中提供了一个TabBar组件，它可以快速生成Tab菜单
 
 ```dart
 class _ScaffoldRouteState extends State<ScaffoldRoute>
-    with SingleTickerProviderStateMixin { 
-    
+    with SingleTickerProviderStateMixin {
+
   TabController _tabController; //需要定义一个Controller
   List tabs = ["新闻", "历史", "图片"];
 
@@ -161,14 +161,15 @@ class _ScaffoldRouteState extends State<ScaffoldRoute>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        ...   //省略无关代码
+        ... //省略无关代码
         bottom: TabBar(   //生成Tab菜单
-            controller: _tabController,
-            tabs: tabs.map((e) => Tab(text: e)).toList()),
+          controller: _tabController,
+          tabs: tabs.map((e) => Tab(text: e)).toList()
         ),
+      ),
       ... //省略无关代码
-      
-  }   
+
+  }
 ```
 
 上面代码首先创建了一个TabController ，它是用于控制/监听Tab菜单切换。然后通过TabBar生成了一个底部菜单栏，TabBar的`tabs`属性接受一个Widget数组，表示每一个Tab子菜单，我们可以自定义，也可以像示例中一样直接使用Tab Widget，它也是Material组件库提供的Material风格的Tab菜单。
@@ -235,7 +236,7 @@ Scaffold(
 
 ### 抽屉菜单Drawer
 
-Scaffold的`drawer`和`endDrawer`属性可以分别接受一个Widget作为页面的左、右抽屉菜单，如果开发者提供了抽屉菜单，那么当用户手指重屏幕左/右向里滑动时便可打开抽屉菜单。本节开始部分的示例中实现了一个左抽屉菜单MyDrawer，源码如下：
+Scaffold的`drawer`和`endDrawer`属性可以分别接受一个Widget作为页面的左、右抽屉菜单，如果开发者提供了抽屉菜单，那么当用户手指从屏幕左/右向里滑动时便可打开抽屉菜单。本节开始部分的示例中实现了一个左抽屉菜单MyDrawer，源码如下：
 
 ```dart
 class MyDrawer extends StatelessWidget {

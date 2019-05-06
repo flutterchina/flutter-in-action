@@ -164,7 +164,7 @@ class CounterWidget extends StatefulWidget {
 }
 ```
 
-`CounterWidget`接收一个`initValue`整形参数，它表示计数器的初始值。下面我们看一下State的代码：
+`CounterWidget`接收一个`initValue`整型参数，它表示计数器的初始值。下面我们看一下State的代码：
 
 ```dart
 class _CounterWidgetState extends State<CounterWidget> {  
@@ -181,11 +181,14 @@ class _CounterWidgetState extends State<CounterWidget> {
   @override
   Widget build(BuildContext context) {
     print("build");
-    return Center(
-      child: FlatButton(
-        child: Text('$_counter'),
-        //点击后计数器自增  
-        onPressed:()=>setState(()=> ++_counter) ,
+    return Scaffold(
+      body: Center(
+        child: FlatButton(
+          child: Text('$_counter'),
+          //点击后计数器自增
+          onPressed:()=>setState(()=> ++_counter,
+          ),
+        ),
       ),
     );
   }
@@ -380,7 +383,7 @@ class _TapboxAState extends State<TapboxA> {
 
 对于父widget来说，管理状态并告诉其子widget何时更新通常是比较好的方式。 例如，IconButton是一个图片按钮，但它是一个无状态的widget，因为我们认为父widget需要知道该按钮是否被点击来采取相应的处理。
 
-在以下示例中，TapboxB通过回调将其状态导出到其父项。由于TapboxB不管理任何状态，因此它的父类为StatelessWidget。
+在以下示例中，TapboxB通过回调将其状态导出到其父项。由于TapboxB不管理任何状态，因此它的父类为StatefulWidget, TapboxB为StatelessWidget。
 
 ParentWidgetState 类:
 
