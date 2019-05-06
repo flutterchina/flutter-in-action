@@ -164,7 +164,7 @@ class CounterWidget extends StatefulWidget {
 }
 ```
 
-`CounterWidget`接收一个`initValue`整形参数，它表示计数器的初始值。下面我们看一下State的代码：
+`CounterWidget`接收一个`initValue`整型参数，它表示计数器的初始值。下面我们看一下State的代码：
 
 ```dart
 class _CounterWidgetState extends State<CounterWidget> {  
@@ -181,11 +181,14 @@ class _CounterWidgetState extends State<CounterWidget> {
   @override
   Widget build(BuildContext context) {
     print("build");
-    return Center(
-      child: FlatButton(
-        child: Text('$_counter'),
-        //点击后计数器自增  
-        onPressed:()=>setState(()=> ++_counter) ,
+    return Scaffold(
+      body: Center(
+        child: FlatButton(
+          child: Text('$_counter'),
+          //点击后计数器自增
+          onPressed:()=>setState(()=> ++_counter,
+          ),
+        ),
       ),
     );
   }
