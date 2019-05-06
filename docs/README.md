@@ -4,9 +4,11 @@
 
 本书是第一本系统介绍Flutter技术的中文书籍，它是Flutter中文社区发起的开源项目之一，旨在帮助开发者入门，系统地、循序渐进的了解Flutter。
 
+> 本书目前每天PV 3.5万，独立访客6000多名；由于服务器配置有限，所以某些时段访问本站可能略有延迟，如果延迟较久，读者可以直接在[Github上阅读本书](https://github.com/flutterchina/flutter-in-action/blob/master/docs/SUMMARY.md)。
+
 ### 关于作者
 
-作者[wendux](https://github.com/wendux)，高级技术专家(前端方向)、[掘金知名专栏作者](https://juejin.im/user/58211b88a0bb9f0058c25b7f)、[Flutter中文网](https://flutterchina.club/)发起人、[Flutter中文社区开源项目](https://github.com/flutterchina)发起人、[dio](https://github.com/flutterchina/dio)、[fly](https://github.com/wendux/fly)、[dsBridge](https://github.com/wendux/DSBridge-Android)等多个知名开源项目作者；曾就职于百度、小赢科技，从事过PC、后台、移动端以及前端，负责过多次核心技术攻关，现就职于字节跳动业务团队，目前闲暇时，主要关注大前端行业发展。
+作者[wendux](https://github.com/wendux)，高级技术专家(前端方向)、[掘金知名专栏作者](https://juejin.im/user/58211b88a0bb9f0058c25b7f)、[Flutter中文网](https://flutterchina.club/)发起人、[Flutter中文社区开源项目](https://github.com/flutterchina)发起人；[dio](https://github.com/flutterchina/dio)、[fly](https://github.com/wendux/fly)、[dsBridge](https://github.com/wendux/DSBridge-Android)等多个知名开源项目作者；曾就职于百度、小赢科技，从事过PC、后台、移动端以及前端，负责过多次核心技术攻关，现就职于字节跳动业务团队，目前闲暇时，主要关注大前端行业发展。
 
 > 广告：长期招聘前端、移动端高工，有意者请发简历到duwen32767@163.com 或加微信Demons-du.
 
