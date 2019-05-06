@@ -37,8 +37,8 @@ class HeroAnimationRoute extends StatelessWidget {
                   Animation secondaryAnimation) {
                 return new FadeTransition(
                   opacity: animation,
-                  child: PageScaffold(
-                    title: "原图",
+                  child: Scaffold(
+                    title: Text("原图"),
                     body: HeroAnimationRouteB(),
                   ),
                 );

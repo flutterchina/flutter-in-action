@@ -452,8 +452,8 @@ class _FormTestRouteState extends State<FormTestRoute> {
 
   @override
   Widget build(BuildContext context) {
-    return PageScaffold(
-      title: "Form Test",
+    return Scaffold(
+      title: Text("Form Test"),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
         child: Form(

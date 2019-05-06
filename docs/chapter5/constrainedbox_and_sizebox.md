@@ -155,8 +155,46 @@ ConstrainedBox(
 
 ![image-20180910105830808](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910105830808.png)
 
-但是，读者请注意，UnconstrainedBox对父限制的“去除”并非是真正的去除，上面例子中虽然红色区域大小是90×20，但上方仍然有80的空白空间。也就是说父限制的minHeight(100.0)仍然是生效的，只不过它不影响最终子元素的大小，但仍然还是占有相应的空间，可以认为此时的父ConstrainedBox是作用于子ConstrainedBox上，而redBox只受子ConstrainedBox限制，这一点请读者务必注意。
+但是，读者请注意，UnconstrainedBox对父限制的“去除”并非是真正的去除，上面例子中虽然红色区域大小是90×20，但上方仍然有80的空白空间。也就是说父限制的minHeight(100.0)仍然是生效的，只不过它不影响最终子元素的大小，但仍然还是占有相应的空间，可以认为此时的父ConstrainedBox是作用于子ConstrainedBox上，而renderBox只受子ConstrainedBox限制，这一点请读者务必注意。
 
 那么有什么方法可以彻底去除父BoxConstraints的限制吗？答案是否定的！所以在此提示读者，在定义一个通用的widget时，如果对子widget指定限制时一定要注意，因为一旦指定限制条件，子widget如果要进行相关自定义大小时将可能非常困难，因为子widget在不更改父widget的代码的情况下无法彻底去除其限制条件。
+
+当我们发现已经使用SizedBox或ConstrainedBox来给子元素指定宽高，但是仍然没有效果时，几乎可以肯定：已经有父元素已经设置了限制；举个例子如导航栏的右侧菜单中，我们已经使用SizedBox指定了loading按钮的大小：
+
+```dart
+ AppBar(
+   title: Text(title),
+   actions: <Widget>[
+         SizedBox(
+             width: 20, 
+             height: 20,
+             child: CircularProgressIndicator(
+                 strokeWidth: 3,
+                 valueColor: AlwaysStoppedAnimation(Colors.white70),
+             ),
+         )
+   ],
+)
+```
+
+上面代码运行后，我们会发现loading按钮大小并没有发生变化，这正是因为AppBar中已经指定了actions按钮的限制条件，此时我们便可以通过UnconstrainedBox来去除父元素的限制:
+
+```dart
+AppBar(
+  title: Text(title),
+  actions: <Widget>[
+      UnconstrainedBox(
+            child: SizedBox(
+              width: 20,
+              height: 20,
+              child: CircularProgressIndicator(
+                strokeWidth: 3,
+                valueColor: AlwaysStoppedAnimation(Colors.white70),
+              ),
+          ),
+      )
+  ],
+)
+```
 
 
