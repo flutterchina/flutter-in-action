@@ -41,7 +41,7 @@ class WidgetsFlutterBinding extends BindingBase with GestureBinding, ServicesBin
 ```dart
 class Window {
     
-  // 当前设备的DPI，即一个物理相许显示多少逻辑像素，数字越大，显示效果就越精细保真。
+  // 当前设备的DPI，即一个逻辑像素显示多少物理像素，数字越大，显示效果就越精细保真。
   // DPI是设备屏幕的固件属性，如Nexus 6的屏幕DPI为3.5 
   double get devicePixelRatio => _devicePixelRatio;
   
