@@ -176,12 +176,13 @@ class _InfiniteListViewState extends State<InfiniteListView> {
 
   void _retrieveData() {
     Future.delayed(Duration(seconds: 2)).then((e) {
-      _words.insertAll(_words.length - 1,
-          //每次生成20个单词
-          generateWordPairs().take(20).map((e) => e.asPascalCase).toList()
-      );
       setState(() {
         //重新构建列表
+        _words.insertAll(
+          _words.length - 1,
+          //每次生成20个单词
+          generateWordPairs().take(20).map((e) => e.asPascalCase).toList()
+        );
       });
     });
   }
