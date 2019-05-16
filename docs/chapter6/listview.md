@@ -134,6 +134,7 @@ class _InfiniteListViewState extends State<InfiniteListView> {
 
   @override
   void initState() {
+    super.initState();
     _retrieveData();
   }
 
