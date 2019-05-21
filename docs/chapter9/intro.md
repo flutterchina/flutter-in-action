@@ -32,7 +32,7 @@ final CurvedAnimation curve =
     new CurvedAnimation(parent: controller, curve: Curves.easeIn);
 ```
 
-**注:** [Curves](https://docs.flutter.io/flutter/animation/Curves-class.html) 类类定义了许多常用的曲线，也可以创建自己的，例如：
+**注:** [Curves](https://docs.flutter.io/flutter/animation/Curves-class.html) 类定义了许多常用的曲线，也可以创建自己的，例如：
 
 ```dart
 class ShakeCurve extends Curve {
