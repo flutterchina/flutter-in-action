@@ -99,7 +99,7 @@
 
 ### 实例方法
 
-Navigator类中第一个参数为context的**静态方法**都对应一个Navigator的**实例方法**， 比如`Navigator.push(BuildContext context, Route route) `等价于`Navigator.of(context).push(Route route) route)` ，下面命名路由相关的方法也是一样的。
+Navigator类中第一个参数为context的**静态方法**都对应一个Navigator的**实例方法**， 比如`Navigator.push(BuildContext context, Route route) `等价于`Navigator.of(context).push(Route route)` ，下面命名路由相关的方法也是一样的。
 
 ## 命名路由
 
