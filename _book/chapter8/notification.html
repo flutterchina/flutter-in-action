@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>容器类Widgets · 《Flutter实战》</title>
+    <title>通知Notification · 《Flutter实战》</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
     <meta name="theme-color" content="#ffffff">
@@ -79,10 +79,10 @@
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="padding.html" />
+    <link rel="next" href="../chapter9/" />
     
     
-    <link rel="prev" href="../chapter4/stack.html" />
+    <link rel="prev" href="eventbus.html" />
     
 
     <style>
@@ -550,9 +550,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
             
-                <a href="./">
+                <a href="../chapter5/">
             
                     
                     容器类Widgets
@@ -564,9 +564,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="padding.html">
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/padding.html">
             
-                <a href="padding.html">
+                <a href="../chapter5/padding.html">
             
                     
                     Padding
@@ -577,9 +577,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="constrainedbox_and_sizebox.html">
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/constrainedbox_and_sizebox.html">
             
-                <a href="constrainedbox_and_sizebox.html">
+                <a href="../chapter5/constrainedbox_and_sizebox.html">
             
                     
                     布局限制类容器ConstrainedBox、SizeBox
@@ -590,9 +590,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="decoratedbox.html">
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/decoratedbox.html">
             
-                <a href="decoratedbox.html">
+                <a href="../chapter5/decoratedbox.html">
             
                     
                     装饰容器DecoratedBox
@@ -603,9 +603,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="transform.html">
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/transform.html">
             
-                <a href="transform.html">
+                <a href="../chapter5/transform.html">
             
                     
                     变换Transform
@@ -616,9 +616,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="container.html">
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/container.html">
             
-                <a href="container.html">
+                <a href="../chapter5/container.html">
             
                     
                     Container容器
@@ -629,9 +629,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="material_scaffold.html">
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/material_scaffold.html">
             
-                <a href="material_scaffold.html">
+                <a href="../chapter5/material_scaffold.html">
             
                     
                     Scaffold、TabBar、底部导航
@@ -802,9 +802,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../chapter8/">
+                <a href="./">
             
                     
                     事件处理与通知
@@ -816,9 +816,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../chapter8/listener.html">
+        <li class="chapter " data-level="1.9.1" data-path="listener.html">
             
-                <a href="../chapter8/listener.html">
+                <a href="listener.html">
             
                     
                     原始指针事件处理
@@ -829,9 +829,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../chapter8/gesture.html">
+        <li class="chapter " data-level="1.9.2" data-path="gesture.html">
             
-                <a href="../chapter8/gesture.html">
+                <a href="gesture.html">
             
                     
                     手势识别
@@ -842,9 +842,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../chapter8/eventbus.html">
+        <li class="chapter " data-level="1.9.3" data-path="eventbus.html">
             
-                <a href="../chapter8/eventbus.html">
+                <a href="eventbus.html">
             
                     
                     全局事件总线
@@ -855,9 +855,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="../chapter8/notification.html">
+        <li class="chapter active" data-level="1.9.4" data-path="notification.html">
             
-                <a href="../chapter8/notification.html">
+                <a href="notification.html">
             
                     
                     通知Notification
@@ -1419,7 +1419,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >容器类Widgets</a>
+        <a href=".." >通知Notification</a>
     </h1>
 </div>
 
@@ -1434,22 +1434,97 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5BB9;&#x5668;&#x7C7B;widget">&#x5BB9;&#x5668;&#x7C7B;Widget</h1>
-<p>&#x5BB9;&#x5668;&#x7C7B;Widget&#x548C;&#x5E03;&#x5C40;&#x7C7B;Widget&#x90FD;&#x4F5C;&#x7528;&#x4E8E;&#x5176;&#x5B50;Widget&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF1A;</p>
-<ul>
-<li>&#x5E03;&#x5C40;&#x7C7B;Widget&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x63A5;&#x6536;&#x4E00;&#x4E2A;widget&#x6570;&#x7EC4;&#xFF08;children&#xFF09;&#xFF0C;&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;&#xFF08;&#x6216;&#x5305;&#x542B;&#xFF09;MultiChildRenderObjectWidget &#xFF1B;&#x800C;&#x5BB9;&#x5668;&#x7C7B;Widget&#x4E00;&#x822C;&#x53EA;&#x9700;&#x8981;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5B50;Widget&#xFF08;child&#xFF09;&#xFF0C;&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;&#xFF08;&#x6216;&#x5305;&#x542B;&#xFF09;SingleChildRenderObjectWidget&#x3002;</li>
-<li>&#x5E03;&#x5C40;&#x7C7B;Widget&#x662F;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x6392;&#x5217;&#x65B9;&#x5F0F;&#x6765;&#x5BF9;&#x5176;&#x5B50;Widget&#x8FDB;&#x884C;&#x6392;&#x5217;&#xFF1B;&#x800C;&#x5BB9;&#x5668;&#x7C7B;Widget&#x4E00;&#x822C;&#x53EA;&#x662F;&#x5305;&#x88C5;&#x5176;&#x5B50;Widget&#xFF0C;&#x5BF9;&#x5176;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x4FEE;&#x9970;&#xFF08;&#x8865;&#x767D;&#x6216;&#x80CC;&#x666F;&#x8272;&#x7B49;&#xFF09;&#x3001;&#x53D8;&#x6362;(&#x65CB;&#x8F6C;&#x6216;&#x526A;&#x88C1;&#x7B49;)&#x3001;&#x6216;&#x9650;&#x5236;(&#x5927;&#x5C0F;&#x7B49;)&#x3002;</li>
-</ul>
-<p>&#x6CE8;&#x610F;&#xFF0C;Flutter&#x5B98;&#x65B9;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;Widget&#x8FDB;&#x884C;&#x5B98;&#x65B9;&#x5206;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x5176;&#x5206;&#x7C7B;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA8;&#x8BBA;&#x548C;&#x5BF9;Widget&#x529F;&#x80FD;&#x533A;&#x5206;&#x7684;&#x8BB0;&#x5FC6;&#x3002;</p>
-<h2 id="&#x672C;&#x7AE0;&#x76EE;&#x5F55;">&#x672C;&#x7AE0;&#x76EE;&#x5F55;</h2>
-<ul>
-<li><a href="padding.html">Padding</a></li>
-<li><a href="constrainedbox_and_sizebox.html">&#x5E03;&#x5C40;&#x9650;&#x5236;&#x7C7B;&#x5BB9;&#x5668;ConstrainedBox&#x3001;SizeBox</a></li>
-<li><a href="decoratedbox.html">&#x88C5;&#x9970;&#x5BB9;&#x5668;DecoratedBox</a>      </li>
-<li><a href="transform.html">&#x53D8;&#x6362;Transform</a> </li>
-<li><a href="container.html">Container&#x5BB9;&#x5668;</a> </li>
-<li><a href="material_scaffold.html">Scaffold&#x3001;TabBar&#x3001;&#x5E95;&#x90E8;&#x5BFC;&#x822A;</a> </li>
-</ul>
+                                <h3 id="notification">Notification</h3>
+<p>Notification&#x662F;Flutter&#x4E2D;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5728;Widget&#x6811;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x53EF;&#x4EE5;&#x5206;&#x53D1;&#x901A;&#x77E5;&#xFF0C;&#x901A;&#x77E5;&#x4F1A;&#x6CBF;&#x7740;&#x5F53;&#x524D;&#x8282;&#x70B9;&#xFF08;context&#xFF09;&#x5411;&#x4E0A;&#x4F20;&#x9012;&#xFF0C;&#x6240;&#x6709;&#x7236;&#x8282;&#x70B9;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;NotificationListener&#x6765;&#x76D1;&#x542C;&#x901A;&#x77E5;&#xFF0C;Flutter&#x4E2D;&#x79F0;&#x8FD9;&#x79CD;&#x901A;&#x77E5;&#x7531;&#x5B50;&#x5411;&#x7236;&#x7684;&#x4F20;&#x9012;&#x4E3A;&#x201C;&#x901A;&#x77E5;&#x5192;&#x6CE1;&#x201D;&#xFF08;Notification Bubbling&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x548C;&#x7528;&#x6237;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x662F;&#x76F8;&#x4F3C;&#x7684;&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x70B9;&#x4E0D;&#x540C;&#xFF1A;&#x901A;&#x77E5;&#x5192;&#x6CE1;&#x53EF;&#x4EE5;&#x4E2D;&#x6B62;&#xFF0C;&#x4F46;&#x7528;&#x6237;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4E0D;&#x884C;&#x3002;</p>
+<p>Flutter&#x4E2D;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x4E86;&#x901A;&#x77E5;&#xFF0C;&#x5982;&#x53EF;&#x6EDA;&#x52A8;(Scrollable) Widget&#x4E2D;&#x6ED1;&#x52A8;&#x65F6;&#x5C31;&#x4F1A;&#x5206;&#x53D1;ScrollNotification&#xFF0C;&#x800C;Scrollbar&#x6B63;&#x662F;&#x901A;&#x8FC7;&#x76D1;&#x542C;ScrollNotification&#x6765;&#x786E;&#x5B9A;&#x6EDA;&#x52A8;&#x6761;&#x4F4D;&#x7F6E;&#x7684;&#x3002;&#x9664;&#x4E86;ScrollNotification&#xFF0C;Flutter&#x4E2D;&#x8FD8;&#x6709;SizeChangedLayoutNotification&#x3001;KeepAliveNotification &#x3001;LayoutChangedNotification&#x7B49;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x76D1;&#x542C;Scrollable Widget&#x6EDA;&#x52A8;&#x901A;&#x77E5;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token function">NotificationListener</span><span class="token punctuation">(</span>
+  onNotification<span class="token punctuation">:</span> <span class="token punctuation">(</span>notification<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//print(notification);</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>notification<span class="token punctuation">.</span>runtimeType<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">case</span> ScrollStartNotification<span class="token punctuation">:</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5F00;&#x59CB;&#x6EDA;&#x52A8;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> ScrollUpdateNotification<span class="token punctuation">:</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6B63;&#x5728;&#x6EDA;&#x52A8;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> ScrollEndNotification<span class="token punctuation">:</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6EDA;&#x52A8;&#x505C;&#x6B62;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> OverscrollNotification<span class="token punctuation">:</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6EDA;&#x52A8;&#x5230;&#x8FB9;&#x754C;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  child<span class="token punctuation">:</span> ListView<span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span>
+      itemCount<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+      itemBuilder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">ListTile</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;$index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#x7684;&#x6EDA;&#x52A8;&#x901A;&#x77E5;&#x5982;ScrollStartNotification&#x3001;ScrollUpdateNotification&#x7B49;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x81EA;ScrollNotification&#x7C7B;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x901A;&#x77E5;&#x5B50;&#x7C7B;&#x4F1A;&#x5305;&#x542B;&#x4E0D;&#x540C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;ScrollUpdateNotification&#x6709;&#x4E00;&#x4E2A;<code>scrollDelta</code>&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x8BB0;&#x5F55;&#x4E86;&#x79FB;&#x52A8;&#x7684;&#x4F4D;&#x79FB;&#xFF0C;&#x5176;&#x5B83;&#x901A;&#x77E5;&#x5C5E;&#x6027;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x67E5;&#x770B;SDK&#x6587;&#x6863;&#x3002;</p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;">&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;</h4>
+<p>&#x9664;&#x4E86;Flutter&#x5185;&#x90E8;&#x901A;&#x77E5;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;&#xFF1A;</p>
+<ol>
+<li><p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x901A;&#x77E5;&#x7C7B;&#xFF0C;&#x8981;&#x7EE7;&#x627F;&#x81EA;Notification&#x7C7B;&#xFF1B;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">MyNotification</span> <span class="token keyword">extends</span> <span class="token class-name">Notification</span> <span class="token punctuation">{</span>
+  <span class="token function">MyNotification</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> String msg<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>&#x5206;&#x53D1;&#x901A;&#x77E5;&#x3002;</p>
+<p>Notification&#x6709;&#x4E00;&#x4E2A;<code>dispatch(context)</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x662F;&#x7528;&#x4E8E;&#x5206;&#x53D1;&#x901A;&#x77E5;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;context&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x64CD;&#x4F5C;Element&#x7684;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5B83;&#x4E0E;Element&#x6811;&#x4E0A;&#x7684;&#x8282;&#x70B9;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x901A;&#x77E5;&#x4F1A;&#x4ECE;context&#x5BF9;&#x5E94;&#x7684;Element&#x8282;&#x70B9;&#x5411;&#x4E0A;&#x5192;&#x6CE1;&#x3002;</p>
+</li>
+</ol>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">class</span> <span class="token class-name">NotificationRoute</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata symbol">@override</span>
+  NotificationRouteState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">NotificationRouteState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">NotificationRouteState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>NotificationRoute<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  String _msg<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x76D1;&#x542C;&#x901A;&#x77E5;  </span>
+    <span class="token keyword">return</span> NotificationListener<span class="token operator">&lt;</span>MyNotification<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+      onNotification<span class="token punctuation">:</span> <span class="token punctuation">(</span>notification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          _msg<span class="token operator">+=</span>notification<span class="token punctuation">.</span>msg<span class="token operator">+</span><span class="token string">&quot;  &quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      child<span class="token punctuation">:</span> <span class="token function">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token function">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> MainAxisSize<span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+<span class="token comment">//          RaisedButton(</span>
+<span class="token comment">//           onPressed: () =&gt; MyNotification(&quot;Hi&quot;).dispatch(context),</span>
+<span class="token comment">//           child: Text(&quot;Send Notification&quot;),</span>
+<span class="token comment">//          ),  </span>
+            <span class="token function">Builder</span><span class="token punctuation">(</span>
+              builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+                  <span class="token comment">//&#x6309;&#x94AE;&#x70B9;&#x51FB;&#x65F6;&#x5206;&#x53D1;&#x901A;&#x77E5;  </span>
+                  onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">MyNotification</span><span class="token punctuation">(</span><span class="token string">&quot;Hi&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Send Notification&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token function">Text</span><span class="token punctuation">(</span>_msg<span class="token punctuation">)</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyNotification</span> <span class="token keyword">extends</span> <span class="token class-name">Notification</span> <span class="token punctuation">{</span>
+  <span class="token function">MyNotification</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> String msg<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6BCF;&#x70B9;&#x4E00;&#x6B21;&#x6309;&#x94AE;&#x5C31;&#x4F1A;&#x5206;&#x53D1;&#x4E00;&#x4E2A;<code>MyNotification</code>&#x7C7B;&#x578B;&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;Widget&#x6839;&#x4E0A;&#x76D1;&#x542C;&#x901A;&#x77E5;&#xFF0C;&#x6536;&#x5230;&#x901A;&#x77E5;&#x540E;&#x6211;&#x4EEC;&#x5C06;&#x901A;&#x77E5;&#x901A;&#x8FC7;Text&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4EE3;&#x7801;&#x4E2D;&#x6CE8;&#x91CA;&#x7684;&#x90E8;&#x5206;&#x662F;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;<code>context</code>&#x662F;&#x6839;Context&#xFF0C;&#x800C;NotificationListener&#x662F;&#x76D1;&#x542C;&#x7684;&#x5B50;&#x6811;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>Builder</code>&#x6765;&#x6784;&#x5EFA;RaisedButton&#xFF0C;&#x6765;&#x83B7;&#x5F97;&#x6309;&#x94AE;&#x4F4D;&#x7F6E;&#x7684;context&#x3002;</p>
+</blockquote>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1539328127.png" alt="Screenshot_1539328127"></p>
 
                                 
                                 </section>
@@ -1477,12 +1552,12 @@
 
             
                 
-                <a href="../chapter4/stack.html" class="navigation navigation-prev " aria-label="Previous page: 层叠布局Stack、Positioned">
+                <a href="eventbus.html" class="navigation navigation-prev " aria-label="Previous page: 全局事件总线">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="padding.html" class="navigation navigation-next " aria-label="Next page: Padding">
+                <a href="../chapter9/" class="navigation navigation-next " aria-label="Next page: 动画">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1493,7 +1568,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"容器类Widgets","level":"1.6","depth":1,"next":{"title":"Padding","level":"1.6.1","depth":2,"path":"chapter5/padding.md","ref":"chapter5/padding.md","articles":[]},"previous":{"title":"层叠布局Stack、Positioned","level":"1.5.5","depth":2,"path":"chapter4/stack.md","ref":"chapter4/stack.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter5/index.md","mtime":"2019-05-06T08:08:17.843Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T04:15:43.607Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"通知Notification","level":"1.9.4","depth":2,"next":{"title":"动画","level":"1.10","depth":1,"path":"chapter9/index.md","ref":"chapter9/index.md","articles":[{"title":"Flutter动画简介","level":"1.10.1","depth":2,"path":"chapter9/intro.md","ref":"chapter9/intro.md","articles":[]},{"title":"动画结构","level":"1.10.2","depth":2,"path":"chapter9/animation_structure.md","ref":"chapter9/animation_structure.md","articles":[]},{"title":"自定义路由过渡动画","level":"1.10.3","depth":2,"path":"chapter9/route_transition.md","ref":"chapter9/route_transition.md","articles":[]},{"title":"Hero动画","level":"1.10.4","depth":2,"path":"chapter9/hero.md","ref":"chapter9/hero.md","articles":[]},{"title":"交错动画","level":"1.10.5","depth":2,"path":"chapter9/stagger_animation.md","ref":"chapter9/stagger_animation.md","articles":[]}]},"previous":{"title":"全局事件总线","level":"1.9.3","depth":2,"path":"chapter8/eventbus.md","ref":"chapter8/eventbus.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter8/notification.md","mtime":"2018-11-29T14:53:37.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T04:15:43.607Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

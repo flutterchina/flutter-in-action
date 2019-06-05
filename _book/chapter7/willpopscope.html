@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>容器类Widgets · 《Flutter实战》</title>
+    <title>导航返回拦截-WillPopScope · 《Flutter实战》</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
     <meta name="theme-color" content="#ffffff">
@@ -79,10 +79,10 @@
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="padding.html" />
+    <link rel="next" href="inherited_widget.html" />
     
     
-    <link rel="prev" href="../chapter4/stack.html" />
+    <link rel="prev" href="./" />
     
 
     <style>
@@ -550,9 +550,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
             
-                <a href="./">
+                <a href="../chapter5/">
             
                     
                     容器类Widgets
@@ -564,9 +564,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="padding.html">
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/padding.html">
             
-                <a href="padding.html">
+                <a href="../chapter5/padding.html">
             
                     
                     Padding
@@ -577,9 +577,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="constrainedbox_and_sizebox.html">
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/constrainedbox_and_sizebox.html">
             
-                <a href="constrainedbox_and_sizebox.html">
+                <a href="../chapter5/constrainedbox_and_sizebox.html">
             
                     
                     布局限制类容器ConstrainedBox、SizeBox
@@ -590,9 +590,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="decoratedbox.html">
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/decoratedbox.html">
             
-                <a href="decoratedbox.html">
+                <a href="../chapter5/decoratedbox.html">
             
                     
                     装饰容器DecoratedBox
@@ -603,9 +603,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="transform.html">
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/transform.html">
             
-                <a href="transform.html">
+                <a href="../chapter5/transform.html">
             
                     
                     变换Transform
@@ -616,9 +616,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="container.html">
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/container.html">
             
-                <a href="container.html">
+                <a href="../chapter5/container.html">
             
                     
                     Container容器
@@ -629,9 +629,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="material_scaffold.html">
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/material_scaffold.html">
             
-                <a href="material_scaffold.html">
+                <a href="../chapter5/material_scaffold.html">
             
                     
                     Scaffold、TabBar、底部导航
@@ -744,9 +744,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../chapter7/">
+                <a href="./">
             
                     
                     功能型Widgets
@@ -758,9 +758,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../chapter7/willpopscope.html">
+        <li class="chapter active" data-level="1.8.1" data-path="willpopscope.html">
             
-                <a href="../chapter7/willpopscope.html">
+                <a href="willpopscope.html">
             
                     
                     导航返回拦截-WillPopScope
@@ -771,9 +771,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../chapter7/inherited_widget.html">
+        <li class="chapter " data-level="1.8.2" data-path="inherited_widget.html">
             
-                <a href="../chapter7/inherited_widget.html">
+                <a href="inherited_widget.html">
             
                     
                     数据共享-InheritedWidget
@@ -784,9 +784,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../chapter7/theme.html">
+        <li class="chapter " data-level="1.8.3" data-path="theme.html">
             
-                <a href="../chapter7/theme.html">
+                <a href="theme.html">
             
                     
                     主题-Theme
@@ -1419,7 +1419,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >容器类Widgets</a>
+        <a href=".." >导航返回拦截-WillPopScope</a>
     </h1>
 </div>
 
@@ -1434,22 +1434,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5BB9;&#x5668;&#x7C7B;widget">&#x5BB9;&#x5668;&#x7C7B;Widget</h1>
-<p>&#x5BB9;&#x5668;&#x7C7B;Widget&#x548C;&#x5E03;&#x5C40;&#x7C7B;Widget&#x90FD;&#x4F5C;&#x7528;&#x4E8E;&#x5176;&#x5B50;Widget&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF1A;</p>
-<ul>
-<li>&#x5E03;&#x5C40;&#x7C7B;Widget&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x63A5;&#x6536;&#x4E00;&#x4E2A;widget&#x6570;&#x7EC4;&#xFF08;children&#xFF09;&#xFF0C;&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;&#xFF08;&#x6216;&#x5305;&#x542B;&#xFF09;MultiChildRenderObjectWidget &#xFF1B;&#x800C;&#x5BB9;&#x5668;&#x7C7B;Widget&#x4E00;&#x822C;&#x53EA;&#x9700;&#x8981;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5B50;Widget&#xFF08;child&#xFF09;&#xFF0C;&#x4ED6;&#x4EEC;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;&#xFF08;&#x6216;&#x5305;&#x542B;&#xFF09;SingleChildRenderObjectWidget&#x3002;</li>
-<li>&#x5E03;&#x5C40;&#x7C7B;Widget&#x662F;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x6392;&#x5217;&#x65B9;&#x5F0F;&#x6765;&#x5BF9;&#x5176;&#x5B50;Widget&#x8FDB;&#x884C;&#x6392;&#x5217;&#xFF1B;&#x800C;&#x5BB9;&#x5668;&#x7C7B;Widget&#x4E00;&#x822C;&#x53EA;&#x662F;&#x5305;&#x88C5;&#x5176;&#x5B50;Widget&#xFF0C;&#x5BF9;&#x5176;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x4FEE;&#x9970;&#xFF08;&#x8865;&#x767D;&#x6216;&#x80CC;&#x666F;&#x8272;&#x7B49;&#xFF09;&#x3001;&#x53D8;&#x6362;(&#x65CB;&#x8F6C;&#x6216;&#x526A;&#x88C1;&#x7B49;)&#x3001;&#x6216;&#x9650;&#x5236;(&#x5927;&#x5C0F;&#x7B49;)&#x3002;</li>
-</ul>
-<p>&#x6CE8;&#x610F;&#xFF0C;Flutter&#x5B98;&#x65B9;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;Widget&#x8FDB;&#x884C;&#x5B98;&#x65B9;&#x5206;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x5176;&#x5206;&#x7C7B;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA8;&#x8BBA;&#x548C;&#x5BF9;Widget&#x529F;&#x80FD;&#x533A;&#x5206;&#x7684;&#x8BB0;&#x5FC6;&#x3002;</p>
-<h2 id="&#x672C;&#x7AE0;&#x76EE;&#x5F55;">&#x672C;&#x7AE0;&#x76EE;&#x5F55;</h2>
-<ul>
-<li><a href="padding.html">Padding</a></li>
-<li><a href="constrainedbox_and_sizebox.html">&#x5E03;&#x5C40;&#x9650;&#x5236;&#x7C7B;&#x5BB9;&#x5668;ConstrainedBox&#x3001;SizeBox</a></li>
-<li><a href="decoratedbox.html">&#x88C5;&#x9970;&#x5BB9;&#x5668;DecoratedBox</a>      </li>
-<li><a href="transform.html">&#x53D8;&#x6362;Transform</a> </li>
-<li><a href="container.html">Container&#x5BB9;&#x5668;</a> </li>
-<li><a href="material_scaffold.html">Scaffold&#x3001;TabBar&#x3001;&#x5E95;&#x90E8;&#x5BFC;&#x822A;</a> </li>
-</ul>
+                                <h2 id="&#x5BFC;&#x822A;&#x8FD4;&#x56DE;&#x62E6;&#x622A;willpopscope">&#x5BFC;&#x822A;&#x8FD4;&#x56DE;&#x62E6;&#x622A;WillPopScope</h2>
+<p>&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x7528;&#x6237;&#x8BEF;&#x89E6;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#x800C;&#x5BFC;&#x81F4;APP&#x9000;&#x51FA;&#xFF0C;&#x5728;&#x5F88;&#x591A;APP&#x4E2D;&#x90FD;&#x62E6;&#x622A;&#x4E86;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x8FD4;&#x56DE;&#x952E;&#x7684;&#x6309;&#x94AE;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5728;&#x67D0;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x70B9;&#x51FB;&#x4E24;&#x6B21;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x8BA4;&#x4E3A;&#x7528;&#x6237;&#x662F;&#x8981;&#x9000;&#x51FA;&#xFF08;&#x800C;&#x975E;&#x8BEF;&#x89E6;&#xFF09;&#x3002;Flutter&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;WillPopScope&#x6765;&#x5B9E;&#x73B0;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#x62E6;&#x622A;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x770B;WillPopScope&#x7684;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">const</span> <span class="token function">WillPopScope</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token metadata symbol">@required</span> WillPopCallback onWillPop<span class="token punctuation">,</span>
+  <span class="token metadata symbol">@required</span> Widget child
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>onWillPop&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#x65F6;&#x8C03;&#x7528;&#xFF08;&#x5305;&#x62EC;&#x5BFC;&#x822A;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#x53CA;Android&#x7269;&#x7406;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#xFF09;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Future&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;Future&#x6700;&#x7EC8;&#x503C;&#x4E3A;<code>false</code>&#x65F6;&#xFF0C;&#x5219;&#x5F53;&#x524D;&#x8DEF;&#x7531;&#x4E0D;&#x51FA;&#x6808;(&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;)&#xFF0C;&#x6700;&#x7EC8;&#x503C;&#x4E3A;<code>true</code>&#x65F6;&#xFF0C;&#x5F53;&#x524D;&#x8DEF;&#x7531;&#x51FA;&#x6808;&#x9000;&#x51FA;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x9000;&#x51FA;&#x3002;</p>
+<h3 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h3>
+<p>&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x7528;&#x6237;&#x8BEF;&#x89E6;&#x8FD4;&#x56DE;&#x952E;&#x9000;&#x51FA;&#xFF0C;&#x6211;&#x4EEC;&#x62E6;&#x622A;&#x8FD4;&#x56DE;&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5728;1&#x79D2;&#x5185;&#x70B9;&#x51FB;&#x4E24;&#x6B21;&#x8FD4;&#x56DE;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x5219;&#x9000;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x95F4;&#x9694;&#x8D85;&#x8FC7;1&#x79D2;&#x5219;&#x4E0D;&#x9000;&#x51FA;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x8BB0;&#x65F6;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-dart"><span class="token keyword">import</span> <span class="token string">&apos;package:flutter/material.dart&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WillPopScopeTestRoute</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token metadata symbol">@override</span>
+  WillPopScopeTestRouteState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">WillPopScopeTestRouteState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">WillPopScopeTestRouteState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>WillPopScopeTestRoute<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  DateTime _lastPressedAt<span class="token punctuation">;</span> <span class="token comment">//&#x4E0A;&#x6B21;&#x70B9;&#x51FB;&#x65F6;&#x95F4;</span>
+
+  <span class="token metadata symbol">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">WillPopScope</span><span class="token punctuation">(</span>
+        onWillPop<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>_lastPressedAt <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span>
+              DateTime<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">difference</span><span class="token punctuation">(</span>_lastPressedAt<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token function">Duration</span><span class="token punctuation">(</span>seconds<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//&#x4E24;&#x6B21;&#x70B9;&#x51FB;&#x95F4;&#x9694;&#x8D85;&#x8FC7;1&#x79D2;&#x5219;&#x91CD;&#x65B0;&#x8BA1;&#x65F6;</span>
+            _lastPressedAt <span class="token operator">=</span> DateTime<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        child<span class="token punctuation">:</span> <span class="token function">Container</span><span class="token punctuation">(</span>
+          alignment<span class="token punctuation">:</span> Alignment<span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          child<span class="token punctuation">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;1&#x79D2;&#x5185;&#x8FDE;&#x7EED;&#x6309;&#x4E24;&#x6B21;&#x8FD4;&#x56DE;&#x952E;&#x9000;&#x51FA;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x793A;&#x4F8B;&#x770B;&#x770B;&#x6548;&#x679C;&#x3002;</p>
 
                                 
                                 </section>
@@ -1477,12 +1505,12 @@
 
             
                 
-                <a href="../chapter4/stack.html" class="navigation navigation-prev " aria-label="Previous page: 层叠布局Stack、Positioned">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 功能型Widgets">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="padding.html" class="navigation navigation-next " aria-label="Next page: Padding">
+                <a href="inherited_widget.html" class="navigation navigation-next " aria-label="Next page: 数据共享-InheritedWidget">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1493,7 +1521,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"容器类Widgets","level":"1.6","depth":1,"next":{"title":"Padding","level":"1.6.1","depth":2,"path":"chapter5/padding.md","ref":"chapter5/padding.md","articles":[]},"previous":{"title":"层叠布局Stack、Positioned","level":"1.5.5","depth":2,"path":"chapter4/stack.md","ref":"chapter4/stack.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter5/index.md","mtime":"2019-05-06T08:08:17.843Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T04:15:43.607Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"导航返回拦截-WillPopScope","level":"1.8.1","depth":2,"next":{"title":"数据共享-InheritedWidget","level":"1.8.2","depth":2,"path":"chapter7/inherited_widget.md","ref":"chapter7/inherited_widget.md","articles":[]},"previous":{"title":"功能型Widgets","level":"1.8","depth":1,"path":"chapter7/index.md","ref":"chapter7/index.md","articles":[{"title":"导航返回拦截-WillPopScope","level":"1.8.1","depth":2,"path":"chapter7/willpopscope.md","ref":"chapter7/willpopscope.md","articles":[]},{"title":"数据共享-InheritedWidget","level":"1.8.2","depth":2,"path":"chapter7/inherited_widget.md","ref":"chapter7/inherited_widget.md","articles":[]},{"title":"主题-Theme","level":"1.8.3","depth":2,"path":"chapter7/theme.md","ref":"chapter7/theme.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter7/willpopscope.md","mtime":"2018-11-28T08:27:36.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T04:15:43.607Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
