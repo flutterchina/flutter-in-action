@@ -108,7 +108,6 @@ Widget build(BuildContext context) {
 ![Screenshot_1535019164](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1535019164.png)
 
 
-
 ## Stateful Widget
 
 和StatelessWidget一样，StatefulWidget也是继承自widget类，并重写了`createElement() `方法，不同的是返回的`Element` 对象并不相同；另外StatefulWidget类中添加了一个新的接口`createState()`，下面我们看看StatefulWidget的类定义：
@@ -293,7 +292,7 @@ I/flutter ( 5436): dispose
 
 
 
-> todo: 这里缺一张生命周期图
+![StatefulWidgetLifecycle](https://github.com/elviswong-cn/flutter-in-action/tree/master/docs/imgs/StatefulWidget Lifecycle.jpg)
 
 
 
