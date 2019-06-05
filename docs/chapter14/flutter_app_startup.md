@@ -92,7 +92,7 @@ class Window {
 - PaintingBinding：绑定绘制库，主要用于处理图片缓存。
 - SemanticsBinding：语义化层与Flutter engine的桥梁，主要是辅助功能的底层支持。
 - RendererBinding: 提供了`window.onMetricsChanged` 、`window.onTextScaleFactorChanged` 等回调。它是渲染树与Flutter engine的桥梁。
-- WidgetsBinding：提供了`window.onLocaleChanged`、`onBuildScheduled ` 等回调。它Flutter Widget层与engine的桥梁。
+- WidgetsBinding：提供了`window.onLocaleChanged`、`onBuildScheduled ` 等回调。它是Flutter Widget层与engine的桥梁。
 
 ` WidgetsFlutterBinding.ensureInitialized()`负责初始化一个WidgetsBinding的全局单例，紧接着会调用WidgetsBinding的attachRootWidget方法，该方法负责将根Widget添加到RenderView上，代码如下：
 
@@ -152,7 +152,7 @@ void scheduleWarmUpFrame() {
 }
 ```
 
-可以看到该方法中主要调用了`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法，在看这两个方法之前我们首先了解一下 Frame 和c 的概念：
+可以看到该方法中主要调用了`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法，在看这两个方法之前我们首先了解一下 Frame 和 FrameCallback 的概念：
 
 - Frame: 一次绘制过程，我们称其为一帧。Flutter engine受显示器垂直同步信号"VSync"的趋势不断的触发绘制。我们之前说的Flutter可以实现60fps（Frame Per-Second），就是指一秒钟可以触发60次重绘，FPS值越大，界面就越流畅。
 
@@ -166,7 +166,7 @@ void scheduleWarmUpFrame() {
 
 ### 绘制
 
-渲染和绘制逻辑在RenderBinding 中实现，查看其源发，发现在其`initInstances()`方法中有如下代码：
+渲染和绘制逻辑在RendererBinding 中实现，查看其源发，发现在其`initInstances()`方法中有如下代码：
 
 ```dart
 void initInstances() {
@@ -192,7 +192,7 @@ void _handlePersistentFrameCallback(Duration timeStamp) {
 }
 ```
 
-该方法直接调用了RenderBinding的`drawFrame()`方法：
+该方法直接调用了RendererBinding的`drawFrame()`方法：
 
 ```dart
 void drawFrame() {
@@ -292,7 +292,7 @@ void compositeFrame() {
 
 #### 最后
 
-需要注意的是：由于RenderBinding只是一个mixin，而with它的是WidgetBinding，所以我们需要看看WidgetBinding中是否重写该方法，查看WidgetBinding的`drawFrame()`方法源码：
+需要注意的是：由于RendererBinding只是一个mixin，而with它的是WidgetsBinding，所以我们需要看看WidgetsBinding中是否重写该方法，查看WidgetsBinding的`drawFrame()`方法源码：
 
 ```dart
 @override
@@ -301,13 +301,13 @@ void drawFrame() {
   try {
     if (renderViewElement != null)
       buildOwner.buildScope(renderViewElement); 
-    super.drawFrame(); //调用RenderBinding的drawFrame()方法
+    super.drawFrame(); //调用RendererBinding的drawFrame()方法
     buildOwner.finalizeTree();
   } 
 }
 ```
 
-我们发现在调用`RenderBinding.drawFrame()`方法前会调用 `buildOwner.buildScope()` （非首次绘制），该方法会将被标记为“dirty” 的 Element 进行 `rebuild()` 。
+我们发现在调用`RendererBinding.drawFrame()`方法前会调用 `buildOwner.buildScope()` （非首次绘制），该方法会将被标记为“dirty” 的 Element 进行 `rebuild()` 。
 
 ### 总结
 
