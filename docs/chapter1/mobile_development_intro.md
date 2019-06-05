@@ -41,13 +41,13 @@
 
 ### H5+原生混合开发
 
-这类框架主要原理就是将APP的一部分需要动态变动的内容通过H5来实现，通过原生的网页加载控件WebView (Android)或WKWebView（ios）来加载（以后若无特殊说明，我们用WebView来统一指代android和ios中的网页加载控件）。这样一来，H5部分是可以随时改变而不用发版，动态化需求能满足；同时，由于h5代码只需要一次开发，就能同时在Android和iOS两个平台运行，这也可以减小开发成本，也就是说，h5部分功能越多，开发成本就越小。我们称这种h5+原生的开发模式为**混合开发 ** ，采用混合模式开发的APP我们称之为**混合应用**或**Hybrid APP**  ，如果一个应用的大多数功能都是H5实现的话，我们称其为**Web APP** 。
+这类框架主要原理就是将APP的一部分需要动态变动的内容通过H5来实现，通过原生的网页加载控件WebView (Android)或WKWebView（iOS）来加载（以后若无特殊说明，我们用WebView来统一指代android和iOS中的网页加载控件）。这样一来，H5部分是可以随时改变而不用发版，动态化需求能满足；同时，由于h5代码只需要一次开发，就能同时在Android和iOS两个平台运行，这也可以减小开发成本，也就是说，H5部分功能越多，开发成本就越小。我们称这种h5+原生的开发模式为**混合开发 ** ，采用混合模式开发的APP我们称之为**混合应用**或**Hybrid APP**  ，如果一个应用的大多数功能都是H5实现的话，我们称其为**Web APP** 。
 
 目前混合开发框架的典型代表有：Cordova、Ionic 和微信小程序，值得一提的是微信小程序目前是在webview中渲染的，并非原生渲染，但将来有可能会采用原生渲染。
 
 ### 混合开发技术点 
 
-如之前所述，原生开发可以访问平台所有功能，而混合开发中，h5代码是运行在WebView中，而WebView实质上就是一个浏览器内核，其JavaScript依然运行在一个权限受限的沙箱中，所以对于大多数系统能力都没有访问权限，如无法访问文件系统、不能使用蓝牙等。所以，对于H5不能实现的功能，都需要原生去做。而混合框架一般都会在原生代码中预先实现一些访问系统能力的API， 然后暴露给WebView以供JavaScript调用，这样一来，WebView就成为了JavaScript与原生API之间通信的桥梁，主要负责JavaScript与原生之间传递调用消息，而消息的传递必须遵守一个标准的协议，它规定了消息的格式与含义，我们把依赖于WebView的用于在JavaScript与原生之间通信并实现了某种消息传输协议的工具称之为**WebView JavaScript Bridge**, 简称 **JsBridge**，它也是混合开发框架的核心。
+如之前所述，原生开发可以访问平台所有功能，而混合开发中，H5代码是运行在WebView中，而WebView实质上就是一个浏览器内核，其JavaScript依然运行在一个权限受限的沙箱中，所以对于大多数系统能力都没有访问权限，如无法访问文件系统、不能使用蓝牙等。所以，对于H5不能实现的功能，都需要原生去做。而混合框架一般都会在原生代码中预先实现一些访问系统能力的API， 然后暴露给WebView以供JavaScript调用，这样一来，WebView就成为了JavaScript与原生API之间通信的桥梁，主要负责JavaScript与原生之间传递调用消息，而消息的传递必须遵守一个标准的协议，它规定了消息的格式与含义，我们把依赖于WebView的用于在JavaScript与原生之间通信并实现了某种消息传输协议的工具称之为**WebView JavaScript Bridge**, 简称 **JsBridge**，它也是混合开发框架的核心。
 
 #### 示例：JavaScript调用原生API获取手机型号
 
@@ -56,9 +56,9 @@
 1. 首先在原生中实现获取手机型号的API `getPhoneModel`
 
    ```java
-   class JSAPI{
+   class JSAPI {
     @JavascriptInterface
-    public Object getPhoneModel(Object msg){
+    public Object getPhoneModel(Object msg) {
       return Build.MODEL;
     }
    }    
@@ -70,7 +70,7 @@
    import wendu.dsbridge.DWebView
    ...
    //DWebView继承自WebView，由dsBridge提供  
-   DWebView dwebView= (DWebView) findViewById(R.id.dwebview);
+   DWebView dwebView = (DWebView) findViewById(R.id.dwebview);
    //注册原生API到JsBridge
    dwebView.addJavascriptObject(new JsAPI(), null);
    ```
@@ -78,9 +78,9 @@
 3. 在JavaScript中调用原生API
 
    ```javascript
-   var dsBridge=require("dsbridge")
+   var dsBridge = require("dsbridge")
    //直接调用原生API `getPhoneModel`
-   var model=dsBridge.call("getPhoneModel");
+   var model = dsBridge.call("getPhoneModel");
    //打印机型
    console.log(model);
    ```
@@ -91,7 +91,7 @@
 
 ### 总结
 
-混合应用的优点是动态内容是H5，web技术栈，社区及资源丰富，缺点是性能不好，对于复杂用户界面或动画，webview不堪重任。
+混合应用的优点是动态内容是H5，web技术栈，社区及资源丰富，缺点是性能不好，对于复杂用户界面或动画，WebView不堪重任。
 
 
 
@@ -101,11 +101,11 @@
 
 React Native (简称RN)是Facebook于2015年4月开源的跨平台移动应用开发框架，是Facebook早先开源的JS框架 React 在原生移动应用平台的衍生产物，目前支持iOS和Android两个平台。RN使用Javascript语言，类似于HTML的JSX，以及CSS来开发移动应用，因此熟悉Web前端开发的技术人员只需很少的学习就可以进入移动应用开发领域。
 
-由于RN和React原理相通，并且Flutter也是受React启发，很多思想也都是相通的，万丈高楼平地起，我们有必要深入了解一下React原理。React是一个响应式的Web框架，我们先了解一下两个重要的概念：Dom树与响应式编程。
+由于RN和React原理相通，并且Flutter也是受React启发，很多思想也都是相通的，万丈高楼平地起，我们有必要深入了解一下React原理。React是一个响应式的Web框架，我们先了解一下两个重要的概念：DOM树与响应式编程。
 
 ### DOM树与控件树
 
-文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展标志语言的标准编程接口，一种独立于平台和语言的方式访问和修改一个文档的内容和结构。换句话说，这是表示和处理一个HTML或XML文档的标准接口。简单来说，DOM就是文档树，与用户界面控件树对应，在前端开发中通常指HTML对应的渲染树，但广义的DOM也可以指Android中的XML布局文件对应的控件树，而术语**DOM操作**就是指直接来操作渲染树（或控件树）， 因此，可以看到其实DOM树和控件树是等价的概念，只不过前者常用语Web开发中，而后者常用于原生开发中。
+文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展标志语言的标准编程接口，一种独立于平台和语言的方式访问和修改一个文档的内容和结构。换句话说，这是表示和处理一个HTML或XML文档的标准接口。简单来说，DOM就是文档树，与用户界面控件树对应，在前端开发中通常指HTML对应的渲染树，但广义的DOM也可以指Android中的XML布局文件对应的控件树，而术语**DOM操作**就是指直接来操作渲染树（或控件树）， 因此，可以看到其实DOM树和控件树是等价的概念，只不过前者常用于Web开发中，而后者常用于原生开发中。
 
 ### 响应式编程
 
@@ -221,7 +221,7 @@ Flutter是Google发布的一个用于创建跨平台、高性能移动应用的�
 2. 技术支持；现在Google正在大力推广Flutter，Flutter的作者中很多人都是来自Chromium团队，并且github上活跃度很高。另一个角度，从今年上半年Flutter频繁的版本发布也可以看出Google对Flutter的投入的资源不小，所以在官方技术支持这方面，大可不必担心。
 3. 开发效率；Flutter的热重载可帮助开发者快速地进行测试、构建UI、添加功能并更快地修复错误。在iOS和Android模拟器或真机上可以实现毫秒级热重载，并且不会丢失状态。这真的很棒，相信我，如果你是一名原生开发者，体验了Flutter开发流后，很可能就不想重新回去做原生了，毕竟很少有人不吐槽原生开发的编译速度。
 
-基于以上三点，相信读者和笔者一样，flutter未来如何，心中自有定论。到现在为止，我们已经对移动端开发技术有了一个全面的了解，接下来我们便要进入本书的主题，你准备好了吗！
+基于以上三点，相信读者和笔者一样，Flutter未来如何，心中自有定论。到现在为止，我们已经对移动端开发技术有了一个全面的了解，接下来我们便要进入本书的主题，你准备好了吗！
 
 
 

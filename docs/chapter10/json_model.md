@@ -405,9 +405,17 @@ class User {
 ```
 可以看到，`boss`字段已自动添加，并自动导入了“person.dart”。
 
+### Json_model 包
+
+如果每个项目都要构建一个上面这样的脚本显然很麻烦，为此，我们将上面脚本和生成模板封装了一个包,已经发布到了Pub上，包名为[Json_model](https://github.com/flutterchina/json_model)，开发者把该包加入开发依赖后，便可以用一条命令，根据Json文件生成Dart类。另外[Json_model](https://github.com/flutterchina/json_model) 处于迭代中，功能会逐渐完善，所以建议读者世界使用该包（而不是手动复制上面的代码）。
+
 ## 使用IDE插件生成model
 
-目前Android Studio(或IntelliJ)有一个[插件](https://github.com/neverwoodsS/idea_flutter_json_format)，它可以自动将Json转为model，该插件会对嵌套Json也会生成model。这个特性在有些时候可能会引起重定义，如两个Json都内嵌了一个user的对象时，会导致user model在不同的文件中会被定义两次，需要开发者手动去重。
+目前Android Studio(或IntelliJ)有几个插件，可以将json文件转成Model类，但插件质量参差不齐，甚至还有一些沾染上了抄袭风波，故笔者在此不做优先推荐，读者有兴趣可以自行了解。但是，我们还是要了解一下IDE插件提和[Json_model](https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fflutterchina%2Fjson_model)的比较：
+
+1. [Json_model](https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fflutterchina%2Fjson_model)需要单独维护一个存放Json文件的文件夹，如果有改动，只需修改Json文件便可重新生成Model类；而IDE插件一般需要用户手动将Json内容拷贝复制到一个输入框中，这样生成之后Json文件没有存档的化，之后要改动就需要手动。
+2. [Json_model](https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fflutterchina%2Fjson_model)可以手动指定某个字段引用的其它Model类，可以避免生成重复的类；而IDE插件一般会为每一个Json文件中所有嵌套对象都单独生成一个Model类，即使这些嵌套对象可能在其它Model类中已经生成过。
+3. [Json_model](https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fflutterchina%2Fjson_model) 提供了命令行转化方式，可以方便集成到CI等非UI环境的场景。
 
 ## FAQ
 

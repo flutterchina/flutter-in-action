@@ -37,8 +37,8 @@ class HeroAnimationRoute extends StatelessWidget {
                   Animation secondaryAnimation) {
                 return new FadeTransition(
                   opacity: animation,
-                  child: PageScaffold(
-                    title: "原图",
+                  child: Scaffold(
+                    title: Text("原图"),
                     body: HeroAnimationRouteB(),
                   ),
                 );
@@ -62,7 +62,7 @@ class HeroAnimationRouteB extends StatelessWidget {
     return Center(
       child: Hero(
           tag: "avatar", //唯一标记，前后两个路由页Hero的tag必须相同
-          child: Image.asset("images/avatar.png")，
+          child: Image.asset("images/avatar.png"),
       ),
     );
   }

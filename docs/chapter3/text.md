@@ -67,10 +67,10 @@ Text("Hello world",
 
 - `fontFamily` ：由于不同平台默认支持的字体集不同，所以在手动指定字体时一定要先在不同平台测试一下。
 
-- `fontSize`：该属性和Text的`textScaleFactor`都用于控制字体大小。但是有两给主要区别：
+- `fontSize`：该属性和Text的`textScaleFactor`都用于控制字体大小。但是有两个主要区别：
 
   - `fontSize`可以精确指定字体大小，而`textScaleFactor`只能通过缩放比例来控制。
-  - `textScaleFactor`主要是用于系统字体大小设置改变时对Flutter应用字体进行全局调整，而`fontSize`通常用于单个文本。
+  - `textScaleFactor`主要是用于系统字体大小设置改变时对Flutter应用字体进行全局调整，而`fontSize`通常用于单个文本，字体大小不会跟随系统字体大小变化。
 
 ### TextSpan
 
@@ -151,7 +151,7 @@ DefaultTextStyle(
 
 #### 在asset中声明
 
-要将字体打文件打包到应用中，和使用其它资源一样，要先在`pubspec.yaml`中声明它。然后将字体文件复制到在`pubspec.yaml`中指定的位置。如：
+要将字体文件打包到应用中，和使用其它资源一样，要先在`pubspec.yaml`中声明它。然后将字体文件复制到在`pubspec.yaml`中指定的位置。如：
 
 ```yaml
 flutter:

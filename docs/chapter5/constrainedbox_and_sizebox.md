@@ -1,10 +1,10 @@
 ## ConstrainedBox和SizedBox
 
-ConstrainedBox和SizedBox都是通过RenderConstrainedBox来渲染的。SizedBox只是ConstrainedBox一个定制，本节把他们放在一起讨论。
+ConstrainedBox和SizedBox都是通过RenderConstrainedBox来渲染的。SizedBox只是ConstrainedBox的一个定制，本节把他们放在一起讨论。
 
 ### ConstrainedBox
 
-ConstrainedBox用于对齐子widget添加额外的约束。例如，如果你想让子widget的最小高度是80像素，你可以使用`const BoxConstraints(minHeight: 80.0)`作为子widget的约束。
+ConstrainedBox用于对子widget添加额外的约束。例如，如果你想让子widget的最小高度是80像素，你可以使用`const BoxConstraints(minHeight: 80.0)`作为子widget的约束。
 
 #### 示例
 
@@ -67,7 +67,8 @@ SizedBox(
 
 ![image-20180907162546222](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180907162546222.png)
 
-实际上SizedBox和只是ConstrainedBox一个定制，上面代码等价于：
+实际上SizedBox只是ConstrainedBox的一个定制，上面代码等价于：
+
 
 ```dart
 ConstrainedBox(
@@ -137,7 +138,7 @@ ConstrainedBox(
 
 ### UnconstrainedBox
 
-UnconstrainedBox不会对子Widget产生任何限制，它允许其子Widget按照其本身大小绘制。一般情况下，我们会很少直接使用此widget，但在"去除"多重限制的时候也许会有帮助，我们看一下面的代码：
+UnconstrainedBox不会对子Widget产生任何限制，它允许其子Widget按照其本身大小绘制。一般情况下，我们会很少直接使用此widget，但在"去除"多重限制的时候也许会有帮助，我们看下下面的代码：
 
 ```dart
 ConstrainedBox(
@@ -155,8 +156,46 @@ ConstrainedBox(
 
 ![image-20180910105830808](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180910105830808.png)
 
-但是，读者请注意，UnconstrainedBox对父限制的“去除”并非是真正的去除，上面例子中虽然红色区域大小是90×20，但上方仍然有80的空白空间。也就是说父限制的minHeight(100.0)仍然是生效的，只不过它不影响最终子元素的大小，但仍然还是占有相应的空间，可以认为此时的父ConstrainedBox是作用于子ConstrainedBox上，而redBox只受子ConstrainedBox限制，这一点请读者务必注意。
+但是，读者请注意，UnconstrainedBox对父限制的“去除”并非是真正的去除，上面例子中虽然红色区域大小是90×20，但上方仍然有80的空白空间。也就是说父限制的minHeight(100.0)仍然是生效的，只不过它不影响最终子元素的大小，但仍然还是占有相应的空间，可以认为此时的父ConstrainedBox是作用于子ConstrainedBox上，而renderBox只受子ConstrainedBox限制，这一点请读者务必注意。
 
 那么有什么方法可以彻底去除父BoxConstraints的限制吗？答案是否定的！所以在此提示读者，在定义一个通用的widget时，如果对子widget指定限制时一定要注意，因为一旦指定限制条件，子widget如果要进行相关自定义大小时将可能非常困难，因为子widget在不更改父widget的代码的情况下无法彻底去除其限制条件。
+
+当我们发现已经使用SizedBox或ConstrainedBox来给子元素指定宽高，但是仍然没有效果时，几乎可以肯定：已经有父元素已经设置了限制；举个例子如导航栏的右侧菜单中，我们已经使用SizedBox指定了loading按钮的大小：
+
+```dart
+ AppBar(
+   title: Text(title),
+   actions: <Widget>[
+         SizedBox(
+             width: 20, 
+             height: 20,
+             child: CircularProgressIndicator(
+                 strokeWidth: 3,
+                 valueColor: AlwaysStoppedAnimation(Colors.white70),
+             ),
+         )
+   ],
+)
+```
+
+上面代码运行后，我们会发现loading按钮大小并没有发生变化，这正是因为AppBar中已经指定了actions按钮的限制条件，此时我们便可以通过UnconstrainedBox来去除父元素的限制:
+
+```dart
+AppBar(
+  title: Text(title),
+  actions: <Widget>[
+      UnconstrainedBox(
+            child: SizedBox(
+              width: 20,
+              height: 20,
+              child: CircularProgressIndicator(
+                strokeWidth: 3,
+                valueColor: AlwaysStoppedAnimation(Colors.white70),
+              ),
+          ),
+      )
+  ],
+)
+```
 
 
