@@ -135,6 +135,7 @@ class TestFlowDelegate extends FlowDelegate {
     }
   }
 
+  @override
   getSize(BoxConstraints constraints){
     //指定Flow的大小  
     return Size(double.infinity,200.0);
