@@ -57,3 +57,6 @@ Could not Get **
 
    > **注意：**存在这样的一种情况，当你根据上述步骤设置了之后，依旧无法解决这个问题，并有类似于 `Could not HEAD maven.aliyun.com` 的报错信息，请检查 `C:\Users\{user_name}\.gradle\gradle.properties` 是否有设置代理。删除后问题即可解决。
 
+#### Hot Reload 热重载失效问题
+
+在给 `Terminal` 之类的终端模拟器设置代理之后，会导致`Hot Reload 热重载`失效，此时调用 **Save** (`cmd-s` / `ctrl-s`)将不会进行热重载，**热重载按钮** (带有闪电⚡️图标的按钮)也不会显示，将代理移除即可解决。
