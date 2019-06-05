@@ -31,7 +31,8 @@ Transform.translate接收一个offset参数，可以在绘制时沿x、y轴对�
 DecoratedBox(
   decoration:BoxDecoration(color: Colors.red),
   //默认原点为左上角，左移20像素，向上平移5像素  
-  child: Transform.translate(offset: Offset(-20.0, -5.0),
+  child: Transform.translate(
+    offset: Offset(-20.0, -5.0),
     child: Text("Hello world"),
   ),
 )

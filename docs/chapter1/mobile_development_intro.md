@@ -147,7 +147,7 @@ JavaScriptCore 是一个JavaScript解释器，它在React Native中主要有两�
 
 ### Weex
 
-Weex是阿里巴巴于2016年发布的跨平台移动端开发框架，思想及原理和React Native类似，最大的不同是语法层面，Weex支持Vue语法和Rax语法，Rax 的 DSL 语法是基于 React JSX 语法而创造。与 React 不同，在 Rax 中 JSX 是必选的，它不支持通过其它方式创建组件，所以学习 JSX 是使用 Rax 的必要基础。而React Native只支持JSX语法。
+Weex是阿里巴巴于2016年发布的跨平台移动端开发框架，思想及原理和React Native类似，最大的不同是语法层面，Weex支持Vue语法和Rax语法，Rax 的 DSL(Domain Specific Language) 语法是基于 React JSX 语法而创造。与 React 不同，在 Rax 中 JSX 是必选的，它不支持通过其它方式创建组件，所以学习 JSX 是使用 Rax 的必要基础。而React Native只支持JSX语法。
 
 ### 快应用
 
@@ -167,7 +167,7 @@ JavaScript开发+原生渲染的方式主要优点如下：
 不足：
 
 1. 渲染时需要JavaScript和原生之间通信，在有些场景如拖动可能会因为通信频繁导致卡顿。
-2. JavaScript为脚本语言，执行时需要JIT，执行效率和AOT代码仍有差距。
+2. JavaScript为脚本语言，执行时需要JIT(Just In Time)，执行效率和AOT(Ahead Of Time)代码仍有差距。
 3. 由于渲染依赖原生控件，不同平台的控件需要单独维护，并且当系统更新时，社区控件可能会滞后；除此之外，其控件系统也会受到原生UI系统限制，例如，在Android中，手势冲突消歧规则是固定的，这在使用不同人写的控件嵌套时，手势冲突问题将会变得非常棘手。
 
 
@@ -213,7 +213,7 @@ Flutter是Google发布的一个用于创建跨平台、高性能移动应用的�
 - 2018年2月，Flutter发布了第一个Beta版本，同年五月， 在2018年Google I/O 大会上，Flutter 更新到了 beta 3 版本。
 - 2018年6月，Flutter发布了首个预览版本，这意味着 Flutter 进入了正式版（1.0）发布前的最后阶段。
 
-观其发展，在2018年5月份，Flutter 进入了 GitHub stars 排行榜前 100 名，已有 27k  star。而今天(2018年8月16日)，已经有35K的Star。经历了短短一年多的时间，Flutter 生态系统得以快速增长，由此可见，Flutter在开发者中受到了热烈的欢迎，其未来发展值得期待！
+观其发展，在2018年5月份，Flutter 进入了 GitHub stars 排行榜前 100 名，已有 27k  star。而今天(2019年5月29日)，已经有65K的Star。经历了短短2年多的时间，Flutter 生态系统得以快速增长，由此可见，Flutter在开发者中受到了热烈的欢迎，其未来发展值得期待！
 
 现在，我们来和QT mobile做一个对比：
 

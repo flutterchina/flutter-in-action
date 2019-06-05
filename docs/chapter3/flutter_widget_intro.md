@@ -292,7 +292,7 @@ I/flutter ( 5436): dispose
 
 
 
-![StatefulWidgetLifecycle](https://github.com/elviswong-cn/flutter-in-action/tree/master/docs/imgs/StatefulWidget Lifecycle.jpg)
+![StatefulWidgetLifecycle](https://github.com/elviswong-cn/flutter-in-action/tree/master/docs/imgs/stf_lifecycle.jpg)
 
 
 
@@ -516,7 +516,8 @@ class TapboxC extends StatefulWidget {
 
   final bool active;
   final ValueChanged<bool> onChanged;
-
+  
+  @override
   _TapboxCState createState() => new _TapboxCState();
 }
 
@@ -545,6 +546,7 @@ class _TapboxCState extends State<TapboxC> {
     widget.onChanged(!widget.active);
   }
 
+  @override
   Widget build(BuildContext context) {
     // 在按下时添加绿色边框，当抬起时，取消高亮  
     return new GestureDetector(

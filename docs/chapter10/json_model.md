@@ -407,7 +407,7 @@ class User {
 
 ### Json_model 包
 
-如果每个项目都要构建一个上面这样的脚本显然很麻烦，为此，我们将上面脚本和生成模板封装了一个包,已经发布到了Pub上，包名为[Json_model](https://github.com/flutterchina/json_model)，开发者把该包加入开发依赖后，便可以用一条命令，根据Json文件生成Dart类。另外[Json_model](https://github.com/flutterchina/json_model) 处于迭代中，功能会逐渐完善，所以建议读者世界使用该包（而不是手动复制上面的代码）。
+如果每个项目都要构建一个上面这样的脚本显然很麻烦，为此，我们将上面脚本和生成模板封装了一个包,已经发布到了Pub上，包名为[Json_model](https://github.com/flutterchina/json_model)，开发者把该包加入开发依赖后，便可以用一条命令，根据Json文件生成Dart类。另外[Json_model](https://github.com/flutterchina/json_model) 处于迭代中，功能会逐渐完善，所以建议读者直接使用该包（而不是手动复制上面的代码）。
 
 ## 使用IDE插件生成model
 

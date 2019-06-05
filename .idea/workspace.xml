@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be553c2f-ea02-4c86-80ca-ca4aa05dbd12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chapter10/json_model.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chapter10/json_model.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,9 +17,9 @@
     <session id="1661963699">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="7" />
           <entry key="project.open.time.3" value="1" />
@@ -28,7 +27,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,7 +35,7 @@
           <entry key="MD" value="4" />
           <entry key="dart" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="64" />
+          <entry key="html" value="65" />
           <entry key="js" value="3" />
           <entry key="json" value="10" />
           <entry key="less" value="2" />
@@ -52,7 +51,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Dart" value="1" />
-          <entry key="HTML" value="64" />
+          <entry key="HTML" value="65" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="10" />
           <entry key="JavaScript" value="4" />
@@ -73,7 +72,7 @@
           <entry key="md" value="4256" />
           <entry key="mkdirp" value="1" />
           <entry key="sh" value="87" />
-          <entry key="txt" value="281" />
+          <entry key="txt" value="291" />
           <entry key="yml" value="124" />
         </counts>
       </usages-collector>
@@ -85,7 +84,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Less" value="8" />
           <entry key="Markdown" value="4256" />
-          <entry key="PLAIN_TEXT" value="390" />
+          <entry key="PLAIN_TEXT" value="400" />
           <entry key="YAML" value="124" />
         </counts>
       </usages-collector>
@@ -93,18 +92,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/chapter1/dart.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2910">
-                <caret line="194" selection-start-line="194" selection-end-line="194" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -151,14 +138,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/chapter2/flutter_router.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="49">
-                <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+                <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,7 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gitbook</find>
       <find>chapter2/</find>
       <find>chapter4/</find>
       <find>chapter3/</find>
@@ -241,6 +239,7 @@
       <find>值得一提</find>
       <find>缘</find>
       <find>只不过前者常用语Web开发中</find>
+      <find>阿里云</find>
     </findStrings>
     <replaceStrings>
       <replace>注意</replace>
@@ -384,9 +383,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1645" />
+    <option name="x" value="1715" />
     <option name="y" value="23" />
-    <option name="width" value="1667" />
+    <option name="width" value="1440" />
     <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -395,6 +394,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -489,7 +489,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,21 +555,8 @@
       <workItem from="1552299770792" duration="1971000" />
       <workItem from="1552554748536" duration="539000" />
       <workItem from="1557126797573" duration="4884000" />
-      <workItem from="1557827461328" duration="846000" />
-    </task>
-    <task id="LOCAL-00036" summary="添加&quot;自定义Widget&quot;一章">
-      <created>1544583279347</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1544583279347</updated>
-    </task>
-    <task id="LOCAL-00037" summary="添加&quot;自定义Widget&quot;一章">
-      <created>1544588481473</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1544588481473</updated>
+      <workItem from="1557827461328" duration="1318000" />
+      <workItem from="1557909540159" duration="532000" />
     </task>
     <task id="LOCAL-00038" summary="update">
       <created>1545040359270</created>
@@ -901,11 +887,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557137392129</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="更新Json_model一章">
+      <created>1557829953451</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1557829953452</updated>
+    </task>
+    <task id="LOCAL-00086" summary="更新Json_model一章">
+      <created>1557830434891</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1557830434891</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146769000" />
+    <option name="totallyTimeSpent" value="147773000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,9 +917,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1645" y="23" width="1667" height="808" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="808" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26427704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3065539" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -931,8 +931,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49940547" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49400985" weight="0.33333334" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.47752127" visible="true" weight="0.22943723" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.52247876" side_tool="true" visible="true" weight="0.22943723" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.47709656" visible="true" weight="0.23232323" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.52290344" side_tool="true" visible="true" weight="0.23232323" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -968,7 +968,8 @@
     <MESSAGE value="merge" />
     <MESSAGE value="修改部分示例" />
     <MESSAGE value="更新路由一章" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新路由一章" />
+    <MESSAGE value="更新Json_model一章" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新Json_model一章" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/chapter8/listener.md">
@@ -1155,13 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
         </state>
       </provider>
     </entry>
@@ -1369,9 +1363,19 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="49">
-            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

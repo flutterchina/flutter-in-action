@@ -110,7 +110,7 @@ Navigator类中第一个参数为context的**静态方法**都对应一个Naviga
 要想使用命名路由，我们必须先提供并注册一个路由表（routing table），这样应用程序才知道哪个名称与哪个路由Widget对应。路由表的定义如下：
 
 ```dart
-Map<String, WidgetBuilder> routes；
+Map<String, WidgetBuilder> routes;
 ```
 
 它是一个`Map`， key 为路由的名称，是个字符串；value是个builder回调函数，用于生成相应的路由Widget。我们在通过路由名称入栈新路由时，应用会根据路由名称在路由表中找到对应的WidgetBuilder回调函数，然后调用该回调函数生成路由widget并返回。
