@@ -16,7 +16,7 @@ RaisedButton 即"漂浮"按钮，它默认带有阴影和灰色背景。按下�
 ```dart
 RaisedButton(
   child: Text("normal"),
-  onPressed: () => {},
+  onPressed: () {},
 );
 ```
 
@@ -31,7 +31,7 @@ FlatButton即扁平按钮，默认背景透明并不带阴影。按下后，会�
 ```dart
 FlatButton(
   child: Text("normal"),
-  onPressed: () => {},
+  onPressed: () {},
 )
 ```
 
@@ -46,7 +46,7 @@ OutlineButton默认有一个边框，不带阴影且背景透明。按下后，�
 ```dart
 OutlineButton(
   child: Text("normal"),
-  onPressed: () => {},
+  onPressed: () {},
 )
 ```
 
@@ -61,7 +61,7 @@ IconButton是一个可点击的Icon，不包括文字，默认没有背景，点
 ```dart
 IconButton(
   icon: Icon(Icons.thumb_up),
-  onPressed: () => {},
+  onPressed: () {},
 )
 ```
 
@@ -104,7 +104,7 @@ FlatButton(
   splashColor: Colors.grey,
   child: Text("Submit"),
   shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-  onPressed: () => {},
+  onPressed: () {},
 )
 ```
 
