@@ -362,6 +362,7 @@ class _TapboxAState extends State<TapboxA> {
           child: new Text(
             _active ? 'Active' : 'Inactive',
             style: new TextStyle(fontSize: 32.0, color: Colors.white),
+            textDirection: TextDirection.ltr
           ),
         ),
         width: 200.0,
