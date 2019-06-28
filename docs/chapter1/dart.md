@@ -115,7 +115,7 @@ Dart是一种真正的面向对象的语言，所以即使是函数也是对象�
 2. 对于只包含一个表达式的函数，可以使用简写语法
 
    ```dart
-   bool isNoble （int atomicNumber ）=> _nobleGases [ atomicNumber ] ！= null ;   
+   bool isNoble (int atomicNumber)=> _nobleGases [ atomicNumber ] ！= null ;   
    ```
 
 3. 函数作为变量
