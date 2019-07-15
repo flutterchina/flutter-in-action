@@ -91,7 +91,7 @@ class Echo extends StatelessWidget {
 }
 ```
 
-上面的代码，实现了一个回显字符串的`Echo` widget。
+上面的代码，实现了一个会显字符串的`Echo` widget。
 
 > 按照惯例，widget的构造函数应使用命名参数，命名参数中的必要参数要添加@required标注，这样有利于静态代码分析器进行检查，另外，在继承widget时，第一个参数通常应该是`Key`，如果接受子widget的child参数，那么通常应该将它放在参数列表的最后。同样是按照惯例，widget的属性应被声明为`final`，防止被意外改变。
 
