@@ -73,7 +73,7 @@ class Echo extends StatelessWidget {
   const Echo({
     Key key,  
     @required this.text,
-    this.backgroundColor:Colors.grey,
+    this.backgroundColor=Colors.grey,
   }):super(key:key);
     
   final String text;
@@ -511,7 +511,7 @@ class _ParentWidgetCState extends State<ParentWidgetC> {
 //----------------------------- TapboxC ------------------------------
 
 class TapboxC extends StatefulWidget {
-  TapboxC({Key key, this.active: false, @required this.onChanged})
+  TapboxC({Key key, this.active=false, @required this.onChanged})
       : super(key: key);
 
   final bool active;
