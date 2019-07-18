@@ -292,7 +292,7 @@ I/flutter ( 5436): dispose
 
 
 
-![StatefulWidgetLifecycle](https://github.com/elviswong-cn/flutter-in-action/tree/master/docs/imgs/stf_lifecycle.jpg)
+![StatefulWidgetLifecycle](../imgs/stf_lifecycle.jpg)
 
 
 
