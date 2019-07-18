@@ -13,7 +13,7 @@ flutter:
     - assets/background.png
 ```
 
-`assets`指定应包含在应用程序中的文件。 每个asset都通过相对于`pubspec.yaml`文件所在位置的显式路径进行标识。asset的声明顺序是无关紧要的。asset的实际目录可以是任意文件夹（在本示例中是assets）。
+`assets`指定应包含在应用程序中的文件， 每个asset都通过相对于`pubspec.yaml`文件所在位置的显式路径进行标识，asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets）。
 
 在构建期间，Flutter将asset放置到称为 *asset bundle* 的特殊存档中，应用程序可以在运行时读取它们（但不能修改）。
 
@@ -43,7 +43,7 @@ flutter:
 
 ## 加载 assets
 
-您的应用可以通过[`AssetBundle`](https://docs.flutter.io/flutter/services/AssetBundle-class.html)对象访问其asset 。有两种主要方法允许从Asset bundle中加载字符串或图片(二进制)文件。
+您的应用可以通过[`AssetBundle`](https://docs.flutter.io/flutter/services/AssetBundle-class.html)对象访问其asset 。有两种主要方法允许从Asset bundle中加载字符串或图片（二进制）文件。
 
 ### 加载文本assets
 
@@ -67,7 +67,7 @@ Future<String> loadAsset() async {
 
 #### 声明分辨率相关的图片 assets
 
-[`AssetImage`](https://docs.flutter.io/flutter/painting/AssetImage-class.html) 可以将asset的请求逻辑映射到最接近当前设备像素比例(dpi)的asset。为了使这种映射起作用，必须根据特定的目录结构来保存asset：
+[`AssetImage`](https://docs.flutter.io/flutter/painting/AssetImage-class.html) 可以将asset的请求逻辑映射到最接近当前设备像素比例（dpi）的asset。为了使这种映射起作用，必须根据特定的目录结构来保存asset：
 
 - …/image.png
 - …/**M**x/image.png
