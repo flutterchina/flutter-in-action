@@ -49,6 +49,7 @@ class ScrollControllerTestRouteState extends State<ScrollControllerTestRoute> {
 
   @override
   void initState() {
+    super.initState();
     //监听滚动事件，打印滚动位置
     _controller.addListener(() {
       print(_controller.offset); //打印滚动位置
