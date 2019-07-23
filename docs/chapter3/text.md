@@ -127,11 +127,13 @@ DefaultTextStyle(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
       Text("hello world"),
-      Text("I am Jack"),
+      Text("I am Jack",
+          style: TextStyle(
+              inherit: false, //2.不继承默认样式
+          )),
       Text("I am Jack",
         style: TextStyle(
-          inherit: false, //2.不继承默认样式
-          color: Colors.grey
+            color: Colors.blue //3.继承默认样式后，重新复写颜色属性
         ),
       ),
     ],
@@ -139,9 +141,11 @@ DefaultTextStyle(
 );
 ```
 
-上面代码中，我们首先设置了一个默认的文本样式，即字体为20像素(逻辑像素)、颜色为红色。然后通过`DefaultTextStyle` 设置给了子树Column节点处，这样一来Column的所有子孙Text默认都会继承该样式，除非Text显示指定不继承样式，如代码中注释2。示例运行效果如下：
+上面代码中，我们首先设置了一个默认的文本样式，即字体为20像素(逻辑像素)、颜色为红色。然后通过`DefaultTextStyle` 设置给了子树 `Column `节点处，这样一来 `Column` 的所有子孙Text默认都会继承该样式。
 
-![image-20180829135406156](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829135406156.png)
+`TextStyle` 中有一个 `inherit` 属性，调用者可以通过操作此属性来改变有默认文本样式的 Text。通过给某个子级 Text 的 `inherit` 设置为 false，你可以将其所有的属性重新设回默认值，即10像素(逻辑像素)、颜色为白色，如代码中注释 2；但是需要注意的是，即便默认允许继承，你仍然可以复写父布局已经声明过的属性，来定制某个子 View，如代码中注释 3。示例运行效果如下：
+
+![](../imgs/text_style_inherit_attr.png)
 
 ### 使用字体
 
