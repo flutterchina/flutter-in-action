@@ -8,7 +8,7 @@ Flutter Widget库中的按钮默认不支持渐变背景，为了实现渐变背
 
 ![gradient-button](../imgs/gradient-button.png)
 
-我们看看GradientButton实现：
+现在看看GradientButton实现：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -18,21 +18,23 @@ class GradientButton extends StatelessWidget {
     this.colors,
     this.width,
     this.height,
-    this.onTap,
+    this.onPressed,
+    this.borderRadius,
     @required this.child,
   });
 
   // 渐变色数组
   final List<Color> colors;
-  
+
   // 按钮宽高
   final double width;
   final double height;
 
   final Widget child;
+  final BorderRadius borderRadius;
 
   //点击回调
-  final GestureTapCallback onTap;
+  final GestureTapCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -45,21 +47,24 @@ class GradientButton extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: _colors),
+        borderRadius: borderRadius,
       ),
       child: Material(
         type: MaterialType.transparency,
         child: InkWell(
-          splashColor: colors.last,
+          splashColor: _colors.last,
           highlightColor: Colors.transparent,
-          onTap: onTap,
+          borderRadius: borderRadius,
+          onTap: onPressed,
           child: ConstrainedBox(
             constraints: BoxConstraints.tightFor(height: height, width: width),
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: DefaultTextStyle(
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                    child: child),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                  child: child,
+                ),
               ),
             ),
           ),
@@ -70,41 +75,48 @@ class GradientButton extends StatelessWidget {
 }
 ```
 
-可以看到GradientButton是由Padding、Center、InkWell等Widget组合而成。当然上面的代码只是一个示例，作为一个按钮它还并不完整，比如没有禁用状态、不能定义圆角等，读者可以根据实际需要来完善。
+可以看到GradientButton是由Padding、Center、InkWell等Widget组合而成。当然上面的代码只是一个示例，作为一个按钮它还并不完整，比如没有禁用状态，读者可以根据实际需要来完善。
 
 #### 使用GradientButton
 
 ```dart
-class GradientButtonRoute extends StatelessWidget {
+import 'package:flutter/material.dart';
+import '../widgets/index.dart';
+
+class GradientButtonRoute extends StatefulWidget {
+  @override
+  _GradientButtonRouteState createState() => _GradientButtonRouteState();
+}
+
+class _GradientButtonRouteState extends State<GradientButtonRoute> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
         children: <Widget>[
           GradientButton(
-            colors: [Colors.orange,Colors.red],
+            colors: [Colors.orange, Colors.red],
             height: 50.0,
             child: Text("Submit"),
-            onTap:onTap ,
+            onPressed: onTap,
           ),
           GradientButton(
             height: 50.0,
             colors: [Colors.lightGreen, Colors.green[700]],
             child: Text("Submit"),
-            onTap: onTap,
+            onPressed: onTap,
           ),
           GradientButton(
             height: 50.0,
             colors: [Colors.lightBlue[300], Colors.blueAccent],
             child: Text("Submit"),
-            onTap: onTap,
+            onPressed: onTap,
           ),
         ],
       ),
     );
   }
-
-  onTap(){
+  onTap() {
     print("button click");
   }
 }

@@ -1,6 +1,126 @@
 
 
-## 主题
+# 颜色和主题
+
+## 颜色
+
+在介绍主题前我们先了解一些Flutter中的Color类。Color类中颜色以一个int值保存，我们知道显示器颜色是由红、绿、蓝三基色组成，每种颜色站8比特，存储结构如下：
+
+| Bit（位） | 颜色             |
+| --------- | ---------------- |
+| 0-7       | 蓝色             |
+| 8-15      | 绿色             |
+| 16-23     | 红色             |
+| 24-31     | Alpha (不透明度) |
+
+上面表格中的的字段在Color类中都有对应的属性，而Color中的众多方法也就是操作这些属性的，由于大多比较简单，读者可以查看类定义了解。在此我们主要讨论两点：色值转换和亮度。
+
+### **如何将颜色字符串转成Color对象**
+
+如Web开发中的色值通常是一个字符串如"#dc380d"，它是一个RGB值，我们可以通过下面这些方法将其转为Color类：
+
+```dart
+Color(0xffdc380d); //如果颜色固定可以直接使用整数值
+//颜色是一个字符串变量
+var c = "dc380d";
+Color(int.parse(c,radix:16)|0xFF000000) //通过位运算符将Alpha设置为FF
+Color(int.parse(c,radix:16)).withAlpha(255)  //通过方法将Alpha设置为FF
+```
+
+### 颜色亮度
+
+假如我们需要要实现一个背景颜色和Title可以自定义导航栏，并且背景色为深色时我们应该让Title显示浅色；背景色为浅色时，我们应该让Title显示深色。要实现这个功能，我们就需要来计算背景色的亮度。Color类中提供了一个`computeLuminance()`方法，他可以返回一个[0-1]的一个值，数字越大颜色就越浅，我们可以根据它来动态确定Title的颜色，下面是导航栏NavBar的简单实现：
+
+```dart
+class NavBar extends StatelessWidget {
+  final String title;
+  final Color color; //背景颜色
+
+  NavBar({
+    Key key,
+    this.color,
+    this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: BoxConstraints(
+        minHeight: 52,
+        minWidth: double.infinity,
+      ),
+      decoration: BoxDecoration(
+        color: color,
+        boxShadow: [
+          //阴影
+          BoxShadow(
+            color: Colors.black26,
+            offset: Offset(0, 3),
+            blurRadius: 3,
+          ),
+        ],
+      ),
+      child: Text(
+        title,
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          //根据背景色亮度来确定Title颜色
+          color: color.computeLuminance() < 0.5 ? Colors.white : Colors.black,
+        ),
+      ),
+      alignment: Alignment.center,
+    );
+  }
+}
+```
+
+测试代码如下：
+
+```dart
+Column(
+  children: <Widget>[
+    //背景为蓝色，则title自动为白色
+    NavBar(color: Colors.blue, title: "标题"), 
+    //背景为白色，则title自动为黑色
+    NavBar(color: Colors.white, title: "标题"),
+  ]
+)
+```
+
+运行效果如下：
+
+![NavBar](../imgs/color.png)
+
+### MaterialColor
+
+`MaterialColor`是实现Material Design中的颜色的类，它包含一种颜色的10个级别的渐变色。`MaterialColor`通过"[]"运算符的索引值来代表颜色的深度，有效的索引有：50，100，200，…，900，数字越大，颜色越深。`MaterialColor`的默认值为索引等于500的颜色。举个例子，`Colors.blue`是预定义的一个`MaterialColor`类对象，定义如下：
+
+```dart
+static const MaterialColor blue = MaterialColor(
+  _bluePrimaryValue,
+  <int, Color>{
+     50: Color(0xFFE3F2FD),
+    100: Color(0xFFBBDEFB),
+    200: Color(0xFF90CAF9),
+    300: Color(0xFF64B5F6),
+    400: Color(0xFF42A5F5),
+    500: Color(_bluePrimaryValue),
+    600: Color(0xFF1E88E5),
+    700: Color(0xFF1976D2),
+    800: Color(0xFF1565C0),
+    900: Color(0xFF0D47A1),
+  },
+);
+static const int _bluePrimaryValue = 0xFF2196F3;
+```
+
+`Colors.blue[50]`到`Colors.blue[100]`的色值从浅蓝到深蓝渐变，效果如下：
+
+![NavBar](../imgs/material_color.jpeg)
+
+
+
+## Theme
 
 Theme Widget可以为Material APP定义主题数据（ThemeData），Material组件库里很多Widget都使用了主题数据，如导航栏颜色、标题字体、Icon样式等。Theme内会使用InheritedWidget来为其子树Widget共享样式数据。
 

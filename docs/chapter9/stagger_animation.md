@@ -95,12 +95,12 @@ StaggerAnimation中定义了三个动画，分别是对Container的height、colo
 下面我们来实现启动动画的路由：
 
 ```dart
-class StaggerDemo extends StatefulWidget {
+class StaggerRoute extends StatefulWidget {
   @override
-  _StaggerDemoState createState() => _StaggerDemoState();
+  _StaggerRouteState createState() => _StaggerRouteState();
 }
 
-class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin {
+class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMixin {
   AnimationController _controller;
 
   @override

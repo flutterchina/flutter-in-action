@@ -84,7 +84,58 @@ Column(
 
 ### Column
 
-Column可以在垂直方向排列其子widget。参数和Row一样，不同的是布局方向为垂直，主轴纵轴正好相反，读者可类比Row来理解，在此不再赘述。
+Column可以在垂直方向排列其子widget。参数和Row一样，不同的是布局方向为垂直，主轴纵轴正好相反，读者可类比Row来理解，下面看一个例子：
+
+```dart
+import 'package:flutter/material.dart';
+
+class CenterColumnRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Text("hi"),
+        Text("world"),
+      ],
+    );
+  }
+}
+```
+
+运行效果如下：
+
+![column_center](../imgs/column_center.png)
+
+
+
+解释：
+
+- 由于我们没有指定`Column`的`mainAxisSize`，所以使用默认值`MainAxisSize.max`，则`Column`会在垂直方向占用尽可能多的空间，此例中为屏幕高度。
+- 由于我们指定了 `crossAxisAlignment` 属性为`CrossAxisAlignment.center`，那么子项在`Column`纵轴方向（此时为水平方向）会居中对齐。注意，在水平方向对齐是有边界的，总宽度为`Column`占用空间的实际宽度，而实际的宽度取决于子项中宽度最大的Widget。在本例中，`Column`有两个子Widget，而显示“world”的`Text`宽度最大，所以`Column`的实际宽度则为`Text("world")` 的宽度，所以居中对齐后`Text("hi")`会显示在`Text("world")`的中间部分。
+
+**实际上，`Row`和`Column`都只会在主轴方向占用尽可能大的空间，而纵轴的长度则取决于他们最大子元素的长度**。如果我们想让本例中的两个文本控件在整个手机屏幕中间对齐，我们有两种方法：
+
+- 将`Column`的宽度指定为屏幕宽度；这很简单，我们可以通过`ConstrainedBox`或`SizedBox`（我们将在后面章节中专门介绍着两个Widget）来强制更改宽度限制，例如：
+
+  ```dart
+  ConstrainedBox(
+    constraints: BoxConstraints(minWidth: double.infinity), 
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Text("hi"),
+        Text("world"),
+      ],
+    ),
+  );
+  ```
+
+  将`minWidth`设为`double.infinity`，可以使宽度占用尽可能多的空间。
+
+- 使用`Center` Widget；我们将在后面章节中介绍。
+
+
 
 ### 特殊情况
 

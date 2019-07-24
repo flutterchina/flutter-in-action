@@ -30,7 +30,7 @@ class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>  with SingleT
   @override
   Widget build(BuildContext context) {
     return new Center(
-       child: Image.asset("images/avatar.png",
+       child: Image.asset("imgs/avatar.png",
           width: animation.value,
           height: animation.value
       ),
@@ -81,7 +81,7 @@ class AnimatedImage extends AnimatedWidget {
   Widget build(BuildContext context) {
     final Animation<double> animation = listenable;
     return new Center(
-      child: Image.asset("images/avatar.png",
+      child: Image.asset("imgs/avatar.png",
           width: animation.value,
           height: animation.value
       ),
@@ -90,12 +90,12 @@ class AnimatedImage extends AnimatedWidget {
 }
 
 
-class ScaleAnimationRoute extends StatefulWidget {
+class ScaleAnimationRoute1 extends StatefulWidget {
   @override
   _ScaleAnimationRouteState createState() => new _ScaleAnimationRouteState();
 }
 
-class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>
+class _ScaleAnimationRouteState extends State<ScaleAnimationRoute1>
     with SingleTickerProviderStateMixin {
 
   Animation<double> animation;

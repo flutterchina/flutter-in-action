@@ -17,7 +17,7 @@ class ClipTestRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 头像  
-    Widget avatar = Image.asset("./images/avatar.png", width: 60.0);
+    Widget avatar = Image.asset("imgs/avatar.png", width: 60.0);
     return Center(
       child: Column(
         children: <Widget>[
@@ -66,7 +66,7 @@ class ClipTestRoute extends StatelessWidget {
 
 
 
-上面示例代码中已添加注释，比较简单，值得一提的是最后的两个Row，通过Align设置widthFactor为0.5后，图片的实际宽度等于60×0.5，即原宽度一半，但此时图片溢出部分依然会显示，所以第一个“你好世界”会和图片的另一部分重合，为了剪裁掉溢出部分，我们在第二个Row中通过ClipRect将溢出部分剪裁了。
+上面示例代码中已添加注释，比较简单，值得一提的是最后的两个`Row`，通过`Align`设置`widthFactor`为0.5后，图片的实际宽度等于60×0.5，即原宽度一半，但此时图片溢出部分依然会显示，所以第一个“你好世界”会和图片的另一部分重合，为了剪裁掉溢出部分，我们在第二个Row中通过ClipRect将溢出部分剪裁了。
 
 ### CustomClipper
 
@@ -75,7 +75,7 @@ class ClipTestRoute extends StatelessWidget {
 首先，自定义一个CustomClipper：
 
 ```dart
-class myClipper extends CustomClipper<Rect> {
+class MyClipper extends CustomClipper<Rect> {
   @override
   Rect getClip(Size size) => Rect.fromLTWH(10.0, 15.0, 40.0, 30.0);
 
@@ -95,7 +95,7 @@ DecoratedBox(
     color: Colors.red
   ),
   child: ClipRect(
-      clipper: myClipper(), //使用自定义的clipper
+      clipper: MyClipper(), //使用自定义的clipper
       child: avatar
   ),
 )

@@ -23,7 +23,7 @@ Flutter中，我们可以通过Image来加载并显示图片，Image的数据源
        - images/avatar.png
    ```
   > 注意: 由于 yaml 文件对缩进严格，所以必须严格按照每一层两个空格的方式进行缩进，此处assets前面应有两个空格。
-  
+
 3. 加载该图片
 
    ```dart
@@ -96,7 +96,7 @@ const Image({
   - `fitHeight`：图片的高度会缩放到显示空间的高度，宽度会按比例缩放，然后居中显示，图片不会变形，超出显示空间部分会被剪裁。
   - `none`：图片没有适应策略，会在显示空间内显示图片，如果图片比显示空间大，则显示空间只会显示图片中间部分。
 
-  一图胜万言：
+  一图胜万言! 下图中的头像图片本身宽高是相同的，将头像
 
   ![image-20180829162853209](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1535531379.png)
   
@@ -131,7 +131,98 @@ const Image({
 
   ![image-20180829165404877](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829165404877.png)
 
-### ICON
+完成代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+
+class ImageAndIconRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var img=AssetImage("imgs/avatar.png");
+    return SingleChildScrollView(
+      child: Column(
+        children: <Image>[
+          Image(
+            image: img,
+            height: 50.0,
+            width: 100.0,
+            fit: BoxFit.fill,
+          ),
+          Image(
+            image: img,
+            height: 50,
+            width: 50.0,
+            fit: BoxFit.contain,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            height: 50.0,
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            height: 50.0,
+            fit: BoxFit.fitWidth,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            height: 50.0,
+            fit: BoxFit.fitHeight,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            height: 50.0,
+            fit: BoxFit.scaleDown,
+          ),
+          Image(
+            image: img,
+            height: 50.0,
+            width: 100.0,
+            fit: BoxFit.none,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            color: Colors.blue,
+            colorBlendMode: BlendMode.difference,
+            fit: BoxFit.fill,
+          ),
+          Image(
+            image: img,
+            width: 100.0,
+            height: 200.0,
+            repeat: ImageRepeat.repeatY ,
+          )
+        ].map((e){
+          return Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: SizedBox(
+                  width: 100,
+                  child: e,
+                ),
+              ),
+              Text(e.fit.toString())
+            ],
+          );
+        }).toList()
+      ),
+    );
+  }
+}
+```
+
+### Image缓存
+
+Flutter框架对加载过的图片是有缓存的（内存），默认最大缓存数量是1000，最大缓存空间为100M。关于Image的详细内容及原理我们将会在后面进阶部分深入介绍。
+
+## ICON
 
 Flutter中，可以像web开发一样使用iconfont，iconfont即“字体图标”，它是将图标做成字体文件，然后通过指定不同的字符而显示不同的图片。
 

@@ -56,7 +56,7 @@ IconButton是一个可点击的Icon，不包括文字，默认没有背景，点
 
 ![image-20180830194324827](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830194324827.png)
 
-使用代码如下：
+代码如下：
 
 ```dart
 IconButton(
@@ -65,7 +65,37 @@ IconButton(
 )
 ```
 
-### 自定义按钮外观
+
+
+### 带图标的按钮
+
+RaisedButton、FlatButton、OutlineButton都有一个`icon` 构造函数，通过它可以轻松创建带图标的按钮，例如：
+
+![button-icon](../imgs/button-icon.png)
+
+代码如下：
+
+```dart
+RaisedButton.icon(
+  icon: Icon(Icons.send),
+  label: Text("发送"),
+  onPressed: _onPressed,
+),
+OutlineButton.icon(
+  icon: Icon(Icons.add),
+  label: Text("添加"),
+  onPressed: _onPressed,
+),
+FlatButton.icon(
+  icon: Icon(Icons.info),
+  label: Text("详情"),
+  onPressed: _onPressed,
+),
+```
+
+
+
+## 自定义按钮外观
 
 按钮外观可以通过其属性来定义，不同按钮属性大同小异，我们以FlatButton为例，介绍一下常见的按钮属性，详细的信息可以查看API文档。
 
@@ -130,6 +160,6 @@ const RaisedButton({
 
 值得注意的是，在Material widget库中，我们会在很多widget中见到elevation相关的属性，它们都是用来控制阴影的，这是因为阴影在Material设计风格中是一种很重要的表现形式，以后在介绍其它widget时，便不再赘述。
 
-如果我们想实现一个背景渐变的圆角按钮，按钮有没有相应的属性呢？答案是否定的，但是，我们可以通过其它方式来实现，本文将在后面介绍Container时来介绍如何实现。
+如果我们想实现一个背景渐变的圆角按钮，按钮有没有相应的属性呢？答案是否定的，但是，我们可以通过其它方式来实现，我们将在后面"自定义Widget"一章中实现。
 
 

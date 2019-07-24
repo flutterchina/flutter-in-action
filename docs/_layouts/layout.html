@@ -126,7 +126,6 @@
     function hookAPI(api, ob, fn) {
         return function () {
             var result = api.apply(ob, [].slice.call(arguments));
-
             setTimeout(fn, 1000);
             return result;
         }
@@ -152,7 +151,6 @@
     // setInterval(addAD, 300);
 
     init();
-
 
     if (history.pushState) {
         history.pushState = hookAPI(history.pushState, history, init);

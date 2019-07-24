@@ -43,6 +43,8 @@ class _SwitchAndCheckBoxTestRouteState extends State<SwitchAndCheckBoxTestRoute>
 
 上面代码中，由于要维护Switch和Checkbox状态，所以SwitchAndCheckBoxTestRoute继承自StatefulWidget 。在其build方法中分别构建了一个Switch和Checkbox，初始状态都为选中状态，当用户点击时，会将状态置反，然后回调用`setState()`通知framework重新构建UI。
 
+![switch_checkbox](../imgs/switch_checkbox.png)
+
 
 
 ### 属性及外观
