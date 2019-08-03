@@ -245,4 +245,6 @@ Row(
    运行后效果如下：
 
    ![image-20180829180722793](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829180722793.png)
+   
+   注意：新加入项目的文件需要关闭当前服务，再次开启才可以看到效果，例如本例中这样操作才能看到自定义图标，即使点击重启也达不到效果
 
