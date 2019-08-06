@@ -1,0 +1,4 @@
+1. 目录为index.docx
+2. 图片描述在img_des.txt中
+
+
