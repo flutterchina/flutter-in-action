@@ -60,8 +60,10 @@
     * [7.3： 跨组件状态共享（Provider）](chapter7/provider.md)
     * [7.4：颜色和主题（Theme）](chapter7/theme.md) 
     * [7.5：异步UI更新（FutureBuilder、StreamBuilder）](chapter7/futurebuilder_and_streambuilder.md)
-    * [7.6：对话框详解](chapter7/dailog.md)   
+    * [7.6：对话框详解](chapter7/dailog.md)  
+     
 ## 进阶篇
+
 * [第八章：事件处理与通知](chapter8/index.md)
     * [8.1：原始指针事件处理](chapter8/listener.md)
     * [8.2：手势识别](chapter8/gesture.md)
@@ -115,8 +117,8 @@
     * [14.5：Flutter图片加载与缓存](chapter14/image_and_cache.md)
  
 ## 实例篇
-   
-* [第十五章：一个完整的Flutter应用]()
+
+* [第十五章：一个完整的Flutter应用](chapter15/intro.md)
     * [15.1：应用简介](chapter15/intro.md)    
     * [15.2：APP代码结构](chapter15/code_structure.md) 
     * [15.3：Model类定义](chapter15/models.md) 
@@ -125,6 +127,5 @@
     * [15.6：App入口及首页](chapter15/entry.md) 
     * [15.7：登录页](chapter15/login_page.md) 
     * [15.8：多语言和多主题](chapter15/language_and_theme_setting.md)      
-* [结束语](end.md)
 
 
