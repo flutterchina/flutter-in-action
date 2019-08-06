@@ -1,8 +1,8 @@
-## 图片及ICON
+## 3.5 图片及ICON
 
-### 图片
+## 3.5.1 图片
 
-Flutter中，我们可以通过Image来加载并显示图片，Image的数据源可以是asset、文件、内存以及网络。
+Flutter中，我们可以通过`Image`组件来加载并显示图片，`Image`的数据源可以是asset、文件、内存以及网络。
 
 ### ImageProvider
 
@@ -61,9 +61,9 @@ Image.network(
 )
 ```
 
-运行上面两个示例，图片加载成功后显示如下：
+运行上面两个示例，图片加载成功后如图3-17所示：
 
-![image-20180829163427556](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829163427556.png)
+![图3-17](../imgs/3-17.png)
 
 
 
@@ -96,9 +96,9 @@ const Image({
   - `fitHeight`：图片的高度会缩放到显示空间的高度，宽度会按比例缩放，然后居中显示，图片不会变形，超出显示空间部分会被剪裁。
   - `none`：图片没有适应策略，会在显示空间内显示图片，如果图片比显示空间大，则显示空间只会显示图片中间部分。
 
-  一图胜万言! 下图中的头像图片本身宽高是相同的，将头像
+  一图胜万言！ 我们队一个宽高相同的头像图片应用不同的`fit`值，效果如图3-18所示：
 
-  ![image-20180829162853209](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1535531379.png)
+  ![图3-18](../imgs/3-18.png)
   
 
 
@@ -113,9 +113,9 @@ const Image({
   );
   ```
 
-运行效果如下（彩色）:
+运行效果如图3-19所示（彩色）:
 
-![image-20180829164208961](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829164208961.png)
+![图3-19](../imgs/3-19.png)
 
 - `repeat`：当图片本身大小小于显示空间时，指定图片的重复规则。简单示例如下：
 
@@ -127,11 +127,11 @@ const Image({
     repeat: ImageRepeat.repeatY ,
   )
   ```
-  运行后效果如下：
+  运行后效果如图3-20所示：
 
-  ![image-20180829165404877](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829165404877.png)
+  ![图3-20](../imgs/3-20.png)
 
-完成代码如下：
+完整的示例代码如下：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -222,9 +222,9 @@ class ImageAndIconRoute extends StatelessWidget {
 
 Flutter框架对加载过的图片是有缓存的（内存），默认最大缓存数量是1000，最大缓存空间为100M。关于Image的详细内容及原理我们将会在后面进阶部分深入介绍。
 
-## ICON
+## 3.5.2 ICON
 
-Flutter中，可以像web开发一样使用iconfont，iconfont即“字体图标”，它是将图标做成字体文件，然后通过指定不同的字符而显示不同的图片。
+Flutter中，可以像Web开发一样使用iconfont，iconfont即“字体图标”，它是将图标做成字体文件，然后通过指定不同的字符而显示不同的图片。
 
 > 在字体文件中，每一个字符都对应一个位码，而每一个位码对应一个显示字形，不同的字体就是指字形不同，即字符对应的字形是不同的。而在iconfont中，只是将位码对应的字形做成了图标，所以不同的字符最终就会渲染成不同的图标。
 
@@ -266,11 +266,11 @@ Text(icons,
 );
 ```
 
-运行效果如下：
+运行效果如图3-21所示：
 
-![image-20180829174100598](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829174100598.png)
+![图3-21](../imgs/3-21.png)
 
-通过这个示例可以看到，使用图标就像使用文本一样，但是这种方式需要我们提供每个图标的码点，这并对开发者不友好，所以，Flutter封装了一个`IconData`和`Icon`来专门显示字体图标，上面的例子也可以用如下方式实现：
+通过这个示例可以看到，使用图标就像使用文本一样，但是这种方式需要我们提供每个图标的码点，这并对开发者不友好，所以，Flutter封装了`IconData`和`Icon`来专门显示字体图标，上面的例子也可以用如下方式实现：
 
 ```dart
 Row(
@@ -333,7 +333,7 @@ Row(
    )
    ```
 
-   运行后效果如下：
+   运行后效果如图3-22所示：
 
-   ![image-20180829180722793](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180829180722793.png)
+   ![图3-22](../imgs/3-22.png)
 

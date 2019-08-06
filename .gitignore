@@ -1,2 +1,5 @@
 node_modules/
 *.DS_Store
+book/
+.packages
+.dart_tool/

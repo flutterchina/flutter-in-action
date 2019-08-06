@@ -1,8 +1,8 @@
-# 通用"切换动画"组件-AnimatedSwitcher
+# 9.6 通用"切换动画"组件（AnimatedSwitcher）
 
-实际开发中，我们经常会遇到切换UI元素的场景，比如Tab切换、路由切换。为了增强用户体验，通常在切换时都会指定一个动画，以使切换过程显得平滑。Flutter SDK组件库中已经提供了一些常用的切换组件，如PageView、TabView等但是，这些组件并不能覆盖全部的需求场景，为此，Flutter SDK中提供了一个AnimatedSwitcher Widget，它定义了一种通用的UI切换抽象。
+实际开发中，我们经常会遇到切换UI元素的场景，比如Tab切换、路由切换。为了增强用户体验，通常在切换时都会指定一个动画，以使切换过程显得平滑。Flutter SDK组件库中已经提供了一些常用的切换组件，如`PageView`、`TabView`等，但是，这些组件并不能覆盖全部的需求场景，为此，Flutter SDK中提供了一个`AnimatedSwitcher`组件，它定义了一种通用的UI切换抽象。
 
-## AnimatedSwitcher
+## 9.6.1 AnimatedSwitcher
 
 `AnimatedSwitcher` 可以同时对其新、旧子元素添加显示、隐藏动画。也就是说在`AnimatedSwitcher`的子元素发生变化时，会对其旧元素和新元素，我们先看看`AnimatedSwitcher` 的定义：
 
@@ -26,7 +26,7 @@ typedef AnimatedSwitcherTransitionBuilder =
   Widget Function(Widget child, Animation<double> animation);
 ```
 
-该builder在`AnimatedSwitcher`的child切换时会分别对新、旧child绑定动画：
+该`builder`在`AnimatedSwitcher`的child切换时会分别对新、旧child绑定动画：
 
 1. 对旧child，绑定的动画会反向执行（reverse）
 2. 对新child，绑定的动画会正向指向（forward）
@@ -95,15 +95,15 @@ class AnimatedSwitcherCounterRoute extends StatefulWidget {
  }
 ```
 
-运行示例代码，当点击“+1”按钮时，原先的数字会逐渐缩小直至隐藏，而新数字会逐渐放大，最终显示。
+运行示例代码，当点击“+1”按钮时，原先的数字会逐渐缩小直至隐藏，而新数字会逐渐放大，我截取了动画执行过程的一帧，如图9-5所示：
 
-![animated_switcher_counter](../imgs/animated_switcher_counter.png)
+![图9-5](../imgs/9-5.png)
 
 上图是第一次点击“+1”按钮后切换动画的一帧，此时“0”正在逐渐缩小，而“1”正在“0”的中间，正在逐渐放大。
 
 > 注意：AnimatedSwitcher的新旧child，如果类型相同，则Key必须不相等。
 
-## AnimatedSwitcher高级用法
+## 9.6.2 AnimatedSwitcher高级用法
 
 假设现在我们想实现一个类似路由平移切换的动画：旧页面屏幕中向左侧平移退出，新页面重屏幕右侧平移进入。如果要用AnimatedSwitcher的话，我们很快就会发现一个问题：做不到！我们可能会写出下面的代码：
 
@@ -123,7 +123,7 @@ AnimatedSwitcher(
 
 上面的代码有什么问题呢？我们前面说过在`AnimatedSwitcher`的child切换时会分别对新child执行正向动画（forward），而对旧child执行反向动画（reverse），所以真正的效果便是：新child确实从屏幕右侧平移进入了，但旧child却会从屏幕**右侧**（而不是左侧）退出。其实也很容易理解，因为在没有特殊处理的情况下同一个动画的正向和逆向正好是相反（对称）的。
 
-那么问题来了，难道就不能用`AnimatedSwitcher`了？答案当时是否定的！仔细想想这个问题，究其原因，就是因为同一个Animation正向（forward）和反向（reverse）是对称的。所以如果我们可以打破这种对称性，那么便可以实现这个功能，下面我们来封装一个`MySlideTransition`，它和`SlideTransition`唯一的不同就是对动画的反向执行执行了定制（从左边滑出隐藏）：
+那么问题来了，难道就不能用`AnimatedSwitcher`了？答案当时是否定的！仔细想想这个问题，究其原因，就是因为同一个`Animation`正向（forward）和反向（reverse）是对称的。所以如果我们可以打破这种对称性，那么便可以实现这个功能，下面我们来封装一个`MySlideTransition`，它和`SlideTransition`唯一的不同就是对动画的反向执行进行了（从左边滑出隐藏）：
 
 ```dart
 class MySlideTransition extends AnimatedWidget {
@@ -172,7 +172,11 @@ AnimatedSwitcher(
 )
 ```
 
-可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上Flutter路由切换也正是通过`AnimatedSwitcher`来实现的。
+运行后，我截取动画执行过程中的一帧，如图9-6所示：
+
+![图9-6](../imgs/9-6.png)
+
+上图中“0”从左侧滑出，而"1"从右侧滑入。可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上Flutter路由切换也正是通过`AnimatedSwitcher`来实现的。
 
 ### SlideTransitionX
 
@@ -262,6 +266,12 @@ AnimatedSwitcher(
   ...//省略其余代码
 )
 ```
+
+运行后，我截取动画执行过程中的一帧，如图9-7所示：
+
+![图9-7](../imgs/9-7.png)
+
+上图中“1”从底部滑出，而"2"从顶部滑入。读者可以尝试给`SlideTransitionX`的`direction`取不同的值来查看运行效果。
 
 ## 总结
 

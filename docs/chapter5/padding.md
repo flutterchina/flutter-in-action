@@ -1,8 +1,8 @@
 
 
-## Padding
+## 5.1 填充（Padding）
 
-Padding可以给其子节点添加补白（填充），我们在前面很多示例中都已经使用过它了，现在来看看它的定义：
+`Padding`可以给其子节点添加填充（留白），和边距效果类似。我们在前面很多示例中都已经使用过它了，现在来看看它的定义：
 
 ```dart
 Padding({
@@ -12,18 +12,20 @@ Padding({
 })
 ```
 
-EdgeInsetsGeometry是一个抽象类，开发中，我们一般都使用EdgeInsets，它是EdgeInsetsGeometry的一个子类，定义了一些设置补白的便捷方法。
+`EdgeInsetsGeometry`是一个抽象类，开发中，我们一般都使用`EdgeInsets`类，它是`EdgeInsetsGeometry`的一个子类，定义了一些设置填充的便捷方法。
 
 ### EdgeInsets
 
-我们看看EdgeInsets提供的便捷方法：
+我们看看`EdgeInsets`提供的便捷方法：
 
-- `fromLTRB(double left, double top, double right, double bottom) `：分别指定四个方向的补白。
-- `all(double value)` : 所有方向均使用相同数值的补白。
-- `only({left, top, right ,bottom })`：可以设置具体某个方向的补白(可以同时指定多个方向)。
-- `symmetric({  vertical, horizontal })`：用于设置对称方向的补白，vertical指top和bottom，horizontal指left和right。
+- `fromLTRB(double left, double top, double right, double bottom) `：分别指定四个方向的填充。
+- `all(double value)` : 所有方向均使用相同数值的填充。
+- `only({left, top, right ,bottom })`：可以设置具体某个方向的填充(可以同时指定多个方向)。
+- `symmetric({  vertical, horizontal })`：用于设置对称方向的填充，`vertical`指`top`和`bottom`，`horizontal`指`left`和`right`。
 
 ### 示例
+
+下面的示例主要展示了`EdgeInsets`的不同用法，比较简单，源码如下：
 
 ```dart
 class PaddingTestRoute extends StatelessWidget {
@@ -58,3 +60,6 @@ class PaddingTestRoute extends StatelessWidget {
 }
 ```
 
+运行效果如图5-1所示：
+
+![图5-1](../imgs/5-1.png)

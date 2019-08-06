@@ -1,10 +1,12 @@
-## Notification
+# 8.4 Notification
 
-Notification是Flutter中一个重要的机制，在Widget树中，每一个节点都可以分发通知，通知会沿着当前节点（context）向上传递，所有父节点都可以通过NotificationListener来监听通知，Flutter中称这种通知由子向父的传递为**通知冒泡**（Notification Bubbling），这个和用户触摸事件冒泡是相似的，但有一点不同：通知冒泡可以中止，但用户触摸事件不行。
+通知（Notification）是Flutter中一个重要的机制，在widget树中，每一个节点都可以分发通知，通知会沿着当前节点向上传递，所有父节点都可以通过`NotificationListener`来监听通知。Flutter中将这种由子向父的传递通知的机制称为**通知冒泡**（Notification Bubbling）。通知冒泡和用户触摸事件冒泡是相似的，但有一点不同：通知冒泡可以中止，但用户触摸事件不行。
 
 > 通知冒泡和Web开发中浏览器事件冒泡原理是相似的，都是事件从出发源逐层向上传递，我们可以在上层节点任意位置来监听通知/事件，也可以终止冒泡过程，终止冒泡后，通知将不会再向上传递。
 
-Flutter中很多地方使用了通知，如可滚动(Scrollable) Widget中滑动时就会分发**滚动通知**（ScrollNotification），而Scrollbar正是通过监听ScrollNotification来确定滚动条位置的。下面是一个监听Scrollable Widget滚动通知的例子：
+Flutter中很多地方使用了通知，如可滚动组件（Scrollable Widget）滑动时就会分发**滚动通知**（ScrollNotification），而Scrollbar正是通过监听ScrollNotification来确定滚动条位置的。
+
+下面是一个监听可滚动组件滚动通知的例子：
 
 ```dart
 NotificationListener(
@@ -27,7 +29,7 @@ NotificationListener(
 
 上例中的滚动通知如`ScrollStartNotification`、`ScrollUpdateNotification`等都是继承自`ScrollNotification`类，不同类型的通知子类会包含不同的信息，比如`ScrollUpdateNotification`有一个`scrollDelta`属性，它记录了移动的位移，其它通知属性读者可以自己查看SDK文档。
 
-上例中，我们通过`NotificationListener`来监听子 ListView的滚动通知的，`NotificationListener`定义如下：
+上例中，我们通过`NotificationListener`来监听子`ListView`的滚动通知的，`NotificationListener`定义如下：
 
 ```dart
 class NotificationListener<T extends Notification> extends StatelessWidget {
@@ -72,7 +74,7 @@ class NotificationListener<T extends Notification> extends StatelessWidget {
 
    它的返回值类型为布尔值，当返回值为`true`时，阻止冒泡，其父级Widget将再也收不到该通知；当返回值为`false` 时继续向上冒泡通知。
 
-Flutter的UI框架实现中，除了在可滚动Widget在滚动过程中会发出ScrollNotification之外，还有一些其它的通知，如SizeChangedLayoutNotification、KeepAliveNotification 、LayoutChangedNotification等，Flutter正是通过这种通知机制来使父元素可以在一些特定时机来做一些事情。
+Flutter的UI框架实现中，除了在可滚动组件在滚动过程中会发出`ScrollNotification`之外，还有一些其它的通知，如`SizeChangedLayoutNotification`、`KeepAliveNotification` 、`LayoutChangedNotification`等，Flutter正是通过这种通知机制来使父元素可以在一些特定时机来做一些事情。
 
 #### 自定义通知
 
@@ -89,7 +91,7 @@ Flutter的UI框架实现中，除了在可滚动Widget在滚动过程中会发�
 
 2. 分发通知。
 
-   Notification有一个`dispatch(context)`方法，它是用于分发通知的，我们说过context实际上就是操作Element的一个接口，它与Element树上的节点是对应的，通知会从context对应的Element节点向上冒泡。
+   `Notification`有一个`dispatch(context)`方法，它是用于分发通知的，我们说过`context`实际上就是操作`Element`的一个接口，它与`Element`树上的节点是对应的，通知会从`context`对应的`Element`节点向上冒泡。
 
 下面我们看一个完整的例子：
 
@@ -148,9 +150,9 @@ class MyNotification extends Notification {
 
 > 注意：代码中注释的部分是不能正常工作的，因为这个`context`是根Context，而NotificationListener是监听的子树，所以我们通过`Builder`来构建RaisedButton，来获得按钮位置的context。
 
-运行效果如下：
+运行效果如图8-6所示：
 
-![Screenshot_1539328127](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1539328127.png)
+![图8-6](../imgs/8-6.png)
 
 ### 阻止冒泡
 
@@ -234,7 +236,7 @@ bool visitAncestor(Element element) {
 我们可以看到`NotificationListener`的`onNotification`回调最终是在`_dispatch`方法中执行的，然后会根据返回值来确定是否继续向上冒泡。上面的源码实现其实并不复杂，通过阅读这些源码，一些额外的点读者可以注意一下：
 
 1. `Context`上也提供了遍历Element树的方法。
-2. 我们可以通过`Element.widget`得到element节点对应的Widget；前面已经讲过Widget和Element的对应关系，读者通过这些源码来加深理解。
+2. 我们可以通过`Element.widget`得到`element`节点对应的widget；我们已经反复讲过Widget和Element的对应关系，读者通过这些源码来加深理解。
 
 ### 总结
 

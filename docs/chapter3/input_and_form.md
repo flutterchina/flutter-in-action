@@ -1,17 +1,11 @@
 
+# 3.7 输入框及表单
 
+Material组件库中提供了输入框组件`TextField`和表单组件`Form`。下面我们分别介绍一下。
 
+## 3.7.1 TextField
 
-
-
-
-## 输入框及表单
-
-Material widget库中提供了丰富的输入框及表单Widget。下面我们分别介绍一下。
-
-### TextField
-
-TextField用于文本输入，它提供了很多属性，我们先简单介绍一下主要属性的作用，然后通过几个示例来演示一下关键属性的用法。
+`TextField`用于文本输入，它提供了很多属性，我们先简单介绍一下主要属性的作用，然后通过几个示例来演示一下关键属性的用法。
 
 ```dart
 const TextField({
@@ -60,23 +54,21 @@ const TextField({
   | emailAddress        | 优化后的电子邮件地址；会显示“@ .”                   |
   | url                 | 优化后的url输入键盘； 会显示“/ .”                   |
 
-- textInputAction：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看API文档，下面是当值为`TextInputAction.search`时，原生Android系统下键盘样式：
+- `textInputAction`：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看API文档，下面是当值为`TextInputAction.search`时，原生Android系统下键盘样式如图3-24所示：
 
-  ![image-20180903181235471](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180903181235471.png)
+  ![图3-24](../imgs/3-24.png)
 
-#### 
-
-- style：正在编辑的文本样式。
-- textAlign: 输入框内编辑文本在水平方向的对齐方式。
-- autofocus: 是否自动获取焦点。
-- obscureText：是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换。
-- maxLines：输入框的最大行数，默认为1；如果为`null`，则无行数限制。
-- maxLength和maxLengthEnforced ：maxLength代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。maxLengthEnforced决定当输入文本长度超过maxLength时是否阻止输入，为true时会阻止输入，为false时不会阻止输入但输入框会变红。
-- onChange：输入框内容改变时的回调函数；注：内容改变事件也可以通过controller来监听。
-- onEditingComplete和onSubmitted：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍图标）。不同的是两个回调签名不同，onSubmitted回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而onEditingComplete不接收参数。
-- inputFormatters：用于指定输入格式；当用户输入内容改变时，会根据指定的格式来校验。
-- enable：如果为`false`，则输入框会被禁用，禁用状态不接收输入和事件，同时显示禁用态样式（在其decoration中定义）。
-- cursorWidth、cursorRadius和cursorColor：这三个属性是用于自定义输入框光标宽度、圆角和颜色的。
+- `style`：正在编辑的文本样式。
+- `textAlign`: 输入框内编辑文本在水平方向的对齐方式。
+- `autofocus`: 是否自动获取焦点。
+- `obscureText`：是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换。
+- `maxLines`：输入框的最大行数，默认为1；如果为`null`，则无行数限制。
+- `maxLength`和`maxLengthEnforced` ：`maxLength`代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。`maxLengthEnforced`决定当输入文本长度超过`maxLength`时是否阻止输入，为`true`时会阻止输入，为`false`时不会阻止输入但输入框会变红。
+- `onChange`：输入框内容改变时的回调函数；注：内容改变事件也可以通过`controller`来监听。
+- `onEditingComplete`和`onSubmitted`：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍图标）。不同的是两个回调签名不同，`onSubmitted`回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而`onEditingComplete`不接收参数。
+- `inputFormatters`：用于指定输入格式；当用户输入内容改变时，会根据指定的格式来校验。
+- `enable`：如果为`false`，则输入框会被禁用，禁用状态不接收输入和事件，同时显示禁用态样式（在其`decoration`中定义）。
+- `cursorWidth`、`cursorRadius`和`cursorColor`：这三个属性是用于自定义输入框光标宽度、圆角和颜色的。
 
 #### 示例：登录输入框
 
@@ -105,24 +97,24 @@ Column(
 );
 ```
 
+运行后，效果如图3-25所示：
 
-
-![image-20180904111331835](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904111331835.png)
+![图3-25](../imgs/3-25.png)
 
 ##### 获取输入内容
 
 获取输入内容有两种方式：
 
-1. 定义两个变量，用于保存用户名和密码，然后在onChange触发时，各自保存一下输入内容。
-2. 通过controller直接获取。
+1. 定义两个变量，用于保存用户名和密码，然后在`onChange`触发时，各自保存一下输入内容。
+2. 通过`controller`直接获取。
 
 第一种方式比较简单，不在举例，我们来重点看一下第二种方式，我们以用户名输入框举例：
 
-定义一个controller：
+定义一个`controller`：
 
 ```dart
 //定义一个controller
-TextEditingController _unameController=new TextEditingController();
+TextEditingController _unameController = TextEditingController();
 ```
 
 然后设置输入框controller：
@@ -145,9 +137,9 @@ print(_unameController.text)
 
 监听文本变化也有两种方式：
 
-1. 设置onChange回调，如：
+1. 设置`onChange`回调，如：
 
-   ```
+   ```dart
    TextField(
        autofocus: true,
        onChanged: (v) {
@@ -156,7 +148,7 @@ print(_unameController.text)
    )
    ```
 
-2. 通过controller监听，如：
+2. 通过`controller`监听，如：
 
    ```dart
    @override
@@ -168,17 +160,17 @@ print(_unameController.text)
    }
    ```
 
-两种方式相比，onChanged是专门用于监听文本变化，而controller的功能却多一些，除了能监听文本变化外，它还可以设置默认值、选择文本，下面我们看一个例子：
+两种方式相比，`onChanged`是专门用于监听文本变化，而`controller`的功能却多一些，除了能监听文本变化外，它还可以设置默认值、选择文本，下面我们看一个例子：
 
-创建一个controller:
+创建一个`controller`:
 
-```
-TextEditingController _selectionController = new TextEditingController();
+```dart
+TextEditingController _selectionController =  TextEditingController();
 ```
 
 设置默认值，并从第三个字符开始选中后面的字符
 
-```
+```dart
 _selectionController.text="hello world!";
 _selectionController.selection=TextSelection(
     baseOffset: 2,
@@ -186,28 +178,28 @@ _selectionController.selection=TextSelection(
 );
 ```
 
-设置controller:
+设置`controlle`r:
 
-```
+```dart
 TextField(
   controller: _selectionController,
 )
 ```
 
-运行效果如下：
+运行效果如图3-26所示：
 
-![image-20180904155039251](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904155039251.png)
+![图3-26](../imgs/3-26.png)
 
 ##### 控制焦点
 
-焦点可以通过FocusNode和FocusScopeNode来控制，默认情况下，焦点由FocusScope来管理，它代表焦点控制范围，可以在这个范围内可以通过FocusScopeNode在输入框之间移动焦点、设置默认焦点等。我们可以通过`FocusScope.of(context)` 来获取widget树中默认的FocusScopeNode。下面看一个示例，在此示例中创建两个TextField，第一个自动获取焦点，然后创建两个按钮：
+焦点可以通过`FocusNode`和`FocusScopeNode`来控制，默认情况下，焦点由`FocusScope`来管理，它代表焦点控制范围，可以在这个范围内可以通过`FocusScopeNode`在输入框之间移动焦点、设置默认焦点等。我们可以通过`FocusScope.of(context)` 来获取Widget树中默认的`FocusScopeNode`。下面看一个示例，在此示例中创建两个`TextField`，第一个自动获取焦点，然后创建两个按钮：
 
-- 点击第一个按钮可以将焦点从第一个TextField挪到第二个TextField。
+- 点击第一个按钮可以将焦点从第一个`TextField`挪到第二个`TextField`。
 - 点击第二个按钮可以关闭键盘。
 
-界面如下：
+我们要实现的效果如图3-27所示：
 
-![image-20180904184812329](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904184812329.png)
+![图3-27](../imgs/3-27.png)
 
 代码如下：
 
@@ -276,11 +268,11 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
 }
 ```
 
-FocusNode和FocusScopeNode还有一些其它的方法，详情可以查看API文档。
+`FocusNode`和`FocusScopeNode`还有一些其它的方法，详情可以查看API文档。
 
 ##### 监听焦点状态改变事件
 
-FocusNode继承自ChangeNotifier，通过FocusNode可以监听焦点的改变事件，如：
+`FocusNode`继承自`ChangeNotifier`，通过`FocusNode`可以监听焦点的改变事件，如：
 
 ```dart
 ...
@@ -300,7 +292,7 @@ focusNode.addListener((){
 
 ##### 自定义样式
 
-虽然我们可以通过decoration属性来定义输入框样式，但是有一些样式如下划线默认颜色及宽度都是不能直接自定义的，下面的代码**没有效果**：
+虽然我们可以通过`decoration`属性来定义输入框样式，但是有一些样式如下划线默认颜色及宽度都是不能直接自定义的，下面的代码**没有效果**：
 
 ```dart
 TextField(
@@ -317,7 +309,7 @@ TextField(
 ),
 ```
 
-之所以如此，是由于TextField在绘制下划线时使用的颜色是主题色里面的`hintColor`，但提示文本颜色也是用的`hintColor`， 如果我们直接修改`hintColor`，那么下划线和提示文本的颜色都会变。值得高兴的是decoration中可以设置`hintStyle`，它可以覆盖`hintColor`，并且主题中可以通过`inputDecorationTheme`来设置输入框默认的decoration。所以我们可以通过主题来自定义，代码如下：
+之所以如此，是由于`TextField`在绘制下划线时使用的颜色是主题色里面的`hintColor`，但提示文本颜色也是用的`hintColor`， 如果我们直接修改`hintColor`，那么下划线和提示文本的颜色都会变。值得高兴的是`decoration`中可以设置`hintStyle`，它可以覆盖`hintColor`，并且主题中可以通过`inputDecorationTheme`来设置输入框默认的`decoration`。所以我们可以通过主题来自定义，代码如下：
 
 ```dart
 Theme(
@@ -351,11 +343,11 @@ Theme(
 )
 ```
 
-运行效果如下：
+运行效果如图3-28所示：
 
-![image-20180904121222620](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904121222620.png)
+![图3-28](../imgs/3-28.png)
 
-我们成功的自定义了下划线颜色和提问文字样式，细心的读者可能已经发现，通过这种方式自定义后，输入框在获取焦点时，labelText不会高亮显示了，正如上图中的"用户名"本应该显示蓝色，但现在却显示为灰色，并且我们还是无法定义下划线宽度。另一种灵活的方式是直接隐藏掉TextField本身的下划线，然后通过Container去嵌套定义样式，如:
+我们成功的自定义了下划线颜色和提问文字样式，细心的读者可能已经发现，通过这种方式自定义后，输入框在获取焦点时，`labelText`不会高亮显示了，正如上图中的"用户名"本应该显示蓝色，但现在却显示为灰色，并且我们还是无法定义下划线宽度。另一种灵活的方式是直接隐藏掉`TextField`本身的下划线，然后通过`Container`去嵌套定义样式，如:
 
 ```dart
 Container(
@@ -379,19 +371,19 @@ Container(
 
 ![image-20180904150511545](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904150511545.png)
 
-通过这种widget组合的方式，也可以定义背景圆角等。一般来说，优先通过decoration来自定义样式，如果decoration实现不了，再用widget组合的方式。
+通过这种组件组合的方式，也可以定义背景圆角等。一般来说，优先通过`decoration`来自定义样式，如果`decoration`实现不了，再用widget组合的方式。
 
 > 思考题：在这个示例中，下划线颜色是固定的，所以获得焦点后颜色仍然为灰色，如何实现点击后下滑线也变色呢？
 
-### 表单Form
+## 3.7.2 表单Form
 
-实际业务中，在正式向服务器提交数据前，都会对各个输入框数据进行合法性校验，但是对每一个TextField都分别进行校验将会是一件很麻烦的事。还有，如果用户想清除一组TextField的内容，除了一个一个清除有没有什么更好的办法呢？为此，Flutter提供了一个Form widget，它可以对输入框进行分组，然后进行一些统一操作，如输入内容校验、输入框重置以及输入内容保存。
+实际业务中，在正式向服务器提交数据前，都会对各个输入框数据进行合法性校验，但是对每一个`TextField`都分别进行校验将会是一件很麻烦的事。还有，如果用户想清除一组`TextField`的内容，除了一个一个清除有没有什么更好的办法呢？为此，Flutter提供了一个`Form` 组件，它可以对输入框进行分组，然后进行一些统一操作，如输入内容校验、输入框重置以及输入内容保存。
 
 #### Form
 
-Form继承自StatefulWidget对象，它对应的状态类为FormState。我们先看看Form类的定义：
+`Form`继承自`StatefulWidget`对象，它对应的状态类为`FormState`。我们先看看`Form`类的定义：
 
-```
+```dart
 Form({
   @required Widget child,
   bool autovalidate = false,
@@ -400,15 +392,15 @@ Form({
 })
 ```
 
-- autovalidate：是否自动校验输入内容；当为`true`时，每一个子FormField内容发生变化时都会自动校验合法性，并直接显示错误信息。否则，需要通过调用`FormState.validate()`来手动校验。
-- onWillPop：决定Form所在的路由是否可以直接返回（如点击返回按钮），该回调返回一个`Future`对象，如果Future的最终结果是false，则当前路由不会返回；如果为`true`，则会返回到上一个路由。此属性通常用于拦截返回按钮。
-- onChanged：Form的任意一个子FormField内容发生变化时会触发此回调。
+- `autovalidate`：是否自动校验输入内容；当为`true`时，每一个子FormField内容发生变化时都会自动校验合法性，并直接显示错误信息。否则，需要通过调用`FormState.validate()`来手动校验。
+- `onWillPop`：决定`Form`所在的路由是否可以直接返回（如点击返回按钮），该回调返回一个`Future`对象，如果Future的最终结果是`false`，则当前路由不会返回；如果为`true`，则会返回到上一个路由。此属性通常用于拦截返回按钮。
+- `onChanged`：`Form`的任意一个子`FormField`内容发生变化时会触发此回调。
 
 
 
 #### FormField
 
-Form的子孙元素必须是FormField类型，FormField是一个抽象类，定义几个属性，FormState内部通过它们来完成操作，FormField部分定义如下：
+`Form`的子孙元素必须是`FormField`类型，`FormField`是一个抽象类，定义几个属性，`FormState`内部通过它们来完成操作，`FormField`部分定义如下：
 
 ```dart
 const FormField({
@@ -420,15 +412,15 @@ const FormField({
 })
 ```
 
-为了方便使用，Flutter提供了一个TextFormField widget，它继承自FormField类，也是TextField的一个包装类，所以除了FormField定义的属性之外，它还包括TextField的属性。
+为了方便使用，Flutter提供了一个`TextFormField`组件，它继承自`FormField`类，也是`TextField`的一个包装类，所以除了`FormField`定义的属性之外，它还包括`TextField`的属性。
 
 #### FormState 
 
-FormState为Form的State类，可以通过`Form.of()`或GlobalKey获得。我们可以通过它来对Form的子孙FormField进行统一操作。我们看看其常用的三个方法：
+`FormState`为`Form`的`State`类，可以通过`Form.of()`或`GlobalKey`获得。我们可以通过它来对`Form`的子孙`FormField`进行统一操作。我们看看其常用的三个方法：
 
-- `FormState.validate()`：调用此方法后，会调用Form子孙FormField的validate回调，如果有一个校验失败，则返回false，所有校验失败项都会返回用户返回的错误提示。
-- `FormState.save()`：调用此方法后，会调用Form子孙FormField的save回调，用于保存表单内容
-- `FormState.reset()`：调用此方法后，会将子孙FormField的内容清空。
+- `FormState.validate()`：调用此方法后，会调用`Form`子孙`FormField的validate`回调，如果有一个校验失败，则返回false，所有校验失败项都会返回用户返回的错误提示。
+- `FormState.save()`：调用此方法后，会调用`Form`子孙`FormField`的`save`回调，用于保存表单内容
+- `FormState.reset()`：调用此方法后，会将子孙`FormField`的内容清空。
 
 #### 示例
 
@@ -534,13 +526,13 @@ class _FormTestRouteState extends State<FormTestRoute> {
 
 
 
-运行后：
+运行后效果如图3-29所示：
 
-![image-20180904174217682](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904174217682.png)
+![图3-29](../imgs/3-29.png)
 
 
 
-注意，登录按钮的onPressed方法中不能通过`Form.of(context)`来获取，原因是，此处的context为FormTestRoute的context，而`Form.of(context)`是根据所指定context向根去查找，而FormState是在FormTestRoute的子树中，所以不行。正确的做法是通过Builder来构建登录按钮，Builder会将widget节点的context作为回调参数：
+注意，登录按钮的`onPressed`方法中不能通过`Form.of(context)`来获取，原因是，此处的`context`为`FormTestRoute`的context，而`Form.of(context)`是根据所指定`context`向根去查找，而`FormState`是在`FormTestRoute`的子树中，所以不行。正确的做法是通过`Builder`来构建登录按钮，`Builder`会将`widget`节点的`context`作为回调参数：
 
 ```dart
 Expanded(
@@ -559,7 +551,7 @@ Expanded(
 )
 ```
 
-其实context正是操作Widget所对应的Element的一个接口，由于Widget树对应的Element都是不同的，所以context也都是不同的，有关context的更多内容会在后面高级部分详细讨论。Flutter中有很多“of(context)”这种方法，在使用时读者一定要注意context是否正确。
+其实`context`正是操作Widget所对应的`Element`的一个接口，由于Widget树对应的`Element`都是不同的，所以`context也`都是不同的，有关`context`的更多内容会在后面高级部分详细讨论。Flutter中有很多“of(context)”这种方法，读者在使用时一定要注意`context`是否正确。
 
 
 

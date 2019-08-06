@@ -1,12 +1,12 @@
-# 安装Flutter
+# 1.3 搭建Flutter开发环境
 
 工欲善其事必先利其器，本节首先会分别介绍一下在Windows和macOS下Flutter SDK的安装，然后再介绍一下配IDE和模拟器的使用。
 
-
-
-## 搭建Flutter开发环境
+## 1.3.1 安装Flutter
 
 由于Flutter会同时构建Android和IOS两个平台的发布包，所以Flutter同时依赖Android SDK和iOS SDK，在安装Flutter时也需要安装相应平台的构建工具和SDK。下面我们分别介绍一下Windows和macOS下的环境搭建。
+
+> 注意：本节介绍的安装方式随着Flutter的升级可能会发生变化，如果下面介绍的内容在您安装Flutter时已经失效，请访问Flutter官网，按照官网最新的安装教程安装。
 
 ### 使用镜像
 
@@ -39,9 +39,9 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 #### 获取Flutter SDK
 
-1. 去flutter官网下载其最新可用的安装包，官网地址：https://flutter.io/sdk-archive/#windows
+1. 去flutter官网下载其最新可用的安装包，下载地址：https://flutter.io/sdk-archive/，打开后如图1-2所示：
 
-   ![image-20180820142229086](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_archive.png)
+   ![图1-2](../imgs/1-2.png)
 
    
 
@@ -216,7 +216,7 @@ flutter upgrade
 
 
 
-## IDE配置与使用
+## 1.3.2 IDE配置与使用
 
 理论上可以使用任何文本编辑器与命令行工具来构建Flutter应用程序。 不过，Flutter官方建议使用Android Studio和VS Code之一以获得更好的开发体验。Flutter官方提供了这两款编辑器插件，通过IDE和插件可获得代码补全、语法高亮、widget编辑辅助、运行和调试支持等功能，可以帮助我们极大的提高开发效率。下面我们分别介绍一下Android Studio和VS Code的配置及使用（Android Studio和VS Code读者可以在其官网获得最新的安装，由于安装比较简单，故不再赘述）。
 
@@ -254,9 +254,9 @@ flutter upgrade
 
 #### 运行应用程序
 
-1. 定位到Android Studio工具栏：
+1. 定位到Android Studio工具栏，如图1-3所示：
 
-   ![main-toolbar](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/main-toolbar.png)
+   ![图1-3](../imgs/1-3.png)
 
 2. 在 **target selector** 中, 选择一个运行该应用的Android设备。如果没有列出可用，请选择 **Tools>Android>AVD Manager** 并在那里创建一个。
 
@@ -264,23 +264,21 @@ flutter upgrade
 
 4. 如果一切正常, 您应该在您的设备或模拟器上会看到启动的应用程序：
 
-   ![](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/flutter_starter_app.png)
+   ![图1-4](../imgs/1-4.png)
 
 
 #### 体验热重载
 
 Flutter 可以通过 *热重载（hot reload）* 实现快速的开发周期，热重载就是无需重启应用程序就能实时加载修改后的代码，并且不会丢失状态。简单的对代码进行更改，然后告诉IDE或命令行工具你需要重新加载（点击reload按钮），你就会在你的设备或模拟器上看到更改。
 
-      1. 打开`lib/main.dart`文件
-      2. 将字符串
-      `'You have pushed the button this many times:'` 更改为
-      `'You have clicked the button this many times:'`
-      3. 不要按“停止”按钮; 让您的应用继续运行.
-      4. 要查更改，请调用 **Save** (`cmd-s` / `ctrl-s`)，或者点击 **热重载按钮** (带有闪电⚡️图标的按钮)。
+1. 打开`lib/main.dart`文件
+2. 将字符串
+`'You have pushed the button this many times:'` 更改为
+`'You have clicked the button this many times:'`
+3. 不要按“停止”按钮; 让您的应用继续运行.
+4. 要查更改，请调用 **Save** (`cmd-s` / `ctrl-s`)，或者点击 **热重载按钮** (带有闪电⚡️图标的按钮)。
 
    你会立即在运行的应用程序中看到更新的字符串。
-
-
 
 ### VS Code的配置与使用
 
@@ -320,9 +318,7 @@ VS Code是一个轻量级编辑器，支持Flutter运行和调试。
 
 
 
-
-
-## 连接设备运行Flutter应用
+## 1.3.3 连接设备运行Flutter应用
 
 Window下只支持为Android设备构建并运行Flutter应用，而macOS同时支持iOS和Android设备。下面分别介绍如何连接Android和iOS设备来运行flutter应用。
 
@@ -398,27 +394,88 @@ Window下只支持为Android设备构建并运行Flutter应用，而macOS同时�
 
    * 在`Runner` target设置页面中，确保在 **General > Signing > Team** 下选择了你的开发团队。当你选择一个团队时，Xcode会创建并下载开发证书，向你的设备注册你的帐户，并创建和下载配置文件（如果需要）。
 
-   * 要开始您的第一个iOS开发项目，您可能需要使用您的Apple ID登录Xcode。
+   * 要开始您的第一个iOS开发项目，您可能需要使用您的Apple ID登录Xcode，如图1-5：
 
-     ![xcode账号](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/xcode-account.png)
+     ![图1-5](../imgs/1-5.png)
 
      任何Apple ID都支持开发和测试，但若想将应用分发到App Store，就必须注册Apple开发者计划，有关详情读者可以自行了解。
 
    4. 当您第一次attach真机设备进行iOS开发时，需要同时信任你的Mac和该设备上的开发证书。首次将iOS设备连接到Mac时，请在对话框中选择 `Trust`。 
 
-      ![添加信任](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/trust-computer.png)
+      ![添加信任](../imgs/1-6.png)
 
       然后，转到iOS设备上的**设置**菜单，选择 **常规>设备管理** 并信任您的证书。
 
-   5. 如果Xcode中的自动签名失败，请验证项目的 **General > Identity > Bundle Identifier** 值是否唯一.
+   5. 如果Xcode中的自动签名失败，请验证项目的 **General > Identity > Bundle Identifier** 值是否唯一，如图1-7所示：
 
-      ![验证bundle id是否唯一](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/xcode-unique-bundle-id.png)
+      ![验证bundle id是否唯一](../imgs/1-7.png)
 
    6. 运行 `flutter run`启动flutter应用程序。
    
 
+## 1.3.4 常见配置问题
+
+### Android Studio问题
+
+#### 缺少依赖库问题
+
+上手安卓最常遇见的问题之一，错误如图1-8所示，此时点击超链接即可自动跳转到安装页面
+
+![图1-8](../imgs/1-8.png)
+
+安装之后重新运行即可，如图1-9：
+
+![install_request_components.png](../imgs/1-9.png)
+
+#### 连接不上Android Repository
+
+这也是最常见的问题之一，当你发现自己无法下载部分依赖的时候，请优先考虑这种情况。进入 `File` -> `Settings` -> `Appearance & Behavior` -> `System Settings` -> `Android SDK` -> `SDK Update Sites` 列表，可以看到此时的 `Android Repository` 无法连接，如图1-10所示：
+
+![下载依赖失败](../imgs/1-10.png)
+
+这是由于要去Google下载Android SDK，但在国内目前无法访问Google所致，因此，我们可以配置代理或使用vpn。
+
+#### 安卓包配置问题
+
+一般格式为
+
+```
+Could not HEAD **
+Could not Get **
+```
+
+如：`Android Studio Could not GET gradle-3.2.0.pom`
+
+这一类问题是由于无法连接到 Maven 库造成的，解决方法如下：
+
+1. 进入`当前所在项目名/android`
+
+2. 打开 `build.gradle` 
+
+3. 找到下面这一部分，并加上 `maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }` 
+
+   ```
+   allprojects {
+       repositories {
+         google()
+         jcenter()
+         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //添加这一句
+   	}
+   }
+   ```
+
+4. 进入 File/ Settings/ Build, Execution, Deployment/ BuildTools/ Gradle/ Android Studio 中，勾选上 Enable embedded Maven repository ，重启 Android Studio 即可解决。
+
+   > **注意：**存在这样的一种情况，当你根据上述步骤设置了之后，依旧无法解决这个问题，并有类似于 `Could not HEAD maven.aliyun.com` 的报错信息，请检查 `C:\Users\{user_name}\.gradle\gradle.properties` 是否有设置代理。删除后问题即可解决。
+
+#### Hot Reload 热重载失效问题
+
+在给 `Terminal` 之类的终端模拟器设置代理之后，会导致”Hot Reload“重载失效，此时调用 **Save** (`cmd-s` / `ctrl-s`)将不会进行热重载，**热重载按钮** (带有闪电⚡️图标的按钮)也不会显示，将代理移除即可解决。
+
+另外，有些情况下热重载是不生效的，比如修改了`main`函数、修改了全局静态方法等，读者可以认为”Hot Reload“只会重新构建整个widget树，如果变动不在构建widget树的过程中，”Hot Reload“就不会起作用。
 
 
 
-   
+
+
 

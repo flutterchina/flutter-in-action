@@ -1,6 +1,12 @@
-## 动画基本结构
+# 9.2 动画基本结构及状态监听
 
-我们通过实现一个图片逐渐放大的示例来演示一下Flutter中动画的基本结构：
+## 9.2.1 动画基本结构
+
+在Flutter中我们可以通过多种方式来实现动画，下面通过一个图片逐渐放大示例的不同实现来演示Flutter中动画的不同实现方式的区别。
+
+### 基础版本
+
+下面我们演示一下最基础的动画实现方式：
 
 ```dart
 class ScaleAnimationRoute extends StatefulWidget {
@@ -67,11 +73,13 @@ class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>  with SingleT
   }
 ```
 
+上面代码执行后截取了其中的两帧，效果如图9-1、9-2所示：
 
+![图9-1](../imgs/9-1.png)![图9-2](../imgs/9-2.png)
 
 ### 使用AnimatedWidget简化
 
-细心的读者可能已经发现上面示例中通过`addListener()`和`setState()` 来更新UI这一步其实是通用的，如果每个动画中都加这么一句是比较繁琐的。AnimatedWidget类封装了调用`setState()`的细节，并允许我们将Widget分离出来，重构后的代码如下：
+细心的读者可能已经发现上面示例中通过`addListener()`和`setState()` 来更新UI这一步其实是通用的，如果每个动画中都加这么一句是比较繁琐的。`AnimatedWidget`类封装了调用`setState()`的细节，并允许我们将widget分离出来，重构后的代码如下：
 
 ```dart
 class AnimatedImage extends AnimatedWidget {
@@ -150,15 +158,15 @@ Widget build(BuildContext context) {
 }
 ```
 
-上面的代码中有一个迷惑的问题是，`child`看起来像被指定了两次。但实际发生的事情是：将外部引用child传递给AnimatedBuilder后AnimatedBuilder再将其传递给匿名构造器， 然后将该对象用作其子对象。最终的结果是AnimatedBuilder返回的对象插入到Widget树中。
+上面的代码中有一个迷惑的问题是，`child`看起来像被指定了两次。但实际发生的事情是：将外部引用`child`传递给`AnimatedBuilder`后`AnimatedBuilder`再将其传递给匿名构造器， 然后将该对象用作其子对象。最终的结果是`AnimatedBuilder`返回的对象插入到widget树中。
 
 也许你会说这和我们刚开始的示例差不了多少，其实它会带来三个好处：
 
-1. 不用显式的去添加帧监听器，然后再调用`setState()` 了，这个好处和AnimatedWidget是一样的。
+1. 不用显式的去添加帧监听器，然后再调用`setState()` 了，这个好处和`AnimatedWidget`是一样的。
 
-2. 动画构建的范围缩小了，如果没有builder，setState()将会在父widget上下文调用，这将会导致父widget的build方法重新调用，而有了builder之后，只会导致动画widget的build重新调用，这在复杂布局下性能会提高。
+2. 动画构建的范围缩小了，如果没有`builder`，`setState()`将会在父组件上下文中调用，这将会导致父组件的`build`方法重新调用；而有了`builder`之后，只会导致动画widget自身的`build`重新调用，避免不必要的rebuild。
 
-3. 通过AnimatedBuilder可以封装常见的过渡效果来复用动画。下面我们通过封装一个GrowTransition来说明，它可以对子widget实现放大动画：
+3. 通过`AnimatedBuilder`可以封装常见的过渡效果来复用动画。下面我们通过封装一个`GrowTransition`来说明，它可以对子widget实现放大动画：
 
    ```dart
    class GrowTransition extends StatelessWidget {
@@ -199,9 +207,9 @@ Widget build(BuildContext context) {
 
    **Flutter中正是通过这种方式封装了很多动画，如：FadeTransition、ScaleTransition、SizeTransition、FractionalTranslation等，很多时候都可以复用这些预置的过渡类。**
 
-## 动画状态监听
+## 9.2.2 动画状态监听
 
-上面说过，我们可以通过Animation的`addStatusListener()`方法来添加动画状态改变监听器。Flutter中，有四种动画状态，在AnimationStatus枚举类中定义，下面我们逐个说明：
+上面说过，我们可以通过`Animation`的`addStatusListener()`方法来添加动画状态改变监听器。Flutter中，有四种动画状态，在`AnimationStatus`枚举类中定义，下面我们逐个说明：
 
 | 枚举值      | 含义             |
 | ----------- | ---------------- |
@@ -235,3 +243,4 @@ Widget build(BuildContext context) {
     controller.forward();
   }
 ```
+

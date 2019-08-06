@@ -1,8 +1,8 @@
-# 对齐与相对定位
+# 4.6 对齐与相对定位（Align）
 
-在上一节中我们讲过通过`Stack`和`Positioned`，我们可以指定一个或多个子元素相对于父元素各个边的精确偏移，并且可以重叠。但如果我们只想简单的调整一个子元素在父元素中的位置的话，使用`Align`组件会更简单一些。
+在上一节中我们讲过通过`Stack`和`Positioned`，我们可以指定一个或多个子元素相对于父元素各个边的精确偏移，并且可以重叠。但如果我们只想简单的调整**一个**子元素在父元素中的位置的话，使用`Align`组件会更简单一些。
 
-## Align
+## 4.6.1 Align
 
 `Align` 组件可以调整子组件的位置，并且可以根据子组件的宽高来确定自身的的宽高，定义如下：
 
@@ -37,11 +37,11 @@ Container(
 )
 ```
 
-运行效果如下：
+运行效果如图4-11所示：
 
-![align1](../imgs/align1.png)
+![图4-11](../imgs/4-11.png)
 
-`FlutterLogo` 是Flutter SDK提供的一个组件，内容就是就是Flutter 的商标。在上面的例子中，我们显式指定了`Container`的宽高都为120。如果我们不显式指定宽高，而通过同时指定`widthFactor`和`heightFactor` 为2也是可以达到这个效果的：
+`FlutterLogo` 是Flutter SDK提供的一个组件，内容就是Flutter的商标。在上面的例子中，我们显式指定了`Container`的宽、高都为120。如果我们不显式指定宽高，而通过同时指定`widthFactor`和`heightFactor` 为2也是可以达到同样的效果：
 
 ```dart
 Align(
@@ -54,12 +54,12 @@ Align(
 ),
 ```
 
-因为`FlutterLogo`的宽高为60，则`Align`的最终宽高都为2*60=120。
+因为`FlutterLogo`的宽高为60，则`Align`的最终宽高都为`2*60=120`。
 
 另外，我们通过`Alignment.topRight`将`FlutterLogo`定位在`Container`的右上角。那`Alignment.topRight`是什么呢？通过源码我们可以看到其定义如下：
 
 ```dart
-/// 右上角
+//右上角
 static const Alignment topRight = Alignment(1.0, -1.0);
 ```
 
@@ -96,9 +96,9 @@ Alignment(this.x, this.y)
 )
 ```
 
-我们可以先想象一下运行效果：将`Alignment(2,0.0)`带入上述坐标转换公式，可以得到`FlutterLogo`的实际偏移坐标为（90，30）。现在看看实际运行效果：
+我们可以先想象一下运行效果：将`Alignment(2,0.0)`带入上述坐标转换公式，可以得到`FlutterLogo`的实际偏移坐标为（90，30）。实际运行如图4-12所示：
 
-![align1](../imgs/align2.png)
+![图4-12](../imgs/4-12.png)
 
 ### FractionalOffset
 
@@ -124,13 +124,13 @@ Container(
 )
 ```
 
-实际运行效果如下：
+实际运行效果如图4-13所示下：
 
-![align1](../imgs/align3.png)
+![图4-13](../imgs/4-13.png)
 
 我们将`FractionalOffset(0.2, 0.6)`带入坐标转换公式得`FlutterLogo`实际偏移为（12，36），和实际运行效果吻合。
 
-## Align和Stack对比
+## 4.6.2 Align和Stack对比
 
 可以看到，`Align`和`Stack`/`Positioned`都可以用于指定子元素相对于父元素的偏移，但它们还是有两个主要区别：
 
@@ -139,7 +139,7 @@ Container(
 
 
 
-## Center组件
+## 4.6.3 Center组件
 
 我们在前面章节的例子中已经使用过`Center`组件来居中子元素了，现在我们正式来介绍一下它。通过查找SDK源码，我们看到`Center`组件定义如下：
 
@@ -160,4 +160,4 @@ class Center extends Align {
 
 在后面，我们又介绍了`Align`组件和`Stack`/`Positioned`、`Center`的关系，读者可以对比理解。
 
-还有，熟悉Web开发的同学可能会发现`Align`组件的特性和Web开发中相对定位（position: relative）非常像，是的，在大多数时候，我们可以直接使用`Align`组件来实现Web中相对定位的效果，读者可以类比记忆。
+还有，熟悉Web开发的同学可能会发现`Align`组件的特性和Web开发中相对定位（`position: relative`）非常像，是的！在大多数时候，我们可以直接使用`Align`组件来实现Web中相对定位的效果，读者可以类比记忆。

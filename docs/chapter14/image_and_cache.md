@@ -1,10 +1,10 @@
-# 图片加载原理与缓存
+# 14.5 图片加载原理与缓存
 
-在本书前面章节已经介绍过`Image` widget，并提到Flutter框架对加载过的图片是有缓存的（内存），默认最大缓存数量是1000，最大缓存空间为100M。本节便详细介绍Image的原理及图片缓存机制，下面我们先看看`ImageProvider` 类。
+在本书前面章节已经介绍过`Image` 组件，并提到Flutter框架对加载过的图片是有缓存的（内存），默认最大缓存数量是1000，最大缓存空间为100M。本节便详细介绍Image的原理及图片缓存机制，下面我们先看看`ImageProvider` 类。
 
-## ImageProvider
+## 14.5.1 ImageProvider
 
-我们已经知道`Image` Widget 的`image` 参数是一个必选参数，它是`ImageProvider`类型。下面我们便详细介绍一下`ImageProvider`，`ImageProvider`是一个抽象类，定义了图片数据获取和加载的相关接口。它的主要职责有两个：
+我们已经知道`Image` 组件的`image` 参数是一个必选参数，它是`ImageProvider`类型。下面我们便详细介绍一下`ImageProvider`，`ImageProvider`是一个抽象类，定义了图片数据获取和加载的相关接口。它的主要职责有两个：
 
 1. 提供图片数据源
 2. 缓存图片
@@ -337,7 +337,7 @@ bool operator ==(dynamic other) {
 
 上面主要结合源码，探索了`ImageProvider`的主要功能和原理，如果要用一句话来总结`ImageProvider`功能，那么应该是：加载图片数据并进行缓存、解码。在此再次提醒读者，Flutter的源码是非常好的第一手资料，建议读者多多探索，另外，在阅读源码学西的同时一定要有总结，这样才不至于在源码中迷失。
 
-## Image
+## 14.5.2 Image组件原理
 
 前面章节中我们介绍过`Image`的基础用法，现在我们更深入一些，研究一下`Image`是如何和`ImageProvider`配合来获取最终解码后的数据，然后又如何将图片绘制到屏幕上的。
 
@@ -439,9 +439,9 @@ class ImageInternalTestRoute extends StatelessWidget {
 }
 ```
 
-运行效果如下：
+运行效果如图14-4所示：
 
-![img_internal](../imgs/img_internal.png)
+![图14-4](../imgs/14-4.png)
 
 成功了！ 现在，想必`Image` Widget的源码已经没必要在花费篇章去介绍了，读者有兴趣可以自行去阅读。
 
@@ -449,7 +449,7 @@ class ImageInternalTestRoute extends StatelessWidget {
 
 ## 总结
 
-本节主要介绍了Flutter 图片的加载、缓存和绘制流程。其中`ImageProvider`主要负责图片数据的加载和缓存，而绘制部分逻辑主要是由`RawImage` widget来完成。 而`Image`正是连接起`ImageProvider`和`RawImage` 的桥梁。
+本节主要介绍了Flutter 图片的加载、缓存和绘制流程。其中`ImageProvider`主要负责图片数据的加载和缓存，而绘制部分逻辑主要是由`RawImage`来完成。 而`Image`正是连接起`ImageProvider`和`RawImage` 的桥梁。
 
 
 

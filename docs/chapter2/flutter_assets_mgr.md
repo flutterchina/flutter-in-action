@@ -1,25 +1,25 @@
-# 资源管理
+# 2.4 资源管理
 
-Flutter应用程序可以包含代码和 assets（有时称为资源）。assets是会打包到程序安装包中的，可在运行时访问。常见类型的assets包括静态数据（例如JSON文件）、配置文件、图标和图片（JPEG，WebP，GIF，动画WebP / GIF，PNG，BMP和WBMP）等。
+Flutter APP安装包中会包含代码和 assets（资源）两部分。Assets是会打包到程序安装包中的，可在运行时访问。常见类型的assets包括静态数据（例如JSON文件）、配置文件、图标和图片（JPEG，WebP，GIF，动画WebP / GIF，PNG，BMP和WBMP）等。
 
 ## 指定 assets
 
-和包管理一样，Flutter也使用[`pubspec.yaml`](https://www.dartlang.org/tools/pub/pubspec)文件来管理应用程序所需的资源。举一个例子:
+和包管理一样，Flutter也使用[`pubspec.yaml`](https://www.dartlang.org/tools/pub/pubspec)文件来管理应用程序所需的资源，举个例子:
 
-```
+```yaml
 flutter:
   assets:
     - assets/my_icon.png
     - assets/background.png
 ```
 
-`assets`指定应包含在应用程序中的文件， 每个asset都通过相对于`pubspec.yaml`文件所在位置的显式路径进行标识，asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets）。
+`assets`指定应包含在应用程序中的文件， 每个asset都通过相对于`pubspec.yaml`文件所在的文件系统路径来标识自身的路径。asset的声明顺序是无关紧要的，asset的实际目录可以是任意文件夹（在本示例中是assets文件夹）。
 
 在构建期间，Flutter将asset放置到称为 *asset bundle* 的特殊存档中，应用程序可以在运行时读取它们（但不能修改）。
 
 ## Asset 变体（variant）
 
-构建过程支持asset变体的概念：不同版本的asset可能会显示在不同的上下文中。 在`pubspec.yaml`的assets部分中指定asset路径时，构建过程中，会在相邻子目录中查找具有相同名称的任何文件。这些文件随后会与指定的asset一起被包含在asset bundle中。
+构建过程支持“asset变体”的概念：不同版本的asset可能会显示在不同的上下文中。 在`pubspec.yaml`的assets部分中指定asset路径时，构建过程中，会在相邻子目录中查找具有相同名称的任何文件。这些文件随后会与指定的asset一起被包含在asset bundle中。
 
 例如，如果应用程序目录中有以下文件:
 
@@ -172,23 +172,23 @@ flutter:
 
 - Android
 
-  在Flutter项目的根目录中，导航到`.../android/app/src/main/res`目录，里面包含了各种资源文件夹（如`mipmap-hdpi`已包含占位符图像”ic_launcher.png”）。 只需按照[Android开发人员指南](https://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size)中的说明， 将其替换为所需的资源，并遵守每种屏幕密度（dpi）的建议图标大小标准。
+  在Flutter项目的根目录中，导航到`.../android/app/src/main/res`目录，里面包含了各种资源文件夹（如`mipmap-hdpi`已包含占位符图像”ic_launcher.png”，见图2-8）。 只需按照[Android开发人员指南](https://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html#size)中的说明， 将其替换为所需的资源，并遵守每种屏幕密度（dpi）的建议图标大小标准。
 
-  ![Android icon location](https://flutterchina.club/images/assets-and-images/android-icon-path.png)
+  ![图2-8](../imgs/2-8.png)
 
   > **注意:** 如果您重命名.png文件，则还必须在您`AndroidManifest.xml`的`<application>`标签的`android:icon`属性中更新名称。
 
 - iOS
 
-  在Flutter项目的根目录中，导航到`.../ios/Runner`。该目录中`Assets.xcassets/AppIcon.appiconset`已经包含占位符图片。 只需将它们替换为适当大小的图片。保留原始文件名称。
-   
-  ![iOS icon location](https://flutterchina.club/images/assets-and-images/ios-icon-path.png)
+  在Flutter项目的根目录中，导航到`.../ios/Runner`。该目录中`Assets.xcassets/AppIcon.appiconset`已经包含占位符图片（见图2-9）， 只需将它们替换为适当大小的图片，保留原始文件名称。
+  
+  ![图2-9](../imgs/2-9.png)
 
    
 
 #### 更新启动页
 
-![Launch screen](https://flutterchina.club/images/assets-and-images/launch-screen.png)
+![图2-10](../imgs/2-10.png)
 
 在Flutter框架加载时，Flutter会使用本地平台机制绘制启动页。此启动页将持续到Flutter渲染应用程序的第一帧时。
 
@@ -202,8 +202,8 @@ flutter:
 
 要将图片添加到启动屏幕（splash screen）的中心，请导航至`.../ios/Runner`。在`Assets.xcassets/LaunchImage.imageset`， 拖入图片，并命名为`LaunchImage.png`、`LaunchImage@2x.png`、`LaunchImage@3x.png`。 如果你使用不同的文件名，那您还必须更新同一目录中的`Contents.json`文件，图片的具体尺寸可以查看苹果官方的标准。
 
-您也可以通过打开Xcode完全自定义storyboard。在Project Navigator中导航到`Runner/Runner`然后通过打开`Assets.xcassets`拖入图片，或者通过在LaunchScreen.storyboard中使用Interface Builder进行自定义。
+您也可以通过打开Xcode完全自定义storyboard。在Project Navigator中导航到`Runner/Runner`然后通过打开`Assets.xcassets`拖入图片，或者通过在LaunchScreen.storyboard中使用Interface Builder进行自定义，如图2-11所示。
 
-![Adding launch icons in Xcode](https://flutterchina.club/images/assets-and-images/ios-launchscreen-xcode.png)
+![图2-11](../imgs/2-11.png)
 
 

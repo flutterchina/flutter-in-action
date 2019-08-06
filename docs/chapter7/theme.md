@@ -1,8 +1,8 @@
 
 
-# 颜色和主题
+# 7.4 颜色和主题
 
-## 颜色
+## 7.4.1 颜色
 
 在介绍主题前我们先了解一些Flutter中的Color类。Color类中颜色以一个int值保存，我们知道显示器颜色是由红、绿、蓝三基色组成，每种颜色站8比特，存储结构如下：
 
@@ -29,7 +29,7 @@ Color(int.parse(c,radix:16)).withAlpha(255)  //通过方法将Alpha设置为FF
 
 ### 颜色亮度
 
-假如我们需要要实现一个背景颜色和Title可以自定义导航栏，并且背景色为深色时我们应该让Title显示浅色；背景色为浅色时，我们应该让Title显示深色。要实现这个功能，我们就需要来计算背景色的亮度。Color类中提供了一个`computeLuminance()`方法，他可以返回一个[0-1]的一个值，数字越大颜色就越浅，我们可以根据它来动态确定Title的颜色，下面是导航栏NavBar的简单实现：
+假如我们需要要实现一个背景颜色和Title可以自定义导航栏，并且背景色为深色时我们应该让Title显示浅色；背景色为浅色时，Title显示深色。要实现这个功能，我们就需要来计算背景色的亮度。Color类中提供了一个`computeLuminance()`方法，他可以返回一个[0-1]的一个值，数字越大颜色就越浅，我们可以根据它来动态确定Title的颜色，下面是导航栏NavBar的简单实现：
 
 ```dart
 class NavBar extends StatelessWidget {
@@ -87,9 +87,9 @@ Column(
 )
 ```
 
-运行效果如下：
+运行效果如图7-4所示：
 
-![NavBar](../imgs/color.png)
+![NavBar](../imgs/7-4.png)
 
 ### MaterialColor
 
@@ -114,23 +114,23 @@ static const MaterialColor blue = MaterialColor(
 static const int _bluePrimaryValue = 0xFF2196F3;
 ```
 
-`Colors.blue[50]`到`Colors.blue[100]`的色值从浅蓝到深蓝渐变，效果如下：
+`Colors.blue[50]`到`Colors.blue[100]`的色值从浅蓝到深蓝渐变，效果如图7-5所示：
 
-![NavBar](../imgs/material_color.jpeg)
+![NavBar](../imgs/7-5.jpeg)
 
 
 
-## Theme
+## 7.4.2 Theme
 
-Theme Widget可以为Material APP定义主题数据（ThemeData），Material组件库里很多Widget都使用了主题数据，如导航栏颜色、标题字体、Icon样式等。Theme内会使用InheritedWidget来为其子树Widget共享样式数据。
+`Theme`组件可以为Material APP定义主题数据（ThemeData）。Material组件库里很多组件都使用了主题数据，如导航栏颜色、标题字体、Icon样式等。`Theme`内会使用`InheritedWidget`来为其子树共享样式数据。
 
 ### ThemeData
 
-ThemeData是Material Design Widget库的主题数据，Material库的Widget需要遵守相应的设计规范，而这些规范可自定义部分都定义在ThemeData，所以我们可以通过ThemeData来自定义应用主题。我们可以通过`Theme.of`方法来获取当前的ThemeData。
+`ThemeData`用于保存是Material 组件库的主题数据，Material组件需要遵守相应的设计规范，而这些规范可自定义部分都定义在ThemeData中了，所以我们可以通过ThemeData来自定义应用主题。在子组件中，我们可以通过`Theme.of`方法来获取当前的`ThemeData`。
 
-> 注意，Material Design 设计规范中有些是不能自定义的，如导航栏高度，ThemeData只包含了可自定义部分。
+> 注意：Material Design 设计规范中有些是不能自定义的，如导航栏高度，ThemeData只包含了可自定义部分。
 
-我们看看ThemeData部分数据：
+我们看看`ThemeData`部分数据定义：
 
 ```dart
 ThemeData({
@@ -151,7 +151,7 @@ ThemeData({
 })
 ```
 
-上面只是ThemeData的一小部分属性，完整列表读者可以查看SDK定义。上面属性中需要说明的是`primarySwatch`，它是主题颜色的一个"样本"，通过这个样本可以在一些条件下生成一些其它的属性，例如，如果没有指定`primaryColor`，并且当前主题不是深色主题，那么`primaryColor`就会默认为`primarySwatch`指定的颜色，还有一些相似的属性如`accentColor` 、`indicatorColor`等也会受`primarySwatch`影响。
+上面只是`ThemeData`的一小部分属性，完整的数据定义读者可以查看SDK。上面属性中需要说明的是`primarySwatch`，它是主题颜色的一个"样本色"，通过这个样本色可以在一些条件下生成一些其它的属性，例如，如果没有指定`primaryColor`，并且当前主题不是深色主题，那么`primaryColor`就会默认为`primarySwatch`指定的颜色，还有一些相似的属性如`accentColor` 、`indicatorColor`等也会受`primarySwatch`影响。
 
 ### 示例
 
@@ -221,9 +221,9 @@ class _ThemeTestRouteState extends State<ThemeTestRoute> {
 }
 ```
 
-运行后点击右下角悬浮按钮则可以切换主题：
+运行后点击右下角悬浮按钮则可以切换主题，如图7-6、7-7所示：
 
-![Screenshot_1536838018](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536838018.png)![Screenshot_1536838021](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1536838021.png)
+![图7-6](../imgs/7-6.png)![图7-7](../imgs/7-7.png)
 
 
 
@@ -240,4 +240,4 @@ class _ThemeTestRouteState extends State<ThemeTestRoute> {
 
   `context.inheritFromWidgetOfExactType` 会在widget树中从当前位置向上查找第一个类型为`_InheritedTheme`的Widget。所以当局部使用Theme后，其子树中`Theme.of()`找到的第一个`_InheritedTheme`便是该Theme的。
 
-- 本示例是对单个路由换肤，如果相对整个应用换肤，可以去修改MaterialApp的theme属性。
+- 本示例是对单个路由换肤，如果相对整个应用换肤，可以去修改`MaterialApp`的`theme`属性。

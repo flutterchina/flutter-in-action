@@ -1,18 +1,18 @@
 
 
-## InheritedWidget
+# 7.2 数据共享（InheritedWidget）
 
-InheritedWidget是Flutter中非常重要的一个功能型Widget，它可以高效的将数据在Widget树中向下传递、共享，这在一些需要在Widget树中共享数据的场景中非常方便，如Flutter中，正是通过InheritedWidget来共享应用主题(Theme)和Locale(当前语言环境)信息的。
+`InheritedWidget`是Flutter中非常重要的一个功能型组件，它提供了一种数据在widget树种从上到下的传递、共享方式，比如我们在应用的根widget中通过`InheritedWidget`共享了一个数据，那么我们便可以在任意子widget中来获取该共享的数据！这个特性在一些需要在widget树中共享数据的场景中非常方便！如Flutter SDK中正是通过InheritedWidget来共享应用主题（`Theme`）和Locale (当前语言环境)信息的。
 
-> InheritedWidget和React中的context功能类似，和逐级传递数据相比，它们能实现组件跨级传递数据。InheritedWidget的在Widget树中数据传递方向是从上到下的，这和Notification的传递方向正好相反。
+> `InheritedWidget`和React中的context功能类似，和逐级传递数据相比，它们能实现组件跨级传递数据。`InheritedWidget`的在widget树中数据传递方向是从上到下的，这和通知`Notification`（将在下一章中介绍）的传递方向正好相反。
 
 ### didChangeDependencies
 
-在介绍StatefulWidget时，我们提到State对象有一个回调`didChangeDependencies`，它会在“依赖”发生变化时被Flutter Framework调用。而这个“依赖”指的就是是否使用了父widget中InheritedWidget的数据，如果使用了，则代表有依赖，如果没有使用则代表没有依赖。这种机制可以使子组件在所依赖的主题、locale(语言)等发生变化时有机会来做一些事情。
+在之前介绍`StatefulWidget`时，我们提到`State`对象有一个`didChangeDependencies`回调，它会在“依赖”发生变化时被Flutter Framework调用。而这个“依赖”指的就是子widget是否使用了父widget中`InheritedWidget`的数据！如果使用了，则代表子widget依赖有依赖`InheritedWidget`；如果没有使用则代表没有依赖。这种机制可以使子组件在所依赖的`InheritedWidget`变化时来更新自身！比如当主题、locale(语言)等发生变化时，依赖其的子widget的`didChangeDependencies`方法将会被调用。
 
-我们看一下之前“计数器”示例应用程序的InheritedWidget版本，需要说明的是，本例主要是为了演示InheritedWidget的功能特性，并不是计数器的推荐实现方式。
+下面我们看一下之前“计数器”示例应用程序的`InheritedWidge`t版本。需要说明的是，本示例主要是为了演示`InheritedWidget`的功能特性，并不是计数器的推荐实现方式。
 
-首先，我们通过继承InheritedWidget，将当前计数器点击次数保存在ShareDataWidget的`data`属性中：
+首先，我们通过继承`InheritedWidget`，将当前计数器点击次数保存在`ShareDataWidget`的`data`属性中：
 
 ```dart
 class ShareDataWidget extends InheritedWidget {
@@ -38,7 +38,7 @@ class ShareDataWidget extends InheritedWidget {
 }
 ```
 
-然后我们实现一个子widget _TestWidget，在其build方法中引用ShareDataWidget中的数据；同时，在其`didChangeDependencies()` 回调中打印日志：
+然后我们实现一个子组件` _TestWidget`，在其`build`方法中引用`ShareDataWidget`中的数据。同时，在其`didChangeDependencies()` 回调中打印日志：
 
 ```dart
 class _TestWidget extends StatefulWidget {
@@ -66,7 +66,7 @@ class __TestWidgetState extends State<_TestWidget> {
 }
 ```
 
-最后，我们创建一个按钮，每点击一次，就将ShareDataWidget的值自增：
+最后，我们创建一个按钮，每点击一次，就将`ShareDataWidget`的值自增：
 
 ```dart
 class InheritedWidgetTestRoute extends StatefulWidget {
@@ -102,9 +102,9 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
 }
 ```
 
-运行后界面如下：
+运行后界面如图7-1所示：
 
-![image-20180913183022733](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180913183022733.png)
+![图7-1](../imgs/7-1.png)
 
 每点击一次按钮，计数器就会自增，控制台就会打印一句日志：
 

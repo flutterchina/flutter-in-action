@@ -1,6 +1,6 @@
-# 初识Flutter
+# 1.2 初识Flutter
 
-## Flutter简介
+## 1.2.1 Flutter简介
 
 Flutter 是 Google推出并开源的移动应用开发框架，主打跨平台、高保真、高性能。开发者可以通过 Dart语言开发 App，一套代码同时运行在 iOS 和 Android平台。 Flutter提供了丰富的组件、接口，开发者可以很快地为 Flutter添加 native扩展。同时 Flutter还使用 Native引擎渲染视图，这无疑能为用户提供良好的体验。
 
@@ -8,7 +8,7 @@ Flutter 是 Google推出并开源的移动应用开发框架，主打跨平台�
 
 Flutter与用于构建移动应用程序的其它大多数框架不同，因为Flutter既不使用WebView，也不使用操作系统的原生控件。 相反，Flutter使用自己的高性能渲染引擎来绘制widget。这样不仅可以保证在Android和iOS上UI的一致性，而且也可以避免对原生控件依赖而带来的限制及高昂的维护成本。
 
-Flutter使用Skia作为其2D渲染引擎，Skia是Google的一个2D图形处理函数库，包含字型、坐标转换，以及点阵图都有高效能且简洁的表现，Skia是跨平台的，并提供了非常友好的API，目前Google Chrome浏览器和Android均采用Skia作为其绘图引擎，值得一提的是，由于Android系统已经内置了Skia，所以Flutter在打包APK(Android应用安装包)时，不需要再将Skia打入APK中，但iOS系统并未内置Skia，所以构建iPA时，也必须将Skia一起打包，这也是为什么Flutter APP的Android安装包比iOS安装包小的主要原因。
+Flutter使用Skia作为其2D渲染引擎，Skia是Google的一个2D图形处理函数库，包含字型、坐标转换，以及点阵图都有高效能且简洁的表现，Skia是跨平台的，并提供了非常友好的API，目前Google Chrome浏览器和Android均采用Skia作为其绘图引擎。
 
 #### 高性能
 
@@ -56,11 +56,11 @@ Flutter高性能主要靠两点来保证，首先，Flutter APP采用Dart语言�
 
    
 
-## Flutter框架结构
+## 1.2.2 Flutter框架结构
 
-本节我们先对Flutter的框架做一个整体介绍，旨在让读者心中有一个整体的印象，这对初学者来说非常重要。如果一下子便深入到Flutter中，就会像是一个在沙漠中没有地图的人，即使可以找到一个绿洲，但是他也不会知道下一个绿洲在哪。因此，无论学什么技术，都要现有一张清晰的“地图”，而我们的学习过程就是“按图索骥”，这样我们才不会陷于细节而“目无全牛”。言归正传，我们看一下Flutter官方提供的一张框架图：
+本节我们先对Flutter的框架做一个整体介绍，旨在让读者心中有一个整体的印象，这对初学者来说非常重要。如果一下子便深入到Flutter中，就会像是一个在沙漠中没有地图的人，即使可以找到一个绿洲，但是他也不会知道下一个绿洲在哪。因此，无论学什么技术，都要现有一张清晰的“地图”，而我们的学习过程就是“按图索骥”，这样我们才不会陷于细节而“目无全牛”。言归正传，我们看一下Flutter官方提供的Flutter框架图，如图1-1所示：
 
-![image-20180816160424567](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/framework.png)
+![图1-1](../imgs/1-1.png)
 
 
 
@@ -84,7 +84,7 @@ Flutter高性能主要靠两点来保证，首先，Flutter APP采用Dart语言�
 Flutter框架本身有着良好的分层设计，本节旨在让读者对Flutter整体框架有个大概的印象，相信到现在为止，读者已经对Flutter有一个初始印象，在我们正式动手之前，我们还需要了解一下Flutter的开发语言Dart。
 
 
-## 如何学习Flutter
+## 1.2.3 如何学习Flutter
 
 本节给大家一些学习建议，分享一下笔者在学习Flutter中的一些心得，希望可以帮助你提高学习效率，避免不必要的坑。
 
@@ -100,7 +100,7 @@ Flutter框架本身有着良好的分层设计，本节旨在让读者对Flutter
 
 - **StackOverflow**：如果你还没听过StackOverflow，这是目前全球最大的程序员问答社区，现在也是活跃度最高的Flutter问答社区。StackOverflow上面除了世界各地的Flutter使用者会在上面交流之外，Flutter开发团队的成员也经常会在上面回答问题。
 - **Flutter中文网社区**：Flutter中文网(https://flutterchina.club)是笔者维护中文网站，目前也是最大的中文资源社区，上面提供了Flutter官网的文档翻译、开源项目、及案例，还有申请加入组织的入口哦。
-- **掘金**：掘金的Flutter主页目前也收集了不少的博客文章，读者可以自行浏览。
+- **博客**：随着Flutter技术的推广，相信很快网上将会有很多Flutter相关的文章、博客，读者可以多去浏览、阅读。
 
 ### 总结
 

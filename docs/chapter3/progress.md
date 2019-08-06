@@ -1,4 +1,4 @@
-# 进度指示器
+# 3.8 进度指示器
 
 Material 组件库中提供了两种进度指示器：`LinearProgressIndicator`和`CircularProgressIndicator`，它们都可以同时用于精确的进度指示和模糊的进度指示。精确进度通常用于任务进度可以计算和预估的情况，比如文件下载；而模糊进度则用户任务进度无法准确获得的情况，如下拉刷新，数据提交等。
 
@@ -35,9 +35,9 @@ LinearProgressIndicator(
 )
 ```
 
-运行效果：
+运行效果如图3-30所示：
 
-![progress](../imgs/progress.png)
+![图3-30](../imgs/3-30.png)
 
 第一个进度条在执行循环动画：蓝色条一直在移动，而第二个进度条是静止的，停在50%的位置。
 
@@ -71,17 +71,17 @@ CircularProgressIndicator(
 ),
 ```
 
-运行效果：
+运行效果如图3-31所示：
 
-![progress_cir](../imgs/progress_cir.png)
+![图3-31](../imgs/3-31.png)
 
-第一个进度条会执行旋转动画；而第二个进度条是静止的，停在50%的位置。
+第一个进度条会执行旋转动画，而第二个进度条是静止的，它停在50%的位置。
 
 ### 自定义尺寸
 
 我们可以发现`LinearProgressIndicator`和`CircularProgressIndicator`，并没有提供设置圆形进度条尺寸的参数；如果我们希望`LinearProgressIndicator`的现细一些，或者希望`CircularProgressIndicator`的圆大一些该怎么做？
 
-其实`LinearProgressIndicator`和`CircularProgressIndicator`都是取父容器的尺寸作为绘制的边界的。知道了这点，我们便可以通过尺寸限制类Widget，如`ConstrainedBox`、`SizedBox` （我们将在和面容器类Widgets一章中介绍）来指定尺寸，如：
+其实`LinearProgressIndicator`和`CircularProgressIndicator`都是取父容器的尺寸作为绘制的边界的。知道了这点，我们便可以通过尺寸限制类Widget，如`ConstrainedBox`、`SizedBox` （我们将在后面容器类组件一章中介绍）来指定尺寸，如：
 
 ```dart
 // 线性进度条高度指定为3
@@ -105,9 +105,9 @@ SizedBox(
 ),
 ```
 
-运行效果如下：
+运行效果如图3-32所示：
 
-![progress_size](../imgs/progress_size.png)
+![图3-32](../imgs/3-32.png)
 
 注意，如果`CircularProgressIndicator`显示空间的宽高不同，则会显示为椭圆。如：
 
@@ -124,7 +124,7 @@ SizedBox(
 ),
 ```
 
-运行效果：
+运行效果如图3-33所示：
 
 ![progress_oval](../imgs/progress_oval.png)
 

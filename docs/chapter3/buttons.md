@@ -1,17 +1,19 @@
-## 按钮
+# 3.4 按钮
 
-Material widget库中提供了多种按钮Widget如RaisedButton、FlatButton、OutlineButton等，它们都是直接或间接对RawMaterialButton的包装定制，所以他们大多数属性都和`RawMaterialButton`一样。在介绍各个按钮时我们先介绍其默认外观，而按钮的外观大都可以通过属性来自定义，我们在后面统一介绍这些属性。另外，所有Material 库中的按钮都有如下相同点：
+## 3.4.1 Material组件库中的按钮
 
-1. 按下时都会有“水波动画”。
+Material 组件库中提供了多种按钮组件如`RaisedButton`、`FlatButton`、`OutlineButton`等，它们都是直接或间接对`RawMaterialButton`组件的包装定制，所以他们大多数属性都和`RawMaterialButton`一样。在介绍各个按钮时我们先介绍其默认外观，而按钮的外观大都可以通过属性来自定义，我们在后面统一介绍这些属性。另外，所有Material 库中的按钮都有如下相同点：
+
+1. 按下时都会有“水波动画”（又称“涟漪动画”，就是点击时按钮上会出现水波荡漾的动画）。
 2. 有一个`onPressed`属性来设置点击回调，当按钮按下时会执行该回调，如果不提供该回调则按钮会处于禁用状态，禁用状态不响应用户点击。
 
 ### RaisedButton
 
-RaisedButton 即"漂浮"按钮，它默认带有阴影和灰色背景。按下后，阴影会变大，如：
+`RaisedButton` 即"漂浮"按钮，它默认带有阴影和灰色背景。按下后，阴影会变大，如图3-10所示：
 
-![image-20180830192149766](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830192149766.png)
+![图3-10](../imgs/3-10.png)
 
-使用RaisedButton非常简单，如：
+使用`RaisedButton`非常简单，如：
 
 ```dart
 RaisedButton(
@@ -22,9 +24,9 @@ RaisedButton(
 
 ### FlatButton
 
-FlatButton即扁平按钮，默认背景透明并不带阴影。按下后，会有背景色：
+`FlatButton`即扁平按钮，默认背景透明并不带阴影。按下后，会有背景色，如图3-11所示：
 
-![image-20180830191743776](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830191743776.png)
+![图3-11](../imgs/3-11.png)
 
 使用FlatButton也很简单，代码如下：
 
@@ -37,11 +39,11 @@ FlatButton(
 
 ### OutlineButton
 
-OutlineButton默认有一个边框，不带阴影且背景透明。按下后，边框颜色会变亮、同时出现背景和阴影(较弱)：
+`OutlineButton`默认有一个边框，不带阴影且背景透明。按下后，边框颜色会变亮、同时出现背景和阴影(较弱)，如图3-12所示：
 
-![image-20180830193419555](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830193419555.png)
+![图3-12](../imgs/3-12.png)
 
-使用OutlineButton也很简单，代码如下：
+使用`OutlineButton`也很简单，代码如下：
 
 ```dart
 OutlineButton(
@@ -52,9 +54,9 @@ OutlineButton(
 
 ### IconButton
 
-IconButton是一个可点击的Icon，不包括文字，默认没有背景，点击后会出现背景：
+`IconButton`是一个可点击的Icon，不包括文字，默认没有背景，点击后会出现背景，如图3-13所示：
 
-![image-20180830194324827](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830194324827.png)
+![图3-13](../imgs/3-13.png)
 
 代码如下：
 
@@ -69,9 +71,9 @@ IconButton(
 
 ### 带图标的按钮
 
-RaisedButton、FlatButton、OutlineButton都有一个`icon` 构造函数，通过它可以轻松创建带图标的按钮，例如：
+`RaisedButton`、`FlatButton`、`OutlineButton`都有一个`icon` 构造函数，通过它可以轻松创建带图标的按钮，如图3-14所示：
 
-![button-icon](../imgs/button-icon.png)
+![图3-14](../imgs/3-14.png)
 
 代码如下：
 
@@ -95,7 +97,7 @@ FlatButton.icon(
 
 
 
-## 自定义按钮外观
+## 3.4.2 自定义按钮外观
 
 按钮外观可以通过其属性来定义，不同按钮属性大同小异，我们以FlatButton为例，介绍一下常见的按钮属性，详细的信息可以查看API文档。
 
@@ -120,9 +122,9 @@ const FlatButton({
 
 #### 示例
 
-定义一个背景蓝色，两边圆角的按钮。效果如下：
+定义一个背景蓝色，两边圆角的按钮。效果如图3-15所示：
 
-![image-20180830200142290](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830200142290.png)
+![图3-15](../imgs/3-15.png)
 
 代码如下：
 
@@ -142,9 +144,9 @@ FlatButton(
 
 Flutter 中没有提供去除背景的设置，假若我们需要去除背景，则可以通过将背景颜色设置为全透明来实现。对应上面的代码，便是将 `color: Colors.blue` 替换为 `color: Color(0x000000)`。
 
-细心的读者可能会发现这个按钮没有阴影(点击之后也没有)，这样会显得没有质感。其实这也很容易，将上面的`FlatButton`换成`RaisedButton`就行，其它代码不用改（这里 color 也不做更改），换了之后我们看看效果：
+细心的读者可能会发现这个按钮没有阴影(点击之后也没有)，这样会显得没有质感。其实这也很容易，将上面的`FlatButton`换成`RaisedButton`就行，其它代码不用改（这里 color 也不做更改），换了之后的效果如图3-16所示：
 
-![image-20180830201140908](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180830201140908.png)
+![图3-16](../imgs/3-16.png)
 
 是不是有质感了！之所以会这样，是因为`RaisedButton`默认有配置阴影：
 
@@ -158,8 +160,8 @@ const RaisedButton({
 }
 ```
 
-值得注意的是，在Material widget库中，我们会在很多widget中见到elevation相关的属性，它们都是用来控制阴影的，这是因为阴影在Material设计风格中是一种很重要的表现形式，以后在介绍其它widget时，便不再赘述。
+值得注意的是，在Material 组件库中，我们会在很多组件中见到elevation相关的属性，它们都是用来控制阴影的，这是因为阴影在Material设计风格中是一种很重要的表现形式，以后在介绍其它组件时，便不再赘述。
 
-如果我们想实现一个背景渐变的圆角按钮，按钮有没有相应的属性呢？答案是否定的，但是，我们可以通过其它方式来实现，我们将在后面"自定义Widget"一章中实现。
+如果我们想实现一个背景渐变的圆角按钮，按钮有没有相应的属性呢？答案是否定的，但是，我们可以通过其它方式来实现，我们将在后面"自定义组件"一章中实现。
 
 

@@ -1,15 +1,15 @@
 
-## 交错动画
+# 9.5 交织动画
 
-有些时候我们可能会需要一些复杂的动画，这些动画可能由一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同时改变颜色，等到增长到最大高度后，我们需要在X轴上平移一段距离。这时我们就需要使用交错动画（Stagger Animation）。交错动画需要注意以下几点：
+有些时候我们可能会需要一些复杂的动画，这些动画可能由一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同时改变颜色，等到增长到最大高度后，我们需要在X轴上平移一段距离。可以发现上述场景在不同阶段包含了多种动画，要实现这种效果，使用交织动画（Stagger Animation）会非常简单。交织动画需要注意以下几点：
 
-1. 要创建交错动画，需要使用多个动画对象
-2. 一个AnimationController控制所有动画
-3. 给每一个动画对象指定间隔（Interval）
+1. 要创建交织动画，需要使用多个动画对象（`Animation`）。
+2. 一个`AnimationController`控制所有的动画对象。
+3. 给每一个动画对象指定时间间隔（Interval）
 
-所有动画都由同一个[AnimationController](https://docs.flutter.io/flutter/animation/AnimationController-class.html)驱动，无论动画实时持续多长时间，控制器的值必须介于0.0和1.0之间，而每个动画的间隔（Interval）介于0.0和1.0之间。对于在间隔中设置动画的每个属性，请创建一个[Tween](https://docs.flutter.io/flutter/animation/Tween-class.html)。 Tween指定该属性的开始值和结束值。也就是说0.0到1.0代表整个动画过程，我们可以给不同动画指定起始点和终止点来决定它们的开始时间和终止时间。
+所有动画都由同一个[AnimationController](https://docs.flutter.io/flutter/animation/AnimationController-class.html)驱动，无论动画需要持续多长时间，控制器的值必须在0.0到1.0之间，而每个动画的间隔（Interval）也必须介于0.0和1.0之间。对于在间隔中设置动画的每个属性，需要分别创建一个[Tween](https://docs.flutter.io/flutter/animation/Tween-class.html) 用于指定该属性的开始值和结束值。也就是说0.0到1.0代表整个动画过程，我们可以给不同动画指定不同的起始点和终止点来决定它们的开始时间和终止时间。
 
-#### 示例
+### 示例
 
 下面我们看一个例子，实现一个柱状图增长的动画：
 
@@ -90,9 +90,7 @@ class StaggerAnimation extends StatelessWidget {
 }
 ```
 
-StaggerAnimation中定义了三个动画，分别是对Container的height、color、padding属性设置的动画，然后通过Interval来为每个动画指定在整个动画过程的起始点和终点。
-
-下面我们来实现启动动画的路由：
+`StaggerAnimation`中定义了三个动画，分别是对`Container`的`height`、`color`、`padding`属性设置的动画，然后通过`Interval`来为每个动画指定在整个动画过程中的起始点和终点。下面我们来实现启动动画的路由：
 
 ```dart
 class StaggerRoute extends StatefulWidget {
@@ -142,7 +140,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
               color:  Colors.black.withOpacity(0.5),
             ),
           ),
-          //调用我们定义的交错动画Widget
+          //调用我们定义的交织动画Widget
           child: StaggerAnimation(
               controller: _controller
           ),
@@ -152,7 +150,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
   }
 }
 ```
-执行效果如下，点击灰色矩形，就可以看到整个动画效果：
+执行效果如图，点击图9-3灰色矩形，就可以看到整个动画效果，图9-4是动画执行过程中的一帧。
 
-![Screenshot_1540881623](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/Screenshot_1540881623.png)
+![图9-3](../imgs/9-3.png)![图9-4](../imgs/9-4.png)
 

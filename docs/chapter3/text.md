@@ -57,7 +57,7 @@ Text("Hello world",
 );
 ```
 
-效果如图3-7下：
+效果如图3-7所示：
 
 ![3-7](../imgs/3-7.png)
 
@@ -85,7 +85,7 @@ const TextSpan({
 });
 ```
 
-其中`style` 和 `text`属性代表该文本片段的样式和内容。  `children`是一个`TextSpan`的数组，也就是说`TextSpan`可以包括其他`TextSpan`。而`recognizer`用于对该文本片段上用于手势进行识别处理。下面我们看一个效果，然后用`TextSpan`实现它。
+其中`style` 和 `text`属性代表该文本片段的样式和内容。  `children`是一个`TextSpan`的数组，也就是说`TextSpan`可以包括其他`TextSpan`。而`recognizer`用于对该文本片段上用于手势进行识别处理。下面我们看一个效果（图3-8），然后用`TextSpan`实现它。
 
 ![3-8](../imgs/3-8.png)
 
