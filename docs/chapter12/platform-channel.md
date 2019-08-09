@@ -46,3 +46,34 @@ Flutter与原生之间的通信依赖灵活的消息传递方式：
 ### 自定义编解码器
 
 除了上面提到的`MethodChannel`，还可以使用[`BasicMessageChannel`](https://docs.flutter.io/flutter/services/BasicMessageChannel-class.html)，它支持使用自定义消息编解码器进行基本的异步消息传递。 此外，可以使用专门的[`BinaryCodec`](https://docs.flutter.io/flutter/services/BinaryCodec-class.html)、[`StringCodec`](https://docs.flutter.io/flutter/services/StringCodec-class.html)和 [`JSONMessageCodec`](https://docs.flutter.io/flutter/services/JSONMessageCodec-class.html)类，或创建自己的编解码器。
+
+### 如何获取平台信息
+
+Flutter 中提供了一个全局变量`defaultTargetPlatform`来获取当前应用的平台信息，`defaultTargetPlatform`定义在"platform.dart"中，它的类型是`TargetPlatform`，这是一个枚举类，定义如下：
+
+```dart
+enum TargetPlatform {
+  android,
+  fuchsia,
+  iOS,
+}
+```
+
+可以看到目前Flutter只支持这三个平台。我们可以通过如下代码判断平台：
+
+```dart
+if(defaultTargetPlatform==TargetPlatform.android){
+  // 是安卓系统，do something
+  ...
+}
+...
+```
+
+由于不同平台有它们各自的交互规范，Flutter Material库中的一些组件都针对相应的平台做了一些适配，比如路由组件`MaterialPageRoute`，它在android和ios中会应用各自平台规范的切换动画。那如果我们想让我们的APP在所有平台都表现一致，比如希望在所有平台路由切换动画都按照ios平台一致的左右滑动切换风格该怎么做？Flutter中提供了一种覆盖默认平台的机制，我们可以通过显式指定`debugDefaultTargetPlatformOverride`全局变量的值来指定应用平台。比如：
+
+```dart
+debugDefaultTargetPlatformOverride=TargetPlatform.iOS;
+print(defaultTargetPlatform); // 会输出TargetPlatform.iOS
+```
+
+上面代码即在Android中运行后，Flutter APP就会认为是当前系统是iOS，Material组件库中所有组件交互方式都会和iOS平台对齐，`defaultTargetPlatform`的值也会变为`TargetPlatform.iOS`。

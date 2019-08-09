@@ -448,9 +448,9 @@ class _DialogRouteState extends State<DialogRoute> {
 }
 ```
 
-然后，当我们运行上面的代码时我们会发现复选框根本选不中！为什么会这样呢？其实原因很简单，我们知道`setState`方法只会针对当前context的子树重新build，但是我们的对话框并不是在`_DialogRouteState`的`build` 方法中构建的，而是通过`showDialog`单独构建的，所以调用在`_DialogRouteState`的context中调用`setState`是无法影响通过`showDialog`构建的UI的。另外，我们可以从另外一个角度来理解这个现象，前面说过动画框也是通过路由的方式来实现的，那么上面的代码实际上就等同于企图在父路由中调用`setState`来让子路由更新，这显然是不行的！简尔言之，根本原因就是context不对。那如何让复选框可点击呢？有常规方法和一个精妙的方法，下面我们分别介绍：
+然后，当我们运行上面的代码时我们会发现复选框根本选不中！为什么会这样呢？其实原因很简单，我们知道`setState`方法只会针对当前context的子树重新build，但是我们的对话框并不是在`_DialogRouteState`的`build` 方法中构建的，而是通过`showDialog`单独构建的，所以调用在`_DialogRouteState`的context中调用`setState`是无法影响通过`showDialog`构建的UI的。另外，我们可以从另外一个角度来理解这个现象，前面说过动画框也是通过路由的方式来实现的，那么上面的代码实际上就等同于企图在父路由中调用`setState`来让子路由更新，这显然是不行的！简尔言之，根本原因就是context不对。那如何让复选框可点击呢？通常有如下三种方法：
 
-### 常规方法
+### 单独抽离出StatefulWidget
 
 既然是context不对，那么直接的思路就是将复选框的选中逻辑单独封装成一个`StatefulWidget`，然后其再内部管理复选状态。我们先来看看这种方法，下面是实现代码：
 
@@ -567,9 +567,78 @@ RaisedButton(
 
 可见复选框能选中了，点击“取消”或“删除”后，控制台就会打印出最终的确认状态。
 
+### 使用StatefulBuilder方法
+
+上面的方法虽然能解决对话框状态更新的问题，但是有一个明显的缺点——对话框上所有需要会改变状态的组件都得单独封装在一个在内部管理状态`StatefulWidget`中，这样不仅麻烦，而且复用性不大。因此，我们来想想能不能找到一种更简单的方法？上面的方法本质上就是将对话框的状态置于一个`StatefulWidget`的上下文中，由`StatefulWidget`在内部管理，那么我们有没有办法在不需要单独抽离组件的情况下创建一个`StatefulWidget`的上下文呢？想到这里，我们可以从`Builder`组件的实现获得灵感。在前面介绍过`Builder`组件可以获得组件所在位置的真正的Context，那它是怎么实现的呢，我们看看它的源码：
+
+```dart
+class Builder extends StatelessWidget {
+  const Builder({
+    Key key,
+    @required this.builder,
+  }) : assert(builder != null),
+       super(key: key);
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) => builder(context);
+}
+```
+
+可以看到，`Builder`实际上只是继承了`StatelessWidget`，然后在`build`方法中对获取当前context后将构建方法代理到了`builder`回调，`Builder`实际上是获取了`StatelessWidget` 的上下文。那我们能否用相同的方法获取`StatefulWidget` 上下文，并代理其`build`方法呢？我们照猫画虎，来封装一个`StatefulBuilder`方法：
+
+```dart
+class StatefulBuilder extends StatefulWidget {
+  const StatefulBuilder({
+    Key key,
+    @required this.builder,
+  }) : assert(builder != null),
+       super(key: key);
+
+  final StatefulWidgetBuilder builder;
+
+  @override
+  _StatefulBuilderState createState() => _StatefulBuilderState();
+}
+
+class _StatefulBuilderState extends State<StatefulBuilder> {
+  @override
+  Widget build(BuildContext context) => widget.builder(context, setState);
+}
+```
+
+代码很简单，`StatefulBuilder`获取了`StatefulWidget`的上下文，并代理了其构建过程。下面我们就可以通过`StatefulBuilder`来重构上面的代码了（变动只在`DialogCheckbox`部分）：
+
+```dart
+... //省略无关代码
+Row(
+  children: <Widget>[
+    Text("同时删除子目录？"),
+    //使用StatefulBuilder来构建StatefulWidget上下文
+    StatefulBuilder(
+      builder: (context, _setState) {
+        return Checkbox(
+          value: _withTree, //默认不选中
+          onChanged: (bool value) {
+            //_setState方法实际就是该StatefulWidget的setState方法，
+            //调用后builder方法会重新被调用
+            _setState(() {
+              //更新选中状态
+              _withTree = !_withTree;
+            });
+          },
+        );
+      },
+    ),
+  ],
+),
+```
+
+实际上，这种方法本质上就是子组件通知父组件（StatefulWidget）重新build子组件本身来实现UI更新的，读者可以对比代码理解。实际上`StatefulBuilder`正是Flutter SDK中提供的一个类，它和`Builder`的原理是一样的，在此，提醒读者一定要将`StatefulBuilder`和`Builder`理解透彻，因为它们在Flutter中是非常实用的。
+
 ### 精妙的解法
 
-上面的方法虽然能解决对话框状态更新的问题，但是有一个明显的缺点——对话框上所有需要会改变状态的组件都得单独封装在一个在内部管理状态`StatefulWidget`中，这样不仅麻烦，而且复用性不大。因此，我们来想想能不能找到一种更简单的方法？要确认这个问题，我们就得先想想UI是怎么更新的，我们知道在调用`setState`方法后`StatefulWidget`就会重新build，那`setState`方法做了什么呢？我们能不能从中找到方法？顺着这个思路，我们就得看一下`setState`的核心源码：
+要确认这个问题，我们就得先想想UI是怎么更新的，我们知道在调用`setState`方法后`StatefulWidget`就会重新build，那`setState`方法做了什么呢？我们能不能从中找到方法？顺着这个思路，我们就得看一下`setState`的核心源码：
 
 ```dart
 void setState(VoidCallback fn) {
@@ -784,3 +853,56 @@ UnconstrainedBox(
 代码运行后，效果如图7-19所示：
 
 ![图7-19](../imgs/7-19.png)
+
+### 日历选择
+
+我们先看一下Material风格的日历选择器，如图7-20所示：
+
+![图7-20](../imgs/7-20.png)
+
+实现代码：
+
+```dart
+Future<DateTime> _showDatePicker1() {
+  var date = DateTime.now();
+  return showDatePicker(
+    context: context,
+    initialDate: date,
+    firstDate: date,
+    lastDate: date.add( //未来30天可选
+      Duration(days: 30),
+    ),
+  );
+}
+```
+
+iOS风格的日历选择器需要使用`showCupertinoModalPopup`方法和`CupertinoDatePicker`组件来实现：
+
+```dart
+Future<DateTime> _showDatePicker2() {
+  var date = DateTime.now();
+  return showCupertinoModalPopup(
+    context: context,
+    builder: (ctx) {
+      return SizedBox(
+        height: 200,
+        child: CupertinoDatePicker(
+          mode: CupertinoDatePickerMode.dateAndTime,
+          minimumDate: date,
+          maximumDate: date.add(
+            Duration(days: 30),
+          ),
+          maximumYear: date.year + 1,
+          onDateTimeChanged: (DateTime value) {
+            print(value);
+          },
+        ),
+      );
+    },
+  );
+}
+```
+
+运行效果如图7-21所示：
+
+![图7-21](../imgs/7-21.png)
