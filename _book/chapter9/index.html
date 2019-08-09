@@ -35,10 +35,6 @@
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-    
-    
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-prism/prism.css">
     
     
@@ -1333,25 +1329,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.6" data-path="../todo.md">
+        <li class="chapter " data-level="3.5.6" data-path="../chapter12/texture_platformview.html">
             
-                <span>
+                <a href="../chapter12/texture_platformview.html">
             
                     
                     12.6：Texture和PlatformView
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5.7" data-path="../todo.md">
-            
-                <span>
-            
-                    
-                    12.6：系统能力调用
             
                 </a>
             
@@ -1703,11 +1686,12 @@
 <p>&#x7CBE;&#x5FC3;&#x8BBE;&#x8BA1;&#x7684;&#x52A8;&#x753B;&#x4F1A;&#x8BA9;&#x7528;&#x6237;&#x754C;&#x9762;&#x611F;&#x89C9;&#x66F4;&#x76F4;&#x89C2;&#x3001;&#x6D41;&#x7545;&#xFF0C;&#x80FD;&#x6539;&#x5584;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002; Flutter&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x52A8;&#x753B;&#x7C7B;&#x578B;&#xFF0C;&#x5BF9;&#x4E8E;&#x8BB8;&#x591A;widget&#xFF0C;&#x7279;&#x522B;&#x662F;<a href="https://flutter.io/docs/reference/widgets/material" target="_blank">Material Design widgets</a>&#xFF0C;&#x90FD;&#x5E26;&#x6709;&#x5728;&#x5176;&#x8BBE;&#x8BA1;&#x89C4;&#x8303;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6807;&#x51C6;&#x52A8;&#x753B;&#x6548;&#x679C;(&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x6548;&#x679C;)&#x3002;&#x672C;&#x7AE0;&#x5C06;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;Flutter&#x7684;&#x52A8;&#x753B;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4F1A;&#x901A;&#x8FC7;&#x51E0;&#x4E2A;&#x5C0F;&#x5B9E;&#x4F8B;&#x6765;&#x6F14;&#x793A;&#xFF0C;&#x4EE5;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x8FC5;&#x901F;&#x7406;&#x89E3;&#x5E76;&#x638C;&#x63E1;&#x52A8;&#x753B;&#x7684;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x4E0E;&#x539F;&#x7406;&#x3002;</p>
 <h2 id="&#x672C;&#x7AE0;&#x76EE;&#x5F55;">&#x672C;&#x7AE0;&#x76EE;&#x5F55;</h2>
 <ul>
-<li><a href="intro.html">Flutter&#x52A8;&#x753B;&#x7B80;&#x4ECB;</a></li>
-<li><a href="animation_structure.html">&#x52A8;&#x753B;&#x7ED3;&#x6784;</a></li>
-<li><a href="route_transition.html">&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x7531;&#x8FC7;&#x6E21;&#x52A8;&#x753B;</a> </li>
-<li><a href="hero.html">Hero&#x52A8;&#x753B;</a> </li>
-<li><a href="stagger_animation.html">&#x4EA4;&#x9519;&#x52A8;&#x753B;</a> </li>
+<li><a href="intro.html">9.1&#xFF1A;Flutter&#x52A8;&#x753B;&#x7B80;&#x4ECB;</a></li>
+<li><a href="animation_structure.html">9.2&#xFF1A;&#x52A8;&#x753B;&#x7ED3;&#x6784;</a></li>
+<li><a href="route_transition.html">9.3&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x7531;&#x8FC7;&#x6E21;&#x52A8;&#x753B;</a> </li>
+<li><a href="hero.html">9.4&#xFF1A;Hero&#x52A8;&#x753B;</a> </li>
+<li><a href="stagger_animation.html">9.5&#xFF1A;&#x4EA4;&#x7EC7;&#x52A8;&#x753B;</a> </li>
+<li><a href="animated_switcher.html">9.6&#xFF1A;&#x901A;&#x7528;&quot;&#x5207;&#x6362;&#x52A8;&#x753B;&quot;&#x7EC4;&#x4EF6;&#xFF08;AnimatedSwitcher&#xFF09;</a> </li>
 </ul>
 
                                 
@@ -1752,7 +1736,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第九章：动画","level":"3.2","depth":1,"next":{"title":"9.1：Flutter动画简介","level":"3.2.1","depth":2,"path":"chapter9/intro.md","ref":"chapter9/intro.md","articles":[]},"previous":{"title":"8.4：通知(Notification)","level":"3.1.4","depth":2,"path":"chapter8/notification.md","ref":"chapter8/notification.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","toggle-chapters","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter9/index.md","mtime":"2019-01-24T08:10:01.661Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-09T09:47:21.601Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第九章：动画","level":"3.2","depth":1,"next":{"title":"9.1：Flutter动画简介","level":"3.2.1","depth":2,"path":"chapter9/intro.md","ref":"chapter9/intro.md","articles":[]},"previous":{"title":"8.4：通知(Notification)","level":"3.1.4","depth":2,"path":"chapter8/notification.md","ref":"chapter8/notification.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter9/index.md","mtime":"2019-08-09T10:07:22.998Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-09T10:10:21.273Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1780,10 +1764,6 @@
     
         
         <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
         
     
         

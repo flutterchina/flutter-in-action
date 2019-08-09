@@ -4,6 +4,9 @@
 
 ## 本章目录
 
-* [导航返回拦截-WillPopScope](willpopscope.md)
-* [数据共享-InheritedWidget](inherited_widget.md)
-* [主题-Theme](theme.md) 
+* [7.1：导航返回拦截（WillPopScope）](willpopscope.md)
+* [7.2：数据共享（InheritedWidget）](inherited_widget.md)
+* [7.3： 跨组件状态共享（Provider）](provider.md)
+* [7.4：颜色和主题（Theme）](theme.md) 
+* [7.5：异步UI更新（FutureBuilder、StreamBuilder）](futurebuilder_and_streambuilder.md)
+* [7.6：对话框详解](dailog.md)  

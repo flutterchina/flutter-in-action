@@ -4,9 +4,11 @@
 
 ## 本章目录
 
-* [Widget简介](flutter_widget_intro.md)
-* [文本、字体样式](text.md)
-* [按钮](img_and_icon.md)      
-* [图片和Icon](img_and_icon.md)   
-* [单选框和复选框](radio_and_checkbox.md)   
-* [输入框和表单](input_and_form.md) 
+* [3.1：Widget简介](flutter_widget_intro.md)
+* [3.2：状态管理](state_manage.md)
+* [3.3：文本、字体样式](text.md)
+* [3.4：按钮](buttons.md)      
+* [3.5：图片和Icon](img_and_icon.md)   
+* [3.6：单选框和复选框](radio_and_checkbox.md)   
+* [3.7：输入框和表单](input_and_form.md) 
+* [3.8：进度指示器](progress.md)  

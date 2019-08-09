@@ -100,8 +100,7 @@
     * [12.3：开发Flutter插件](chapter12/develop_plugin.md)
     * [12.4：插件开发：实现Android端API](chapter12/android_implement.md)
     * [12.5：插件开发：实现IOS端API](chapter12/ios_implement.md)
-    * [12.6：Texture和PlatformView](todo.md) 
-    * [12.6：系统能力调用](todo.md) 
+    * [12.6：Texture和PlatformView](chapter12/texture_platformview.md) 
     
 * [第十三章：国际化](chapter13/index.md)
     * [13.1：让App支持多语言](chapter13/multi_languages_support.md)
