@@ -1,6 +1,9 @@
 # 简介
 
-本项目为Flutter中文网《Flutter实战》开源电子书项目，官网地址为：https://book.flutterchina.club .
+本项目为Flutter中文网《Flutter实战》开源电子书项目，官网地址为：https://book.flutterchina.club 。
+
+本书随书源码：https://github.com/wendux/flutter_in_action_source_code
+
 
 ## 贡献须知
 
