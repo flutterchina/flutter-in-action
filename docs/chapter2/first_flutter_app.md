@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
    - `MyApp`类代表Flutter应用，它继承了 `StatelessWidget `类，这也就意味着应用本身也是一个widget。
 
-   - 在Flutter中，大多数东西都是widget（后同”组件“或”部件“），包括对齐(alignment)、填充(padding)和布局(layout)等，它们嗾使以widget的形式提供。
+   - 在Flutter中，大多数东西都是widget（后同”组件“或”部件“），包括对齐(alignment)、填充(padding)和布局(layout)等，它们都是以widget的形式提供。
 
    - Flutter在构建页面时，会调用组件的`build`方法，widget的主要工作是提供一个build()方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
 
