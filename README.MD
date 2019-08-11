@@ -76,5 +76,5 @@
 
 知识是应该付费的，创作不易，开源不等于免费，如果您是本书读者并手头宽裕，可以微信扫描下面二维码打赏，也不用太多，够买一杯咖啡就行。当然，如果您囊中羞涩，您也可以阅读本书，但我对您有个小小的要求，希望您在阅读的过程中能积极参与到本书的纠错以及未完成内容的创作上来，也算是有所付出。
 
-![](https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/pay.jpg)
+![](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg)
 
