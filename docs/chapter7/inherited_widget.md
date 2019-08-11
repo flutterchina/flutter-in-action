@@ -190,7 +190,7 @@ InheritedWidget inheritFromElement(InheritedElement ancestor, { Object aspect })
 }
 ```
 
-可以看到`inheritFromElement`方法中主要是注册了依赖关系！看到这里也就清晰了，**调用`inheritFromWidgetOfExactType()` 和 `ancestorInheritedElementForWidgetOfExactType()`的却别就是前者会注册依赖关系，而后者不会**，所以在调用`inheritFromWidgetOfExactType()`时，`InheritedWidget`和依赖它的子孙组件关系变完成了注册，之后当`InheritedWidget`发生变化时，就会更新依赖它的孙组件，也就是会调用依赖它的孙组件的`didChangeDependencies()`方法和`build()`方法。而当调用的是 `ancestorInheritedElementForWidgetOfExactType()`时，由于没有注册依赖关系，所以之后当`InheritedWidget`发生变化时，就不会更新相应的子孙Widget。
+可以看到`inheritFromElement`方法中主要是注册了依赖关系！看到这里也就清晰了，**调用`inheritFromWidgetOfExactType()` 和 `ancestorInheritedElementForWidgetOfExactType()`的区别就是前者会注册依赖关系，而后者不会**，所以在调用`inheritFromWidgetOfExactType()`时，`InheritedWidget`和依赖它的子孙组件关系变完成了注册，之后当`InheritedWidget`发生变化时，就会更新依赖它的孙组件，也就是会调用依赖它的孙组件的`didChangeDependencies()`方法和`build()`方法。而当调用的是 `ancestorInheritedElementForWidgetOfExactType()`时，由于没有注册依赖关系，所以之后当`InheritedWidget`发生变化时，就不会更新相应的子孙Widget。
 
 注意，如果将上面示例中`ShareDataWidget.of()`方法实现改成调用`ancestorInheritedElementForWidgetOfExactType()`，运行示例后，点击"Increment"按钮，会发现`__TestWidgetState `的`didChangeDependencies()`方法确实不会再被调用，但是其`build()`仍然会被调用！造成这个的原因其实是，点击"Increment"按钮后，会调用`_InheritedWidgetTestRouteState`的`setState()`方法，此时会重新构建整个页面，由于示例中，`__TestWidget` 并没有任何缓存，所以它也都会被重新构建，所以也会调用`build()`方法。
 

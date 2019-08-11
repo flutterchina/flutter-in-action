@@ -70,6 +70,7 @@
 4-11 Align示例
 4-12 Alignment效果示例
 4-13 FractionalOffset效果示例
+4-14 缩放因子效果对比
 
 
 5-1  Padding示例

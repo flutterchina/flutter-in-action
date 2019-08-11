@@ -17,7 +17,7 @@ Align({
 ```
 
 - `alignment` : 需要一个`AlignmentGeometry`类型的值，表示子组件在父组件中的起始位置。`AlignmentGeometry` 是一个抽象类，它有两个常用的子类：`Alignment`和 `FractionalOffset`，我们将在下面的示例中详细介绍。
-- `widthFactor`和`heightFactor`是用于确定`Align` 组件本身宽高的属性；它们是两个缩放因子，会分别乘以子元素的宽、高，最终的结果就是`Align` 组件的宽高。
+- `widthFactor`和`heightFactor`是用于确定`Align` 组件本身宽高的属性；它们是两个缩放因子，会分别乘以子元素的宽、高，最终的结果就是`Align` 组件的宽高。如果值为`null`，则组件的宽高将会占用尽可能多的空间。
 
 ### 示例
 
@@ -152,7 +152,29 @@ class Center extends Align {
 
 可以看到`Center`继承自`Align`，它比`Align`只少了一个`alignment` 参数；由于`Align`的构造函数中`alignment` 值为`Alignment.center`，所以，我们可以认为`Center`组件其实是对齐方式确定（`Alignment.center`）了的`Align`。
 
+上面我们讲过当`widthFactor`或`heightFactor`为`null`时组件的宽高将会占用尽可能多的空间，这一点需要特别注意，我们通过一个示例说明：
 
+```dart
+...//省略无关代码
+DecoratedBox(
+  decoration: BoxDecoration(color: Colors.red),
+  child: Center(
+    child: Text("xxx"),
+  ),
+),
+DecoratedBox(
+  decoration: BoxDecoration(color: Colors.red),
+  child: Center(
+    widthFactor: 1,
+    heightFactor: 1,
+    child: Text("xxx"),
+  ),
+)
+```
+
+运行效果如图4-14所示：
+
+![图4-14](../imgs/4-14.png)
 
 ## 总结
 
