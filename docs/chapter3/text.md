@@ -6,7 +6,7 @@
 
 ```dart
 Text("Hello world",
-  textAlign: TextAlign.center,
+  textAlign: TextAlign.left,
 );
 
 Text("Hello world! I'm Jack. "*4,
