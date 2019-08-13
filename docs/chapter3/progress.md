@@ -79,7 +79,7 @@ CircularProgressIndicator(
 
 ### 自定义尺寸
 
-我们可以发现`LinearProgressIndicator`和`CircularProgressIndicator`，并没有提供设置圆形进度条尺寸的参数；如果我们希望`LinearProgressIndicator`的现细一些，或者希望`CircularProgressIndicator`的圆大一些该怎么做？
+我们可以发现`LinearProgressIndicator`和`CircularProgressIndicator`，并没有提供设置圆形进度条尺寸的参数；如果我们希望`LinearProgressIndicator`的线细一些，或者希望`CircularProgressIndicator`的圆大一些该怎么做？
 
 其实`LinearProgressIndicator`和`CircularProgressIndicator`都是取父容器的尺寸作为绘制的边界的。知道了这点，我们便可以通过尺寸限制类Widget，如`ConstrainedBox`、`SizedBox` （我们将在后面容器类组件一章中介绍）来指定尺寸，如：
 
