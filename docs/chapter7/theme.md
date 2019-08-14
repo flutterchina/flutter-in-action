@@ -174,6 +174,10 @@ class _ThemeTestRouteState extends State<ThemeTestRoute> {
       data: ThemeData(
           primarySwatch: _themeColor, //用于导航栏、FloatingActionButton的背景色等
           iconTheme: IconThemeData(color: _themeColor) //用于Icon颜色
+          textTheme: TextTheme(
+              body1: TextStyle(
+            color: _themeColor,
+          ))),
       ),
       child: Scaffold(
         appBar: AppBar(title: Text("主题测试")),
