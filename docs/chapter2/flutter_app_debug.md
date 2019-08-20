@@ -13,7 +13,7 @@
 
 如果我们使用`flutter run`启动应用程序，那么当它运行时，我们可以打开Observatory工具的Web页面，例如Observatory默认监听[http://127.0.0.1:8100/](http://127.0.0.1:8100/)，可以在浏览器中直接打开该链接。直接使用语句级单步调试器连接到您的应用程序。如果您使用的是IntelliJ，则还可以使用其内置的调试器来调试您的应用程序。
 
-Observatory 同时支持分析、检查堆等。有关Observatory的更多信息请参考[Observatory 文档](https://dart-lang.github.io/observatory/).
+Observatory 同时支持分析、检查堆等。有关Observatory的更多信息请参考[Observatory 文档](https://dart-lang.github.io/observatory/)。
 
 如果您使用Observatory进行分析，请确保通过`--profile`选项来运行`flutter run`命令来运行应用程序。 否则，配置文件中将出现的主要问题将是调试断言，以验证框架的各种不变量（请参阅下面的“调试模式断言”）。
 
@@ -144,7 +144,7 @@ I/flutter ( 6559):    │ size: Size(411.4, 683.4)
 
 最内部RenderPositionedBox再次松开约束，这次是将按钮中的文本居中。 在[`RenderParagraph`](https://docs.flutter.io/flutter/rendering/RenderParagraph-class.html)中基于它的内容来决定其大小。 如果您现在按照size链继续往下查看，您会看到文本的大小是如何影响其按钮的框的宽度的，它们都是根据孩子的尺寸自行调整大小。
 
-另一种需要注意的是每个盒子描述的”relayoutSubtreeRoot”部分，它告诉你有多少祖先以某种方式依赖于这个元素的大小。 因此，`RenderParagraph`有一个`relayoutSubtreeRoot=up8`，这意味着当它`RenderParagraph`被标及为”dirty”时，它的八个祖先也必须被标记为”dirty”，因为它们可能受到新尺寸的影响。
+另一种需要注意的是每个盒子描述的“relayoutSubtreeRoot”部分，它告诉你有多少祖先以某种方式依赖于这个元素的大小。 因此，`RenderParagraph`有一个`relayoutSubtreeRoot=up8`，这意味着当它`RenderParagraph`被标及为“dirty”时，它的八个祖先也必须被标记为“dirty”，因为它们可能受到新尺寸的影响。
 
 如果您编写自己的渲染对象，则可以通过覆盖[`debugFillProperties()`](https://docs.flutter.io/flutter/rendering/Layer/debugFillProperties.html)将信息添加到转储。 将[DiagnosticsProperty](https://docs.flutter.io/flutter/foundation/DiagnosticsProperty-class.html)对象作为方法的参数，并调用父类方法。
 
@@ -264,7 +264,7 @@ Timeline.startSync('interesting function');
 Timeline.finishSync();
 ```
 
-然后打开你应用程序的Observatory timeline页面，在”Recorded Streams”中选择’Dart’复选框，并执行你想测量的功能。
+然后打开你应用程序的Observatory timeline页面，在“Recorded Streams”中选择‘Dart’复选框，并执行你想测量的功能。
 
 刷新页面将在Chrome的[跟踪工具](https://www.chromium.org/developers/how-tos/trace-event-profiling-tool)中显示应用按时间顺序排列的timeline记录。
 
