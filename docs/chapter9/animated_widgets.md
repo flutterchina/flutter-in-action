@@ -121,7 +121,7 @@ AnimatedDecoratedBox(
 )
 ```
 
-点击前效果如图9-8所示，点击后截取了过渡过程的一帧如图9-9所示： ![img](file:///Users/duwen/Documents/resource/flutter_in_action/book/docs/imgs/9-8.png?lastModify=1565699462)![img](file:///Users/duwen/Documents/resource/flutter_in_action/book/docs/imgs/9-9.png?lastModify=1565699462)
+点击前效果如图9-8所示，点击后截取了过渡过程的一帧如图9-9所示： ![img](../imgs/9-8.png?lastModify=1565699462)![img](../imgs/9-9.png?lastModify=1565699462)
 
 点击后，按钮背景色会从蓝色向红色过渡，图9-9是过渡过程中的一帧，有点偏紫色，整个过渡动画结束后背景会变为红色。
 
