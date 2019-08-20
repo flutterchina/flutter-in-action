@@ -80,7 +80,7 @@ class CustomScrollViewTestRoute extends StatelessWidget {
 
 代码分为三部分：
 
-- 头部`SliverAppBar`：`SliverAppBar`对应`AppBar`，两者不同之处在于`SliverAppBar`可以集成到`CustomScrollView`。`SliverAppBar`可以结合`FlexibleSpaceBar`实`Material Design中头部伸缩的模型，具体效果，读者可以运行该示例查看。
+- 头部`SliverAppBar`：`SliverAppBar`对应`AppBar`，两者不同之处在于`SliverAppBar`可以集成到`CustomScrollView`。`SliverAppBar`可以结合`FlexibleSpaceBar`实现Material Design中头部伸缩的模型，具体效果，读者可以运行该示例查看。
 - 中间的`SliverGrid`：它用`SliverPadding`包裹以给`SliverGrid`添加补白。`SliverGrid`是一个两列，宽高比为4的网格，它有20个子组件。
 - 底部`SliverFixedExtentList`：它是一个所有子元素高度都为50像素的列表。
 
