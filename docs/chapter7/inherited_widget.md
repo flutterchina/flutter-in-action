@@ -194,7 +194,7 @@ InheritedWidget inheritFromElement(InheritedElement ancestor, { Object aspect })
 
 注意，如果将上面示例中`ShareDataWidget.of()`方法实现改成调用`ancestorInheritedElementForWidgetOfExactType()`，运行示例后，点击"Increment"按钮，会发现`__TestWidgetState `的`didChangeDependencies()`方法确实不会再被调用，但是其`build()`仍然会被调用！造成这个的原因其实是，点击"Increment"按钮后，会调用`_InheritedWidgetTestRouteState`的`setState()`方法，此时会重新构建整个页面，由于示例中，`__TestWidget` 并没有任何缓存，所以它也都会被重新构建，所以也会调用`build()`方法。
 
-那么，现在就带来了一个问题：实际上，我们只想更新子树中依赖了`ShareDataWidget`的组件，而现在只要调用`_InheritedWidgetTestRouteState`的`setState()`方法，所有子节点都会被重新build，这很没必要，那么有什么办法可以避免呢？答案是缓存！一个简单的作法就是通过封装一个`StatefulWidget`，将子Widget树缓存起来，具体作法下一节我们将通过实现一个`Provider` Widget 来演示如何缓存，以及如何利用`InheritedWidget` 来实现Flutter全局状态共享。
+那么，现在就带来了一个问题：实际上，我们只想更新子树中依赖了`ShareDataWidget`的组件，而现在只要调用`_InheritedWidgetTestRouteState`的`setState()`方法，所有子节点都会被重新build，这很没必要，那么有什么办法可以避免呢？答案是缓存！一个简单的做法就是通过封装一个`StatefulWidget`，将子Widget树缓存起来，具体做法下一节我们将通过实现一个`Provider` Widget 来演示如何缓存，以及如何利用`InheritedWidget` 来实现Flutter全局状态共享。
 
 
 
