@@ -162,7 +162,7 @@ abstract class StatefulWidget extends Widget {
 
 - `createState()` 用于创建和Stateful widget相关的状态，它在Stateful widget的生命周期中可能会被多次调用。例如，当一个Stateful widget同时插入到widget树的多个位置时，Flutter framework就会调用该方法为每一个位置生成一个独立的State实例，其实，本质上就是一个`StatefulElement`对应一个State实例。
 
-  > 在本书中经常会出现“树“的概念，在不同的场景可能指不同的意思，在说“widget树”时它可以指widget结构树，但由于widget与Element有对应关系（一可能对多），在有些场景（Flutter的SDK文档中）也代指“UI树”的意思。而在stateful widget中，State对象也和`StatefulElement`具有对应关系（一对一），所以在Flutter的SDK文档中，可以经常看到“从树中移除State对象”或“插入State对象到树中”这样的描述。其实，无论哪种描述，其意思都是在描述“一棵构成用户界面的节点元素的树”，读者不必纠结于这些概念，还是那句话“得其神，忘其形”，因此，本书中出现的各种“树”，如果没有特别说明，读者都可抽象的认为它是“一棵构成用户界面的节点元素的树”。
+  > 在本书中经常会出现“树”的概念，在不同的场景可能指不同的意思，在说“widget树”时它可以指widget结构树，但由于widget与Element有对应关系（一可能对多），在有些场景（Flutter的SDK文档中）也代指“UI树”的意思。而在stateful widget中，State对象也和`StatefulElement`具有对应关系（一对一），所以在Flutter的SDK文档中，可以经常看到“从树中移除State对象”或“插入State对象到树中”这样的描述。其实，无论哪种描述，其意思都是在描述“一棵构成用户界面的节点元素的树”，读者不必纠结于这些概念，还是那句话“得其神，忘其形”，因此，本书中出现的各种“树”，如果没有特别说明，读者都可抽象的认为它是“一棵构成用户界面的节点元素的树”。
 
 ## 3.1.6 State
 
