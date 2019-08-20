@@ -225,47 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
    - `floatingActionButton`是页面右下角的带“+”的悬浮按钮，它的`onPressed`属性接受一个回调函数，代表它被点击后的处理器，本例中直接将`_incrementCounter`方法作为其处理函数。
 
 
-
 现在，我们将整个计数器执行流程串起来：当右下角的`floatingActionButton`按钮被点击之后，会调用`_incrementCounter`方法。在`_incrementCounter`方法中，首先会自增`_counter`计数器（状态），然后`setState`会通知Flutter框架状态发生变化，接着，Flutter框架会调用`build`方法以新的状态重新构建UI，最终显示在设备屏幕上。
 
 
-#### 为什么要将build方法放在State中，而不是放在StatefulWidget中？
-
-现在，我们回答之前提出的问题，为什么`build()`方法放在State（而不是`StatefulWidget`）中 ？这主要是为了提高开发的灵活性。如果将`build()`方法在`StatefulWidget`中则会有两个问题：
-
-- 状态访问不便
-
-  试想一下，如果我们的`StatefulWidget`有很多状态，而每次状态改变都要调用`build`方法，由于状态是保存在State中的，如果`build`方法在`StatefulWidget`中，那么`build`方法和状态分别在两个类中，那么构建时读取状态将会很不方便！试想一下，如果真的将`build`方法放在StatefulWidget中的话，由于构建用户界面过程需要依赖State，所以`build`方法将必须加一个`State`参数，大概是下面这样：
-
-  ```dart
-    Widget build(BuildContext context, State state){
-        //state.counter
-        ...
-    }
-  ```
-
-  这样的话就只能将State的所有状态声明为公开的状态，这样才能在State类外部访问状态！但是，将状态设置为公开后，状态将不再具有私密性，这就会导致对状态的修改将会变的不可控。但如果将`build()`方法放在State中的话，构建过程不仅可以直接访问状态，而且也无需公开私有状态，这会非常方便。
-
-- 继承`StatefulWidget`不便
-
-  例如，Flutter中有一个动画widget的基类`AnimatedWidget`，它继承自`StatefulWidget`类。`AnimatedWidget`中引入了一个抽象方法`build(BuildContext context)`，继承自`AnimatedWidget`的动画widget都要实现这个`build`方法。现在设想一下，如果`StatefulWidget` 类中已经有了一个`build`方法，正如上面所述，此时`build`方法需要接收一个state对象，这就意味着`AnimatedWidget`必须将自己的State对象(记为_animatedWidgetState)提供给其子类，因为子类需要在其`build`方法中调用父类的`build`方法，代码可能如下：
-
-  ```dart
-  class MyAnimationWidget extends AnimatedWidget{
-      @override
-      Widget build(BuildContext context, State state){
-        //由于子类要用到AnimatedWidget的状态对象_animatedWidgetState，
-        //所以AnimatedWidget必须通过某种方式将其状态对象_animatedWidgetState
-        //暴露给其子类   
-        super.build(context, _animatedWidgetState)
-      }
-  }
-  ```
-
-  这样很显然是不合理的，因为
-
-  1. `AnimatedWidget`的状态对象是`AnimatedWidget`内部实现细节，不应该暴露给外部。
-  2. 如果要将父类状态暴露给子类，那么必须得有一种传递机制，而做这一套传递机制是无意义的，因为父子类之间状态的传递和子类本身逻辑是无关的。
-
-综上所述，可以发现，对于`StatefulWidget`，将`build`方法放在State中，可以给开发带来很大的灵活性。
 

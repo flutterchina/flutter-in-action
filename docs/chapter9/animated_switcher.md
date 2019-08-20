@@ -103,6 +103,53 @@ class AnimatedSwitcherCounterRoute extends StatefulWidget {
 
 > 注意：AnimatedSwitcher的新旧child，如果类型相同，则Key必须不相等。
 
+### AnimatedSwitcher实现原理
+
+实际上`AnimatedSwitcher`的实现原理是比较简单的，我们根据`AnimatedSwitcher`的使用方式也可以猜个大概。要实现新旧child切换动画，则只需要搞清楚两个问题：动画执行的时机是什么时候以及如何对新旧child执行动画。从`AnimatedSwitcher`的使用方式我们可以看到，当child变化时（Key或类型不同时相等），则重新build，然后动画开始执行。我们可以通过继承StatefulWidget来实现`AnimatedSwitcher`，具体作法是在`didUpdateWidget` 回调中来判断其新旧child是否发生变化，如果发生变化，则对旧child执行反向退场（reverse）动画，对新child执行正向（forward）入场动画即可。下面是`AnimatedSwitcher`实现的部分核心伪代码：
+
+```dart
+Widget _widget; //
+void didUpdateWidget(AnimatedSwitcher oldWidget) {
+  super.didUpdateWidget(oldWidget);
+  // 检查新旧child是否变化(key或类型同时相等则返回true，认为没变化)
+  if (Widget.canUpdate(widget.child, oldWidget.child)) {
+    // child没变化
+    _childNumber += 1;
+    _addEntryForNewChild(animate: true);
+  } else {
+    //child发生了变化，构建一个Stack来分别给新旧child执行动画
+   _widget= Stack(
+      alignment: Alignment.center,
+      children:[
+        //旧child应用FadeTransition
+        FadeTransition(
+         opacity: _controllerOldAnimation,
+         child : oldWidget.child,
+        ),
+        //新child应用FadeTransition
+        FadeTransition(
+         opacity: _controllerNewAnimation,
+         child : widget.child,
+        ),
+      ]
+    );
+    // 给旧child执行反向退场动画
+    _controllerOldAnimation.reverse();
+    //给新child执行正向入场动画
+    _controllerNewAnimation.forward();
+  }
+}
+
+//build方法
+Widget build(BuildContext context){
+  return _widget;
+}
+```
+
+上面伪代码展示了`AnimatedSwitcher`实现的核心逻辑，当然`AnimatedSwitcher`真正的实现比这个复杂，它可以自定义进退场过渡动画以及执行动画时的布局等。在此，我们删繁就简，通过伪代码形式让读者能够清楚看到主要的实现思路，具体的实现读者可以参考`AnimatedSwitcher`源码。
+
+另外，Flutter SDK中还提供了一个`AnimatedCrossFade`组件，它也可以切换两个子元素，切换过程执行建隐渐显的动画，和`AnimatedSwitcher`不同的是`AnimatedCrossFade`是针对两个子元素，而`AnimatedSwitcher`是在一个子元素的新旧值之间切换。`AnimatedCrossFade`实现原理比较简单，也有和`AnimatedSwitcher`类似的地方，因此不再赘述，读者有兴趣可以查看其源码。
+
 ## 9.6.2 AnimatedSwitcher高级用法
 
 假设现在我们想实现一个类似路由平移切换的动画：旧页面屏幕中向左侧平移退出，新页面重屏幕右侧平移进入。如果要用AnimatedSwitcher的话，我们很快就会发现一个问题：做不到！我们可能会写出下面的代码：
@@ -113,9 +160,9 @@ AnimatedSwitcher(
   transitionBuilder: (Widget child, Animation<double> animation) {
     var tween=Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0))
      return SlideTransition(
-              child: child,
-              position: tween.animate(animation),
-    	      );
+       child: child,
+       position: tween.animate(animation),
+    );
   },
   ...//省略
 )
@@ -275,5 +322,5 @@ AnimatedSwitcher(
 
 ## 总结
 
-本节我们学习了AnimatedSwitcher的详细用法，同时也介绍了打破AnimatedSwitcher动画对称性的方法。我们可以发现：在需要切换新旧UI元素的场景，AnimatedSwitcher将十分实用。
+本节我们学习了`AnimatedSwitcher`的详细用法，同时也介绍了打破`AnimatedSwitcher`动画对称性的方法。我们可以发现：在需要切换新旧UI元素的场景，`AnimatedSwitcher`将十分实用。
 

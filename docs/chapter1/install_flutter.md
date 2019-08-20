@@ -39,7 +39,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 #### 获取Flutter SDK
 
-1. 去flutter官网下载其最新可用的安装包，下载地址：https://flutter.io/sdk-archive/，打开后如图1-2所示：
+1. 去flutter官网下载其最新可用的安装包，下载地址：https://flutter.dev/docs/development/tools/sdk/releases ，打开后如图1-2所示：
 
    ![图1-2](../imgs/1-2.png)
 
