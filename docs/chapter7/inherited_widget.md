@@ -2,7 +2,7 @@
 
 # 7.2 数据共享（InheritedWidget）
 
-`InheritedWidget`是Flutter中非常重要的一个功能型组件，它提供了一种数据在widget树种从上到下的传递、共享方式，比如我们在应用的根widget中通过`InheritedWidget`共享了一个数据，那么我们便可以在任意子widget中来获取该共享的数据！这个特性在一些需要在widget树中共享数据的场景中非常方便！如Flutter SDK中正是通过InheritedWidget来共享应用主题（`Theme`）和Locale (当前语言环境)信息的。
+`InheritedWidget`是Flutter中非常重要的一个功能型组件，它提供了一种数据在widget树中从上到下的传递、共享方式，比如我们在应用的根widget中通过`InheritedWidget`共享了一个数据，那么我们便可以在任意子widget中来获取该共享的数据！这个特性在一些需要在widget树中共享数据的场景中非常方便！如Flutter SDK中正是通过InheritedWidget来共享应用主题（`Theme`）和Locale (当前语言环境)信息的。
 
 > `InheritedWidget`和React中的context功能类似，和逐级传递数据相比，它们能实现组件跨级传递数据。`InheritedWidget`的在widget树中数据传递方向是从上到下的，这和通知`Notification`（将在下一章中介绍）的传递方向正好相反。
 
