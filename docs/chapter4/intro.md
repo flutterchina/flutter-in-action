@@ -1,6 +1,6 @@
 # 4.1 布局类组件简介
 
-布局类组件都会包含一个或多个子组件，不同的布局类组件对子组件排版(layout)方式不同。我们在前面说过`Element`树才是最终的绘制树，`Element`树是通过Widget树来创建的（通过`Widget.createElement()`），嗯Widget其实就是Element的配置数据。在Flutter中，根据Widget是否需要包含子节点将Widget分为了三类，分别对应三种Element，如下表：
+布局类组件都会包含一个或多个子组件，不同的布局类组件对子组件排版(layout)方式不同。我们在前面说过`Element`树才是最终的绘制树，`Element`树是通过Widget树来创建的（通过`Widget.createElement()`），Widget其实就是Element的配置数据。在Flutter中，根据Widget是否需要包含子节点将Widget分为了三类，分别对应三种Element，如下表：
 
 | Widget                        | 对应的Element                  | 用途                                                         |
 | ----------------------------- | ------------------------------ | ------------------------------------------------------------ |

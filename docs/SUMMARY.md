@@ -77,7 +77,7 @@
     * [9.4：Hero动画](chapter9/hero.md) 
     * [9.5：交织动画](chapter9/stagger_animation.md) 
     * [9.6：通用"切换动画"组件（AnimatedSwitcher）](chapter9/animated_switcher.md) 
-    
+    * [9.7：动画过渡组件](chapter9/animated_widgets.md)     
 * [第十章：自定义组件](chapter10/index.md)
     * [10.1：自定义组件方法简介](chapter10/intro.md)
     * [10.2：组合现有组件](chapter10/combine.md)

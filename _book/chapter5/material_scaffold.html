@@ -1051,6 +1051,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.2.7" data-path="../chapter9/animated_widgets.html">
+            
+                <a href="../chapter9/animated_widgets.html">
+            
+                    
+                    9.7：动画过渡组件
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1806,23 +1819,7 @@
 <p>&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x56FE;5-20&#x6240;&#x793A;&#xFF1A;</p>
 <p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/5-20.png" alt="&#x56FE;5-20"></p>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x5DF2;&#x7ECF;&#x66FF;&#x6362;&#x6210;&#x529F;&#x3002;</p>
-<p>&#x4EE3;&#x7801;&#x4E2D;&#x6253;&#x5F00;&#x62BD;&#x5C49;&#x83DC;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x5728;<code>ScaffoldState</code>&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;<code>Scaffold.of(context)</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7236;&#x7EA7;&#x6700;&#x8FD1;&#x7684;<code>Scaffold</code> &#x7EC4;&#x4EF6;&#x7684;<code>State</code>&#x5BF9;&#x8C61;&#xFF0C;&#x539F;&#x7406;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x672C;&#x4E66;&#x540E;&#x9762;&#x201C;Element&#x4E0E;BuildContext&#x201D; &#x4E00;&#x7AE0;&#x3002;Flutter&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;&#x83B7;&#x53D6;<code>State</code>&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x2014;&#x2014;&#x901A;&#x8FC7;GlobalKey&#x6765;&#x83B7;&#x53D6;&#xFF01; &#x6B65;&#x9AA4;&#x5206;&#x4E24;&#x6B65;&#xFF1A;</p>
-<ol>
-<li><p>&#x7ED9;&#x76EE;&#x6807;<code>StatefulWidget</code>&#x6DFB;&#x52A0;<code>GlobalKey</code>&#x3002;</p>
-<pre class="language-"><code class="lang-dart"><span class="token comment">//&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;globalKey, &#x7531;&#x4E8E;GlobalKey&#x8981;&#x4FDD;&#x6301;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x5B58;&#x50A8;</span>
-<span class="token keyword">static</span> GlobalKey<span class="token operator">&lt;</span>ScaffoldState<span class="token operator">&gt;</span> _globalKey<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GlobalKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token function">Scaffold</span><span class="token punctuation">(</span>
-    key<span class="token punctuation">:</span> _globalKey <span class="token punctuation">,</span> <span class="token comment">//&#x8BBE;&#x7F6E;key</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  
-<span class="token punctuation">)</span>
-</code></pre>
-</li>
-<li><p>&#x901A;&#x8FC7;<code>GlobalKey</code>&#x6765;&#x83B7;&#x53D6;<code>State</code>&#x5BF9;&#x8C61;</p>
-<pre class="language-"><code class="lang-dart">_globalKey<span class="token punctuation">.</span>currentState<span class="token punctuation">.</span><span class="token function">openDrawer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-</li>
-</ol>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x6253;&#x5F00;&#x62BD;&#x5C49;&#x83DC;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x5728;<code>ScaffoldState</code>&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;<code>Scaffold.of(context)</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7236;&#x7EA7;&#x6700;&#x8FD1;&#x7684;<code>Scaffold</code> &#x7EC4;&#x4EF6;&#x7684;<code>State</code>&#x5BF9;&#x8C61;&#x3002;</p>
 <h3 id="tabbar">TabBar</h3>
 <p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x201C;bottom&#x201D;&#x5C5E;&#x6027;&#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5BFC;&#x822A;&#x680F;&#x5E95;&#x90E8;Tab&#x6309;&#x94AE;&#x7EC4;&#xFF0C;&#x5C06;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;&#x5982;&#x56FE;5-21&#x6240;&#x793A;&#xFF1A;</p>
 <p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/5-21.png" alt="&#x56FE;5-21"></p>
@@ -2024,7 +2021,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.6：Scaffold、TabBar、底部导航","level":"2.5.6","depth":2,"next":{"title":"5.7：剪裁（Clip）","level":"2.5.7","depth":2,"path":"chapter5/clip.md","ref":"chapter5/clip.md","articles":[]},"previous":{"title":"5.5：Container容器","level":"2.5.5","depth":2,"path":"chapter5/container.md","ref":"chapter5/container.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter5/material_scaffold.md","mtime":"2019-08-06T11:10:58.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-11T09:37:37.585Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.6：Scaffold、TabBar、底部导航","level":"2.5.6","depth":2,"next":{"title":"5.7：剪裁（Clip）","level":"2.5.7","depth":2,"path":"chapter5/clip.md","ref":"chapter5/clip.md","articles":[]},"previous":{"title":"5.5：Container容器","level":"2.5.5","depth":2,"path":"chapter5/container.md","ref":"chapter5/container.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter5/material_scaffold.md","mtime":"2019-08-13T04:39:12.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-20T09:23:18.157Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

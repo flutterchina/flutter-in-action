@@ -40,7 +40,7 @@ new MaterialApp(
 )
 ```
 
-基于`WidgetsAp`p的应用程序类似，只是不需要`GlobalMaterialLocalizations.delegate`。
+> 与`MaterialApp`类为入口的应用不同, 对基于`WidgetsApp`类为入口的应用程序进行国际化时,不需要`GlobalMaterialLocalizations.delegate`。
 
 `localizationsDelegates`列表中的元素是生成本地化值集合的工厂。`GlobalMaterialLocalizations.delegate` 为Material 组件库提供的本地化的字符串和其他值，它可以使Material 组件支持多语言。 `GlobalWidgetsLocalizations.delegate`定义组件默认的文本方向，从左到右或从右到左，这是因为有些语言的阅读习惯并不是从左到右，比如如阿拉伯语就是从右向左的。
 

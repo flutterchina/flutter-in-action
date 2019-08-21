@@ -126,25 +126,7 @@ Scaffold(
 
 可以看到左侧菜单已经替换成功。
 
-代码中打开抽屉菜单的方法在`ScaffoldState`中，通过`Scaffold.of(context)`可以获取父级最近的`Scaffold` 组件的`State`对象，原理可以参考本书后面“Element与BuildContext” 一章。Flutter还有一种通用的获取`State`对象的方法——通过GlobalKey来获取！ 步骤分两步：
-
-1. 给目标`StatefulWidget`添加`GlobalKey`。
-
-   ```dart
-   //定义一个globalKey, 由于GlobalKey要保持全局唯一性，我们使用静态变量存储
-   static GlobalKey<ScaffoldState> _globalKey= new GlobalKey();
-   ...
-   Scaffold(
-       key: _globalKey , //设置key
-       ...  
-   )
-   ```
-
-2. 通过`GlobalKey`来获取`State`对象
-
-   ```dart
-   _globalKey.currentState.openDrawer()
-   ```
+代码中打开抽屉菜单的方法在`ScaffoldState`中，通过`Scaffold.of(context)`可以获取父级最近的`Scaffold` 组件的`State`对象。
 
 ### TabBar
 
