@@ -71,7 +71,7 @@ class Element extends DiagnosticableTree implements BuildContext {
 
 ### 进阶
 
-我们可以看到Element是Flutter UI框架内部连接widget和`RenderObject`的纽带，大多数时候开发者只需要关注widget层即可，但是widget层有时候并不能完全屏蔽`Elemen`t细节，所以Framework在`StatelessWidget`和`StatefulWidget`中通过`build`方法参数又将`Element`对象也传递给了开发者，这样一来，开发者便可以在需要时直接操作`Element`对象。那么现在笔者提两个问题，请读者先自己思考一下：
+我们可以看到Element是Flutter UI框架内部连接widget和`RenderObject`的纽带，大多数时候开发者只需要关注widget层即可，但是widget层有时候并不能完全屏蔽`Element`细节，所以Framework在`StatelessWidget`和`StatefulWidget`中通过`build`方法参数又将`Element`对象也传递给了开发者，这样一来，开发者便可以在需要时直接操作`Element`对象。那么现在笔者提两个问题，请读者先自己思考一下：
 
 1. 如果没有widget层，单靠`Element`层是否可以搭建起一个可用的UI框架？如果可以应该是什么样子？
 2. Flutter UI框架能不做成响应式吗？
