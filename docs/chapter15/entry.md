@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
 2. `HomeRoute`是应用的主页。
 3. 在构建`MaterialApp`时，我们配置了APP支持的语言列表，以及监听了系统语言改变事件；另外`MaterialApp`消费（依赖）了`ThemeModel`和`LocaleModel`，所以当APP主题或语言改变时`MaterialApp`会重新构建
 4. 我们注册了命名路由表，以便在APP中可以直接通过路由名跳转。
-5. 为了支持多语言（本APP中我们支持美国英语和中文简体两种语言）我们实现了一个`GmLocalizationsDelegate`，子Widget中都可以通过`GmLocalizations`来动态获取APP当前语言对应的文案。关于`GmLocalizationsDelegate`和`GmLocalizations`的实现方式读者可以参考”国际化“一章中的介绍，此处不再赘述。
+5. 为了支持多语言（本APP中我们支持美国英语和中文简体两种语言）我们实现了一个`GmLocalizationsDelegate`，子Widget中都可以通过`GmLocalizations`来动态获取APP当前语言对应的文案。关于`GmLocalizationsDelegate`和`GmLocalizations`的实现方式读者可以参考“国际化”一章中的介绍，此处不再赘述。
 
 ## 15.6.2 主页
 
@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
 
 ![15-1](../imgs/15-1.png)![15-2](../imgs/15-2.png)
 
-我们在”lib/routes“下创建一个”home_page.dart“文件，实现如下：
+我们在“lib/routes”下创建一个“home_page.dart”文件，实现如下：
 
 ```dart
 class HomeRoute extends StatefulWidget {
@@ -115,7 +115,7 @@ class _HomeRouteState extends State<HomeRoute> {
 }
 ```
 
-上面代码中，主页的标题（title）我们是通过`GmLocalizations.of(context).home`来获得，`GmLocalizations`是我们提供的一个`Localizations`类，用于支持多语言，因此当APP语言改变时，凡是使用`GmLocalizations`动态获取的文案都会是相应语言的文案，这在前面”国际化“一章中已经介绍过，读者可以前翻查阅。
+上面代码中，主页的标题（title）我们是通过`GmLocalizations.of(context).home`来获得，`GmLocalizations`是我们提供的一个`Localizations`类，用于支持多语言，因此当APP语言改变时，凡是使用`GmLocalizations`动态获取的文案都会是相应语言的文案，这在前面“国际化”一章中已经介绍过，读者可以前翻查阅。
 
 我们通过 `_buildBody()`方法来构建主页内容，`_buildBody()`方法实现代码如下：
 
@@ -344,11 +344,11 @@ class _RepoItemState extends State<RepoItem> {
 
    代码中调用了`CachedNetworkImage` 是cached_network_image包中提供的一个Widget，它不仅可以在图片加载过程中指定一个占位图，而且还可以对网络请求的图片进行缓存，更多详情读者可以自行查阅其文档。
 
-2. 由于Flutter 的Material 图标库中没有fork图标，所以我们在iconfont.cn上找了一个fork图标，然后根据”图片和Icon“一节中介绍的使用自定义字体图标的方法集成到了我们的项目中。
+2. 由于Flutter 的Material 图标库中没有fork图标，所以我们在iconfont.cn上找了一个fork图标，然后根据“图片和Icon”一节中介绍的使用自定义字体图标的方法集成到了我们的项目中。
 
 ## 15.6.3 抽屉菜单
 
-抽屉菜单分为两部分：顶部头像和底部功能菜单项。当用户未登录，则抽屉菜单顶部会显示一个默认的灰色占位图，若用户已登录，则会显示用户的头像。抽屉菜单底部有”换肤“和”语言“两个固定菜单，若用户已登录，则会多一个”注销“菜单。用户点击”换肤“和”语言“两个菜单项，会进入相应的设置页面。我们的抽屉菜单效果如图15-3、15-4所示：
+抽屉菜单分为两部分：顶部头像和底部功能菜单项。当用户未登录，则抽屉菜单顶部会显示一个默认的灰色占位图，若用户已登录，则会显示用户的头像。抽屉菜单底部有“换肤”和“语言”两个固定菜单，若用户已登录，则会多一个“注销”菜单。用户点击“换肤”和“语言”两个菜单项，会进入相应的设置页面。我们的抽屉菜单效果如图15-3、15-4所示：
 
 ![15-3](../imgs/15-3.png)![15-4](../imgs/15-4.png)
 
@@ -473,6 +473,6 @@ class MyDrawer extends StatelessWidget {
 }
 ```
 
-用户点击”注销“，`userModel.user` 会被置空，此时所有依赖`userModel`的组件都会被`rebuild`，如主页会恢复成未登录的状态。
+用户点击“注销”，`userModel.user` 会被置空，此时所有依赖`userModel`的组件都会被`rebuild`，如主页会恢复成未登录的状态。
 
 本小节我们介绍了APP入口`MaterialApp`的一些配置，然后实现了APP的首页。后面我们将展示登录页、换肤页、语言切换页。

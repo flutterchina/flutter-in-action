@@ -258,7 +258,7 @@ class RenderRepaintBoundary extends RenderProxyBox {
 
 ## 14.3.3 命中测试
 
-我们在”事件处理与通知“一章中已经讲过Flutter事件机制和命中测试流程，本节我们看一下其内部实现原理。
+我们在“事件处理与通知”一章中已经讲过Flutter事件机制和命中测试流程，本节我们看一下其内部实现原理。
 
 一个对象是否可以响应事件，取决于其对命中测试的返回，当发生用户事件时，会从根节点（`RenderView`）开始进行命中测试，下面是`RenderView`的`hitTest()`源码：
 
