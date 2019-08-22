@@ -34,7 +34,7 @@ class WidgetsFlutterBinding extends BindingBase with GestureBinding, ServicesBin
 }
 ```
 
-可以看到`WidgetsFlutterBinding`继承自`BindingBase` 并混入了很多`Bindin`g，在介绍这些`Binding`之前我们先介绍一下`Window`，下面是`Window`的官方解释：
+可以看到`WidgetsFlutterBinding`继承自`BindingBase` 并混入了很多`Binding`，在介绍这些`Binding`之前我们先介绍一下`Window`，下面是`Window`的官方解释：
 
 > The most basic interface to the host operating system's user interface.
 
