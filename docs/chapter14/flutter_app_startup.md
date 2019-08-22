@@ -34,7 +34,7 @@ class WidgetsFlutterBinding extends BindingBase with GestureBinding, ServicesBin
 }
 ```
 
-可以看到`WidgetsFlutterBinding`继承自`BindingBase` 并混入了很多`Bindin`g，在介绍这些`Binding`之前我们先介绍一下`Window`，下面是`Window`的官方解释：
+可以看到`WidgetsFlutterBinding`继承自`BindingBase` 并混入了很多`Binding`，在介绍这些`Binding`之前我们先介绍一下`Window`，下面是`Window`的官方解释：
 
 > The most basic interface to the host operating system's user interface.
 
@@ -86,7 +86,7 @@ class Window {
 }
 ```
 
-可以看到`Window`类包含了当前设备和系统的一些信息以及Flutter Engine的一些回调。现在我们再回来看看`WidgetsFlutterBinding`混入的各种Binding。通过查看这些 Binding的源码，我们可以发现这些Binding中基本都是监听并处理`Window`对象的一些事件，然后将这些事件按照Framework的模型包装、抽象然后分发。可以看到`WidgetsFlutterBinding`正是粘连Flutter engine与上层Framework的”胶水“。
+可以看到`Window`类包含了当前设备和系统的一些信息以及Flutter Engine的一些回调。现在我们再回来看看`WidgetsFlutterBinding`混入的各种Binding。通过查看这些 Binding的源码，我们可以发现这些Binding中基本都是监听并处理`Window`对象的一些事件，然后将这些事件按照Framework的模型包装、抽象然后分发。可以看到`WidgetsFlutterBinding`正是粘连Flutter engine与上层Framework的“胶水”。
 
 - `GestureBinding`：提供了`window.onPointerDataPacket` 回调，绑定Framework手势子系统，是Framework事件模型与底层事件的绑定入口。
 - `ServicesBinding`：提供了`window.onPlatformMessage` 回调， 用于绑定平台消息通道（message channel），主要处理原生和Flutter通信。
@@ -156,7 +156,7 @@ void scheduleWarmUpFrame() {
 
 可以看到该方法中主要调用了`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法，在看这两个方法之前我们首先了解一下Frame 和 FrameCallback 的概念：
 
-- Frame: 一次绘制过程，我们称其为一帧。Flutter engine受显示器垂直同步信号"VSync"的趋势不断的触发绘制。我们之前说的Flutter可以实现60fps（Frame Per-Second），就是指一秒钟可以触发60次重绘，FPS值越大，界面就越流畅。
+- Frame: 一次绘制过程，我们称其为一帧。Flutter engine受显示器垂直同步信号"VSync"的驱使不断的触发绘制。我们之前说的Flutter可以实现60fps（Frame Per-Second），就是指一秒钟可以触发60次重绘，FPS值越大，界面就越流畅。
 
 - FrameCallback：`SchedulerBinding` 类中有三个FrameCallback回调队列， 在一次绘制过程中，这三个回调队列会放在不同时机被执行：
 
@@ -168,7 +168,7 @@ void scheduleWarmUpFrame() {
 
 ### 绘制
 
-渲染和绘制逻辑在`RendererBinding`中实现，查看其源发，发现在其`initInstances()`方法中有如下代码：
+渲染和绘制逻辑在`RendererBinding`中实现，查看其源码，发现在其`initInstances()`方法中有如下代码：
 
 ```dart
 void initInstances() {

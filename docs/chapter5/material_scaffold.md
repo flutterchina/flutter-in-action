@@ -325,4 +325,4 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 ```
 所以打洞位置在底部导航栏的正中间。
 
-`BottomAppBar`的`shape`属性决定洞的外形，`CircularNotchedRectangle`实现了一个圆形的外形，我们也可以自定义外形，比如，Flutter Gallery示例中就有一个”钻石“形状的示例，读者感兴趣可以自行查看。
+`BottomAppBar`的`shape`属性决定洞的外形，`CircularNotchedRectangle`实现了一个圆形的外形，我们也可以自定义外形，比如，Flutter Gallery示例中就有一个“钻石”形状的示例，读者感兴趣可以自行查看。
