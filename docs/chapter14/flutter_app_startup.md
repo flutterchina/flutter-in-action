@@ -168,7 +168,7 @@ void scheduleWarmUpFrame() {
 
 ### 绘制
 
-渲染和绘制逻辑在`RendererBinding`中实现，查看其源发，发现在其`initInstances()`方法中有如下代码：
+渲染和绘制逻辑在`RendererBinding`中实现，查看其源码，发现在其`initInstances()`方法中有如下代码：
 
 ```dart
 void initInstances() {
