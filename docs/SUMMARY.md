@@ -1,7 +1,7 @@
 ﻿# Summary
 
-* [缘起](README.md)
-
+* [简介](README.md)
+* [前言](intro.md)
 
 ## 入门篇
 

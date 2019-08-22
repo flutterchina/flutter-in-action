@@ -44,30 +44,44 @@ const TextField({
 
 - `keyboardType`：用于设置该输入框默认的键盘输入类型，取值如下：
 
-  | TextInputType枚举值  | 含义                                                |
+  
+
+  | TextInputType枚举值 | 含义                                                |
   | ------------------- | --------------------------------------------------- |
   | text                | 文本输入键盘                                        |
   | multiline           | 多行文本，需和maxLines配合使用(设为null或大于1)     |
   | number              | 数字；会弹出数字键盘                                |
-  | phone               | 优化后的电话号码输入键盘；会弹出数字键盘并显示"* #" |
+  | phone               | 优化后的电话号码输入键盘；会弹出数字键盘并显示“* #” |
   | datetime            | 优化后的日期输入键盘；Android上会显示“: -”          |
   | emailAddress        | 优化后的电子邮件地址；会显示“@ .”                   |
   | url                 | 优化后的url输入键盘； 会显示“/ .”                   |
+
+  
 
 - `textInputAction`：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看API文档，下面是当值为`TextInputAction.search`时，原生Android系统下键盘样式如图3-24所示：
 
   ![图3-24](../imgs/3-24.png)
 
 - `style`：正在编辑的文本样式。
+
 - `textAlign`: 输入框内编辑文本在水平方向的对齐方式。
+
 - `autofocus`: 是否自动获取焦点。
+
 - `obscureText`：是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换。
+
 - `maxLines`：输入框的最大行数，默认为1；如果为`null`，则无行数限制。
+
 - `maxLength`和`maxLengthEnforced` ：`maxLength`代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。`maxLengthEnforced`决定当输入文本长度超过`maxLength`时是否阻止输入，为`true`时会阻止输入，为`false`时不会阻止输入但输入框会变红。
+
 - `onChange`：输入框内容改变时的回调函数；注：内容改变事件也可以通过`controller`来监听。
+
 - `onEditingComplete`和`onSubmitted`：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍图标）。不同的是两个回调签名不同，`onSubmitted`回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而`onEditingComplete`不接收参数。
+
 - `inputFormatters`：用于指定输入格式；当用户输入内容改变时，会根据指定的格式来校验。
+
 - `enable`：如果为`false`，则输入框会被禁用，禁用状态不接收输入和事件，同时显示禁用态样式（在其`decoration`中定义）。
+
 - `cursorWidth`、`cursorRadius`和`cursorColor`：这三个属性是用于自定义输入框光标宽度、圆角和颜色的。
 
 #### 示例：登录输入框

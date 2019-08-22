@@ -1,4 +1,7 @@
-﻿# 目录
+﻿# Summary
+
+* [简介](README.docx)
+* [前言](intro.docx)
 
 ## 入门篇
 
@@ -57,8 +60,10 @@
     * [7.3： 跨组件状态共享（Provider）](chapter7/provider.docx)
     * [7.4：颜色和主题（Theme）](chapter7/theme.docx) 
     * [7.5：异步UI更新（FutureBuilder、StreamBuilder）](chapter7/futurebuilder_and_streambuilder.docx)
-    * [7.6：对话框详解](chapter7/dailog.docx)   
+    * [7.6：对话框详解](chapter7/dailog.docx)  
+     
 ## 进阶篇
+
 * [第八章：事件处理与通知](chapter8/index.docx)
     * [8.1：原始指针事件处理](chapter8/listener.docx)
     * [8.2：手势识别](chapter8/gesture.docx)
@@ -72,7 +77,7 @@
     * [9.4：Hero动画](chapter9/hero.docx) 
     * [9.5：交织动画](chapter9/stagger_animation.docx) 
     * [9.6：通用"切换动画"组件（AnimatedSwitcher）](chapter9/animated_switcher.docx) 
-    
+    * [9.7：动画过渡组件](chapter9/animated_widgets.docx)     
 * [第十章：自定义组件](chapter10/index.docx)
     * [10.1：自定义组件方法简介](chapter10/intro.docx)
     * [10.2：组合现有组件](chapter10/combine.docx)
@@ -95,8 +100,7 @@
     * [12.3：开发Flutter插件](chapter12/develop_plugin.docx)
     * [12.4：插件开发：实现Android端API](chapter12/android_implement.docx)
     * [12.5：插件开发：实现IOS端API](chapter12/ios_implement.docx)
-    * [12.6：Texture和PlatformView](todo.docx) 
-    * [12.6：系统能力调用](todo.docx) 
+    * [12.6：Texture和PlatformView](chapter12/texture_platformview.docx) 
     
 * [第十三章：国际化](chapter13/index.docx)
     * [13.1：让App支持多语言](chapter13/multi_languages_support.docx)
@@ -112,8 +116,8 @@
     * [14.5：Flutter图片加载与缓存](chapter14/image_and_cache.docx)
  
 ## 实例篇
-   
-* [第十五章：一个完整的Flutter应用]()
+
+* [第十五章：一个完整的Flutter应用](chapter15/intro.docx)
     * [15.1：应用简介](chapter15/intro.docx)    
     * [15.2：APP代码结构](chapter15/code_structure.docx) 
     * [15.3：Model类定义](chapter15/models.docx) 
