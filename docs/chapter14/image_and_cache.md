@@ -296,7 +296,7 @@ class ImageCache {
 
 有缓存则使用缓存，没有缓存则调用load方法加载图片，加载成功后:
 
-1. 先判断图片数据有缓存，如果有，则直接返回`ImageStream`。
+1. 先判断图片数据有没有缓存，如果有，则直接返回`ImageStream`。
 2. 如果没有缓存，则调用`load(T key)`方法从数据源加载图片数据，加载成功后先缓存，然后返回ImageStream。
 
 另外，我们可以看到`ImageCache`类中有设置缓存上限的setter，所以，如果我们可以自定义缓存上限：
@@ -306,7 +306,7 @@ class ImageCache {
  PaintingBinding.instance.imageCache.maximumSizeBytes = 200 << 20; //最大200M
 ```
 
-现在我们看一下缓存的key，因为Map中相同key的值会被覆盖，也就是说key是图片缓存的一个唯一标识，只要是不同key，那么图片数据就会分别缓存（即使事实上是同一张图片）。那么图片的唯一标识是什么呢？跟踪源码，很容易发现key正是`ImageProvider.obtainKey()`方法的返回值，而此方法需要`ImageProvider`子类去重写，这也就意味着不通的`ImageProvider`对key的定义逻辑会不同。其实也很好理解，比如对于`NetworkImage`，将图片的url作为key会很合适，而对于`AssetImage`，则应该将“包名+路径”作为唯一的key。下面我们以`NetworkImage`为例，看一下它的`obtainKey()`实现：
+现在我们看一下缓存的key，因为Map中相同key的值会被覆盖，也就是说key是图片缓存的一个唯一标识，只要是不同key，那么图片数据就会分别缓存（即使事实上是同一张图片）。那么图片的唯一标识是什么呢？跟踪源码，很容易发现key正是`ImageProvider.obtainKey()`方法的返回值，而此方法需要`ImageProvider`子类去重写，这也就意味着不同的`ImageProvider`对key的定义逻辑会不同。其实也很好理解，比如对于`NetworkImage`，将图片的url作为key会很合适，而对于`AssetImage`，则应该将“包名+路径”作为唯一的key。下面我们以`NetworkImage`为例，看一下它的`obtainKey()`实现：
 
 ```dart
 @override
@@ -331,11 +331,11 @@ bool operator ==(dynamic other) {
 
 另外，我们需要注意的是，图片缓存是在内存中，并没有进行本地文件持久化存储，这也是为什么网络图片在应用重启后需要重新联网下载的原因。
 
-同时也意味着在应用生命周期内，如果缓存没有超过上限，相同u的图片只会被下载一次。
+同时也意味着在应用生命周期内，如果缓存没有超过上限，相同的图片只会被下载一次。
 
 ### 总结
 
-上面主要结合源码，探索了`ImageProvider`的主要功能和原理，如果要用一句话来总结`ImageProvider`功能，那么应该是：加载图片数据并进行缓存、解码。在此再次提醒读者，Flutter的源码是非常好的第一手资料，建议读者多多探索，另外，在阅读源码学西的同时一定要有总结，这样才不至于在源码中迷失。
+上面主要结合源码，探索了`ImageProvider`的主要功能和原理，如果要用一句话来总结`ImageProvider`功能，那么应该是：加载图片数据并进行缓存、解码。在此再次提醒读者，Flutter的源码是非常好的第一手资料，建议读者多多探索，另外，在阅读源码学习的同时一定要有总结，这样才不至于在源码中迷失。
 
 ## 14.5.2 Image组件原理
 
