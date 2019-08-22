@@ -29,7 +29,7 @@ Color(int.parse(c,radix:16)).withAlpha(255)  //通过方法将Alpha设置为FF
 
 ### 颜色亮度
 
-假如我们需要要实现一个背景颜色和Title可以自定义导航栏，并且背景色为深色时我们应该让Title显示浅色；背景色为浅色时，Title显示深色。要实现这个功能，我们就需要来计算背景色的亮度。Color类中提供了一个`computeLuminance()`方法，他可以返回一个[0-1]的一个值，数字越大颜色就越浅，我们可以根据它来动态确定Title的颜色，下面是导航栏NavBar的简单实现：
+假如，我们要实现一个背景颜色和Title可以自定义的导航栏，并且背景色为深色时我们应该让Title显示为浅色；背景色为浅色时，Title显示为深色。要实现这个功能，我们就需要来计算背景色的亮度，然后动态来确定Title的颜色。Color类中提供了一个`computeLuminance()`方法，它可以返回一个[0-1]的一个值，数字越大颜色就越浅，我们可以根据它来动态确定Title的颜色，下面是导航栏NavBar的简单实现：
 
 ```dart
 class NavBar extends StatelessWidget {

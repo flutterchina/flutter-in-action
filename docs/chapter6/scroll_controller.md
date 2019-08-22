@@ -20,7 +20,7 @@ ScrollController({
 - `offset`：可滚动组件当前的滚动位置。
 - `jumpTo(double offset)`、`animateTo(double offset,...)`：这两个方法用于跳转到指定的位置，它们不同之处在于，后者在跳转时会执行一个动画，而前者不会。
 
-`ScrollControlle`r还有一些属性和方法，我们将在后面原理部分解释。
+`ScrollController`还有一些属性和方法，我们将在后面原理部分解释。
 
 #### 滚动监听
 

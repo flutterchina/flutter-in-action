@@ -36,15 +36,15 @@ const TextField({
 
 
 
-- controller：编辑框的控制器，通过它可以设置/获取编辑框的内容、选择编辑内容、监听编辑文本改变事件。大多数情况下我们都需要显式提供一个controller来与文本框交互。如果没有提供controller，则TextField内部会自动创建一个。
+- `controller`：编辑框的控制器，通过它可以设置/获取编辑框的内容、选择编辑内容、监听编辑文本改变事件。大多数情况下我们都需要显式提供一个`controller`来与文本框交互。如果没有提供`controller`，则`TextField`内部会自动创建一个。
 
-- focusNode：用于控制TextField是否占有当前键盘的输入焦点。它是我们和键盘交互的一个handle。
+- `focusNode`：用于控制`TextField`是否占有当前键盘的输入焦点。它是我们和键盘交互的一个句柄（handle）。
 
-- InputDecoration：用于控制TextField的外观显示，如提示文本、背景颜色、边框等。
+- `InputDecoration`：用于控制`TextField`的外观显示，如提示文本、背景颜色、边框等。
 
-- keyboardType：用于设置该输入框默认的键盘输入类型，取值如下：
+- `keyboardType`：用于设置该输入框默认的键盘输入类型，取值如下：
 
-  | TextInputType枚举值 | 含义                                                |
+  | TextInputType枚举值  | 含义                                                |
   | ------------------- | --------------------------------------------------- |
   | text                | 文本输入键盘                                        |
   | multiline           | 多行文本，需和maxLines配合使用(设为null或大于1)     |
