@@ -190,7 +190,7 @@ class MySlideTransition extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     Offset offset=position.value;
-    //动画反向执行时，调整x偏移，实现”从左边滑出隐藏“
+    //动画反向执行时，调整x偏移，实现“从左边滑出隐藏”
     if (position.status == AnimationStatus.reverse) {
          offset = Offset(-offset.dx, offset.dy);
     }
@@ -223,11 +223,11 @@ AnimatedSwitcher(
 
 ![图9-6](../imgs/9-6.png)
 
-上图中“0”从左侧滑出，而"1"从右侧滑入。可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上Flutter路由切换也正是通过`AnimatedSwitcher`来实现的。
+上图中“0”从左侧滑出，而“1”从右侧滑入。可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上Flutter路由切换也正是通过`AnimatedSwitcher`来实现的。
 
 ### SlideTransitionX
 
-上面的示例我们实现了”左出右入“的动画，那如果要实现”右入左出“、”上入下出“或者 ”下入上出“怎么办？当然，我们可以分别修改上面的代码，但是这样每种动画都得单独定义一个”Transition“，这很麻烦。本节将分装一个通用的`SlideTransitionX` 来实现这种”出入滑动动画“，代码如下：
+上面的示例我们实现了“左出右入”的动画，那如果要实现“右入左出”、“上入下出”或者 “下入上出”怎么办？当然，我们可以分别修改上面的代码，但是这样每种动画都得单独定义一个“Transition”，这很麻烦。本节将分装一个通用的`SlideTransitionX` 来实现这种“出入滑动动画”，代码如下：
 
 ```dart
 class SlideTransitionX extends AnimatedWidget {
@@ -297,7 +297,7 @@ class SlideTransitionX extends AnimatedWidget {
 }
 ```
 
-现在如果我们想实现各种”滑动出入动画""便非常容易，只需给`direction `传递不同的方向值即可，比如要实现”上入下出“，则：
+现在如果我们想实现各种“滑动出入动画”便非常容易，只需给`direction `传递不同的方向值即可，比如要实现“上入下出”，则：
 
 ```dart
 AnimatedSwitcher(
@@ -318,7 +318,7 @@ AnimatedSwitcher(
 
 ![图9-7](../imgs/9-7.png)
 
-上图中“1”从底部滑出，而"2"从顶部滑入。读者可以尝试给`SlideTransitionX`的`direction`取不同的值来查看运行效果。
+上图中“1”从底部滑出，而“2”从顶部滑入。读者可以尝试给`SlideTransitionX`的`direction`取不同的值来查看运行效果。
 
 ## 总结
 
