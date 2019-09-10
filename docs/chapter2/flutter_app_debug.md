@@ -32,7 +32,7 @@ void someFunction(double offset) {
 
 ### `print`、`debugPrint`、`flutter logs`
 
-Dart `print()`功能将输出到系统控制台，您可以使用`flutter logs`了查看它（基本上是一个包装`adb logcat`）。
+Dart `print()`功能将输出到系统控制台，您可以使用`flutter logs`来查看它（基本上是一个包装`adb logcat`）。
 
 如果你一次输出太多，那么Android有时会丢弃一些日志行。为了避免这种情况，您可以使用Flutter的`foundation`库中的[`debugPrint()`](https://docs.flutter.io/flutter/foundation/debugPrint.html)。 这是一个封装print，它将输出限制在一个级别，避免被Android内核丢弃。
 
