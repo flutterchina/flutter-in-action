@@ -116,7 +116,7 @@ class CenterColumnRoute extends StatelessWidget {
 
 **实际上，`Row`和`Column`都只会在主轴方向占用尽可能大的空间，而纵轴的长度则取决于他们最大子元素的长度**。如果我们想让本例中的两个文本控件在整个手机屏幕中间对齐，我们有两种方法：
 
-- 将`Column`的宽度指定为屏幕宽度；这很简单，我们可以通过`ConstrainedBox`或`SizedBox`（我们将在后面章节中专门介绍着两个Widget）来强制更改宽度限制，例如：
+- 将`Column`的宽度指定为屏幕宽度；这很简单，我们可以通过`ConstrainedBox`或`SizedBox`（我们将在后面章节中专门介绍这两个Widget）来强制更改宽度限制，例如：
 
   ```dart
   ConstrainedBox(
