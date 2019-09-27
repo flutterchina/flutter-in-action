@@ -220,7 +220,7 @@ MaterialApp(
   ),
   //注册路由表
   routes:{
-   "new_page":(context)=>NewRoute(),
+   "new_page":(context) => NewRoute(),
     ... // 省略其它路由注册信息
   } ,
   home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -238,8 +238,8 @@ MaterialApp(
   ),
   //注册路由表
   routes:{
-   "new_page":(context)=>NewRoute(),
-   "/":(context)=> MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
+   "new_page":(context) => NewRoute(),
+   "/":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
   } 
 );
 ```
@@ -260,8 +260,8 @@ Future pushNamed(BuildContext context, String routeName,{Object arguments})
 onPressed: () {
   Navigator.pushNamed(context, "new_page");
   //Navigator.push(context,
-  //  new MaterialPageRoute(builder: (context) {
-  //  return new NewRoute();
+  //  MaterialPageRoute(builder: (context) {
+  //  return NewRoute();
   //}));  
 },
 ```
@@ -276,7 +276,7 @@ onPressed: () {
 
 ```dart
  routes:{
-   "new_page":(context)=>EchoRoute(),
+   "new_page":(context) => EchoRoute(),
   } ,
 ```
 
