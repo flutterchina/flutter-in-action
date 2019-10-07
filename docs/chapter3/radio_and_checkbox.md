@@ -1,6 +1,6 @@
 ## 单选开关和复选框
 
-Material widgets库中提供了Material风格的单选开关Switch和复选框Checkbox，它们都是继承自StatelessWidget，所以它们本身不会保存当前选择状态，所以一般都是在父widget中管理选中状态。当用户点击Switch或Checkbox时，它们会触发onChanged回调，我们可以在此回调中处理选中状态改变逻辑。我们看一个简单的示例：
+Material widgets库中提供了Material风格的单选开关Switch和复选框Checkbox，它们都是继承自StatefulWidget，所以它们本身不会保存当前选择状态，所以一般都是在父widget中管理选中状态。当用户点击Switch或Checkbox时，它们会触发onChanged回调，我们可以在此回调中处理选中状态改变逻辑。我们看一个简单的示例：
 
 ```dart
 class SwitchAndCheckBoxTestRoute extends StatefulWidget {
