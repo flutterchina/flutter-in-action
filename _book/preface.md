@@ -44,6 +44,10 @@
 
 由于篇幅所限，本书中大多数示例代码都只是部分核心代码，读者可以去https://github.com/wendux/flutter_in_action_source_code 查看
 
+### 勘误
+
+由于Flutter SDK在不断更新，本书中的部分内容（如类的继承关系、参数等）可能会和新版本的Flutter不一致，读者以最新的Flutter SDK为准。另外，由于时间仓促，书中难免有错误之处，如果发现错误，可以在本书Github项目issue列表中去反馈，地址是https://github.com/flutterchina/flutter-in-action/issues 。
+
 ### 致谢
 
 感谢一直以来支持Flutter中文网、Flutter开源项目的人以及所有对本书提过PR的人，正是因为有你们，才有这本书。另外尤其感谢给本书打赏过的同学，你们的支持给了我很大的鼓励。

@@ -1,6 +1,6 @@
 ﻿# Summary
 
-* [简介](README.docx)
+* [简介](preface.docx)
 * [前言](intro.docx)
 
 ## 入门篇
