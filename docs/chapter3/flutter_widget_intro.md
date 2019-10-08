@@ -505,7 +505,7 @@ class CupertinoTestRoute extends StatelessWidget {
 
 下面（图3-3）是在iPhoneX上页面效果截图：
 
-![image-20180824181958838](../imgs/3-3.png)
+![图3-3](../imgs/3-3.png)
 
 
 
