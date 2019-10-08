@@ -274,7 +274,7 @@ Model变化后会自动通知`ChangeNotifierProvider`（订阅者），`ChangeNo
 
 ### 优化
 
-我们上面实现的`ChangeNotifierProvider`是有两个明显缺点：代码组织为题和性能问题，下面我们一一讨论。
+我们上面实现的`ChangeNotifierProvider`是有两个明显缺点：代码组织问题和性能问题，下面我们一一讨论。
 
 #### 代码组织问题
 
