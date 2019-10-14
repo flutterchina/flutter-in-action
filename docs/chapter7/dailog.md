@@ -585,7 +585,7 @@ class Builder extends StatelessWidget {
 }
 ```
 
-可以看到，`Builder`实际上只是继承了`StatelessWidget`，然后在`build`方法中对获取当前context后将构建方法代理到了`builder`回调，`Builder`实际上是获取了`StatelessWidget` 的上下文。那我们能否用相同的方法获取`StatefulWidget` 上下文，并代理其`build`方法呢？我们照猫画虎，来封装一个`StatefulBuilder`方法：
+可以看到，`Builder`实际上只是继承了`StatelessWidget`，然后在`build`方法中获取当前context后将构建方法代理到了`builder`回调，可见，`Builder`实际上是获取了`StatelessWidget` 的上下文（context）。那么我们能否用相同的方法获取`StatefulWidget` 的上下文，并代理其`build`方法呢？下面我们照猫画虎，来封装一个`StatefulBuilder`方法：
 
 ```dart
 class StatefulBuilder extends StatefulWidget {

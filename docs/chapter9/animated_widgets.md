@@ -33,7 +33,6 @@ class _AnimatedDecoratedBox1State extends State<AnimatedDecoratedBox1>
   AnimationController get controller => _controller;
   AnimationController _controller;
 
-  /// The animation driving this widget's implicit animations.
   Animation<double> get animation => _animation;
   Animation<double> _animation;
 
@@ -189,15 +188,16 @@ AnimatedDecoratedBox(
    1. `AnimatedDecoratedBox`首次build，此时直接将其`decoration`值置为起始状态，即`_decoration`值为`DecorationTween(begin: decoration)` 。
    2. `AnimatedDecoratedBox`的`decoration`更新时，则起始状态为`_decoration.animate(animation)`，即`_decoration`值为`DecorationTween(begin: _decoration.animate(animation)，end:decoration)`。
    
+
 现在`forEachTween`的作用就很明显了，它正是用于来更新Tween的初始值的，在上述两种情况下会被调用，而开发者只需重写此方法，并在此方法中更新Tween的起始状态值即可。而一些更新的逻辑被屏蔽在了`visitor`回调，我们只需要调用它并给它传递正确的参数即可，`visitor`方法签名如下：
-   
+
 ```dart
    Tween visitor(
      Tween<dynamic> tween, //当前的tween，第一次调用为null
      dynamic targetValue, // 终止状态
      TweenConstructor<dynamic> constructor，//Tween构造器，在上述三种情况下会被调用以更新tween
    );
-   ```
+```
 
 可以看到，通过继承`ImplicitlyAnimatedWidget`和`ImplicitlyAnimatedWidgetState`类可以快速的实现动画过渡组件的封装，这和我们纯手工实现相比，代码简化了很多。
 
@@ -308,7 +308,6 @@ Flutter SDK中也预置了很多动画过渡组件，实现方式和大都和`An
 | AnimatedDefaultTextStyle | 当字体样式发生变化时，子组件中继承了该样式的文本组件会动态过渡到新样式。 |
 
 <center>表9-1：Flutter预置的动画过渡组件</center>
-
 下面我们通过一个示例来感受一下这些预置的动画过渡组件效果：
 
 ```dart

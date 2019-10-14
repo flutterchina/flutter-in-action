@@ -105,13 +105,13 @@ class AnimatedSwitcherCounterRoute extends StatefulWidget {
 
 ### AnimatedSwitcher实现原理
 
-实际上`AnimatedSwitcher`的实现原理是比较简单的，我们根据`AnimatedSwitcher`的使用方式也可以猜个大概。要实现新旧child切换动画，则只需要搞清楚两个问题：动画执行的时机是什么时候以及如何对新旧child执行动画。从`AnimatedSwitcher`的使用方式我们可以看到，当child变化时（Key或类型不同时相等），则重新build，然后动画开始执行。我们可以通过继承StatefulWidget来实现`AnimatedSwitcher`，具体作法是在`didUpdateWidget` 回调中来判断其新旧child是否发生变化，如果发生变化，则对旧child执行反向退场（reverse）动画，对新child执行正向（forward）入场动画即可。下面是`AnimatedSwitcher`实现的部分核心伪代码：
+实际上，`AnimatedSwitcher`的实现原理是比较简单的，我们根据`AnimatedSwitcher`的使用方式也可以猜个大概。要想实现新旧child切换动画，只需要明确两个问题：动画执行的时机是和如何对新旧child执行动画。从`AnimatedSwitcher`的使用方式我们可以看到，当child发生变化时（子widget的key和类型**不**同时相等则认为发生变化），则重新会重新执行`build`，然后动画开始执行。我们可以通过继承StatefulWidget来实现`AnimatedSwitcher`，具体做法是在`didUpdateWidget` 回调中判断其新旧child是否发生变化，如果发生变化，则对旧child执行反向退场（reverse）动画，对新child执行正向（forward）入场动画即可。下面是`AnimatedSwitcher`实现的部分核心伪代码：
 
 ```dart
 Widget _widget; //
 void didUpdateWidget(AnimatedSwitcher oldWidget) {
   super.didUpdateWidget(oldWidget);
-  // 检查新旧child是否变化(key或类型同时相等则返回true，认为没变化)
+  // 检查新旧child是否发生变化(key或类型同时相等则返回true，认为没变化)
   if (Widget.canUpdate(widget.child, oldWidget.child)) {
     // child没变化
     _childNumber += 1;
@@ -168,9 +168,9 @@ AnimatedSwitcher(
 )
 ```
 
-上面的代码有什么问题呢？我们前面说过在`AnimatedSwitcher`的child切换时会分别对新child执行正向动画（forward），而对旧child执行反向动画（reverse），所以真正的效果便是：新child确实从屏幕右侧平移进入了，但旧child却会从屏幕**右侧**（而不是左侧）退出。其实也很容易理解，因为在没有特殊处理的情况下同一个动画的正向和逆向正好是相反（对称）的。
+上面的代码有什么问题呢？我们前面说过在`AnimatedSwitcher`的child切换时会分别对新child执行正向动画（forward），而对旧child执行反向动画（reverse），所以真正的效果便是：新child确实从屏幕右侧平移进入了，但旧child却会从屏幕**右侧**（而不是左侧）退出。其实也很容易理解，因为在没有特殊处理的情况下，同一个动画的正向和逆向正好是相反（对称）的。
 
-那么问题来了，难道就不能用`AnimatedSwitcher`了？答案当时是否定的！仔细想想这个问题，究其原因，就是因为同一个`Animation`正向（forward）和反向（reverse）是对称的。所以如果我们可以打破这种对称性，那么便可以实现这个功能，下面我们来封装一个`MySlideTransition`，它和`SlideTransition`唯一的不同就是对动画的反向执行进行了（从左边滑出隐藏）：
+那么问题来了，难道就不能使用`AnimatedSwitcher`了？答案当然是否定的！仔细想想这个问题，究其原因，就是因为同一个`Animation`正向（forward）和反向（reverse）是对称的。所以如果我们可以打破这种对称性，那么便可以实现这个功能了，下面我们来封装一个`MySlideTransition`，它与`SlideTransition`唯一的不同就是对动画的反向执行进行了定制（从左边滑出隐藏），代码如下：
 
 ```dart
 class MySlideTransition extends AnimatedWidget {

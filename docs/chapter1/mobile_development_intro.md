@@ -145,7 +145,7 @@ JavaScriptCore 是一个JavaScript解释器，它在React Native中主要有两�
 1. 布局消息传递； 将虚拟DOM布局信息传递给原生；
 2. 原生根据布局信息通过对应的原生控件渲染控件树；
 
-至此，React Native 便实现了跨平台。 相对于混合应用，由于React Native是原生控件渲染，所以性能会比混合应用中H5好很多，同时React Native是Web开发技术栈，也只需维护一份代码，同样是跨平台框架。
+至此，React Native 便实现了跨平台。 相对于混合应用，由于React Native是原生控件渲染，所以性能会比混合应用中H5好很多，同时React Native使用了Web开发技术栈，也只需维护一份代码，同样是跨平台框架。
 
 ### Weex
 
@@ -239,7 +239,6 @@ Flutter是Google发布的一个用于创建跨平台、高性能移动应用的�
 | 自绘UI+原生         | 调用系统API渲染 | 好   | Flutter高, QT低       | 默认不支持 | QT、Flutter    |
 
 <center>表1-1: 跨平台技术对比</center>
-
 上表中开发语言主要指UI的开发语言。而开发效率，是指整个开发周期的效率，包括编码时间、调试时间、以及排错、兼容时间。动态化主要指是否支持动态下发代码和是否支持热更新。值得注意的是Flutter的Release包默认是使用Dart AOT模式编译的，所以不支持动态化，但Dart还有JIT或snapshot运行方式，这些模式都是支持动态化的。
 
 

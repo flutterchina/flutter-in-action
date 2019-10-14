@@ -229,15 +229,15 @@ class _ThemeTestRouteState extends State<ThemeTestRoute> {
 
 需要注意的有三点：
 
-- 可以通过局部主题覆盖全局主题，正如代码中通过Theme为第二行图标指定固定颜色（黑色）一样，这是一种常用的技巧，Flutter中会经常使用这种方法来自定义子树主题。那么为什么局部主题可以覆盖全局主题？这主要是因为Widget中使用主题样式时是通过`Theme.of(BuildContext context)`来获取的，我们看看其简化后的代码：
+- 可以通过局部主题覆盖全局主题，正如代码中通过Theme为第二行图标指定固定颜色（黑色）一样，这是一种常用的技巧，Flutter中会经常使用这种方法来自定义子树主题。那么为什么局部主题可以覆盖全局主题？这主要是因为widget中使用主题样式时是通过`Theme.of(BuildContext context)`来获取的，我们看看其简化后的代码：
 
 - ```dart 
   static ThemeData of(BuildContext context, { bool shadowThemeOnly = false }) {
      // 简化代码，并非源码  
-     return context.inheritFromWidgetOfExactType(_InheritedTheme)
+     return context.inheritFromWidgetOfExactType(_InheritedTheme).theme.data
   }
   ```
 
-  `context.inheritFromWidgetOfExactType` 会在widget树中从当前位置向上查找第一个类型为`_InheritedTheme`的Widget。所以当局部使用Theme后，其子树中`Theme.of()`找到的第一个`_InheritedTheme`便是该Theme的。
+  `context.inheritFromWidgetOfExactType` 会在widget树中从当前位置向上查找第一个类型为`_InheritedTheme`的widget。所以当局部指定`Theme`后，其子树中通过`Theme.of()`向上查找到的第一个`_InheritedTheme`便是我们指定的`Theme`。
 
-- 本示例是对单个路由换肤，如果相对整个应用换肤，可以去修改`MaterialApp`的`theme`属性。
+- 本示例是对单个路由换肤，如果想要对整个应用换肤，则可以去修改`MaterialApp`的`theme`属性。
