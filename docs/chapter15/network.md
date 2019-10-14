@@ -51,7 +51,7 @@ class NetCache extends Interceptor {
   var cache = LinkedHashMap<String, CacheObject>();
 
   @override
-  onRequest(RequestOptions options) {
+  onRequest(RequestOptions options) async {
     if (!Global.profile.cache.enable) return options;
     // refresh标记是否是"下拉刷新"
     bool refresh = options.extra["refresh"] == true;
@@ -84,12 +84,12 @@ class NetCache extends Interceptor {
   }
 
   @override
-  onError(DioError err) {
+  onError(DioError err) async {
     // 错误状态不缓存
   }
 
   @override
-  onResponse(Response response) {
+  onResponse(Response response) async {
     // 如果启用缓存，将返回结果保存到缓存
     if (Global.profile.cache.enable) {
       _saveCache(response);
@@ -131,6 +131,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
+import 'package:dio/adapter.dart';
 import 'package:flutter/material.dart';
 import '../index.dart';
 
