@@ -306,24 +306,28 @@ focusNode.addListener((){
 
 ##### 自定义样式
 
-虽然我们可以通过`decoration`属性来定义输入框样式，但是有一些样式如下划线默认颜色及宽度都是不能直接自定义的，下面的代码**没有效果**：
+虽然我们可以通过`decoration`属性来定义输入框样式，下面以自定义输入框下划线颜色为例来介绍一下：
 
 ```dart
 TextField(
-  ...
   decoration: InputDecoration(
-  border: UnderlineInputBorder(
-  //下面代码没有效果
-  borderSide: BorderSide(
-  		color: Colors.red,
- 		width: 5.0
-    )),
-  prefixIcon: Icon(Icons.person)
+    labelText: "请输入用户名",
+    prefixIcon: Icon(Icons.person),
+    // 未获得焦点下划线设为灰色
+    enabledBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.grey),
+    ),
+    //获得焦点下划线设为蓝色
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.blue),
+    ),
   ),
 ),
 ```
 
-之所以如此，是由于`TextField`在绘制下划线时使用的颜色是主题色里面的`hintColor`，但提示文本颜色也是用的`hintColor`， 如果我们直接修改`hintColor`，那么下划线和提示文本的颜色都会变。值得高兴的是`decoration`中可以设置`hintStyle`，它可以覆盖`hintColor`，并且主题中可以通过`inputDecorationTheme`来设置输入框默认的`decoration`。所以我们可以通过主题来自定义，代码如下：
+上面代码我们直接通过InputDecoration的enabledBorder和focusedBorder来分别设置了输入框在未获取焦点和获得焦点后的下划线颜色。另外，我们也可以通过主题来自定义输入框的样式，下面我们探索一下如何在不使用enabledBorder和focusedBorder的情况下来自定义下滑线颜色。
+
+由于`TextField`在绘制下划线时使用的颜色是主题色里面的`hintColor`，但提示文本颜色也是用的`hintColor`， 如果我们直接修改`hintColor`，那么下划线和提示文本的颜色都会变。值得高兴的是`decoration`中可以设置`hintStyle`，它可以覆盖`hintColor`，并且主题中可以通过`inputDecorationTheme`来设置输入框默认的`decoration`。所以我们可以通过主题来自定义，代码如下：
 
 ```dart
 Theme(

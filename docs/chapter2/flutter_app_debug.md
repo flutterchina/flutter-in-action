@@ -264,18 +264,4 @@ Timeline.finishSync();
 
 请确保运行`flutter run`时带有`--profile`标志，以确保运行时性能特征与您的最终产品差异最小。
 
-### Performance Overlay
-
-要获得应用程序性能图，请将[`MaterialApp`](https://docs.flutter.io/flutter/material/MaterialApp/MaterialApp.html)构造函数的`showPerformanceOverlay`参数设置为true。 [`WidgetsApp`](https://docs.flutter.io/flutter/widgets/WidgetsApp-class.html)构造函数也有类似的参数（如果你没有使用`MaterialApp`或者`WidgetsApp`，你可以通过将你的应用程序包装在一个stack中， 并将一个widget放在通过[`new PerformanceOverlay.allEnabled()`](https://docs.flutter.io/flutter/widgets/PerformanceOverlay/PerformanceOverlay.allEnabled.html)创建的stack上来获得相同的效果）。
-
-这将显示两个图表。第一个是GPU线程花费的时间，最后一个是CPU线程花费的时间。 图中的白线以16ms增量沿纵轴显示; 如果图中超过这三条线之一，那么您的运行频率低于60Hz。横轴代表帧。 该图仅在应用程序绘制时更新，因此如果它处于空闲状态，该图将停止移动。
-
-这应该始终在发布模式（release mode）下测试，因为在调试模式下，故意牺牲性能来换取有助于开发调试的功能，如assert声明，这些都是非常耗时的，因此结果将会产生误导。
-
-### Material grid
-
-在开发实现[Material Design](https://www.google.com/design/spec/material-design/introduction.html)的应用程序时， 将[Material Design基线网格](https://www.google.com/design/spec/layout/metrics-keylines.html)覆盖在应用程序上可能有助于验证对齐。 为此，[`MaterialApp` 构造函数](https://docs.flutter.io/flutter/material/MaterialApp/MaterialApp.html) 有一个`debugShowMaterialGrid`参数， 当在调试模式设置为true时，它将覆盖这样一个网格。
-
-您也可以直接使用[`GridPaper`](https://docs.flutter.io/flutter/widgets/GridPaper-class.html)组件将这种网格覆盖在非Material应用程序上 。
-
 

@@ -205,7 +205,7 @@ Widget build(BuildContext context) {
    }
    ```
 
-   **Flutter中正是通过这种方式封装了很多动画，如：FadeTransition、ScaleTransition、SizeTransition、FractionalTranslation等，很多时候都可以复用这些预置的过渡类。**
+   **Flutter中正是通过这种方式封装了很多动画，如：FadeTransition、ScaleTransition、SizeTransition等，很多时候都可以复用这些预置的过渡类。**
 
 ## 9.2.2 动画状态监听
 
