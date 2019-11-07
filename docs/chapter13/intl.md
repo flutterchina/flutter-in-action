@@ -159,7 +159,7 @@ flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb \ lib/
 ```json
 {
   "@@last_modified": "2018-12-10T15:46:20.897228",
-  "@@locale":"zh_CH",
+  "@@locale":"zh_CN",
   "title": "Flutter应用",
   "@title": {
     "description": "Title for the Demo application",
