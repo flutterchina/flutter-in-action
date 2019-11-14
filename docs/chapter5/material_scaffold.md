@@ -221,7 +221,7 @@ Scaffold(
 
 ![图5-22](../imgs/5-22.png)
 
-现在，无论是点击导航栏Tab菜单还是在页面上左右滑动，Tab页面都会切换，并且Tab菜单的状态和Tab页面始终保持同步！那它们是如何实现同步的呢？细心的读者可能已经发现，上例中`TabBar`和`TabBarView`的`controller`是同一个！正是如此，`TabBar`和`TabBarView`正是通过同一个`controller`来实现菜单切换和滑动状态同步的，有关`TabController`的详细信息，我们不再本书做过多介绍，使用时读者直接查看SDK即可。
+现在，无论是点击导航栏Tab菜单还是在页面上左右滑动，Tab页面都会切换，并且Tab菜单的状态和Tab页面始终保持同步！那它们是如何实现同步的呢？细心的读者可能已经发现，上例中`TabBar`和`TabBarView`的`controller`是同一个！正是如此，`TabBar`和`TabBarView`正是通过同一个`controller`来实现菜单切换和滑动状态同步的，有关`TabController`的详细信息，我们不在本书做过多介绍，使用时读者直接查看SDK即可。
 
 另外，Material组件库也提供了一个`PageView` 组件，它和`TabBarView`功能相似，读者可以自行了解一下。
 
