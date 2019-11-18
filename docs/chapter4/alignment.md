@@ -80,6 +80,9 @@ Alignment(this.x, this.y)
 ```
 (Alignment.x*childWidth/2+childWidth/2, Alignment.y*childHeight+childHeight/2)
 ```
+```
+(Alignment.x * childWidth/2 + childWidth/2, Alignment.y * childHeight/2 + childHeight/2)
+```
 
 其中`childWidth`为子元素的宽度，`childHeight`为子元素高度。
 
