@@ -53,7 +53,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 ##### 更新环境变量
 
-如果你想在Windows系统自带命令行（而不是）运行flutter命令，需要添加以下环境变量到用户PATH：
+如果你想在Windows系统自带命令行运行flutter命令，需要添加以下环境变量到用户PATH：
 
 - 转到 “控制面板>用户帐户>用户帐户>更改我的环境变量”
 - 在“用户变量”下检查是否有名为“Path”的条目:

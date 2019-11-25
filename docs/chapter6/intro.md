@@ -30,7 +30,7 @@ Scrollbar(
 );
 ```
 
-`Scrollbar`和`CupertinoScrollbar`都是通过`ScrollController`来监听滚动事件来确定滚动条位置的。关于`ScrollController`的详细内容我们将在本章最后一节中专门介绍。
+`Scrollbar`和`CupertinoScrollbar`都是通过监听滚动通知来确定滚动条位置的。关于的滚动通知的详细内容我们将在本章最后一节中专门介绍。
 
 #### CupertinoScrollbar
 
