@@ -105,7 +105,7 @@ Navigator类中第一个参数为context的**静态方法**都对应一个Naviga
 
 ## 2.2.4 路由传值
 
-很多时候，在路由跳转时我们需要带一些参数，比如打开商品详情页时，我们需要带一个商品id，这样商品详情页才知道展示哪个商品信息；又比如我们在填写订单时需要选择收货地址，打开地址选择页后，可以将用户选择的地址返回到订单页等等。下面我们通过一个简单的示例来演示新旧路由如何传参。
+很多时候，在路由跳转时我们需要带一些参数，比如打开商品详情页时，我们需要带一个商品id，这样商品详情页才知道展示哪个商品信息；又比如我们在填写订单时需要选择收货地址，打开地址选择页并选择地址后，可以将用户选择的地址返回到订单页等等。下面我们通过一个简单的示例来演示新旧路由如何传参。
 
 ### 示例
 
@@ -220,7 +220,7 @@ MaterialApp(
   ),
   //注册路由表
   routes:{
-   "new_page":(context)=>NewRoute(),
+   "new_page":(context) => NewRoute(),
     ... // 省略其它路由注册信息
   } ,
   home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -238,8 +238,8 @@ MaterialApp(
   ),
   //注册路由表
   routes:{
-   "new_page":(context)=>NewRoute(),
-   "/":(context)=> MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
+   "new_page":(context) => NewRoute(),
+   "/":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
   } 
 );
 ```
@@ -260,8 +260,8 @@ Future pushNamed(BuildContext context, String routeName,{Object arguments})
 onPressed: () {
   Navigator.pushNamed(context, "new_page");
   //Navigator.push(context,
-  //  new MaterialPageRoute(builder: (context) {
-  //  return new NewRoute();
+  //  MaterialPageRoute(builder: (context) {
+  //  return NewRoute();
   //}));  
 },
 ```
@@ -276,7 +276,7 @@ onPressed: () {
 
 ```dart
  routes:{
-   "new_page":(context)=>EchoRoute(),
+   "new_page":(context) => EchoRoute(),
   } ,
 ```
 
@@ -288,7 +288,7 @@ class EchoRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //获取路由参数  
-    var args=ModalRoute.of(context).settings.arguments
+    var args=ModalRoute.of(context).settings.arguments;
     //...省略无关代码
   }
 }

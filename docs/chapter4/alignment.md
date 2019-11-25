@@ -78,7 +78,7 @@ Alignment(this.x, this.y)
 `Alignment`可以通过其**坐标转换公式**将其坐标转为子元素的具体偏移坐标：
 
 ```
-(Alignment.x*childWidth/2+childWidth/2, Alignment.y*childHeight+childHeight/2)
+(Alignment.x*childWidth/2+childWidth/2, Alignment.y*childHeight/2+childHeight/2)
 ```
 
 其中`childWidth`为子元素的宽度，`childHeight`为子元素高度。
