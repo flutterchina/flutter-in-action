@@ -113,7 +113,7 @@ void didUpdateWidget(AnimatedSwitcher oldWidget) {
   super.didUpdateWidget(oldWidget);
   // 检查新旧child是否发生变化(key和类型同时相等则返回true，认为没变化)
   if (!Widget.canUpdate(widget.child, oldWidget.child)) {
-    // child变化，...
+    // child没有变化，...
   } else {
     //child发生了变化，构建一个Stack来分别给新旧child执行动画
    _widget= Stack(
