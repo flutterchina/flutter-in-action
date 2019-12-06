@@ -76,7 +76,7 @@
 {
   "id": 1296269,
   "name": "Hello-World", //项目名称
-  "full_name": "octocat/Hello-World", //项目完成名称
+  "full_name": "octocat/Hello-World", //项目完整名称
   "owner": "$user", // 项目拥有者，结构见"user.json"
   "parent":"$repo", // 如果是fork的项目，则此字段表示fork的父项目信息
   "private": false, // 是否私有项目
