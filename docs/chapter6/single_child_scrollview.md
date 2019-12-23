@@ -24,7 +24,7 @@ SingleChildScrollView({
 
 ### 示例
 
-下面是一个将大写字母A-Z沿垂直方向显示的例子，由于垂直方向空间会超过屏幕视口高度，所以我们使用`SingleChildScrollView`：
+下面是一个将大写字母A-Z沿垂直方向显示的例子，由于垂直方向空间不会超过屏幕视口高度，所以我们使用`SingleChildScrollView`：
 
 ```dart
 class SingleChildScrollViewTestRoute extends StatelessWidget {
