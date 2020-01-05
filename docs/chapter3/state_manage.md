@@ -55,9 +55,12 @@ class _TapboxAState extends State<TapboxA> {
       onTap: _handleTap,
       child: new Container(
         child: new Center(
-          child: new Text(
-            _active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32.0, color: Colors.white),
+          child: new Directionality(
+            textDirection: TextDirection.ltr,
+            child: new Text(
+                _active ? 'Active' : 'Inactive',
+                style: new TextStyle(fontSize: 32, color: Colors.white)
+            ),
           ),
         ),
         width: 200.0,
