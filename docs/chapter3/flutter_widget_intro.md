@@ -391,8 +391,7 @@ Scaffold(
       return RaisedButton(
         onPressed: () {
           // 查找父级最近的Scaffold对应的ScaffoldState对象
-          ScaffoldState _state = context.ancestorStateOfType(
-              TypeMatcher<ScaffoldState>());
+          ScaffoldState _state = context.findAncestorStateOfType();
           //调用ScaffoldState的showSnackBar来弹出SnackBar
           _state.showSnackBar(
             SnackBar(
