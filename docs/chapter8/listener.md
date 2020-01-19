@@ -86,6 +86,7 @@ Listener(
               decoration: BoxDecoration(color: Colors.blue)),
         ),
         onPointerDown: (event) => print("down0"),
+        //behavior: HitTestBehavior.translucent, //放开此行注释后可以"点透"
       ),
       Listener(
         child: ConstrainedBox(
@@ -93,7 +94,6 @@ Listener(
           child: Center(child: Text("左上角200*100范围内非文本区域点击")),
         ),
         onPointerDown: (event) => print("down1"),
-        //behavior: HitTestBehavior.translucent, //放开此行注释后可以"点透"
       )
     ],
   )
