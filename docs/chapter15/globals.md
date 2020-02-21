@@ -61,6 +61,15 @@ Global类的各个字段的意义都有注释，在此不再赘述，需要注�
 ```dart
 void main() => Global.init().then((e) => runApp(MyApp()));
 ```
+对于升级flutter以后的版本(^1.9)，上面的写法需要修改成下面这个
+```dart
+void main() => {
+  WidgetsFlutterBinding.ensureInitialized(),  //需要加这一句，
+  Global.init().then((e) =>
+    runApp(MyApp())
+  )
+};
+```
 
 在此，一定要确保`Global.init()`方法不能抛出异常，否则 `runApp(MyApp())`根本执行不到。
 
