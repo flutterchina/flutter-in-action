@@ -127,7 +127,7 @@ remainingEmailsMessage(int howMany) => Intl.plural(howMany,
 现在我们可以通[intl_translation](https://pub.dartlang.org/packages/intl_translation)包的工具来提取代码中的字符串到一个arb文件，运行如下命名：
 
 ```shell
-flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb \ lib/i10n/localization_intl.dart
+flutter pub run intl_translation:extract_to_arb --output-dir=i10n-arb  lib/i10n/localization_intl.dart
 ```
 
 运行此命令后，会将我们之前通过Intl API标识的属性和字符串提取到“i10n-arb/intl_messages.arb”文件中，我们看看其内容：
@@ -192,7 +192,7 @@ flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb \ lib/
 最后一步就是根据arb生成dart文件：
 
 ```shell
-flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
+flutter pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
 ```
 
 这句命令在首次运行时会在"lib/i10n"目录下生成多个文件，对应多种Locale，这些代码便是最终要使用的dart代码。
@@ -202,8 +202,8 @@ flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/i10n --n
 至此，我们将使用[Intl](https://pub.dartlang.org/packages/intl)包对APP进行国际化的流程介绍完了，我们可以发现，其中第一步和第二步只在第一次需要，而我们开发时的主要的工作都是在第三步。由于最后两步在第三步完成后每次也都需要，所以我们可以将最后两步放在一个shell脚本里，当我们完成第三步或完成arb文件翻译后只需要分别执行该脚本即可。我们在根目录下创建一个intl.sh的脚本，内容为：
 
 ```shell
-flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb lib/i10n/localization_intl.dart
-flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
+flutter pub run intl_translation:extract_to_arb --output-dir=i10n-arb lib/i10n/localization_intl.dart
+flutter pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
 ```
 
 然后授予执行权限：
