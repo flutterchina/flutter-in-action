@@ -46,7 +46,7 @@ class NotificationListener<T extends Notification> extends StatelessWidget {
 
 1. `NotificationListener` 继承自`StatelessWidget `类，所以它可以直接嵌套到Widget树中。
 
-2. `NotificationListener` 可以指定一个模板参数，该模板参数类型必须是继承自`Notification`；当显式指定模板参数时，`NotificationListener` 便只会接收该参数类型的通知。举个例子，如果我们将上例子代码给为：
+2. `NotificationListener` 可以指定一个模板参数，该模板参数类型必须是继承自`Notification`；当显式指定模板参数时，`NotificationListener` 便只会接收该参数类型的通知。举个例子，如果我们将上例子代码改为：
 
    ```dart
    //指定监听通知的类型为滚动结束通知(ScrollEndNotification)
