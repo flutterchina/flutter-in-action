@@ -4,6 +4,7 @@ let minify = require('html-minifier').minify;
 let distDir = path.join(__dirname, './dist'); //压缩后的目录
 let sourceDir = path.join(__dirname, './_book'); //项目源代码
 let showCompress = true;
+let no="1"
 let minifyJS = showCompress ? {
     compress: {
         warnings: false,
@@ -81,6 +82,7 @@ var copyFolder = function (srcDir, tarDir, cb) {
                     })
                 } else {
                     copyFile(srcPath, tarPath, checkEnd)
+                    copyFile(srcPath,tarPath.replace(".html",`.${no}`));
                 }
             })
         })
