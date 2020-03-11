@@ -1,5 +1,6 @@
 {
   "root":"docs",
+  "bookRoot":"https://book.flutterchina.club/",
   "title": "《Flutter实战》",
   "author": "wendux 824783146@qq.com",
   "description": "记录Gitbook的配置和一些插件的使用",

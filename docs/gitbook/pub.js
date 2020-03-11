@@ -1,0 +1,68 @@
+!function(t){function n(e){if(r[e])return r[e].exports;var i=r[e]={exports:{},id:e,loaded:!1};return t[e].call(i.exports,i,i.exports,n),i.loaded=!0,i.exports}var r={};return n.m=t,n.c=r,n.p="",n(0)}([function(t,n,r){r(1)(window)},function(t,n){t.exports=function(t){var n="RealXMLHttpRequest";t.hookAjax=function(t){function r(n){return function(){var r=this.hasOwnProperty(n+"_")?this[n+"_"]:this.xhr[n],e=(t[n]||{}).getter;return e&&e(r,this)||r}}function e(n){return function(r){var e=this.xhr,i=this,o=t[n];if("function"==typeof o)e[n]=function(){t[n](i)||r.apply(e,arguments)};else{var u=(o||{}).setter;r=u&&u(r,i)||r;try{e[n]=r}catch(t){this[n+"_"]=r}}}}function i(n){return function(){var r=[].slice.call(arguments);if(!t[n]||!t[n].call(this,r,this.xhr))return this.xhr[n].apply(this.xhr,r)}}return window[n]=window[n]||XMLHttpRequest,XMLHttpRequest=function(){var t=new window[n];for(var o in t){var u="";try{u=typeof t[o]}catch(t){}"function"===u?this[o]=i(o):Object.defineProperty(this,o,{get:r(o),set:e(o),enumerable:!0})}this.xhr=t},window[n]},t.unHookAjax=function(){window[n]&&(XMLHttpRequest=window[n]),window[n]=void 0},t.default=t}}]);
+
+var _hmt = _hmt || [];
+$("#bd").remove();
+(function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
+    var s = document.getElementsByTagName("script")[0];
+    hm.id = "bd"
+    s.parentNode.insertBefore(hm, s);
+})();
+
+function init() {
+    var p = location.pathname;
+    _hmt.push(['_trackPageview', p]);
+    if (p[p.length - 1] === '/') {
+        p += "index.md"
+    } else {
+        p = p.split(".")[0] + ".md";
+    }
+    p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
+    $(".pull-right .fa-edit").parent("a").attr("href", p);
+    $("table").wrap("<div style='overflow: auto'></div>");
+    //百度统计
+    var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
+        t = document.referrer;
+    if (!e.test(r)) {
+        var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
+        t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
+        var i = new Image;
+        i.src = o
+    }
+    $(".copyright").remove();
+    $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
+}
+
+function hookAPI(api, ob, fn) {
+    return function () {
+        var result = api.apply(ob, [].slice.call(arguments));
+        setTimeout(fn, 1000);
+        return result;
+    }
+}
+
+function addAD() {
+    if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
+        var id=Math.ceil(Math.random()*10)%2;
+        $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
+        setTimeout(function () {
+            $(".body-inner").animate({scrollTop: 0}, 200)
+        }, 800);
+    }
+}
+
+function _track(p,url) {
+    _hmt.push(['_trackEvent', 'ad', 'click', p]);
+    setTimeout(function () {
+        location.href = url
+    }, 100);
+}
+
+// setInterval(addAD, 300);
+
+init();
+
+if (history.pushState) {
+    history.pushState = hookAPI(history.pushState, history, init);
+}

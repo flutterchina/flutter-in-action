@@ -88,74 +88,16 @@
 
 {% block javascript %}{% endblock %}
 
+<script src="gitbook/pub.js"></script>
 <script>
-    var _hmt = _hmt || [];
-    $("#bd").remove();
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-        var s = document.getElementsByTagName("script")[0];
-        hm.id = "bd"
-        s.parentNode.insertBefore(hm, s);
-    })();
-
-    function init() {
-        var p = location.pathname;
-        _hmt.push(['_trackPageview', p]);
-        if (p[p.length - 1] === '/') {
-            p += "index.md"
-        } else {
-            p = p.split(".")[0] + ".md";
+    hookAjax({
+        open:function(arg,xhr){
+            if(location.hostname !=='localhost' && window.testCDN){
+                if(arg[1][0]==='.') arg[1]=arg[1].slice(1);
+                arg[1]="https://pcdn.flutterchina.club"+arg[1];
+            }
         }
-        p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
-        $(".pull-right .fa-edit").parent("a").attr("href", p);
-        $("table").wrap("<div style='overflow: auto'></div>");
-        //百度统计
-        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
-            t = document.referrer;
-        if (!e.test(r)) {
-            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
-            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
-            var i = new Image;
-            i.src = o
-        }
-        $(".copyright").remove();
-        $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
-    }
-
-    function hookAPI(api, ob, fn) {
-        return function () {
-            var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn, 1000);
-            return result;
-        }
-    }
-
-    function addAD() {
-        if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
-            var id=Math.ceil(Math.random()*10)%2;
-            $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
-            setTimeout(function () {
-                $(".body-inner").animate({scrollTop: 0}, 200)
-            }, 800);
-        }
-    }
-
-    function _track(p,url) {
-        _hmt.push(['_trackEvent', 'ad', 'click', p]);
-        setTimeout(function () {
-            location.href = url
-        }, 100);
-    }
-
-    // setInterval(addAD, 300);
-
-    init();
-
-    if (history.pushState) {
-        history.pushState = hookAPI(history.pushState, history, init);
-    }
-
+    })
 </script>
 </body>
 

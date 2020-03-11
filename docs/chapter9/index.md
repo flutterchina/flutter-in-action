@@ -9,5 +9,5 @@
 * [9.3：自定义路由过渡动画](route_transition.md) 
 * [9.4：Hero动画](hero.md) 
 * [9.5：交织动画](stagger_animation.md) 
-* [9.6：通用"切换动画"组件（AnimatedSwitcher）](animated_switcher.md) 
+* [9.6：通用“动画切换”组件（AnimatedSwitcher）](animated_switcher.md) 
 * [9.7：动画过渡组件](animated_widgets.md) 

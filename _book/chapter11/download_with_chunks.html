@@ -18,32 +18,32 @@
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-prism/prism.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/website.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
     
     
     
@@ -69,8 +69,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
     <link rel="next" href="websocket.html" />
@@ -1056,7 +1056,7 @@
                 <a href="../chapter9/animated_switcher.html">
             
                     
-                    9.6：通用"切换动画"组件（AnimatedSwitcher）
+                    9.6：通用“动画切换”组件（AnimatedSwitcher）
             
                 </a>
             
@@ -1718,14 +1718,14 @@
 <span class="token operator">&gt;</span> Host: download.dcloud.net.cn
 <span class="token operator">&gt;</span> User-Agent: curl/7.54.0
 <span class="token operator">&gt;</span> Accept: */*
-<span class="token operator">&gt;</span> Range: bytes<span class="token operator">=</span>0-10
+<span class="token operator">&gt;</span> Range: <span class="token assign-left variable">bytes</span><span class="token operator">=</span><span class="token number">0</span>-10
 <span class="token comment"># &#x54CD;&#x5E94;&#x5934;</span>
-<span class="token operator">&lt;</span> HTTP/1.1 206 Partial Content
+<span class="token operator">&lt;</span> HTTP/1.1 <span class="token number">206</span> Partial Content
 <span class="token operator">&lt;</span> Content-Type: application/octet-stream
-<span class="token operator">&lt;</span> Content-Length: 11
+<span class="token operator">&lt;</span> Content-Length: <span class="token number">11</span>
 <span class="token operator">&lt;</span> Connection: keep-alive
-<span class="token operator">&lt;</span> Date: Thu, 21 Feb 2019 06:25:15 GMT
-<span class="token operator">&lt;</span> Content-Range: bytes 0-10/233295878
+<span class="token operator">&lt;</span> Date: Thu, <span class="token number">21</span> Feb <span class="token number">2019</span> 06:25:15 GMT
+<span class="token operator">&lt;</span> Content-Range: bytes <span class="token number">0</span>-10/233295878
 </code></pre>
 <p>&#x6211;&#x4EEC;&#x5728;&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x6DFB;&#x52A0;&quot;Range: bytes=0-10&quot;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF0C;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x83B7;&#x53D6;&#x6587;&#x4EF6;0-10(&#x5305;&#x62EC;10&#xFF0C;&#x5171;11&#x5B57;&#x8282;)&#x8FD9;&#x5757;&#x5185;&#x5BB9;&#x3002;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x5206;&#x5757;&#x4F20;&#x8F93;&#xFF0C;&#x5219;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x7801;&#x4E3A;206&#xFF0C;&#x8868;&#x793A;&#x201C;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x201D;&#xFF0C;&#x5E76;&#x4E14;&#x540C;&#x65F6;&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x5305;&#x542B;&#x201C;Content-Range&#x201D;&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301;&#x5219;&#x4E0D;&#x4F1A;&#x5305;&#x542B;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x4E0A;&#x9762;&#x201C;Content-Range&#x201D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
 <pre class="language-"><code>Content-Range: bytes 0-10/233295878
@@ -1933,126 +1933,68 @@ Future <span class="token function">downloadWithChunks</span><span class="token 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"11.4：实例：Http分块下载","level":"3.4.4","depth":2,"next":{"title":"11.5：WebSocket","level":"3.4.5","depth":2,"path":"chapter11/websocket.md","ref":"chapter11/websocket.md","articles":[]},"previous":{"title":"11.3：Http请求-Dio package","level":"3.4.3","depth":2,"path":"chapter11/dio.md","ref":"chapter11/dio.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter11/download_with_chunks.md","mtime":"2019-08-22T07:10:57.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-27T07:50:01.487Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11.4：实例：Http分块下载","level":"3.4.4","depth":2,"next":{"title":"11.5：WebSocket","level":"3.4.5","depth":2,"path":"chapter11/websocket.md","ref":"chapter11/websocket.md","articles":[]},"previous":{"title":"11.3：Http请求-Dio package","level":"3.4.3","depth":2,"path":"chapter11/dio.md","ref":"chapter11/dio.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","bookRoot":"https://book.flutterchina.club/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter11/download_with_chunks.md","mtime":"2019-08-22T07:10:57.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-11T12:44:53.999Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
-    
-        
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.js"></script>
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
 
+<script src="gitbook/pub.js"></script>
 <script>
-    var _hmt = _hmt || [];
-    $("#bd").remove();
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-        var s = document.getElementsByTagName("script")[0];
-        hm.id = "bd"
-        s.parentNode.insertBefore(hm, s);
-    })();
-
-    function init() {
-        var p = location.pathname;
-        _hmt.push(['_trackPageview', p]);
-        if (p[p.length - 1] === '/') {
-            p += "index.md"
-        } else {
-            p = p.split(".")[0] + ".md";
+    hookAjax({
+        open:function(arg,xhr){
+            if(location.hostname !=='localhost' && window.testCDN){
+                if(arg[1][0]==='.') arg[1]=arg[1].slice(1);
+                arg[1]="https://pcdn.flutterchina.club"+arg[1];
+            }
         }
-        p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
-        $(".pull-right .fa-edit").parent("a").attr("href", p);
-        $("table").wrap("<div style='overflow: auto'></div>");
-        //百度统计
-        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
-            t = document.referrer;
-        if (!e.test(r)) {
-            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
-            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
-            var i = new Image;
-            i.src = o
-        }
-        $(".copyright").remove();
-        $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
-    }
-
-    function hookAPI(api, ob, fn) {
-        return function () {
-            var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn, 1000);
-            return result;
-        }
-    }
-
-    function addAD() {
-        if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
-            var id=Math.ceil(Math.random()*10)%2;
-            $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
-            setTimeout(function () {
-                $(".body-inner").animate({scrollTop: 0}, 200)
-            }, 800);
-        }
-    }
-
-    function _track(p,url) {
-        _hmt.push(['_trackEvent', 'ad', 'click', p]);
-        setTimeout(function () {
-            location.href = url
-        }, 100);
-    }
-
-    // setInterval(addAD, 300);
-
-    init();
-
-    if (history.pushState) {
-        history.pushState = hookAPI(history.pushState, history, init);
-    }
-
+    })
 </script>
 </body>
 

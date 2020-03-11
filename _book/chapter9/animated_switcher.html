@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>9.6：通用"切换动画"组件（AnimatedSwitcher） · 《Flutter实战》</title>
+    <title>9.6：通用“动画切换”组件（AnimatedSwitcher） · 《Flutter实战》</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="baidu-site-verification" content="Y34sAqDKUH"/>
     <meta name="theme-color" content="#ffffff">
@@ -18,32 +18,32 @@
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-prism/prism.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
     
     
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/website.css">
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
     
     
     
@@ -69,8 +69,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
     <link rel="next" href="animated_widgets.html" />
@@ -1056,7 +1056,7 @@
                 <a href="animated_switcher.html">
             
                     
-                    9.6：通用"切换动画"组件（AnimatedSwitcher）
+                    9.6：通用“动画切换”组件（AnimatedSwitcher）
             
                 </a>
             
@@ -1693,7 +1693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9.6：通用"切换动画"组件（AnimatedSwitcher）</a>
+        <a href=".." >9.6：通用“动画切换”组件（AnimatedSwitcher）</a>
     </h1>
 </div>
 
@@ -1708,7 +1708,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="96-&#x901A;&#x7528;&#x5207;&#x6362;&#x52A8;&#x753B;&#x7EC4;&#x4EF6;&#xFF08;animatedswitcher&#xFF09;">9.6 &#x901A;&#x7528;&quot;&#x5207;&#x6362;&#x52A8;&#x753B;&quot;&#x7EC4;&#x4EF6;&#xFF08;AnimatedSwitcher&#xFF09;</h1>
+                                <h1 id="96-&#x901A;&#x7528;&#x52A8;&#x753B;&#x5207;&#x6362;&#x7EC4;&#x4EF6;&#xFF08;animatedswitcher&#xFF09;">9.6 &#x901A;&#x7528;&#x201C;&#x52A8;&#x753B;&#x5207;&#x6362;&#x201D;&#x7EC4;&#x4EF6;&#xFF08;AnimatedSwitcher&#xFF09;</h1>
 <p>&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x5207;&#x6362;UI&#x5143;&#x7D20;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6BD4;&#x5982;Tab&#x5207;&#x6362;&#x3001;&#x8DEF;&#x7531;&#x5207;&#x6362;&#x3002;&#x4E3A;&#x4E86;&#x589E;&#x5F3A;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x901A;&#x5E38;&#x5728;&#x5207;&#x6362;&#x65F6;&#x90FD;&#x4F1A;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#xFF0C;&#x4EE5;&#x4F7F;&#x5207;&#x6362;&#x8FC7;&#x7A0B;&#x663E;&#x5F97;&#x5E73;&#x6ED1;&#x3002;Flutter SDK&#x7EC4;&#x4EF6;&#x5E93;&#x4E2D;&#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5207;&#x6362;&#x7EC4;&#x4EF6;&#xFF0C;&#x5982;<code>PageView</code>&#x3001;<code>TabView</code>&#x7B49;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x5E76;&#x4E0D;&#x80FD;&#x8986;&#x76D6;&#x5168;&#x90E8;&#x7684;&#x9700;&#x6C42;&#x573A;&#x666F;&#xFF0C;&#x4E3A;&#x6B64;&#xFF0C;Flutter SDK&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<code>AnimatedSwitcher</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;UI&#x5207;&#x6362;&#x62BD;&#x8C61;&#x3002;</p>
 <h2 id="961-animatedswitcher">9.6.1 AnimatedSwitcher</h2>
 <p><code>AnimatedSwitcher</code> &#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5BF9;&#x5176;&#x65B0;&#x3001;&#x65E7;&#x5B50;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x663E;&#x793A;&#x3001;&#x9690;&#x85CF;&#x52A8;&#x753B;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;<code>AnimatedSwitcher</code>&#x7684;&#x5B50;&#x5143;&#x7D20;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x5BF9;&#x5176;&#x65E7;&#x5143;&#x7D20;&#x548C;&#x65B0;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x770B;<code>AnimatedSwitcher</code> &#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
@@ -1789,7 +1789,7 @@
  <span class="token punctuation">}</span>
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x201C;+1&#x201D;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x539F;&#x5148;&#x7684;&#x6570;&#x5B57;&#x4F1A;&#x9010;&#x6E10;&#x7F29;&#x5C0F;&#x76F4;&#x81F3;&#x9690;&#x85CF;&#xFF0C;&#x800C;&#x65B0;&#x6570;&#x5B57;&#x4F1A;&#x9010;&#x6E10;&#x653E;&#x5927;&#xFF0C;&#x6211;&#x622A;&#x53D6;&#x4E86;&#x52A8;&#x753B;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x5982;&#x56FE;9-5&#x6240;&#x793A;&#xFF1A;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/9-5.png" alt="&#x56FE;9-5"></p>
+<p><img src="../imgs/9-5.png" alt="&#x56FE;9-5"></p>
 <p>&#x4E0A;&#x56FE;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x70B9;&#x51FB;&#x201C;+1&#x201D;&#x6309;&#x94AE;&#x540E;&#x5207;&#x6362;&#x52A8;&#x753B;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x6B64;&#x65F6;&#x201C;0&#x201D;&#x6B63;&#x5728;&#x9010;&#x6E10;&#x7F29;&#x5C0F;&#xFF0C;&#x800C;&#x201C;1&#x201D;&#x6B63;&#x5728;&#x201C;0&#x201D;&#x7684;&#x4E2D;&#x95F4;&#xFF0C;&#x6B63;&#x5728;&#x9010;&#x6E10;&#x653E;&#x5927;&#x3002;</p>
 <blockquote>
 <p>&#x6CE8;&#x610F;&#xFF1A;AnimatedSwitcher&#x7684;&#x65B0;&#x65E7;child&#xFF0C;&#x5982;&#x679C;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#xFF0C;&#x5219;Key&#x5FC5;&#x987B;&#x4E0D;&#x76F8;&#x7B49;&#x3002;</p>
@@ -1892,7 +1892,7 @@ Widget <span class="token function">build</span><span class="token punctuation">
 <span class="token punctuation">)</span>
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x6211;&#x622A;&#x53D6;&#x52A8;&#x753B;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x5982;&#x56FE;9-6&#x6240;&#x793A;&#xFF1A;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/9-6.png" alt="&#x56FE;9-6"></p>
+<p><img src="../imgs/9-6.png" alt="&#x56FE;9-6"></p>
 <p>&#x4E0A;&#x56FE;&#x4E2D;&#x201C;0&#x201D;&#x4ECE;&#x5DE6;&#x4FA7;&#x6ED1;&#x51FA;&#xFF0C;&#x800C;&#x201C;1&#x201D;&#x4ECE;&#x53F3;&#x4FA7;&#x6ED1;&#x5165;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x5DE7;&#x5999;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4E86;&#x7C7B;&#x4F3C;&#x8DEF;&#x7531;&#x8FDB;&#x573A;&#x5207;&#x6362;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;Flutter&#x8DEF;&#x7531;&#x5207;&#x6362;&#x4E5F;&#x6B63;&#x662F;&#x901A;&#x8FC7;<code>AnimatedSwitcher</code>&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
 <h3 id="slidetransitionx">SlideTransitionX</h3>
 <p>&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x4E86;&#x201C;&#x5DE6;&#x51FA;&#x53F3;&#x5165;&#x201D;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x90A3;&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;&#x201C;&#x53F3;&#x5165;&#x5DE6;&#x51FA;&#x201D;&#x3001;&#x201C;&#x4E0A;&#x5165;&#x4E0B;&#x51FA;&#x201D;&#x6216;&#x8005; &#x201C;&#x4E0B;&#x5165;&#x4E0A;&#x51FA;&#x201D;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x4FEE;&#x6539;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x6BCF;&#x79CD;&#x52A8;&#x753B;&#x90FD;&#x5F97;&#x5355;&#x72EC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x201C;Transition&#x201D;&#xFF0C;&#x8FD9;&#x5F88;&#x9EBB;&#x70E6;&#x3002;&#x672C;&#x8282;&#x5C06;&#x5206;&#x88C5;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;<code>SlideTransitionX</code> &#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x201C;&#x51FA;&#x5165;&#x6ED1;&#x52A8;&#x52A8;&#x753B;&#x201D;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
@@ -1977,7 +1977,7 @@ Widget <span class="token function">build</span><span class="token punctuation">
 <span class="token punctuation">)</span>
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x6211;&#x622A;&#x53D6;&#x52A8;&#x753B;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x5982;&#x56FE;9-7&#x6240;&#x793A;&#xFF1A;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/docs/imgs/9-7.png" alt="&#x56FE;9-7"></p>
+<p><img src="../imgs/9-7.png" alt="&#x56FE;9-7"></p>
 <p>&#x4E0A;&#x56FE;&#x4E2D;&#x201C;1&#x201D;&#x4ECE;&#x5E95;&#x90E8;&#x6ED1;&#x51FA;&#xFF0C;&#x800C;&#x201C;2&#x201D;&#x4ECE;&#x9876;&#x90E8;&#x6ED1;&#x5165;&#x3002;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x7ED9;<code>SlideTransitionX</code>&#x7684;<code>direction</code>&#x53D6;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x6765;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x6548;&#x679C;&#x3002;</p>
 <h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
 <p>&#x672C;&#x8282;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;<code>AnimatedSwitcher</code>&#x7684;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4ECB;&#x7ECD;&#x4E86;&#x6253;&#x7834;<code>AnimatedSwitcher</code>&#x52A8;&#x753B;&#x5BF9;&#x79F0;&#x6027;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF1A;&#x5728;&#x9700;&#x8981;&#x5207;&#x6362;&#x65B0;&#x65E7;UI&#x5143;&#x7D20;&#x7684;&#x573A;&#x666F;&#xFF0C;<code>AnimatedSwitcher</code>&#x5C06;&#x5341;&#x5206;&#x5B9E;&#x7528;&#x3002;</p>
@@ -2024,126 +2024,68 @@ Widget <span class="token function">build</span><span class="token punctuation">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.6：通用\"切换动画\"组件（AnimatedSwitcher）","level":"3.2.6","depth":2,"next":{"title":"9.7：动画过渡组件","level":"3.2.7","depth":2,"path":"chapter9/animated_widgets.md","ref":"chapter9/animated_widgets.md","articles":[]},"previous":{"title":"9.5：交织动画","level":"3.2.5","depth":2,"path":"chapter9/stagger_animation.md","ref":"chapter9/stagger_animation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter9/animated_switcher.md","mtime":"2019-11-27T07:49:57.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-27T07:50:01.487Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.6：通用“动画切换”组件（AnimatedSwitcher）","level":"3.2.6","depth":2,"next":{"title":"9.7：动画过渡组件","level":"3.2.7","depth":2,"path":"chapter9/animated_widgets.md","ref":"chapter9/animated_widgets.md","articles":[]},"previous":{"title":"9.5：交织动画","level":"3.2.5","depth":2,"path":"chapter9/stagger_animation.md","ref":"chapter9/stagger_animation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","bookRoot":"https://book.flutterchina.club/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter9/animated_switcher.md","mtime":"2020-03-11T12:34:13.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-11T12:44:53.999Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
-    
-        
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-ace/ace.js"></script>
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-donate/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
 
+<script src="gitbook/pub.js"></script>
 <script>
-    var _hmt = _hmt || [];
-    $("#bd").remove();
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-        var s = document.getElementsByTagName("script")[0];
-        hm.id = "bd"
-        s.parentNode.insertBefore(hm, s);
-    })();
-
-    function init() {
-        var p = location.pathname;
-        _hmt.push(['_trackPageview', p]);
-        if (p[p.length - 1] === '/') {
-            p += "index.md"
-        } else {
-            p = p.split(".")[0] + ".md";
+    hookAjax({
+        open:function(arg,xhr){
+            if(location.hostname !=='localhost' && window.testCDN){
+                if(arg[1][0]==='.') arg[1]=arg[1].slice(1);
+                arg[1]="https://pcdn.flutterchina.club"+arg[1];
+            }
         }
-        p = "https://github.com/flutterchina/flutter-in-action/blob/master/docs" + p;
-        $(".pull-right .fa-edit").parent("a").attr("href", p);
-        $("table").wrap("<div style='overflow: auto'></div>");
-        //百度统计
-        var e = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi, r = window.location.href,
-            t = document.referrer;
-        if (!e.test(r)) {
-            var o = "https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif";
-            t ? (o += "?r=" + encodeURIComponent(document.referrer), r && (o += "&l=" + r)) : r && (o += "?l=" + r);
-            var i = new Image;
-            i.src = o
-        }
-        $(".copyright").remove();
-        $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
-    }
-
-    function hookAPI(api, ob, fn) {
-        return function () {
-            var result = api.apply(ob, [].slice.call(arguments));
-            setTimeout(fn, 1000);
-            return result;
-        }
-    }
-
-    function addAD() {
-        if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
-            var id=Math.ceil(Math.random()*10)%2;
-            $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
-            setTimeout(function () {
-                $(".body-inner").animate({scrollTop: 0}, 200)
-            }, 800);
-        }
-    }
-
-    function _track(p,url) {
-        _hmt.push(['_trackEvent', 'ad', 'click', p]);
-        setTimeout(function () {
-            location.href = url
-        }, 100);
-    }
-
-    // setInterval(addAD, 300);
-
-    init();
-
-    if (history.pushState) {
-        history.pushState = hookAPI(history.pushState, history, init);
-    }
-
+    })
 </script>
 </body>
 

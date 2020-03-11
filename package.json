@@ -1,0 +1,15 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node minify.js"
+  },
+  "author": "zhouyupeng",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "html-minifier": "^3.5.21"
+  }
+}
