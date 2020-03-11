@@ -1,2 +1,4 @@
 gitbook build
-./cdn.sh
+#./cdn.sh
+./mycdn.sh
+node minify.js
