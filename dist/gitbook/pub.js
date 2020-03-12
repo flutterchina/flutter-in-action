@@ -30,9 +30,9 @@ function init() {
         var i = new Image;
         i.src = o
     }
-    $(".copyright").remove();
+    $(".copyright,.maoyun").remove();
     $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
-    $("<div style='text-align: center'> <span style='position: relative; top: -3px; left: -4px'>感谢</span><a href='https://www.maoyuncloud.com/' target='_blank'><img src=//pcdn.flutterchina.club/imgs/maoyun.png height='20'></a></div>").appendTo(".page-inner");
+    $("<div style='text-align: center' class='maoyun'> <span style='position: relative; top: -3px; left: -4px'>感谢</span><a href='https://www.maoyuncloud.com/' target='_blank'><img src=//pcdn.flutterchina.club/imgs/maoyun.png height='20'></a></div>").appendTo(".page-inner");
 }
 
 function hookAPI(api, ob, fn) {
@@ -59,9 +59,7 @@ function _track(p,url) {
         location.href = url
     }, 100);
 }
-
 // setInterval(addAD, 300);
-
 init();
 
 if (history.pushState) {
