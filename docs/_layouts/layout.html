@@ -98,7 +98,8 @@
             }
         },
         setRequestHeader: function (arg, xhr) {
-            if (arg[0] === 'X-Requested-With') return true;
+            console.log(arg[0],arg[1]);
+            if (arg[0] !== 'Accept') return true;
         }
     })
 </script>
