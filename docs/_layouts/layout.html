@@ -92,7 +92,7 @@
 <script>
     hookAjax({
         open: function (arg, xhr) {
-            if (location.hostname !== 'localhost') {
+            if (location.hostname === 'localhost') {
                 if (arg[1][0] === '.') arg[1] = arg[1].slice(1);
                 arg[1] = "https://pcdn.flutterchina.club" + arg[1].replace(".html", ".1")
             }
