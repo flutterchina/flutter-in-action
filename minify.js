@@ -82,7 +82,6 @@ var copyFolder = function (srcDir, tarDir, cb) {
                     })
                 } else {
                     copyFile(srcPath, tarPath, checkEnd)
-                    copyFile(srcPath,tarPath.replace(".html",`.${no}`));
                 }
             })
         })
@@ -153,8 +152,10 @@ function fileDisplay(filePath) {
                                     removeCommentsFromCDATA: true, //从脚本和样式删除的注释
                                 }), function () {
                                     console.log('success');
+                                    copyFile(filedir,filedir.replace(".html",`.${no}`));
                                 });
                             });
+
                         }
                         if (isDir) {
                             fileDisplay(filedir); //递归，如果是文件夹，就继续遍历该文件夹下面的文件
