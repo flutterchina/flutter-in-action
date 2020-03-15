@@ -31,7 +31,7 @@ function init() {
         i.src = o
     }
     $(".copyright,.maoyun").remove();
-    $("<div class='copyright'> 版权所有，禁止私自转发、克隆网站。</div><div style='text-align: center' class='f-links'><a  href='https://item.jd.com/65988729018.html' title='点击购买' > 购买实体书 </a> | <a  href='https://flutterchina.club/docs'> Flutter中文网 </a></div>").appendTo(".page-inner");
+    $("<div class='copyright'> 版权所有，禁止私自转发、克隆网站。</div><div style='text-align: center' class='f-links'><a onclick='buy(\"link\")' href='https://item.jd.com/12816296.html' title='点击购买' target='_blank' > 购买实体书 </a> | <a  href='https://flutterchina.club/docs'> Flutter中文网 </a></div>").appendTo(".page-inner");
     $("<div style='text-align: center' class='maoyun'> <span style='position: relative; top: -3px; left: -4px'>感谢</span><a href='https://www.maoyuncloud.com/' target='_blank'><img src=//pcdn.flutterchina.club/imgs/maoyun.png height='20'></a></div>").appendTo(".page-inner");
 }
 
@@ -44,7 +44,7 @@ function hookAPI(api, ob, fn) {
 }
 
 function addAD() {
-    if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
+    if ( $("#book-search-results .ad").length == 0) {
         $(".ad").clone().hide().fadeIn().prependTo("#book-search-results")
     }
 }
@@ -54,6 +54,10 @@ function _track(p,url) {
     setTimeout(function () {
         location.href = url
     }, 100);
+}
+
+function buy(p){
+    _hmt.push(['_trackEvent', 'buy', 'click', p]);
 }
 
 

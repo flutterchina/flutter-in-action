@@ -1,4 +1,3 @@
-<div style="text-align:center; padding-bottom:30px"><a href="https://item.jd.com/65988729018.html" title='点击购买'><img style="height:200px;box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/65988729018.html" title='点击购买'> 购买实体书 </a></div>
 ## 关于作者
 
 作者杜文（网名[wendux](https://github.com/wendux)），高级技术专家、[掘金知名专栏作者](https://juejin.im/user/58211b88a0bb9f0058c25b7f)、[Flutter中文网社区](https://flutterchina.club/)创办者、[Flutter中文社区开源项目](https://github.com/flutterchina)发起人、Github社区知名开发者，是[dio](https://github.com/flutterchina/dio)、[fly](https://github.com/wendux/fly)、[dsBridge](https://github.com/wendux/DSBridge-Android)等多个知名开源项目作者。作者曾就职于百度、小赢科技等互联网公司，从事过PC桌面开发、移动端开发以及Web开发，负责过多次核心技术攻关，现就职于字节跳动。目前闲暇时，主要关注大前端行业发展。

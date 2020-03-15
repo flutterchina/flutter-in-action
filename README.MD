@@ -5,7 +5,7 @@
 本书随书源码：https://github.com/wendux/flutter_in_action_source_code
 
 ## 实体书
-<div style="text-align:center; padding-bottom:30px"><a href="https://item.jd.com/65988729018.html" title='点击购买'><img height="250" style="box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/65988729018.html" title='点击购买'> 购买实体书 </a></div>
+<div style="text-align:center; padding-bottom:30px"><a href="https://item.jd.com/12816296.html" title='点击购买'><img height="250" style="box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/12816296.html" title='点击购买'> 购买实体书 </a></div>
 
 
 
