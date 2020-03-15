@@ -101,41 +101,76 @@
 
         .copyright {
             text-align: center;
-            margin: 80px 16px 30px 16px;
+            margin: 80px 16px 8px 16px;
             padding-top: 16px;
             border-top: #eee 1px solid;
             color: grey;
             font-size: .9em;
         }
 
-        .ad {
-            color: white;
-            text-align: center;
-            background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);
-            background-size: cover;
-            cursor: pointer;
-            margin-bottom: 30px;
-            padding: 18px
+        .f-links a{
+            text-decoration: underline;
+            color: dodgerblue !important;
         }
 
-        .ad:hover {
-            opacity: .8;
+        .f-links a:hover{
+            opacity: .8 !important;
         }
+
+        /*.ad {*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);*/
+            /*background-size: cover;*/
+            /*cursor: pointer;*/
+            /*margin-bottom: 30px;*/
+            /*padding: 18px*/
+        /*}*/
+
+        /*.ad:hover {*/
+            /*opacity: .8;*/
+        /*}*/
+
+        .buy-btn {
+            text-decoration: none !important;
+            padding: 8px 18px;
+            border: #268bd2 1px solid !important;
+            display: inline-block !important;
+            border-radius: 25px;
+            color: #268bd2;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            transition: all ease 200ms;
+            box-shadow: #555 2px 5px 10px;
+            background: #eee;
+            color: dodgerblue !important;
+        }
+
+        .maoyun{
+            padding-top: 5px;
+        }
+
+
     </style>
 </head>
 <body>
 <!--<div id="ad" style="display: none">-->
-    <!--<div class="ad ad0"-->
-         <!--onclick="_track('aliyun','https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts')">-->
-        <!--<div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>-->
-        <!--<div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>-->
-    <!--</div>-->
-    <!--<div class="ad ad1"-->
-         <!--onclick="_track('aliyun-puhui','https://promotion.aliyun.com/ntms/act/qwbk.html?spm=5176.11533457.1089570.10.74e877e33jtaGy&userCode=8hhi4dts')">-->
-        <!--<div style="font-size: 1.5em;">阿里云全民云计算-新春特惠</div>-->
-        <!--<div style="color:orange; font-size: 18px;padding-top: 4px;">普惠上云，云服务器1核1G仅需293元/年</div>-->
-    <!--</div>-->
+<!--<div class="ad ad0"-->
+<!--onclick="_track('aliyun','https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts')">-->
+<!--<div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>-->
+<!--<div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>-->
 <!--</div>-->
+<!--<div class="ad ad1"-->
+<!--onclick="_track('aliyun-puhui','https://promotion.aliyun.com/ntms/act/qwbk.html?spm=5176.11533457.1089570.10.74e877e33jtaGy&userCode=8hhi4dts')">-->
+<!--<div style="font-size: 1.5em;">阿里云全民云计算-新春特惠</div>-->
+<!--<div style="color:orange; font-size: 18px;padding-top: 4px;">普惠上云，云服务器1核1G仅需293元/年</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="ad" style="text-align:center; padding-bottom:30px; display: none"><a href="https://item.jd.com/65988729018.html" title='点击购买'><img style="height:250px;box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/65988729018.html" title='点击购买'> 购买实体书 </a></div>
+
 
 <div class="book">
     <div class="book-summary">
@@ -1819,7 +1854,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13.2：实现Localizations","level":"3.6.2","depth":2,"next":{"title":"13.3：使用Intl包","level":"3.6.3","depth":2,"path":"chapter13/intl.md","ref":"chapter13/intl.md","articles":[]},"previous":{"title":"13.1：让App支持多语言","level":"3.6.1","depth":2,"path":"chapter13/multi_languages_support.md","ref":"chapter13/multi_languages_support.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","bookRoot":"https://book.flutterchina.club/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter13/locallization_implement.md","mtime":"2019-08-06T11:10:58.906Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T02:09:28.545Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13.2：实现Localizations","level":"3.6.2","depth":2,"next":{"title":"13.3：使用Intl包","level":"3.6.3","depth":2,"path":"chapter13/intl.md","ref":"chapter13/intl.md","articles":[]},"previous":{"title":"13.1：让App支持多语言","level":"3.6.1","depth":2,"path":"chapter13/multi_languages_support.md","ref":"chapter13/multi_languages_support.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","ace","splitter","prism","donate","-highlight"],"root":"docs","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"lang":{"shell":"bash"}},"ace":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0.3/docs/imgs/pay.jpeg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wendux 824783146@qq.com","bookRoot":"https://book.flutterchina.club/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Flutter实战》","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"<div><img height=20 style='position:relative; top:5px; padding-right:5px ' src='https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/favicon.png'/> Flutter中文网</div>":"https://flutterchina.club"}},"gitbook":"*","description":"记录Gitbook的配置和一些插件的使用"},"file":{"path":"chapter13/locallization_implement.md","mtime":"2019-08-06T11:10:58.906Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T14:20:06.057Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1881,8 +1916,11 @@
             }
         },
         setRequestHeader: function (arg, xhr) {
-            console.log(arg[0],arg[1]);
+            console.log(arg[0], arg[1]);
             if (arg[0] !== 'Accept') return true;
+        },
+        onload:function(){
+            setTimeout(addAD);
         }
     })
 </script>

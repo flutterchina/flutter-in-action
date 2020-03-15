@@ -49,41 +49,76 @@
 
         .copyright {
             text-align: center;
-            margin: 80px 16px 30px 16px;
+            margin: 80px 16px 8px 16px;
             padding-top: 16px;
             border-top: #eee 1px solid;
             color: grey;
             font-size: .9em;
         }
 
-        .ad {
-            color: white;
-            text-align: center;
-            background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);
-            background-size: cover;
-            cursor: pointer;
-            margin-bottom: 30px;
-            padding: 18px
+        .f-links a{
+            text-decoration: underline;
+            color: dodgerblue !important;
         }
 
-        .ad:hover {
-            opacity: .8;
+        .f-links a:hover{
+            opacity: .8 !important;
         }
+
+        /*.ad {*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*background: url(https://img.alicdn.com/tfs/TB1Huu7vMmTBuNjy1XbXXaMrVXa-2880-400.png);*/
+            /*background-size: cover;*/
+            /*cursor: pointer;*/
+            /*margin-bottom: 30px;*/
+            /*padding: 18px*/
+        /*}*/
+
+        /*.ad:hover {*/
+            /*opacity: .8;*/
+        /*}*/
+
+        .buy-btn {
+            text-decoration: none !important;
+            padding: 8px 18px;
+            border: #268bd2 1px solid !important;
+            display: inline-block !important;
+            border-radius: 25px;
+            color: #268bd2;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            transition: all ease 200ms;
+            box-shadow: #555 2px 5px 10px;
+            background: #eee;
+            color: dodgerblue !important;
+        }
+
+        .maoyun{
+            padding-top: 5px;
+        }
+
+
     </style>
 </head>
 <body>
 <!--<div id="ad" style="display: none">-->
-    <!--<div class="ad ad0"-->
-         <!--onclick="_track('aliyun','https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts')">-->
-        <!--<div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>-->
-        <!--<div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>-->
-    <!--</div>-->
-    <!--<div class="ad ad1"-->
-         <!--onclick="_track('aliyun-puhui','https://promotion.aliyun.com/ntms/act/qwbk.html?spm=5176.11533457.1089570.10.74e877e33jtaGy&userCode=8hhi4dts')">-->
-        <!--<div style="font-size: 1.5em;">阿里云全民云计算-新春特惠</div>-->
-        <!--<div style="color:orange; font-size: 18px;padding-top: 4px;">普惠上云，云服务器1核1G仅需293元/年</div>-->
-    <!--</div>-->
+<!--<div class="ad ad0"-->
+<!--onclick="_track('aliyun','https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=8hhi4dts')">-->
+<!--<div style="font-size: 1.3em; padding-right: 120px; position: relative; top: 12px">阿里云新春特惠</div>-->
+<!--<div style="color:orange; font-size: 13px">限时红包 最高￥<span style="font-size: 40px">1888</span></div>-->
 <!--</div>-->
+<!--<div class="ad ad1"-->
+<!--onclick="_track('aliyun-puhui','https://promotion.aliyun.com/ntms/act/qwbk.html?spm=5176.11533457.1089570.10.74e877e33jtaGy&userCode=8hhi4dts')">-->
+<!--<div style="font-size: 1.5em;">阿里云全民云计算-新春特惠</div>-->
+<!--<div style="color:orange; font-size: 18px;padding-top: 4px;">普惠上云，云服务器1核1G仅需293元/年</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="ad" style="text-align:center; padding-bottom:30px; display: none"><a href="https://item.jd.com/65988729018.html" title='点击购买'><img style="height:250px;box-shadow: #aaa 5px 5px 10px;" src="../imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/65988729018.html" title='点击购买'> 购买实体书 </a></div>
+
 {% block body %}{% endblock %}
 
 {% block javascript %}{% endblock %}
@@ -98,8 +133,11 @@
             }
         },
         setRequestHeader: function (arg, xhr) {
-            console.log(arg[0],arg[1]);
+            console.log(arg[0], arg[1]);
             if (arg[0] !== 'Accept') return true;
+        },
+        onload:function(){
+            setTimeout(addAD);
         }
     })
 </script>

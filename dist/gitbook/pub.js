@@ -9,7 +9,7 @@ $("#bd").remove();
     hm.id = "bd"
     s.parentNode.insertBefore(hm, s);
 })();
-
+var timer;
 function init() {
     var p = location.pathname;
     _hmt.push(['_trackPageview', p]);
@@ -31,7 +31,7 @@ function init() {
         i.src = o
     }
     $(".copyright,.maoyun").remove();
-    $("<div class='copyright'> 本书仍在勘误阶段，请勿以任何形式私自传播，作者保留对本书的版权。</div>").appendTo(".page-inner");
+    $("<div class='copyright'> 版权所有，禁止私自转发、克隆网站。</div><div style='text-align: center' class='f-links'><a  href='https://item.jd.com/65988729018.html' title='点击购买' > 购买实体书 </a> | <a  href='https://flutterchina.club/docs'> Flutter中文网 </a></div>").appendTo(".page-inner");
     $("<div style='text-align: center' class='maoyun'> <span style='position: relative; top: -3px; left: -4px'>感谢</span><a href='https://www.maoyuncloud.com/' target='_blank'><img src=//pcdn.flutterchina.club/imgs/maoyun.png height='20'></a></div>").appendTo(".page-inner");
 }
 
@@ -45,11 +45,7 @@ function hookAPI(api, ob, fn) {
 
 function addAD() {
     if (location.href !== 'https://book.flutterchina.club/' && $("#book-search-results .ad").length == 0) {
-        var id=Math.ceil(Math.random()*10)%2;
-        $(".ad"+id).clone().hide().fadeIn().prependTo("#book-search-results")
-        setTimeout(function () {
-            $(".body-inner").animate({scrollTop: 0}, 200)
-        }, 800);
+        $(".ad").clone().hide().fadeIn().prependTo("#book-search-results")
     }
 }
 
@@ -59,7 +55,9 @@ function _track(p,url) {
         location.href = url
     }, 100);
 }
-// setInterval(addAD, 300);
+
+
+
 init();
 
 if (history.pushState) {
