@@ -124,23 +124,6 @@
 {% block javascript %}{% endblock %}
 
 <script src="gitbook/pub.js"></script>
-<script>
-    hookAjax({
-        open: function (arg, xhr) {
-            if (location.hostname !== 'localhost') {
-                if (arg[1][0] === '.') arg[1] = arg[1].slice(1);
-                arg[1] = "https://pcdn.flutterchina.club" + arg[1].replace(".html", ".1")
-            }
-        },
-        setRequestHeader: function (arg, xhr) {
-            console.log(arg[0], arg[1]);
-            if (arg[0] !== 'Accept') return true;
-        },
-        onload:function(){
-            setTimeout(addAD);
-        }
-    })
-</script>
 </body>
 
 </html>

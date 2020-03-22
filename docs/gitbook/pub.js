@@ -1,4 +1,4 @@
-!function(t){function n(e){if(r[e])return r[e].exports;var i=r[e]={exports:{},id:e,loaded:!1};return t[e].call(i.exports,i,i.exports,n),i.loaded=!0,i.exports}var r={};return n.m=t,n.c=r,n.p="",n(0)}([function(t,n,r){r(1)(window)},function(t,n){t.exports=function(t){var n="RealXMLHttpRequest";t.hookAjax=function(t){function r(n){return function(){var r=this.hasOwnProperty(n+"_")?this[n+"_"]:this.xhr[n],e=(t[n]||{}).getter;return e&&e(r,this)||r}}function e(n){return function(r){var e=this.xhr,i=this,o=t[n];if("function"==typeof o)e[n]=function(){t[n](i)||r.apply(e,arguments)};else{var u=(o||{}).setter;r=u&&u(r,i)||r;try{e[n]=r}catch(t){this[n+"_"]=r}}}}function i(n){return function(){var r=[].slice.call(arguments);if(!t[n]||!t[n].call(this,r,this.xhr))return this.xhr[n].apply(this.xhr,r)}}return window[n]=window[n]||XMLHttpRequest,XMLHttpRequest=function(){var t=new window[n];for(var o in t){var u="";try{u=typeof t[o]}catch(t){}"function"===u?this[o]=i(o):Object.defineProperty(this,o,{get:r(o),set:e(o),enumerable:!0})}this.xhr=t},window[n]},t.unHookAjax=function(){window[n]&&(XMLHttpRequest=window[n]),window[n]=void 0},t.default=t}}]);
+!function(t,n){for(var r in n)t[r]=n[r]}(window,function(t){function n(o){if(r[o])return r[o].exports;var e=r[o]={i:o,l:!1,exports:{}};return t[o].call(e.exports,e,e.exports,n),e.l=!0,e.exports}var r={};return n.m=t,n.c=r,n.i=function(t){return t},n.d=function(t,r,o){n.o(t,r)||Object.defineProperty(t,r,{configurable:!1,enumerable:!0,get:o})},n.n=function(t){var r=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(r,"a",r),r},n.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},n.p="",n(n.s=2)}([function(t,n,r){"use strict";function o(t,n){var r={};for(var o in t)r[o]=t[o];return r.target=r.currentTarget=n,r}function e(t){function n(n){return function(){var r=this.hasOwnProperty(n+"_")?this[n+"_"]:this.xhr[n],o=(t[n]||{}).getter;return o&&o(r,this)||r}}function r(n){return function(r){var e=this.xhr,i=this,u=t[n];if("on"===n.substring(0,2))i[n+"_"]=r,e[n]=function(u){u=o(u,i),t[n]&&t[n].call(i,e,u)||r.call(i,u)};else{var c=(u||{}).setter;r=c&&c(r,i)||r,this[n+"_"]=r;try{e[n]=r}catch(t){}}}}function e(n){return function(){var r=[].slice.call(arguments);if(t[n]){var o=t[n].call(this,r,this.xhr);if(o)return o}return this.xhr[n].apply(this.xhr,r)}}return window[c]=window[c]||XMLHttpRequest,XMLHttpRequest=function(){var t=new window[c];for(var o in t){var i="";try{i=u(t[o])}catch(t){}"function"===i?this[o]=e(o):Object.defineProperty(this,o,{get:n(o),set:r(o),enumerable:!0})}var f=this;t.getProxy=function(){return f},this.xhr=t},window[c]}function i(){window[c]&&(XMLHttpRequest=window[c]),window[c]=void 0}Object.defineProperty(n,"__esModule",{value:!0});var u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};n.configEvent=o,n.hook=e,n.unHook=i;var c="_rxhr"},,function(t,n,r){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.ah=void 0;var o=r(0);n.ah={hook:o.hook,unHook:o.unHook}}]));
 
 var _hmt = _hmt || [];
 $("#bd").remove();
@@ -12,7 +12,6 @@ $("#bd").remove();
 var timer;
 function init() {
     var p = location.pathname;
-    _hmt.push(['_trackPageview', p]);
     if (p[p.length - 1] === '/') {
         p += "index.md"
     } else {
@@ -35,20 +34,6 @@ function init() {
     $("<div style='text-align: center' class='maoyun'> <span style='position: relative; top: -3px; left: -4px'>感谢</span><a href='https://www.maoyuncloud.com/' target='_blank'><img src=//pcdn.flutterchina.club/imgs/maoyun.png height='20'></a></div>").appendTo(".page-inner");
 }
 
-function hookAPI(api, ob, fn) {
-    return function () {
-        var result = api.apply(ob, [].slice.call(arguments));
-        setTimeout(fn, 1000);
-        return result;
-    }
-}
-
-function addAD() {
-    if ( $("#book-search-results .ad").length == 0) {
-        $(".ad").clone().hide().fadeIn().prependTo("#book-search-results")
-    }
-}
-
 function _track(p,url) {
     _hmt.push(['_trackEvent', 'ad', 'click', p]);
     setTimeout(function () {
@@ -60,10 +45,29 @@ function buy(p){
     _hmt.push(['_trackEvent', 'buy', 'click', p]);
 }
 
-
-
 init();
 
-if (history.pushState) {
-    history.pushState = hookAPI(history.pushState, history, init);
-}
+ah.hook({
+    open: function (arg, xhr) {
+        if (location.hostname !== 'localhost') {
+            if (arg[1][0] === '.') arg[1] = arg[1].slice(1);
+            arg[1] = "https://pcdn.flutterchina.club" + arg[1].replace(".html", ".1")
+        }
+    },
+    setRequestHeader: function (arg) {
+        if (arg[0] !== 'Accept') return true;
+    },
+    onload:function(xhr){
+        setTimeout(function () {
+            if ( $("#book-search-results .ad").length === 0) {
+                $(".ad").clone().show().prependTo("#book-search-results")
+            }
+            var extension=xhr.responseURL.split(".").pop()
+            if(extension!=='json'){
+                console.log("jump:"+location.href)
+                _hmt.push(['_trackPageview', location.pathname]);
+                init()
+            }
+        });
+    }
+})
