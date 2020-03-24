@@ -114,7 +114,7 @@ static const MaterialColor blue = MaterialColor(
 static const int _bluePrimaryValue = 0xFF2196F3;
 ```
 
-`Colors.blue[50]`到`Colors.blue[100]`的色值从浅蓝到深蓝渐变，效果如图7-5所示：
+`Colors.blue[50]`到`Colors.blue[900]`的色值从浅蓝到深蓝渐变，效果如图7-5所示：
 
 ![NavBar](../imgs/7-5.jpeg)
 
