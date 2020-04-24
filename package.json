@@ -8,7 +8,9 @@
   },
   "author": "zhouyupeng",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@antv/g2": "^4.0.6"
+  },
   "devDependencies": {
     "html-minifier": "^3.5.21"
   }
