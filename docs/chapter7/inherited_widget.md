@@ -151,26 +151,27 @@ class __TestWidgetState extends State<_TestWidget> {
 //定义一个便捷方法，方便子树中的widget获取共享数据
 static ShareDataWidget of(BuildContext context) {
   //return context.inheritFromWidgetOfExactType(ShareDataWidget);
-  return context.ancestorInheritedElementForWidgetOfExactType(ShareDataWidget).widget;
+  return context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget;
 }
 ```
 
-唯一的改动就是获取`ShareDataWidget`对象的方式，把`inheritFromWidgetOfExactType()`方法换成了`context.ancestorInheritedElementForWidgetOfExactType(ShareDataWidget).widget`，那么他们到底有什么区别呢，我们看一下这两个方法的源码（实现代码在`Element`类中，`Context`和`Element`的关系我们将在后面专门介绍）：
+唯一的改动就是获取`ShareDataWidget`对象的方式，把`inheritFromWidgetOfExactType()`方法换成了`context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget`，那么他们到底有什么区别呢，我们看一下这两个方法的源码（实现代码在`Element`类中，`Context`和`Element`的关系我们将在后面专门介绍）：
 
 ```dart 
 @override
-InheritedElement ancestorInheritedElementForWidgetOfExactType(Type targetType) {
-  final InheritedElement ancestor = _inheritedWidgets == null ? null :  _inheritedWidgets[targetType];
+InheritedElement getElementForInheritedWidgetOfExactType<T extends InheritedWidget>() {
+  assert(_debugCheckStateIsActiveForAncestorLookup());
+  final InheritedElement ancestor = _inheritedWidgets == null ? null : _inheritedWidgets[T];
   return ancestor;
 }
-
 @override
 InheritedWidget inheritFromWidgetOfExactType(Type targetType, { Object aspect }) {
-  final InheritedElement ancestor = _inheritedWidgets == null ? null :   _inheritedWidgets[targetType];
+  assert(_debugCheckStateIsActiveForAncestorLookup());
+  final InheritedElement ancestor = _inheritedWidgets == null ? null : _inheritedWidgets[T];
   //多出的部分
   if (ancestor != null) {
     assert(ancestor is InheritedElement);
-    return inheritFromElement(ancestor, aspect: aspect);
+    return dependOnInheritedElement(ancestor, aspect: aspect) as T;
   }
   _hadUnsatisfiedDependencies = true;
   return null;
