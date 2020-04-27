@@ -225,7 +225,7 @@ AnimatedSwitcher(
 
 ### SlideTransitionX
 
-上面的示例我们实现了“左出右入”的动画，那如果要实现“右入左出”、“上入下出”或者 “下入上出”怎么办？当然，我们可以分别修改上面的代码，但是这样每种动画都得单独定义一个“Transition”，这很麻烦。本节将分装一个通用的`SlideTransitionX` 来实现这种“出入滑动动画”，代码如下：
+上面的示例我们实现了“左出右入”的动画，那如果要实现“右入左出”、“上入下出”或者 “下入上出”怎么办？当然，我们可以分别修改上面的代码，但是这样每种动画都得单独定义一个“Transition”，这很麻烦。本节将封装一个通用的`SlideTransitionX` 来实现这种“出入滑动动画”，代码如下：
 
 ```dart
 class SlideTransitionX extends AnimatedWidget {

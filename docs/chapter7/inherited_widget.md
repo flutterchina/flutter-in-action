@@ -112,7 +112,7 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
 I/flutter ( 8513): Dependencies change
 ```
 
-可见依赖发生变化后，其`didChangeDependencies()`会被调用。但是读者要注意，**如果_TestWidget的build方法中没有使用ShareDataWidget的数据，那么它的`didChangeDependencies()`将不会被调用，因为它并没有依赖ShareDataWidget**。例如，我们将`__TestWidgetState`代码该为下面这样，`didChangeDependencies()`将不会被调用:
+可见依赖发生变化后，其`didChangeDependencies()`会被调用。但是读者要注意，**如果_TestWidget的build方法中没有使用ShareDataWidget的数据，那么它的`didChangeDependencies()`将不会被调用，因为它并没有依赖ShareDataWidget**。例如，我们将`__TestWidgetState`代码改为下面这样，`didChangeDependencies()`将不会被调用:
 
 ```dart
 class __TestWidgetState extends State<_TestWidget> {
