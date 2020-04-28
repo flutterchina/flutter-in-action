@@ -65,7 +65,7 @@ class Element extends DiagnosticableTree implements BuildContext {
 }
 ```
 
-至此真相大白，`BuildContext`就是widget对应的`Element`，所以我们可以通过`context`在`StatelessWidget`和`StatefulWidget`的`build`方法中直接访问`Element`对象。我们获取主题数据的代码`Theme.of(context)`内部正是调用了Element的`inheritFromWidgetOfExactType()`方法。
+至此真相大白，`BuildContext`就是widget对应的`Element`，所以我们可以通过`context`在`StatelessWidget`和`StatefulWidget`的`build`方法中直接访问`Element`对象。我们获取主题数据的代码`Theme.of(context)`内部正是调用了Element的`dependOnInheritedWidgetOfExactType()`方法。
 
 > 思考题：为什么build方法的参数不定义成Element对象，而要定义成BuildContext ?
 

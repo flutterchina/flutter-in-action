@@ -308,7 +308,7 @@ I/flutter ( 5436): dispose
 
 下面我们来看看各个回调函数：
 
-- `initState`：当Widget第一次插入到Widget树时会被调用，对于每一个State对象，Flutter framework只会调用一次该回调，所以，通常在该回调中做一些一次性的操作，如状态初始化、订阅子树的事件通知等。不能在该回调中调用`BuildContext.inheritFromWidgetOfExactType`（该方法用于在Widget树上获取离当前widget最近的一个父级`InheritFromWidget`，关于`InheritedWidget`我们将在后面章节介绍），原因是在初始化完成后，Widget树中的`InheritFromWidget`也可能会发生变化，所以正确的做法应该在在`build（）`方法或`didChangeDependencies()`中调用它。
+- `initState`：当Widget第一次插入到Widget树时会被调用，对于每一个State对象，Flutter framework只会调用一次该回调，所以，通常在该回调中做一些一次性的操作，如状态初始化、订阅子树的事件通知等。不能在该回调中调用`BuildContext.dependOnInheritedWidgetOfExactType`（该方法用于在Widget树上获取离当前widget最近的一个父级`InheritFromWidget`，关于`InheritedWidget`我们将在后面章节介绍），原因是在初始化完成后，Widget树中的`InheritFromWidget`也可能会发生变化，所以正确的做法应该在在`build（）`方法或`didChangeDependencies()`中调用它。
 - `didChangeDependencies()`：当State对象的依赖发生变化时会被调用；例如：在之前`build()` 中包含了一个`InheritedWidget`，然后在之后的`build()` 中`InheritedWidget`发生了变化，那么此时`InheritedWidget`的子widget的`didChangeDependencies()`回调都会被调用。典型的场景是当系统语言Locale或应用主题改变时，Flutter framework会通知widget调用此回调。
 - `build()`：此回调读者现在应该已经相当熟悉了，它主要是用于构建Widget子树的，会在如下场景被调用：
 
@@ -379,7 +379,7 @@ StatefulWidget生命周期如图3-2所示：
 
 ### 通过Context获取
 
-`context`对象有一个`ancestorStateOfType(TypeMatcher)`方法，该方法可以从当前节点沿着widget树向上查找指定类型的StatefulWidget对应的State对象。下面是实现打开SnackBar的示例：
+`context`对象有一个`findAncestorStateOfType()`方法，该方法可以从当前节点沿着widget树向上查找指定类型的StatefulWidget对应的State对象。下面是实现打开SnackBar的示例：
 
 ```dart
 Scaffold(
@@ -391,8 +391,7 @@ Scaffold(
       return RaisedButton(
         onPressed: () {
           // 查找父级最近的Scaffold对应的ScaffoldState对象
-          ScaffoldState _state = context.ancestorStateOfType(
-              TypeMatcher<ScaffoldState>());
+          ScaffoldState _state = context.findAncestorStateOfType<ScaffoldState>();
           //调用ScaffoldState的showSnackBar来弹出SnackBar
           _state.showSnackBar(
             SnackBar(
@@ -411,7 +410,7 @@ Scaffold(
 
 ![图3-1-2](../imgs/3-1-2.png)
 
-一般来说，如果StatefulWidget的状态是私有的（不应该向外部暴露），那么我们代码中就不应该去直接获取其State对象；如果StatefulWidget的状态是希望暴露出的（通常还有一些组件的操作方法），我们则可以去直接获取其State对象。但是通过`context.ancestorStateOfType`获取StatefulWidget的状态的方法是通用的，我们并不能在语法层面指定StatefulWidget的状态是否私有，所以在Flutter开发中便有了一个默认的约定：如果StatefulWidget的状态是希望暴露出的，应当在StatefulWidget中提供一个`of`静态方法来获取其State对象，开发者便可直接通过该方法来获取；如果State不希望暴露，则不提供`of`方法。这个约定在Flutter SDK里随处可见。所以，上面示例中的`Scaffold`也提供了一个`of`方法，我们其实是可以直接调用它的：
+一般来说，如果StatefulWidget的状态是私有的（不应该向外部暴露），那么我们代码中就不应该去直接获取其State对象；如果StatefulWidget的状态是希望暴露出的（通常还有一些组件的操作方法），我们则可以去直接获取其State对象。但是通过`context.findAncestorStateOfType`获取StatefulWidget的状态的方法是通用的，我们并不能在语法层面指定StatefulWidget的状态是否私有，所以在Flutter开发中便有了一个默认的约定：如果StatefulWidget的状态是希望暴露出的，应当在StatefulWidget中提供一个`of`静态方法来获取其State对象，开发者便可直接通过该方法来获取；如果State不希望暴露，则不提供`of`方法。这个约定在Flutter SDK里随处可见。所以，上面示例中的`Scaffold`也提供了一个`of`方法，我们其实是可以直接调用它的：
 
 ```dart
 ...//省略无关代码

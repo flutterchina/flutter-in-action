@@ -25,7 +25,7 @@ class ShareDataWidget extends InheritedWidget {
     
   //定义一个便捷方法，方便子树中的widget获取共享数据  
   static ShareDataWidget of(BuildContext context) {
-    return context.inheritFromWidgetOfExactType(ShareDataWidget);
+    return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
   }
 
   //该回调决定当data发生变化时，是否通知子树中依赖data的Widget  
@@ -150,12 +150,12 @@ class __TestWidgetState extends State<_TestWidget> {
 ```dart
 //定义一个便捷方法，方便子树中的widget获取共享数据
 static ShareDataWidget of(BuildContext context) {
-  //return context.inheritFromWidgetOfExactType(ShareDataWidget);
+  //return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
   return context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget;
 }
 ```
 
-唯一的改动就是获取`ShareDataWidget`对象的方式，把`inheritFromWidgetOfExactType()`方法换成了`context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget`，那么他们到底有什么区别呢，我们看一下这两个方法的源码（实现代码在`Element`类中，`Context`和`Element`的关系我们将在后面专门介绍）：
+唯一的改动就是获取`ShareDataWidget`对象的方式，把`dependOnInheritedWidgetOfExactType()`方法换成了`context.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget`，那么他们到底有什么区别呢，我们看一下这两个方法的源码（实现代码在`Element`类中，`Context`和`Element`的关系我们将在后面专门介绍）：
 
 ```dart 
 @override
@@ -165,7 +165,7 @@ InheritedElement getElementForInheritedWidgetOfExactType<T extends InheritedWidg
   return ancestor;
 }
 @override
-InheritedWidget inheritFromWidgetOfExactType(Type targetType, { Object aspect }) {
+InheritedWidget dependOnInheritedWidgetOfExactType({ Object aspect }) {
   assert(_debugCheckStateIsActiveForAncestorLookup());
   final InheritedElement ancestor = _inheritedWidgets == null ? null : _inheritedWidgets[T];
   //多出的部分
@@ -178,22 +178,22 @@ InheritedWidget inheritFromWidgetOfExactType(Type targetType, { Object aspect })
 }
 ```
 
-我们可以看到，`inheritFromWidgetOfExactType()` 比 `ancestorInheritedElementForWidgetOfExactType()`多调了`inheritFromElement`方法，`inheritFromElement`源码如下：
+我们可以看到，`dependOnInheritedWidgetOfExactType()` 比 `getElementForInheritedWidgetOfExactType()`多调了`dependOnInheritedElement`方法，`dependOnInheritedElement`源码如下：
 
 ```dart
-@override
-InheritedWidget inheritFromElement(InheritedElement ancestor, { Object aspect }) {
-  //注册依赖关系
-  _dependencies ??= HashSet<InheritedElement>();
-  _dependencies.add(ancestor);
-  ancestor.updateDependencies(this, aspect);
-  return ancestor.widget;
-}
+  @override
+  InheritedWidget dependOnInheritedElement(InheritedElement ancestor, { Object aspect }) {
+    assert(ancestor != null);
+    _dependencies ??= HashSet<InheritedElement>();
+    _dependencies.add(ancestor);
+    ancestor.updateDependencies(this, aspect);
+    return ancestor.widget;
+  }
 ```
 
-可以看到`inheritFromElement`方法中主要是注册了依赖关系！看到这里也就清晰了，**调用`inheritFromWidgetOfExactType()` 和 `ancestorInheritedElementForWidgetOfExactType()`的区别就是前者会注册依赖关系，而后者不会**，所以在调用`inheritFromWidgetOfExactType()`时，`InheritedWidget`和依赖它的子孙组件关系便完成了注册，之后当`InheritedWidget`发生变化时，就会更新依赖它的子孙组件，也就是会调这些子孙组件的`didChangeDependencies()`方法和`build()`方法。而当调用的是 `ancestorInheritedElementForWidgetOfExactType()`时，由于没有注册依赖关系，所以之后当`InheritedWidget`发生变化时，就不会更新相应的子孙Widget。
+可以看到`dependOnInheritedElement`方法中主要是注册了依赖关系！看到这里也就清晰了，**调用`dependOnInheritedWidgetOfExactType()` 和 `getElementForInheritedWidgetOfExactType()`的区别就是前者会注册依赖关系，而后者不会**，所以在调用`dependOnInheritedWidgetOfExactType()`时，`InheritedWidget`和依赖它的子孙组件关系便完成了注册，之后当`InheritedWidget`发生变化时，就会更新依赖它的子孙组件，也就是会调这些子孙组件的`didChangeDependencies()`方法和`build()`方法。而当调用的是 `getElementForInheritedWidgetOfExactType()`时，由于没有注册依赖关系，所以之后当`InheritedWidget`发生变化时，就不会更新相应的子孙Widget。
 
-注意，如果将上面示例中`ShareDataWidget.of()`方法实现改成调用`ancestorInheritedElementForWidgetOfExactType()`，运行示例后，点击"Increment"按钮，会发现`__TestWidgetState `的`didChangeDependencies()`方法确实不会再被调用，但是其`build()`仍然会被调用！造成这个的原因其实是，点击"Increment"按钮后，会调用`_InheritedWidgetTestRouteState`的`setState()`方法，此时会重新构建整个页面，由于示例中，`__TestWidget` 并没有任何缓存，所以它也都会被重新构建，所以也会调用`build()`方法。
+注意，如果将上面示例中`ShareDataWidget.of()`方法实现改成调用`getElementForInheritedWidgetOfExactType()`，运行示例后，点击"Increment"按钮，会发现`__TestWidgetState `的`didChangeDependencies()`方法确实不会再被调用，但是其`build()`仍然会被调用！造成这个的原因其实是，点击"Increment"按钮后，会调用`_InheritedWidgetTestRouteState`的`setState()`方法，此时会重新构建整个页面，由于示例中，`__TestWidget` 并没有任何缓存，所以它也都会被重新构建，所以也会调用`build()`方法。
 
 那么，现在就带来了一个问题：实际上，我们只想更新子树中依赖了`ShareDataWidget`的组件，而现在只要调用`_InheritedWidgetTestRouteState`的`setState()`方法，所有子节点都会被重新build，这很没必要，那么有什么办法可以避免呢？答案是缓存！一个简单的做法就是通过封装一个`StatefulWidget`，将子Widget树缓存起来，具体做法下一节我们将通过实现一个`Provider` Widget 来演示如何缓存，以及如何利用`InheritedWidget` 来实现Flutter全局状态共享。
 

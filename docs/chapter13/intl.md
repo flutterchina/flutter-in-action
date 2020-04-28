@@ -15,7 +15,7 @@ dev_dependencies:
 
 ### 第一步：创建必要目录
 
-首先，在项目根目录下创建一个i10n-arb目录，该目录保存我们接下来通过intl_translation命令生成的arb文件。一个简单的arb文件内容如下：
+首先，在项目根目录下创建一个l10n-arb目录，该目录保存我们接下来通过intl_translation命令生成的arb文件。一个简单的arb文件内容如下：
 
 ```json
 {
@@ -32,13 +32,13 @@ dev_dependencies:
 
 我们根据"@@locale"字段可以看出这个arb对应的是中文简体的翻译，里面的`title`字段对应的正是我们应用标题的中文简体翻译。`@title`字段是对`title`的一些描述信息。
 
-接下来，我们在lib目录下创建一个i10n的目录，该目录用于保存从arb文件生成的dart代码文件。
+接下来，我们在lib目录下创建一个l10n的目录，该目录用于保存从arb文件生成的dart代码文件。
 
 ### 第二步：实现Localizations和Delegate类
 
 和上一节中的步骤类似，我们仍然要实现`Localizations`和Delegate类，不同的是，现在我们在实现时要使用intl包的一些方法（有些是动态生成的）。
 
-下面我们在`lib/i10n`目录下新建一个“localization_intl.dart”的文件，文件内容如下：
+下面我们在`lib/l10n`目录下新建一个“localization_intl.dart”的文件，文件内容如下：
 
 ```dart
 import 'package:flutter/material.dart';
@@ -127,10 +127,10 @@ remainingEmailsMessage(int howMany) => Intl.plural(howMany,
 现在我们可以通[intl_translation](https://pub.dartlang.org/packages/intl_translation)包的工具来提取代码中的字符串到一个arb文件，运行如下命名：
 
 ```shell
-flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb \ lib/i10n/localization_intl.dart
+flutter pub pub run intl_translation:extract_to_arb --output-dir=l10n-arb \ lib/l10n/localization_intl.dart
 ```
 
-运行此命令后，会将我们之前通过Intl API标识的属性和字符串提取到“i10n-arb/intl_messages.arb”文件中，我们看看其内容：
+运行此命令后，会将我们之前通过Intl API标识的属性和字符串提取到“l10n-arb/intl_messages.arb”文件中，我们看看其内容：
 
 ```json
 {
@@ -192,18 +192,18 @@ flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb \ lib/
 最后一步就是根据arb生成dart文件：
 
 ```shell
-flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
+flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-use-deferred-loading lib/l10n/localization_intl.dart l10n-arb/intl_*.arb
 ```
 
-这句命令在首次运行时会在"lib/i10n"目录下生成多个文件，对应多种Locale，这些代码便是最终要使用的dart代码。
+这句命令在首次运行时会在"lib/l10n"目录下生成多个文件，对应多种Locale，这些代码便是最终要使用的dart代码。
 
 ### 总结
 
 至此，我们将使用[Intl](https://pub.dartlang.org/packages/intl)包对APP进行国际化的流程介绍完了，我们可以发现，其中第一步和第二步只在第一次需要，而我们开发时的主要的工作都是在第三步。由于最后两步在第三步完成后每次也都需要，所以我们可以将最后两步放在一个shell脚本里，当我们完成第三步或完成arb文件翻译后只需要分别执行该脚本即可。我们在根目录下创建一个intl.sh的脚本，内容为：
 
 ```shell
-flutter pub pub run intl_translation:extract_to_arb --output-dir=i10n-arb lib/i10n/localization_intl.dart
-flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/i10n --no-use-deferred-loading lib/i10n/localization_intl.dart i10n-arb/intl_*.arb
+flutter pub pub run intl_translation:extract_to_arb --output-dir=l10n-arb lib/l10n/localization_intl.dart
+flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-use-deferred-loading lib/l10n/localization_intl.dart l10n-arb/intl_*.arb
 ```
 
 然后授予执行权限：

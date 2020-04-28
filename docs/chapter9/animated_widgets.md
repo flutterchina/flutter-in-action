@@ -217,8 +217,7 @@ AnimatedDecoratedBox(
       onPressed: () {
         if (_decorationColor == Colors.red) {
           ImplicitlyAnimatedWidgetState _state =
-              context.ancestorStateOfType(
-                  TypeMatcher<ImplicitlyAnimatedWidgetState>());
+              context.findAncestorStateOfType<ImplicitlyAnimatedWidgetState>();
            // 通过controller来启动反向动画
           _state.controller.reverse().then((e) {
             // 经验证必须调用setState来触发rebuild，否则状态同步会有问题
