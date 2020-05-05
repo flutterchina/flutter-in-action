@@ -83,7 +83,7 @@ Wrap(
 缺点：
 
 - 使用复杂。
-- 不能自适应子组件大小，必须通过指定父容器大小或实现`TestFlowDelegate`的`getSize`返回固定大小。
+- 不能自适应子组件大小，必须通过指定父容器大小或实现`FlowDelegate`的`getSize`返回固定大小。
 
 示例：
 
@@ -103,7 +103,7 @@ Flow(
 )
 ```
 
-实现TestFlowDelegate:
+实现FlowDelegate:
 
 ```dart
 class TestFlowDelegate extends FlowDelegate {
