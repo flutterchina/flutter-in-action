@@ -55,9 +55,12 @@ class _TapboxAState extends State<TapboxA> {
       onTap: _handleTap,
       child: new Container(
         child: new Center(
-          child: new Text(
-            _active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32.0, color: Colors.white),
+          child: new Directionality(
+            textDirection: TextDirection.ltr,
+            child: new Text(
+                _active ? 'Active' : 'Inactive',
+                style: new TextStyle(fontSize: 32.0, color: Colors.white)
+            ),
           ),
         ),
         width: 200.0,
@@ -139,9 +142,12 @@ class TapboxB extends StatelessWidget {
       onTap: _handleTap,
       child: new Container(
         child: new Center(
-          child: new Text(
-            active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32.0, color: Colors.white),
+          child: new Directionality(
+            textDirection: TextDirection.ltr,
+            child: new Text(
+              active ? 'Active' : 'Inactive',
+              style: new TextStyle(fontSize: 32.0, color: Colors.white),
+            ),
           ),
         ),
         width: 200.0,
@@ -252,9 +258,12 @@ class _TapboxCState extends State<TapboxC> {
       onTapCancel: _handleTapCancel,
       child: new Container(
         child: new Center(
-          child: new Text(widget.active ? 'Active' : 'Inactive',
+          child: new Directionality(
+            textDirection: TextDirection.ltr,
+            child: new Text(
+              widget.active ? 'Active' : 'Inactive',
               style: new TextStyle(fontSize: 32.0, color: Colors.white)),
-        ),
+          ),
         width: 200.0,
         height: 200.0,
         decoration: new BoxDecoration(
