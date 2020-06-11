@@ -21,7 +21,7 @@
 
   FlutterMethodChannel* batteryChannel = [FlutterMethodChannel
                                           methodChannelWithName:@"samples.flutter.io/battery"
-                                          binaryMessenger:controller];
+                                          binaryMessenger:controller.binaryMessenger];
 
   [batteryChannel setMethodCallHandler:^(FlutterMethodCall* call, FlutterResult result) {
     // TODO
@@ -91,7 +91,7 @@
 
     let controller : FlutterViewController = window?.rootViewController as! FlutterViewController;
     let batteryChannel = FlutterMethodChannel.init(name: "samples.flutter.io/battery",
-                                                   binaryMessenger: controller);
+                                                   binaryMessenger: controller.binaryMessenger);
     batteryChannel.setMethodCallHandler({
       (call: FlutterMethodCall, result: FlutterResult) -> Void in
       // Handle battery messages.
