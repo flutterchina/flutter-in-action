@@ -127,7 +127,7 @@ tooltip: MaterialLocalizations.of(context).backButtonTooltip,
 
 为了尽可能小而且简单，flutter软件包中仅提供美国英语值的`MaterialLocalizations`和`WidgetsLocalizations`接口的实现。 这些实现类分别称为`DefaultMaterialLocalizations`和`DefaultWidgetsLocalizations`。flutter_localizations 包包含`GlobalMaterialLocalizations`和`GlobalWidgetsLocalizations`的本地化接口的多语言实现， 国际化的应用程序必须按照本节开头说明的那样为这些类指定本地化Delegate。
 
-上述的`GlobalMaterialLocalizations`和`GlobalWidgetsLocalizations`只是Material组件库的本地化实现，如果我们要让自己的布局支持多语言，那么就需要实现在即的`Localizations`，我们将在下一节介绍其具体的实现方式。
+上述的`GlobalMaterialLocalizations`和`GlobalWidgetsLocalizations`只是Material组件库的本地化实现，如果我们要让自己的布局支持多语言，那么就需要实现自己的`Localizations`，我们将在下一节介绍其具体的实现方式。
 
 
 
