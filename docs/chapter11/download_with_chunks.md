@@ -1,11 +1,10 @@
+# 11.4 实例：Http 分块下载
 
-# 11.4 实例：Http分块下载
-
-本节将通过一个“Http分块下载”的示例演示一下dio的具体用法。
+本节将通过一个“Http 分块下载”的示例演示一下 dio 的具体用法。
 
 ### 原理
 
-Http协议定义了分块传输的响应header字段，但具体是否支持取决于Server的实现，我们可以指定请求头的"range"字段来验证服务器是否支持分块传输。例如，我们可以利用curl命令来验证：
+Http 协议定义了分块传输的响应 header 字段，但具体是否支持取决于 Server 的实现，我们可以指定请求头的"range"字段来验证服务器是否支持分块传输。例如，我们可以利用 curl 命令来验证：
 
 ```shell
 bogon:~ duwen$ curl -H "Range: bytes=0-10" http://download.dcloud.net.cn/HBuilder.9.0.2.macosx_64.dmg -v
@@ -25,13 +24,13 @@ bogon:~ duwen$ curl -H "Range: bytes=0-10" http://download.dcloud.net.cn/HBuilde
 
 ```
 
-我们在请求头中添加"Range: bytes=0-10"的作用是，告诉服务器本次请求我们只想获取文件0-10(包括10，共11字节)这块内容。如果服务器支持分块传输，则响应状态码为206，表示“部分内容”，并且同时响应头中包含“Content-Range”字段，如果不支持则不会包含。我们看看上面“Content-Range”的内容：
+我们在请求头中添加"Range: bytes=0-10"的作用是，告诉服务器本次请求我们只想获取文件 0-10(包括 10，共 11 字节)这块内容。如果服务器支持分块传输，则响应状态码为 206，表示“部分内容”，并且同时响应头中包含“Content-Range”字段，如果不支持则不会包含。我们看看上面“Content-Range”的内容：
 
 ```
 Content-Range: bytes 0-10/233295878
 ```
 
-0-10表示本次返回的区块，233295878代表文件的总长度，单位都是byte,  也就是该文件大概233M多一点。
+0-10 表示本次返回的区块，233295878 代表文件的总长度，单位都是 byte, 也就是该文件大概 233M 多一点。
 
 基于此，我们可以设计一个简单的多线程的文件分块下载器，实现的思路是：
 
@@ -44,7 +43,7 @@ Content-Range: bytes 0-10/233295878
 下面是整体的流程：
 
 ```dart
-// 通过第一个分块请求检测服务器是否支持分块传输  
+// 通过第一个分块请求检测服务器是否支持分块传输
 Response response = await downloadChunk(url, 0, firstChunkSize, 0);
 if (response.statusCode == 206) {    //如果支持
     //解析文件总长度，进而算出剩余长度
@@ -63,18 +62,18 @@ if (response.statusCode == 206) {    //如果支持
         var futures = <Future>[];
         for (int i = 0; i < maxChunk; ++i) {
             int start = firstChunkSize + i * chunkSize;
-            //分块下载剩余文件  
+            //分块下载剩余文件
             futures.add(downloadChunk(url, start, start + chunkSize, i + 1));
         }
         //等待所有分块全部下载完成
         await Future.wait(futures);
     }
-    //合并文件文件  
+    //合并文件文件
     await mergeTempFiles(chunk);
 }
 ```
 
-下面我们使用dio的`download` API 实现`downloadChunk`：
+下面我们使用 dio 的`download` API 实现`downloadChunk`：
 
 ```dart
 //start 代表当前块的起始位置，end代表结束位置
@@ -99,7 +98,7 @@ Future<Response> downloadChunk(url, start, end, no) async {
 Future mergeTempFiles(chunk) async {
   File f = File(savePath + "temp0");
   IOSink ioSink= f.openWrite(mode: FileMode.writeOnlyAppend);
-  //合并临时文件  
+  //合并临时文件
   for (int i = 1; i < chunk; ++i) {
     File _f = File(savePath + "temp$i");
     await ioSink.addStream(_f.openRead());
@@ -203,7 +202,7 @@ main() async {
 
 1. 分块下载真的能提高下载速度吗？
 
-   其实下载速度的主要瓶颈是取决于网络速度和服务器的出口速度，如果是同一个数据源，分块下载的意义并不大，因为服务器是同一个，出口速度确定的，主要取决于网速，而上面的例子正式同源分块下载，读者可以自己对比一下分块和不分块的的下载速度。如果有多个下载源，并且每个下载源的出口带宽都是有限制的，这时分块下载可能会更快一下，之所以说“可能”，是由于这并不是一定的，比如有三个源，三个源的出口带宽都为1G/s，而我们设备所连网络的峰值假设只有800M/s，那么瓶颈就在我们的网络。即使我们设备的带宽大于任意一个源，下载速度依然不一定就比单源单线下载快，试想一下，假设有两个源A和B，速度A源是B源的3倍，如果采用分块下载，两个源各下载一半的话，读者可以算一下所需的下载时间，然后再算一下只从A源下载所需的时间，看看哪个更快。
+   其实下载速度的主要瓶颈是取决于网络速度和服务器的出口速度，如果是同一个数据源，分块下载的意义并不大，因为服务器是同一个，出口速度确定的，主要取决于网速，而上面的例子正式同源分块下载，读者可以自己对比一下分块和不分块的的下载速度。如果有多个下载源，并且每个下载源的出口带宽都是有限制的，这时分块下载可能会更快一下，之所以说“可能”，是由于这并不是一定的，比如有三个源，三个源的出口带宽都为 1G/s，而我们设备所连网络的峰值假设只有 800M/s，那么瓶颈就在我们的网络。即使我们设备的带宽大于任意一个源，下载速度依然不一定就比单源单线下载快，试想一下，假设有两个源 A 和 B，速度 A 源是 B 源的 3 倍，如果采用分块下载，两个源各下载一半的话，读者可以算一下所需的下载时间，然后再算一下只从 A 源下载所需的时间，看看哪个更快。
 
    分块下载的最终速度受设备所在网络带宽、源出口速度、每个块大小、以及分块的数量等诸多因素影响，实际过程中很难保证速度最优。在实际开发中，读者可可以先测试对比后再决定是否使用。
 

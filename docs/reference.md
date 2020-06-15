@@ -1,6 +1,6 @@
 # 参考文献
 
-- React Native官网：https://facebook.github.io/react-native/
+- React Native 官网：https://facebook.github.io/react-native/
 
 - Weex：https://weex.apache.org/zh/guide/introduction.html
 
@@ -8,20 +8,18 @@
 
 - QT for mobile：https://www.qt.io/mobile-app-development/
 
-- Flutter官网：https://flutter.dev/
+- Flutter 官网：https://flutter.dev/
 
-- Flutter中文网社区：https://flutterchina.club/docs/
+- Flutter 中文网社区：https://flutterchina.club/docs/
 
-- Dart Packages官网：https://pub.dev/
+- Dart Packages 官网：https://pub.dev/
 
-- Flutter中文开发者社区开源项目：https://github.com/flutterchina
+- Flutter 中文开发者社区开源项目：https://github.com/flutterchina
 
 - Material Design：https://material.io/
 
 - Github 开发者中心官网：https://developer.github.com/v3/
 
-- Android开发者中心官网：https://developer.android.google.cn/
+- Android 开发者中心官网：https://developer.android.google.cn/
 
-- Apple开发者中心官网：https://developer.apple.com/
-
-  
+- Apple 开发者中心官网：https://developer.apple.com/

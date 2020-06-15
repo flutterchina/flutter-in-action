@@ -1,12 +1,10 @@
-
-
 # 4.3 弹性布局（Flex）
 
-弹性布局允许子组件按照一定比例来分配父容器空间。弹性布局的概念在其它UI系统中也都存在，如H5中的弹性盒子布局，Android中的`FlexboxLayout`等。Flutter中的弹性布局主要通过`Flex`和`Expanded`来配合实现。
+弹性布局允许子组件按照一定比例来分配父容器空间。弹性布局的概念在其它 UI 系统中也都存在，如 H5 中的弹性盒子布局，Android 中的`FlexboxLayout`等。Flutter 中的弹性布局主要通过`Flex`和`Expanded`来配合实现。
 
 ### Flex
 
-`Flex`组件可以沿着水平或垂直方向排列子组件，如果你知道主轴方向，使用`Row`或`Column`会方便一些，因为`Row`和`Column`都继承自`Flex`，参数基本相同，所以能使用Flex的地方基本上都可以使用`Row`或`Column`。`Flex`本身功能是很强大的，它也可以和`Expanded`组件配合实现弹性布局。接下来我们只讨论`Flex`和弹性布局相关的属性(其它属性已经在介绍`Row`和`Column`时介绍过了)。
+`Flex`组件可以沿着水平或垂直方向排列子组件，如果你知道主轴方向，使用`Row`或`Column`会方便一些，因为`Row`和`Column`都继承自`Flex`，参数基本相同，所以能使用 Flex 的地方基本上都可以使用`Row`或`Column`。`Flex`本身功能是很强大的，它也可以和`Expanded`组件配合实现弹性布局。接下来我们只讨论`Flex`和弹性布局相关的属性(其它属性已经在介绍`Row`和`Column`时介绍过了)。
 
 ```dart
 Flex({
@@ -24,12 +22,12 @@ Flex({
 
 ```dart
 const Expanded({
-  int flex = 1, 
+  int flex = 1,
   @required Widget child,
 })
 ```
 
-`flex`参数为弹性系数，如果为0或`null`，则`child`是没有弹性的，即不会被扩伸占用的空间。如果大于0，所有的`Expanded`按照其flex的比例来分割主轴的全部空闲空间。下面我们看一个例子：
+`flex`参数为弹性系数，如果为 0 或`null`，则`child`是没有弹性的，即不会被扩伸占用的空间。如果大于 0，所有的`Expanded`按照其 flex 的比例来分割主轴的全部空闲空间。下面我们看一个例子：
 
 ```dart
 class FlexLayoutTestRoute extends StatelessWidget {
@@ -37,7 +35,7 @@ class FlexLayoutTestRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        //Flex的两个子widget按1：2来占据水平空间  
+        //Flex的两个子widget按1：2来占据水平空间
         Flex(
           direction: Axis.horizontal,
           children: <Widget>[
@@ -61,7 +59,7 @@ class FlexLayoutTestRoute extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20.0),
           child: SizedBox(
             height: 100.0,
-            //Flex的三个子widget，在垂直方向按2：1：1来占用100像素的空间  
+            //Flex的三个子widget，在垂直方向按2：1：1来占用100像素的空间
             child: Flex(
               direction: Axis.vertical,
               children: <Widget>[
@@ -92,7 +90,7 @@ class FlexLayoutTestRoute extends StatelessWidget {
 }
 ```
 
-运行效果如图4-5所示：
+运行效果如图 4-5 所示：
 
 ![弹性布局](../imgs/4-5.png)
 
@@ -104,7 +102,7 @@ class Spacer extends StatelessWidget {
     : assert(flex != null),
       assert(flex > 0),
       super(key: key);
-  
+
   final int flex;
 
   @override

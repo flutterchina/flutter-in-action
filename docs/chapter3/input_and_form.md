@@ -1,7 +1,6 @@
-
 # 3.7 输入框及表单
 
-Material组件库中提供了输入框组件`TextField`和表单组件`Form`。下面我们分别介绍一下。
+Material 组件库中提供了输入框组件`TextField`和表单组件`Form`。下面我们分别介绍一下。
 
 ## 3.7.1 TextField
 
@@ -10,7 +9,7 @@ Material组件库中提供了输入框组件`TextField`和表单组件`Form`。�
 ```dart
 const TextField({
   ...
-  TextEditingController controller, 
+  TextEditingController controller,
   FocusNode focusNode,
   InputDecoration decoration = const InputDecoration(),
   TextInputType keyboardType,
@@ -34,8 +33,6 @@ const TextField({
 })
 ```
 
-
-
 - `controller`：编辑框的控制器，通过它可以设置/获取编辑框的内容、选择编辑内容、监听编辑文本改变事件。大多数情况下我们都需要显式提供一个`controller`来与文本框交互。如果没有提供`controller`，则`TextField`内部会自动创建一个。
 
 - `focusNode`：用于控制`TextField`是否占有当前键盘的输入焦点。它是我们和键盘交互的一个句柄（handle）。
@@ -44,21 +41,17 @@ const TextField({
 
 - `keyboardType`：用于设置该输入框默认的键盘输入类型，取值如下：
 
-  
+| TextInputType 枚举值 | 含义                                                 |
+| -------------------- | ---------------------------------------------------- |
+| text                 | 文本输入键盘                                         |
+| multiline            | 多行文本，需和 maxLines 配合使用(设为 null 或大于 1) |
+| number               | 数字；会弹出数字键盘                                 |
+| phone                | 优化后的电话号码输入键盘；会弹出数字键盘并显示“\* #” |
+| datetime             | 优化后的日期输入键盘；Android 上会显示“: -”          |
+| emailAddress         | 优化后的电子邮件地址；会显示“@ .”                    |
+| url                  | 优化后的 url 输入键盘； 会显示“/ .”                  |
 
-  | TextInputType枚举值 | 含义                                                |
-  | ------------------- | --------------------------------------------------- |
-  | text                | 文本输入键盘                                        |
-  | multiline           | 多行文本，需和maxLines配合使用(设为null或大于1)     |
-  | number              | 数字；会弹出数字键盘                                |
-  | phone               | 优化后的电话号码输入键盘；会弹出数字键盘并显示“* #” |
-  | datetime            | 优化后的日期输入键盘；Android上会显示“: -”          |
-  | emailAddress        | 优化后的电子邮件地址；会显示“@ .”                   |
-  | url                 | 优化后的url输入键盘； 会显示“/ .”                   |
-
-  
-
-- `textInputAction`：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看API文档，下面是当值为`TextInputAction.search`时，原生Android系统下键盘样式如图3-24所示：
+- `textInputAction`：键盘动作按钮图标(即回车键位图标)，它是一个枚举值，有多个可选值，全部的取值列表读者可以查看 API 文档，下面是当值为`TextInputAction.search`时，原生 Android 系统下键盘样式如图 3-24 所示：
 
   ![图3-24](../imgs/3-24.png)
 
@@ -70,13 +63,13 @@ const TextField({
 
 - `obscureText`：是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换。
 
-- `maxLines`：输入框的最大行数，默认为1；如果为`null`，则无行数限制。
+- `maxLines`：输入框的最大行数，默认为 1；如果为`null`，则无行数限制。
 
 - `maxLength`和`maxLengthEnforced` ：`maxLength`代表输入框文本的最大长度，设置后输入框右下角会显示输入的文本计数。`maxLengthEnforced`决定当输入文本长度超过`maxLength`时是否阻止输入，为`true`时会阻止输入，为`false`时不会阻止输入但输入框会变红。
 
 - `onChange`：输入框内容改变时的回调函数；注：内容改变事件也可以通过`controller`来监听。
 
-- `onEditingComplete`和`onSubmitted`：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍图标）。不同的是两个回调签名不同，`onSubmitted`回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而`onEditingComplete`不接收参数。
+- `onEditingComplete`和`onSubmitted`：这两个回调都是在输入框输入完成时触发，比如按了键盘的完成键（对号图标）或搜索键（🔍 图标）。不同的是两个回调签名不同，`onSubmitted`回调是`ValueChanged<String>`类型，它接收当前输入内容做为参数，而`onEditingComplete`不接收参数。
 
 - `inputFormatters`：用于指定输入格式；当用户输入内容改变时，会根据指定的格式来校验。
 
@@ -111,7 +104,7 @@ Column(
 );
 ```
 
-运行后，效果如图3-25所示：
+运行后，效果如图 3-25 所示：
 
 ![图3-25](../imgs/3-25.png)
 
@@ -131,7 +124,7 @@ Column(
 TextEditingController _unameController = TextEditingController();
 ```
 
-然后设置输入框controller：
+然后设置输入框 controller：
 
 ```dart
 TextField(
@@ -141,7 +134,7 @@ TextField(
 )
 ```
 
-通过controller获取输入框内容
+通过 controller 获取输入框内容
 
 ```dart
 print(_unameController.text)
@@ -167,7 +160,7 @@ print(_unameController.text)
    ```dart
    @override
    void initState() {
-     //监听输入改变  
+     //监听输入改变
      _unameController.addListener((){
        print(_unameController.text);
      });
@@ -200,18 +193,18 @@ TextField(
 )
 ```
 
-运行效果如图3-26所示：
+运行效果如图 3-26 所示：
 
 ![图3-26](../imgs/3-26.png)
 
 ##### 控制焦点
 
-焦点可以通过`FocusNode`和`FocusScopeNode`来控制，默认情况下，焦点由`FocusScope`来管理，它代表焦点控制范围，可以在这个范围内可以通过`FocusScopeNode`在输入框之间移动焦点、设置默认焦点等。我们可以通过`FocusScope.of(context)` 来获取Widget树中默认的`FocusScopeNode`。下面看一个示例，在此示例中创建两个`TextField`，第一个自动获取焦点，然后创建两个按钮：
+焦点可以通过`FocusNode`和`FocusScopeNode`来控制，默认情况下，焦点由`FocusScope`来管理，它代表焦点控制范围，可以在这个范围内可以通过`FocusScopeNode`在输入框之间移动焦点、设置默认焦点等。我们可以通过`FocusScope.of(context)` 来获取 Widget 树中默认的`FocusScopeNode`。下面看一个示例，在此示例中创建两个`TextField`，第一个自动获取焦点，然后创建两个按钮：
 
 - 点击第一个按钮可以将焦点从第一个`TextField`挪到第二个`TextField`。
 - 点击第二个按钮可以关闭键盘。
 
-我们要实现的效果如图3-27所示：
+我们要实现的效果如图 3-27 所示：
 
 ![图3-27](../imgs/3-27.png)
 
@@ -235,7 +228,7 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
       child: Column(
         children: <Widget>[
           TextField(
-            autofocus: true, 
+            autofocus: true,
             focusNode: focusNode1,//关联focusNode1
             decoration: InputDecoration(
                 labelText: "input1"
@@ -265,7 +258,7 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
                 RaisedButton(
                   child: Text("隐藏键盘"),
                   onPressed: () {
-                    // 当所有编辑框都失去焦点时键盘就会收起  
+                    // 当所有编辑框都失去焦点时键盘就会收起
                     focusNode1.unfocus();
                     focusNode2.unfocus();
                   },
@@ -282,7 +275,7 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
 }
 ```
 
-`FocusNode`和`FocusScopeNode`还有一些其它的方法，详情可以查看API文档。
+`FocusNode`和`FocusScopeNode`还有一些其它的方法，详情可以查看 API 文档。
 
 ##### 监听焦点状态改变事件
 
@@ -290,13 +283,13 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
 
 ```dart
 ...
-// 创建 focusNode   
+// 创建 focusNode
 FocusNode focusNode = new FocusNode();
 ...
-// focusNode绑定输入框   
+// focusNode绑定输入框
 TextField(focusNode: focusNode);
 ...
-// 监听焦点变化    
+// 监听焦点变化
 focusNode.addListener((){
    print(focusNode.hasFocus);
 });
@@ -325,7 +318,7 @@ TextField(
 ),
 ```
 
-上面代码我们直接通过InputDecoration的enabledBorder和focusedBorder来分别设置了输入框在未获取焦点和获得焦点后的下划线颜色。另外，我们也可以通过主题来自定义输入框的样式，下面我们探索一下如何在不使用enabledBorder和focusedBorder的情况下来自定义下滑线颜色。
+上面代码我们直接通过 InputDecoration 的 enabledBorder 和 focusedBorder 来分别设置了输入框在未获取焦点和获得焦点后的下划线颜色。另外，我们也可以通过主题来自定义输入框的样式，下面我们探索一下如何在不使用 enabledBorder 和 focusedBorder 的情况下来自定义下滑线颜色。
 
 由于`TextField`在绘制下划线时使用的颜色是主题色里面的`hintColor`，但提示文本颜色也是用的`hintColor`， 如果我们直接修改`hintColor`，那么下划线和提示文本的颜色都会变。值得高兴的是`decoration`中可以设置`hintStyle`，它可以覆盖`hintColor`，并且主题中可以通过`inputDecorationTheme`来设置输入框默认的`decoration`。所以我们可以通过主题来自定义，代码如下：
 
@@ -361,7 +354,7 @@ Theme(
 )
 ```
 
-运行效果如图3-28所示：
+运行效果如图 3-28 所示：
 
 ![图3-28](../imgs/3-28.png)
 
@@ -389,13 +382,13 @@ Container(
 
 ![image-20180904150511545](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20180904150511545.png)
 
-通过这种组件组合的方式，也可以定义背景圆角等。一般来说，优先通过`decoration`来自定义样式，如果`decoration`实现不了，再用widget组合的方式。
+通过这种组件组合的方式，也可以定义背景圆角等。一般来说，优先通过`decoration`来自定义样式，如果`decoration`实现不了，再用 widget 组合的方式。
 
 > 思考题：在这个示例中，下划线颜色是固定的，所以获得焦点后颜色仍然为灰色，如何实现点击后下滑线也变色呢？
 
-## 3.7.2 表单Form
+## 3.7.2 表单 Form
 
-实际业务中，在正式向服务器提交数据前，都会对各个输入框数据进行合法性校验，但是对每一个`TextField`都分别进行校验将会是一件很麻烦的事。还有，如果用户想清除一组`TextField`的内容，除了一个一个清除有没有什么更好的办法呢？为此，Flutter提供了一个`Form` 组件，它可以对输入框进行分组，然后进行一些统一操作，如输入内容校验、输入框重置以及输入内容保存。
+实际业务中，在正式向服务器提交数据前，都会对各个输入框数据进行合法性校验，但是对每一个`TextField`都分别进行校验将会是一件很麻烦的事。还有，如果用户想清除一组`TextField`的内容，除了一个一个清除有没有什么更好的办法呢？为此，Flutter 提供了一个`Form` 组件，它可以对输入框进行分组，然后进行一些统一操作，如输入内容校验、输入框重置以及输入内容保存。
 
 #### Form
 
@@ -410,11 +403,9 @@ Form({
 })
 ```
 
-- `autovalidate`：是否自动校验输入内容；当为`true`时，每一个子FormField内容发生变化时都会自动校验合法性，并直接显示错误信息。否则，需要通过调用`FormState.validate()`来手动校验。
-- `onWillPop`：决定`Form`所在的路由是否可以直接返回（如点击返回按钮），该回调返回一个`Future`对象，如果Future的最终结果是`false`，则当前路由不会返回；如果为`true`，则会返回到上一个路由。此属性通常用于拦截返回按钮。
+- `autovalidate`：是否自动校验输入内容；当为`true`时，每一个子 FormField 内容发生变化时都会自动校验合法性，并直接显示错误信息。否则，需要通过调用`FormState.validate()`来手动校验。
+- `onWillPop`：决定`Form`所在的路由是否可以直接返回（如点击返回按钮），该回调返回一个`Future`对象，如果 Future 的最终结果是`false`，则当前路由不会返回；如果为`true`，则会返回到上一个路由。此属性通常用于拦截返回按钮。
 - `onChanged`：`Form`的任意一个子`FormField`内容发生变化时会触发此回调。
-
-
 
 #### FormField
 
@@ -430,13 +421,13 @@ const FormField({
 })
 ```
 
-为了方便使用，Flutter提供了一个`TextFormField`组件，它继承自`FormField`类，也是`TextField`的一个包装类，所以除了`FormField`定义的属性之外，它还包括`TextField`的属性。
+为了方便使用，Flutter 提供了一个`TextFormField`组件，它继承自`FormField`类，也是`TextField`的一个包装类，所以除了`FormField`定义的属性之外，它还包括`TextField`的属性。
 
-#### FormState 
+#### FormState
 
 `FormState`为`Form`的`State`类，可以通过`Form.of()`或`GlobalKey`获得。我们可以通过它来对`Form`的子孙`FormField`进行统一操作。我们看看其常用的三个方法：
 
-- `FormState.validate()`：调用此方法后，会调用`Form`子孙`FormField的validate`回调，如果有一个校验失败，则返回false，所有校验失败项都会返回用户返回的错误提示。
+- `FormState.validate()`：调用此方法后，会调用`Form`子孙`FormField的validate`回调，如果有一个校验失败，则返回 false，所有校验失败项都会返回用户返回的错误提示。
 - `FormState.save()`：调用此方法后，会调用`Form`子孙`FormField`的`save`回调，用于保存表单内容
 - `FormState.reset()`：调用此方法后，会将子孙`FormField`的内容清空。
 
@@ -445,7 +436,7 @@ const FormField({
 我们修改一下上面用户登录的示例，在提交之前校验：
 
 1. 用户名不能为空，如果为空则提示“用户名不能为空”。
-2. 密码不能小于6位，如果小于6为则提示“密码不能少于6位”。
+2. 密码不能小于 6 位，如果小于 6 为则提示“密码不能少于 6 位”。
 
 完整代码：
 
@@ -520,10 +511,10 @@ class _FormTestRouteState extends State<FormTestRoute> {
                         onPressed: () {
                           //在这里不能通过此方式获取FormState，context不对
                           //print(Form.of(context));
-                            
+
                           // 通过_formKey.currentState 获取FormState后，
                           // 调用validate()方法校验用户名密码是否合法，校验
-                          // 通过后再提交数据。 
+                          // 通过后再提交数据。
                           if((_formKey.currentState as FormState).validate()){
                             //验证通过提交数据
                           }
@@ -542,24 +533,20 @@ class _FormTestRouteState extends State<FormTestRoute> {
 }
 ```
 
-
-
-运行后效果如图3-29所示：
+运行后效果如图 3-29 所示：
 
 ![图3-29](../imgs/3-29.png)
 
-
-
-注意，登录按钮的`onPressed`方法中不能通过`Form.of(context)`来获取，原因是，此处的`context`为`FormTestRoute`的context，而`Form.of(context)`是根据所指定`context`向根去查找，而`FormState`是在`FormTestRoute`的子树中，所以不行。正确的做法是通过`Builder`来构建登录按钮，`Builder`会将`widget`节点的`context`作为回调参数：
+注意，登录按钮的`onPressed`方法中不能通过`Form.of(context)`来获取，原因是，此处的`context`为`FormTestRoute`的 context，而`Form.of(context)`是根据所指定`context`向根去查找，而`FormState`是在`FormTestRoute`的子树中，所以不行。正确的做法是通过`Builder`来构建登录按钮，`Builder`会将`widget`节点的`context`作为回调参数：
 
 ```dart
 Expanded(
- // 通过Builder来获取RaisedButton所在widget树的真正context(Element) 
+ // 通过Builder来获取RaisedButton所在widget树的真正context(Element)
   child:Builder(builder: (context){
     return RaisedButton(
       ...
       onPressed: () {
-        //由于本widget也是Form的子代widget，所以可以通过下面方式获取FormState  
+        //由于本widget也是Form的子代widget，所以可以通过下面方式获取FormState
         if(Form.of(context).validate()){
           //验证通过提交数据
         }
@@ -569,10 +556,4 @@ Expanded(
 )
 ```
 
-其实`context`正是操作Widget所对应的`Element`的一个接口，由于Widget树对应的`Element`都是不同的，所以`context`也都是不同的，有关`context`的更多内容会在后面高级部分详细讨论。Flutter中有很多“of(context)”这种方法，读者在使用时一定要注意`context`是否正确。
-
-
-
-
-
-
+其实`context`正是操作 Widget 所对应的`Element`的一个接口，由于 Widget 树对应的`Element`都是不同的，所以`context`也都是不同的，有关`context`的更多内容会在后面高级部分详细讨论。Flutter 中有很多“of(context)”这种方法，读者在使用时一定要注意`context`是否正确。

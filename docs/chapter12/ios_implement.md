@@ -1,16 +1,16 @@
-# 12.5 插件开发：iOS端API实现
+# 12.5 插件开发：iOS 端 API 实现
 
-本节我们接着之前"获取电池电量"插件的示例，来完成iOS端API的实现。以下步骤使用Objective-C，如果您更喜欢Swift，可以直接跳到后面Swift部分。
+本节我们接着之前"获取电池电量"插件的示例，来完成 iOS 端 API 的实现。以下步骤使用 Objective-C，如果您更喜欢 Swift，可以直接跳到后面 Swift 部分。
 
-首先打开Xcode中Flutter应用程序的iOS部分:
+首先打开 Xcode 中 Flutter 应用程序的 iOS 部分:
 
 1. 启动 Xcode
 2. 选择 File > Open…
-3. 定位到您 Flutter app目录, 然后选择里面的 `iOS`文件夹，点击 OK
-4. 确保Xcode项目的构建没有错误。
+3. 定位到您 Flutter app 目录, 然后选择里面的 `iOS`文件夹，点击 OK
+4. 确保 Xcode 项目的构建没有错误。
 5. 选择 Runner > Runner ，打开`AppDelegate.m`
 
-接下来，在`application didFinishLaunchingWithOptions:`方法内部创建一个`FlutterMethodChannel`，并添加一个处理方法。 确保与在Flutter客户端使用的通道名称相同。
+接下来，在`application didFinishLaunchingWithOptions:`方法内部创建一个`FlutterMethodChannel`，并添加一个处理方法。 确保与在 Flutter 客户端使用的通道名称相同。
 
 ```objectivec
 #import <Flutter/Flutter.h>
@@ -31,7 +31,7 @@
 }
 ```
 
-接下来，我们添加Objective-C代码，使用iOS电池API来获取电池电量，这和原生是相同的。
+接下来，我们添加 Objective-C 代码，使用 iOS 电池 API 来获取电池电量，这和原生是相同的。
 
 在`AppDelegate`类中添加以下新的方法：
 
@@ -47,7 +47,7 @@
 }
 ```
 
-最后，我们完成之前添加的`setMethodCallHandler`方法。我们需要处理的平台方法名为`getBatteryLevel`，所以我们在call参数中需要先判断是否为`getBatteryLevel`。 这个平台方法的实现只需调用我们在前一步中编写的iOS代码，并使用result参数返回成功或错误的响应。如果调用了未定义的API，我们也会通知返回：
+最后，我们完成之前添加的`setMethodCallHandler`方法。我们需要处理的平台方法名为`getBatteryLevel`，所以我们在 call 参数中需要先判断是否为`getBatteryLevel`。 这个平台方法的实现只需调用我们在前一步中编写的 iOS 代码，并使用 result 参数返回成功或错误的响应。如果调用了未定义的 API，我们也会通知返回：
 
 ```objectivec
 [batteryChannel setMethodCallHandler:^(FlutterMethodCall* call, FlutterResult result) {
@@ -67,19 +67,19 @@
 }];
 ```
 
-现在可以在iOS上运行该应用程序了，如果使用的是iOS模拟器，请注意，它不支持电池API，因此应用程序将显示“电池信息不可用”。
+现在可以在 iOS 上运行该应用程序了，如果使用的是 iOS 模拟器，请注意，它不支持电池 API，因此应用程序将显示“电池信息不可用”。
 
-### 使用Swift实现iOS API
+### 使用 Swift 实现 iOS API
 
-以下步骤与上面使用Objective-C相似，首先打开Xcode中Flutter应用程序的iOS部分:
+以下步骤与上面使用 Objective-C 相似，首先打开 Xcode 中 Flutter 应用程序的 iOS 部分:
 
 1. 启动 Xcode
 2. 选择 File > Open…
-3. 定位到您 Flutter app目录, 然后选择里面的 `ios`文件夹，点击 OK
-4. 确保Xcode项目的构建没有错误。
+3. 定位到您 Flutter app 目录, 然后选择里面的 `ios`文件夹，点击 OK
+4. 确保 Xcode 项目的构建没有错误。
 5. 选择 Runner > Runner ，然后打开`AppDelegate.swift`
 
-接下来，覆盖application方法并创建一个`FlutterMethodChannel`绑定通道名称`samples.flutter.io/battery`：
+接下来，覆盖 application 方法并创建一个`FlutterMethodChannel`绑定通道名称`samples.flutter.io/battery`：
 
 ```swift
 @UIApplicationMain
@@ -102,7 +102,7 @@
 }
 ```
 
-接下来，我们添加Swift代码，使用iOS电池API来获取电池电量，这和原生开发是相同的。
+接下来，我们添加 Swift 代码，使用 iOS 电池 API 来获取电池电量，这和原生开发是相同的。
 
 将以下新方法添加到`AppDelegate.swift`底部:
 
@@ -120,7 +120,7 @@ private func receiveBatteryLevel(result: FlutterResult) {
 }
 ```
 
-最后，我们完成之前添加的`setMethodCallHandler`方法。我们需要处理的平台方法名为`getBatteryLevel`，所以我们在call参数中需要先判断是否为`getBatteryLevel`。 这个平台方法的实现只需调用我们在前一步中编写的iOS代码，并使用result参数返回成功或错误的响应。如果调用了未定义的API，我们也会通知返回：
+最后，我们完成之前添加的`setMethodCallHandler`方法。我们需要处理的平台方法名为`getBatteryLevel`，所以我们在 call 参数中需要先判断是否为`getBatteryLevel`。 这个平台方法的实现只需调用我们在前一步中编写的 iOS 代码，并使用 result 参数返回成功或错误的响应。如果调用了未定义的 API，我们也会通知返回：
 
 ```swift
 batteryChannel.setMethodCallHandler({
@@ -133,4 +133,4 @@ batteryChannel.setMethodCallHandler({
 });
 ```
 
-现在可以在iOS上运行应用程序，如果使用的是iOS模拟器，请注意，它不支持电池API，因此应用程序将显示“电池信息不可用”。
+现在可以在 iOS 上运行应用程序，如果使用的是 iOS 模拟器，请注意，它不支持电池 API，因此应用程序将显示“电池信息不可用”。

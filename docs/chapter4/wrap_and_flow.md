@@ -1,6 +1,6 @@
 # 4.4 流式布局
 
-在介绍Row和Colum时，如果子widget超出屏幕范围，则会报溢出错误，如：
+在介绍 Row 和 Colum 时，如果子 widget 超出屏幕范围，则会报溢出错误，如：
 
 ```dart
 Row(
@@ -10,15 +10,15 @@ Row(
 );
 ```
 
-运行效果如图4-6所示：
+运行效果如图 4-6 所示：
 
 ![图4-6](../imgs/4-6.png)
 
-可以看到，右边溢出部分报错。这是因为Row默认只有一行，如果超出屏幕不会折行。我们把超出屏幕显示范围会自动折行的布局称为流式布局。Flutter中通过`Wrap`和`Flow`来支持流式布局，将上例中的Row换成Wrap后溢出部分则会自动折行，下面我们分别介绍`Wrap`和`Flow`.
+可以看到，右边溢出部分报错。这是因为 Row 默认只有一行，如果超出屏幕不会折行。我们把超出屏幕显示范围会自动折行的布局称为流式布局。Flutter 中通过`Wrap`和`Flow`来支持流式布局，将上例中的 Row 换成 Wrap 后溢出部分则会自动折行，下面我们分别介绍`Wrap`和`Flow`.
 
 ## 4.4.1 Wrap
 
-下面是Wrap的定义:
+下面是 Wrap 的定义:
 
 ```dart
 Wrap({
@@ -35,9 +35,9 @@ Wrap({
 })
 ```
 
-我们可以看到Wrap的很多属性在`Row`（包括`Flex`和`Column`）中也有，如`direction`、`crossAxisAlignment`、`textDirection`、`verticalDirection`等，这些参数意义是相同的，我们不再重复介绍，读者可以查阅前面介绍`Row`的部分。读者可以认为`Wrap`和`Flex`（包括`Row`和`Column`）除了超出显示范围后`Wrap`会折行外，其它行为基本相同。下面我们看一下`Wrap`特有的几个属性：
+我们可以看到 Wrap 的很多属性在`Row`（包括`Flex`和`Column`）中也有，如`direction`、`crossAxisAlignment`、`textDirection`、`verticalDirection`等，这些参数意义是相同的，我们不再重复介绍，读者可以查阅前面介绍`Row`的部分。读者可以认为`Wrap`和`Flex`（包括`Row`和`Column`）除了超出显示范围后`Wrap`会折行外，其它行为基本相同。下面我们看一下`Wrap`特有的几个属性：
 
-- `spacing`：主轴方向子widget的间距
+- `spacing`：主轴方向子 widget 的间距
 - `runSpacing`：纵轴方向的间距
 - `runAlignment`：纵轴方向的对齐方式
 
@@ -69,13 +69,13 @@ Wrap(
 )
 ```
 
-运行效果如图4-7所示：
+运行效果如图 4-7 所示：
 
 ![图4-7](../imgs/4-7.png)
 
 ## 4.4.2 Flow
 
-我们一般很少会使用`Flow`，因为其过于复杂，需要自己实现子widget的位置转换，在很多场景下首先要考虑的是`Wrap`是否满足需求。`Flow`主要用于一些需要自定义布局策略或性能要求较高(如动画中)的场景。`Flow`有如下优点：
+我们一般很少会使用`Flow`，因为其过于复杂，需要自己实现子 widget 的位置转换，在很多场景下首先要考虑的是`Wrap`是否满足需求。`Flow`主要用于一些需要自定义布局策略或性能要求较高(如动画中)的场景。`Flow`有如下优点：
 
 - 性能好；`Flow`是一个对子组件尺寸以及位置调整非常高效的控件，`Flow`用转换矩阵在对子组件进行位置调整的时候进行了优化：在`Flow`定位过后，如果子组件的尺寸或者位置发生了变化，在`FlowDelegate`中的`paintChildren()`方法中调用`context.paintChild` 进行重绘，而`context.paintChild`在重绘时使用了转换矩阵，并没有实际调整组件位置。
 - 灵活；由于我们需要自己实现`FlowDelegate`的`paintChildren()`方法，所以我们需要自己计算每一个组件的位置，因此，可以自定义布局策略。
@@ -103,7 +103,7 @@ Flow(
 )
 ```
 
-实现TestFlowDelegate:
+实现 TestFlowDelegate:
 
 ```dart
 class TestFlowDelegate extends FlowDelegate {
@@ -113,7 +113,7 @@ class TestFlowDelegate extends FlowDelegate {
   void paintChildren(FlowPaintingContext context) {
     var x = margin.left;
     var y = margin.top;
-    //计算每一个子widget的位置  
+    //计算每一个子widget的位置
     for (int i = 0; i < context.childCount; i++) {
       var w = context.getChildSize(i).width + x + margin.right;
       if (w < context.size.width) {
@@ -124,7 +124,7 @@ class TestFlowDelegate extends FlowDelegate {
       } else {
         x = margin.left;
         y += context.getChildSize(i).height + margin.top + margin.bottom;
-        //绘制子widget(有优化)  
+        //绘制子widget(有优化)
         context.paintChild(i,
             transform: new Matrix4.translationValues(
                 x, y, 0.0));
@@ -135,7 +135,7 @@ class TestFlowDelegate extends FlowDelegate {
 
   @override
   getSize(BoxConstraints constraints){
-    //指定Flow的大小  
+    //指定Flow的大小
     return Size(double.infinity,200.0);
   }
 
@@ -146,9 +146,8 @@ class TestFlowDelegate extends FlowDelegate {
 }
 ```
 
-运行效果见图4-8：
+运行效果见图 4-8：
 
 ![图4-8](../imgs/4-8.png)
 
-可以看到我们主要的任务就是实现`paintChildren`，它的主要任务是确定每个子widget位置。由于Flow不能自适应子widget的大小，我们通过在`getSize`返回一个固定大小来指定Flow的大小。
-
+可以看到我们主要的任务就是实现`paintChildren`，它的主要任务是确定每个子 widget 位置。由于 Flow 不能自适应子 widget 的大小，我们通过在`getSize`返回一个固定大小来指定 Flow 的大小。

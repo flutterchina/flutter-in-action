@@ -1,6 +1,6 @@
 # 9.6 通用“动画切换”组件（AnimatedSwitcher）
 
-实际开发中，我们经常会遇到切换UI元素的场景，比如Tab切换、路由切换。为了增强用户体验，通常在切换时都会指定一个动画，以使切换过程显得平滑。Flutter SDK组件库中已经提供了一些常用的切换组件，如`PageView`、`TabView`等，但是，这些组件并不能覆盖全部的需求场景，为此，Flutter SDK中提供了一个`AnimatedSwitcher`组件，它定义了一种通用的UI切换抽象。
+实际开发中，我们经常会遇到切换 UI 元素的场景，比如 Tab 切换、路由切换。为了增强用户体验，通常在切换时都会指定一个动画，以使切换过程显得平滑。Flutter SDK 组件库中已经提供了一些常用的切换组件，如`PageView`、`TabView`等，但是，这些组件并不能覆盖全部的需求场景，为此，Flutter SDK 中提供了一个`AnimatedSwitcher`组件，它定义了一种通用的 UI 切换抽象。
 
 ## 9.6.1 AnimatedSwitcher
 
@@ -19,19 +19,19 @@ const AnimatedSwitcher({
 })
 ```
 
-当`AnimatedSwitcher`的child发生变化时（类型或Key不同），旧child会执行隐藏动画，新child会执行执行显示动画。究竟执行何种动画效果则由`transitionBuilder `参数决定，该参数接受一个`AnimatedSwitcherTransitionBuilder `类型的builder，定义如下：
+当`AnimatedSwitcher`的 child 发生变化时（类型或 Key 不同），旧 child 会执行隐藏动画，新 child 会执行执行显示动画。究竟执行何种动画效果则由`transitionBuilder`参数决定，该参数接受一个`AnimatedSwitcherTransitionBuilder`类型的 builder，定义如下：
 
 ```dart
 typedef AnimatedSwitcherTransitionBuilder =
   Widget Function(Widget child, Animation<double> animation);
 ```
 
-该`builder`在`AnimatedSwitcher`的child切换时会分别对新、旧child绑定动画：
+该`builder`在`AnimatedSwitcher`的 child 切换时会分别对新、旧 child 绑定动画：
 
-1. 对旧child，绑定的动画会反向执行（reverse）
-2. 对新child，绑定的动画会正向指向（forward）
+1. 对旧 child，绑定的动画会反向执行（reverse）
+2. 对新 child，绑定的动画会正向指向（forward）
 
-这样一下，便实现了对新、旧child的动画绑定。`AnimatedSwitcher`的默认值是`AnimatedSwitcher.defaultTransitionBuilder` ：
+这样一下，便实现了对新、旧 child 的动画绑定。`AnimatedSwitcher`的默认值是`AnimatedSwitcher.defaultTransitionBuilder` ：
 
 ```dart
 Widget defaultTransitionBuilder(Widget child, Animation<double> animation) {
@@ -42,7 +42,7 @@ Widget defaultTransitionBuilder(Widget child, Animation<double> animation) {
 }
 ```
 
-可以看到，返回了`FadeTransition`对象，也就是说默认情况，`AnimatedSwitcher`会对新旧child执行“渐隐”和“渐显”动画。
+可以看到，返回了`FadeTransition`对象，也就是说默认情况，`AnimatedSwitcher`会对新旧 child 执行“渐隐”和“渐显”动画。
 
 ### 例子
 
@@ -95,17 +95,17 @@ class AnimatedSwitcherCounterRoute extends StatefulWidget {
  }
 ```
 
-运行示例代码，当点击“+1”按钮时，原先的数字会逐渐缩小直至隐藏，而新数字会逐渐放大，我截取了动画执行过程的一帧，如图9-5所示：
+运行示例代码，当点击“+1”按钮时，原先的数字会逐渐缩小直至隐藏，而新数字会逐渐放大，我截取了动画执行过程的一帧，如图 9-5 所示：
 
 ![图9-5](../imgs/9-5.png)
 
 上图是第一次点击“+1”按钮后切换动画的一帧，此时“0”正在逐渐缩小，而“1”正在“0”的中间，正在逐渐放大。
 
-> 注意：AnimatedSwitcher的新旧child，如果类型相同，则Key必须不相等。
+> 注意：AnimatedSwitcher 的新旧 child，如果类型相同，则 Key 必须不相等。
 
-### AnimatedSwitcher实现原理
+### AnimatedSwitcher 实现原理
 
-实际上，`AnimatedSwitcher`的实现原理是比较简单的，我们根据`AnimatedSwitcher`的使用方式也可以猜个大概。要想实现新旧child切换动画，只需要明确两个问题：动画执行的时机是和如何对新旧child执行动画。从`AnimatedSwitcher`的使用方式我们可以看到，当child发生变化时（子widget的key和类型**不**同时相等则认为发生变化），则重新会重新执行`build`，然后动画开始执行。我们可以通过继承StatefulWidget来实现`AnimatedSwitcher`，具体做法是在`didUpdateWidget` 回调中判断其新旧child是否发生变化，如果发生变化，则对旧child执行反向退场（reverse）动画，对新child执行正向（forward）入场动画即可。下面是`AnimatedSwitcher`实现的部分核心伪代码：
+实际上，`AnimatedSwitcher`的实现原理是比较简单的，我们根据`AnimatedSwitcher`的使用方式也可以猜个大概。要想实现新旧 child 切换动画，只需要明确两个问题：动画执行的时机是和如何对新旧 child 执行动画。从`AnimatedSwitcher`的使用方式我们可以看到，当 child 发生变化时（子 widget 的 key 和类型**不**同时相等则认为发生变化），则重新会重新执行`build`，然后动画开始执行。我们可以通过继承 StatefulWidget 来实现`AnimatedSwitcher`，具体做法是在`didUpdateWidget` 回调中判断其新旧 child 是否发生变化，如果发生变化，则对旧 child 执行反向退场（reverse）动画，对新 child 执行正向（forward）入场动画即可。下面是`AnimatedSwitcher`实现的部分核心伪代码：
 
 ```dart
 Widget _widget; //
@@ -146,11 +146,11 @@ Widget build(BuildContext context){
 
 上面伪代码展示了`AnimatedSwitcher`实现的核心逻辑，当然`AnimatedSwitcher`真正的实现比这个复杂，它可以自定义进退场过渡动画以及执行动画时的布局等。在此，我们删繁就简，通过伪代码形式让读者能够清楚看到主要的实现思路，具体的实现读者可以参考`AnimatedSwitcher`源码。
 
-另外，Flutter SDK中还提供了一个`AnimatedCrossFade`组件，它也可以切换两个子元素，切换过程执行渐隐渐显的动画，和`AnimatedSwitcher`不同的是`AnimatedCrossFade`是针对两个子元素，而`AnimatedSwitcher`是在一个子元素的新旧值之间切换。`AnimatedCrossFade`实现原理比较简单，也有和`AnimatedSwitcher`类似的地方，因此不再赘述，读者有兴趣可以查看其源码。
+另外，Flutter SDK 中还提供了一个`AnimatedCrossFade`组件，它也可以切换两个子元素，切换过程执行渐隐渐显的动画，和`AnimatedSwitcher`不同的是`AnimatedCrossFade`是针对两个子元素，而`AnimatedSwitcher`是在一个子元素的新旧值之间切换。`AnimatedCrossFade`实现原理比较简单，也有和`AnimatedSwitcher`类似的地方，因此不再赘述，读者有兴趣可以查看其源码。
 
-## 9.6.2 AnimatedSwitcher高级用法
+## 9.6.2 AnimatedSwitcher 高级用法
 
-假设现在我们想实现一个类似路由平移切换的动画：旧页面屏幕中向左侧平移退出，新页面重屏幕右侧平移进入。如果要用AnimatedSwitcher的话，我们很快就会发现一个问题：做不到！我们可能会写出下面的代码：
+假设现在我们想实现一个类似路由平移切换的动画：旧页面屏幕中向左侧平移退出，新页面重屏幕右侧平移进入。如果要用 AnimatedSwitcher 的话，我们很快就会发现一个问题：做不到！我们可能会写出下面的代码：
 
 ```dart
 AnimatedSwitcher(
@@ -166,7 +166,7 @@ AnimatedSwitcher(
 )
 ```
 
-上面的代码有什么问题呢？我们前面说过在`AnimatedSwitcher`的child切换时会分别对新child执行正向动画（forward），而对旧child执行反向动画（reverse），所以真正的效果便是：新child确实从屏幕右侧平移进入了，但旧child却会从屏幕**右侧**（而不是左侧）退出。其实也很容易理解，因为在没有特殊处理的情况下，同一个动画的正向和逆向正好是相反（对称）的。
+上面的代码有什么问题呢？我们前面说过在`AnimatedSwitcher`的 child 切换时会分别对新 child 执行正向动画（forward），而对旧 child 执行反向动画（reverse），所以真正的效果便是：新 child 确实从屏幕右侧平移进入了，但旧 child 却会从屏幕**右侧**（而不是左侧）退出。其实也很容易理解，因为在没有特殊处理的情况下，同一个动画的正向和逆向正好是相反（对称）的。
 
 那么问题来了，难道就不能使用`AnimatedSwitcher`了？答案当然是否定的！仔细想想这个问题，究其原因，就是因为同一个`Animation`正向（forward）和反向（reverse）是对称的。所以如果我们可以打破这种对称性，那么便可以实现这个功能了，下面我们来封装一个`MySlideTransition`，它与`SlideTransition`唯一的不同就是对动画的反向执行进行了定制（从左边滑出隐藏），代码如下：
 
@@ -201,7 +201,7 @@ class MySlideTransition extends AnimatedWidget {
 }
 ```
 
-调用时，将`SlideTransition`替换成`MySlideTransition `即可：
+调用时，将`SlideTransition`替换成`MySlideTransition`即可：
 
 ```dart
 AnimatedSwitcher(
@@ -217,11 +217,11 @@ AnimatedSwitcher(
 )
 ```
 
-运行后，我截取动画执行过程中的一帧，如图9-6所示：
+运行后，我截取动画执行过程中的一帧，如图 9-6 所示：
 
 ![图9-6](../imgs/9-6.png)
 
-上图中“0”从左侧滑出，而“1”从右侧滑入。可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上Flutter路由切换也正是通过`AnimatedSwitcher`来实现的。
+上图中“0”从左侧滑出，而“1”从右侧滑入。可以看到，我们通过这种巧妙的方式实现了类似路由进场切换的动画，实际上 Flutter 路由切换也正是通过`AnimatedSwitcher`来实现的。
 
 ### SlideTransitionX
 
@@ -238,7 +238,7 @@ class SlideTransitionX extends AnimatedWidget {
   })
       : assert(position != null),
         super(key: key, listenable: position) {
-    // 偏移在内部处理      
+    // 偏移在内部处理
     switch (direction) {
       case AxisDirection.up:
         _tween = Tween(begin: Offset(0, 1), end: Offset(0, 0));
@@ -295,7 +295,7 @@ class SlideTransitionX extends AnimatedWidget {
 }
 ```
 
-现在如果我们想实现各种“滑动出入动画”便非常容易，只需给`direction `传递不同的方向值即可，比如要实现“上入下出”，则：
+现在如果我们想实现各种“滑动出入动画”便非常容易，只需给`direction`传递不同的方向值即可，比如要实现“上入下出”，则：
 
 ```dart
 AnimatedSwitcher(
@@ -312,7 +312,7 @@ AnimatedSwitcher(
 )
 ```
 
-运行后，我截取动画执行过程中的一帧，如图9-7所示：
+运行后，我截取动画执行过程中的一帧，如图 9-7 所示：
 
 ![图9-7](../imgs/9-7.png)
 
@@ -320,5 +320,4 @@ AnimatedSwitcher(
 
 ## 总结
 
-本节我们学习了`AnimatedSwitcher`的详细用法，同时也介绍了打破`AnimatedSwitcher`动画对称性的方法。我们可以发现：在需要切换新旧UI元素的场景，`AnimatedSwitcher`将十分实用。
-
+本节我们学习了`AnimatedSwitcher`的详细用法，同时也介绍了打破`AnimatedSwitcher`动画对称性的方法。我们可以发现：在需要切换新旧 UI 元素的场景，`AnimatedSwitcher`将十分实用。

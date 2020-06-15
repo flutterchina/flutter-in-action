@@ -19,24 +19,24 @@ GridView({
 })
 ```
 
-我们可以看到，`GridView`和`ListView`的大多数参数都是相同的，它们的含义也都相同的，如有疑惑读者可以翻阅ListView一节，在此不再赘述。我们唯一需要关注的是`gridDelegate`参数，类型是`SliverGridDelegate`，它的作用是控制`GridView`子组件如何排列(layout)。
+我们可以看到，`GridView`和`ListView`的大多数参数都是相同的，它们的含义也都相同的，如有疑惑读者可以翻阅 ListView 一节，在此不再赘述。我们唯一需要关注的是`gridDelegate`参数，类型是`SliverGridDelegate`，它的作用是控制`GridView`子组件如何排列(layout)。
 
-`SliverGridDelegate`是一个抽象类，定义了`GridView` Layout相关接口，子类需要通过实现它们来实现具体的布局算法。Flutter中提供了两个`SliverGridDelegate`的子类`SliverGridDelegateWithFixedCrossAxisCount`和`SliverGridDelegateWithMaxCrossAxisExtent`，我们可以直接使用，下面我们分别来介绍一下它们。
+`SliverGridDelegate`是一个抽象类，定义了`GridView` Layout 相关接口，子类需要通过实现它们来实现具体的布局算法。Flutter 中提供了两个`SliverGridDelegate`的子类`SliverGridDelegateWithFixedCrossAxisCount`和`SliverGridDelegateWithMaxCrossAxisExtent`，我们可以直接使用，下面我们分别来介绍一下它们。
 
 ### SliverGridDelegateWithFixedCrossAxisCount
 
-该子类实现了一个横轴为固定数量子元素的layout算法，其构造函数为：
+该子类实现了一个横轴为固定数量子元素的 layout 算法，其构造函数为：
 
 ```dart
 SliverGridDelegateWithFixedCrossAxisCount({
-  @required double crossAxisCount, 
+  @required double crossAxisCount,
   double mainAxisSpacing = 0.0,
   double crossAxisSpacing = 0.0,
   double childAspectRatio = 1.0,
 })
 ```
 
-- `crossAxisCount`：横轴子元素的数量。此属性值确定后子元素在横轴的长度就确定了，即ViewPort横轴长度除以`crossAxisCount`的商。
+- `crossAxisCount`：横轴子元素的数量。此属性值确定后子元素在横轴的长度就确定了，即 ViewPort 横轴长度除以`crossAxisCount`的商。
 - `mainAxisSpacing`：主轴方向的间距。
 - `crossAxisSpacing`：横轴方向子元素的间距。
 - `childAspectRatio`：子元素在横轴长度和主轴长度的比例。由于`crossAxisCount`指定后，子元素横轴长度就确定了，然后通过此参数值就可以确定子元素在主轴的长度。
@@ -64,14 +64,12 @@ GridView(
 
 ![图6-9](../imgs/6-9.png)
 
-
-
 #### GridView.count
 
 `GridView.count`构造函数内部使用了`SliverGridDelegateWithFixedCrossAxisCount`，我们通过它可以快速的创建横轴固定数量子元素的`GridView`，上面的示例代码等价于：
 
 ```dart
-GridView.count( 
+GridView.count(
   crossAxisCount: 3,
   childAspectRatio: 1.0,
   children: <Widget>[
@@ -85,11 +83,9 @@ GridView.count(
 );
 ```
 
-
-
 ### SliverGridDelegateWithMaxCrossAxisExtent
 
-该子类实现了一个横轴子元素为固定最大长度的layout算法，其构造函数为：
+该子类实现了一个横轴子元素为固定最大长度的 layout 算法，其构造函数为：
 
 ```dart
 SliverGridDelegateWithMaxCrossAxisExtent({
@@ -100,7 +96,7 @@ SliverGridDelegateWithMaxCrossAxisExtent({
 })
 ```
 
-`maxCrossAxisExtent`为子元素在横轴上的最大长度，之所以是“最大”长度，是**因为横轴方向每个子元素的长度仍然是等分的**，举个例子，如果ViewPort的横轴长度是450，那么当`maxCrossAxisExtent`的值在区间[450/4，450/3)内的话，子元素最终实际长度都为112.5，而`childAspectRatio`所指的子元素横轴和主轴的长度比为**最终的长度比**。其它参数和`SliverGridDelegateWithFixedCrossAxisCount`相同。
+`maxCrossAxisExtent`为子元素在横轴上的最大长度，之所以是“最大”长度，是**因为横轴方向每个子元素的长度仍然是等分的**，举个例子，如果 ViewPort 的横轴长度是 450，那么当`maxCrossAxisExtent`的值在区间[450/4，450/3)内的话，子元素最终实际长度都为 112.5，而`childAspectRatio`所指的子元素横轴和主轴的长度比为**最终的长度比**。其它参数和`SliverGridDelegateWithFixedCrossAxisCount`相同。
 
 下面我们看一个例子：
 
@@ -126,7 +122,7 @@ GridView(
 
 #### GridView.extent
 
-GridView.extent构造函数内部使用了SliverGridDelegateWithMaxCrossAxisExtent，我们通过它可以快速的创建纵轴子元素为固定最大长度的的GridView，上面的示例代码等价于：
+GridView.extent 构造函数内部使用了 SliverGridDelegateWithMaxCrossAxisExtent，我们通过它可以快速的创建纵轴子元素为固定最大长度的的 GridView，上面的示例代码等价于：
 
 ```dart
 GridView.extent(
@@ -143,21 +139,19 @@ GridView.extent(
  );
 ```
 
-
-
 ### GridView.builder
 
-上面我们介绍的GridView都需要一个widget数组作为其子元素，这些方式都会提前将所有子widget都构建好，所以只适用于子widget数量比较少时，当子widget比较多时，我们可以通过`GridView.builder`来动态创建子widget。`GridView.builder` 必须指定的参数有两个：
+上面我们介绍的 GridView 都需要一个 widget 数组作为其子元素，这些方式都会提前将所有子 widget 都构建好，所以只适用于子 widget 数量比较少时，当子 widget 比较多时，我们可以通过`GridView.builder`来动态创建子 widget。`GridView.builder` 必须指定的参数有两个：
 
 ```dart
 GridView.builder(
  ...
- @required SliverGridDelegate gridDelegate, 
+ @required SliverGridDelegate gridDelegate,
  @required IndexedWidgetBuilder itemBuilder,
 )
 ```
 
-其中`itemBuilder`为子widget构建器。
+其中`itemBuilder`为子 widget 构建器。
 
 #### 示例
 
@@ -175,7 +169,7 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
 
   @override
   void initState() {
-    // 初始化数据  
+    // 初始化数据
     _retrieveIcons();
   }
 
@@ -214,16 +208,13 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
 }
 ```
 
-
-
-- `_retrieveIcons()`：在此方法中我们通过`Future.delayed`来模拟从异步数据源获取数据，每次获取数据需要200毫秒，获取成功后将新数据添加到_icons，然后调用setState重新构建。
-- 在itemBuilder中，如果显示到最后一个时，判断是否需要继续获取数据，然后返回一个Icon。
+- `_retrieveIcons()`：在此方法中我们通过`Future.delayed`来模拟从异步数据源获取数据，每次获取数据需要 200 毫秒，获取成功后将新数据添加到\_icons，然后调用 setState 重新构建。
+- 在 itemBuilder 中，如果显示到最后一个时，判断是否需要继续获取数据，然后返回一个 Icon。
 
 ### 更多
 
-Flutter的`GridView`默认子元素显示空间是相等的，但在实际开发中，你可能会遇到子元素大小不等的情况，如下面这样的布局：
+Flutter 的`GridView`默认子元素显示空间是相等的，但在实际开发中，你可能会遇到子元素大小不等的情况，如下面这样的布局：
 
 ![图6-11](../imgs/6-11.png)
 
-Pub上有一个包“flutter_staggered_grid_view” ，它实现了一个交错GridView的布局模型，可以很轻松的实现这种布局，详情读者可以自行了解。
-
+Pub 上有一个包“flutter_staggered_grid_view” ，它实现了一个交错 GridView 的布局模型，可以很轻松的实现这种布局，详情读者可以自行了解。

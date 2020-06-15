@@ -1,6 +1,6 @@
 # 5.4 变换（Transform）
 
-`Transform`可以在其子组件绘制时对其应用一些矩阵变换来实现一些特效。`Matrix4`是一个4D矩阵，通过它我们可以实现各种矩阵操作，下面是一个例子：
+`Transform`可以在其子组件绘制时对其应用一些矩阵变换来实现一些特效。`Matrix4`是一个 4D 矩阵，通过它我们可以实现各种矩阵操作，下面是一个例子：
 
 ```dart
 Container(
@@ -17,12 +17,11 @@ Container(
 );
 ```
 
-运行效果如图5-10所示：
+运行效果如图 5-10 所示：
 
 ![图5-10](../imgs/5-10.png)
 
-> 关于矩阵变换的相关内容属于线性代数范畴，本书不做讨论，读者有兴趣可以自行了解。本书中，我们把焦点放在Flutter中一些常见的变换效果上。另外，由于矩阵变化时发生在绘制时，而无需重新布局和构建等过程，所以性能很好。
->
+> 关于矩阵变换的相关内容属于线性代数范畴，本书不做讨论，读者有兴趣可以自行了解。本书中，我们把焦点放在 Flutter 中一些常见的变换效果上。另外，由于矩阵变化时发生在绘制时，而无需重新布局和构建等过程，所以性能很好。
 
 ### 平移
 
@@ -31,7 +30,7 @@ Container(
 ```dart
 DecoratedBox(
   decoration:BoxDecoration(color: Colors.red),
-  //默认原点为左上角，左移20像素，向上平移5像素  
+  //默认原点为左上角，左移20像素，向上平移5像素
   child: Transform.translate(
     offset: Offset(-20.0, -5.0),
     child: Text("Hello world"),
@@ -39,7 +38,7 @@ DecoratedBox(
 )
 ```
 
-效果如图5-11所示：
+效果如图 5-11 所示：
 
 ![图5-11](../imgs/5-11.png)
 
@@ -57,12 +56,14 @@ DecoratedBox(
   ),
 )；
 ```
-> 注意：要使用`math.pi`需先进行如下导包。  
-```dart  
-import 'dart:math' as math;  
+
+> 注意：要使用`math.pi`需先进行如下导包。
+
+```dart
+import 'dart:math' as math;
 ```
 
-效果如图5-12所示：
+效果如图 5-12 所示：
 
 ![图5-12](../imgs/5-12.png)
 
@@ -80,7 +81,7 @@ DecoratedBox(
 );
 ```
 
-效果如图5-13所示：
+效果如图 5-13 所示：
 
 ![图5-13](../imgs/5-13.png)
 
@@ -103,19 +104,19 @@ DecoratedBox(
   )
   ```
 
-  运行效果如图5-14所示：
+  运行效果如图 5-14 所示：
 
   ![图5-14](../imgs/5-14.png)
 
   由于第一个`Text`应用变换(放大)后，其在绘制时会放大，但其占用的空间依然为红色部分，所以第二个`Text`会紧挨着红色部分，最终就会出现文字重合。
 
-- 由于矩阵变化只会作用在绘制阶段，所以在某些场景下，在UI需要变化时，可以直接通过矩阵变化来达到视觉上的UI改变，而不需要去重新触发build流程，这样会节省layout的开销，所以性能会比较好。如之前介绍的`Flow`组件，它内部就是用矩阵变换来更新UI，除此之外，Flutter的动画组件中也大量使用了`Transform`以提高性能。
+- 由于矩阵变化只会作用在绘制阶段，所以在某些场景下，在 UI 需要变化时，可以直接通过矩阵变化来达到视觉上的 UI 改变，而不需要去重新触发 build 流程，这样会节省 layout 的开销，所以性能会比较好。如之前介绍的`Flow`组件，它内部就是用矩阵变换来更新 UI，除此之外，Flutter 的动画组件中也大量使用了`Transform`以提高性能。
 
 > 思考题：使用`Transform`对其子组件先进行平移然后再旋转和先旋转再平移，两者最终的效果一样吗？为什么？
 
 ### RotatedBox
 
-`RotatedBox`和`Transform.rotate`功能相似，它们都可以对子组件进行旋转变换，但是有一点不同：`RotatedBox`的变换是在layout阶段，会影响在子组件的位置和大小。我们将上面介绍`Transform.rotate`时的示例改一下：
+`RotatedBox`和`Transform.rotate`功能相似，它们都可以对子组件进行旋转变换，但是有一点不同：`RotatedBox`的变换是在 layout 阶段，会影响在子组件的位置和大小。我们将上面介绍`Transform.rotate`时的示例改一下：
 
 ```dart
 Row(
@@ -123,7 +124,7 @@ Row(
   children: <Widget>[
     DecoratedBox(
       decoration: BoxDecoration(color: Colors.red),
-      //将Transform.rotate换成RotatedBox  
+      //将Transform.rotate换成RotatedBox
       child: RotatedBox(
         quarterTurns: 1, //旋转90度(1/4圈)
         child: Text("Hello world"),
@@ -134,11 +135,8 @@ Row(
 ),
 ```
 
-效果如图5-15所示：
+效果如图 5-15 所示：
 
 ![图5-15](../imgs/5-15.png)
 
-
-
-由于`RotatedBox`是作用于layout阶段，所以子组件会旋转90度（而不只是绘制的内容），`decoration`会作用到子组件所占用的实际空间上，所以最终就是上图的效果，读者可以和前面`Transform.rotate`示例对比理解。
-
+由于`RotatedBox`是作用于 layout 阶段，所以子组件会旋转 90 度（而不只是绘制的内容），`decoration`会作用到子组件所占用的实际空间上，所以最终就是上图的效果，读者可以和前面`Transform.rotate`示例对比理解。

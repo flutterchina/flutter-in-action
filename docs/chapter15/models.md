@@ -1,10 +1,10 @@
-# 15.3 Model类定义
+# 15.3 Model 类定义
 
-本节我们先梳理一下APP中将用到的数据，然后生成相应的Dart Model类。Json文件转Dart Model的方案采用前面介绍过的 json_model 包方案
+本节我们先梳理一下 APP 中将用到的数据，然后生成相应的 Dart Model 类。Json 文件转 Dart Model 的方案采用前面介绍过的 json_model 包方案
 
-### Github账号信息
+### Github 账号信息
 
-登录Github后，我们需要获取当前登录者的Github账号信息，Github API接口返回Json结构如下：
+登录 Github 后，我们需要获取当前登录者的 Github 账号信息，Github API 接口返回 Json 结构如下：
 
 ```json
 {
@@ -31,15 +31,15 @@
 
 我们在“jsons”目录下创建一个“user.json”文件保存上述信息。
 
-### API缓存策略信息
+### API 缓存策略信息
 
-由于Github服务器在国内访问速度较慢，我们对Github API应用一些简单的缓存策略。我们在“jsons”目录下创建一个“cacheConfig.json”文件缓存策略信息，定义如下：
+由于 Github 服务器在国内访问速度较慢，我们对 Github API 应用一些简单的缓存策略。我们在“jsons”目录下创建一个“cacheConfig.json”文件缓存策略信息，定义如下：
 
 ```json
 {
-  "enable":true, // 是否启用缓存
-  "maxAge":1000, // 缓存的最长时间，单位（秒）
-  "maxCount":100 // 最大缓存数
+  "enable": true, // 是否启用缓存
+  "maxAge": 1000, // 缓存的最长时间，单位（秒）
+  "maxCount": 100 // 最大缓存数
 }
 ```
 
@@ -47,11 +47,11 @@
 
 用户信息(Profile)应包括如下信息：
 
-1. Github账号信息；由于我们的APP可以切换账号登录，且登录后再次打开则不需要登录，所以我们需要对用户账号信息和登录状态进行持久化。
-2. 应用使用配置信息；每一个用户都应有自己的APP配置信息，如主题、语言、以及数据缓存策略等。
-3. 用户注销登录后，为了便于用户在退出APP前再次登录，我们需要记住上次登录的用户名。
+1. Github 账号信息；由于我们的 APP 可以切换账号登录，且登录后再次打开则不需要登录，所以我们需要对用户账号信息和登录状态进行持久化。
+2. 应用使用配置信息；每一个用户都应有自己的 APP 配置信息，如主题、语言、以及数据缓存策略等。
+3. 用户注销登录后，为了便于用户在退出 APP 前再次登录，我们需要记住上次登录的用户名。
 
-需要注意的是，目前Github有三种登录方式，分别是账号密码登录、oauth授权登录、二次认证登录；这三种登录方式的安全性依次加强，但是在本示例中，为了简单起见，我们使用账号密码登录，因此我们需要保存用户的密码。
+需要注意的是，目前 Github 有三种登录方式，分别是账号密码登录、oauth 授权登录、二次认证登录；这三种登录方式的安全性依次加强，但是在本示例中，为了简单起见，我们使用账号密码登录，因此我们需要保存用户的密码。
 
 > 注意：在这里需要提醒读者，在登录场景中，保护用户账号安全是一个非常重要且永恒的话题，在实际开发中应严格杜绝直接明文存储用户账密的行为。
 
@@ -59,18 +59,18 @@
 
 ```json
 {
-  "user":"$user", //Github账号信息，结构见"user.json"
-  "token":"", // 登录用户的token(oauth)或密码
-  "theme":5678, //主题色值
-  "cache":"$cacheConfig", // 缓存策略信息，结构见"cacheConfig.json"
-  "lastLogin":"", //最近一次的注销登录的用户名
-  "locale":"" // APP语言信息
+  "user": "$user", //Github账号信息，结构见"user.json"
+  "token": "", // 登录用户的token(oauth)或密码
+  "theme": 5678, //主题色值
+  "cache": "$cacheConfig", // 缓存策略信息，结构见"cacheConfig.json"
+  "lastLogin": "", //最近一次的注销登录的用户名
+  "locale": "" // APP语言信息
 }
 ```
 
 ### 项目信息
 
-由于APP主页要显示其所有项目信息，我们在“jsons”目录下创建一个“repo.json”文件保存项目信息。通过参考Github 获取项目信息的API文档，定义出最终的“repo.json”文件结构，如下：
+由于 APP 主页要显示其所有项目信息，我们在“jsons”目录下创建一个“repo.json”文件保存项目信息。通过参考 Github 获取项目信息的 API 文档，定义出最终的“repo.json”文件结构，如下：
 
 ```json
 {
@@ -103,15 +103,15 @@
 }
 ```
 
-### 生成Dart Model类
+### 生成 Dart Model 类
 
-现在，我们需要的Json数据已经定义完毕，现在只需要运行json_model package提供的命令来通过json文件生成相应的Dart类：
+现在，我们需要的 Json 数据已经定义完毕，现在只需要运行 json_model package 提供的命令来通过 json 文件生成相应的 Dart 类：
 
 ```shell
 flutter packages pub run json_model
 ```
 
-命令执行成功后，可以看到lib/models文件夹下会生成相应的Dart Model类：
+命令执行成功后，可以看到 lib/models 文件夹下会生成相应的 Dart Model 类：
 
 ```
 ├── models
@@ -129,4 +129,4 @@ flutter packages pub run json_model
 
 ### 数据持久化
 
-我们使用shared_preferences包来对登录用户的Profile信息进行持久化。shared_preferences是一个Flutter插件，它通过Android和iOS平台提供的机制来实现数据持久化。由于shared_preferences的使用非常简单，读者可以自行查看其文档，在此不再赘述。
+我们使用 shared_preferences 包来对登录用户的 Profile 信息进行持久化。shared_preferences 是一个 Flutter 插件，它通过 Android 和 iOS 平台提供的机制来实现数据持久化。由于 shared_preferences 的使用非常简单，读者可以自行查看其文档，在此不再赘述。

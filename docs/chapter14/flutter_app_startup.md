@@ -1,10 +1,10 @@
-# 14.4 Flutter运行机制-从启动到显示
+# 14.4 Flutter 运行机制-从启动到显示
 
-本节我们主要介绍一下Flutter从启动到显示的过程。
+本节我们主要介绍一下 Flutter 从启动到显示的过程。
 
 ### 启动
 
-Flutter的入口在"lib/main.dart"的`main()`函数中，它是Dart应用程序的起点。在Flutter应用中，`main()`函数最简单的实现如下：
+Flutter 的入口在"lib/main.dart"的`main()`函数中，它是 Dart 应用程序的起点。在 Flutter 应用中，`main()`函数最简单的实现如下：
 
 ```dart
 void main() {
@@ -22,7 +22,7 @@ void runApp(Widget app) {
 }
 ```
 
-参数`app`是一个widget，它是Flutter应用启动后要展示的第一个Widget。而`WidgetsFlutterBinding`正是绑定widget 框架和Flutter engine的桥梁，定义如下：
+参数`app`是一个 widget，它是 Flutter 应用启动后要展示的第一个 Widget。而`WidgetsFlutterBinding`正是绑定 widget 框架和 Flutter engine 的桥梁，定义如下：
 
 ```dart
 class WidgetsFlutterBinding extends BindingBase with GestureBinding, ServicesBinding, SchedulerBinding, PaintingBinding, SemanticsBinding, RendererBinding, WidgetsBinding {
@@ -38,33 +38,33 @@ class WidgetsFlutterBinding extends BindingBase with GestureBinding, ServicesBin
 
 > The most basic interface to the host operating system's user interface.
 
-很明显，`Window`正是Flutter Framework连接宿主操作系统的接口。我们看一下`Window`类的部分定义：
+很明显，`Window`正是 Flutter Framework 连接宿主操作系统的接口。我们看一下`Window`类的部分定义：
 
 ```dart
 class Window {
-    
+
   // 当前设备的DPI，即一个逻辑像素显示多少物理像素，数字越大，显示效果就越精细保真。
-  // DPI是设备屏幕的固件属性，如Nexus 6的屏幕DPI为3.5 
+  // DPI是设备屏幕的固件属性，如Nexus 6的屏幕DPI为3.5
   double get devicePixelRatio => _devicePixelRatio;
-  
+
   // Flutter UI绘制区域的大小
   Size get physicalSize => _physicalSize;
 
   // 当前系统默认的语言Locale
   Locale get locale;
-    
-  // 当前系统字体缩放比例。  
-  double get textScaleFactor => _textScaleFactor;  
-    
+
+  // 当前系统字体缩放比例。
+  double get textScaleFactor => _textScaleFactor;
+
   // 当绘制区域大小改变回调
-  VoidCallback get onMetricsChanged => _onMetricsChanged;  
+  VoidCallback get onMetricsChanged => _onMetricsChanged;
   // Locale发生变化回调
   VoidCallback get onLocaleChanged => _onLocaleChanged;
   // 系统字体缩放变化回调
   VoidCallback get onTextScaleFactorChanged => _onTextScaleFactorChanged;
   // 绘制前回调，一般会受显示器的垂直同步信号VSync驱动，当屏幕刷新时就会被调用
   FrameCallback get onBeginFrame => _onBeginFrame;
-  // 绘制回调  
+  // 绘制回调
   VoidCallback get onDrawFrame => _onDrawFrame;
   // 点击或指针事件回调
   PointerDataPacketCallback get onPointerDataPacket => _onPointerDataPacket;
@@ -78,37 +78,37 @@ class Window {
   void sendPlatformMessage(String name,
                            ByteData data,
                            PlatformMessageResponseCallback callback) ;
-  // 平台通道消息处理回调  
+  // 平台通道消息处理回调
   PlatformMessageCallback get onPlatformMessage => _onPlatformMessage;
-  
+
   ... //其它属性及回调
-   
+
 }
 ```
 
-可以看到`Window`类包含了当前设备和系统的一些信息以及Flutter Engine的一些回调。现在我们再回来看看`WidgetsFlutterBinding`混入的各种Binding。通过查看这些 Binding的源码，我们可以发现这些Binding中基本都是监听并处理`Window`对象的一些事件，然后将这些事件按照Framework的模型包装、抽象然后分发。可以看到`WidgetsFlutterBinding`正是粘连Flutter engine与上层Framework的“胶水”。
+可以看到`Window`类包含了当前设备和系统的一些信息以及 Flutter Engine 的一些回调。现在我们再回来看看`WidgetsFlutterBinding`混入的各种 Binding。通过查看这些 Binding 的源码，我们可以发现这些 Binding 中基本都是监听并处理`Window`对象的一些事件，然后将这些事件按照 Framework 的模型包装、抽象然后分发。可以看到`WidgetsFlutterBinding`正是粘连 Flutter engine 与上层 Framework 的“胶水”。
 
-- `GestureBinding`：提供了`window.onPointerDataPacket` 回调，绑定Framework手势子系统，是Framework事件模型与底层事件的绑定入口。
-- `ServicesBinding`：提供了`window.onPlatformMessage` 回调， 用于绑定平台消息通道（message channel），主要处理原生和Flutter通信。
-- `SchedulerBinding`：提供了`window.onBeginFrame`和`window.onDrawFrame`回调，监听刷新事件，绑定Framework绘制调度子系统。
+- `GestureBinding`：提供了`window.onPointerDataPacket` 回调，绑定 Framework 手势子系统，是 Framework 事件模型与底层事件的绑定入口。
+- `ServicesBinding`：提供了`window.onPlatformMessage` 回调， 用于绑定平台消息通道（message channel），主要处理原生和 Flutter 通信。
+- `SchedulerBinding`：提供了`window.onBeginFrame`和`window.onDrawFrame`回调，监听刷新事件，绑定 Framework 绘制调度子系统。
 - `PaintingBinding`：绑定绘制库，主要用于处理图片缓存。
-- `SemanticsBinding`：语义化层与Flutter engine的桥梁，主要是辅助功能的底层支持。
-- `RendererBinding`: 提供了`window.onMetricsChanged` 、`window.onTextScaleFactorChanged` 等回调。它是渲染树与Flutter engine的桥梁。
-- `WidgetsBinding`：提供了`window.onLocaleChanged`、`onBuildScheduled ` 等回调。它是Flutter widget层与engine的桥梁。
+- `SemanticsBinding`：语义化层与 Flutter engine 的桥梁，主要是辅助功能的底层支持。
+- `RendererBinding`: 提供了`window.onMetricsChanged` 、`window.onTextScaleFactorChanged` 等回调。它是渲染树与 Flutter engine 的桥梁。
+- `WidgetsBinding`：提供了`window.onLocaleChanged`、`onBuildScheduled` 等回调。它是 Flutter widget 层与 engine 的桥梁。
 
-` WidgetsFlutterBinding.ensureInitialized()`负责初始化一个`WidgetsBinding`的全局单例，紧接着会调用`WidgetsBinding`的`attachRootWidget`方法，该方法负责将根Widget添加到`RenderView`上，代码如下：
+`WidgetsFlutterBinding.ensureInitialized()`负责初始化一个`WidgetsBinding`的全局单例，紧接着会调用`WidgetsBinding`的`attachRootWidget`方法，该方法负责将根 Widget 添加到`RenderView`上，代码如下：
 
 ```dart
 void attachRootWidget(Widget rootWidget) {
   _renderViewElement = RenderObjectToWidgetAdapter<RenderBox>(
-    container: renderView, 
+    container: renderView,
     debugShortDescription: '[root]',
     child: rootWidget
   ).attachToRenderTree(buildOwner, renderViewElement);
 }
 ```
 
-注意，代码中的有`renderView`和`renderViewElement`两个变量，`renderView`是一个`RenderObject`，它是渲染树的根，而`renderViewElement`是`renderView`对应的`Element`对象，可见该方法主要完成了根widget到根 `RenderObject`再到根`Element`的整个关联过程。我们看看`attachToRenderTree`的源码实现：
+注意，代码中的有`renderView`和`renderViewElement`两个变量，`renderView`是一个`RenderObject`，它是渲染树的根，而`renderViewElement`是`renderView`对应的`Element`对象，可见该方法主要完成了根 widget 到根 `RenderObject`再到根`Element`的整个关联过程。我们看看`attachToRenderTree`的源码实现：
 
 ```dart
 RenderObjectToWidgetElement<T> attachToRenderTree(BuildOwner owner, [RenderObjectToWidgetElement<T> element]) {
@@ -129,20 +129,20 @@ RenderObjectToWidgetElement<T> attachToRenderTree(BuildOwner owner, [RenderObjec
 }
 ```
 
-该方法负责创建根element，即` RenderObjectToWidgetElement`，并且将element与widget 进行关联，即创建出 widget树对应的element树。如果element 已经创建过了，则将根element 中关联的widget 设为新的，由此可以看出element 只会创建一次，后面会进行复用。那么`BuildOwner`是什么呢？其实他就是widget framework的管理类，它跟踪哪些widget需要重新构建。
+该方法负责创建根 element，即`RenderObjectToWidgetElement`，并且将 element 与 widget 进行关联，即创建出 widget 树对应的 element 树。如果 element 已经创建过了，则将根 element 中关联的 widget 设为新的，由此可以看出 element 只会创建一次，后面会进行复用。那么`BuildOwner`是什么呢？其实他就是 widget framework 的管理类，它跟踪哪些 widget 需要重新构建。
 
 ### 渲染
 
-回到`runApp`的实现中，当调用完`attachRootWidget`后，最后一行会调用 `WidgetsFlutterBinding` 实例的 `scheduleWarmUpFrame()` 方法，该方法的实现在`SchedulerBinding` 中，它被调用后会立即进行一次绘制（而不是等待"vsync" 信号），在此次绘制结束前，该方法会锁定事件分发，也就是说在本次绘制结束完成之前Flutter将不会响应各种事件，这可以保证在绘制过程中不会再触发新的重绘。下面是`scheduleWarmUpFrame()` 方法的部分实现(省略了无关代码)：
+回到`runApp`的实现中，当调用完`attachRootWidget`后，最后一行会调用 `WidgetsFlutterBinding` 实例的 `scheduleWarmUpFrame()` 方法，该方法的实现在`SchedulerBinding` 中，它被调用后会立即进行一次绘制（而不是等待"vsync" 信号），在此次绘制结束前，该方法会锁定事件分发，也就是说在本次绘制结束完成之前 Flutter 将不会响应各种事件，这可以保证在绘制过程中不会再触发新的重绘。下面是`scheduleWarmUpFrame()` 方法的部分实现(省略了无关代码)：
 
 ```dart
 void scheduleWarmUpFrame() {
   ...
   Timer.run(() {
-    handleBeginFrame(null); 
+    handleBeginFrame(null);
   });
   Timer.run(() {
-    handleDrawFrame();  
+    handleDrawFrame();
     resetEpoch();
   });
   // 锁定事件
@@ -154,15 +154,15 @@ void scheduleWarmUpFrame() {
 }
 ```
 
-可以看到该方法中主要调用了`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法，在看这两个方法之前我们首先了解一下Frame 和 FrameCallback 的概念：
+可以看到该方法中主要调用了`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法，在看这两个方法之前我们首先了解一下 Frame 和 FrameCallback 的概念：
 
-- Frame: 一次绘制过程，我们称其为一帧。Flutter engine受显示器垂直同步信号"VSync"的驱使不断的触发绘制。我们之前说的Flutter可以实现60fps（Frame Per-Second），就是指一秒钟可以触发60次重绘，FPS值越大，界面就越流畅。
+- Frame: 一次绘制过程，我们称其为一帧。Flutter engine 受显示器垂直同步信号"VSync"的驱使不断的触发绘制。我们之前说的 Flutter 可以实现 60fps（Frame Per-Second），就是指一秒钟可以触发 60 次重绘，FPS 值越大，界面就越流畅。
 
-- FrameCallback：`SchedulerBinding` 类中有三个FrameCallback回调队列， 在一次绘制过程中，这三个回调队列会放在不同时机被执行：
+- FrameCallback：`SchedulerBinding` 类中有三个 FrameCallback 回调队列， 在一次绘制过程中，这三个回调队列会放在不同时机被执行：
 
   1. `transientCallbacks`：用于存放一些临时回调，一般存放动画回调。可以通过`SchedulerBinding.instance.scheduleFrameCallback` 添加回调。
   2. `persistentCallbacks`：用于存放一些持久的回调，不能在此类回调中再请求新的绘制帧，持久回调一经注册则不能移除。`SchedulerBinding.instance.addPersitentFrameCallback()`，这个回调中处理了布局与绘制工作。
-  3. `postFrameCallbacks`：在Frame结束时只会被调用一次，调用后会被系统移除，可由 `SchedulerBinding.instance.addPostFrameCallback()` 注册，注意，不要在此类回调中再触发新的Frame，这可以会导致循环刷新。
+  3. `postFrameCallbacks`：在 Frame 结束时只会被调用一次，调用后会被系统移除，可由 `SchedulerBinding.instance.addPostFrameCallback()` 注册，注意，不要在此类回调中再触发新的 Frame，这可以会导致循环刷新。
 
 现在请读者自行查看`handleBeginFrame()` 和 `handleDrawFrame()` 两个方法的源码，可以发现前者主要是执行了`transientCallbacks`队列，而后者执行了 `persistentCallbacks` 和 `postFrameCallbacks` 队列。
 
@@ -173,15 +173,15 @@ void scheduleWarmUpFrame() {
 ```dart
 void initInstances() {
   ... //省略无关代码
-      
-  //监听Window对象的事件  
+
+  //监听Window对象的事件
   ui.window
     ..onMetricsChanged = handleMetricsChanged
     ..onTextScaleFactorChanged = handleTextScaleFactorChanged
     ..onSemanticsEnabledChanged = _handleSemanticsEnabledChanged
     ..onSemanticsAction = _handleSemanticsAction;
-   
-  //添加PersistentFrameCallback    
+
+  //添加PersistentFrameCallback
   addPersistentFrameCallback(_handlePersistentFrameCallback);
 }
 ```
@@ -217,13 +217,13 @@ void flushLayout() {
     while (_nodesNeedingLayout.isNotEmpty) {
       final List<RenderObject> dirtyNodes = _nodesNeedingLayout;
       _nodesNeedingLayout = <RenderObject>[];
-      for (RenderObject node in 
+      for (RenderObject node in
            dirtyNodes..sort((RenderObject a, RenderObject b) => a.depth - b.depth)) {
         if (node._needsLayout && node.owner == this)
           node._layoutWithoutResize();
       }
     }
-  } 
+  }
 }
 ```
 
@@ -252,25 +252,25 @@ void flushCompositingBits() {
 void flushPaint() {
  ...
   try {
-    final List<RenderObject> dirtyNodes = _nodesNeedingPaint; 
+    final List<RenderObject> dirtyNodes = _nodesNeedingPaint;
     _nodesNeedingPaint = <RenderObject>[];
     // 反向遍历需要重绘的RenderObject
-    for (RenderObject node in 
+    for (RenderObject node in
          dirtyNodes..sort((RenderObject a, RenderObject b) => b.depth - a.depth)) {
       if (node._needsPaint && node.owner == this) {
         if (node._layer.attached) {
-          // 真正的绘制逻辑  
+          // 真正的绘制逻辑
           PaintingContext.repaintCompositedChild(node);
         } else {
           node._skippedPaintingOnLayer();
         }
       }
     }
-  } 
+  }
 }
 ```
 
-该方法进行了最终的绘制，可以看出它不是重绘了所有 `RenderObject`，而是只重绘了需要重绘的 `RenderObject`。真正的绘制是通过`PaintingContext.repaintCompositedChild()`来绘制的，该方法最终会调用Flutter engine提供的Canvas API来完成绘制。
+该方法进行了最终的绘制，可以看出它不是重绘了所有 `RenderObject`，而是只重绘了需要重绘的 `RenderObject`。真正的绘制是通过`PaintingContext.repaintCompositedChild()`来绘制的，该方法最终会调用 Flutter engine 提供的 Canvas API 来完成绘制。
 
 #### compositeFrame()
 
@@ -283,18 +283,18 @@ void compositeFrame() {
     if (automaticSystemUiAdjustment)
       _updateSystemChrome();
     ui.window.render(scene); //调用Flutter engine的渲染API
-    scene.dispose(); 
+    scene.dispose();
   } finally {
     Timeline.finishSync();
   }
 }
 ```
 
-这个方法中有一个`Scene`对象，Scene对象是一个数据结构，保存最终渲染后的像素信息。这个方法将Canvas画好的`Scene`传给`window.render()`方法，该方法会直接将scene信息发送给Flutter engine，最终由engine将图像画在设备屏幕上。
+这个方法中有一个`Scene`对象，Scene 对象是一个数据结构，保存最终渲染后的像素信息。这个方法将 Canvas 画好的`Scene`传给`window.render()`方法，该方法会直接将 scene 信息发送给 Flutter engine，最终由 engine 将图像画在设备屏幕上。
 
 #### 最后
 
-需要注意的是：由于`RendererBinding`只是一个mixin，而with它的是`WidgetsBinding`，所以我们需要看看`WidgetsBinding`中是否重写该方法，查看`WidgetsBinding`的`drawFrame()`方法源码：
+需要注意的是：由于`RendererBinding`只是一个 mixin，而 with 它的是`WidgetsBinding`，所以我们需要看看`WidgetsBinding`中是否重写该方法，查看`WidgetsBinding`的`drawFrame()`方法源码：
 
 ```dart
 @override
@@ -302,10 +302,10 @@ void drawFrame() {
  ...//省略无关代码
   try {
     if (renderViewElement != null)
-      buildOwner.buildScope(renderViewElement); 
+      buildOwner.buildScope(renderViewElement);
     super.drawFrame(); //调用RendererBinding的drawFrame()方法
     buildOwner.finalizeTree();
-  } 
+  }
 }
 ```
 
@@ -313,5 +313,4 @@ void drawFrame() {
 
 ### 总结
 
-本节介绍了Flutter APP从启动到显示到屏幕上的主流程，读者可以结合前面章节对Widget、Element以及RenderObject的介绍来加强细节理解。
-
+本节介绍了 Flutter APP 从启动到显示到屏幕上的主流程，读者可以结合前面章节对 Widget、Element 以及 RenderObject 的介绍来加强细节理解。

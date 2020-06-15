@@ -20,16 +20,14 @@ Container({
 
 `Container`的大多数属性在介绍其它容器时都已经介绍过了，不再赘述，但有两点需要说明：
 
-- 容器的大小可以通过`width`、`height`属性来指定，也可以通过`constraints`来指定；如果它们同时存在时，`width`、`height`优先。实际上Container内部会根据`width`、`height`来生成一个`constraints`。
+- 容器的大小可以通过`width`、`height`属性来指定，也可以通过`constraints`来指定；如果它们同时存在时，`width`、`height`优先。实际上 Container 内部会根据`width`、`height`来生成一个`constraints`。
 - `color`和`decoration`是互斥的，如果同时设置它们则会报错！实际上，当指定`color`时，`Container`内会自动创建一个`decoration`。
 
 ### 实例
 
-我们通过`Container`来实现如图5-16所示的卡片：
+我们通过`Container`来实现如图 5-16 所示的卡片：
 
 ![图5-16](../imgs/5-16.png)
-
-
 
 实现代码如下：
 
@@ -59,11 +57,9 @@ Container(
 );
 ```
 
+可以看到`Container`具备多种组件的功能，通过查看`Container`源码，我们会很容易发现它正是前面我们介绍过的多种组件组合而成。在 Flutter 中，`Container`组件也正是组合优先于继承的实例。
 
-
-可以看到`Container`具备多种组件的功能，通过查看`Container`源码，我们会很容易发现它正是前面我们介绍过的多种组件组合而成。在Flutter中，`Container`组件也正是组合优先于继承的实例。
-
-### Padding和Margin
+### Padding 和 Margin
 
 接下来我们来研究一下`Container`组件`margin`和`padding`属性的区别:
 
@@ -102,6 +98,5 @@ DecoratedBox(
     child: Text("Hello world!"),
   ),
 ),
-...    
+...
 ```
-

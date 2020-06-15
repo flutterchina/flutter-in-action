@@ -1,16 +1,16 @@
-# 15.6 APP入口及主页
+# 15.6 APP 入口及主页
 
-本节来介绍一下APP入口及首页。
+本节来介绍一下 APP 入口及首页。
 
-## 15.6.1 APP入口
+## 15.6.1 APP 入口
 
-`main`函数为APP入口函数，实现如下：
+`main`函数为 APP 入口函数，实现如下：
 
 ```dart
 void main() => Global.init().then((e) => runApp(MyApp()));
 ```
 
-初始化完成后才会加载UI(`MyApp`)，`MyApp` 是应用的入口Widget，实现如下：
+初始化完成后才会加载 UI(`MyApp`)，`MyApp` 是应用的入口 Widget，实现如下：
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                 //如果已经选定语言，则不跟随系统
                 return localeModel.getLocale();
               } else {
-         
+
                 Locale locale;
                 //APP语言跟随系统语言，如果系统语言不是中文简体或美国英语，
                 //则默认使用美国英语
@@ -80,15 +80,15 @@ class MyApp extends StatelessWidget {
 
 在上面的代码中：
 
-1. 我们的根widget是`MultiProvider`，它将主题、用户、语言三种状态绑定到了应用的根上，如此一来，任何路由中都可以通过`Provider.of()`来获取这些状态，也就是说这三种状态是全局共享的！
+1. 我们的根 widget 是`MultiProvider`，它将主题、用户、语言三种状态绑定到了应用的根上，如此一来，任何路由中都可以通过`Provider.of()`来获取这些状态，也就是说这三种状态是全局共享的！
 2. `HomeRoute`是应用的主页。
-3. 在构建`MaterialApp`时，我们配置了APP支持的语言列表，以及监听了系统语言改变事件；另外`MaterialApp`消费（依赖）了`ThemeModel`和`LocaleModel`，所以当APP主题或语言改变时`MaterialApp`会重新构建
-4. 我们注册了命名路由表，以便在APP中可以直接通过路由名跳转。
-5. 为了支持多语言（本APP中我们支持美国英语和中文简体两种语言）我们实现了一个`GmLocalizationsDelegate`，子Widget中都可以通过`GmLocalizations`来动态获取APP当前语言对应的文案。关于`GmLocalizationsDelegate`和`GmLocalizations`的实现方式读者可以参考“国际化”一章中的介绍，此处不再赘述。
+3. 在构建`MaterialApp`时，我们配置了 APP 支持的语言列表，以及监听了系统语言改变事件；另外`MaterialApp`消费（依赖）了`ThemeModel`和`LocaleModel`，所以当 APP 主题或语言改变时`MaterialApp`会重新构建
+4. 我们注册了命名路由表，以便在 APP 中可以直接通过路由名跳转。
+5. 为了支持多语言（本 APP 中我们支持美国英语和中文简体两种语言）我们实现了一个`GmLocalizationsDelegate`，子 Widget 中都可以通过`GmLocalizations`来动态获取 APP 当前语言对应的文案。关于`GmLocalizationsDelegate`和`GmLocalizations`的实现方式读者可以参考“国际化”一章中的介绍，此处不再赘述。
 
 ## 15.6.2 主页
 
-为了简单起见，当APP启动后，如果之前已登录了APP，则显示该用户项目列表；如果之前未登录，则显示一个登录按钮，点击后跳转到登录页。另外，我们实现一个抽屉菜单，里面包含当前用户头像及APP的菜单。下面我们先看看要实现的效果，如图15-1、15-2所示：
+为了简单起见，当 APP 启动后，如果之前已登录了 APP，则显示该用户项目列表；如果之前未登录，则显示一个登录按钮，点击后跳转到登录页。另外，我们实现一个抽屉菜单，里面包含当前用户头像及 APP 的菜单。下面我们先看看要实现的效果，如图 15-1、15-2 所示：
 
 ![15-1](../imgs/15-1.png)![15-2](../imgs/15-2.png)
 
@@ -115,7 +115,7 @@ class _HomeRouteState extends State<HomeRoute> {
 }
 ```
 
-上面代码中，主页的标题（title）我们是通过`GmLocalizations.of(context).home`来获得，`GmLocalizations`是我们提供的一个`Localizations`类，用于支持多语言，因此当APP语言改变时，凡是使用`GmLocalizations`动态获取的文案都会是相应语言的文案，这在前面“国际化”一章中已经介绍过，读者可以前翻查阅。
+上面代码中，主页的标题（title）我们是通过`GmLocalizations.of(context).home`来获得，`GmLocalizations`是我们提供的一个`Localizations`类，用于支持多语言，因此当 APP 语言改变时，凡是使用`GmLocalizations`动态获取的文案都会是相应语言的文案，这在前面“国际化”一章中已经介绍过，读者可以前翻查阅。
 
 我们通过 `_buildBody()`方法来构建主页内容，`_buildBody()`方法实现代码如下：
 
@@ -142,7 +142,7 @@ class _HomeRouteState extends State<HomeRoute> {
             },
           );
           //把请求到的新数据添加到items中
-          items.addAll(data); 
+          items.addAll(data);
           // 如果接口返回的数量等于'page_size'，则认为还有数据，反之则认为最后一页
           return data.length==20;
         },
@@ -156,17 +156,17 @@ class _HomeRouteState extends State<HomeRoute> {
 }
 ```
 
-上面代码注释很清楚：如果用户未登录，显示登录按钮；如果用户已登录，则展示项目列表。这里项目列表使用了`InfiniteListView` Widget，它是flukit package中提供的。`InfiniteListView`同时支持了下拉刷新和上拉加载更多两种功能。`onRetrieveData` 为数据获取回调，该回调函数接收三个参数：
+上面代码注释很清楚：如果用户未登录，显示登录按钮；如果用户已登录，则展示项目列表。这里项目列表使用了`InfiniteListView` Widget，它是 flukit package 中提供的。`InfiniteListView`同时支持了下拉刷新和上拉加载更多两种功能。`onRetrieveData` 为数据获取回调，该回调函数接收三个参数：
 
-| 参数名  | 类型    | 解释                   |
-| ------- | ------- | ---------------------- |
-| page    | int     | 当前页号               |
-| items   | List<T> | 保存当前列表数据的List |
-| refresh | bool    | 是否是下拉刷新触发     |
+| 参数名  | 类型    | 解释                    |
+| ------- | ------- | ----------------------- |
+| page    | int     | 当前页号                |
+| items   | List<T> | 保存当前列表数据的 List |
+| refresh | bool    | 是否是下拉刷新触发      |
 
-返回值类型为`bool`，为`true`时表示还有数据，为`false`时则表示后续没有数据了。`onRetrieveData` 回调中我们调用`Git(context).getRepos(...)`来获取用户项目列表，同时指定每次请求获取20条。当获取成功时，首先要将新获取的项目数据添加到`items`中，然后根据本次请求的项目条数是否等于期望的20条来判断还有没有更多的数据。在此需要注意，`Git(context).getRepos(…)`方法中需要`refresh`参数来判断是否使用缓存。
+返回值类型为`bool`，为`true`时表示还有数据，为`false`时则表示后续没有数据了。`onRetrieveData` 回调中我们调用`Git(context).getRepos(...)`来获取用户项目列表，同时指定每次请求获取 20 条。当获取成功时，首先要将新获取的项目数据添加到`items`中，然后根据本次请求的项目条数是否等于期望的 20 条来判断还有没有更多的数据。在此需要注意，`Git(context).getRepos(…)`方法中需要`refresh`参数来判断是否使用缓存。
 
-`itemBuilder`为列表项的builder，我们需要在该回调中构建每一个列表项Widget。由于列表项构建逻辑较复杂，我们单独封装一个`RepoItem` Widget 专门用于构建列表项UI。`RepoItem` 实现如下：
+`itemBuilder`为列表项的 builder，我们需要在该回调中构建每一个列表项 Widget。由于列表项构建逻辑较复杂，我们单独封装一个`RepoItem` Widget 专门用于构建列表项 UI。`RepoItem` 实现如下：
 
 ```dart
 import '../index.dart';
@@ -330,7 +330,7 @@ class _RepoItemState extends State<RepoItem> {
      );
      return ClipRRect(
        borderRadius: borderRadius ?? BorderRadius.circular(2),
-       child: CachedNetworkImage( 
+       child: CachedNetworkImage(
          imageUrl: url,
          width: width,
          height: height,
@@ -342,13 +342,13 @@ class _RepoItemState extends State<RepoItem> {
    }
    ```
 
-   代码中调用了`CachedNetworkImage` 是cached_network_image包中提供的一个Widget，它不仅可以在图片加载过程中指定一个占位图，而且还可以对网络请求的图片进行缓存，更多详情读者可以自行查阅其文档。
+   代码中调用了`CachedNetworkImage` 是 cached_network_image 包中提供的一个 Widget，它不仅可以在图片加载过程中指定一个占位图，而且还可以对网络请求的图片进行缓存，更多详情读者可以自行查阅其文档。
 
-2. 由于Flutter 的Material 图标库中没有fork图标，所以我们在iconfont.cn上找了一个fork图标，然后根据“图片和Icon”一节中介绍的使用自定义字体图标的方法集成到了我们的项目中。
+2. 由于 Flutter 的 Material 图标库中没有 fork 图标，所以我们在 iconfont.cn 上找了一个 fork 图标，然后根据“图片和 Icon”一节中介绍的使用自定义字体图标的方法集成到了我们的项目中。
 
 ## 15.6.3 抽屉菜单
 
-抽屉菜单分为两部分：顶部头像和底部功能菜单项。当用户未登录，则抽屉菜单顶部会显示一个默认的灰色占位图，若用户已登录，则会显示用户的头像。抽屉菜单底部有“换肤”和“语言”两个固定菜单，若用户已登录，则会多一个“注销”菜单。用户点击“换肤”和“语言”两个菜单项，会进入相应的设置页面。我们的抽屉菜单效果如图15-3、15-4所示：
+抽屉菜单分为两部分：顶部头像和底部功能菜单项。当用户未登录，则抽屉菜单顶部会显示一个默认的灰色占位图，若用户已登录，则会显示用户的头像。抽屉菜单底部有“换肤”和“语言”两个固定菜单，若用户已登录，则会多一个“注销”菜单。用户点击“换肤”和“语言”两个菜单项，会进入相应的设置页面。我们的抽屉菜单效果如图 15-3、15-4 所示：
 
 ![15-3](../imgs/15-3.png)![15-4](../imgs/15-4.png)
 
@@ -475,4 +475,4 @@ class MyDrawer extends StatelessWidget {
 
 用户点击“注销”，`userModel.user` 会被置空，此时所有依赖`userModel`的组件都会被`rebuild`，如主页会恢复成未登录的状态。
 
-本小节我们介绍了APP入口`MaterialApp`的一些配置，然后实现了APP的首页。后面我们将展示登录页、换肤页、语言切换页。
+本小节我们介绍了 APP 入口`MaterialApp`的一些配置，然后实现了 APP 的首页。后面我们将展示登录页、换肤页、语言切换页。

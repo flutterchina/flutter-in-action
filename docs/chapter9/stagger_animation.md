@@ -1,22 +1,21 @@
-
 # 9.5 交织动画
 
-有些时候我们可能会需要一些复杂的动画，这些动画可能由一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同时改变颜色，等到增长到最大高度后，我们需要在X轴上平移一段距离。可以发现上述场景在不同阶段包含了多种动画，要实现这种效果，使用交织动画（Stagger Animation）会非常简单。交织动画需要注意以下几点：
+有些时候我们可能会需要一些复杂的动画，这些动画可能由一个动画序列或重叠的动画组成，比如：有一个柱状图，需要在高度增长的同时改变颜色，等到增长到最大高度后，我们需要在 X 轴上平移一段距离。可以发现上述场景在不同阶段包含了多种动画，要实现这种效果，使用交织动画（Stagger Animation）会非常简单。交织动画需要注意以下几点：
 
 1. 要创建交织动画，需要使用多个动画对象（`Animation`）。
 2. 一个`AnimationController`控制所有的动画对象。
 3. 给每一个动画对象指定时间间隔（Interval）
 
-所有动画都由同一个[AnimationController](https://docs.flutter.io/flutter/animation/AnimationController-class.html)驱动，无论动画需要持续多长时间，控制器的值必须在0.0到1.0之间，而每个动画的间隔（Interval）也必须介于0.0和1.0之间。对于在间隔中设置动画的每个属性，需要分别创建一个[Tween](https://docs.flutter.io/flutter/animation/Tween-class.html) 用于指定该属性的开始值和结束值。也就是说0.0到1.0代表整个动画过程，我们可以给不同动画指定不同的起始点和终止点来决定它们的开始时间和终止时间。
+所有动画都由同一个[AnimationController](https://docs.flutter.io/flutter/animation/AnimationController-class.html)驱动，无论动画需要持续多长时间，控制器的值必须在 0.0 到 1.0 之间，而每个动画的间隔（Interval）也必须介于 0.0 和 1.0 之间。对于在间隔中设置动画的每个属性，需要分别创建一个[Tween](https://docs.flutter.io/flutter/animation/Tween-class.html) 用于指定该属性的开始值和结束值。也就是说 0.0 到 1.0 代表整个动画过程，我们可以给不同动画指定不同的起始点和终止点来决定它们的开始时间和终止时间。
 
 ### 示例
 
 下面我们看一个例子，实现一个柱状图增长的动画：
 
-1. 开始时高度从0增长到300像素，同时颜色由绿色渐变为红色；这个过程占据整个动画时间的60%。
-2. 高度增长到300后，开始沿X轴向右平移100像素；这个过程占用整个动画时间的40%。
+1. 开始时高度从 0 增长到 300 像素，同时颜色由绿色渐变为红色；这个过程占据整个动画时间的 60%。
+2. 高度增长到 300 后，开始沿 X 轴向右平移 100 像素；这个过程占用整个动画时间的 40%。
 
-我们将执行动画的Widget分离出来：
+我们将执行动画的 Widget 分离出来：
 
 ```dart
 class StaggerAnimation extends StatelessWidget {
@@ -150,7 +149,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
   }
 }
 ```
-执行效果如图，点击图9-3灰色矩形，就可以看到整个动画效果，图9-4是动画执行过程中的一帧。
+
+执行效果如图，点击图 9-3 灰色矩形，就可以看到整个动画效果，图 9-4 是动画执行过程中的一帧。
 
 ![图9-3](../imgs/9-3.png)![图9-4](../imgs/9-4.png)
-

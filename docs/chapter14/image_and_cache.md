@@ -1,6 +1,6 @@
 # 14.5 图片加载原理与缓存
 
-在本书前面章节已经介绍过`Image` 组件，并提到Flutter框架对加载过的图片是有缓存的（内存），默认最大缓存数量是1000，最大缓存空间为100M。本节便详细介绍Image的原理及图片缓存机制，下面我们先看看`ImageProvider` 类。
+在本书前面章节已经介绍过`Image` 组件，并提到 Flutter 框架对加载过的图片是有缓存的（内存），默认最大缓存数量是 1000，最大缓存空间为 100M。本节便详细介绍 Image 的原理及图片缓存机制，下面我们先看看`ImageProvider` 类。
 
 ## 14.5.1 ImageProvider
 
@@ -22,7 +22,7 @@ abstract class ImageProvider<T> {
     // 实现代码省略
   }
 
-  Future<T> obtainKey(ImageConfiguration configuration); 
+  Future<T> obtainKey(ImageConfiguration configuration);
   @protected
   ImageStreamCompleter load(T key); // 需子类实现
 }
@@ -30,7 +30,7 @@ abstract class ImageProvider<T> {
 
 #### `load(T key)`方法
 
-加载图片数据源的接口，不同的数据源的加载方法不同，每个`ImageProvider`的子类必须实现它。比如`NetworkImage`类和`AssetImage`类，它们都是`ImageProvider`的子类，但它们需要从不同的数据源来加载图片数据：`NetworkImage`是从网络来加载图片数据，而`AssetImage`则是从最终的应用包里来加载（加载打到应用安装包里的资源图片）。 我们以`NetworkImage`为例，看看其load方法的实现：
+加载图片数据源的接口，不同的数据源的加载方法不同，每个`ImageProvider`的子类必须实现它。比如`NetworkImage`类和`AssetImage`类，它们都是`ImageProvider`的子类，但它们需要从不同的数据源来加载图片数据：`NetworkImage`是从网络来加载图片数据，而`AssetImage`则是从最终的应用包里来加载（加载打到应用安装包里的资源图片）。 我们以`NetworkImage`为例，看看其 load 方法的实现：
 
 ```dart
 
@@ -38,7 +38,7 @@ abstract class ImageProvider<T> {
 ImageStreamCompleter load(image_provider.NetworkImage key) {
 
   final StreamController<ImageChunkEvent> chunkEvents = StreamController<ImageChunkEvent>();
-  
+
   return MultiFrameImageStreamCompleter(
     codec: _loadAsync(key, chunkEvents), //调用
     chunkEvents: chunkEvents.stream,
@@ -48,11 +48,11 @@ ImageStreamCompleter load(image_provider.NetworkImage key) {
 }
 ```
 
-我们看到，`load`方法的返回值类型是`ImageStreamCompleter` ，它是一个抽象类，定义了管理图片加载过程的一些接口，`Image` Widget中正是通过它来监听图片加载状态的（我们将在下面介绍`Image` 原理时详细介绍）。
+我们看到，`load`方法的返回值类型是`ImageStreamCompleter` ，它是一个抽象类，定义了管理图片加载过程的一些接口，`Image` Widget 中正是通过它来监听图片加载状态的（我们将在下面介绍`Image` 原理时详细介绍）。
 
-`MultiFrameImageStreamCompleter` 是 `ImageStreamCompleter`的一个子类，是flutter sdk预置的类，通过该类，我们以方便、轻松地创建出一个`ImageStreamCompleter`实例来做为`load`方法的返回值。
+`MultiFrameImageStreamCompleter` 是 `ImageStreamCompleter`的一个子类，是 flutter sdk 预置的类，通过该类，我们以方便、轻松地创建出一个`ImageStreamCompleter`实例来做为`load`方法的返回值。
 
-我们可以看到，`MultiFrameImageStreamCompleter` 需要一个`codec`参数，该参数类型为`Future<ui.Codec> `。`Codec ` 是处理图片编解码的类的一个handler，实际上，它只是一个flutter engine API 的包装类，也就是说图片的编解码逻辑不是在Dart 代码部分实现，而是在flutter engine中实现的。`Codec`类部分定义如下：
+我们可以看到，`MultiFrameImageStreamCompleter` 需要一个`codec`参数，该参数类型为`Future<ui.Codec>`。`Codec` 是处理图片编解码的类的一个 handler，实际上，它只是一个 flutter engine API 的包装类，也就是说图片的编解码逻辑不是在 Dart 代码部分实现，而是在 flutter engine 中实现的。`Codec`类部分定义如下：
 
 ```dart
 @pragma('vm:entry-point')
@@ -97,7 +97,7 @@ class Codec extends NativeFieldWrapperClass2 {
       final HttpClientResponse response = await request.close();
       if (response.statusCode != HttpStatus.ok)
         throw Exception(...);
-      // 接收图片数据 
+      // 接收图片数据
       final Uint8List bytes = await consolidateHttpClientResponseBytes(
         response,
         onBytesReceived: (int cumulative, int total) {
@@ -122,9 +122,9 @@ class Codec extends NativeFieldWrapperClass2 {
 1. 下载图片。
 2. 对下载的图片数据进行解码。
 
-下载逻辑比较简单：通过`HttpClient`从网上下载图片，另外下载请求会设置一些自定义的header，开发者可以通过`NetworkImage`的`headers`命名参数来传递。
+下载逻辑比较简单：通过`HttpClient`从网上下载图片，另外下载请求会设置一些自定义的 header，开发者可以通过`NetworkImage`的`headers`命名参数来传递。
 
-在图片下载完成后调用了`PaintingBinding.instance.instantiateImageCodec(bytes)`对图片进行解码，值得注意的是`instantiateImageCodec(...)`也是一个Native API的包装，实际上会调用Flutter engine的`instantiateImageCodec`方法，源码如下：
+在图片下载完成后调用了`PaintingBinding.instance.instantiateImageCodec(bytes)`对图片进行解码，值得注意的是`instantiateImageCodec(...)`也是一个 Native API 的包装，实际上会调用 Flutter engine 的`instantiateImageCodec`方法，源码如下：
 
 ```dart
 String _instantiateImageCodec(Uint8List list, _Callback<Codec> callback, _ImageInfo imageInfo, int targetWidth, int targetHeight)
@@ -133,7 +133,7 @@ String _instantiateImageCodec(Uint8List list, _Callback<Codec> callback, _ImageI
 
 #### `obtainKey(ImageConfiguration)`方法
 
-该接口主要是为了配合实现图片缓存，`ImageProvider`从数据源加载完数据后，会在全局的`ImageCache`中缓存图片数据，而图片数据缓存是一个Map，而Map的key便是调用此方法的返回值，不同的key代表不同的图片数据缓存。
+该接口主要是为了配合实现图片缓存，`ImageProvider`从数据源加载完数据后，会在全局的`ImageCache`中缓存图片数据，而图片数据缓存是一个 Map，而 Map 的 key 便是调用此方法的返回值，不同的 key 代表不同的图片数据缓存。
 
 #### `resolve(ImageConfiguration)` 方法
 
@@ -153,7 +153,7 @@ ImageStream resolve(ImageConfiguration configuration) {
 
   // 创建一个新Zone，主要是为了当发生错误时不会干扰MainZone
   final Zone dangerZone = Zone.current.fork(...);
-  
+
   dangerZone.runGuarded(() {
     Future<T> key;
     // 先验证是否已经有缓存
@@ -178,7 +178,7 @@ ImageStream resolve(ImageConfiguration configuration) {
 }
 ```
 
-`ImageConfiguration`  包含图片和设备的相关信息，如图片的大小、所在的`AssetBundle `(只有打到安装包的图片存在)以及当前的设备平台、devicePixelRatio（设备像素比等）。Flutter SDK提供了一个便捷函数`createLocalImageConfiguration`来创建`ImageConfiguration`  对象：
+`ImageConfiguration` 包含图片和设备的相关信息，如图片的大小、所在的`AssetBundle`(只有打到安装包的图片存在)以及当前的设备平台、devicePixelRatio（设备像素比等）。Flutter SDK 提供了一个便捷函数`createLocalImageConfiguration`来创建`ImageConfiguration` 对象：
 
 ```dart
 ImageConfiguration createLocalImageConfiguration(BuildContext context, { Size size }) {
@@ -195,7 +195,7 @@ ImageConfiguration createLocalImageConfiguration(BuildContext context, { Size si
 
 我们可以发现这些信息基本都是通过`Context`来获取。
 
-上面代码A处就是处理缓存的主要代码，这里的`PaintingBinding.instance.imageCache` 是 `ImageCache`的一个实例，它是`PaintingBinding`的一个属性，而Flutter框架中的`PaintingBinding.instance`是一个单例，`imageCache`事实上也是一个单例，也就是说图片缓存是全局的，统一由`PaintingBinding.instance.imageCache` 来管理。
+上面代码 A 处就是处理缓存的主要代码，这里的`PaintingBinding.instance.imageCache` 是 `ImageCache`的一个实例，它是`PaintingBinding`的一个属性，而 Flutter 框架中的`PaintingBinding.instance`是一个单例，`imageCache`事实上也是一个单例，也就是说图片缓存是全局的，统一由`PaintingBinding.instance.imageCache` 来管理。
 
 下面我们看看`ImageCache`类定义：
 
@@ -213,11 +213,11 @@ class ImageCache {
   int _maximumSize = _kDefaultSize;
   // 缓存容量上限 (100 MB)
   int _maximumSizeBytes = _kDefaultSizeBytes;
-  
+
   // 缓存上限设置的setter
   set maximumSize(int value) {...}
   set maximumSizeBytes(int value) {...}
- 
+
   ... // 省略部分定义
 
   // 清除所有缓存
@@ -230,7 +230,7 @@ class ImageCache {
    // ...省略具体实现代码
   }
 
- 
+
   ImageStreamCompleter putIfAbsent(Object key, ImageStreamCompleter loader(), { ImageErrorListener onError }) {
     assert(key != null);
     assert(loader != null);
@@ -238,7 +238,7 @@ class ImageCache {
     // 图片还未加载成功，直接返回
     if (result != null)
       return result;
- 
+
     // 有缓存，继续往下走
     // 先移除缓存，后再添加，可以让最新使用过的缓存在_map中的位置更近一些，清理时会LRU来清除
     final _CachedImage image = _cache.remove(key);
@@ -294,19 +294,19 @@ class ImageCache {
 }
 ```
 
-有缓存则使用缓存，没有缓存则调用load方法加载图片，加载成功后:
+有缓存则使用缓存，没有缓存则调用 load 方法加载图片，加载成功后:
 
 1. 先判断图片数据有没有缓存，如果有，则直接返回`ImageStream`。
-2. 如果没有缓存，则调用`load(T key)`方法从数据源加载图片数据，加载成功后先缓存，然后返回ImageStream。
+2. 如果没有缓存，则调用`load(T key)`方法从数据源加载图片数据，加载成功后先缓存，然后返回 ImageStream。
 
-另外，我们可以看到`ImageCache`类中有设置缓存上限的setter，所以，如果我们可以自定义缓存上限：
+另外，我们可以看到`ImageCache`类中有设置缓存上限的 setter，所以，如果我们可以自定义缓存上限：
 
 ```dart
  PaintingBinding.instance.imageCache.maximumSize=2000; //最多2000张
  PaintingBinding.instance.imageCache.maximumSizeBytes = 200 << 20; //最大200M
 ```
 
-现在我们看一下缓存的key，因为Map中相同key的值会被覆盖，也就是说key是图片缓存的一个唯一标识，只要是不同key，那么图片数据就会分别缓存（即使事实上是同一张图片）。那么图片的唯一标识是什么呢？跟踪源码，很容易发现key正是`ImageProvider.obtainKey()`方法的返回值，而此方法需要`ImageProvider`子类去重写，这也就意味着不同的`ImageProvider`对key的定义逻辑会不同。其实也很好理解，比如对于`NetworkImage`，将图片的url作为key会很合适，而对于`AssetImage`，则应该将“包名+路径”作为唯一的key。下面我们以`NetworkImage`为例，看一下它的`obtainKey()`实现：
+现在我们看一下缓存的 key，因为 Map 中相同 key 的值会被覆盖，也就是说 key 是图片缓存的一个唯一标识，只要是不同 key，那么图片数据就会分别缓存（即使事实上是同一张图片）。那么图片的唯一标识是什么呢？跟踪源码，很容易发现 key 正是`ImageProvider.obtainKey()`方法的返回值，而此方法需要`ImageProvider`子类去重写，这也就意味着不同的`ImageProvider`对 key 的定义逻辑会不同。其实也很好理解，比如对于`NetworkImage`，将图片的 url 作为 key 会很合适，而对于`AssetImage`，则应该将“包名+路径”作为唯一的 key。下面我们以`NetworkImage`为例，看一下它的`obtainKey()`实现：
 
 ```dart
 @override
@@ -315,7 +315,7 @@ Future<NetworkImage> obtainKey(image_provider.ImageConfiguration configuration) 
 }
 ```
 
-代码很简单，创建了一个同步的future，然后直接将自身做为key返回。因为Map中在判断key（此时是`NetworkImage`对象）是否相等时会使用“==”运算符，那么定义key的逻辑就是`NetworkImage`的“==”运算符：
+代码很简单，创建了一个同步的 future，然后直接将自身做为 key 返回。因为 Map 中在判断 key（此时是`NetworkImage`对象）是否相等时会使用“==”运算符，那么定义 key 的逻辑就是`NetworkImage`的“==”运算符：
 
 ```dart
 @override
@@ -327,7 +327,7 @@ bool operator ==(dynamic other) {
 }
 ```
 
-很清晰，对于网络图片来说，会将其“url+缩放比例”作为缓存的key。也就是说**如果两张图片的url或scale只要有一个不同，便会重新下载并分别缓存**。
+很清晰，对于网络图片来说，会将其“url+缩放比例”作为缓存的 key。也就是说**如果两张图片的 url 或 scale 只要有一个不同，便会重新下载并分别缓存**。
 
 另外，我们需要注意的是，图片缓存是在内存中，并没有进行本地文件持久化存储，这也是为什么网络图片在应用重启后需要重新联网下载的原因。
 
@@ -335,9 +335,9 @@ bool operator ==(dynamic other) {
 
 ### 总结
 
-上面主要结合源码，探索了`ImageProvider`的主要功能和原理，如果要用一句话来总结`ImageProvider`功能，那么应该是：加载图片数据并进行缓存、解码。在此再次提醒读者，Flutter的源码是非常好的第一手资料，建议读者多多探索，另外，在阅读源码学习的同时一定要有总结，这样才不至于在源码中迷失。
+上面主要结合源码，探索了`ImageProvider`的主要功能和原理，如果要用一句话来总结`ImageProvider`功能，那么应该是：加载图片数据并进行缓存、解码。在此再次提醒读者，Flutter 的源码是非常好的第一手资料，建议读者多多探索，另外，在阅读源码学习的同时一定要有总结，这样才不至于在源码中迷失。
 
-## 14.5.2 Image组件原理
+## 14.5.2 Image 组件原理
 
 前面章节中我们介绍过`Image`的基础用法，现在我们更深入一些，研究一下`Image`是如何和`ImageProvider`配合来获取最终解码后的数据，然后又如何将图片绘制到屏幕上的。
 
@@ -412,12 +412,10 @@ class _MyImageState extends State<MyImage> {
 }
 ```
 
-
-
 上面代码流程如下：
 
 1. 通过`imageProvider.resolve`方法可以得到一个`ImageStream`（图片数据流），然后监听`ImageStream`的变化。当图片数据源发生变化时，`ImageStream`会触发相应的事件，而本例中我们只设置了图片成功的监听器`_updateImage`，而`_updateImage`中只更新了`_imageInfo`。值得注意的是，如果是静态图，`ImageStream`只会触发一次时间，如果是动态图，则会触发多次事件，每一次都会有一个解码后的图片帧。
-2. `_imageInfo` 更新后会rebuild，此时会创建一个`RawImage` Widget。`RawImage`最终会通过`RenderImage`来将图片绘制在屏幕上。如果继续跟进`RenderImage`类，我们会发现`RenderImage`的`paint` 方法中调用了`paintImage`方法，而`paintImage`方法中通过`Canvas`的`drawImageRect(…)`、`drawImageNine(...)`等方法来完成最终的绘制。
+2. `_imageInfo` 更新后会 rebuild，此时会创建一个`RawImage` Widget。`RawImage`最终会通过`RenderImage`来将图片绘制在屏幕上。如果继续跟进`RenderImage`类，我们会发现`RenderImage`的`paint` 方法中调用了`paintImage`方法，而`paintImage`方法中通过`Canvas`的`drawImageRect(…)`、`drawImageNine(...)`等方法来完成最终的绘制。
 3. 最终的绘制由`RawImage`来完成。
 
 下面测试一下`MyImage`：
@@ -439,21 +437,12 @@ class ImageInternalTestRoute extends StatelessWidget {
 }
 ```
 
-运行效果如图14-4所示：
+运行效果如图 14-4 所示：
 
 ![图14-4](../imgs/14-4.png)
 
-成功了！ 现在，想必`Image` Widget的源码已经没必要在花费篇章去介绍了，读者有兴趣可以自行去阅读。
-
-
+成功了！ 现在，想必`Image` Widget 的源码已经没必要在花费篇章去介绍了，读者有兴趣可以自行去阅读。
 
 ## 总结
 
-本节主要介绍了Flutter 图片的加载、缓存和绘制流程。其中`ImageProvider`主要负责图片数据的加载和缓存，而绘制部分逻辑主要是由`RawImage`来完成。 而`Image`正是连接起`ImageProvider`和`RawImage` 的桥梁。
-
-
-
-
-
-
-
+本节主要介绍了 Flutter 图片的加载、缓存和绘制流程。其中`ImageProvider`主要负责图片数据的加载和缓存，而绘制部分逻辑主要是由`RawImage`来完成。 而`Image`正是连接起`ImageProvider`和`RawImage` 的桥梁。

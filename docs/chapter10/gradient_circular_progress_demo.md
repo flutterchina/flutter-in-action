@@ -52,7 +52,7 @@ class GradientCircularProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     double _offset = .0;
     // 如果两端为圆角，则需要对起始位置进行调整，否则圆角部分会偏离起始位置
-    // 下面调整的角度的计算公式是通过数学几何知识得出，读者有兴趣可以研究一下为什么是这样  
+    // 下面调整的角度的计算公式是通过数学几何知识得出，读者有兴趣可以研究一下为什么是这样
     if (strokeCapRound) {
       _offset = asin(strokeWidth / (radius * 2 - strokeWidth));
     }
@@ -64,7 +64,7 @@ class GradientCircularProgressIndicator extends StatelessWidget {
       _colors = [color, color];
     }
     return Transform.rotate(
-      angle: -pi / 2.0 - _offset, 
+      angle: -pi / 2.0 - _offset,
       child: CustomPaint(
           size: Size.fromRadius(radius),
           painter: _GradientCircularProgressPainter(
@@ -391,5 +391,4 @@ class GradientCircularProgressRouteState
 }
 ```
 
-怎么样，很炫酷吧！`GradientCircularProgressIndicator`已经被添加进了笔者维护的flukit组件库中了，读者如果有需要，可以直接依赖flukit包。
-
+怎么样，很炫酷吧！`GradientCircularProgressIndicator`已经被添加进了笔者维护的 flukit 组件库中了，读者如果有需要，可以直接依赖 flukit 包。

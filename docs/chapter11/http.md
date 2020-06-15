@@ -1,6 +1,6 @@
-# 11.2 通过HttpClient发起HTTP请求
+# 11.2 通过 HttpClient 发起 HTTP 请求
 
-Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使用`HttpClient`来发起请求。使用`HttpClient`发起请求分为五步：
+Dart IO 库中提供了用于发起 Http 请求的一些类，我们可以直接使用`HttpClient`来发起请求。使用`HttpClient`发起请求分为五步：
 
 1. 创建一个`HttpClient`：
 
@@ -8,13 +8,13 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
     HttpClient httpClient = new HttpClient();
    ```
 
-2. 打开Http连接，设置请求头：
+2. 打开 Http 连接，设置请求头：
 
    ```dart
    HttpClientRequest request = await httpClient.getUrl(uri);
    ```
 
-   这一步可以使用任意Http Method，如`httpClient.post(...)`、`httpClient.delete(...)`等。如果包含Query参数，可以在构建uri时添加，如：
+   这一步可以使用任意 Http Method，如`httpClient.post(...)`、`httpClient.delete(...)`等。如果包含 Query 参数，可以在构建 uri 时添加，如：
 
    ```dart
    Uri uri=Uri(scheme: "https", host: "flutterchina.club", queryParameters: {
@@ -23,16 +23,17 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
      });
    ```
 
-   通过`HttpClientRequest`可以设置请求header，如：
+   通过`HttpClientRequest`可以设置请求 header，如：
 
    ```dart
    request.headers.add("user-agent", "test");
    ```
-   如果是post或put等可以携带请求体方法，可以通过HttpClientRequest对象发送request body，如：
+
+   如果是 post 或 put 等可以携带请求体方法，可以通过 HttpClientRequest 对象发送 request body，如：
 
    ```dart
    String payload="...";
-   request.add(utf8.encode(payload)); 
+   request.add(utf8.encode(payload));
    //request.addStream(_inputStream); //可以直接添加输入流
    ```
 
@@ -42,7 +43,7 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
    HttpClientResponse response = await request.close();
    ```
 
-   这一步完成后，请求信息就已经发送给服务器了，返回一个`HttpClientResponse`对象，它包含响应头（header）和响应流(响应体的Stream)，接下来就可以通过读取响应流来获取响应内容。
+   这一步完成后，请求信息就已经发送给服务器了，返回一个`HttpClientResponse`对象，它包含响应头（header）和响应流(响应体的 Stream)，接下来就可以通过读取响应流来获取响应内容。
 
 4. 读取响应内容：
 
@@ -50,7 +51,7 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
    String responseBody = await response.transform(utf8.decoder).join();
    ```
 
-   我们通过读取响应流来获取服务器返回的数据，在读取时我们可以设置编码格式，这里是utf8。
+   我们通过读取响应流来获取服务器返回的数据，在读取时我们可以设置编码格式，这里是 utf8。
 
 5. 请求结束，关闭`HttpClient`：
 
@@ -58,15 +59,15 @@ Dart IO库中提供了用于发起Http请求的一些类，我们可以直接使
    httpClient.close();
    ```
 
-    关闭client后，通过该client发起的所有请求都会中止。
+   关闭 client 后，通过该 client 发起的所有请求都会中止。
 
 #### 示例
 
-我们实现一个获取百度首页html的例子，示例效果如图11-1所示：
+我们实现一个获取百度首页 html 的例子，示例效果如图 11-1 所示：
 
-​    ![图11-1](../imgs/11-1.png)
+​ ![图11-1](../imgs/11-1.png)
 
-点击“获取百度首页”按钮后，会请求百度首页，请求成功后，我们将返回内容显示出来并在控制台打印响应header，代码如下：
+点击“获取百度首页”按钮后，会请求百度首页，请求成功后，我们将返回内容显示出来并在控制台打印响应 header，代码如下：
 
 ```dart
 import 'dart:convert';
@@ -151,38 +152,37 @@ I/flutter (18545): content-type: text/html;charset=utf-8
 I/flutter (18545): tracecode: 00525262401065761290103018, 00522983
 ```
 
-#### HttpClient配置
+#### HttpClient 配置
 
 `HttpClient`有很多属性可以配置，常用的属性列表如下：
 
-| 属性                  | 含义                                                         |
-| --------------------- | ------------------------------------------------------------ |
-| idleTimeout           | 对应请求头中的keep-alive字段值，为了避免频繁建立连接，httpClient在请求结束后会保持连接一段时间，超过这个阈值后才会关闭连接。 |
-| connectionTimeout     | 和服务器建立连接的超时，如果超过这个值则会抛出SocketException异常。 |
-| maxConnectionsPerHost | 同一个host，同时允许建立连接的最大数量。                     |
-| autoUncompress        | 对应请求头中的Content-Encoding，如果设置为true，则请求头中Content-Encoding的值为当前HttpClient支持的压缩算法列表，目前只有"gzip" |
-| userAgent             | 对应请求头中的User-Agent字段。                               |
+| 属性                  | 含义                                                                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| idleTimeout           | 对应请求头中的 keep-alive 字段值，为了避免频繁建立连接，httpClient 在请求结束后会保持连接一段时间，超过这个阈值后才会关闭连接。        |
+| connectionTimeout     | 和服务器建立连接的超时，如果超过这个值则会抛出 SocketException 异常。                                                                  |
+| maxConnectionsPerHost | 同一个 host，同时允许建立连接的最大数量。                                                                                              |
+| autoUncompress        | 对应请求头中的 Content-Encoding，如果设置为 true，则请求头中 Content-Encoding 的值为当前 HttpClient 支持的压缩算法列表，目前只有"gzip" |
+| userAgent             | 对应请求头中的 User-Agent 字段。                                                                                                       |
 
-可以发现，有些属性只是为了更方便的设置请求头，对于这些属性，你完全可以通过`HttpClientRequest`直接设置header，不同的是通过`HttpClient`设置的对整个`httpClient`都生效，而通过`HttpClientRequest`设置的只对当前请求生效。
+可以发现，有些属性只是为了更方便的设置请求头，对于这些属性，你完全可以通过`HttpClientRequest`直接设置 header，不同的是通过`HttpClient`设置的对整个`httpClient`都生效，而通过`HttpClientRequest`设置的只对当前请求生效。
 
-#### HTTP请求认证
+#### HTTP 请求认证
 
-Http协议的认证（Authentication）机制可以用于保护非公开资源。如果Http服务器开启了认证，那么用户在发起请求时就需要携带用户凭据，如果你在浏览器中访问了启用Basic认证的资源时，浏览就会弹出一个登录框，如：
+Http 协议的认证（Authentication）机制可以用于保护非公开资源。如果 Http 服务器开启了认证，那么用户在发起请求时就需要携带用户凭据，如果你在浏览器中访问了启用 Basic 认证的资源时，浏览就会弹出一个登录框，如：
 
 ![image-20181031114207514](https://cdn.jsdelivr.net/gh/flutterchina/flutter-in-action@1.0/docs/imgs/image-20181031114207514.png)
 
+我们先看看 Basic 认证的基本过程：
 
-
-我们先看看Basic认证的基本过程：
-
-1. 客户端发送http请求给服务器，服务器验证该用户是否已经登录验证过了，如果没有的话，  服务器会返回一个401 Unauthozied给客户端，并且在响应header中添加一个 “WWW-Authenticate” 字段，例如：
+1. 客户端发送 http 请求给服务器，服务器验证该用户是否已经登录验证过了，如果没有的话，  服务器会返回一个 401 Unauthozied 给客户端，并且在响应 header 中添加一个 “WWW-Authenticate” 字段，例如：
 
    ```
    WWW-Authenticate: Basic realm="admin"
    ```
-   其中"Basic"为认证方式，realm为用户角色的分组，可以在后台添加分组。
 
-2. 客户端得到响应码后，将用户名和密码进行base64编码（格式为用户名:密码），设置请求头Authorization，继续访问 :
+   其中"Basic"为认证方式，realm 为用户角色的分组，可以在后台添加分组。
+
+2. 客户端得到响应码后，将用户名和密码进行 base64 编码（格式为用户名:密码），设置请求头 Authorization，继续访问  :
 
    ```
    Authorization: Basic YXXFISDJFISJFGIJIJG
@@ -190,9 +190,9 @@ Http协议的认证（Authentication）机制可以用于保护非公开资源�
 
    服务器验证用户凭据，如果通过就返回资源内容。
 
-注意，Http的方式除了Basic认证之外还有：Digest认证、Client认证、Form Based认证等，目前Flutter的HttpClient只支持Basic和Digest两种认证方式，这两种认证方式最大的区别是发送用户凭据时，对于用户凭据的内容，前者只是简单的通过Base64编码（可逆），而后者会进行哈希运算，相对来说安全一点点，但是为了安全起见，**无论是采用Basic认证还是Digest认证，都应该在Https协议下**，这样可以防止抓包和中间人攻击。
+注意，Http 的方式除了 Basic 认证之外还有：Digest 认证、Client 认证、Form Based 认证等，目前 Flutter 的 HttpClient 只支持 Basic 和 Digest 两种认证方式，这两种认证方式最大的区别是发送用户凭据时，对于用户凭据的内容，前者只是简单的通过 Base64 编码（可逆），而后者会进行哈希运算，相对来说安全一点点，但是为了安全起见，**无论是采用 Basic 认证还是 Digest 认证，都应该在 Https 协议下**，这样可以防止抓包和中间人攻击。
 
-`HttpClient`关于Http认证的方法和属性：
+`HttpClient`关于 Http 认证的方法和属性：
 
 1. `addCredentials(Uri url, String realm, HttpClientCredentials credentials)`
 
@@ -200,27 +200,27 @@ Http协议的认证（Authentication）机制可以用于保护非公开资源�
 
    ```dart
    httpClient.addCredentials(_uri,
-    "admin", 
+    "admin",
      new HttpClientBasicCredentials("username","password"), //Basic认证凭据
    );
    ```
 
-   如果是Digest认证，可以创建Digest认证凭据：
+   如果是 Digest 认证，可以创建 Digest 认证凭据：
 
    ```dart
    HttpClientDigestCredentials("username","password")
    ```
 
-2. ` authenticate(Future<bool> f(Uri url, String scheme, String realm))`
+2. `authenticate(Future<bool> f(Uri url, String scheme, String realm))`
 
-   这是一个setter，类型是一个回调，当服务器需要用户凭据且该用户凭据未被添加时，httpClient会调用此回调，在这个回调当中，一般会调用`addCredential()`来动态添加用户凭证，例如：
+   这是一个 setter，类型是一个回调，当服务器需要用户凭据且该用户凭据未被添加时，httpClient 会调用此回调，在这个回调当中，一般会调用`addCredential()`来动态添加用户凭证，例如：
 
    ```dart
    httpClient.authenticate=(Uri url, String scheme, String realm) async{
      if(url.host=="xx.com" && realm=="admin"){
        httpClient.addCredentials(url,
          "admin",
-         new HttpClientBasicCredentials("username","pwd"), 
+         new HttpClientBasicCredentials("username","pwd"),
        );
        return true;
      }
@@ -228,7 +228,7 @@ Http协议的认证（Authentication）机制可以用于保护非公开资源�
    };
    ```
 
-   一个建议是，如果所有请求都需要认证，那么应该在HttpClient初始化时就调用`addCredentials()`来添加全局凭证，而不是去动态添加。
+   一个建议是，如果所有请求都需要认证，那么应该在 HttpClient 初始化时就调用`addCredentials()`来添加全局凭证，而不是去动态添加。
 
 #### 代理
 
@@ -241,11 +241,11 @@ Http协议的认证（Authentication）机制可以用于保护非公开资源�
  };
 ```
 
-`findProxy` 回调返回值是一个遵循浏览器PAC脚本格式的字符串，详情可以查看API文档，如果不需要代理，返回"DIRECT"即可。
+`findProxy` 回调返回值是一个遵循浏览器 PAC 脚本格式的字符串，详情可以查看 API 文档，如果不需要代理，返回"DIRECT"即可。
 
-在APP开发中，很多时候我们需要抓包来调试，而抓包软件(如charles)就是一个代理，这时我们就可以将请求发送到我们的抓包软件，我们就可以在抓包软件中看到请求的数据了。
+在 APP 开发中，很多时候我们需要抓包来调试，而抓包软件(如 charles)就是一个代理，这时我们就可以将请求发送到我们的抓包软件，我们就可以在抓包软件中看到请求的数据了。
 
-有时代理服务器也启用了身份验证，这和http协议的认证是相似的，HttpClient提供了对应的Proxy认证方法和属性：
+有时代理服务器也启用了身份验证，这和 http 协议的认证是相似的，HttpClient 提供了对应的 Proxy 认证方法和属性：
 
 ```dart
 set authenticateProxy(
@@ -254,21 +254,21 @@ void addProxyCredentials(
     String host, int port, String realm, HttpClientCredentials credentials);
 ```
 
-他们的使用方法和上面“HTTP请求认证”一节中介绍的`addCredentials`和`authenticate` 相同，故不再赘述。
+他们的使用方法和上面“HTTP 请求认证”一节中介绍的`addCredentials`和`authenticate` 相同，故不再赘述。
 
 #### 证书校验
 
-Https中为了防止通过伪造证书而发起的中间人攻击，客户端应该对自签名或非CA颁发的证书进行校验。`HttpClient`对证书校验的逻辑如下：
+Https 中为了防止通过伪造证书而发起的中间人攻击，客户端应该对自签名或非 CA 颁发的证书进行校验。`HttpClient`对证书校验的逻辑如下：
 
-1. 如果请求的Https证书是可信CA颁发的，并且访问host包含在证书的domain列表中(或者符合通配规则)并且证书未过期，则验证通过。
-2. 如果第一步验证失败，但在创建HttpClient时，已经通过SecurityContext将证书添加到证书信任链中，那么当服务器返回的证书在信任链中的话，则验证通过。
-3. 如果1、2验证都失败了，如果用户提供了`badCertificateCallback`回调，则会调用它，如果回调返回`true`，则允许继续链接，如果返回`false`，则终止链接。
+1. 如果请求的 Https 证书是可信 CA 颁发的，并且访问 host 包含在证书的 domain 列表中(或者符合通配规则)并且证书未过期，则验证通过。
+2. 如果第一步验证失败，但在创建 HttpClient 时，已经通过 SecurityContext 将证书添加到证书信任链中，那么当服务器返回的证书在信任链中的话，则验证通过。
+3. 如果 1、2 验证都失败了，如果用户提供了`badCertificateCallback`回调，则会调用它，如果回调返回`true`，则允许继续链接，如果返回`false`，则终止链接。
 
 综上所述，我们的证书校验其实就是提供一个`badCertificateCallback`回调，下面通过一个示例来说明。
 
 ##### 示例
 
-假设我们的后台服务使用的是自签名证书，证书格式是PEM格式，我们将证书的内容保存在本地字符串中，那么我们的校验逻辑如下：
+假设我们的后台服务使用的是自签名证书，证书格式是 PEM 格式，我们将证书的内容保存在本地字符串中，那么我们的校验逻辑如下：
 
 ```dart
 String PEM="XXXXX";//可以从文件读取
@@ -281,7 +281,7 @@ httpClient.badCertificateCallback=(X509Certificate cert, String host, int port){
 };
 ```
 
-`X509Certificate`是证书的标准格式，包含了证书除私钥外所有信息，读者可以自行查阅文档。另外，上面的示例没有校验host，是因为只要服务器返回的证书内容和本地的保存一致就已经能证明是我们的服务器了（而不是中间人），host验证通常是为了防止证书和域名不匹配。
+`X509Certificate`是证书的标准格式，包含了证书除私钥外所有信息，读者可以自行查阅文档。另外，上面的示例没有校验 host，是因为只要服务器返回的证书内容和本地的保存一致就已经能证明是我们的服务器了（而不是中间人），host 验证通常是为了防止证书和域名不匹配。
 
 对于自签名的证书，我们也可以将其添加到本地证书信任链中，这样证书验证时就会自动通过，而不会再走到`badCertificateCallback`回调中：
 
@@ -293,9 +293,8 @@ sc.setTrustedCertificates(file);
 HttpClient httpClient = new HttpClient(context: sc);
 ```
 
-注意，通过`setTrustedCertificates()`设置的证书格式必须为PEM或PKCS12，如果证书格式为PKCS12，则需将证书密码传入，这样则会在代码中暴露证书密码，所以客户端证书校验不建议使用PKCS12格式的证书。
+注意，通过`setTrustedCertificates()`设置的证书格式必须为 PEM 或 PKCS12，如果证书格式为 PKCS12，则需将证书密码传入，这样则会在代码中暴露证书密码，所以客户端证书校验不建议使用 PKCS12 格式的证书。
 
 #### 总结
 
-值得注意的是，`HttpClient`提供的这些属性和方法最终都会作用在请求header里，我们完全可以通过手动去设置header来实现，之所以提供这些方法，只是为了方便开发者而已。另外，Http协议是一个非常重要的、使用最多的网络协议，每一个开发者都应该对http协议非常熟悉。
-
+值得注意的是，`HttpClient`提供的这些属性和方法最终都会作用在请求 header 里，我们完全可以通过手动去设置 header 来实现，之所以提供这些方法，只是为了方便开发者而已。另外，Http 协议是一个非常重要的、使用最多的网络协议，每一个开发者都应该对 http 协议非常熟悉。

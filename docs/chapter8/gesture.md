@@ -1,6 +1,6 @@
-# 8.2 手势识别 
+# 8.2 手势识别
 
-本节先介绍一些Flutter中用于处理手势的`GestureDetector`和`GestureRecognizer`，然后再仔细讨论一下手势竞争与冲突问题。
+本节先介绍一些 Flutter 中用于处理手势的`GestureDetector`和`GestureRecognizer`，然后再仔细讨论一下手势竞争与冲突问题。
 
 ## 8.2.1 GestureDetector
 
@@ -8,7 +8,7 @@
 
 ### 点击、双击、长按
 
-我们通过`GestureDetector`对`Container`进行手势识别，触发相应事件后，在`Container`上显示事件名，为了增大点击区域，将`Container`设置为200×100，代码如下：
+我们通过`GestureDetector`对`Container`进行手势识别，触发相应事件后，在`Container`上显示事件名，为了增大点击区域，将`Container`设置为 200×100，代码如下：
 
 ```dart
 
@@ -27,7 +27,7 @@ class _GestureDetectorTestRouteState extends State<GestureDetectorTestRoute> {
         child: Container(
           alignment: Alignment.center,
           color: Colors.blue,
-          width: 200.0, 
+          width: 200.0,
           height: 100.0,
           child: Text(_operation,
             style: TextStyle(color: Colors.white),
@@ -49,19 +49,15 @@ class _GestureDetectorTestRouteState extends State<GestureDetectorTestRoute> {
 }
 ```
 
-运行效果如图8-2所示：
+运行效果如图 8-2 所示：
 
 ![图8-2](../imgs/8-2.png)
 
-
-
-> **注意**： 当同时监听`onTap`和`onDoubleTap`事件时，当用户触发tap事件时，会有200毫秒左右的延时，这是因为当用户点击完之后很可能会再次点击以触发双击事件，所以`GestureDetector`会等一段时间来确定是否为双击事件。如果用户只监听了`onTap`（没有监听`onDoubleTap`）事件时，则没有延时。
-
-
+> **注意**： 当同时监听`onTap`和`onDoubleTap`事件时，当用户触发 tap 事件时，会有 200 毫秒左右的延时，这是因为当用户点击完之后很可能会再次点击以触发双击事件，所以`GestureDetector`会等一段时间来确定是否为双击事件。如果用户只监听了`onTap`（没有监听`onDoubleTap`）事件时，则没有延时。
 
 ### 拖动、滑动
 
-一次完整的手势过程是指用户手指按下到抬起的整个过程，期间，用户按下手指后可能会移动，也可能不会移动。`GestureDetector`对于拖动和滑动事件是没有区分的，他们本质上是一样的。`GestureDetector`会将要监听的组件的原点（左上角）作为本次手势的原点，当用户在监听的组件上按下手指时，手势识别就会开始。下面我们看一个拖动圆形字母A的示例：
+一次完整的手势过程是指用户手指按下到抬起的整个过程，期间，用户按下手指后可能会移动，也可能不会移动。`GestureDetector`对于拖动和滑动事件是没有区分的，他们本质上是一样的。`GestureDetector`会将要监听的组件的原点（左上角）作为本次手势的原点，当用户在监听的组件上按下手指时，手势识别就会开始。下面我们看一个拖动圆形字母 A 的示例：
 
 ```dart
 class _Drag extends StatefulWidget {
@@ -107,11 +103,9 @@ class _DragState extends State<_Drag> with SingleTickerProviderStateMixin {
 }
 ```
 
-运行后，就可以在任意方向拖动了，运行效果如图8-3所示：
+运行后，就可以在任意方向拖动了，运行效果如图 8-3 所示：
 
 ![图8-3](../imgs/8-3.png)
-
-
 
 日志：
 
@@ -120,13 +114,11 @@ I/flutter ( 8513): 用户手指按下：Offset(26.3, 101.8)
 I/flutter ( 8513): Velocity(235.5, 125.8)
 ```
 
-
-
 代码解释：
 
 - `DragDownDetails.globalPosition`：当用户按下时，此属性为用户按下的位置相对于**屏幕**（而非父组件）原点(左上角)的偏移。
-- `DragUpdateDetails.delta`：当用户在屏幕上滑动时，会触发多次Update事件，`delta`指一次Update事件的滑动的偏移量。
-- `DragEndDetails.velocity`：该属性代表用户抬起手指时的滑动速度(包含x、y两个轴的），示例中并没有处理手指抬起时的速度，常见的效果是根据用户抬起手指时的速度做一个减速动画。
+- `DragUpdateDetails.delta`：当用户在屏幕上滑动时，会触发多次 Update 事件，`delta`指一次 Update 事件的滑动的偏移量。
+- `DragEndDetails.velocity`：该属性代表用户抬起手指时的滑动速度(包含 x、y 两个轴的），示例中并没有处理手指抬起时的速度，常见的效果是根据用户抬起手指时的速度做一个减速动画。
 
 ### 单一方向拖动
 
@@ -191,7 +183,7 @@ class _ScaleTestRouteState extends State<_ScaleTestRoute> {
 }
 ```
 
-运行效果如图8-4所示：
+运行效果如图 8-4 所示：
 
 ![图8-4](../imgs/8-4.png)
 
@@ -199,11 +191,11 @@ class _ScaleTestRouteState extends State<_ScaleTestRoute> {
 
 ## 8.2.2 GestureRecognizer
 
-`GestureDetector`内部是使用一个或多个`GestureRecognizer`来识别各种手势的，而`GestureRecognizer`的作用就是通过`Listener`来将原始指针事件转换为语义手势，`GestureDetector`直接可以接收一个子widget。`GestureRecognizer`是一个抽象类，一种手势的识别器对应一个`GestureRecognizer`的子类，Flutter实现了丰富的手势识别器，我们可以直接使用。
+`GestureDetector`内部是使用一个或多个`GestureRecognizer`来识别各种手势的，而`GestureRecognizer`的作用就是通过`Listener`来将原始指针事件转换为语义手势，`GestureDetector`直接可以接收一个子 widget。`GestureRecognizer`是一个抽象类，一种手势的识别器对应一个`GestureRecognizer`的子类，Flutter 实现了丰富的手势识别器，我们可以直接使用。
 
 #### 示例
 
-假设我们要给一段富文本（`RichText`）的不同部分分别添加点击事件处理器，但是`TextSpan`并不是一个widget，这时我们不能用`GestureDetector`，但`TextSpan`有一个`recognizer`属性，它可以接收一个`GestureRecognizer`。
+假设我们要给一段富文本（`RichText`）的不同部分分别添加点击事件处理器，但是`TextSpan`并不是一个 widget，这时我们不能用`GestureDetector`，但`TextSpan`有一个`recognizer`属性，它可以接收一个`GestureRecognizer`。
 
 假设我们需要在点击时给文本变色:
 
@@ -255,18 +247,13 @@ class _GestureRecognizerTestRouteState
 
 ![图8-5](../imgs/8-5.png)
 
-
-
 > 注意：使用`GestureRecognizer`后一定要调用其`dispose()`方法来释放资源（主要是取消内部的计时器）。
->
-
-
 
 ## 8.2.3 手势竞争与冲突
 
 ### 竞争
 
-如果在上例中我们同时监听水平和垂直方向的拖动事件，那么我们斜着拖动时哪个方向会生效？实际上取决于第一次移动时两个轴上的位移分量，哪个轴的大，哪个轴在本次滑动事件竞争中就胜出。实际上Flutter中的手势识别引入了一个Arena的概念，Arena直译为“竞技场”的意思，每一个手势识别器（`GestureRecognizer`）都是一个“竞争者”（`GestureArenaMember`），当发生滑动事件时，他们都要在“竞技场”去竞争本次事件的处理权，而最终只有一个“竞争者”会胜出(win)。例如，假设有一个`ListView`，它的第一个子组件也是`ListView`，如果现在滑动这个子`ListView`，父`ListView`会动吗？答案是否定的，这时只有子`ListView`会动，因为这时子`ListView`会胜出而获得滑动事件的处理权。
+如果在上例中我们同时监听水平和垂直方向的拖动事件，那么我们斜着拖动时哪个方向会生效？实际上取决于第一次移动时两个轴上的位移分量，哪个轴的大，哪个轴在本次滑动事件竞争中就胜出。实际上 Flutter 中的手势识别引入了一个 Arena 的概念，Arena 直译为“竞技场”的意思，每一个手势识别器（`GestureRecognizer`）都是一个“竞争者”（`GestureArenaMember`），当发生滑动事件时，他们都要在“竞技场”去竞争本次事件的处理权，而最终只有一个“竞争者”会胜出(win)。例如，假设有一个`ListView`，它的第一个子组件也是`ListView`，如果现在滑动这个子`ListView`，父`ListView`会动吗？答案是否定的，这时只有子`ListView`会动，因为这时子`ListView`会胜出而获得滑动事件的处理权。
 
 ### **示例**
 
@@ -317,7 +304,7 @@ class BothDirectionTestRouteState extends State<BothDirectionTestRoute> {
 
 ### 手势冲突
 
-由于手势竞争最终只有一个胜出者，所以，当有多个手势识别器时，可能会产生冲突。假设有一个widget，它可以左右拖动，现在我们也想检测在它上面手指按下和抬起的事件，代码如下：
+由于手势竞争最终只有一个胜出者，所以，当有多个手势识别器时，可能会产生冲突。假设有一个 widget，它可以左右拖动，现在我们也想检测在它上面手指按下和抬起的事件，代码如下：
 
 ```dart
 class GestureConflictTestRouteState extends State<GestureConflictTestRoute> {
@@ -359,7 +346,7 @@ I/flutter (17539): down
 I/flutter (17539): onHorizontalDragEnd
 ```
 
-我们发现没有打印"up"，这是因为在拖动时，刚开始按下手指时在没有移动时，拖动手势还没有完整的语义，此时TapDown手势胜出(win)，此时打印"down"，而拖动时，拖动手势会胜出，当手指抬起时，`onHorizontalDragEnd` 和 `onTapUp`发生了冲突，但是因为是在拖动的语义中，所以`onHorizontalDragEnd`胜出，所以就会打印 “onHorizontalDragEnd”。如果我们的代码逻辑中，对于手指按下和抬起是强依赖的，比如在一个轮播图组件中，我们希望手指按下时，暂停轮播，而抬起时恢复轮播，但是由于轮播图组件中本身可能已经处理了拖动手势（支持手动滑动切换），甚至可能也支持了缩放手势，这时我们如果在外部再用`onTapDown`、`onTapUp`来监听的话是不行的。这时我们应该怎么做？其实很简单，通过Listener监听原始指针事件就行：
+我们发现没有打印"up"，这是因为在拖动时，刚开始按下手指时在没有移动时，拖动手势还没有完整的语义，此时 TapDown 手势胜出(win)，此时打印"down"，而拖动时，拖动手势会胜出，当手指抬起时，`onHorizontalDragEnd` 和 `onTapUp`发生了冲突，但是因为是在拖动的语义中，所以`onHorizontalDragEnd`胜出，所以就会打印 “onHorizontalDragEnd”。如果我们的代码逻辑中，对于手指按下和抬起是强依赖的，比如在一个轮播图组件中，我们希望手指按下时，暂停轮播，而抬起时恢复轮播，但是由于轮播图组件中本身可能已经处理了拖动手势（支持手动滑动切换），甚至可能也支持了缩放手势，这时我们如果在外部再用`onTapDown`、`onTapUp`来监听的话是不行的。这时我们应该怎么做？其实很简单，通过 Listener 监听原始指针事件就行：
 
 ```dart
 Positioned(
@@ -389,4 +376,3 @@ Positioned(
 ```
 
 手势冲突只是手势级别的，而手势是对原始指针的语义化的识别，所以在遇到复杂的冲突场景时，都可以通过`Listener`直接识别原始指针事件来解决冲突。
-

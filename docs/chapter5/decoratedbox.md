@@ -1,4 +1,4 @@
-# 5.3 装饰容器DecoratedBox
+# 5.3 装饰容器 DecoratedBox
 
 `DecoratedBox`可以在其子组件绘制前(或后)绘制一些装饰（Decoration），如背景、边框、渐变等。`DecoratedBox`定义如下：
 
@@ -17,7 +17,7 @@ const DecoratedBox({
 
 #### BoxDecoration
 
-我们通常会直接使用`BoxDecoration`类，它是一个Decoration的子类，实现了常用的装饰元素的绘制。
+我们通常会直接使用`BoxDecoration`类，它是一个 Decoration 的子类，实现了常用的装饰元素的绘制。
 
 ```dart
 BoxDecoration({
@@ -32,7 +32,7 @@ BoxDecoration({
 })
 ```
 
-各个属性名都是自解释的，详情读者可以查看API文档。下面我们实现一个带阴影的背景色渐变的按钮：
+各个属性名都是自解释的，详情读者可以查看 API 文档。下面我们实现一个带阴影的背景色渐变的按钮：
 
 ```dart
  DecoratedBox(
@@ -53,8 +53,8 @@ BoxDecoration({
 )
 ```
 
-运行后效果如图5-9所示：
+运行后效果如图 5-9 所示：
 
 ![图5-9](../imgs/5-9.png)
 
-怎么样，通过`BoxDecoration`我们实现了一个渐变按钮的外观，但此示例还不是一个标准的按钮，因为它还不能响应点击事件，我们将在后面“自定义组件”一章中实现一个完整功能的`GradientButton`。另外，上面的例子中使用了`LinearGradient`类，它用于定义线性渐变的类，Flutter中还提供了其它渐变配置类，如`RadialGradient`、`SweepGradient`，读者若有需要可以自行查看API文档。
+怎么样，通过`BoxDecoration`我们实现了一个渐变按钮的外观，但此示例还不是一个标准的按钮，因为它还不能响应点击事件，我们将在后面“自定义组件”一章中实现一个完整功能的`GradientButton`。另外，上面的例子中使用了`LinearGradient`类，它用于定义线性渐变的类，Flutter 中还提供了其它渐变配置类，如`RadialGradient`、`SweepGradient`，读者若有需要可以自行查看 API 文档。
