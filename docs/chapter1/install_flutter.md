@@ -1,6 +1,6 @@
 # 1.3 搭建 Flutter 开发环境
 
-工欲善其事必先利其器，本节首先会分别介绍一下在 Windows 和 macOS 下 Flutter SDK 的安装，然后再介绍一下配 IDE 和模拟器的使用。
+工欲善其事必先利其器，本节会分别介绍一下在 Windows 和 macOS 下 Flutter SDK 的安装，然后再介绍一下配合 IDE 和模拟器的使用。
 
 ## 1.3.1 安装 Flutter
 
@@ -39,13 +39,13 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 #### 获取 Flutter SDK
 
-1. 去 flutter 官网下载其最新可用的安装包，下载地址：https://flutter.dev/docs/development/tools/sdk/releases ，打开后如图 1-2 所示：
+1. 去 Flutter 官网下载其最新可用的安装包，下载地址：https://flutter.dev/docs/development/tools/sdk/releases ，打开后如图 1-2 所示：
 
    ![图1-2](../imgs/1-2.png)
 
-注意，Flutter 的渠道版本会不停变动，请以 Flutter 官网为准。另外，在中国大陆地区，要想正常获取安装包列表或下载安装包，可能需要翻墙，读者也可以去 Flutter github 项目下去下载安装包，地址：https://github.com/flutter/flutter/releases 。
+注意，Flutter 的渠道版本会不停变动，请以 Flutter 官网为准。另外，在中国大陆地区，要想正常获取安装包列表或下载安装包，可能需要翻墙，读者也可以去 Flutter github 项目下去下载安装包，地址：https://github.com/flutter/flutter/releases
 
-2. 将安装包 zip 解压到你想安装 Flutter SDK 的路径（如：`C:\src\flutter`；注意，**不要**将 flutter 安装到需要一些高权限的路径如`C:\Program Files\`）。
+2. 将安装包 zip 解压到你想安装 Flutter SDK 的路径（如：`C:\src\flutter`；注意，**不要**将 Flutter 安装到需要一些高权限的路径如`C:\Program Files\`）。
 
 3. 在 Flutter 安装目录的`flutter`文件下找到`flutter_console.bat`，双击运行并启动**flutter 命令行**，接下来，你就可以在 Flutter 命令行运行 flutter 命令了。
 
