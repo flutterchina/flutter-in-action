@@ -122,7 +122,7 @@ Column(
 1. 定义两个变量，用于保存用户名和密码，然后在`onChange`触发时，各自保存一下输入内容。
 2. 通过`controller`直接获取。
 
-第一种方式比较简单，不在举例，我们来重点看一下第二种方式，我们以用户名输入框举例：
+第一种方式比较简单，不再举例。我们来重点看一下第二种方式，我们以用户名输入框举例：
 
 定义一个`controller`：
 
@@ -174,7 +174,7 @@ print(_unameController.text)
    }
    ```
 
-两种方式相比，`onChanged`是专门用于监听文本变化，而`controller`的功能却多一些，除了能监听文本变化外，它还可以设置默认值、选择文本，下面我们看一个例子：
+两种方式相比，`onChanged`是专门用于监听文本变化，而`controller`的功能却多一些，除了能监听文本变化外，它还可以设置默认值、选择文本。下面我们看一个例子：
 
 创建一个`controller`:
 
@@ -192,7 +192,7 @@ _selectionController.selection=TextSelection(
 );
 ```
 
-设置`controlle`r:
+设置`controller`:
 
 ```dart
 TextField(
