@@ -396,6 +396,7 @@ class MyDrawer extends StatelessWidget {
                         : Image.asset(
                             "imgs/avatar-default.png",
                             width: 80,
+                            height: 80,
                           ),
                   ),
                 ),
