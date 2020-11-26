@@ -105,7 +105,7 @@ Alignment(this.x, this.y)
 `FractionalOffset` 继承自 `Alignment `，它和 `Alignment `唯一的区别就是坐标原点不同！`FractionalOffset` 的坐标原点为矩形的左侧顶点，这和布局系统的一致，所以理解起来会比较容易。`FractionalOffset`的坐标转换公式为：
 
 ```
-实际偏移 = (FractionalOffse.x * childWidth, FractionalOffse.y * childHeight)
+实际偏移 = (FractionalOffset.x * childWidth, FractionalOffset.y * childHeight)
 ```
 
 下面看一个例子：
