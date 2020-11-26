@@ -1,6 +1,6 @@
 # 4.4 流式布局
 
-在介绍Row和Colum时，如果子widget超出屏幕范围，则会报溢出错误，如：
+在介绍Row和Column时，如果子widget超出屏幕范围，则会报溢出错误，如：
 
 ```dart
 Row(
