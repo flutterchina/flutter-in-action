@@ -56,7 +56,8 @@ const Texture({
 3. 构建UI。现在我们构建如图12-4的测试界面：
 
    ![12-4](../imgs/12-4.jpg)
-   线面是完整的代码：
+   
+   下面是完整的代码：
    
    ```dart
    import 'package:camera/camera.dart';
