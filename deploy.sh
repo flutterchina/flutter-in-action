@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-git subtree push --prefix docs web gh-pages
+git subtree push --prefix docs/.vuepress/dist web gh-pages
