@@ -1,0 +1,50 @@
+component: website
+name: website-pm9ESy4aT
+org: '1256137927'
+app: flutter-in-action
+stage: dev
+inputs:
+  src:
+    src: ./docs/.vuepress/dist
+    index: index.html
+    error: index.html
+  region: ap-beijing
+  bucketName: my-bucket
+  protocol: https
+  isAutoCiDeploy: false
+  hosts:
+    - host: book.flutterchina.club
+      autoRefresh: true
+      https:
+        switch: on
+        http2: on
+        certInfo:
+          certId: 'iamJwU4l'
+      cache:
+        simpleCache:
+          followOrigin: on
+          cacheRules:
+          - cacheType: all
+            cacheContents:
+            - '*'
+            cacheTime: 1000
+      cacheKey:
+        fullUrlCache: on
+
+    - host: www.flutterchina.club
+      autoRefresh: true
+      https:
+        switch: on
+        http2: on
+        certInfo:
+          certId: 'iamJwU4l'
+      cache:
+        simpleCache:
+          followOrigin: on
+          cacheRules:
+          - cacheType: all
+            cacheContents:
+            - '*'
+            cacheTime: 1000
+      cacheKey:
+        fullUrlCache: on
