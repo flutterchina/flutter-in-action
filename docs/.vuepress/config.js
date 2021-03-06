@@ -1,11 +1,15 @@
 // .vuepress/config.js
 module.exports = {
   title:"《Flutter实战》电子书",
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     nav: [
       { text: 'Flutter中国', link: 'https://github.com/flutterchina' },
       { text: 'Github', link: 'https://github.com/flutterchina/flutter-in-action' },
       { text: '实体书', link: 'https://item.jd.com/12816296.html' },
+      { text: '和作者做同事', link: '/join_us.html' },
     ],
     sidebar: [
       {
