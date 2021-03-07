@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node minify.js",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   },
-  "author": "zhouyupeng",
+  "author": "wendux",
   "license": "ISC",
   "dependencies": {
     "@antv/g2": "^4.0.6"
