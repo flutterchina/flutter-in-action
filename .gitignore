@@ -3,4 +3,4 @@ node_modules/
 book/
 .packages
 .dart_tool/
-./idea
+.idea/
