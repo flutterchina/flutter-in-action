@@ -8,6 +8,7 @@
     <Navbar
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
+      ref="nav"
     />
 
     <div
@@ -68,13 +69,13 @@
   import Sidebar from '@theme/components/Sidebar.vue'
   import {resolveSidebarItems} from '@vuepress/theme-default/util'
 
-  var _hmt;
+  let _hmt;
 
   function initPVSDK() {
     _hmt = _hmt || [];
-    var hm = document.createElement("script");
+    let hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?170231fea4f81697eb046edc1a91fe5b";
-    var s = document.getElementsByTagName("script")[0];
+    let s = document.getElementsByTagName("script")[0];
     hm.id = "bd"
     s.parentNode.insertBefore(hm, s);
   }
@@ -172,6 +173,24 @@
         }
         this.isSidebarOpen = false
       })
+      const {themeConfig} = this.$site
+      let logo = themeConfig.logo;
+
+      let checkIfShowLogo = () => {
+        if (window.innerWidth < 720 && themeConfig.log !== "") {
+          themeConfig.logo = ""
+          this.$refs.nav.$forceUpdate()
+        } else if (window.innerWidth >= 720 && themeConfig.logo === "") {
+          themeConfig.logo = logo
+          console.log("xx")
+          this.$refs.nav.$forceUpdate()
+        }
+      }
+
+      checkIfShowLogo()
+
+      window.addEventListener('resize', checkIfShowLogo)
+
     },
 
     methods: {

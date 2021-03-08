@@ -5,8 +5,12 @@ module.exports = {
   markdown: {
    // lineNumbers: true
   },
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   sidebarDepth: 2,
   themeConfig: {
+    logo:'/logo.png',
     nav: [
       { text: '和作者做同事', link: '/join_us' },
       { text: 'Flutter中国', link: 'https://github.com/flutterchina' },

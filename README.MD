@@ -4,9 +4,12 @@
 
 本书随书源码：https://github.com/wendux/flutter_in_action_source_code
 
+## 第二版
+
+本书第一版已出版，由于flutter和dart更新非常快，本书第二版正在创作中，敬请期待。
+
 ## 实体书
 <div style="text-align:center; padding-bottom:30px"><a href="https://item.jd.com/12816296.html" title='点击购买'><img height="250" style="box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/12816296.html" title='点击购买'> 购买实体书 </a></div>
-
 
 
 ## 贡献须知
@@ -15,10 +18,10 @@
 
 | 目录及文件      | 说明                                                         |
 | --------------- | ------------------------------------------------------------ |
-| docs            | 文档目录，您应该在此目录下对应的章节文件夹下修改/创建Markdown文档 |
-| _book           | 打包后的网站代码目录，您不应该手动修改此目录下的文档         |
-| docs/SUMMARY.md | 本书目录，要修改目录请参考本文档中前面章节。                 |
-| docs/imgs       | 本书所引的图片、截图目录                                     |
+| src             | 文档目录，您应该在此目录下对应的章节文件夹下修改/创建Markdown文档 |
+| docs            | 打包后的网站代码目录，您不应该手动修改此目录下的文档         |
+| src/SUMMARY.md | 本书目录，要修改目录请参考本文档中前面章节。                 |
+| src/imgs       | 本书所引的图片、截图目录                                     |
 
 ### 图片引入说明
 
@@ -42,27 +45,22 @@
 
 1. 安装node；如果已经安装过node，可以省略这一步。node安装方法自行百度。
 
-2. 安装gitbook。
+2. 开始构建并启动测试服务器。
 
    ```shell
-   npm i -g gitbook-cli
+    yarn run dev
    ```
 
-3. 本地进入到本项目根目录，运行：
+3. 构建发布包：
 
    ```shell
-   gitbook install #安装本书构建所要依赖的插件
+    yarn run build
    ```
 
-4. 运行网站，可以编辑了~
 
-   ```
-   gitbook serve 
-   ```
+### 第二版
 
-### 哪些章节还没有写？
-
-本书目前未完成部分在官网目录中会置灰，他们会统一链接到一个todo页面，您应该首先来写这一部分主题。如果您有新的章节想补充，请先联系我！沟通后如果觉得有必要方可添加。
+本书第一版已出版，由于flutter和dart更新非常快，本书第二版正在创作中，敬请期待。
 
 ### 提交更新
 
