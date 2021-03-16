@@ -33,7 +33,7 @@
          mainAxisAlignment: MainAxisAlignment.center,
          children: <Widget>[
          ... //省略无关代码
-         FlatButton(
+         TextButton(
             child: Text("open new route"),
             textColor: Colors.blue,
             onPressed: () {
