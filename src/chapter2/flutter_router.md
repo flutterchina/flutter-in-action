@@ -117,7 +117,7 @@ Navigator类中第一个参数为context的**静态方法**都对应一个Naviga
 class TipRoute extends StatelessWidget {
   TipRoute({
     Key key,
-    @required this.text,  // 接收一个text参数
+    required this.text,  // 接收一个text参数
   }) : super(key: key);
   final String text;
 
