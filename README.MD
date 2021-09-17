@@ -1,12 +1,15 @@
-# 简介
+# 注意
+
+本书第二版草稿已上传，**本 repo 将不再维护**，请大家移步：https://github.com/flutterchina/flutter_in_action_2nd
+
+---
+
+# 第一版简介
 
 本项目为Flutter中文网《Flutter实战》开源电子书项目，官网地址为：https://book.flutterchina.club 。
 
 本书随书源码：https://github.com/wendux/flutter_in_action_source_code
 
-## 第二版
-
-本书第一版已出版，由于flutter和dart更新非常快，本书第二版正在创作中，敬请期待。
 
 ## 实体书
 <div style="text-align:center; padding-bottom:30px"><a href="https://item.jd.com/12816296.html" title='点击购买'><img height="250" style="box-shadow: #aaa 5px 5px 10px;" src="https://pcdn.flutterchina.club/imgs/book.png"/></a>  <br/> <a class="buy-btn" href="https://item.jd.com/12816296.html" title='点击购买'> 购买实体书 </a></div>
