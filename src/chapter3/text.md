@@ -79,7 +79,7 @@ Text("Hello world",
 ```dart
 const TextSpan({
   TextStyle style, 
-  Sting text,
+  String text,
   List<TextSpan> children,
   GestureRecognizer recognizer,
 });
