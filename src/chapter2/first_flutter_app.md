@@ -24,27 +24,28 @@
 ```dart
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -58,28 +59,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
+            const Text(
               'You have pushed the button this many times:',
             ),
-            new Text(
+            Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: new Icon(Icons.add),
+        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
@@ -100,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
 2. 应用入口。
 
    ```dart
-   void main() => runApp(MyApp());
+   void main() => runApp(const MyApp());
    ```
 
    - 与C/C++、Java类似，Flutter 应用中`main`函数为应用程序的入口。`main`函数中调用了`runApp` 方法，它的功能是启动Flutter应用。`runApp`它接受一个`Widget`参数，在本示例中它是一个`MyApp`对象，`MyApp()`是Flutter应用的根组件。
@@ -110,17 +111,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
    ```dart
    class MyApp extends StatelessWidget {
+     const MyApp({Key? key}) : super(key: key);
      @override
      Widget build(BuildContext context) {
-       return new MaterialApp(
+       return MaterialApp(
          //应用名称  
          title: 'Flutter Demo', 
-         theme: new ThemeData(
+         theme: ThemeData(
            //蓝色主题  
            primarySwatch: Colors.blue,
          ),
          //应用首页路由  
-         home: new MyHomePage(title: 'Flutter Demo Home Page'),
+         home: const MyHomePage(title: 'Flutter Demo Home Page'),
        );
      }
    }
@@ -140,10 +142,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
    ```dart
    class MyHomePage extends StatefulWidget {
-     MyHomePage({Key key, this.title}) : super(key: key);
+     MyHomePage({Key? key, required this.title}) : super(key: key);
      final String title;
      @override
-     _MyHomePageState createState() => new _MyHomePageState();
+     State<MyHomePage> createState() => _MyHomePageState();
    }
    
    class _MyHomePageState extends State<MyHomePage> {
@@ -191,28 +193,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
    ```dart
      Widget build(BuildContext context) {
-       return new Scaffold(
-         appBar: new AppBar(
-           title: new Text(widget.title),
+       return Scaffold(
+         appBar: AppBar(
+           title: Text(widget.title),
          ),
-         body: new Center(
-           child: new Column(
+         body: Center(
+           child: Column(
              mainAxisAlignment: MainAxisAlignment.center,
              children: <Widget>[
-               new Text(
+               const Text(
                  'You have pushed the button this many times:',
                ),
-               new Text(
+               Text(
                  '$_counter',
                  style: Theme.of(context).textTheme.headline4,
                ),
              ],
            ),
          ),
-         floatingActionButton: new FloatingActionButton(
+         floatingActionButton: FloatingActionButton(
            onPressed: _incrementCounter,
            tooltip: 'Increment',
-           child: new Icon(Icons.add),
+           child: const Icon(Icons.add),
          ),
        );
      }
